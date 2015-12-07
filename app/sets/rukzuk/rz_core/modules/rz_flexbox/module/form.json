@@ -1,0 +1,842 @@
+{
+    "form": [
+        {
+            "id": "77679502-0891-413d-b257-8046c58b692c",
+            "name": "{\"de\":\"Eigenschaften\",\"en\":\"Properties\"}",
+            "icon": "",
+            "formGroupData": [
+                {
+                    "params": [
+                        {
+                            "name": "CMSvar",
+                            "value": "cssChildWidth",
+                            "allowBlank": false,
+                            "minLength": 3,
+                            "maskRe": {},
+                            "stripCharsRe": {},
+                            "xtype": "textfield",
+                            "emptyText": "__i18n_generatedFormPanel.varNameEmptyText",
+                            "fieldLabel": "__i18n_generatedFormPanel.varNameLabel"
+                        },
+                        {
+                            "name": "xtype",
+                            "value": "ux-comboselect",
+                            "xtype": null
+                        },
+                        {
+                            "name": "isMeta",
+                            "value": false,
+                            "fieldLabel": "__i18n_formElements.isGlobal",
+                            "xtype": "checkbox"
+                        },
+                        {
+                            "name": "fieldLabel",
+                            "value": "{\"de\":\"Breite der enthaltenen Module\",\"en\":\"Width of the modules contained\"}",
+                            "xtype": "textfield",
+                            "allowBlank": true,
+                            "emptyText": "__i18n_formElements.fieldLabelOptionalEmptyText",
+                            "fieldLabel": "__i18n_formElements.fieldLabel"
+                        },
+                        {
+                            "name": "isResponsive",
+                            "value": true,
+                            "fieldLabel": "__i18n_formElements.isResponsive",
+                            "xtype": "checkbox"
+                        },
+                        {
+                            "name": "emptyText",
+                            "value": "",
+                            "xtype": "textfield",
+                            "allowBlank": true,
+                            "emptyText": "__i18n_formElements.emptyTextEmptyText",
+                            "fieldLabel": "__i18n_formElements.emptyTextLabel"
+                        },
+                        {
+                            "name": "options",
+                            "value": [
+                                [
+                                    "20%",
+                                    "20%",
+                                    0
+                                ],
+                                [
+                                    "25%",
+                                    "25%",
+                                    0
+                                ],
+                                [
+                                    "33.33%",
+                                    "33.33%",
+                                    0
+                                ],
+                                [
+                                    "50%",
+                                    "50%",
+                                    0
+                                ],
+                                [
+                                    "75%",
+                                    "75%",
+                                    0
+                                ],
+                                [
+                                    "100%",
+                                    "100%",
+                                    0
+                                ],
+                                [
+                                    "33.33% 66.66%",
+                                    "33.33% 66.66%",
+                                    0
+                                ],
+                                [
+                                    "66.66% 33.33%",
+                                    "66.66% 33.33%",
+                                    0
+                                ],
+                                [
+                                    "auto",
+                                    "{\"de\":\"auto (Breite inhaltsabhängig, nur für Texte/Links)\", \"en\":\"auto (depends on content, only for text/links)\"}",
+                                    0
+                                ]
+                            ],
+                            "xtype": "CMSkeyvaluetextarea",
+                            "allowBlank": false,
+                            "array": true,
+                            "emptyText": "__i18n_formElements.listValuesEmptyText",
+                            "fieldLabel": "__i18n_formElements.listValuesLabel"
+                        },
+                        {
+                            "name": "forceSelection",
+                            "value": false,
+                            "xtype": "checkbox",
+                            "fieldLabel": "__i18n_formElements.comboSelectForceSelection"
+                        },
+                        {
+                            "name": "value",
+                            "value": {
+                                "type": "bp",
+                                "default": "100%"
+                            },
+                            "xtype": null
+                        }
+                    ],
+                    "descr": {
+                        "id": "ComboSelect",
+                        "text": "__i18n_formElements.elementComboSelect",
+                        "iconCls": "combo",
+                        "hasValue": true
+                    }
+                },
+                {
+                    "params": [
+                        {
+                            "name": "CMSvar",
+                            "value": "cssJustifyContentH",
+                            "allowBlank": false,
+                            "minLength": 3,
+                            "maskRe": {},
+                            "stripCharsRe": {},
+                            "xtype": "textfield",
+                            "emptyText": "__i18n_generatedFormPanel.varNameEmptyText",
+                            "fieldLabel": "__i18n_generatedFormPanel.varNameLabel"
+                        },
+                        {
+                            "name": "xtype",
+                            "value": "CMStabbedfieldset",
+                            "xtype": null
+                        },
+                        {
+                            "name": "isResponsive",
+                            "value": true,
+                            "fieldLabel": "__i18n_formElements.isResponsive",
+                            "xtype": "checkbox"
+                        },
+                        {
+                            "name": "isMeta",
+                            "value": false,
+                            "fieldLabel": "__i18n_formElements.isGlobal",
+                            "xtype": "checkbox"
+                        },
+                        {
+                            "name": "fieldLabel",
+                            "value": "{\"de\":\"horizontale Verteilung\",\"en\":\"Horizontal alignment\"}",
+                            "xtype": "textfield",
+                            "allowBlank": true,
+                            "emptyText": "__i18n_formElements.fieldLabelOptionalEmptyText",
+                            "fieldLabel": "__i18n_formElements.fieldLabel"
+                        },
+                        {
+                            "name": "value",
+                            "value": {
+                                "type": "bp",
+                                "default": "flex-start"
+                            },
+                            "xtype": null
+                        }
+                    ],
+                    "descr": {
+                        "id": "TabbedFieldSet",
+                        "text": "__i18n_formElements.elementTabbedFieldSet",
+                        "iconCls": "tabbedfieldset",
+                        "hasValue": true,
+                        "allowChildNodes": true
+                    },
+                    "items": [
+                        {
+                            "params": [
+                                {
+                                    "name": "xtype",
+                                    "value": "CMStabpage",
+                                    "xtype": null
+                                },
+                                {
+                                    "name": "tabValue",
+                                    "xtype": "textfield",
+                                    "allowBlank": false,
+                                    "emptyText": "__i18n_formElements.groupValueEmptyText",
+                                    "fieldLabel": "__i18n_formElements.groupValueFieldLabel",
+                                    "value": "flex-start"
+                                },
+                                {
+                                    "name": "title",
+                                    "value": "{\"de\":\"<div title=\\\"linksbündig\\\" style=\\\"width: 100%; height: 14px; background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACcAAAAOCAYAAACsAAXLAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEtJREFUeNpi/P//fwPDIAUsUHowOrCBBYnzH49CRiD+jeQZbPKE9JMMmBgGMRh13KjjRh036rjh7jgWEkpxVgLyjLRy3KCs/AECDAAaaAgo0l3YXwAAAABJRU5ErkJggg==') center center no-repeat;\\\"></div>\", \"en\":\"<div title=\\\"left-aligned\\\" style=\\\"width: 100%; height: 14px; background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACcAAAAOCAYAAACsAAXLAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEtJREFUeNpi/P//fwPDIAUsUHowOrCBBYnzH49CRiD+jeQZbPKE9JMMmBgGMRh13KjjRh036rjh7jgWEkpxVgLyjLRy3KCs/AECDAAaaAgo0l3YXwAAAABJRU5ErkJggg==') center center no-repeat;\\\"></div>\"}",
+                                    "xtype": "textfield",
+                                    "allowBlank": false,
+                                    "emptyText": "__i18n_formElements.title",
+                                    "fieldLabel": "__i18n_formElements.title"
+                                },
+                                {
+                                    "name": "value",
+                                    "xtype": null,
+                                    "value": "flex-start"
+                                }
+                            ],
+                            "descr": {
+                                "id": "TabPage",
+                                "text": "__i18n_formElements.elementTabPage",
+                                "iconCls": "tabpage",
+                                "hasValue": false,
+                                "allowChildNodes": true
+                            }
+                        },
+                        {
+                            "params": [
+                                {
+                                    "name": "xtype",
+                                    "value": "CMStabpage",
+                                    "xtype": null
+                                },
+                                {
+                                    "name": "tabValue",
+                                    "xtype": "textfield",
+                                    "allowBlank": false,
+                                    "emptyText": "__i18n_formElements.groupValueEmptyText",
+                                    "fieldLabel": "__i18n_formElements.groupValueFieldLabel",
+                                    "value": "center"
+                                },
+                                {
+                                    "name": "title",
+                                    "value": "{\"de\":\"<div title=\\\"zentriert\\\" style=\\\"width: 100%; height: 14px; background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACcAAAAOCAYAAACsAAXLAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEtJREFUeNpi/P//fwPDIAUsUHowOrCBhQhF//HIMQLxbyRPYpMnpB8nYGIYxGDUcaOOG3XcqOOGu+OIqSEYCcizUqh/SNatDAABBgDRsQgohignowAAAABJRU5ErkJggg==') center center no-repeat;\\\"></div>\", \"en\":\"<div title=\\\"centered\\\" style=\\\"width: 100%; height: 14px; background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACcAAAAOCAYAAACsAAXLAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEtJREFUeNpi/P//fwPDIAUsUHowOrCBhQhF//HIMQLxbyRPYpMnpB8nYGIYxGDUcaOOG3XcqOOGu+OIqSEYCcizUqh/SNatDAABBgDRsQgohignowAAAABJRU5ErkJggg==') center center no-repeat;\\\"></div>\"}",
+                                    "xtype": "textfield",
+                                    "allowBlank": false,
+                                    "emptyText": "__i18n_formElements.title",
+                                    "fieldLabel": "__i18n_formElements.title"
+                                },
+                                {
+                                    "name": "value",
+                                    "xtype": null,
+                                    "value": "center"
+                                }
+                            ],
+                            "descr": {
+                                "id": "TabPage",
+                                "text": "__i18n_formElements.elementTabPage",
+                                "iconCls": "tabpage",
+                                "hasValue": false,
+                                "allowChildNodes": true
+                            }
+                        },
+                        {
+                            "params": [
+                                {
+                                    "name": "xtype",
+                                    "value": "CMStabpage",
+                                    "xtype": null
+                                },
+                                {
+                                    "name": "tabValue",
+                                    "xtype": "textfield",
+                                    "allowBlank": false,
+                                    "emptyText": "__i18n_formElements.groupValueEmptyText",
+                                    "fieldLabel": "__i18n_formElements.groupValueFieldLabel",
+                                    "value": "flex-end"
+                                },
+                                {
+                                    "name": "title",
+                                    "value": "{\"de\":\"<div title=\\\"rechtsbündig\\\" style=\\\"width: 100%; height: 14px; background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACcAAAAOCAYAAACsAAXLAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEpJREFUeNpi/P//fwPDIAUsUHowOrCBhQLN//HIMQLxbyTPY5MnpJ+BiWEQg1HHjTpu1HGjjhvujqOkhmAkIM9Kof5BXbcyAAQYAIkJCChKd7G2AAAAAElFTkSuQmCC') center center no-repeat;\\\"></div>\", \"en\":\"<div title=\\\"right-aligned\\\" style=\\\"width: 100%; height: 14px; background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACcAAAAOCAYAAACsAAXLAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEpJREFUeNpi/P//fwPDIAUsUHowOrCBhQLN//HIMQLxbyTPY5MnpJ+BiWEQg1HHjTpu1HGjjhvujqOkhmAkIM9Kof5BXbcyAAQYAIkJCChKd7G2AAAAAElFTkSuQmCC') center center no-repeat;\\\"></div>\"}",
+                                    "xtype": "textfield",
+                                    "allowBlank": false,
+                                    "emptyText": "__i18n_formElements.title",
+                                    "fieldLabel": "__i18n_formElements.title"
+                                },
+                                {
+                                    "name": "value",
+                                    "xtype": null,
+                                    "value": "flex-end"
+                                }
+                            ],
+                            "descr": {
+                                "id": "TabPage",
+                                "text": "__i18n_formElements.elementTabPage",
+                                "iconCls": "tabpage",
+                                "hasValue": false,
+                                "allowChildNodes": true
+                            }
+                        },
+                        {
+                            "params": [
+                                {
+                                    "name": "xtype",
+                                    "value": "CMStabpage",
+                                    "xtype": null
+                                },
+                                {
+                                    "name": "tabValue",
+                                    "xtype": "textfield",
+                                    "allowBlank": false,
+                                    "emptyText": "__i18n_formElements.groupValueEmptyText",
+                                    "fieldLabel": "__i18n_formElements.groupValueFieldLabel",
+                                    "value": "space-between"
+                                },
+                                {
+                                    "name": "title",
+                                    "value": "{\"de\":\"<div title=\\\"verteilt ohne äusseren Rand\\\" style=\\\"width: 100%; height: 14px; background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACcAAAAOCAYAAACsAAXLAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAExJREFUeNpi/P//fwPDIAUsUHowOrCBBYnzH49CRjxyv5E8SYo+gvYxMQxiMOq4UceNOm7UccPdcSxElub4ACuZ+hiJddygrPwBAgwA0bEIKBJueScAAAAASUVORK5CYII=') center center no-repeat;\\\"></div>\", \"en\":\"<div title=\\\"distributed without outer edge\\\" style=\\\"width: 100%; height: 14px; background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACcAAAAOCAYAAACsAAXLAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAExJREFUeNpi/P//fwPDIAUsUHowOrCBBYnzH49CRjxyv5E8SYo+gvYxMQxiMOq4UceNOm7UccPdcSxElub4ACuZ+hiJddygrPwBAgwA0bEIKBJueScAAAAASUVORK5CYII=') center center no-repeat;\\\"></div>\"}",
+                                    "xtype": "textfield",
+                                    "allowBlank": false,
+                                    "emptyText": "__i18n_formElements.title",
+                                    "fieldLabel": "__i18n_formElements.title"
+                                },
+                                {
+                                    "name": "value",
+                                    "xtype": null,
+                                    "value": "space-between"
+                                }
+                            ],
+                            "descr": {
+                                "id": "TabPage",
+                                "text": "__i18n_formElements.elementTabPage",
+                                "iconCls": "tabpage",
+                                "hasValue": false,
+                                "allowChildNodes": true
+                            }
+                        },
+                        {
+                            "params": [
+                                {
+                                    "name": "xtype",
+                                    "value": "CMStabpage",
+                                    "xtype": null
+                                },
+                                {
+                                    "name": "tabValue",
+                                    "xtype": "textfield",
+                                    "allowBlank": false,
+                                    "emptyText": "__i18n_formElements.groupValueEmptyText",
+                                    "fieldLabel": "__i18n_formElements.groupValueFieldLabel",
+                                    "value": "space-around"
+                                },
+                                {
+                                    "name": "title",
+                                    "value": "{\"de\":\"<div title=\\\"verteilt mit äusserem Rand\\\" style=\\\"width: 100%; height: 14px; background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACcAAAAOCAYAAACsAAXLAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAExJREFUeNpi/P//fwPDIAUsUHowOrCBBYfEfzyaGNH4v5E8SUgtKeYyMDEMYjDquFHHjTpu1HHD3XHEluz4ACsJahnJcdygrPwBAgwA0bEIKDKFsCYAAAAASUVORK5CYII=') center center no-repeat;\\\"></div>\", \"en\":\"<div title=\\\"distributed with outer edge\\\" style=\\\"width: 100%; height: 14px; background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACcAAAAOCAYAAACsAAXLAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAExJREFUeNpi/P//fwPDIAUsUHowOrCBBYfEfzyaGNH4v5E8SUgtKeYyMDEMYjDquFHHjTpu1HHD3XHEluz4ACsJahnJcdygrPwBAgwA0bEIKDKFsCYAAAAASUVORK5CYII=') center center no-repeat;\\\"></div>\"}",
+                                    "xtype": "textfield",
+                                    "allowBlank": false,
+                                    "emptyText": "__i18n_formElements.title",
+                                    "fieldLabel": "__i18n_formElements.title"
+                                },
+                                {
+                                    "name": "value",
+                                    "xtype": null,
+                                    "value": "space-around"
+                                }
+                            ],
+                            "descr": {
+                                "id": "TabPage",
+                                "text": "__i18n_formElements.elementTabPage",
+                                "iconCls": "tabpage",
+                                "hasValue": false,
+                                "allowChildNodes": true
+                            }
+                        }
+                    ]
+                },
+                {
+                    "params": [
+                        {
+                            "name": "CMSvar",
+                            "value": "cssAlignItemsH",
+                            "allowBlank": false,
+                            "minLength": 3,
+                            "maskRe": {},
+                            "stripCharsRe": {},
+                            "xtype": "textfield",
+                            "emptyText": "__i18n_generatedFormPanel.varNameEmptyText",
+                            "fieldLabel": "__i18n_generatedFormPanel.varNameLabel"
+                        },
+                        {
+                            "name": "xtype",
+                            "value": "CMStabbedfieldset",
+                            "xtype": null
+                        },
+                        {
+                            "name": "isResponsive",
+                            "value": true,
+                            "fieldLabel": "__i18n_formElements.isResponsive",
+                            "xtype": "checkbox"
+                        },
+                        {
+                            "name": "isMeta",
+                            "value": false,
+                            "fieldLabel": "__i18n_formElements.isGlobal",
+                            "xtype": "checkbox"
+                        },
+                        {
+                            "name": "fieldLabel",
+                            "value": "{\"de\":\"vertikale Verteilung\",\"en\":\"vertical alignment\"}",
+                            "xtype": "textfield",
+                            "allowBlank": true,
+                            "emptyText": "__i18n_formElements.fieldLabelOptionalEmptyText",
+                            "fieldLabel": "__i18n_formElements.fieldLabel"
+                        },
+                        {
+                            "name": "value",
+                            "value": {
+                                "type": "bp",
+                                "default": "stretch"
+                            },
+                            "xtype": null
+                        }
+                    ],
+                    "descr": {
+                        "id": "TabbedFieldSet",
+                        "text": "__i18n_formElements.elementTabbedFieldSet",
+                        "iconCls": "tabbedfieldset",
+                        "hasValue": true,
+                        "allowChildNodes": true
+                    },
+                    "items": [
+                        {
+                            "params": [
+                                {
+                                    "name": "xtype",
+                                    "value": "CMStabpage",
+                                    "xtype": null
+                                },
+                                {
+                                    "name": "tabValue",
+                                    "xtype": "textfield",
+                                    "allowBlank": false,
+                                    "emptyText": "__i18n_formElements.groupValueEmptyText",
+                                    "fieldLabel": "__i18n_formElements.groupValueFieldLabel",
+                                    "value": "flex-start"
+                                },
+                                {
+                                    "name": "title",
+                                    "value": "{\"de\":\"<div title=\\\"obenbündig\\\" style=\\\"width: 100%; height: 14px; background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAOCAYAAABHN77IAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEtJREFUeNpi/P//fwPDIAIsUHqwOKqBBYnzG8mB+AAjiWr/E+kYkFoGJoZBBkYdRGyipiVgHDYhxDqahkYdRMdcxkprBw2aChYgwAB1Wwgw7WrVgQAAAABJRU5ErkJggg==') center center no-repeat;\\\"></div>\", \"en\":\"<div title=\\\"top\\\" style=\\\"width: 100%; height: 14px; background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAOCAYAAABHN77IAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEtJREFUeNpi/P//fwPDIAIsUHqwOKqBBYnzG8mB+AAjiWr/E+kYkFoGJoZBBkYdRGyipiVgHDYhxDqahkYdRMdcxkprBw2aChYgwAB1Wwgw7WrVgQAAAABJRU5ErkJggg==') center center no-repeat;\\\"></div>\"}",
+                                    "xtype": "textfield",
+                                    "allowBlank": false,
+                                    "emptyText": "__i18n_formElements.title",
+                                    "fieldLabel": "__i18n_formElements.title"
+                                },
+                                {
+                                    "name": "value",
+                                    "xtype": null,
+                                    "value": "flex-start"
+                                }
+                            ],
+                            "descr": {
+                                "id": "TabPage",
+                                "text": "__i18n_formElements.elementTabPage",
+                                "iconCls": "tabpage",
+                                "hasValue": false,
+                                "allowChildNodes": true
+                            }
+                        },
+                        {
+                            "params": [
+                                {
+                                    "name": "xtype",
+                                    "value": "CMStabpage",
+                                    "xtype": null
+                                },
+                                {
+                                    "name": "tabValue",
+                                    "xtype": "textfield",
+                                    "allowBlank": false,
+                                    "emptyText": "__i18n_formElements.groupValueEmptyText",
+                                    "fieldLabel": "__i18n_formElements.groupValueFieldLabel",
+                                    "value": "center"
+                                },
+                                {
+                                    "name": "title",
+                                    "value": "{\"de\":\"<div title=\\\"mittig\\\" style=\\\"width: 100%; height: 14px; background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAOAgMAAAA6WVZbAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAxQTFRF////////////////9aUOcwAAAAN0Uk5TAID765p3AQAAAClJREFUCNdjCIUBBgcGCGAEsfT//0Flef//j8L6//8jUSxc5iFsg7sAAO66NpmWLJimAAAAAElFTkSuQmCC') center center no-repeat;\\\"></div>\", \"en\":\"<div title=\\\"middle\\\" style=\\\"width: 100%; height: 14px; background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAOAgMAAAA6WVZbAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAxQTFRF////////////////9aUOcwAAAAN0Uk5TAID765p3AQAAAClJREFUCNdjCIUBBgcGCGAEsfT//0Flef//j8L6//8jUSxc5iFsg7sAAO66NpmWLJimAAAAAElFTkSuQmCC') center center no-repeat;\\\"></div>\"}",
+                                    "xtype": "textfield",
+                                    "allowBlank": false,
+                                    "emptyText": "__i18n_formElements.title",
+                                    "fieldLabel": "__i18n_formElements.title"
+                                },
+                                {
+                                    "name": "value",
+                                    "xtype": null,
+                                    "value": "center"
+                                }
+                            ],
+                            "descr": {
+                                "id": "TabPage",
+                                "text": "__i18n_formElements.elementTabPage",
+                                "iconCls": "tabpage",
+                                "hasValue": false,
+                                "allowChildNodes": true
+                            }
+                        },
+                        {
+                            "params": [
+                                {
+                                    "name": "xtype",
+                                    "value": "CMStabpage",
+                                    "xtype": null
+                                },
+                                {
+                                    "name": "tabValue",
+                                    "xtype": "textfield",
+                                    "allowBlank": false,
+                                    "emptyText": "__i18n_formElements.groupValueEmptyText",
+                                    "fieldLabel": "__i18n_formElements.groupValueFieldLabel",
+                                    "value": "flex-end"
+                                },
+                                {
+                                    "name": "title",
+                                    "value": "{\"de\":\"<div title=\\\"untenbündig\\\" style=\\\"width: 100%; height: 14px; background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAOCAYAAABHN77IAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAE5JREFUeNpi/P//fwPDIAIsUHqwOKqBhUyNv5E8gw8wkmowE8MgA6MOIjZR0zRdDJsQohX4T6Q6xtFEPeTTECsJ+khRy0iOgwZNBQsQYAC8RwgwqdselwAAAABJRU5ErkJggg==') center center no-repeat;\\\"></div>\", \"en\":\"<div title=\\\"bottom\\\" style=\\\"width: 100%; height: 14px; background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAOCAYAAABHN77IAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAE5JREFUeNpi/P//fwPDIAIsUHqwOKqBhUyNv5E8gw8wkmowE8MgA6MOIjZR0zRdDJsQohX4T6Q6xtFEPeTTECsJ+khRy0iOgwZNBQsQYAC8RwgwqdselwAAAABJRU5ErkJggg==') center center no-repeat;\\\"></div>\"}",
+                                    "xtype": "textfield",
+                                    "allowBlank": false,
+                                    "emptyText": "__i18n_formElements.title",
+                                    "fieldLabel": "__i18n_formElements.title"
+                                },
+                                {
+                                    "name": "value",
+                                    "xtype": null,
+                                    "value": "flex-end"
+                                }
+                            ],
+                            "descr": {
+                                "id": "TabPage",
+                                "text": "__i18n_formElements.elementTabPage",
+                                "iconCls": "tabpage",
+                                "hasValue": false,
+                                "allowChildNodes": true
+                            }
+                        },
+                        {
+                            "params": [
+                                {
+                                    "name": "xtype",
+                                    "value": "CMStabpage",
+                                    "xtype": null
+                                },
+                                {
+                                    "name": "tabValue",
+                                    "xtype": "textfield",
+                                    "allowBlank": false,
+                                    "emptyText": "__i18n_formElements.groupValueEmptyText",
+                                    "fieldLabel": "__i18n_formElements.groupValueFieldLabel",
+                                    "value": "stretch"
+                                },
+                                {
+                                    "name": "title",
+                                    "value": "{\"de\":\"<div title=\\\"gleiche Höhe\\\" style=\\\"width: 100%; height: 14px; background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAOAgMAAAA6WVZbAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAxQTFRF////////////////9aUOcwAAAAN0Uk5TAID765p3AQAAACJJREFUCNdjCIUBBgcGCGBk8P//X///n///P9KQhbAN7gIA4z1QeY2bOmoAAAAASUVORK5CYII=') center center no-repeat;\\\"></div>\", \"en\":\"<div title=\\\"same height\\\" style=\\\"width: 100%; height: 14px; background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAOAgMAAAA6WVZbAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAxQTFRF////////////////9aUOcwAAAAN0Uk5TAID765p3AQAAACJJREFUCNdjCIUBBgcGCGBk8P//X///n///P9KQhbAN7gIA4z1QeY2bOmoAAAAASUVORK5CYII=') center center no-repeat;\\\"></div>\"}",
+                                    "xtype": "textfield",
+                                    "allowBlank": false,
+                                    "emptyText": "__i18n_formElements.title",
+                                    "fieldLabel": "__i18n_formElements.title"
+                                },
+                                {
+                                    "name": "value",
+                                    "xtype": null,
+                                    "value": "stretch"
+                                }
+                            ],
+                            "descr": {
+                                "id": "TabPage",
+                                "text": "__i18n_formElements.elementTabPage",
+                                "iconCls": "tabpage",
+                                "hasValue": false,
+                                "allowChildNodes": true
+                            }
+                        }
+                    ]
+                },
+                {
+                    "params": [
+                        {
+                            "name": "CMSvar",
+                            "value": "cssReverse",
+                            "allowBlank": false,
+                            "minLength": 3,
+                            "maskRe": {},
+                            "stripCharsRe": {},
+                            "xtype": "textfield",
+                            "emptyText": "__i18n_generatedFormPanel.varNameEmptyText",
+                            "fieldLabel": "__i18n_generatedFormPanel.varNameLabel"
+                        },
+                        {
+                            "name": "xtype",
+                            "value": "CMSonofftogglebutton",
+                            "xtype": null
+                        },
+                        {
+                            "name": "isResponsive",
+                            "value": true,
+                            "fieldLabel": "__i18n_formElements.isResponsive",
+                            "xtype": "checkbox"
+                        },
+                        {
+                            "name": "isMeta",
+                            "value": false,
+                            "fieldLabel": "__i18n_formElements.isGlobal",
+                            "xtype": "checkbox"
+                        },
+                        {
+                            "name": "fieldLabel",
+                            "value": "{\"de\":\"Reihenfolge der Module umkehren\",\"en\":\"reverse order of the modules\"}",
+                            "xtype": "textfield",
+                            "allowBlank": true,
+                            "emptyText": "__i18n_formElements.fieldLabelEmptyTextLeft",
+                            "fieldLabel": "__i18n_formElements.fieldLabel"
+                        },
+                        {
+                            "name": "value",
+                            "value": {
+                                "type": "bp",
+                                "default": null
+                            },
+                            "xtype": null
+                        }
+                    ],
+                    "descr": {
+                        "id": "OnOffToggle",
+                        "text": "__i18n_formElements.elementOnOffToggle",
+                        "iconCls": "onofftoggle",
+                        "hasValue": true
+                    }
+                },
+                {
+                    "params": [
+                        {
+                            "name": "CMSvar",
+                            "value": "cssEnableHorizontalAlign",
+                            "allowBlank": false,
+                            "minLength": 3,
+                            "maskRe": {},
+                            "stripCharsRe": {},
+                            "xtype": "textfield",
+                            "emptyText": "__i18n_generatedFormPanel.varNameEmptyText",
+                            "fieldLabel": "__i18n_generatedFormPanel.varNameLabel"
+                        },
+                        {
+                            "name": "xtype",
+                            "value": "CMSonofffieldset",
+                            "xtype": null
+                        },
+                        {
+                            "name": "isResponsive",
+                            "value": false,
+                            "fieldLabel": "__i18n_formElements.isResponsive",
+                            "xtype": "checkbox"
+                        },
+                        {
+                            "name": "isMeta",
+                            "value": false,
+                            "fieldLabel": "__i18n_formElements.isGlobal",
+                            "xtype": "checkbox"
+                        },
+                        {
+                            "name": "fieldLabel",
+                            "value": "{\"de\":\"Ausrichtung dieses Moduls\",\"en\":\"Module alignment\"}",
+                            "xtype": "textfield",
+                            "allowBlank": true,
+                            "emptyText": "__i18n_formElements.fieldLabelOptionalEmptyText",
+                            "fieldLabel": "__i18n_formElements.fieldLabel"
+                        },
+                        {
+                            "name": "value",
+                            "value": false,
+                            "xtype": null
+                        }
+                    ],
+                    "descr": {
+                        "text": "__i18n_formElements.elementOnOffFieldSet",
+                        "iconCls": "onofffieldset",
+                        "allowChildNodes": true,
+                        "hasValue": true
+                    },
+                    "items": [
+                        {
+                            "params": [
+                                {
+                                    "name": "CMSvar",
+                                    "value": "cssHorizontalAlign",
+                                    "allowBlank": false,
+                                    "minLength": 3,
+                                    "maskRe": {},
+                                    "stripCharsRe": {},
+                                    "xtype": "textfield",
+                                    "emptyText": "__i18n_generatedFormPanel.varNameEmptyText",
+                                    "fieldLabel": "__i18n_generatedFormPanel.varNameLabel"
+                                },
+                                {
+                                    "name": "xtype",
+                                    "value": "ux-comboselect",
+                                    "xtype": null
+                                },
+                                {
+                                    "name": "isMeta",
+                                    "value": false,
+                                    "fieldLabel": "__i18n_formElements.isGlobal",
+                                    "xtype": "checkbox"
+                                },
+                                {
+                                    "name": "fieldLabel",
+                                    "value": "{\"de\":\"horizontal\",\"en\":\"horizontal\"}",
+                                    "xtype": "textfield",
+                                    "allowBlank": true,
+                                    "emptyText": "__i18n_formElements.fieldLabelOptionalEmptyText",
+                                    "fieldLabel": "__i18n_formElements.fieldLabel"
+                                },
+                                {
+                                    "name": "emptyText",
+                                    "value": "",
+                                    "xtype": "textfield",
+                                    "allowBlank": true,
+                                    "emptyText": "__i18n_formElements.emptyTextEmptyText",
+                                    "fieldLabel": "__i18n_formElements.emptyTextLabel"
+                                },
+                                {
+                                    "name": "options",
+                                    "value": [
+                                        [
+                                            "left",
+                                            "{\"de\":\"linksbündig\",\"en\":\"left-aligned\"}",
+                                            0
+                                        ],
+                                        [
+                                            "center",
+                                            "{\"de\":\"zentriert\",\"en\":\"centered\"}",
+                                            0
+                                        ],
+                                        [
+                                            "right",
+                                            "{\"de\":\"rechtsbündig\",\"en\":\"right-aligned\"}",
+                                            0
+                                        ]
+                                    ],
+                                    "xtype": "CMSkeyvaluetextarea",
+                                    "allowBlank": false,
+                                    "array": true,
+                                    "emptyText": "__i18n_formElements.listValuesEmptyText",
+                                    "fieldLabel": "__i18n_formElements.listValuesLabel"
+                                },
+                                {
+                                    "name": "forceSelection",
+                                    "value": true,
+                                    "xtype": "checkbox",
+                                    "fieldLabel": "__i18n_formElements.comboSelectForceSelection"
+                                },
+                                {
+                                    "name": "value",
+                                    "value": {
+                                        "type": "bp",
+                                        "default": "center"
+                                    },
+                                    "xtype": null
+                                },
+                                {
+                                    "name": "isResponsive",
+                                    "value": true,
+                                    "fieldLabel": "__i18n_formElements.isResponsive",
+                                    "xtype": "checkbox"
+                                }
+                            ],
+                            "descr": {
+                                "text": "__i18n_formElements.elementComboSelect",
+                                "iconCls": "combo",
+                                "hasValue": true
+                            }
+                        },
+                        {
+                            "params": [
+                                {
+                                    "name": "xtype",
+                                    "value": "ux-multilinelabel",
+                                    "xtype": null
+                                },
+                                {
+                                    "name": "hideLabel",
+                                    "value": true,
+                                    "xtype": null
+                                },
+                                {
+                                    "name": "text",
+                                    "xtype": "textarea",
+                                    "height": 200,
+                                    "value": "{\"de\":\"Außenabstände werden in diesem Fall nicht berücksichtigt.\",\"en\":\"Margins are not considered in this case.\"}",
+                                    "fieldLabel": "__i18n_formElements.commentLabel"
+                                },
+                                {
+                                    "name": "autoLink",
+                                    "value": true,
+                                    "xtype": null
+                                },
+                                {
+                                    "name": "cls",
+                                    "value": "modulecomment",
+                                    "xtype": null
+                                },
+                                {
+                                    "name": "value",
+                                    "xtype": null
+                                }
+                            ],
+                            "descr": {
+                                "text": "__i18n_formElements.elementComment",
+                                "iconCls": "plaintext"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "formValues": {
+        "cssChildWidth": {
+            "type": "bp",
+            "default": "100%"
+        },
+        "cssJustifyContentH": {
+            "type": "bp",
+            "default": "flex-start"
+        },
+        "cssAlignItemsH": {
+            "type": "bp",
+            "default": "stretch"
+        },
+        "cssReverse": {
+            "type": "bp",
+            "default": null
+        },
+        "cssEnableHorizontalAlign": false,
+        "cssHorizontalAlign": {
+            "type": "bp",
+            "default": "center"
+        }
+    }
+}

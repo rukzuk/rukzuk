@@ -1,0 +1,14 @@
+{
+  "name": {
+    "en": "rz_package_1.name"
+  },
+  "description": {
+    "en": "rz_package_1.description"
+  },
+  "version": "rz_package_1.version",
+  "websiteSettings": [
+    "rz_shop",
+    "rz_shop_pro"
+  ],
+  "pageTypes": ["rz_shop_product", "rz_shop_product_pro"]
+}

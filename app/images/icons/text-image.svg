@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Text-Bild" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve" width="16px" height="16px">
+<rect x="1" y="4" opacity="0.2" fill="#FFFFFF" enable-background="new    " width="7" height="7"/>
+<rect x="9" y="6" fill="#FFFFFF" width="6" height="1"/>
+<rect x="9" y="4" fill="#FFFFFF" width="4" height="1"/>
+<rect x="9" y="8" fill="#FFFFFF" width="6" height="1"/>
+<rect x="9" y="10" fill="#FFFFFF" width="6" height="1"/>
+<rect x="1" y="12" fill="#FFFFFF" width="13" height="1"/>
+<path fill="#FFFFFF" d="M1,4v7h7V4H1z M6,7L5,9l-3,1V5h5v5L6,7z"/>
+<circle fill="#FFFFFF" cx="3.5" cy="6.5" r="0.5"/>
+</svg>

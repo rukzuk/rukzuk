@@ -1,0 +1,20 @@
+{
+    "template_snippet": [
+        {
+            "websiteid": "SITE-1964e89c-22af-46cd-a651-fc42dc78fe50-SITE",
+            "id": "TPLS-template-snip-pet0-test-000000000001-TPLS",
+            "name": "TEMPLATE_SNIPPET_NAME_1",
+            "description": "TEMPLATE_SNIPPET_DESCRIPTION_1",
+            "category": "TEMPLATE_SNIPPET_CATEGORY_1",
+            "content": "[]"
+        },
+        {
+            "websiteid": "SITE-25sbas76-12as-87d7-dujd-2312sd78de50-SITE",
+            "id": "TPLS-template-snip-pet0-test-000000000001-TPLS",
+            "name": "TEMPLATE_SNIPPET_NAME_1",
+            "description": "TEMPLATE_SNIPPET_DESCRIPTION_1",
+            "category": "TEMPLATE_SNIPPET_CATEGORY_1",
+            "content": "[]"
+        }
+    ]
+}

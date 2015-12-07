@@ -1,0 +1,48 @@
+{
+    "website": [
+        {
+            "id": "SITE-controll-er0p-age0-getb-yid000000001-SITE",
+            "name": "This is the website name",
+            "description": "This is the website description",
+            "navigation": "[{\"id\":\"PAGE-controll-er0p-age0-getb-yid010000001-PAGE\"}]",
+            "shortid": "",
+            "colorscheme": "",
+            "resolutions": "",
+            "version": 0,
+            "home": "",
+            "ismarkedfordeletion": 0
+        }
+    ],
+    "page": [
+        {
+            "id": "PAGE-controll-er0p-age0-getb-yid010000001-PAGE",
+            "websiteid": "SITE-controll-er0p-age0-getb-yid000000001-SITE",
+            "templateid": "TPL-controll-er0p-age0-getb-yid010000001-TPL",
+            "name": "This ist the page name",
+            "description": "This is the page description",
+            "date": 1314355284,
+            "innavigation": 1,
+            "navigationtitle": "This is the page navigation title",
+            "content": "[]",
+            "templatecontentchecksum": "d751713988987e9331980363e24189ce",
+            "templatecontent": "[]",
+            "globalcontent": "[]",
+            "mediaid": "MDB-controll-er0p-age0-getb-yid010000001-MDB",
+            "pagetype": "the_page_type_id",
+            "pageattributes": "{\"foo\":\"bar\",\"myArray\":[],\"myObject\":{}}"
+        },
+        {
+            "id": "PAGE-controll-er0p-age0-getb-yid010000002-PAGE",
+            "websiteid": "SITE-controll-er0p-age0-getb-yid000000001-SITE",
+            "templateid": "TPL-controll-er0p-age0-getb-yid010000001-TPL",
+            "name": "",
+            "description": "",
+            "date": 0,
+            "innavigation": 0,
+            "navigationtitle": "",
+            "content": "",
+            "templatecontent": "",
+            "templatecontentchecksum": ""
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "success": false,
+    "message": [{
+        "code": 1,
+        "param": {
+            "foo": "bar"
+        },
+        "text": "Dummy-JSON mit success=false!"
+    }]
+}

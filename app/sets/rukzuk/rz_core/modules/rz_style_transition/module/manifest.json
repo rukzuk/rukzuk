@@ -1,0 +1,12 @@
+{
+    "name": "{\"de\":\"Transition\",\"en\":\"Transition\"}",
+    "description": "{\"de\":\"Animation bei Änderung der Style-Eigenschaften, z.B. in Kombination mit dem Zustandsselektor.\",\"en\":\"Animate changes of styles, e.g. in combination with the state selector.\"}",
+    "version": "dev",
+    "icon": "style-filter.png",
+    "category": "60",
+    "moduleType": "extension",
+    "allowedChildModuleType": "",
+    "reRenderRequired": false,
+    "apiType": "APIv1",
+    "ghostContainerMode": "force_off"
+}

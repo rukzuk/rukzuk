@@ -1,0 +1,154 @@
+{
+    "form": [
+        {
+            "name": "{\"de\":\"Eigenschaften\",\"en\":\"Properties\"}",
+            "icon": "",
+            "formGroupData": [
+                {
+                    "params": [
+                        {
+                            "name": "xtype",
+                            "value": "ux-multilinelabel",
+                            "xtype": null
+                        },
+                        {
+                            "name": "hideLabel",
+                            "value": true,
+                            "xtype": null
+                        },
+                        {
+                            "name": "text",
+                            "xtype": "textarea",
+                            "height": 200,
+                            "value": "{\"de\":\"Damit die Website-Zugriffe von Google analysiert werden können wird ein Google Analytics Account benötigt. Nähere Informationen dazu gibt es unter http://www.google.com/analytics.\\u000A\\u000ADie Tracking-ID muss in das unten stehende Feld eingefügt werden.\",\"en\":\"You need to have a Google Analytics Account for this feature. For more information, see  http://www.google.com/analytics.\\u000A\\u000AInsert your Tracking ID in the field below.\"}",
+                            "fieldLabel": "__i18n_formElements.commentLabel"
+                        },
+                        {
+                            "name": "autoLink",
+                            "value": true,
+                            "xtype": null
+                        },
+                        {
+                            "name": "cls",
+                            "value": "modulecomment",
+                            "xtype": null
+                        }
+                    ],
+                    "descr": {
+                        "text": "__i18n_formElements.elementComment",
+                        "iconCls": "plaintext"
+                    }
+                },
+                {
+                    "params": [
+                        {
+                            "name": "xtype",
+                            "value": "CMSfieldset",
+                            "xtype": null
+                        },
+                        {
+                            "name": "collapsible",
+                            "value": false,
+                            "xtype": null
+                        },
+                        {
+                            "name": "fieldLabel",
+                            "value": "{\"de\":\"Google Analytics\",\"en\":\"Google Analytics\"}",
+                            "xtype": "textfield",
+                            "allowBlank": false,
+                            "emptyText": "__i18n_formElements.fieldLabelOptionalEmptyText",
+                            "fieldLabel": "__i18n_formElements.fieldLabel"
+                        }
+                    ],
+                    "descr": {
+                        "text": "__i18n_formElements.elementFieldSet",
+                        "iconCls": "fieldset",
+                        "allowChildNodes": true
+                    },
+                    "items": [
+                        {
+                            "params": [
+                                {
+                                    "name": "CMSvar",
+                                    "value": "trackingId",
+                                    "allowBlank": false,
+                                    "minLength": 3,
+                                    "maskRe": {},
+                                    "stripCharsRe": {},
+                                    "xtype": "textfield",
+                                    "emptyText": "__i18n_generatedFormPanel.varNameEmptyText",
+                                    "fieldLabel": "__i18n_generatedFormPanel.varNameLabel"
+                                },
+                                {
+                                    "name": "xtype",
+                                    "value": "textfield",
+                                    "xtype": null
+                                },
+                                {
+                                    "name": "isMeta",
+                                    "value": true,
+                                    "fieldLabel": "__i18n_formElements.isGlobal",
+                                    "xtype": "checkbox"
+                                },
+                                {
+                                    "name": "fieldLabel",
+                                    "value": "{\"de\":\"Tracking-ID\",\"en\":\"Tracking ID\"}",
+                                    "xtype": "textfield",
+                                    "allowBlank": false,
+                                    "emptyText": "__i18n_formElements.fieldLabelEmptyText",
+                                    "fieldLabel": "__i18n_formElements.fieldLabel"
+                                },
+                                {
+                                    "name": "emptyText",
+                                    "value": "{\"de\":\"z.B. UA-1235678-1\",\"en\":\"e.g. UA-1235678-1\"}",
+                                    "xtype": "textfield",
+                                    "allowBlank": true,
+                                    "emptyText": "__i18n_formElements.emptyTextEmptyText",
+                                    "fieldLabel": "__i18n_formElements.emptyTextLabel"
+                                },
+                                {
+                                    "name": "minLength",
+                                    "value": 0,
+                                    "xtype": "numberfield",
+                                    "allowBlank": false,
+                                    "allowDecimals": false,
+                                    "emptyText": "__i18n_formElements.minLengthEmptyText",
+                                    "fieldLabel": "__i18n_formElements.minLengthLabel"
+                                },
+                                {
+                                    "name": "maxLength",
+                                    "value": 255,
+                                    "xtype": "numberfield",
+                                    "allowBlank": false,
+                                    "allowDecimals": false,
+                                    "emptyText": "__i18n_formElements.maxLengthEmptyText",
+                                    "fieldLabel": "__i18n_formElements.maxLengthLabel"
+                                },
+                                {
+                                    "name": "allowBlank",
+                                    "value": false,
+                                    "xtype": "checkbox",
+                                    "fieldLabel": "__i18n_formElements.allowBlankLabel"
+                                },
+                                {
+                                    "name": "value",
+                                    "value": "",
+                                    "xtype": null
+                                }
+                            ],
+                            "descr": {
+                                "text": "__i18n_formElements.elementTextField",
+                                "iconCls": "textfield",
+                                "hasValue": true
+                            }
+                        }
+                    ]
+                }
+            ],
+            "id": "133ec57e-e580-4435-8523-7b87a6fb7921"
+        }
+    ],
+    "formValues": {
+        "trackingId": ""
+    }
+}

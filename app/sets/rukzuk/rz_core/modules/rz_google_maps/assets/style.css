@@ -1,0 +1,13 @@
+.rz_google_maps > div {
+    height: 0;
+    overflow: hidden;
+    position: relative; /* needed for rz_style_padding_margin */
+}
+
+.rz_google_maps > div > iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

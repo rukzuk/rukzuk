@@ -1,0 +1,12 @@
+{
+    "name": "{\"de\":\"Zustandsselektor\",\"en\":\"State Selector\"}",
+    "description": "{\"de\":\"Die untergeordneten Styles wirken sich abhängig vom Zustand des Moduls/Elements (Mouseover, Fokussiert, Gedrückt) aus.\",\"en\":\"Subordinate styles are applied depending on the state of the module/element (mouseover, focussed, pressed).\"}",
+    "version": "dev",
+    "icon": "style-filter.png",
+    "category": "30",
+    "moduleType": "extension",
+    "allowedChildModuleType": "extension",
+    "ghostContainerMode": "force_off",
+    "reRenderRequired": false,
+    "apiType": "APIv1"
+}

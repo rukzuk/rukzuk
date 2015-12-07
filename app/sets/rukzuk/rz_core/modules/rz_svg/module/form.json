@@ -1,0 +1,272 @@
+{
+    "form": [
+        {
+            "name": "{\"de\":\"Eigenschaften\",\"en\":\"Properties\"}",
+            "icon": "",
+            "formGroupData": [
+                {
+                    "params": [
+                        {
+                            "name": "CMSvar",
+                            "value": "svg",
+                            "allowBlank": false,
+                            "minLength": 3,
+                            "maskRe": {},
+                            "stripCharsRe": {},
+                            "xtype": "textfield",
+                            "emptyText": "__i18n_generatedFormPanel.varNameEmptyText",
+                            "fieldLabel": "__i18n_generatedFormPanel.varNameLabel"
+                        },
+                        {
+                            "name": "xtype",
+                            "value": "CMSclearablemediabutton",
+                            "xtype": null
+                        },
+                        {
+                            "name": "isMeta",
+                            "value": false,
+                            "fieldLabel": "__i18n_formElements.isGlobal",
+                            "xtype": "checkbox"
+                        },
+                        {
+                            "name": "style",
+                            "value": {
+                                "padding": "5px 0"
+                            },
+                            "xtype": null
+                        },
+                        {
+                            "name": "type",
+                            "value": "download",
+                            "xtype": null
+                        },
+                        {
+                            "name": "showText",
+                            "value": true,
+                            "xtype": null
+                        },
+                        {
+                            "name": "fieldLabel",
+                            "value": "",
+                            "xtype": "textfield",
+                            "allowBlank": true,
+                            "emptyText": "__i18n_formElements.fieldLabelOptionalEmptyText",
+                            "fieldLabel": "__i18n_formElements.fieldLabel"
+                        },
+                        {
+                            "name": "text",
+                            "value": "{\"de\":\"SVG Grafik auswählen\",\"en\":\"SVG graphic\"}",
+                            "xtype": "textfield",
+                            "allowBlank": false,
+                            "emptyText": "__i18n_formElements.buttonEmptyText",
+                            "fieldLabel": "__i18n_formElements.buttonLabel"
+                        },
+                        {
+                            "name": "value",
+                            "xtype": null,
+                            "value": null
+                        }
+                    ],
+                    "descr": {
+                        "text": "__i18n_formElements.elementFileDownloadPicker",
+                        "iconCls": "mediaDB",
+                        "hasValue": true
+                    }
+                },
+                {
+                    "params": [
+                        {
+                            "name": "CMSvar",
+                            "value": "svgAlt",
+                            "allowBlank": false,
+                            "minLength": 3,
+                            "maskRe": {},
+                            "stripCharsRe": {},
+                            "xtype": "textfield",
+                            "emptyText": "__i18n_generatedFormPanel.varNameEmptyText",
+                            "fieldLabel": "__i18n_generatedFormPanel.varNameLabel"
+                        },
+                        {
+                            "name": "xtype",
+                            "value": "textfield",
+                            "xtype": null
+                        },
+                        {
+                            "name": "isMeta",
+                            "value": false,
+                            "fieldLabel": "__i18n_formElements.isGlobal",
+                            "xtype": "checkbox"
+                        },
+                        {
+                            "name": "fieldLabel",
+                            "value": "{\"de\":\"Alternativer Text\",\"en\":\"Alternative Text\"}",
+                            "xtype": "textfield",
+                            "allowBlank": false,
+                            "emptyText": "__i18n_formElements.fieldLabelEmptyText",
+                            "fieldLabel": "__i18n_formElements.fieldLabel"
+                        },
+                        {
+                            "name": "emptyText",
+                            "value": "",
+                            "xtype": "textfield",
+                            "allowBlank": true,
+                            "emptyText": "__i18n_formElements.emptyTextEmptyText",
+                            "fieldLabel": "__i18n_formElements.emptyTextLabel"
+                        },
+                        {
+                            "name": "minLength",
+                            "value": 0,
+                            "xtype": "numberfield",
+                            "allowBlank": false,
+                            "allowDecimals": false,
+                            "emptyText": "__i18n_formElements.minLengthEmptyText",
+                            "fieldLabel": "__i18n_formElements.minLengthLabel"
+                        },
+                        {
+                            "name": "maxLength",
+                            "value": 255,
+                            "xtype": "numberfield",
+                            "allowBlank": false,
+                            "allowDecimals": false,
+                            "emptyText": "__i18n_formElements.maxLengthEmptyText",
+                            "fieldLabel": "__i18n_formElements.maxLengthLabel"
+                        },
+                        {
+                            "name": "allowBlank",
+                            "value": true,
+                            "xtype": "checkbox",
+                            "fieldLabel": "__i18n_formElements.allowBlankLabel"
+                        },
+                        {
+                            "name": "value",
+                            "value": "",
+                            "xtype": null
+                        }
+                    ],
+                    "descr": {
+                        "text": "__i18n_formElements.elementTextField",
+                        "iconCls": "textfield",
+                        "hasValue": true
+                    }
+                },
+                {
+                    "params": [
+                        {
+                            "name": "CMSvar",
+                            "value": "svgTitle",
+                            "allowBlank": false,
+                            "minLength": 3,
+                            "maskRe": {},
+                            "stripCharsRe": {},
+                            "xtype": "textfield",
+                            "emptyText": "__i18n_generatedFormPanel.varNameEmptyText",
+                            "fieldLabel": "__i18n_generatedFormPanel.varNameLabel"
+                        },
+                        {
+                            "name": "xtype",
+                            "value": "textfield",
+                            "xtype": null
+                        },
+                        {
+                            "name": "isMeta",
+                            "value": false,
+                            "fieldLabel": "__i18n_formElements.isGlobal",
+                            "xtype": "checkbox"
+                        },
+                        {
+                            "name": "fieldLabel",
+                            "value": "{\"de\":\"Titel\",\"en\":\"Caption\"}",
+                            "xtype": "textfield",
+                            "allowBlank": false,
+                            "emptyText": "__i18n_formElements.fieldLabelEmptyText",
+                            "fieldLabel": "__i18n_formElements.fieldLabel"
+                        },
+                        {
+                            "name": "emptyText",
+                            "value": "",
+                            "xtype": "textfield",
+                            "allowBlank": true,
+                            "emptyText": "__i18n_formElements.emptyTextEmptyText",
+                            "fieldLabel": "__i18n_formElements.emptyTextLabel"
+                        },
+                        {
+                            "name": "minLength",
+                            "value": 0,
+                            "xtype": "numberfield",
+                            "allowBlank": false,
+                            "allowDecimals": false,
+                            "emptyText": "__i18n_formElements.minLengthEmptyText",
+                            "fieldLabel": "__i18n_formElements.minLengthLabel"
+                        },
+                        {
+                            "name": "maxLength",
+                            "value": 255,
+                            "xtype": "numberfield",
+                            "allowBlank": false,
+                            "allowDecimals": false,
+                            "emptyText": "__i18n_formElements.maxLengthEmptyText",
+                            "fieldLabel": "__i18n_formElements.maxLengthLabel"
+                        },
+                        {
+                            "name": "allowBlank",
+                            "value": true,
+                            "xtype": "checkbox",
+                            "fieldLabel": "__i18n_formElements.allowBlankLabel"
+                        },
+                        {
+                            "name": "value",
+                            "value": "",
+                            "xtype": null
+                        }
+                    ],
+                    "descr": {
+                        "text": "__i18n_formElements.elementTextField",
+                        "iconCls": "textfield",
+                        "hasValue": true
+                    }
+                },
+                {
+                    "params": [
+                        {
+                            "name": "xtype",
+                            "value": "ux-multilinelabel",
+                            "xtype": null
+                        },
+                        {
+                            "name": "hideLabel",
+                            "value": true,
+                            "xtype": null
+                        },
+                        {
+                            "name": "text",
+                            "xtype": "textarea",
+                            "height": 200,
+                            "value": "{\"de\":\"Mit diesem Modul können SVG-Vektorgrafiken eingebunden werden, die z.B. mit Adobe Illustrator erstellt wurden.\\u000ADamit diese korrekt angezeigt werden, muss die Datei als SVG im SVG-Profile 1.0 gespeichert werden.\\u000A\\u000AFolgende Elemente dürfen nicht in der Vektorgrafik enthalten sein:\\u000A\\u000A- eingebundene oder verlinkte Bilder\\u000A- eingebundene Fonts (Fonts müssen in Pfade umgewandelt werden)\\u000A- Gradient meshes\\u000A- Stylize und Effekte (z.B. outer/inner glow, drop shadow, gaussian blur)\\u000A\\u000AWeitere Informationen dazu gibt es auf dieser Übersichtsseite: http://voormedia.com/blog/2012/10/creating-svg-vector-graphics-for-maximum-browser-compatibility\\u000A\\u000ATipps zu Illustrator:\\u000A- Konturen kann man über „Objekt->Transparenz reduzieren“ in Pfade umwandeln\\u000A- Obwohl es SVG-Filter gibt werden diese nicht von Browsern angezeigt\\u000A- Auf Vektorgrafiken angewandte 3D-Effekte stellen kein Problem dar\",\"en\":\"With this module you can embedded SVG vector graphics, for example made by Adobe Illustrator.\\u000AThe graphic has to be saved in SVG Profile 1.0.\\u000A\\u000AThe following items are not allowed in the graphic to be included:\\u000A\\u000A- embedded or linked images\\u000A- embedded fonts (fonts must be converted to outlines)\\u000A- Gradient meshes\\u000A- Stylize and effects (e.g. outer/inner glow, drop shadow, gaussian blur)\\u000A\\u000AFor more information see: http://voormedia.com/blog/2012/10/creating-svg-vector-graphics-for-maximum-browser-compatibility\"}",
+                            "fieldLabel": "__i18n_formElements.commentLabel"
+                        },
+                        {
+                            "name": "autoLink",
+                            "value": true,
+                            "xtype": null
+                        },
+                        {
+                            "name": "cls",
+                            "value": "modulecomment",
+                            "xtype": null
+                        }
+                    ],
+                    "descr": {
+                        "text": "__i18n_formElements.elementComment",
+                        "iconCls": "plaintext"
+                    }
+                }
+            ],
+            "id": "33417c5d-364a-4ab1-a2ea-b8859adcd7ff"
+        }
+    ],
+    "formValues": {
+        "svg": null,
+        "svgAlt": "",
+        "svgTitle": ""
+    }
+}

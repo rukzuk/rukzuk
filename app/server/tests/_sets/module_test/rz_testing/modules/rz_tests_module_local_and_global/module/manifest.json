@@ -1,0 +1,11 @@
+{
+    "name":"this is the name: rz_tests_module_local_and_global (global)",
+    "description":"",
+    "version":"test",
+    "icon":"application.png",
+    "category":"{\"de\":\"Default Module\",\"en\":\"Default Modules\"}",
+    "moduleType":"default",
+    "allowedChildModuleType":"*",
+    "reRenderRequired":true,
+    "apiType":"APIv1"
+}

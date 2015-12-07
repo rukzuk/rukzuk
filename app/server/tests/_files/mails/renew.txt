@@ -1,0 +1,9 @@
+From: @@FROM_NAME@@ <@@FROM_ADRESS@@>
+Subject: New password for your Web Design Platform login
+To: @@USER_FIRSTNAME@@ @@USER_LASTNAME@@ <@@USER_EMAIL@@>
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline
+MIME-Version: 1.0
+
+Hello @@USER_FIRSTNAME@@,=0A=0Aplease visit the following link to set a new password for the Web Design Platform:=0A@@WEBHOST@@/?t=3D@@OPTIN_CODE@@&u=3D@@USER_EMAIL@@=0A=0APlatform address: @@WEBHOST@@=0AEmail: @@USER_EMAIL@@=0A=0A=0A=0A=0A/////////////////////////////////=0AThis email was sent on behalf of=0A@@FROM_NAME@@=0A@@FROM_ADRESS@@

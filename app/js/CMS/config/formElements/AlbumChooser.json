@@ -1,0 +1,29 @@
+{
+    "descr": {
+        "id": "AlbumChooser",
+        "text": "__i18n_formElements.elementAlbumChooser",
+        "iconCls": "mediaDB",
+        "hasValue": true
+    },
+    "params": [
+        {
+            "name": "xtype",
+            "value": "CMSalbumchooser",
+            "xtype": null
+        },
+        {
+            "name": "isMeta",
+            "value": false,
+            "fieldLabel": "__i18n_formElements.isGlobal",
+            "xtype": "checkbox"
+        },
+        {
+            "name": "fieldLabel",
+            "value": "__i18n_formElements.album",
+            "xtype": "textfield",
+            "allowBlank": true,
+            "emptyText": "__i18n_formElements.fieldLabelOptionalEmptyText",
+            "fieldLabel": "__i18n_formElements.fieldLabel"
+        }
+    ]
+}

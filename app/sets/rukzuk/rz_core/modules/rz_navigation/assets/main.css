@@ -1,0 +1,13 @@
+.rz_navigation li {
+    list-style-type: none;
+    position: relative;
+    vertical-align: top;
+}
+
+.rz_navigation li a {
+    display: block;
+}
+
+.rz_navigation li:first-child {
+    padding: 0 !important;
+}

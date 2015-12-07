@@ -1,0 +1,32 @@
+.CMSmedialabel {
+    white-space: nowrap;
+    font-size: 11px;
+    line-height: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    .selected-img {
+        max-height: 40px;
+        margin-right: 1px;
+    }
+
+    .selected-text {
+        padding-left: 0.8em;
+        font-size: 12px;
+        font-weight: normal;
+        font-family: UbuntuCondensed;
+    }
+
+    &.CMSmedialabel-multiselect {
+        margin-left: 46px;
+        margin-top: -40px;
+        white-space: normal;
+        min-height: 36px;
+    }
+
+}
+
+.CMSmedialabel img {
+    vertical-align: top;
+}
+

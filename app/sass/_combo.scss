@@ -1,0 +1,47 @@
+@import "colors";
+@import "mixins";
+
+/*!!
+ * Ext JS Library 3.2.1
+ * Copyright(c) 2006-2010 Ext JS, Inc.
+ * licensing@extjs.com
+ * http://www.extjs.com/license
+ */
+.x-combo-list {
+    zoom: 1;
+    overflow: hidden;
+}
+
+.x-combo-list-inner {
+    overflow: auto;
+    position: relative; /* for calculating scroll offsets */
+    zoom: 1;
+    overflow-x: hidden;
+    background-color: $bg-button-bottom;
+}
+
+.x-combo-list-hd {
+    border-bottom: 1px solid;
+    padding: 3px;
+}
+
+.x-resizable-pinned .x-combo-list-inner {
+    border-bottom: 1px solid black;
+}
+
+.x-combo-list-item {
+    padding: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.x-combo-list .x-combo-selected {
+    border: none !important;
+    cursor: pointer;
+}
+
+.x-combo-list .x-toolbar {
+    border-top: 1px solid;
+    border-bottom: 0 none;
+}

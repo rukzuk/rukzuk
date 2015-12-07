@@ -1,0 +1,12 @@
+{
+    "name": "{\"de\":\"Grid\",\"en\":\"Grid\"}",
+    "description": "{\"de\":\"Grundlegendes Layoutmodul welches die untergeordneten Module anhand eines Rasters verteilt. Die Anzahl der Rasterspalten sowie Zwischenräume können angegeben werden. Die Verteilung kann auch für mehrere Zeilen definiert werden.\",\"en\":\"Basic layout module which arranges the subordinate modules according to the defined grid pattern. The number of grid columns and gaps can be defined. The distribution can also be set for multiple rows.\"}",
+    "version": "dev",
+    "icon": "grid-layout.png",
+    "category": "{\"de\":\" Layout\",\"en\":\" Layout\"}",
+    "moduleType": "default",
+    "allowedChildModuleType": "*",
+    "reRenderRequired": false,
+    "ghostContainerMode": "force_off",
+    "apiType": "APIv1"
+}

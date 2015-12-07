@@ -1,0 +1,8 @@
+.rz_page_list > ul > li {
+    display: inline-block;
+    position: relative;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    vertical-align: top;
+}

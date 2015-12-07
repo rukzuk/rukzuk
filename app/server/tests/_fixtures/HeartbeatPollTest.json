@@ -1,0 +1,14 @@
+{
+    "user": [
+        {
+            "id": "USER-heartbea-t000-test-0000-t00000000001-USER",
+            "lastname": "heartbeat",
+            "firstname": "heartbeat tests user 1",
+            "password": "2e114daef3f2d2e93088de34ada22eeb",
+            "gender": "f",
+            "email": "heartbeat_test_user_1@sbcms.de",
+            "issuperuser": 0,
+            "isdeletable": 0
+        }
+    ]
+}

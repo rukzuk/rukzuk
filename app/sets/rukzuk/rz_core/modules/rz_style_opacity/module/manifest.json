@@ -1,0 +1,12 @@
+{
+    "name": "{\"de\":\"Deckkraft\",\"en\":\"Opacity\"}",
+    "description": "{\"de\":\"Transparenz prozentual einstellen.\",\"en\":\"Adjust the transparency in percent.\"}",
+    "version": "dev",
+    "icon": "style-opacity.png",
+    "category": "50",
+    "moduleType": "extension",
+    "allowedChildModuleType": "",
+    "reRenderRequired": false,
+    "apiType": "APIv1",
+    "ghostContainerMode": "force_off"
+}

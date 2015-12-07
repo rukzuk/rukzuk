@@ -1,0 +1,57 @@
+[
+    {
+        "id": "UNIT-ID-ROOT::1",
+        "templateUnitId": "UNIT-ID-ROOT",
+        "moduleId": "rz_root",
+        "name": "",
+        "formValues": {},
+        "expanded": true,
+        "ghostContainer": false,
+        "children": [
+            {
+                "id": "UNIT-ID-IMAGE::1",
+                "templateUnitId": "UNIT-ID-IMAGE",
+                "moduleId": "rz_image",
+                "name": "",
+                "formValues": {
+                    "page_values_not_changed-template_values_not_changed": {
+                        "foo-1": "bar",
+                        "bar-1": "foo"
+                    },
+                    "page_values_not_changed-template_value_changed": {
+                        "foo-2": "new-bar-template",
+                        "bar-2": "new-foo-template"
+                    },
+                    "page_values_not_changed-template_value_set_to_null": {
+                        "foo-3": "bar",
+                        "bar-3": null
+                    },
+                    "page_values_changed-template_value_set_to_null": {
+                        "foo-4": null,
+                        "bar-4": "foo"
+                    },
+                    "all_page_value_changed-template_values_not_changed" : {
+                        "foo-5": "new_bar",
+                        "bar-5": "new_foo"
+                    },
+                    "all_page_value_changed-template_values_also_changed" : {
+                        "foo-6": "new_foo",
+                        "bar-6": "new_foo"
+                    },
+                    "some_page_values_changed-template_values_not_changed" : {
+                        "foo-7": "new_bar",
+                        "bar-7": "foo"
+                    },
+                    "page_values_not_exists-template_values_new" : {
+                        "foo-added": "added_bar-template",
+                        "bar-added": "added_foo-template"
+                    }
+                },
+                "expanded": true,
+                "ghostContainer": false,
+                "description": "",
+                "visibleFormGroups": []
+            }
+        ]
+    }
+]

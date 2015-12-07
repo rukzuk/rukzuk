@@ -1,0 +1,34 @@
+
+.CMSpublishpanelurlinfo {
+    padding-left: 55px;
+    line-height: 145%;
+    font-weight: normal;
+    display: block;
+
+    &:after {
+        content: '';
+        background: url("../images/publish-icon.png") no-repeat no-repeat 13px 0;
+        position: absolute;
+        top: 7;
+        left: 0;
+        width: 53px;
+        height: 32px;
+        background-size: 32px;
+    }
+
+    & a, & a:link, & a:hover {
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    & a:hover {
+        text-decoration: underline;
+    }
+
+}
+
+.CMSpublishChooseTypePanel {
+    tr, td, table, tbody {
+        vertical-align: top;
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "template": [
+        {
+            "id": "TPL-10000000-0000-0000-0000-000000000001-TPL",
+            "websiteid": "SITE-template-getI-DsBy-Webs-iteId0000001-SITE",
+            "name": "test_getIdsByWebsiteId_1.1",
+            "content": "[]",
+            "usedmoduleids": "[]",
+            "contentchecksum": ""
+        },
+        {
+            "id": "TPL-10000000-0000-0000-0000-000000000002-TPL",
+            "websiteid": "SITE-template-getI-DsBy-Webs-iteId0000001-SITE",
+            "name": "test_getIdsByWebsiteId_1.2",
+            "content": "[]",
+            "usedmoduleids": "[]",
+            "contentchecksum": ""
+        },
+        {
+            "id": "TPL-10000000-0000-0000-0000-000000000003-TPL",
+            "websiteid": "SITE-template-getI-DsBy-Webs-iteId0000001-SITE",
+            "name": "test_getIdsByWebsiteId_1.3",
+            "content": "[]",
+            "usedmoduleids": "[]",
+            "contentchecksum": ""
+        },
+        {
+            "id": "TPL-20000000-0000-0000-0000-000000000001-TPL",
+            "websiteid": "SITE-template-getI-DsBy-Webs-iteId0000002-SITE",
+            "name": "test_getIdsByWebsiteId_2.1",
+            "content": "[]",
+            "usedmoduleids": "[]",
+            "contentchecksum": ""
+        }
+    ]
+}

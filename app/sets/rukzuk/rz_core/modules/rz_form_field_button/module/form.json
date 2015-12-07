@@ -1,0 +1,96 @@
+{
+    "form": [
+        {
+            "id": "4400ccb9-e74a-409a-9f9e-3cb8f6ee9668",
+            "name": "{\"de\":\"Eigenschaften\",\"en\":\"Properties\"}",
+            "icon": "",
+            "formGroupData": [
+                {
+                    "params": [
+                        {
+                            "name": "CMSvar",
+                            "value": "fieldLabel",
+                            "allowBlank": false,
+                            "minLength": 3,
+                            "maskRe": {},
+                            "stripCharsRe": {},
+                            "xtype": "textfield",
+                            "emptyText": "__i18n_generatedFormPanel.varNameEmptyText",
+                            "fieldLabel": "__i18n_generatedFormPanel.varNameLabel"
+                        },
+                        {
+                            "name": "xtype",
+                            "value": "textfield",
+                            "xtype": null
+                        },
+                        {
+                            "name": "isMeta",
+                            "value": false,
+                            "fieldLabel": "__i18n_formElements.isGlobal",
+                            "xtype": "checkbox"
+                        },
+                        {
+                            "name": "isResponsive",
+                            "value": false,
+                            "fieldLabel": "__i18n_formElements.isResponsive",
+                            "xtype": "checkbox"
+                        },
+                        {
+                            "name": "fieldLabel",
+                            "value": "{\"de\":\"Button-Text\",\"en\":\"Button text\"}",
+                            "xtype": "textfield",
+                            "allowBlank": false,
+                            "emptyText": "__i18n_formElements.fieldLabelEmptyText",
+                            "fieldLabel": "__i18n_formElements.fieldLabel"
+                        },
+                        {
+                            "name": "emptyText",
+                            "value": "",
+                            "xtype": "textfield",
+                            "allowBlank": true,
+                            "emptyText": "__i18n_formElements.emptyTextEmptyText",
+                            "fieldLabel": "__i18n_formElements.emptyTextLabel"
+                        },
+                        {
+                            "name": "minLength",
+                            "value": 0,
+                            "xtype": "numberfield",
+                            "allowBlank": false,
+                            "allowDecimals": false,
+                            "emptyText": "__i18n_formElements.minLengthEmptyText",
+                            "fieldLabel": "__i18n_formElements.minLengthLabel"
+                        },
+                        {
+                            "name": "maxLength",
+                            "value": 255,
+                            "xtype": "numberfield",
+                            "allowBlank": false,
+                            "allowDecimals": false,
+                            "emptyText": "__i18n_formElements.maxLengthEmptyText",
+                            "fieldLabel": "__i18n_formElements.maxLengthLabel"
+                        },
+                        {
+                            "name": "allowBlank",
+                            "value": true,
+                            "xtype": "checkbox",
+                            "fieldLabel": "__i18n_formElements.allowBlankLabel"
+                        },
+                        {
+                            "name": "value",
+                            "value": "Send",
+                            "xtype": null
+                        }
+                    ],
+                    "descr": {
+                        "text": "__i18n_formElements.elementTextField",
+                        "iconCls": "textfield",
+                        "hasValue": true
+                    }
+                }
+            ]
+        }
+    ],
+    "formValues": {
+        "fieldLabel": "Send"
+    }
+}

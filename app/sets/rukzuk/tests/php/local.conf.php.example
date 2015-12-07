@@ -1,0 +1,2 @@
+<?php
+defined('APP_PATH') || define('APP_PATH', '/path/to/rukzuk/backend/checkout');

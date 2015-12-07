@@ -1,0 +1,1022 @@
+{
+    "form": [
+        {
+            "name": "{\"de\":\"Eigenschaften\",\"en\":\"Properties\"}",
+            "icon": "",
+            "formGroupData": [
+                {
+                    "params": [
+                        {
+                            "name": "xtype",
+                            "value": "ux-multilinelabel",
+                            "xtype": null
+                        },
+                        {
+                            "name": "hideLabel",
+                            "value": true,
+                            "xtype": null
+                        },
+                        {
+                            "name": "text",
+                            "xtype": "textarea",
+                            "height": 200,
+                            "value": "{\"de\":\"Im Bearbeitungsmodus wird nur die erste Seite angezeigt.\",\"en\":\"In edit mode, only the first page will be shown.\"}",
+                            "fieldLabel": "__i18n_formElements.commentLabel"
+                        },
+                        {
+                            "name": "autoLink",
+                            "value": true,
+                            "xtype": null
+                        },
+                        {
+                            "name": "cls",
+                            "value": "modulecomment",
+                            "xtype": null
+                        },
+                        {
+                            "name": "value",
+                            "xtype": null
+                        }
+                    ],
+                    "descr": {
+                        "text": "__i18n_formElements.elementComment",
+                        "iconCls": "plaintext"
+                    }
+                },
+                {
+                    "params": [
+                        {
+                            "name": "CMSvar",
+                            "value": "teaserStartPage",
+                            "allowBlank": false,
+                            "minLength": 3,
+                            "maskRe": {},
+                            "stripCharsRe": {},
+                            "xtype": "textfield",
+                            "emptyText": "__i18n_generatedFormPanel.varNameEmptyText",
+                            "fieldLabel": "__i18n_generatedFormPanel.varNameLabel"
+                        },
+                        {
+                            "name": "xtype",
+                            "value": "CMSinternallinkchooser",
+                            "xtype": null
+                        },
+                        {
+                            "name": "isMeta",
+                            "value": false,
+                            "fieldLabel": "__i18n_formElements.isGlobal",
+                            "xtype": "checkbox"
+                        },
+                        {
+                            "name": "fieldLabel",
+                            "value": "{\"de\":\"Startpunkt\",\"en\":\"Starting point\"}",
+                            "xtype": "textfield",
+                            "allowBlank": true,
+                            "emptyText": "__i18n_formElements.fieldLabelOptionalEmptyText",
+                            "fieldLabel": "__i18n_formElements.fieldLabel"
+                        },
+                        {
+                            "name": "value",
+                            "value": null,
+                            "xtype": null
+                        }
+                    ],
+                    "descr": {
+                        "text": "__i18n_formElements.elementInternalLinkChooser",
+                        "iconCls": "anchor",
+                        "hasValue": true
+                    }
+                },
+                {
+                    "params": [
+                        {
+                            "name": "CMSvar",
+                            "value": "enableRecursive",
+                            "allowBlank": false,
+                            "minLength": 3,
+                            "maskRe": {},
+                            "stripCharsRe": {},
+                            "xtype": "textfield",
+                            "emptyText": "__i18n_generatedFormPanel.varNameEmptyText",
+                            "fieldLabel": "__i18n_generatedFormPanel.varNameLabel"
+                        },
+                        {
+                            "name": "xtype",
+                            "value": "CMSonofftogglebutton",
+                            "xtype": null
+                        },
+                        {
+                            "name": "isMeta",
+                            "value": false,
+                            "fieldLabel": "__i18n_formElements.isGlobal",
+                            "xtype": "checkbox"
+                        },
+                        {
+                            "name": "fieldLabel",
+                            "value": "{\"de\":\"Unterseiten einbeziehen\",\"en\":\"Include sub pages\"}",
+                            "xtype": "textfield",
+                            "allowBlank": true,
+                            "emptyText": "__i18n_formElements.fieldLabelEmptyTextLeft",
+                            "fieldLabel": "__i18n_formElements.fieldLabel"
+                        },
+                        {
+                            "name": "value",
+                            "value": false,
+                            "xtype": null
+                        }
+                    ],
+                    "descr": {
+                        "text": "__i18n_formElements.elementCheckbox",
+                        "iconCls": "checkbox",
+                        "hasValue": true
+                    }
+                },
+                {
+                    "params": [
+                        {
+                            "name": "CMSvar",
+                            "value": "enableSort",
+                            "allowBlank": false,
+                            "minLength": 3,
+                            "maskRe": {},
+                            "stripCharsRe": {},
+                            "xtype": "textfield",
+                            "emptyText": "__i18n_generatedFormPanel.varNameEmptyText",
+                            "fieldLabel": "__i18n_generatedFormPanel.varNameLabel"
+                        },
+                        {
+                            "name": "xtype",
+                            "value": "CMSonofffieldset",
+                            "xtype": null
+                        },
+                        {
+                            "name": "value",
+                            "value": false,
+                            "xtype": null
+                        },
+                        {
+                            "name": "fieldLabel",
+                            "value": "{\"de\":\"Seiten sortieren\",\"en\":\"Sort pages\"}",
+                            "xtype": "textfield",
+                            "allowBlank": true,
+                            "emptyText": "__i18n_formElements.fieldLabelOptionalEmptyText",
+                            "fieldLabel": "__i18n_formElements.fieldLabel"
+                        }
+                    ],
+                    "descr": {
+                        "text": "__i18n_formElements.elementCheckboxFieldSet",
+                        "iconCls": "checkboxfieldset",
+                        "allowChildNodes": true,
+                        "hasValue": true
+                    },
+                    "items": [
+                        {
+                            "params": [
+                                {
+                                    "name": "CMSvar",
+                                    "value": "sortBy",
+                                    "allowBlank": false,
+                                    "minLength": 3,
+                                    "maskRe": {},
+                                    "stripCharsRe": {},
+                                    "xtype": "textfield",
+                                    "emptyText": "__i18n_generatedFormPanel.varNameEmptyText",
+                                    "fieldLabel": "__i18n_generatedFormPanel.varNameLabel"
+                                },
+                                {
+                                    "name": "xtype",
+                                    "value": "CMStabbedfieldset",
+                                    "xtype": null
+                                },
+                                {
+                                    "name": "isMeta",
+                                    "value": false,
+                                    "fieldLabel": "__i18n_formElements.isGlobal",
+                                    "xtype": "checkbox"
+                                },
+                                {
+                                    "name": "fieldLabel",
+                                    "value": "",
+                                    "xtype": "textfield",
+                                    "allowBlank": true,
+                                    "emptyText": "__i18n_formElements.fieldLabelOptionalEmptyText",
+                                    "fieldLabel": "__i18n_formElements.fieldLabel"
+                                },
+                                {
+                                    "name": "value",
+                                    "xtype": null,
+                                    "value": "field"
+                                }
+                            ],
+                            "descr": {
+                                "text": "__i18n_formElements.elementTabbedFieldSet",
+                                "iconCls": "tabbedfieldset",
+                                "hasValue": true,
+                                "allowChildNodes": true
+                            },
+                            "items": [
+                                {
+                                    "params": [
+                                        {
+                                            "name": "xtype",
+                                            "value": "CMStabpage",
+                                            "xtype": null
+                                        },
+                                        {
+                                            "name": "tabValue",
+                                            "xtype": "textfield",
+                                            "allowBlank": false,
+                                            "emptyText": "__i18n_formElements.groupValueEmptyText",
+                                            "fieldLabel": "__i18n_formElements.groupValueFieldLabel",
+                                            "value": "field"
+                                        },
+                                        {
+                                            "name": "title",
+                                            "value": "{\"de\":\"nach Seiteneigenschaft\",\"en\":\"by page property\"}",
+                                            "xtype": "textfield",
+                                            "allowBlank": false,
+                                            "emptyText": "__i18n_formElements.title",
+                                            "fieldLabel": "__i18n_formElements.title"
+                                        },
+                                        {
+                                            "name": "value",
+                                            "value": "field",
+                                            "xtype": null
+                                        }
+                                    ],
+                                    "descr": {
+                                        "text": "__i18n_formElements.elementTabPage",
+                                        "iconCls": "tabpage",
+                                        "hasValue": false,
+                                        "allowChildNodes": true
+                                    },
+                                    "items": [
+                                        {
+                                            "params": [
+                                                {
+                                                    "name": "CMSvar",
+                                                    "value": "sortByField",
+                                                    "allowBlank": false,
+                                                    "minLength": 3,
+                                                    "maskRe": {},
+                                                    "stripCharsRe": {},
+                                                    "xtype": "textfield",
+                                                    "emptyText": "__i18n_generatedFormPanel.varNameEmptyText",
+                                                    "fieldLabel": "__i18n_generatedFormPanel.varNameLabel"
+                                                },
+                                                {
+                                                    "name": "xtype",
+                                                    "value": "ux-comboselect",
+                                                    "xtype": null
+                                                },
+                                                {
+                                                    "name": "isMeta",
+                                                    "value": false,
+                                                    "fieldLabel": "__i18n_formElements.isGlobal",
+                                                    "xtype": "checkbox"
+                                                },
+                                                {
+                                                    "name": "fieldLabel",
+                                                    "value": "{\"de\":\"Seiteneigenschaft\",\"en\":\"Page property\"}",
+                                                    "xtype": "textfield",
+                                                    "allowBlank": true,
+                                                    "emptyText": "__i18n_formElements.fieldLabelOptionalEmptyText",
+                                                    "fieldLabel": "__i18n_formElements.fieldLabel"
+                                                },
+                                                {
+                                                    "name": "emptyText",
+                                                    "value": "",
+                                                    "xtype": "textfield",
+                                                    "allowBlank": true,
+                                                    "emptyText": "__i18n_formElements.emptyTextEmptyText",
+                                                    "fieldLabel": "__i18n_formElements.emptyTextLabel"
+                                                },
+                                                {
+                                                    "name": "options",
+                                                    "value": [
+                                                        [
+                                                            "pageTitle",
+                                                            "{\"de\":\"Produkt Name\",\"en\":\"Product name\"}",
+                                                            0
+                                                        ],
+                                                        [
+                                                            "pageDate",
+                                                            "{\"de\":\"Datum\",\"en\":\"Date\"}",
+                                                            0
+                                                        ],
+                                                        [
+                                                            "pageDescription",
+                                                            "{\"de\":\"Beschreibungstext\",\"en\":\"Description\"}",
+                                                            0
+                                                        ],
+                                                        [
+                                                            "productPrice",
+                                                            "{\"de\":\"Preis\",\"en\":\"Price\"}",
+                                                            0
+                                                        ]
+                                                    ],
+                                                    "xtype": "CMSkeyvaluetextarea",
+                                                    "allowBlank": false,
+                                                    "array": true,
+                                                    "emptyText": "__i18n_formElements.listValuesEmptyText",
+                                                    "fieldLabel": "__i18n_formElements.listValuesLabel"
+                                                },
+                                                {
+                                                    "name": "forceSelection",
+                                                    "value": false,
+                                                    "xtype": "checkbox",
+                                                    "fieldLabel": "__i18n_formElements.comboSelectForceSelection"
+                                                },
+                                                {
+                                                    "name": "value",
+                                                    "value": "pageDate",
+                                                    "xtype": null
+                                                }
+                                            ],
+                                            "descr": {
+                                                "text": "__i18n_formElements.elementComboSelect",
+                                                "iconCls": "combo",
+                                                "hasValue": true
+                                            }
+                                        },
+                                        {
+                                            "params": [
+                                                {
+                                                    "name": "CMSvar",
+                                                    "value": "sortByFieldDirection",
+                                                    "allowBlank": false,
+                                                    "minLength": 3,
+                                                    "maskRe": {},
+                                                    "stripCharsRe": {},
+                                                    "xtype": "textfield",
+                                                    "emptyText": "__i18n_generatedFormPanel.varNameEmptyText",
+                                                    "fieldLabel": "__i18n_generatedFormPanel.varNameLabel"
+                                                },
+                                                {
+                                                    "name": "xtype",
+                                                    "value": "ux-comboselect",
+                                                    "xtype": null
+                                                },
+                                                {
+                                                    "name": "isMeta",
+                                                    "value": false,
+                                                    "fieldLabel": "__i18n_formElements.isGlobal",
+                                                    "xtype": "checkbox"
+                                                },
+                                                {
+                                                    "name": "fieldLabel",
+                                                    "value": "{\"de\":\"Reihenfolge\",\"en\":\"Order\"}",
+                                                    "xtype": "textfield",
+                                                    "allowBlank": true,
+                                                    "emptyText": "__i18n_formElements.fieldLabelOptionalEmptyText",
+                                                    "fieldLabel": "__i18n_formElements.fieldLabel"
+                                                },
+                                                {
+                                                    "name": "emptyText",
+                                                    "value": "",
+                                                    "xtype": "textfield",
+                                                    "allowBlank": true,
+                                                    "emptyText": "__i18n_formElements.emptyTextEmptyText",
+                                                    "fieldLabel": "__i18n_formElements.emptyTextLabel"
+                                                },
+                                                {
+                                                    "name": "options",
+                                                    "value": [
+                                                        [
+                                                            "asc",
+                                                            "{\"de\":\"aufsteigend\",\"en\":\"ascending\"}"
+                                                        ],
+                                                        [
+                                                            "desc",
+                                                            "{\"de\":\"absteigend\",\"en\":\"descending\"}"
+                                                        ]
+                                                    ],
+                                                    "xtype": "CMSkeyvaluetextarea",
+                                                    "allowBlank": false,
+                                                    "array": true,
+                                                    "emptyText": "__i18n_formElements.listValuesEmptyText",
+                                                    "fieldLabel": "__i18n_formElements.listValuesLabel"
+                                                },
+                                                {
+                                                    "name": "forceSelection",
+                                                    "value": true,
+                                                    "xtype": "checkbox",
+                                                    "fieldLabel": "__i18n_formElements.comboSelectForceSelection"
+                                                },
+                                                {
+                                                    "name": "value",
+                                                    "value": "desc",
+                                                    "xtype": null
+                                                }
+                                            ],
+                                            "descr": {
+                                                "text": "__i18n_formElements.elementComboSelect",
+                                                "iconCls": "combo",
+                                                "hasValue": true
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "params": [
+                                        {
+                                            "name": "xtype",
+                                            "value": "CMStabpage",
+                                            "xtype": null
+                                        },
+                                        {
+                                            "name": "tabValue",
+                                            "xtype": "textfield",
+                                            "allowBlank": false,
+                                            "emptyText": "__i18n_formElements.groupValueEmptyText",
+                                            "fieldLabel": "__i18n_formElements.groupValueFieldLabel",
+                                            "value": "random"
+                                        },
+                                        {
+                                            "name": "title",
+                                            "value": "{\"de\":\"nach Zufallsprinzip\",\"en\":\"random\"}",
+                                            "xtype": "textfield",
+                                            "allowBlank": false,
+                                            "emptyText": "__i18n_formElements.title",
+                                            "fieldLabel": "__i18n_formElements.title"
+                                        },
+                                        {
+                                            "name": "value",
+                                            "value": "random",
+                                            "xtype": null
+                                        }
+                                    ],
+                                    "descr": {
+                                        "text": "__i18n_formElements.elementTabPage",
+                                        "iconCls": "tabpage",
+                                        "hasValue": false,
+                                        "allowChildNodes": true
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "params": [
+                        {
+                            "name": "CMSvar",
+                            "value": "enableLimit",
+                            "allowBlank": false,
+                            "minLength": 3,
+                            "maskRe": {},
+                            "stripCharsRe": {},
+                            "xtype": "textfield",
+                            "emptyText": "__i18n_generatedFormPanel.varNameEmptyText",
+                            "fieldLabel": "__i18n_generatedFormPanel.varNameLabel"
+                        },
+                        {
+                            "name": "xtype",
+                            "value": "CMSonofffieldset",
+                            "xtype": null
+                        },
+                        {
+                            "name": "value",
+                            "value": false,
+                            "xtype": null
+                        },
+                        {
+                            "name": "fieldLabel",
+                            "value": "{\"de\":\"Anzahl der Seiten eingrenzen\",\"en\":\"Limit pages\"}",
+                            "xtype": "textfield",
+                            "allowBlank": true,
+                            "emptyText": "__i18n_formElements.fieldLabelOptionalEmptyText",
+                            "fieldLabel": "__i18n_formElements.fieldLabel"
+                        }
+                    ],
+                    "descr": {
+                        "text": "__i18n_formElements.elementCheckboxFieldSet",
+                        "iconCls": "checkboxfieldset",
+                        "allowChildNodes": true,
+                        "hasValue": true
+                    },
+                    "items": [
+                        {
+                            "params": [
+                                {
+                                    "name": "CMSvar",
+                                    "value": "limit",
+                                    "allowBlank": false,
+                                    "minLength": 3,
+                                    "maskRe": {},
+                                    "stripCharsRe": {},
+                                    "xtype": "textfield",
+                                    "emptyText": "__i18n_generatedFormPanel.varNameEmptyText",
+                                    "fieldLabel": "__i18n_generatedFormPanel.varNameLabel"
+                                },
+                                {
+                                    "name": "xtype",
+                                    "value": "CMSnumberfieldunit",
+                                    "xtype": null
+                                },
+                                {
+                                    "name": "isMeta",
+                                    "value": false,
+                                    "fieldLabel": "__i18n_formElements.isGlobal",
+                                    "xtype": "checkbox"
+                                },
+                                {
+                                    "name": "fieldLabel",
+                                    "value": "{\"de\":\"Maximale Anzahl\",\"en\":\"Maximal pages\"}",
+                                    "xtype": "textfield",
+                                    "allowBlank": false,
+                                    "emptyText": "__i18n_formElements.fieldLabelEmptyText",
+                                    "fieldLabel": "__i18n_formElements.fieldLabel"
+                                },
+                                {
+                                    "name": "minValue",
+                                    "value": 1,
+                                    "xtype": "numberfield",
+                                    "allowBlank": true,
+                                    "allowDecimals": false,
+                                    "emptyText": "__i18n_formElements.minValueEmptyText",
+                                    "fieldLabel": "__i18n_formElements.minValueLabel"
+                                },
+                                {
+                                    "name": "maxValue",
+                                    "value": "",
+                                    "xtype": "numberfield",
+                                    "allowBlank": true,
+                                    "allowDecimals": false,
+                                    "emptyText": "__i18n_formElements.maxValueEmptyText",
+                                    "fieldLabel": "__i18n_formElements.maxValueLabel"
+                                },
+                                {
+                                    "name": "increment",
+                                    "value": 1,
+                                    "xtype": "numberfield",
+                                    "allowBlank": false,
+                                    "allowDecimals": true,
+                                    "emptyText": "__i18n_formElements.incrementEmptyText",
+                                    "fieldLabel": "__i18n_formElements.incrementLabel"
+                                },
+                                {
+                                    "name": "unitList",
+                                    "value": [],
+                                    "xtype": "CMSkeyvaluetextareaconfigurable",
+                                    "allowBlank": true,
+                                    "numOfValues": 2,
+                                    "array": true,
+                                    "emptyText": "__i18n_formElements.sizeUnitsEmptyText",
+                                    "fieldLabel": "__i18n_formElements.sizeUnitsLabel"
+                                },
+                                {
+                                    "name": "value",
+                                    "value": "10",
+                                    "xtype": null
+                                }
+                            ],
+                            "descr": {
+                                "text": "__i18n_formElements.elementSliderUnit",
+                                "iconCls": "slider",
+                                "hasValue": true
+                            }
+                        },
+                        {
+                            "params": [
+                                {
+                                    "name": "CMSvar",
+                                    "value": "limitStart",
+                                    "allowBlank": false,
+                                    "minLength": 3,
+                                    "maskRe": {},
+                                    "stripCharsRe": {},
+                                    "xtype": "textfield",
+                                    "emptyText": "__i18n_generatedFormPanel.varNameEmptyText",
+                                    "fieldLabel": "__i18n_generatedFormPanel.varNameLabel"
+                                },
+                                {
+                                    "name": "xtype",
+                                    "value": "CMSnumberfieldunit",
+                                    "xtype": null
+                                },
+                                {
+                                    "name": "isMeta",
+                                    "value": false,
+                                    "fieldLabel": "__i18n_formElements.isGlobal",
+                                    "xtype": "checkbox"
+                                },
+                                {
+                                    "name": "fieldLabel",
+                                    "value": "{\"de\":\"beginnen bei\",\"en\":\"start at\"}",
+                                    "xtype": "textfield",
+                                    "allowBlank": false,
+                                    "emptyText": "__i18n_formElements.fieldLabelEmptyText",
+                                    "fieldLabel": "__i18n_formElements.fieldLabel"
+                                },
+                                {
+                                    "name": "minValue",
+                                    "value": 1,
+                                    "xtype": "numberfield",
+                                    "allowBlank": true,
+                                    "allowDecimals": false,
+                                    "emptyText": "__i18n_formElements.minValueEmptyText",
+                                    "fieldLabel": "__i18n_formElements.minValueLabel"
+                                },
+                                {
+                                    "name": "maxValue",
+                                    "value": "",
+                                    "xtype": "numberfield",
+                                    "allowBlank": true,
+                                    "allowDecimals": false,
+                                    "emptyText": "__i18n_formElements.maxValueEmptyText",
+                                    "fieldLabel": "__i18n_formElements.maxValueLabel"
+                                },
+                                {
+                                    "name": "increment",
+                                    "value": 1,
+                                    "xtype": "numberfield",
+                                    "allowBlank": false,
+                                    "allowDecimals": true,
+                                    "emptyText": "__i18n_formElements.incrementEmptyText",
+                                    "fieldLabel": "__i18n_formElements.incrementLabel"
+                                },
+                                {
+                                    "name": "unitList",
+                                    "value": [],
+                                    "xtype": "CMSkeyvaluetextareaconfigurable",
+                                    "allowBlank": true,
+                                    "numOfValues": 2,
+                                    "array": true,
+                                    "emptyText": "__i18n_formElements.sizeUnitsEmptyText",
+                                    "fieldLabel": "__i18n_formElements.sizeUnitsLabel"
+                                },
+                                {
+                                    "name": "value",
+                                    "value": "1",
+                                    "xtype": null
+                                }
+                            ],
+                            "descr": {
+                                "text": "__i18n_formElements.elementSliderUnit",
+                                "iconCls": "slider",
+                                "hasValue": true
+                            }
+                        }
+                    ]
+                }
+            ],
+            "id": "b23c9152-ad4d-4349-821c-6d6c3ea53800"
+        },
+        {
+            "id": "81369904-5520-4680-81dd-b14c0b436c53",
+            "name": "{\"de\":\"Darstellung\",\"en\":\"Layout\"}",
+            "icon": "",
+            "formGroupData": [
+                {
+                    "params": [
+                        {
+                            "name": "CMSvar",
+                            "value": "cssColumnCount",
+                            "allowBlank": false,
+                            "minLength": 3,
+                            "maskRe": {},
+                            "stripCharsRe": {},
+                            "xtype": "textfield",
+                            "emptyText": "__i18n_generatedFormPanel.varNameEmptyText",
+                            "fieldLabel": "__i18n_generatedFormPanel.varNameLabel"
+                        },
+                        {
+                            "name": "xtype",
+                            "value": "ux-comboselect",
+                            "xtype": null
+                        },
+                        {
+                            "name": "isMeta",
+                            "value": false,
+                            "fieldLabel": "__i18n_formElements.isGlobal",
+                            "xtype": "checkbox"
+                        },
+                        {
+                            "name": "fieldLabel",
+                            "value": "{\"de\":\"Spalten\",\"en\":\"Columns\"}",
+                            "xtype": "textfield",
+                            "allowBlank": true,
+                            "emptyText": "__i18n_formElements.fieldLabelOptionalEmptyText",
+                            "fieldLabel": "__i18n_formElements.fieldLabel"
+                        },
+                        {
+                            "name": "isResponsive",
+                            "value": true,
+                            "fieldLabel": "__i18n_formElements.isResponsive",
+                            "xtype": "checkbox"
+                        },
+                        {
+                            "name": "emptyText",
+                            "value": "",
+                            "xtype": "textfield",
+                            "allowBlank": true,
+                            "emptyText": "__i18n_formElements.emptyTextEmptyText",
+                            "fieldLabel": "__i18n_formElements.emptyTextLabel"
+                        },
+                        {
+                            "name": "options",
+                            "value": [
+                                [
+                                    "1",
+                                    "{\"de\":\"1\",\"en\":\"1\"}",
+                                    0
+                                ],
+                                [
+                                    "2",
+                                    "{\"de\":\"2\",\"en\":\"2\"}",
+                                    0
+                                ],
+                                [
+                                    "3",
+                                    "{\"de\":\"3\",\"en\":\"3\"}",
+                                    0
+                                ],
+                                [
+                                    "4",
+                                    "{\"de\":\"4\",\"en\":\"4\"}",
+                                    0
+                                ],
+                                [
+                                    "5",
+                                    "{\"de\":\"5\",\"en\":\"5\"}",
+                                    0
+                                ],
+                                [
+                                    "6",
+                                    "{\"de\":\"6\",\"en\":\"6\"}",
+                                    0
+                                ],
+                                [
+                                    "7",
+                                    "{\"de\":\"7\",\"en\":\"7\"}",
+                                    0
+                                ],
+                                [
+                                    "8",
+                                    "{\"de\":\"8\",\"en\":\"8\"}",
+                                    0
+                                ],
+                                [
+                                    "9",
+                                    "{\"de\":\"9\",\"en\":\"9\"}",
+                                    0
+                                ],
+                                [
+                                    "10",
+                                    "{\"de\":\"10\",\"en\":\"10\"}",
+                                    0
+                                ]
+                            ],
+                            "xtype": "CMSkeyvaluetextarea",
+                            "allowBlank": false,
+                            "array": true,
+                            "emptyText": "__i18n_formElements.listValuesEmptyText",
+                            "fieldLabel": "__i18n_formElements.listValuesLabel"
+                        },
+                        {
+                            "name": "forceSelection",
+                            "value": true,
+                            "xtype": "checkbox",
+                            "fieldLabel": "__i18n_formElements.comboSelectForceSelection"
+                        },
+                        {
+                            "name": "value",
+                            "value": {
+                                "type": "bp",
+                                "default": 1
+                            },
+                            "xtype": null
+                        }
+                    ],
+                    "descr": {
+                        "text": "__i18n_formElements.elementComboSelect",
+                        "iconCls": "combo",
+                        "hasValue": true
+                    }
+                },
+                {
+                    "params": [
+                        {
+                            "name": "CMSvar",
+                            "value": "cssHSpace",
+                            "allowBlank": false,
+                            "minLength": 3,
+                            "maskRe": {},
+                            "stripCharsRe": {},
+                            "xtype": "textfield",
+                            "emptyText": "__i18n_generatedFormPanel.varNameEmptyText",
+                            "fieldLabel": "__i18n_generatedFormPanel.varNameLabel"
+                        },
+                        {
+                            "name": "xtype",
+                            "value": "CMSnumberfieldunit",
+                            "xtype": null
+                        },
+                        {
+                            "name": "isMeta",
+                            "value": false,
+                            "fieldLabel": "__i18n_formElements.isGlobal",
+                            "xtype": "checkbox"
+                        },
+                        {
+                            "name": "isResponsive",
+                            "value": true,
+                            "fieldLabel": "__i18n_formElements.isResponsive",
+                            "xtype": "checkbox"
+                        },
+                        {
+                            "name": "fieldLabel",
+                            "value": "{\"de\":\"horizontaler Abstand\",\"en\":\"horizontal distance\"}",
+                            "xtype": "textfield",
+                            "allowBlank": false,
+                            "emptyText": "__i18n_formElements.fieldLabelEmptyText",
+                            "fieldLabel": "__i18n_formElements.fieldLabel"
+                        },
+                        {
+                            "name": "minValue",
+                            "value": 0,
+                            "xtype": "numberfield",
+                            "allowBlank": true,
+                            "allowDecimals": false,
+                            "emptyText": "__i18n_formElements.minValueEmptyText",
+                            "fieldLabel": "__i18n_formElements.minValueLabel"
+                        },
+                        {
+                            "name": "maxValue",
+                            "value": "",
+                            "xtype": "numberfield",
+                            "allowBlank": true,
+                            "allowDecimals": false,
+                            "emptyText": "__i18n_formElements.maxValueEmptyText",
+                            "fieldLabel": "__i18n_formElements.maxValueLabel"
+                        },
+                        {
+                            "name": "increment",
+                            "value": 1,
+                            "xtype": "numberfield",
+                            "allowBlank": false,
+                            "allowDecimals": true,
+                            "emptyText": "__i18n_formElements.incrementEmptyText",
+                            "fieldLabel": "__i18n_formElements.incrementLabel"
+                        },
+                        {
+                            "name": "unitList",
+                            "value": [
+                                [
+                                    "px",
+                                    "px"
+                                ],
+                                [
+                                    "%",
+                                    "%"
+                                ]
+                            ],
+                            "xtype": "CMSkeyvaluetextareaconfigurable",
+                            "allowBlank": true,
+                            "numOfValues": 2,
+                            "array": true,
+                            "emptyText": "__i18n_formElements.sizeUnitsEmptyText",
+                            "fieldLabel": "__i18n_formElements.sizeUnitsLabel"
+                        },
+                        {
+                            "name": "value",
+                            "value": {
+                                "type": "bp",
+                                "default": "0px"
+                            },
+                            "xtype": null
+                        }
+                    ],
+                    "descr": {
+                        "text": "__i18n_formElements.elementSliderUnit",
+                        "iconCls": "slider",
+                        "hasValue": true
+                    }
+                },
+                {
+                    "params": [
+                        {
+                            "name": "CMSvar",
+                            "value": "cssVSpace",
+                            "allowBlank": false,
+                            "minLength": 3,
+                            "maskRe": {},
+                            "stripCharsRe": {},
+                            "xtype": "textfield",
+                            "emptyText": "__i18n_generatedFormPanel.varNameEmptyText",
+                            "fieldLabel": "__i18n_generatedFormPanel.varNameLabel"
+                        },
+                        {
+                            "name": "xtype",
+                            "value": "CMSnumberfieldunit",
+                            "xtype": null
+                        },
+                        {
+                            "name": "isMeta",
+                            "value": false,
+                            "fieldLabel": "__i18n_formElements.isGlobal",
+                            "xtype": "checkbox"
+                        },
+                        {
+                            "name": "isResponsive",
+                            "value": true,
+                            "fieldLabel": "__i18n_formElements.isResponsive",
+                            "xtype": "checkbox"
+                        },
+                        {
+                            "name": "fieldLabel",
+                            "value": "{\"de\":\"vertikaler Abstand\",\"en\":\"vertical distance\"}",
+                            "xtype": "textfield",
+                            "allowBlank": false,
+                            "emptyText": "__i18n_formElements.fieldLabelEmptyText",
+                            "fieldLabel": "__i18n_formElements.fieldLabel"
+                        },
+                        {
+                            "name": "minValue",
+                            "value": 0,
+                            "xtype": "numberfield",
+                            "allowBlank": true,
+                            "allowDecimals": false,
+                            "emptyText": "__i18n_formElements.minValueEmptyText",
+                            "fieldLabel": "__i18n_formElements.minValueLabel"
+                        },
+                        {
+                            "name": "maxValue",
+                            "value": "",
+                            "xtype": "numberfield",
+                            "allowBlank": true,
+                            "allowDecimals": false,
+                            "emptyText": "__i18n_formElements.maxValueEmptyText",
+                            "fieldLabel": "__i18n_formElements.maxValueLabel"
+                        },
+                        {
+                            "name": "increment",
+                            "value": 1,
+                            "xtype": "numberfield",
+                            "allowBlank": false,
+                            "allowDecimals": true,
+                            "emptyText": "__i18n_formElements.incrementEmptyText",
+                            "fieldLabel": "__i18n_formElements.incrementLabel"
+                        },
+                        {
+                            "name": "unitList",
+                            "value": [
+                                [
+                                    "px",
+                                    "px"
+                                ],
+                                [
+                                    "%",
+                                    "%"
+                                ]
+                            ],
+                            "xtype": "CMSkeyvaluetextareaconfigurable",
+                            "allowBlank": true,
+                            "numOfValues": 2,
+                            "array": true,
+                            "emptyText": "__i18n_formElements.sizeUnitsEmptyText",
+                            "fieldLabel": "__i18n_formElements.sizeUnitsLabel"
+                        },
+                        {
+                            "name": "value",
+                            "value": {
+                                "type": "bp",
+                                "default": "0px"
+                            },
+                            "xtype": null
+                        }
+                    ],
+                    "descr": {
+                        "text": "__i18n_formElements.elementSliderUnit",
+                        "iconCls": "slider",
+                        "hasValue": true
+                    }
+                }
+            ]
+        }
+    ],
+    "formValues": {
+        "teaserStartPage": null,
+        "enableRecursive": false,
+        "enableSort": false,
+        "sortBy": "field",
+        "sortByField": "pageDate",
+        "sortByFieldDirection": "desc",
+        "enableLimit": false,
+        "limit": "10",
+        "limitStart": "1",
+        "cssColumnCount": {
+            "type": "bp",
+            "default": 1
+        },
+        "cssHSpace": {
+            "type": "bp",
+            "default": "0px"
+        },
+        "cssVSpace": {
+            "type": "bp",
+            "default": "0px"
+        }
+    }
+}

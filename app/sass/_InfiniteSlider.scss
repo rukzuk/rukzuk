@@ -1,0 +1,10 @@
+.ux-infiniteslider {
+    width: 100%;
+    height: 22px;
+    background: url(../images/infinite-spinner-bg.png) repeat;
+    background-position: 0 -9px;
+}
+
+.ux-infiniteslider, .ux-infiniteslider-proxy {
+    cursor: w-resize;
+}

@@ -1,0 +1,37 @@
+.rz_container_collapsible > .collapsibleHandle span {
+    cursor: pointer;
+    display: block;
+}
+.rz_container_collapsible > .collapsibleHandle > div:after {
+    content: ".";
+    clear: both;
+    display: block;
+    visibility: hidden;
+    height: 0px;
+}
+
+.rz_container_collapsible > .collapsibleHandle div.expand {
+    display: none;
+    position: relative;
+}
+
+.rz_container_collapsible > .collapsibleHandle div.collapse {
+    display: block;
+    position: relative;
+}
+
+.rz_container_collapsible > .collapsibleHandle.collapsed div.expand {
+    display: block;
+}
+
+.rz_container_collapsible > .collapsibleHandle.collapsed div.collapse {
+    display: none;
+}
+
+.rz_container_collapsible.collapsed > .collapsibleContent {
+    display: none;
+}
+
+.rz_container_collapsible > .collapsibleContent {
+    clear: both;
+}

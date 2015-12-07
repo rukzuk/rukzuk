@@ -1,0 +1,34 @@
+{
+    "name": "rukzuk/rukzuk",
+    "description": "rukzuk — simply powerful web design",
+    "require": {
+        "zf1/zend-loader": "~1.12",
+        "zf1/zend-config": "~1.12",
+        "zf1/zend-json": "~1.12",
+        "zf1/zend-log": "~1.12",
+        "zf1/zend-db": "~1.12",
+        "zf1/zend-auth": "~1.12",
+        "zf1/zend-acl": "~1.12",
+        "zf1/zend-session": "~1.12",
+        "zf1/zend-filter": "~1.12",
+        "zf1/zend-translate": "~1.12",
+        "zf1/zend-mail": "~1.12",
+        "zf1/zend-file-transfer": "~1.12",
+        "zf1/zend-search-lucene": "~1.12",
+        "zf1/zend-application": "~1.12",
+        "sabre/dav": "~2.1.1",
+        "doctrine/orm": "2.5.*",
+        "doctrine/migrations": "1.0.*@dev",
+        "leafo/scssphp": "~0.1.5",
+        "segmentio/analytics-php": "1.2.0"
+    },
+    "include-path": [
+        "vendor/zf1/zend-loader/library"
+    ],
+    "authors": [
+        {
+            "name": "rukzuk AG",
+            "email": "info@rukzuk.com"
+        }
+    ]
+}

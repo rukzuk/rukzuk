@@ -1,0 +1,49 @@
+{
+    "locks": [
+        {
+            "websiteid": "SITE-heartbea-t000-test-0000-000000000001-SITE",
+            "itemid": "PAGE-00000000-0000-0000-0000-000000000002-PAGE",
+            "type": "page",
+            "userid": "USER-heartbea-t000-test-0000-t00000000001-USER",
+            "runid": "CMSRUNID-00000000-0000-0000-0000-000000000001-CMSRUNID",
+            "starttime": "1111111111",
+            "lastactivity": "1111111111"
+        },
+        {
+            "websiteid": "SITE-heartbea-t000-test-0000-000000000002-SITE",
+            "itemid": "TPL-00000000-0000-0000-0000-000000000004-TPL",
+            "type": "template",
+            "userid": "USER-heartbea-t000-test-0000-t00000000001-USER",
+            "runid": "CMSRUNID-00000000-0000-0000-0000-000000000001-CMSRUNID",
+            "starttime": "1111111111",
+            "lastactivity": "1111111111"
+        },
+        {
+            "websiteid": "SITE-heartbea-t000-test-0000-000000000002-SITE",
+            "itemid": "MODUL-00000000-0000-0000-0000-000000000003-MODUL",
+            "type": "module",
+            "userid": "USER-heartbea-t000-test-0000-t00000000001-USER",
+            "runid": "CMSRUNID-00000000-0000-0000-0000-000000000001-CMSRUNID",
+            "starttime": "1111111111",
+            "lastactivity": "1111111111"
+        },
+        {
+            "websiteid": "SITE-controll-er00-lock-test-000000000001-SITE",
+            "itemid": "MODUL-00000000-0000-0000-0000-000000000002-MODUL",
+            "type": "module",
+            "userid": "USER-controll-er00-lock-test-000000000002-USER",
+            "runid": "CMSRUNID-00000000-0000-0000-0000-000000000002-CMSRUNID",
+            "starttime": "1111111111",
+            "lastactivity": "1111111111"
+        },
+        {
+            "websiteid": "SITE-1964e89c-0001-sued-a651-fc42dc78fe50-SITE",
+            "itemid": "PAGE-03565eb8-0003-47e9-sued-90ae9d96d3c2-PAGE",
+            "type": "page",
+            "userid": "USER-ed02eaa7-7fc5-464a-bd47-16b3b8af36cf-USER",
+            "runid": "CMSRUNID-00000000-0000-0000-0000-000000000001-CMSRUNID",
+            "starttime": "1111111111",
+            "lastactivity": "1111111111"
+        }
+    ]
+}

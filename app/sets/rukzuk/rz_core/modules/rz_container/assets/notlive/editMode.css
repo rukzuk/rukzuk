@@ -1,0 +1,23 @@
+.rz_container.CMSselected.CMSeditable > .resizeHeight {
+    display: none;
+    position: relative;
+    width: 50%;
+    height: 6px;
+    left: 25%;
+    background-color: #303030;
+    cursor: s-resize;
+    margin-top: -6px;
+}
+
+.rz_container.CMSselected.CMSeditable > .resizeHeight {
+   background-color: #000;
+}
+
+body.RUKZUKenableInputHints .rz_container.CMSselected.CMSeditable > .resizeHeight {
+    display: block;
+}
+
+/* UI blocker for resize height */
+div.uiBlocker.uiBlockerResizeHeight {
+    cursor: s-resize;
+}

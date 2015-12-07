@@ -1,0 +1,421 @@
+{
+    "website": [
+        {
+            "id": "SITE-dynamic0-crea-tor0-test-000000000001-SITE",
+            "name": "DynamicCreator test: page with units",
+            "description": "",
+            "navigation": "[{\"id\":\"PAGE-dynamic0-crea-tor0-test-100000000001-PAGE\"},{\"id\":\"PAGE-dynamic0-crea-tor0-test-200000000001-PAGE\"},{\"id\":\"PAGE-dynamic0-crea-tor0-test-300000000001-PAGE\",\"children\":[{\"id\":\"PAGE-dynamic0-crea-tor0-test-310000000001-PAGE\"}]}]",
+            "publish": null,
+            "colorscheme": "[{\"id\":\"dynamic0-crea-tor0-test-100000000001\",\"value\":\"rgba(255,0,0,1)\",\"name\":\"red\"}]",
+            "resolutions": "{\"enabled\":true,\"data\":[{\"id\":\"res1\",\"width\":980,\"name\":\"Tablet\"}]}",
+            "version": 0,
+            "usedsetid": "rukzuk_test",
+            "shortid": "",
+            "home": "",
+            "ismarkedfordeletion": 0
+        },
+        {
+            "id": "SITE-dynamic0-crea-tor0-test-000000000002-SITE",
+            "name": "DynamicCreator test: no templates and pages",
+            "description": "",
+            "navigation": "[]",
+            "publish": null,
+            "colorscheme": "[]",
+            "version": 0,
+            "shortid": "",
+            "resolutions": "",
+            "home": "",
+            "ismarkedfordeletion": 0
+        },
+        {
+            "id": "SITE-dynamic0-crea-tor0-test-000000000003-SITE",
+            "name": "DynamicCreator test: template and page without units",
+            "description": "",
+            "navigation": "[{\"id\":\"PAGE-dynamic0-crea-tor0-test-100000000003-PAGE\"}]",
+            "publish": null,
+            "colorscheme": "[]",
+            "version": 0,
+            "shortid": "",
+            "resolutions": "",
+            "home": "",
+            "ismarkedfordeletion": 0
+        },
+        {
+            "id": "SITE-dynamic0-crea-tor0-test-000000000004-SITE",
+            "name": "DynamicCreator test: page with exception",
+            "description": "",
+            "navigation": "[{\"id\":\"PAGE-dynamic0-crea-tor0-test-100000000004-PAGE\"}]",
+            "publish": null,
+            "colorscheme": "[]",
+            "version": 0,
+            "shortid": "",
+            "resolutions": "",
+            "home": "",
+            "ismarkedfordeletion": 0
+        },
+        {
+            "id": "SITE-dynamic0-crea-tor0-test-000000000005-SITE",
+            "name": "DynamicCreator test: page with legacy modules",
+            "description": "",
+            "navigation": "[{\"id\":\"PAGE-d08a73cc-0ea0-0000-1000-000000000005-PAGE\"}]",
+            "publish": null,
+            "colorscheme": "[]",
+            "version": 0,
+            "shortid": "",
+            "resolutions": "",
+            "home": "",
+            "ismarkedfordeletion": 0
+        },
+        {
+            "id": "SITE-dynamic0-crea-tor0-test-000000000006-SITE",
+            "name": "DynamicCreator test: media ids ",
+            "description": "",
+            "navigation": "[{\"id\":\"PAGE-dynamic0-crea-tor0-test-100000000006-PAGE\"}]",
+            "publish": null,
+            "colorscheme": "[]",
+            "resolutions": "{}",
+            "version": 0,
+            "usedsetid": "rukzuk_test",
+            "shortid": "",
+            "home": "",
+            "ismarkedfordeletion": 0
+        }
+    ],
+    "website_settings": [
+        {
+            "websiteid": "SITE-dynamic0-crea-tor0-test-000000000001-SITE",
+            "id": "rz_website_settings_test",
+            "formValues": "{\"FOO\":\"BAR\",\"myArray\":[\"foo\",\"bar\"],\"myObject\":{\"bar\":\"foo\"}}"
+        },
+        {
+            "websiteid": "SITE-dynamic0-crea-tor0-test-000000000006-SITE",
+            "id": "rz_website_settings_test",
+            "formValues": "{\"header\":{\"logos\":[\"MDB-dynamic0-crea-tor0-test-600000000006-MDB\",\"nothing\"]},\"gallery\":\"ALBUM-dynamic0-crea-tor0-test-400000000006-ALBUM\"}"
+        }
+    ],
+    "template": [
+        {
+            "id": "TPL-dynamic0-crea-tor0-test-100000000001-TPL",
+            "websiteid": "SITE-dynamic0-crea-tor0-test-000000000001-SITE",
+            "name": "template without units",
+            "content": "[{\"moduleId\": \"rz_tests_creator_root_module\",\"name\": \"\",\"formValues\": {\"image\": \"MDB-dynamic0-crea-tor0-test-100000000001-MDB\",\"download\": \"MDB-dynamic0-crea-tor0-test-200000000001-MDB\"},\"expanded\": true,\"id\": \"MUNIT-00000000-0000-0000-0000-000000000001-MUNIT\",\"children\": [{\"moduleId\": \"rz_tests_creator_default_module\",\"name\": \"\",\"formValues\": {\"image\": \"MDB-dynamic0-crea-tor0-test-100000000001-MDB\",\"download\": \"MDB-dynamic0-crea-tor0-test-200000000001-MDB\"},\"expanded\": true,\"id\":\"MUNIT-00000000-0000-0000-0000-000000000002-MUNIT\",\"children\": [{\"moduleId\": \"rz_tests_creator_extension_module\",\"name\": \"\",\"formValues\": {\"image\": \"MDB-dynamic0-crea-tor0-test-100000000001-MDB\",\"download\": \"MDB-dynamic0-crea-tor0-test-200000000001-MDB\"},\"expanded\": true,\"id\":\"MUNIT-00000000-0000-0000-0000-000000000000-MUNIT\",\"children\": []}]}]}]",
+            "usedmoduleids": "[\"rz_tests_creator_root_module\",\"rz_tests_creator_default_module\",\"rz_tests_creator_extension_module\"]",
+            "contentchecksum": ""
+        },
+        {
+            "id": "TPL-dynamic0-crea-tor0-test-100000000003-TPL",
+            "websiteid": "SITE-dynamic0-crea-tor0-test-000000000003-SITE",
+            "name": "template without units",
+            "content": "[]",
+            "usedmoduleids": "[]",
+            "contentchecksum": ""
+        }
+    ],
+    "page": [
+        {
+            "id": "PAGE-dynamic0-crea-tor0-test-100000000001-PAGE",
+            "websiteid": "SITE-dynamic0-crea-tor0-test-000000000001-SITE",
+            "templateid": "TPL-dynamic0-crea-tor0-test-100000000001-TPL",
+            "name": "Homepage",
+            "description": "",
+            "date": 1394799810,
+            "innavigation": 1,
+            "navigationtitle": "",
+            "content": "[{\"moduleId\": \"rz_tests_creator_root_module\",\"name\": \"\",\"formValues\": {\"image\": \"MDB-dynamic0-crea-tor0-test-100000000001-MDB\",\"download\": \"MDB-dynamic0-crea-tor0-test-200000000001-MDB\"},\"expanded\": true,\"templateUnitId\": \"MUNIT-00000000-0000-0000-0000-000000000001-MUNIT\",\"id\": \"MUNIT-00000000-0000-0000-0001-000000000000-MUNIT\",\"children\": [{\"moduleId\": \"rz_tests_creator_default_module\",\"name\": \"\",\"formValues\": {\"image\": \"MDB-dynamic0-crea-tor0-test-100000000001-MDB\",\"download\": \"MDB-dynamic0-crea-tor0-test-200000000001-MDB\"},\"expanded\": true,\"templateUnitId\":\"MUNIT-00000000-0000-0000-0000-000000000002-MUNIT\",\"id\": \"MUNIT-00000000-0000-0000-0002-000000000000-MUNIT\",\"children\": [{\"moduleId\": \"rz_tests_creator_extension_module\",\"name\": \"\",\"formValues\": {\"image\": \"MDB-dynamic0-crea-tor0-test-100000000001-MDB\",\"download\": \"MDB-dynamic0-crea-tor0-test-200000000001-MDB\"},\"expanded\": true,\"templateUnitId\":\"MUNIT-00000000-0000-0000-0000-000000000000-MUNIT\",\"id\": \"MUNIT-00000000-0000-0000-0003-000000000000-MUNIT\",\"children\": []}]}]}]",
+            "templatecontent": "[]",
+            "globalcontent": "[]",
+            "mediaid": "MDB-dynamic0-crea-tor0-test-300000000001-MDB",
+            "pagetype": "home",
+            "pageattributes": "{\"foo\":\"bar\",\"myArray\":[\"foo\",\"bar\"],\"myObject\":{\"foo\":\"bar\"}}",
+            "templatecontentchecksum": ""
+        },
+        {
+            "id": "PAGE-dynamic0-crea-tor0-test-200000000001-PAGE",
+            "websiteid": "SITE-dynamic0-crea-tor0-test-000000000001-SITE",
+            "templateid": "TPL-dynamic0-crea-tor0-test-100000000001-TPL",
+            "name": "Level 1 same name",
+            "description": "",
+            "date": 1394799820,
+            "innavigation": 1,
+            "navigationtitle": "",
+            "content": "[{\"children\": [{\"children\": [{\"children\": [],\"expanded\": true,\"formValues\": {\"download\": \"MDB-dynamic0-crea-tor0-test-200000000001-MDB\",\"image\": \"MDB-dynamic0-crea-tor0-test-100000000001-MDB\"},\"id\": \"MUNIT-00000000-0000-0000-0003-000000000000-MUNIT\",\"moduleId\": \"rz_tests_creator_extension_module\",\"name\": \"\",\"templateUnitId\": \"MUNIT-00000000-0000-0000-0000-000000000000-MUNIT\"}],\"expanded\": true,\"formValues\": {\"download\": \"MDB-dynamic0-crea-tor0-test-200000000001-MDB\",\"image\": \"MDB-dynamic0-crea-tor0-test-100000000001-MDB\"},\"id\": \"MUNIT-00000000-0000-0000-0002-000000000000-MUNIT\",\"moduleId\": \"rz_tests_creator_default_module\",\"name\": \"\",\"templateUnitId\": \"MUNIT-00000000-0000-0000-0000-000000000002-MUNIT\"},{\"children\": [],\"expanded\": false,\"formValues\": {},\"id\": \"MUNIT-00000000-0000-0000-0004-000000000000-MUNIT\",\"moduleId\": \"rz_tests_global_package_module\",\"name\": \"\",\"templateUnitId\": \"MUNIT-00000000-0000-0000-0000-000000000004-MUNIT\"},{\"children\": [],\"expanded\": false,\"formValues\": {},\"id\": \"MUNIT-00000000-0000-0000-0005-000000000000-MUNIT\",\"moduleId\": \"rz_tests_local_package_module\",\"name\": \"\",\"templateUnitId\": \"MUNIT-00000000-0000-0000-0000-000000000005-MUNIT\"}],\"expanded\": true,\"formValues\": {\"download\": \"MDB-dynamic0-crea-tor0-test-200000000001-MDB\",\"image\": \"MDB-dynamic0-crea-tor0-test-100000000001-MDB\"},\"id\": \"MUNIT-00000000-0000-0000-0001-000000000000-MUNIT\",\"moduleId\": \"rz_tests_creator_root_module\",\"name\": \"\",\"templateUnitId\": \"MUNIT-00000000-0000-0000-0000-000000000001-MUNIT\"}]",
+            "templatecontent": "[]",
+            "globalcontent": "[]",
+            "pagetype": "page",
+            "templatecontentchecksum": ""
+        },
+        {
+            "id": "PAGE-dynamic0-crea-tor0-test-300000000001-PAGE",
+            "websiteid": "SITE-dynamic0-crea-tor0-test-000000000001-SITE",
+            "templateid": "TPL-dynamic0-crea-tor0-test-100000000001-TPL",
+            "name": "Level 1 same name",
+            "description": "",
+            "date": 1394799830,
+            "innavigation": 1,
+            "navigationtitle": "",
+            "content": "[{\"moduleId\": \"rz_tests_creator_root_module\",\"name\": \"\",\"formValues\": {\"image\": \"MDB-dynamic0-crea-tor0-test-100000000001-MDB\",\"download\": \"MDB-dynamic0-crea-tor0-test-200000000001-MDB\"},\"expanded\": true,\"templateUnitId\": \"MUNIT-00000000-0000-0000-0000-000000000001-MUNIT\",\"id\": \"MUNIT-00000000-0000-0000-0001-000000000000-MUNIT\",\"children\": [{\"moduleId\": \"rz_tests_creator_default_module\",\"name\": \"\",\"formValues\": {\"image\": \"MDB-dynamic0-crea-tor0-test-100000000001-MDB\",\"download\": \"MDB-dynamic0-crea-tor0-test-200000000001-MDB\"},\"expanded\": true,\"templateUnitId\":\"MUNIT-00000000-0000-0000-0000-000000000002-MUNIT\",\"id\": \"MUNIT-00000000-0000-0000-0002-000000000000-MUNIT\",\"children\": [{\"moduleId\": \"rz_tests_creator_extension_module\",\"name\": \"\",\"formValues\": {\"image\": \"MDB-dynamic0-crea-tor0-test-100000000001-MDB\",\"download\": \"MDB-dynamic0-crea-tor0-test-200000000001-MDB\"},\"expanded\": true,\"templateUnitId\":\"MUNIT-00000000-0000-0000-0000-000000000000-MUNIT\",\"id\": \"MUNIT-00000000-0000-0000-0003-000000000000-MUNIT\",\"children\": []}]}]}]",
+            "templatecontent": "[]",
+            "globalcontent": "[]",
+            "pagetype": "page",
+            "templatecontentchecksum": ""
+        },
+        {
+            "id": "PAGE-dynamic0-crea-tor0-test-310000000001-PAGE",
+            "websiteid": "SITE-dynamic0-crea-tor0-test-000000000001-SITE",
+            "templateid": "TPL-dynamic0-crea-tor0-test-100000000001-TPL",
+            "name": "Level 2",
+            "description": "",
+            "date": 1394799831,
+            "innavigation": 0,
+            "navigationtitle": "Level 2 this is the navigation title",
+            "content": "[{\"moduleId\": \"rz_tests_creator_root_module\",\"name\": \"\",\"formValues\": {\"image\": \"MDB-dynamic0-crea-tor0-test-100000000001-MDB\",\"download\": \"MDB-dynamic0-crea-tor0-test-200000000001-MDB\", \"album\": \"ALBUM-dynamic0-crea-tor0-test-200000000001-ALBUM\"},\"expanded\": true,\"templateUnitId\": \"MUNIT-00000000-0000-0000-0000-000000000001-MUNIT\",\"id\": \"MUNIT-00000000-0000-0000-0001-000000000000-MUNIT\",\"children\": [{\"moduleId\": \"rz_tests_creator_default_module\",\"name\": \"\",\"formValues\": {\"image\": \"MDB-dynamic0-crea-tor0-test-100000000001-MDB\",\"download\": \"MDB-dynamic0-crea-tor0-test-200000000001-MDB\"},\"expanded\": true,\"templateUnitId\":\"MUNIT-00000000-0000-0000-0000-000000000002-MUNIT\",\"id\": \"MUNIT-00000000-0000-0000-0002-000000000000-MUNIT\",\"children\": [{\"moduleId\": \"rz_tests_creator_extension_module\",\"name\": \"\",\"formValues\": {\"image\": \"MDB-dynamic0-crea-tor0-test-100000000001-MDB\",\"download\": \"MDB-dynamic0-crea-tor0-test-200000000001-MDB\"},\"expanded\": true,\"templateUnitId\":\"MUNIT-00000000-0000-0000-0000-000000000000-MUNIT\",\"id\": \"MUNIT-00000000-0000-0000-0003-000000000000-MUNIT\",\"children\": []}]}]}]",
+            "templatecontent": "[]",
+            "globalcontent": "[]",
+            "pagetype": "page",
+            "templatecontentchecksum": ""
+        },
+        {
+            "id": "PAGE-dynamic0-crea-tor0-test-100000000003-PAGE",
+            "websiteid": "SITE-dynamic0-crea-tor0-test-000000000003-SITE",
+            "templateid": "TPL-dynamic0-crea-tor0-test-100000000003-TPL",
+            "name": "page without units",
+            "description": "",
+            "date": 1296718860,
+            "innavigation": 1,
+            "navigationtitle": "",
+            "content": "[]",
+            "templatecontent": "[]",
+            "pagetype": "page",
+            "templatecontentchecksum": ""
+        },
+        {
+            "id": "PAGE-dynamic0-crea-tor0-test-100000000004-PAGE",
+            "websiteid": "SITE-dynamic0-crea-tor0-test-000000000004-SITE",
+            "templateid": "TPL-dynamic0-crea-tor0-test-100000000004-TPL",
+            "name": "Page 1",
+            "content": "[{\"moduleId\": \"rz_tests_creator_root_module_throw_exception\",\"name\": \"\",\"formValues\": {},\"expanded\": true,\"templateUnitId\": \"MUNIT-00000000-0000-0000-0000-000000000001-MUNIT\",\"id\": \"MUNIT-00000000-0000-0000-0001-000000000000-MUNIT\",\"children\": []}]",
+            "templatecontent": "[]",
+            "globalcontent": "[]",
+            "pagetype": "page",
+            "description": "",
+            "date": 0,
+            "innavigation": 0,
+            "navigationtitle": "",
+            "templatecontentchecksum": ""
+        },
+        {
+            "id": "PAGE-d08a73cc-0ea0-0000-1000-000000000005-PAGE",
+            "websiteid": "SITE-dynamic0-crea-tor0-test-000000000005-SITE",
+            "templateid": "TPL-dynamic0-crea-tor0-test-100000000005-TPL",
+            "name": "Legacy Page",
+            "description": "this is the Legacy Page description",
+            "date": 1395052400,
+            "innavigation": 1,
+            "navigationtitle": "this is the Legacy Page navigation title",
+            "content": "[{\"id\":\"MUNIT-3b17b8ba-2010-4f08-bf14-7502adf984d1-MUNIT\",\"moduleId\":\"MODUL-23258527-f9bb-41c6-865a-a8ed23314dcc-MODUL\",\"name\":\"Basismodul\",\"description\":\"\",\"icon\":\"brick.png\",\"formValues\":{},\"expanded\":true,\"children\":[{\"id\":\"MUNIT-e7489388-3e93-4d0c-8bd5-8b8092bf63e9-MUNIT\",\"moduleId\":\"MODUL-fad5280c-e71e-4592-9711-f322252327df-MODUL\",\"name\":\"Layoutrahmen\",\"description\":\"\",\"icon\":\"brick.png\",\"formValues\":{\"containerwidth\":600,\"enabledim\":true,\"minheight\":\"50px\",\"enablemargin\":false,\"margintop\":5,\"marginbottom\":5,\"showbgimage\":false,\"bgrepeat\":\"repeat\",\"bgposition\":\"0 0\",\"enablebgcolor\":false,\"bgcolor\":\"#E8E8E8\",\"enablegradient\":false,\"gradientdirection\":\"top\",\"gradientcolor1\":\"#FFFFFF\",\"gradientcolor2\":\"#DDDDDD\",\"enablecustomcss\":false},\"expanded\":true,\"children\":[{\"id\":\"MUNIT-bb8ac035-c5ec-4c2f-85f0-9f6f836d96c4-MUNIT\",\"moduleId\":\"MODUL-857c406e-cf4a-4636-b39d-fcbffc18cee5-MODUL\",\"name\":\"Layoutmodul\",\"description\":\"\",\"icon\":\"brick.png\",\"formValues\":{},\"expanded\":true,\"children\":[{\"id\":\"MUNIT-58d1788e-726e-46e4-8253-33b4811e914d-MUNIT\",\"moduleId\":\"MODUL-065b60a4-887e-4183-ae21-7ecfd6bfdfb9-MODUL\",\"name\":\"Titel\",\"description\":\"\",\"icon\":\"page_white_text.png\",\"formValues\":{\"text\":\"<h1>&Uuml;berschrift</h1>\",\"margintop\":5,\"marginbottom\":5},\"expanded\":true,\"deletable\":false,\"ghostContainer\":false,\"visibleFormGroups\":[]},{\"id\":\"MUNIT-f550726f-f42a-4a01-8923-fcacbbc062e3-MUNIT\",\"moduleId\":\"MODUL-065b60a4-887e-4183-ae21-7ecfd6bfdfb9-MODUL\",\"name\":\"Infotext\",\"description\":\"\",\"icon\":\"page_white_text.png\",\"formValues\":{\"text\":\"<pre>Luto se obex, has ibidem vir intempestivus Cupiditas edo Lambo capto diffidentia ut probus escendo defensabiliter Forca tutis illud homo et aegre. Ver ne. Peruro pars divulgamen Alternis dux os dum. Strues, hac Ingressus iam socius ymo quam finio res secretarius Edoceo. praenuntius picturatus ac ita praecidentius, ora Disicio per integritas insperatus canto, Ico sem mel Leodium rixor agon arx Tex.</pre>\",\"margintop\":5,\"marginbottom\":5},\"expanded\":true,\"deletable\":false,\"ghostContainer\":false,\"visibleFormGroups\":[]}]}],\"deletable\":false,\"ghostContainer\":false,\"visibleFormGroups\":[]}]}]",
+            "templatecontent": "[]",
+            "globalcontent": "[]",
+            "pagetype": "page",
+            "pageattributes": "{\"foo\":\"bar\"}",
+            "templatecontentchecksum": ""
+        },
+        {
+            "id": "PAGE-dynamic0-crea-tor0-test-100000000006-PAGE",
+            "websiteid": "SITE-dynamic0-crea-tor0-test-000000000006-SITE",
+            "templateid": "TPL-dynamic0-crea-tor0-test-100000000006-TPL",
+            "name": "media ids in: page attributes",
+            "description": "",
+            "date": 1394799831,
+            "innavigation": 0,
+            "navigationtitle": "",
+            "content": "[{\"moduleId\": \"rz_tests_creator_root_module_add_media_ids\",\"name\": \"\",\"formValues\": {},\"expanded\": true,\"templateUnitId\": \"MUNIT-00000000-0000-0000-0000-000000000001-MUNIT\",\"id\": \"MUNIT-00000000-0000-0000-0001-000000000000-MUNIT\",\"children\": []}]",
+            "templatecontent": "[]",
+            "globalcontent": "[]",
+            "pagetype": "page",
+            "pageattributes": "{\"foo\":{\"bar\":\"MDB-dynamic0-crea-tor0-test-400000000006-MDB\"},\"bar\":\"MDB-dynamic0-crea-tor0-test-300000000006-MDB\",\"album\":\"ALBUM-dynamic0-crea-tor0-test-100000000006-ALBUM\"}",
+            "templatecontentchecksum": ""
+        }
+    ],
+    "album": [
+        {
+            "id": "ALBUM-dynamic0-crea-tor0-test-100000000001-ALBUM",
+            "websiteid": "SITE-dynamic0-crea-tor0-test-000000000001-SITE",
+            "name": "DynamicCreator test Album 1"
+        },
+        {
+            "id": "ALBUM-dynamic0-crea-tor0-test-200000000001-ALBUM",
+            "websiteid": "SITE-dynamic0-crea-tor0-test-000000000001-SITE",
+            "name": "DynamicCreator test Album 2"
+        },
+        {
+            "id": "ALBUM-dynamic0-crea-tor0-test-300000000001-ALBUM",
+            "websiteid": "SITE-dynamic0-crea-tor0-test-000000000001-SITE",
+            "name": "DynamicCreator test Album 3"
+        },
+        {
+            "id": "ALBUM-dynamic0-crea-tor0-test-100000000006-ALBUM",
+            "websiteid": "SITE-dynamic0-crea-tor0-test-000000000006-SITE",
+            "name": "DynamicCreator test Album 1"
+        },
+        {
+            "id": "ALBUM-dynamic0-crea-tor0-test-200000000006-ALBUM",
+            "websiteid": "SITE-dynamic0-crea-tor0-test-000000000006-SITE",
+            "name": "DynamicCreator test Album 2"
+        },
+        {
+            "id": "ALBUM-dynamic0-crea-tor0-test-300000000006-ALBUM",
+            "websiteid": "SITE-dynamic0-crea-tor0-test-000000000006-SITE",
+            "name": "DynamicCreator test Album 3 (not used)"
+        },
+        {
+            "id": "ALBUM-dynamic0-crea-tor0-test-400000000006-ALBUM",
+            "websiteid": "SITE-dynamic0-crea-tor0-test-000000000006-SITE",
+            "name": "DynamicCreator test Album 4"
+        }
+    ],
+    "media_item": [
+        {
+            "id": "MDB-dynamic0-crea-tor0-test-100000000001-MDB",
+            "websiteid": "SITE-dynamic0-crea-tor0-test-000000000001-SITE",
+            "albumid": "ALBUM-dynamic0-crea-tor0-test-100000000001-ALBUM",
+            "name": "logo.jpg",
+            "type": "image",
+            "file": "logo.jpg",
+            "extension": "jpg",
+            "size": 7736,
+            "lastupdate": "1395056370"
+        },
+        {
+            "id": "MDB-dynamic0-crea-tor0-test-200000000001-MDB",
+            "websiteid": "SITE-dynamic0-crea-tor0-test-000000000001-SITE",
+            "albumid": "ALBUM-dynamic0-crea-tor0-test-100000000001-ALBUM",
+            "name": "logo.pdf",
+            "type": "download",
+            "file": "logo.pdf",
+            "extension": "pdf",
+            "size": 32889,
+            "lastupdate": "1395056370"
+        },
+        {
+            "id": "MDB-dynamic0-crea-tor0-test-300000000001-MDB",
+            "websiteid": "SITE-dynamic0-crea-tor0-test-000000000001-SITE",
+            "albumid": "ALBUM-dynamic0-crea-tor0-test-100000000001-ALBUM",
+            "name": "mdb3.jpg",
+            "type": "image",
+            "file": "mdb3.jpg",
+            "extension": "jpg",
+            "size": 7736,
+            "lastupdate": "1395056370"
+        },
+        {
+            "id": "MDB-dynamic0-crea-tor0-test-400000000001-MDB",
+            "websiteid": "SITE-dynamic0-crea-tor0-test-000000000001-SITE",
+            "albumid": "ALBUM-dynamic0-crea-tor0-test-100000000001-ALBUM",
+            "name": "mdb4.jpg",
+            "type": "image",
+            "file": "mdb4.jpg",
+            "extension": "jpg",
+            "size": 7736,
+            "lastupdate": "1395056370"
+        },
+        {
+            "id": "MDB-dynamic0-crea-tor0-test-500000000001-MDB",
+            "websiteid": "SITE-dynamic0-crea-tor0-test-000000000001-SITE",
+            "albumid": "ALBUM-dynamic0-crea-tor0-test-200000000001-ALBUM",
+            "name": "mdb5.jpg",
+            "type": "image",
+            "file": "mdb5.jpg",
+            "extension": "jpg",
+            "size": 7736,
+            "lastupdate": "1395056370"
+        },
+        {
+            "id": "MDB-dynamic0-crea-tor0-test-600000000001-MDB",
+            "websiteid": "SITE-dynamic0-crea-tor0-test-000000000001-SITE",
+            "albumid": "ALBUM-dynamic0-crea-tor0-test-200000000001-ALBUM",
+            "name": "mdb6.jpg",
+            "type": "image",
+            "file": "mdb6.jpg",
+            "extension": "jpg",
+            "size": 7736,
+            "lastupdate": "1395056370"
+        },
+        {
+            "id": "MDB-dynamic0-crea-tor0-test-100000000006-MDB",
+            "websiteid": "SITE-dynamic0-crea-tor0-test-000000000006-SITE",
+            "albumid": "ALBUM-dynamic0-crea-tor0-test-100000000006-ALBUM",
+            "name": "logo.jpg",
+            "type": "image",
+            "file": "logo.jpg",
+            "extension": "jpg",
+            "size": 7736,
+            "lastupdate": "1395056370"
+        },
+        {
+            "id": "MDB-dynamic0-crea-tor0-test-200000000006-MDB",
+            "websiteid": "SITE-dynamic0-crea-tor0-test-000000000006-SITE",
+            "albumid": "ALBUM-dynamic0-crea-tor0-test-100000000006-ALBUM",
+            "name": "logo.pdf",
+            "type": "download",
+            "file": "logo.pdf",
+            "extension": "pdf",
+            "size": 32889,
+            "lastupdate": "1395056370"
+        },
+        {
+            "id": "MDB-dynamic0-crea-tor0-test-300000000006-MDB",
+            "websiteid": "SITE-dynamic0-crea-tor0-test-000000000006-SITE",
+            "albumid": "ALBUM-dynamic0-crea-tor0-test-200000000006-ALBUM",
+            "name": "mdb3.jpg",
+            "type": "image",
+            "file": "mdb3.jpg",
+            "extension": "jpg",
+            "size": 7736,
+            "lastupdate": "1395056370"
+        },
+        {
+            "id": "MDB-dynamic0-crea-tor0-test-400000000006-MDB",
+            "websiteid": "SITE-dynamic0-crea-tor0-test-000000000006-SITE",
+            "albumid": "ALBUM-dynamic0-crea-tor0-test-200000000006-ALBUM",
+            "name": "mdb4.jpg",
+            "type": "image",
+            "file": "mdb4.jpg",
+            "extension": "jpg",
+            "size": 7736,
+            "lastupdate": "1395056370"
+        },
+        {
+            "id": "MDB-dynamic0-crea-tor0-test-500000000006-MDB",
+            "websiteid": "SITE-dynamic0-crea-tor0-test-000000000006-SITE",
+            "albumid": "ALBUM-dynamic0-crea-tor0-test-200000000006-ALBUM",
+            "name": "mdb5.jpg",
+            "type": "image",
+            "file": "mdb5.jpg",
+            "extension": "jpg",
+            "size": 7736,
+            "lastupdate": "1395056370"
+        },
+        {
+            "id": "MDB-dynamic0-crea-tor0-test-600000000006-MDB",
+            "websiteid": "SITE-dynamic0-crea-tor0-test-000000000006-SITE",
+            "albumid": "ALBUM-dynamic0-crea-tor0-test-200000000006-ALBUM",
+            "name": "mdb6.jpg",
+            "type": "image",
+            "file": "mdb6.jpg",
+            "extension": "jpg",
+            "size": 7736,
+            "lastupdate": "1395056370"
+        },
+        {
+            "id": "MDB-dynamic0-crea-tor0-test-700000000006-MDB",
+            "websiteid": "SITE-dynamic0-crea-tor0-test-000000000006-SITE",
+            "albumid": "ALBUM-dynamic0-crea-tor0-test-400000000006-ALBUM",
+            "name": "mdb7.jpg",
+            "type": "image",
+            "file": "mdb7.jpg",
+            "extension": "jpg",
+            "size": 7736,
+            "lastupdate": "1395056370"
+        }
+    ]
+}

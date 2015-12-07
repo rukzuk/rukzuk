@@ -1,0 +1,6 @@
+.rz_image .imageModuleImg {
+    max-width: 100%;
+    display: block;
+    width: 100% !important;
+    height: auto;
+}

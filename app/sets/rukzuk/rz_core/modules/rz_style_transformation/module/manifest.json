@@ -1,0 +1,12 @@
+{
+    "name": "{\"de\":\"Transformation\",\"en\":\"Transformation\"}",
+    "description": "{\"de\":\"Module und Elemente drehen, skalieren oder im 3D-Raum bewegen.\",\"en\":\"Rotate and scale any module and element or move it three-dimensionally.\"}",
+    "version": "dev",
+    "icon": "style-rotate-scale.png",
+    "category": "50",
+    "moduleType": "extension",
+    "allowedChildModuleType": "",
+    "reRenderRequired": false,
+    "apiType": "APIv1",
+    "ghostContainerMode": "force_off"
+}

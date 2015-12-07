@@ -1,0 +1,37 @@
+.rz_form_field_text > div {
+    display: table;
+    width: 100%;
+    position: relative;
+    table-layout: fixed;
+    vertical-align: top;
+    height: 100%;
+}
+
+.rz_form_field_text label {
+    cursor: pointer;
+    display: table-cell;
+    vertical-align: top;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.rz_form_field_text input,
+.rz_form_field_text textarea {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.rz_form_field_text textarea {
+    vertical-align: top;
+}
+
+.rz_form_field_text p.vf__error {
+    display: table-caption;
+    caption-side: top;
+    color: red;
+    font-size: small;
+}

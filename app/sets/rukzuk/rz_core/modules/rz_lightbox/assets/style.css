@@ -1,0 +1,7 @@
+.rz_lightbox img.responsiveImage {
+    cursor: pointer;
+}
+
+.rz_lightbox {
+    z-index: initial;
+}

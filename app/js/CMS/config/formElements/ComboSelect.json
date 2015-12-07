@@ -1,0 +1,58 @@
+{
+    "descr": {
+        "id": "ComboSelect",
+        "text": "__i18n_formElements.elementComboSelect",
+        "iconCls": "combo",
+        "hasValue": true
+    },
+    "params": [
+        {
+            "name": "xtype",
+            "value": "ux-comboselect",
+            "xtype": null
+        },
+        {
+            "name": "isMeta",
+            "value": false,
+            "fieldLabel": "__i18n_formElements.isGlobal",
+            "xtype": "checkbox"
+        },
+        {
+            "name": "fieldLabel",
+            "value": "__i18n_formElements.comboSelection",
+            "xtype": "textfield",
+            "allowBlank": true,
+            "emptyText": "__i18n_formElements.fieldLabelOptionalEmptyText",
+            "fieldLabel": "__i18n_formElements.fieldLabel"
+        },
+        {
+            "name": "isResponsive",
+            "value": false,
+            "fieldLabel": "__i18n_formElements.isResponsive",
+            "xtype": "checkbox"
+        },
+        {
+            "name": "emptyText",
+            "value": "",
+            "xtype": "textfield",
+            "allowBlank": true,
+            "emptyText": "__i18n_formElements.emptyTextEmptyText",
+            "fieldLabel": "__i18n_formElements.emptyTextLabel"
+        },
+        {
+            "name": "options",
+            "value": [],
+            "xtype": "CMSkeyvaluetextarea",
+            "allowBlank": false,
+            "array": true,
+            "emptyText": "__i18n_formElements.listValuesEmptyText",
+            "fieldLabel": "__i18n_formElements.listValuesLabel"
+        },
+        {
+            "name": "forceSelection",
+            "value": true,
+            "xtype": "checkbox",
+            "fieldLabel": "__i18n_formElements.comboSelectForceSelection"
+        }
+    ]
+}

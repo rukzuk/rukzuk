@@ -1,0 +1,20 @@
+{
+    "success": false,
+    "modules":    [],
+    "templates":  [],
+    "pages":      [],
+    "media":      [],
+    "website":    [],
+    "error": [{
+        "code": 123,
+        "param": {
+            "text": "dummy"
+        }
+    }],
+    "message": [{
+        "code": 1,
+        "param": {
+            "msg": "Dummy-JSON mit success=false!"
+        }
+    }]
+}

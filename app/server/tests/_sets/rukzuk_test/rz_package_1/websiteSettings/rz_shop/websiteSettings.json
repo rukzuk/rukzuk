@@ -1,0 +1,14 @@
+{
+  "name": {
+    "de": "Shop Konfiguration",
+    "en": "Shop configuration"
+  },
+  "version": "rz_shop.version",
+  "form": [
+    {
+      "foo": "bar",
+      "emtpyStdClass": {},
+      "emptyArray": []
+    }
+  ]
+}

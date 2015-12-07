@@ -1,0 +1,26 @@
+[production]
+; DB
+db.host = localhost
+db.username = @@DB_PRODUCTION_USERNAME@@
+db.password = @@DB_PRODUCTION_PASSWORD@@
+db.dbname = @@DB_PRODUCTION_DBNAME@@
+db.adapter = Pdo_Mysql
+
+[standalone : production]
+
+[beta : production]
+
+[staging : production]
+
+[testing : production]
+db.host = localhost
+db.username = @@DB_TESTING_USERNAME@@
+db.password = @@DB_TESTING_PASSWORD@@
+db.dbname = @@DB_TESTING_DBNAME@@
+db.adapter = Pdo_Mysql
+
+publish.host = "@@TESTING_PUBLISH_HOST@@"
+webhost = "@@TESTING_WEBHOST@@"
+
+
+[development : staging]

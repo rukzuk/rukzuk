@@ -1,0 +1,166 @@
+{
+    "form": [
+        {
+            "id": "fa532154-86ed-4a88-9492-b2fa1bfa44b1",
+            "name": "{\"de\":\"Eigenschaften\",\"en\":\"Properties\"}",
+            "icon": "",
+            "formGroupData": [
+                {
+                    "params": [
+                        {
+                            "name": "CMSvar",
+                            "value": "cssEnableCustomCss",
+                            "allowBlank": false,
+                            "minLength": 3,
+                            "maskRe": {},
+                            "stripCharsRe": {},
+                            "xtype": "textfield",
+                            "emptyText": "__i18n_generatedFormPanel.varNameEmptyText",
+                            "fieldLabel": "__i18n_generatedFormPanel.varNameLabel"
+                        },
+                        {
+                            "name": "xtype",
+                            "value": "CMSonofffieldset",
+                            "xtype": null
+                        },
+                        {
+                            "name": "value",
+                            "value": {
+                                "type": "bp",
+                                "default": true
+                            },
+                            "xtype": null
+                        },
+                        {
+                            "name": "fieldLabel",
+                            "value": "{\"de\":\"Eigener CSS-Code\",\"en\":\"Custom CSS code\"}",
+                            "xtype": "textfield",
+                            "allowBlank": true,
+                            "emptyText": "__i18n_formElements.fieldLabelOptionalEmptyText",
+                            "fieldLabel": "__i18n_formElements.fieldLabel"
+                        },
+                        {
+                            "name": "isResponsive",
+                            "value": true,
+                            "fieldLabel": "__i18n_formElements.isResponsive",
+                            "xtype": "checkbox"
+                        }
+                    ],
+                    "descr": {
+                        "text": "__i18n_formElements.elementCheckboxFieldSet",
+                        "iconCls": "checkboxfieldset",
+                        "allowChildNodes": true,
+                        "hasValue": true
+                    },
+                    "items": [
+                        {
+                            "params": [
+                                {
+                                    "name": "xtype",
+                                    "value": "ux-multilinelabel",
+                                    "xtype": null
+                                },
+                                {
+                                    "name": "hideLabel",
+                                    "value": true,
+                                    "xtype": null
+                                },
+                                {
+                                    "name": "text",
+                                    "xtype": "textarea",
+                                    "height": 200,
+                                    "value": "{\"de\": \"Unterstützt sowohl direkte CSS-Regeln als auch Selektoren wie h1 { color: red; }\", \"en\": \"Supports plain CSS rules as well as selectors like h1 { color: red; }\"}",
+                                    "fieldLabel": "__i18n_formElements.commentLabel"
+                                },
+                                {
+                                    "name": "autoLink",
+                                    "value": true,
+                                    "xtype": null
+                                },
+                                {
+                                    "name": "cls",
+                                    "value": "modulecomment",
+                                    "xtype": null
+                                }
+                            ],
+                            "descr": {
+                                "text": "__i18n_formElements.elementComment",
+                                "iconCls": "plaintext"
+                            }
+                        },
+                        {
+                            "params": [
+                                {
+                                    "name": "CMSvar",
+                                    "value": "cssCustomCss",
+                                    "allowBlank": false,
+                                    "minLength": 3,
+                                    "maskRe": {},
+                                    "stripCharsRe": {},
+                                    "xtype": "textfield",
+                                    "emptyText": "__i18n_generatedFormPanel.varNameEmptyText",
+                                    "fieldLabel": "__i18n_generatedFormPanel.varNameLabel"
+                                },
+                                {
+                                    "name": "xtype",
+                                    "value": "textarea",
+                                    "xtype": null
+                                },
+                                {
+                                    "name": "isMeta",
+                                    "value": false,
+                                    "fieldLabel": "__i18n_formElements.isGlobal",
+                                    "xtype": "checkbox"
+                                },
+                                {
+                                    "name": "fieldLabel",
+                                    "value": "{\"de\": \"CSS Code\", \"en\": \"CSS Code\"}",
+                                    "xtype": "textfield",
+                                    "allowBlank": true,
+                                    "emptyText": "__i18n_formElements.fieldLabelOptionalEmptyText",
+                                    "fieldLabel": "__i18n_formElements.fieldLabel"
+                                },
+                                {
+                                    "name": "height",
+                                    "value": 200,
+                                    "xtype": "numberfield",
+                                    "allowBlank": false,
+                                    "fieldLabel": "__i18n_formElements.heightLabel"
+                                },
+                                {
+                                    "name": "value",
+                                    "value": {
+                                        "type": "bp",
+                                        "default": ""
+                                    },
+                                    "xtype": null
+                                },
+                                {
+                                    "name": "isResponsive",
+                                    "value": true,
+                                    "fieldLabel": "__i18n_formElements.isResponsive",
+                                    "xtype": "checkbox"
+                                }
+                            ],
+                            "descr": {
+                                "text": "__i18n_formElements.elementTextArea",
+                                "iconCls": "textarea",
+                                "hasValue": true
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "formValues": {
+        "cssEnableCustomCss": {
+            "type": "bp",
+            "default": true
+        },
+        "cssCustomCss": {
+            "type": "bp",
+            "default": ""
+        }
+    }
+}

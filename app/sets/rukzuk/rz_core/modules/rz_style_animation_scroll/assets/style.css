@@ -1,0 +1,8 @@
+.resetAnimationName {
+    -webkit-animation-name: none !important;
+    animation-name: none !important;
+}
+
+.animationRunOnce {
+    visibility: visible;
+}

@@ -1,0 +1,66 @@
+@import "mixins";
+@import "colors";
+
+.CMSsitepropertypanel .x-tab-strip span.x-tab-strip-text {
+    padding-top: 50px;
+}
+
+.CMSsitepropertypanel .x-tab-strip-top .x-tab-right, .CMSsitepropertypanel .x-tab-strip-top .x-tab-left, .CMSsitepropertypanel .x-tab-strip-top .x-tab-strip-inner {
+    background-image: none;
+}
+
+.CMSsitepropertypanel .x-tab-strip-top li {
+    border: 2px solid #ccc;
+    width: 100px;
+    text-align: center;
+}
+
+.CMSsitepropertypanel .x-tab-strip .x-tab-with-icon span.x-tab-strip-text {
+    background-repeat: no-repeat;
+    padding-left: 0;
+}
+
+.CMSsitepropertypanel .x-tab-strip-top .x-tab-left {
+    padding-right: 5px;
+}
+
+.CMSsitepropertypanel .x-tab-strip-top .x-tab-right {
+    padding-left: 3px;
+}
+
+.CMSsitepropertypanel .x-tab-panel-header,
+.CMSsitepropertypanel .x-tab-strip-top {
+    background-color: transparent;
+    background-image: none;
+}
+
+.CMSsitepropertypanel .x-tab-strip-text {
+    background-image: url("../images/admin-area-sprite.png");
+}
+
+.CMSsitepropertypanel .x-tab-strip {
+    span.CMSPageTab {
+        background-position: 16px 3px;
+    }
+    span.CMSTemplateTab {
+        background-position: -81px -97px;
+    }
+    span.CMSModuleTab {
+        background-position: -181px -197px;
+    }
+    span.CMSPublishTab {
+        background-position: -282px -297px;
+    }
+    span.CMScolorpanel {
+        background-position: -482px -497px;
+    }
+    span.CMSmediadbmanagementpanel {
+        background-position: -382px -397px;
+    }
+    span.CMSgroupmanagementpanel {
+        background-position: -582px -597px;
+    }
+    span.CMSusermanagementpanel {
+        background-position: -682px -697px;
+    }
+}

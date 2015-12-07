@@ -1,0 +1,70 @@
+{
+    "user_opt_in": [
+        {
+            "userid": "USER-reg02gc0-b7a3-4599-b396-94c8bb6c10d9-USER",
+            "code": "f00bb65grbw",
+            "timestamp": "2011-10-17 14:22:57",
+            "mode": "register"
+        },
+        {
+            "userid": "USER-reg03gc0-b7a3-4599-b396-94c8bb6c10d9-USER",
+            "code": "f01bb65grbw",
+            "timestamp": "2011-10-02 18:22:17",
+            "mode": "register"
+        },
+        {
+            "userid": "USER-reg04gc0-b7a3-4599-b396-94c8bb6c10d9-USER",
+            "code": "f02bb65grbw",
+            "timestamp": "2011-10-02 18:22:17",
+            "mode": "register"
+        },
+        {
+            "userid": "USER-ren01gc0-b7a3-4599-b396-94c8bb6c10d9-USER",
+            "code": "f03bb65grbw",
+            "timestamp": "2011-10-02 18:22:17",
+            "mode": "password"
+        },
+        {
+            "userid": "USER-peo00gc0-b7a3-4599-b396-94c8bb6c10d9-USER",
+            "code": "f03bb65gpeo",
+            "timestamp": "2011-10-10 18:22:17",
+            "mode": "register"
+        },
+        {
+            "userid": "USER-de67e2cf-1175-45e9-bcbd-a25cee8a74o0-USER",
+            "code": "g03bb65gpdu",
+            "timestamp": "2011-10-11 18:22:17",
+            "mode": "password"
+        },
+        {
+            "userid": "USER-de67e2cf-1175-45e9-bcbd-a25cee8a74e0-USER",
+            "code": "g03bb64gpdu",
+            "timestamp": "2011-10-11 18:22:17",
+            "mode": "register"
+        },
+        {
+            "userid": "USER-de67e2cf-1175-45e9-bcbd-a25cee8a74dx-USER",
+            "code": "g03bb64gpoi",
+            "timestamp": "2011-10-11 18:22:17",
+            "mode": "noway"
+        },
+        {
+            "userid": "USER-fr67e2cf-1175-45e9-bcbd-a25cee8a747x-USER",
+            "code": "g03bb64cpoi",
+            "timestamp": "2011-10-11 18:22:17",
+            "mode": "password"
+        },
+        {
+            "userid": "USER-ren02gc0-b7a3-4599-b396-94c8bb6c10d9-USER",
+            "code": "g07wg69cpor",
+            "timestamp": "2011-12-08 14:30:17",
+            "mode": "register"
+        },
+        {
+            "userid": "USER-reg05gc0-b7a3-4599-b396-94c8bb6c10d9-USER",
+            "code": "f07rd67cp0r",
+            "timestamp": "2011-12-08 14:48:17",
+            "mode": "password"
+        }
+    ]
+}

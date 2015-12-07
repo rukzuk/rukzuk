@@ -1,0 +1,12 @@
+{
+    "name": "{\"de\":\"Formular-Textfeld\",\"en\":\"Form Text Field\"}",
+    "description": "{\"de\":\"Bietet verschiedene Eingabefelder für Text, Zahlen und E-Mail-Adresse. Zur Verwendung im Formular-Modul.\",\"en\":\"Offers input fields for text, numbers and email address. For the use inside the form module.\"}",
+    "version": "dev",
+    "icon": "form-element.png",
+    "category": "{\"de\":\"Formular\",\"en\":\"Form\"}",
+    "moduleType": "default",
+    "allowedChildModuleType": "extension",
+    "ghostContainerMode": "force_off",
+    "reRenderRequired": false,
+    "apiType": "APIv1"
+}

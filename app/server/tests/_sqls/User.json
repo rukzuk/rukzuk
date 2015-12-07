@@ -1,0 +1,1284 @@
+{
+    "user": [
+        {
+            "id": "USER-3460bb81-97e0-4bbb-a88d-629b992f5fb0-USER",
+            "lastname": "Seitenbau",
+            "firstname": "SBCMS",
+            "password": "a088be071f1d753930c671aee77fbdb6",
+            "gender": "m",
+            "email": "sbcms@seitenbau.com",
+            "issuperuser": 1,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-0a67e2cf-1175-45e9-bcbd-a25cee8a74c1-USER",
+            "lastname": "jonny",
+            "firstname": "rewind",
+            "password": "2e114daef3f2d2e93088de34ada22eeb",
+            "gender": "m",
+            "email": "sbcms.test1@seitenbau.com",
+            "issuperuser": 0,
+            "isdeletable": 1
+        },
+        {
+            "id": "USER-de67e2cf-1175-45e9-bcbd-a25cee8a74c1-USER",
+            "lastname": "jonny_delete",
+            "firstname": "rewind_delete",
+            "password": "2e114daef3f2d2e93088de34ada22eeb",
+            "gender": "m",
+            "email": "sbcms.test1@seitenbau.com",
+            "issuperuser": 0,
+            "isdeletable": 1
+        },
+        {
+            "id": "USER-nd67e2cf-1175-45e9-bcbd-a25cee8a74c1-USER",
+            "lastname": "jonny_delete",
+            "firstname": "rewind_delete",
+            "password": "2e114daef3f2d2e93088de34ada22eeb",
+            "gender": "m",
+            "email": "sbcms.test1@seitenbau.com",
+            "issuperuser": 1,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-ba67e2cf-1175-45e9-bcbd-a25cee8a74c1-USER",
+            "lastname": "jonny_business",
+            "firstname": "rewind_business",
+            "password": "2e114daef3f2d2e93088de34ada22eeb",
+            "gender": "m",
+            "email": "sbcms.test1@seitenbau.com",
+            "issuperuser": 1,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-gbi7e2cf-11r5-45e9-bc6d-a25cee8a74c1-USER",
+            "lastname": "lastname_get_by_id",
+            "firstname": "firstname_get_by_id",
+            "password": "2e114daef3f2d2e93088de34ada22eeb",
+            "gender": "m",
+            "email": "sbcms.test.getbyid@seitenbau.com",
+            "issuperuser": 0,
+            "isdeletable": 1
+        },
+        {
+            "id": "USER-0a67e2c2-1175-45e9-bcbd-a25cee8a74c1-USER",
+            "lastname": "lastname_edit_complete",
+            "firstname": "firstname_edit_complete",
+            "password": "156b773f923eee3982796250997fc2c5",
+            "gender": "f",
+            "email": "edit.complete@seitenbau.com",
+            "issuperuser": 1,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-ed6r9sub-1175-45e9-bcbd-a25cee8a74c1-USER",
+            "lastname": "lastname_edit_subset",
+            "firstname": "firstname_edit_subset",
+            "password": "79c41f9adec104fa765bb6265856db1a",
+            "gender": "m",
+            "email": "sbcms.test.edit.subset@seitenbau.com",
+            "issuperuser": 0,
+            "isdeletable": 1
+        },
+        {
+            "id": "USER-0db7eaa7-7fc5-464a-bd47-16b3b8af03ag-USER",
+            "lastname": "lastname_groups_add",
+            "firstname": "firstname_groups_add",
+            "password": "8dd02598f3a7a62bbe1c25bce26278f3",
+            "gender": "m",
+            "email": "sbcms.test.add.groups@seitenbau.com",
+            "issuperuser": 0,
+            "isdeletable": 1
+        },
+        {
+            "id": "USER-0db7eaa7-7fc5-464a-bd47-16b3b8af03ai-USER",
+            "lastname": "lastname_groups_add_alread_in_group",
+            "firstname": "firstname_groups_add_alread_in_group",
+            "password": "8dd02598f3a7a62bbe1c25bce26278f3",
+            "gender": "m",
+            "email": "sbcms.test.add.groups@seitenbau.com",
+            "issuperuser": 0,
+            "isdeletable": 1
+        },
+        {
+            "id": "USER-0db7eaa7-7fc5-464a-bd47-06b3b8af03rg-USER",
+            "lastname": "lastname_groups_remove",
+            "firstname": "firstname_groups_remove",
+            "password": "9f3758317f0f8df8efa6dca83ee4399e",
+            "gender": "m",
+            "email": "sbcms.test.remove.groups@seitenbau.com",
+            "issuperuser": 0,
+            "isdeletable": 1
+        },
+        {
+            "id": "USER-de67e2cf-1175-45e9-bcbd-a25ce48a1ngr-USER",
+            "lastname": "lastname_delete_also_from_group",
+            "firstname": "firstname_delete_also_from_group",
+            "password": "cd49560ca7e0686c6e26b84eb0f2aef4",
+            "gender": "m",
+            "email": "sbcms.test.remove.also.from.groups@seitenbau.com",
+            "issuperuser": 0,
+            "isdeletable": 1
+        },
+        {
+            "id": "USER-gbi7e2cf-11r5-45e9-bc6d-a25cee8afh01-USER",
+            "lastname": "lastname_a",
+            "firstname": "firstname_a",
+            "password": "9169ab4e40c8f0b391ee36f53509fec2",
+            "gender": "m",
+            "email": "testa@seitenbau.com",
+            "issuperuser": 0,
+            "isdeletable": 1
+        },
+        {
+            "id": "USER-gbi7e2cf-11r5-45e9-bc6d-a25cee8afh02-USER",
+            "lastname": "lastname_b",
+            "firstname": "firstname_b",
+            "password": "570c419198e0a17e55772d0cc6b82bac",
+            "gender": "m",
+            "email": "testb@seitenbau.com",
+            "issuperuser": 0,
+            "isdeletable": 1
+        },
+        {
+            "id": "USER-gbi7e2cf-11r5-45e9-bc6d-a25cee8a74c2-USER",
+            "lastname": "lastname_c",
+            "firstname": "firstname_c",
+            "password": "9169ab4e40c8f0b391ee36f53509fec2",
+            "gender": "m",
+            "email": "testc@seitenbau.com",
+            "issuperuser": 0,
+            "isdeletable": 1
+        },
+        {
+            "id": "USER-gbi7e2cf-12r5-45e9-bc6d-a25cee8a74c2-USER",
+            "lastname": "lastname_d",
+            "firstname": "firstname_d",
+            "password": "9169ab4e40c8f0b391ee36f53509fec2",
+            "gender": "m",
+            "email": "testd@seitenbau.com",
+            "issuperuser": 0,
+            "isdeletable": 1
+        },
+        {
+            "id": "USER-gbi7e2cr-11r5-45e9-bc6d-a25cee8a74c2-USER",
+            "lastname": "lastname_e",
+            "firstname": "firstname_e",
+            "password": "9169ab4e40c8f0b391ee36f53509fec2",
+            "gender": "m",
+            "email": "teste@seitenbau.com",
+            "issuperuser": 0,
+            "isdeletable": 1
+        },
+        {
+            "id": "USER-gbi7e2cf-11r5-45e9-bc6d-a25cee8a74c3-USER",
+            "lastname": "lastname_f",
+            "firstname": "firstname_f",
+            "password": "9169ab4e40c8f0b391ee36f53509fec2",
+            "gender": "m",
+            "email": "testf@seitenbau.com",
+            "issuperuser": 0,
+            "isdeletable": 1
+        },
+        {
+            "id": "USER-gbi7e2cf-11r6-45e9-bc6d-a25cee8a74c3-USER",
+            "lastname": "lastname_g",
+            "firstname": "firstname_g",
+            "password": "9169ab4e40c8f0b391ee36f53509fec2",
+            "gender": "m",
+            "email": "testg@seitenbau.com",
+            "issuperuser": 0,
+            "isdeletable": 1
+        },
+        {
+            "id": "USER-gbi7e2cf-11r6-45e9-bc6d-a25cee8a74c7-USER",
+            "lastname": "lastname_h",
+            "firstname": "firstname_h",
+            "password": "9169ab4e40c8f0b391ee36f53509fec2",
+            "gender": "m",
+            "email": "testh@seitenbau.com",
+            "issuperuser": 0,
+            "isdeletable": 1
+        },
+        {
+            "id": "USER-gbi7e2cf-11r5-45e9-bc6d-a25cee8a74c4-USER",
+            "lastname": "lastname_i",
+            "firstname": "firstname_i",
+            "password": "9169ab4e40c8f0b391ee36f53509fec2",
+            "gender": "m",
+            "email": "testi@seitenbau.com",
+            "issuperuser": 0,
+            "isdeletable": 1
+        },
+        {
+            "id": "USER-gbi7e2cf-11r5-45e9-bc6d-a27cee8a74c4-USER",
+            "lastname": "lastname_j",
+            "firstname": "firstname_j",
+            "password": "9169ab4e40c8f0b391ee36f53509fec2",
+            "gender": "m",
+            "email": "testj@seitenbau.com",
+            "issuperuser": 0,
+            "isdeletable": 1
+        },
+        {
+            "id": "USER-gbi7e2cf-11r5-45e9-bc6d-a27cee8a74c5-USER",
+            "lastname": "lastname_k",
+            "firstname": "firstname_k",
+            "password": "9169ab4e40c8f0b391ee36f53509fec2",
+            "gender": "m",
+            "email": "testk@seitenbau.com",
+            "issuperuser": 0,
+            "isdeletable": 1
+        },
+        {
+            "id": "USER-0ex7e4a7-7fc5-464a-bd47-06b3b8af03kd-USER",
+            "lastname": "lastname_a0",
+            "firstname": "firstname_a0",
+            "password": "9169ab4e40c8f0b391ee36f53509fec2",
+            "gender": "m",
+            "email": "testa0@seitenbau.com",
+            "issuperuser": 0,
+            "isdeletable": 1
+        },
+        {
+            "id": "USER-2ex7e2cf-1175-45e9-bcbd-a25ce48a1ngr-USER",
+            "lastname": "lastname_b0",
+            "firstname": "firstname_b0",
+            "password": "9169ab4e40c8f0b391ee36f53509fec2",
+            "gender": "m",
+            "email": "testb0@seitenbau.com",
+            "issuperuser": 0,
+            "isdeletable": 1
+        },
+        {
+            "id": "USER-1ex7e4a7-7fc5-464a-bd47-06b3b8af03kd-USER",
+            "lastname": "lastname_a1",
+            "firstname": "firstname_a1",
+            "password": "9169ab4e40c8f0b391ee36f53509fec2",
+            "gender": "m",
+            "email": "testa1@seitenbau.com",
+            "issuperuser": 0,
+            "isdeletable": 1
+        },
+        {
+            "id": "USER-3ex7e2cf-1175-45e9-bcbd-a25ce48a1ngr-USER",
+            "lastname": "lastname_b1",
+            "firstname": "firstname_b1",
+            "password": "9169ab4e40c8f0b391ee36f53509fec2",
+            "gender": "m",
+            "email": "testb1@seitenbau.com",
+            "issuperuser": 0,
+            "isdeletable": 1
+        },
+        {
+            "id": "USER-ov04egs7-7fc5-4f4a-bd49-16b3b8jf09n9-USER",
+            "lastname": "lastname_c0",
+            "firstname": "firstname_c0",
+            "password": "9169ab4e40c8f0b391ee36f53509fec2",
+            "gender": "m",
+            "email": "testc0@seitenbau.com",
+            "issuperuser": 0,
+            "isdeletable": 1
+        },
+        {
+            "id": "USER-8dh7e4a7-7fc5-464a-bd47-06b3b8af03kd-USER",
+            "lastname": "lastname_d0",
+            "firstname": "firstname_d0",
+            "password": "9169ab4e40c8f0b391ee36f53509fec2",
+            "gender": "m",
+            "email": "testd0@seitenbau.com",
+            "issuperuser": 0,
+            "isdeletable": 1
+        },
+        {
+            "id": "USER-8dh7e4a7-7fc5-464a-bd47-06d3b8af07kd-USER",
+            "lastname": "lastname_d1",
+            "firstname": "firstname_d1",
+            "password": "9169ab4e40c8f0b391ee36f53509fec2",
+            "gender": "m",
+            "email": "testd1@seitenbau.com",
+            "issuperuser": 0,
+            "isdeletable": 1
+        },
+        {
+            "id": "USER-8dh7e4a7-7fc5-464a-bd47-06b3b8af04kd-USER",
+            "lastname": "lastname_d2",
+            "firstname": "firstname_d2",
+            "password": "9169ab4e40c8f0b391ee36f53509fec2",
+            "gender": "m",
+            "email": "testd2@seitenbau.com",
+            "issuperuser": 0,
+            "isdeletable": 1
+        },
+        {
+            "id": "USER-rr04egs7-7fc5-4f4a-bd49-16b3b8af09n4-USER",
+            "lastname": "lastname_e0",
+            "firstname": "firstname_e0",
+            "password": "9169ab4e40c8f0b391ee36f53509fec2",
+            "gender": "m",
+            "email": "teste0@seitenbau.com",
+            "issuperuser": 0,
+            "isdeletable": 1
+        },
+        {
+            "id": "USER-gbi7e2cf-11r5-45e9-bc6d-a25c4e8a7hed-USER",
+            "lastname": "lastname_f0",
+            "firstname": "firstname_f0",
+            "password": "9169ab4e40c8f0b391ee36f53509fec2",
+            "gender": "m",
+            "email": "testf0@seitenbau.com",
+            "issuperuser": 0,
+            "isdeletable": 1
+        },
+        {
+            "id": "USER-au00ega7-7fc5-464a-bd47-n6b3b8af00kl-USER",
+            "lastname": "lastname_g0",
+            "firstname": "firstname_g0",
+            "password": "9169ab4e40c8f0b391ee36f53509fec2",
+            "gender": "m",
+            "email": "testg0@seitenbau.com",
+            "issuperuser": 0,
+            "isdeletable": 1
+        },
+        {
+            "id": "USER-au01eaa7-7fc5-464a-bd47-n6b3b8af01zk-USER",
+            "lastname": "lastname_g1",
+            "firstname": "firstname_g1",
+            "password": "9169ab4e40c8f0b391ee36f53509fec2",
+            "gender": "m",
+            "email": "testg1@seitenbau.com",
+            "issuperuser": 0,
+            "isdeletable": 1
+        },
+        {
+            "id": "USER-au02eaa7-7fc5-464a-bd47-n6b3b8af01zk-USER",
+            "lastname": "lastname_g2",
+            "firstname": "firstname_g2",
+            "password": "9169ab4e40c8f0b391ee36f53509fec2",
+            "gender": "m",
+            "email": "testg2@seitenbau.com",
+            "issuperuser": 0,
+            "isdeletable": 1
+        },
+        {
+            "id": "USER-au00ega7-7fc5-464a-bd47-16b3b8af00kl-USER",
+            "lastname": "lastname_h0",
+            "firstname": "firstname_h0",
+            "password": "9169ab4e40c8f0b391ee36f53509fec2",
+            "gender": "m",
+            "email": "testh0@seitenbau.com",
+            "issuperuser": 0,
+            "isdeletable": 1
+        },
+        {
+            "id": "USER-au01eaa7-7fc5-464a-bd47-16b3b8af01zk-USER",
+            "lastname": "lastname_h1",
+            "firstname": "firstname_h1",
+            "password": "9169ab4e40c8f0b391ee36f53509fec2",
+            "gender": "m",
+            "email": "testh1@seitenbau.com",
+            "issuperuser": 0,
+            "isdeletable": 1
+        },
+        {
+            "id": "USER-au02eaa7-7fc5-464a-bd47-16b3b8af01zk-USER",
+            "lastname": "lastname_h2",
+            "firstname": "firstname_h2",
+            "password": "9169ab4e40c8f0b391ee36f53509fec2",
+            "gender": "m",
+            "email": "testh2@seitenbau.com",
+            "issuperuser": 0,
+            "isdeletable": 1
+        },
+        {
+            "id": "USER-au00ega0-7fc5-464a-bd47-16b3b8af00kl-USER",
+            "lastname": "lastname_h3",
+            "firstname": "firstname_h3",
+            "password": "9169ab4e40c8f0b391ee36f53509fec2",
+            "gender": "m",
+            "email": "testh3@seitenbau.com",
+            "issuperuser": 0,
+            "isdeletable": 1
+        },
+        {
+            "id": "USER-au00ega1-7fc5-464a-bd47-16b3b8af00kl-USER",
+            "lastname": "lastname_h4",
+            "firstname": "firstname_h4",
+            "password": "9169ab4e40c8f0b391ee36f53509fec2",
+            "gender": "m",
+            "email": "testh4@seitenbau.com",
+            "issuperuser": 0,
+            "isdeletable": 1
+        },
+        {
+            "id": "USER-re02eaa7-7fc5-464a-bd47-16b3b8afkeep-USER",
+            "lastname": "lastname_i0",
+            "firstname": "firstname_i0",
+            "password": "9169ab4e40c8f0b391ee36f53509fec2",
+            "gender": "m",
+            "email": "testi0@seitenbau.com",
+            "issuperuser": 0,
+            "isdeletable": 1
+        },
+        {
+            "id": "USER-re00ega7-7fc5-464a-bd47-16b3b8af00kr-USER",
+            "lastname": "lastname_i1",
+            "firstname": "firstname_i1",
+            "password": "9169ab4e40c8f0b391ee36f53509fec2",
+            "gender": "m",
+            "email": "testi1@seitenbau.com",
+            "issuperuser": 0,
+            "isdeletable": 1
+        },
+        {
+            "id": "USER-re01eaa7-7fc5-464a-bd47-16b3b8af01zr-USER",
+            "lastname": "lastname_i2",
+            "firstname": "firstname_i2",
+            "password": "9169ab4e40c8f0b391ee36f53509fec2",
+            "gender": "m",
+            "email": "testi2@seitenbau.com",
+            "issuperuser": 0,
+            "isdeletable": 1
+        },
+        {
+            "id": "USER-re02eaa7-7fc5-464a-bd47-16b3b8af01zg-USER",
+            "lastname": "lastname_i3",
+            "firstname": "firstname_i3",
+            "password": "9169ab4e40c8f0b391ee36f53509fec2",
+            "gender": "m",
+            "email": "testi3@seitenbau.com",
+            "issuperuser": 0,
+            "isdeletable": 1
+        },
+        {
+            "id": "USER-re02eaa7-7fc5-464a-bd47-16b3b8af360p-USER",
+            "lastname": "lastname_h0",
+            "firstname": "firstname_h0",
+            "password": "9169ab4e40c8f0b391ee36f53509fec2",
+            "gender": "m",
+            "email": "testh0@seitenbau.com",
+            "issuperuser": 0,
+            "isdeletable": 1
+        },
+        {
+            "id": "USER-re02eaa7-7fc5-464a-bd47-16b3b8af361p-USER",
+            "lastname": "lastname_h1",
+            "firstname": "firstname_h1",
+            "password": "9169ab4e40c8f0b391ee36f53509fec2",
+            "gender": "m",
+            "email": "testh1@seitenbau.com",
+            "issuperuser": 0,
+            "isdeletable": 1
+        },
+        {
+            "id": "USER-re02eaa7-7fc5-464a-bd47-16b3b8af362p-USER",
+            "lastname": "lastname_h2",
+            "firstname": "firstname_h2",
+            "password": "9169ab4e40c8f0b391ee36f53509fec2",
+            "gender": "m",
+            "email": "testh2@seitenbau.com",
+            "issuperuser": 0,
+            "isdeletable": 1
+        },
+        {
+            "id": "USER-re02eaa7-7fc5-464a-bd47-16b3b8af363p-USER",
+            "lastname": "lastname_h3",
+            "firstname": "firstname_h3",
+            "password": "9169ab4e40c8f0b391ee36f53509fec2",
+            "gender": "m",
+            "email": "testh3@seitenbau.com",
+            "issuperuser": 0,
+            "isdeletable": 1
+        },
+        {
+            "id": "USER-re02eaa7-7fc5-464a-bd47-16b3b8af364p-USER",
+            "lastname": "lastname_h4",
+            "firstname": "firstname_h4",
+            "password": "9169ab4e40c8f0b391ee36f53509fec2",
+            "gender": "m",
+            "email": "testh4@seitenbau.com",
+            "issuperuser": 0,
+            "isdeletable": 1
+        },
+        {
+            "id": "USER-at02eaa7-7fc5-464a-bd47-16b3b8af360p-USER",
+            "lastname": "lastname_j0",
+            "firstname": "firstname_j0",
+            "password": "9169ab4e40c8f0b391ee36f53509fec2",
+            "gender": "m",
+            "email": "already.taken.email@seitenbau-test.de",
+            "issuperuser": 0,
+            "isdeletable": 1
+        },
+        {
+            "id": "USER-re02eaa7-7fc5-464a-bd47-16b3b8af36c0-USER",
+            "lastname": "lastname_k0",
+            "firstname": "firstname_k0",
+            "password": "9169ab4e40c8f0b391ee36f53509fec2",
+            "gender": "m",
+            "email": "k0.email@seitenbau-test.de",
+            "issuperuser": 0,
+            "isdeletable": 1
+        },
+        {
+            "id": "USER-re02eaa7-7fc5-464a-bd47-16b3b8af36c1-USER",
+            "lastname": "lastname_k1",
+            "firstname": "firstname_k1",
+            "password": "9169ab4e40c8f0b391ee36f53509fec2",
+            "gender": "m",
+            "email": "k1.email@seitenbau-test.de",
+            "issuperuser": 0,
+            "isdeletable": 1
+        },
+        {
+            "id": "USER-lo01eaa7-7fc5-464a-bd47-16b3b8af36c0-USER",
+            "lastname": "login_lastname_0",
+            "firstname": "login_firstname_0",
+            "password": "1b606043f44b20ea45ca12af38cfbedd",
+            "gender": "m",
+            "email": "login.test0@sbcms.de",
+            "issuperuser": 1,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-lo02eaa7-7fc5-464a-bd47-16b3b8af36c0-USER",
+            "lastname": "login_lastname_1",
+            "firstname": "login_firstname_1",
+            "password": "1b606043f44b20ea45ca12af38cfbedd",
+            "gender": "f",
+            "email": "login.test1@sbcms.de",
+            "issuperuser": 0,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-lo03eaa7-7fc5-464a-bd47-16b3b8af36c0-USER",
+            "lastname": "login_lastname_2",
+            "firstname": "login_firstname_2",
+            "password": "1b606043f44b20ea45ca12af38cfbedd",
+            "gender": "f",
+            "email": "login.test2@sbcms.de",
+            "issuperuser": 0,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-lo04eaa7-7fc5-464a-bd47-16b3b8af36c0-USER",
+            "lastname": "login_lastname_3",
+            "firstname": "login_firstname_3",
+            "password": "1b606043f44b20ea45ca12af38cfbedd",
+            "gender": "f",
+            "email": "login.test3@sbcms.de",
+            "issuperuser": 0,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-lo05eaa7-7fc5-464a-bd47-16b3b8af36c0-USER",
+            "lastname": "login_lastname_4",
+            "firstname": "login_firstname_4",
+            "password": "1b606043f44b20ea45ca12af38cfbedd",
+            "gender": "f",
+            "email": "login.test4@sbcms.de",
+            "issuperuser": 0,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-lo06eaa7-7fc5-464a-bd47-16b3b8af36c0-USER",
+            "lastname": "login_lastname_5",
+            "firstname": "login_firstname_5",
+            "password": "1b606043f44b20ea45ca12af38cfbedd",
+            "gender": "f",
+            "email": "login.test5@sbcms.de",
+            "issuperuser": 0,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-rp01eaa7-7fc5-464a-bd47-16b3b8af36cf-USER",
+            "lastname": "privileges_lastname_1",
+            "firstname": "privileges_firstname_1",
+            "password": "1b606043f44b20ea45ca12af38cfbedd",
+            "gender": "f",
+            "email": "login.privileges1@sbcms.de",
+            "issuperuser": 0,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-rp02eaa7-7fc5-464a-bd47-16b3b8af36cf-USER",
+            "lastname": "privileges_lastname_2",
+            "firstname": "privileges_firstname_2",
+            "password": "1b606043f44b20ea45ca12af38cfbedd",
+            "gender": "f",
+            "email": "login.privileges2@sbcms.de",
+            "issuperuser": 0,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-rp03eaa7-7fc5-464a-bd47-16b3b8af36cf-USER",
+            "lastname": "privileges_lastname_3",
+            "firstname": "privileges_firstname_3",
+            "password": "1b606043f44b20ea45ca12af38cfbedd",
+            "gender": "f",
+            "email": "login.privileges3@sbcms.de",
+            "issuperuser": 0,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-rp04eaa7-7fc5-464a-bd47-16b3b8af36cf-USER",
+            "lastname": "privileges_lastname_4",
+            "firstname": "privileges_firstname_4",
+            "password": "1b606043f44b20ea45ca12af38cfbedd",
+            "gender": "f",
+            "email": "login.privileges4@sbcms.de",
+            "issuperuser": 0,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-ap00eaa7-7fc5-464a-bd47-16b3b8af36cf-USER",
+            "lastname": "privileges_lastname_all",
+            "firstname": "privileges_firstname_all",
+            "password": "1b606043f44b20ea45ca12af38cfbedd",
+            "gender": "f",
+            "email": "get.all.privileges@sbcms.de",
+            "issuperuser": 0,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-np00eaa7-7fc5-464a-bd47-16b3b8af36cf-USER",
+            "lastname": "no_page_privileges_lastname",
+            "firstname": "no_page_privileges_lastname",
+            "password": "1b606043f44b20ea45ca12af38cfbedd",
+            "gender": "f",
+            "email": "no.page.privileges@sbcms.de",
+            "issuperuser": 0,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-aps0eaa7-7fc5-464a-bd47-16b3b8af36cf-USER",
+            "lastname": "all_page_privileges_superuser_lastname",
+            "firstname": "all_page_privileges_superuser_lastname",
+            "password": "1b606043f44b20ea45ca12af38cfbedd",
+            "gender": "f",
+            "email": "all.page.privileges.superuser@sbcms.de",
+            "issuperuser": 1,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-apr0eaa7-7fc5-464a-bd47-16b3b8af36cf-USER",
+            "lastname": "all_page_rights_privileges_lastname",
+            "firstname": "all_page_rights_privileges_lastname",
+            "password": "1b606043f44b20ea45ca12af38cfbedd",
+            "gender": "f",
+            "email": "all.page.rights.privileges@sbcms.de",
+            "issuperuser": 0,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-epr0eaa7-7fc5-464a-bd47-16b3b8af36cf-USER",
+            "lastname": "edit_page_rights_privileges_lastname_0",
+            "firstname": "edit_page_rights_privileges_lastname_0",
+            "password": "1b606043f44b20ea45ca12af38cfbedd",
+            "gender": "f",
+            "email": "edit.privileges@sbcms.de",
+            "issuperuser": 0,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-epr0eno7-7fc5-464a-bd47-16b3b8af36cf-USER",
+            "lastname": "edit_page_rights_privileges_lastname_1",
+            "firstname": "edit_page_rights_privileges_lastname_1",
+            "password": "1b606043f44b20ea45ca12af38cfbedd",
+            "gender": "f",
+            "email": "edit.privileges.no@sbcms.de",
+            "issuperuser": 0,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-dpr0eaa7-7fc5-464a-bd47-16b3b8af36cf-USER",
+            "lastname": "suball_page_rights_privileges_lastname_0",
+            "firstname": "suball_page_rights_privileges_lastname_0",
+            "password": "1b606043f44b20ea45ca12af38cfbedd",
+            "gender": "f",
+            "email": "suball.privileges@sbcms.de",
+            "issuperuser": 0,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-spr1eaa7-7fc5-464a-bd47-16b3b8af36cf-USER",
+            "lastname": "subedit_page_rights_privileges_lastname_0",
+            "firstname": "subedit_page_rights_privileges_lastname_0",
+            "password": "1b606043f44b20ea45ca12af38cfbedd",
+            "gender": "f",
+            "email": "subedit.privileges@sbcms.de",
+            "issuperuser": 0,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-cp00eaa7-7fc5-464a-bd47-16b3b8af36cf-USER",
+            "lastname": "create_page_lastname_0",
+            "firstname": "create_page_lastname_0",
+            "password": "1b606043f44b20ea45ca12af38cfbedd",
+            "gender": "f",
+            "email": "create.page@sbcms.de",
+            "issuperuser": 0,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-cp01eaa7-7fc5-464a-bd47-16b3b8af36cf-USER",
+            "lastname": "create_page_lastname_1",
+            "firstname": "create_page_lastname_1",
+            "password": "1b606043f44b20ea45ca12af38cfbedd",
+            "gender": "f",
+            "email": "create1.page@sbcms.de",
+            "issuperuser": 0,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-page0000-dele-te00-0000-000000000001-USER",
+            "lastname": "delete_page_lastname_1",
+            "firstname": "delete_page_lastname_1",
+            "password": "2e114daef3f2d2e93088de34ada22eeb",
+            "gender": "f",
+            "email": "controller.page.deleteSuccess@sbcms.de",
+            "issuperuser": 1,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-dp00eaa7-7fc5-464a-bd47-16b3b8af36cf-USER",
+            "lastname": "delete_page_lastname_0",
+            "firstname": "delete_page_lastname_0",
+            "password": "1b606043f44b20ea45ca12af38cfbedd",
+            "gender": "f",
+            "email": "delete.page.superuser@sbcms.de",
+            "issuperuser": 1,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-dp01eaa7-7fc5-464a-bd47-16b3b8af36cf-USER",
+            "lastname": "delete_page_lastname_1",
+            "firstname": "delete_page_lastname_1",
+            "password": "1b606043f44b20ea45ca12af38cfbedd",
+            "gender": "f",
+            "email": "delete.page.allrights@sbcms.de",
+            "issuperuser": 0,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-dp02eaa7-7fc5-464a-bd47-16b3b8af36cf-USER",
+            "lastname": "delete_page_lastname_2",
+            "firstname": "delete_page_lastname_2",
+            "password": "1b606043f44b20ea45ca12af38cfbedd",
+            "gender": "f",
+            "email": "delete.page.suball@sbcms.de",
+            "issuperuser": 0,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-dp03eaa7-7fc5-464a-bd47-16b3b8af36cf-USER",
+            "lastname": "delete_page_lastname_3",
+            "firstname": "delete_page_lastname_3",
+            "password": "1b606043f44b20ea45ca12af38cfbedd",
+            "gender": "f",
+            "email": "delete.page.no.page.privileges@sbcms.de",
+            "issuperuser": 0,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-cy00eaa7-7fc5-464a-bd47-16b3b8af36cf-USER",
+            "lastname": "copy_page_lastname_0",
+            "firstname": "copy_page_lastname_0",
+            "password": "1b606043f44b20ea45ca12af38cfbedd",
+            "gender": "f",
+            "email": "copy.page.superuser@sbcms.de",
+            "issuperuser": 1,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-cy01eaa7-7fc5-464a-bd47-16b3b8af36cf-USER",
+            "lastname": "copy_page_lastname_1",
+            "firstname": "copy_page_lastname_1",
+            "password": "1b606043f44b20ea45ca12af38cfbedd",
+            "gender": "f",
+            "email": "copy.page.allrights@sbcms.de",
+            "issuperuser": 0,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-cy02eaa7-7fc5-464a-bd47-16b3b8af36cf-USER",
+            "lastname": "copy_page_lastname_2",
+            "firstname": "copy_page_lastname_2",
+            "password": "1b606043f44b20ea45ca12af38cfbedd",
+            "gender": "f",
+            "email": "copy.page.no.page.privileges@sbcms.de",
+            "issuperuser": 0,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-cy03eaa7-7fc5-464a-bd47-16b3b8af36cf-USER",
+            "lastname": "copy_page_lastname_3",
+            "firstname": "copy_page_lastname_3",
+            "password": "1b606043f44b20ea45ca12af38cfbedd",
+            "gender": "f",
+            "email": "copy.page.suball@sbcms.de",
+            "issuperuser": 0,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-mv00eaa7-7fc5-464a-bd47-16b3b8af36cf-USER",
+            "lastname": "move_page_lastname_0",
+            "firstname": "move_page_lastname_0",
+            "password": "1b606043f44b20ea45ca12af38cfbedd",
+            "gender": "f",
+            "email": "move.page.superuser@sbcms.de",
+            "issuperuser": 1,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-mv01eaa7-7fc5-464a-bd47-16b3b8af36cf-USER",
+            "lastname": "move_page_lastname_1",
+            "firstname": "move_page_lastname_1",
+            "password": "1b606043f44b20ea45ca12af38cfbedd",
+            "gender": "f",
+            "email": "move.page.allrights@sbcms.de",
+            "issuperuser": 0,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-mv02eaa7-7fc5-464a-bd47-16b3b8af36cf-USER",
+            "lastname": "move_page_lastname_2",
+            "firstname": "move_page_lastname_2",
+            "password": "1b606043f44b20ea45ca12af38cfbedd",
+            "gender": "f",
+            "email": "move.page.no.page.privileges@sbcms.de",
+            "issuperuser": 0,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-mv03eaa7-7fc5-464a-bd47-16b3b8af36cf-USER",
+            "lastname": "move_page_lastname_3",
+            "firstname": "move_page_lastname_3",
+            "password": "1b606043f44b20ea45ca12af38cfbedd",
+            "gender": "f",
+            "email": "move.page.suball@sbcms.de",
+            "issuperuser": 0,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-ed00eaa7-7fc5-464a-bd47-16b3b8af36cf-USER",
+            "lastname": "edit_page_lastname_0",
+            "firstname": "edit_page_lastname_0",
+            "password": "1b606043f44b20ea45ca12af38cfbedd",
+            "gender": "f",
+            "email": "edit.page.superuser@sbcms.de",
+            "issuperuser": 1,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-ed01eaa7-7fc5-464a-bd47-16b3b8af36cf-USER",
+            "lastname": "edit_page_lastname_1",
+            "firstname": "edit_page_lastname_1",
+            "password": "1b606043f44b20ea45ca12af38cfbedd",
+            "gender": "f",
+            "email": "edit.page.allrights@sbcms.de",
+            "issuperuser": 0,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-ed02eaa7-7fc5-464a-bd47-16b3b8af36cf-USER",
+            "lastname": "edit_page_lastname_2",
+            "firstname": "edit_page_lastname_2",
+            "password": "1b606043f44b20ea45ca12af38cfbedd",
+            "gender": "f",
+            "email": "edit.page.no.page.privileges@sbcms.de",
+            "issuperuser": 0,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-ed03eaa7-7fc5-464a-bd47-16b3b8af36cf-USER",
+            "lastname": "edit_page_lastname_2",
+            "firstname": "edit_page_lastname_2",
+            "password": "1b606043f44b20ea45ca12af38cfbedd",
+            "gender": "f",
+            "email": "edit.page.edit@sbcms.de",
+            "issuperuser": 0,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-ed04eaa7-7fc5-464a-bd47-16b3b8af36cf-USER",
+            "lastname": "edit_page_lastname_4",
+            "firstname": "edit_page_lastname_4",
+            "password": "2e114daef3f2d2e93088de34ada22eeb",
+            "gender": "f",
+            "email": "controller.page.edit@sbcms.de",
+            "issuperuser": 1,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-update00-temp-late-0000-000000000001-USER",
+            "lastname": "update_template_lastname_1",
+            "firstname": "update_template_lastname_1",
+            "password": "2e114daef3f2d2e93088de34ada22eeb",
+            "gender": "f",
+            "email": "controller.template.update@sbcms.de",
+            "issuperuser": 1,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-update00-temp-late-0sni-ppet00000001-USER",
+            "lastname": "update_templatesnippet_lastname_1",
+            "firstname": "update_templatesnippet_lastname_1",
+            "password": "2e114daef3f2d2e93088de34ada22eeb",
+            "gender": "f",
+            "email": "controller.templatesnippet.update@sbcms.de",
+            "issuperuser": 1,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-update00-modu-l000-0000-000000000001-USER",
+            "lastname": "update_modul_lastname_1",
+            "firstname": "update_modul_lastname_1",
+            "password": "2e114daef3f2d2e93088de34ada22eeb",
+            "gender": "f",
+            "email": "controller.modul.update@sbcms.de",
+            "issuperuser": 1,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-cdn0gets-cree-n000-0000-000000000001-USER",
+            "lastname": "get_screen_lastname_1",
+            "firstname": "get_screen_lastname_1",
+            "password": "2e114daef3f2d2e93088de34ada22eeb",
+            "gender": "f",
+            "email": "cdn.getscreen@sbcms.de",
+            "issuperuser": 1,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-lmmoeaa7-7fc5-464a-bd47-16b3b8af36cf-USER",
+            "lastname": "log_modul_lastname",
+            "firstname": "log_modul_firstname",
+            "password": "1b606043f44b20ea45ca12af38cfbedd",
+            "gender": "f",
+            "email": "log.modul@sbcms.de",
+            "issuperuser": 1,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-lmteeaa7-7fc5-464a-bd47-16b3b8af36cf-USER",
+            "lastname": "log_template_lastname",
+            "firstname": "log_template_firstname",
+            "password": "1b606043f44b20ea45ca12af38cfbedd",
+            "gender": "f",
+            "email": "log.template@sbcms.de",
+            "issuperuser": 1,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-lmweeaa7-7fc5-464a-bd47-16b3b8af36cf-USER",
+            "lastname": "log_website_lastname",
+            "firstname": "log_website_firstname",
+            "password": "1b606043f44b20ea45ca12af38cfbedd",
+            "gender": "f",
+            "email": "log.website@sbcms.de",
+            "issuperuser": 1,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-gl01eaa7-7fc5-464a-bd47-16b3b8af36cf-USER",
+            "lastname": "get_log_superuser_lastname_0",
+            "firstname": "get_log_superuser_firstname_0",
+            "password": "1b606043f44b20ea45ca12af38cfbedd",
+            "gender": "f",
+            "email": "get.log.superuser@sbcms.de",
+            "issuperuser": 1,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-gl02eaa7-7fc5-464a-bd47-16b3b8af36cf-USER",
+            "lastname": "get_log_not_privileged_lastname_0",
+            "firstname": "get_log_not_privileged_firstname_0",
+            "password": "1b606043f44b20ea45ca12af38cfbedd",
+            "gender": "f",
+            "email": "get.log.no.read.privileges@sbcms.de",
+            "issuperuser": 0,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-gl03eaa7-7fc5-464a-bd47-16b3b8af36cf-USER",
+            "lastname": "get_log_read_privileged_lastname_0",
+            "firstname": "get_log_read_privileged_firstname_0",
+            "password": "1b606043f44b20ea45ca12af38cfbedd",
+            "gender": "f",
+            "email": "get.log.read.privileges@sbcms.de",
+            "issuperuser": 0,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-ej00eaa7-7fc5-464a-bd47-16b3b8af36cf-USER",
+            "lastname": "export_json_lastname_0",
+            "firstname": "export_json_firstname_0",
+            "password": "1b606043f44b20ea45ca12af38cfbedd",
+            "gender": "f",
+            "email": "export.json@sbcms.de",
+            "issuperuser": 1,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-ej00efa7-7fc5-464a-bd47-16b3b8af36cf-USER",
+            "lastname": "build_and_publish_lastname_0",
+            "firstname": "build_and_publish_firstname_0",
+            "password": "1b606043f44b20ea45ca12af38cfbedd",
+            "gender": "f",
+            "email": "build.and.publish@sbcms.de",
+            "issuperuser": 0,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-ej00efa9-7fc5-464a-bd47-16b3b8af36cf-USER",
+            "lastname": "build_lastname_0",
+            "firstname": "build_firstname_0",
+            "password": "1b606043f44b20ea45ca12af38cfbedd",
+            "gender": "f",
+            "email": "build.website@sbcms.de",
+            "issuperuser": 0,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-ej00efa9-8gc5-464a-bd47-16b3b8af36cf-USER",
+            "lastname": "publish_lastname_0",
+            "firstname": "publish_firstname_0",
+            "password": "1b606043f44b20ea45ca12af38cfbedd",
+            "gender": "f",
+            "email": "publish.website@sbcms.de",
+            "issuperuser": 0,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-hj00efa9-8gc5-464a-bd47-16b3b8af36cf-USER",
+            "lastname": "get_builds_lastname_0",
+            "firstname": "get_builds_firstname_0",
+            "password": "1b606043f44b20ea45ca12af38cfbedd",
+            "gender": "f",
+            "email": "getbuilds@sbcms.de",
+            "issuperuser": 0,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-lb00efa9-8gc5-464a-bd47-16b3b8af36cf-USER",
+            "lastname": "log_build_lastname_0",
+            "firstname": "log_build_firstname_0",
+            "password": "1b606043f44b20ea45ca12af38cfbedd",
+            "gender": "f",
+            "email": "log.build@sbcms.de",
+            "issuperuser": 1,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-7bb645c0-b7a3-4599-b396-94c8bb6c10d9-USER",
+            "lastname": "get.all.user.without.websites_lastname_0",
+            "firstname": "get.all.user.without.websites_firstname_0",
+            "password": "1b606043f44b20ea45ca12af38cfbedd",
+            "gender": "f",
+            "email": "get.all.user.without.websites@sbcms.de",
+            "issuperuser": 0,
+            "isdeletable": 1
+        },
+        {
+            "id": "USER-reg00gc0-b7a3-4599-b396-94c8bb6c10d9-USER",
+            "lastname": "register_lastname_0",
+            "firstname": "register_firstname_0",
+            "password": "",
+            "gender": "f",
+            "email": "register0@sbcms.de",
+            "issuperuser": 1,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-reg01gc0-b7a3-4599-b396-94c8bb6c10d9-USER",
+            "lastname": "register_lastname_1",
+            "firstname": "register_firstname_1",
+            "password": "",
+            "gender": "m",
+            "email": "register1@sbcms.de",
+            "issuperuser": 1,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-reg02gc0-b7a3-4599-b396-94c8bb6c10d9-USER",
+            "lastname": "register_lastname_2",
+            "firstname": "register_firstname_2",
+            "password": "",
+            "gender": "m",
+            "email": "register2@sbcms.de",
+            "issuperuser": 1,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-reg03gc0-b7a3-4599-b396-94c8bb6c10d9-USER",
+            "lastname": "register_lastname_3",
+            "firstname": "register_firstname_3",
+            "password": "",
+            "gender": "m",
+            "email": "register3@sbcms.de",
+            "issuperuser": 1,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-reg04gc0-b7a3-4599-b396-94c8bb6c10d9-USER",
+            "lastname": "register_lastname_4",
+            "firstname": "register_firstname_4",
+            "password": "",
+            "gender": "m",
+            "email": "register4@sbcms.de",
+            "issuperuser": 1,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-ren00gc0-b7a3-4599-b396-94c8bb6c10d9-USER",
+            "lastname": "renew_lastname_0",
+            "firstname": "renew_firstname_0",
+            "password": "",
+            "gender": "m",
+            "email": "renew0@sbcms.de",
+            "issuperuser": 0,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-ren01gc0-b7a3-4599-b396-94c8bb6c10d9-USER",
+            "lastname": "renew_lastname_1",
+            "firstname": "renew_firstname_1",
+            "password": "",
+            "gender": "m",
+            "email": "renew1@sbcms.de",
+            "issuperuser": 1,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-peo00gc0-b7a3-4599-b396-94c8bb6c10d9-USER",
+            "lastname": "pending_optin_lastname_0",
+            "firstname": "pending_optin_firstname_0",
+            "password": "1b606043f44b20ea45ca12af38cfbedd",
+            "gender": "m",
+            "email": "pending.optin@sbcms.de",
+            "issuperuser": 1,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-log00gc0-b7a3-4599-b396-94c8bb6c10d9-USER",
+            "lastname": "login_lastname_0",
+            "firstname": "login_firstname_0",
+            "password": "1b606043f44b20ea45ca12af38cfbedd",
+            "gender": "m",
+            "email": "login0@sbcms.de",
+            "issuperuser": 1,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-9a67e2c2-d175-45e9-bcbd-a25cee8a01cp-USER",
+            "lastname": "change_password_lastname_0",
+            "firstname": "change_password_firstname_0",
+            "password": "1b606043f44b20ea45ca12af38cfbedd",
+            "gender": "m",
+            "email": "change.password0@sbcms.de",
+            "issuperuser": 0,
+            "isdeletable": 1
+        },
+        {
+            "id": "USER-9a67e2c2-d175-45e9-bcbd-a25cee8a02cp-USER",
+            "lastname": "change_password_lastname_1",
+            "firstname": "change_password_firstname_1",
+            "password": "1b606043f44b20ea45ca12af38cfbedd",
+            "gender": "m",
+            "email": "change.password1@sbcms.de",
+            "issuperuser": 1,
+            "isdeletable": 1
+        },
+        {
+            "id": "USER-de67e2cf-1175-45e9-bcbd-a25cee8a74o0-USER",
+            "lastname": "delete_optin_lastname_0",
+            "firstname": "delete_optin_firstname_0",
+            "password": "1b606043f44b20ea45ca12af38cfbedd",
+            "gender": "m",
+            "email": "delete.optin0@sbcms.de",
+            "issuperuser": 0,
+            "isdeletable": 1
+        },
+        {
+            "id": "USER-de67e2cf-1175-45e9-bcbd-a25cee8a74e0-USER",
+            "lastname": "edit_user_optin_lastname_0",
+            "firstname": "edit_user_optin_firstname_0",
+            "password": "1b606043f44b20ea45ca12af38cfbedd",
+            "gender": "m",
+            "email": "edit.user.optin0@sbcms.de",
+            "issuperuser": 0,
+            "isdeletable": 1
+        },
+        {
+            "id": "USER-fr67e2cf-1175-45e9-bcbd-a25cee8a747x-USER",
+            "lastname": "unauthed_register_optin_lastname_0",
+            "firstname": "unauthed_register_optin_firstname_0",
+            "password": "1b606043f44b20ea45ca12af38cfbedd",
+            "gender": "m",
+            "email": "unauthed.register.optin@sbcms.de",
+            "issuperuser": 0,
+            "isdeletable": 1
+        },
+        {
+            "id": "USER-ren02gc0-b7a3-4599-b396-94c8bb6c10d9-USER",
+            "lastname": "renew_lastname_2",
+            "firstname": "renew_firstname_2",
+            "password": "",
+            "gender": "m",
+            "email": "renew2@sbcms.de",
+            "issuperuser": 1,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-reg05gc0-b7a3-4599-b396-94c8bb6c10d9-USER",
+            "lastname": "register_lastname_5",
+            "firstname": "register_firstname_5",
+            "password": "",
+            "gender": "f",
+            "email": "register5@sbcms.de",
+            "issuperuser": 1,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-controll-er00-lock-test-000000000001-USER",
+            "lastname": "lock",
+            "firstname": "lock tests user 1",
+            "password": "2e114daef3f2d2e93088de34ada22eeb",
+            "gender": "f",
+            "email": "lock_test_user_1@sbcms.de",
+            "issuperuser": 0,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-controll-er00-lock-test-000000000002-USER",
+            "lastname": "lock",
+            "firstname": "lock tests user 2",
+            "password": "2e114daef3f2d2e93088de34ada22eeb",
+            "gender": "m",
+            "email": "lock_test_user_2@sbcms.de",
+            "issuperuser": 0,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-controll-er00-lock-test-000000000003-USER",
+            "lastname": "lock",
+            "firstname": "lock tests user 3 (Superuser)",
+            "password": "2e114daef3f2d2e93088de34ada22eeb",
+            "gender": "f",
+            "email": "lock_test_user_3@sbcms.de",
+            "issuperuser": 1,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-controll-er00-lock-test-000000000004-USER",
+            "lastname": "lock",
+            "firstname": "lock tests user 4 (Superuser)",
+            "password": "2e114daef3f2d2e93088de34ada22eeb",
+            "gender": "m",
+            "email": "lock_test_user_4@sbcms.de",
+            "issuperuser": 1,
+            "isdeletable": 0
+        }
+    ]
+}

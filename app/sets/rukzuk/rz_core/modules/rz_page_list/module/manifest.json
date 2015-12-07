@@ -1,0 +1,12 @@
+{
+    "name": "{\"de\":\"Seitenliste\",\"en\":\"Page List\"}",
+    "description": "{\"de\":\"Eignet sich zur Erstellung von News-Bereichen und Blogs. In Kombination mit Seiteneigenschaft-Modulen ermöglicht es die Auflistung von Seiteneigenschaften wie Titel, Beschreibung, Datum und Bild mit Verlinkung zur jeweiligen Seite.\",\"en\":\"Good for creating blogs and news areas. In combination with Page Property modules, a list of page properties such as title, description, date and image with the corresponding link are generated.\"}",
+    "version": "dev",
+    "icon": "page.png",
+    "category": "{\"de\":\"Teaser, Blog, Veranstaltungen\",\"en\":\"Teaser, Blog, Events\"}",
+    "moduleType": "default",
+    "allowedChildModuleType": "*",
+    "ghostContainerMode": "force_off",
+    "reRenderRequired": false,
+    "apiType": "APIv1"
+}

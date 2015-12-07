@@ -1,0 +1,681 @@
+{
+    "form": [
+        {
+            "id": "7e589243-8e05-40d5-a46e-da92fd36ff4d",
+            "name": "{\"de\":\"Eigenschaften\",\"en\":\"Properties\"}",
+            "icon": "",
+            "formGroupData": [
+                {
+                    "params": [
+                        {
+                            "name": "CMSvar",
+                            "value": "fieldLabel",
+                            "allowBlank": false,
+                            "minLength": 3,
+                            "maskRe": {},
+                            "stripCharsRe": {},
+                            "xtype": "textfield",
+                            "emptyText": "__i18n_generatedFormPanel.varNameEmptyText",
+                            "fieldLabel": "__i18n_generatedFormPanel.varNameLabel"
+                        },
+                        {
+                            "name": "xtype",
+                            "value": "textfield",
+                            "xtype": null
+                        },
+                        {
+                            "name": "isMeta",
+                            "value": false,
+                            "fieldLabel": "__i18n_formElements.isGlobal",
+                            "xtype": "checkbox"
+                        },
+                        {
+                            "name": "isResponsive",
+                            "value": false,
+                            "fieldLabel": "__i18n_formElements.isResponsive",
+                            "xtype": "checkbox"
+                        },
+                        {
+                            "name": "fieldLabel",
+                            "value": "{\"de\":\"Label\",\"en\":\"Label\"}",
+                            "xtype": "textfield",
+                            "allowBlank": false,
+                            "emptyText": "__i18n_formElements.fieldLabelEmptyText",
+                            "fieldLabel": "__i18n_formElements.fieldLabel"
+                        },
+                        {
+                            "name": "emptyText",
+                            "value": "",
+                            "xtype": "textfield",
+                            "allowBlank": true,
+                            "emptyText": "__i18n_formElements.emptyTextEmptyText",
+                            "fieldLabel": "__i18n_formElements.emptyTextLabel"
+                        },
+                        {
+                            "name": "minLength",
+                            "value": 0,
+                            "xtype": "numberfield",
+                            "allowBlank": false,
+                            "allowDecimals": false,
+                            "emptyText": "__i18n_formElements.minLengthEmptyText",
+                            "fieldLabel": "__i18n_formElements.minLengthLabel"
+                        },
+                        {
+                            "name": "maxLength",
+                            "value": 255,
+                            "xtype": "numberfield",
+                            "allowBlank": false,
+                            "allowDecimals": false,
+                            "emptyText": "__i18n_formElements.maxLengthEmptyText",
+                            "fieldLabel": "__i18n_formElements.maxLengthLabel"
+                        },
+                        {
+                            "name": "allowBlank",
+                            "value": true,
+                            "xtype": "checkbox",
+                            "fieldLabel": "__i18n_formElements.allowBlankLabel"
+                        },
+                        {
+                            "name": "value",
+                            "value": "Name",
+                            "xtype": null
+                        }
+                    ],
+                    "descr": {
+                        "text": "__i18n_formElements.elementTextField",
+                        "iconCls": "textfield",
+                        "hasValue": true
+                    }
+                },
+                {
+                    "params": [
+                        {
+                            "name": "CMSvar",
+                            "value": "listType",
+                            "allowBlank": false,
+                            "minLength": 3,
+                            "maskRe": {},
+                            "stripCharsRe": {},
+                            "xtype": "textfield",
+                            "emptyText": "__i18n_generatedFormPanel.varNameEmptyText",
+                            "fieldLabel": "__i18n_generatedFormPanel.varNameLabel"
+                        },
+                        {
+                            "name": "xtype",
+                            "value": "CMStabbedfieldset",
+                            "xtype": null
+                        },
+                        {
+                            "name": "isResponsive",
+                            "value": false,
+                            "fieldLabel": "__i18n_formElements.isResponsive",
+                            "xtype": "checkbox"
+                        },
+                        {
+                            "name": "isMeta",
+                            "value": false,
+                            "fieldLabel": "__i18n_formElements.isGlobal",
+                            "xtype": "checkbox"
+                        },
+                        {
+                            "name": "fieldLabel",
+                            "value": "{\"de\":\"Feld-Typ\",\"en\":\"Field type\"}",
+                            "xtype": "textfield",
+                            "allowBlank": true,
+                            "emptyText": "__i18n_formElements.fieldLabelOptionalEmptyText",
+                            "fieldLabel": "__i18n_formElements.fieldLabel"
+                        },
+                        {
+                            "name": "value",
+                            "value": "select",
+                            "xtype": null
+                        }
+                    ],
+                    "descr": {
+                        "text": "__i18n_formElements.elementTabbedFieldSet",
+                        "iconCls": "tabbedfieldset",
+                        "hasValue": true,
+                        "allowChildNodes": true
+                    },
+                    "items": [
+                        {
+                            "params": [
+                                {
+                                    "name": "xtype",
+                                    "value": "CMStabpage",
+                                    "xtype": null
+                                },
+                                {
+                                    "name": "tabValue",
+                                    "xtype": "textfield",
+                                    "allowBlank": false,
+                                    "emptyText": "__i18n_formElements.groupValueEmptyText",
+                                    "fieldLabel": "__i18n_formElements.groupValueFieldLabel",
+                                    "value": "select"
+                                },
+                                {
+                                    "name": "title",
+                                    "value": "Drop-Down",
+                                    "xtype": "textfield",
+                                    "allowBlank": false,
+                                    "emptyText": "__i18n_formElements.title",
+                                    "fieldLabel": "__i18n_formElements.title"
+                                },
+                                {
+                                    "name": "value",
+                                    "value": "select",
+                                    "xtype": null
+                                }
+                            ],
+                            "descr": {
+                                "text": "__i18n_formElements.elementTabPage",
+                                "iconCls": "tabpage",
+                                "hasValue": false,
+                                "allowChildNodes": true
+                            }
+                        },
+                        {
+                            "params": [
+                                {
+                                    "name": "xtype",
+                                    "value": "CMStabpage",
+                                    "xtype": null
+                                },
+                                {
+                                    "name": "tabValue",
+                                    "xtype": "textfield",
+                                    "allowBlank": false,
+                                    "emptyText": "__i18n_formElements.groupValueEmptyText",
+                                    "fieldLabel": "__i18n_formElements.groupValueFieldLabel",
+                                    "value": "checkbox"
+                                },
+                                {
+                                    "name": "title",
+                                    "value": "{\"de\":\"Checkbox\",\"en\":\"Checkbox\"}",
+                                    "xtype": "textfield",
+                                    "allowBlank": false,
+                                    "emptyText": "__i18n_formElements.title",
+                                    "fieldLabel": "__i18n_formElements.title"
+                                },
+                                {
+                                    "name": "value",
+                                    "value": "checkbox",
+                                    "xtype": null
+                                }
+                            ],
+                            "descr": {
+                                "text": "__i18n_formElements.elementTabPage",
+                                "iconCls": "tabpage",
+                                "hasValue": false,
+                                "allowChildNodes": true
+                            }
+                        },
+                        {
+                            "params": [
+                                {
+                                    "name": "xtype",
+                                    "value": "CMStabpage",
+                                    "xtype": null
+                                },
+                                {
+                                    "name": "tabValue",
+                                    "xtype": "textfield",
+                                    "allowBlank": false,
+                                    "emptyText": "__i18n_formElements.groupValueEmptyText",
+                                    "fieldLabel": "__i18n_formElements.groupValueFieldLabel",
+                                    "value": "radio"
+                                },
+                                {
+                                    "name": "title",
+                                    "value": "{\"de\":\"Radio\",\"en\":\"Radio\"}",
+                                    "xtype": "textfield",
+                                    "allowBlank": false,
+                                    "emptyText": "__i18n_formElements.title",
+                                    "fieldLabel": "__i18n_formElements.title"
+                                },
+                                {
+                                    "name": "value",
+                                    "value": "radio",
+                                    "xtype": null
+                                }
+                            ],
+                            "descr": {
+                                "text": "__i18n_formElements.elementTabPage",
+                                "iconCls": "tabpage",
+                                "hasValue": false,
+                                "allowChildNodes": true
+                            }
+                        }
+                    ]
+                },
+                {
+                    "params": [
+                        {
+                            "name": "CMSvar",
+                            "value": "listFieldOptions",
+                            "allowBlank": false,
+                            "minLength": 3,
+                            "maskRe": {},
+                            "stripCharsRe": {},
+                            "xtype": "textfield",
+                            "emptyText": "__i18n_generatedFormPanel.varNameEmptyText",
+                            "fieldLabel": "__i18n_generatedFormPanel.varNameLabel"
+                        },
+                        {
+                            "name": "xtype",
+                            "value": "textarea",
+                            "xtype": null
+                        },
+                        {
+                            "name": "isMeta",
+                            "value": false,
+                            "fieldLabel": "__i18n_formElements.isGlobal",
+                            "xtype": "checkbox"
+                        },
+                        {
+                            "name": "fieldLabel",
+                            "value": "{\"de\":\"Auswahlfelder (* bedeutet vorausgewählt)\",\"en\":\"Items (* means default)\"}",
+                            "xtype": "textfield",
+                            "allowBlank": true,
+                            "emptyText": "__i18n_formElements.fieldLabelOptionalEmptyText",
+                            "fieldLabel": "__i18n_formElements.fieldLabel"
+                        },
+                        {
+                            "name": "labelAlign",
+                            "value": "top",
+                            "xtype": "combo",
+                            "fieldLabel": "__i18n_formTabEditor.labelAlignLabel",
+                            "editable": false,
+                            "lazyRender": true,
+                            "triggerAction": "all",
+                            "store": [
+                                [
+                                    "left",
+                                    "__i18n_formTabEditor.labelAlignLeft"
+                                ],
+                                [
+                                    "top",
+                                    "__i18n_formTabEditor.labelAlignTop"
+                                ],
+                                [
+                                    "right",
+                                    "__i18n_formTabEditor.labelAlignRight"
+                                ],
+                                [
+                                    "hide",
+                                    "__i18n_formTabEditor.labelAlignHide"
+                                ]
+                            ]
+                        },
+                        {
+                            "name": "height",
+                            "value": 200,
+                            "xtype": "numberfield",
+                            "allowBlank": false,
+                            "fieldLabel": "__i18n_formElements.heightLabel"
+                        },
+                        {
+                            "name": "value",
+                            "value": "Option 1\nOption 2*\nOption 3",
+                            "xtype": null
+                        }
+                    ],
+                    "descr": {
+                        "text": "__i18n_formElements.elementTextArea",
+                        "iconCls": "textarea",
+                        "hasValue": true
+                    }
+                },
+                {
+                    "params": [
+                        {
+                            "name": "CMSvar",
+                            "value": "enableRequired",
+                            "allowBlank": false,
+                            "minLength": 3,
+                            "maskRe": {},
+                            "stripCharsRe": {},
+                            "xtype": "textfield",
+                            "emptyText": "__i18n_generatedFormPanel.varNameEmptyText",
+                            "fieldLabel": "__i18n_generatedFormPanel.varNameLabel"
+                        },
+                        {
+                            "name": "xtype",
+                            "value": "CMSonofffieldset",
+                            "xtype": null
+                        },
+                        {
+                            "name": "isResponsive",
+                            "value": false,
+                            "fieldLabel": "__i18n_formElements.isResponsive",
+                            "xtype": "checkbox"
+                        },
+                        {
+                            "name": "isMeta",
+                            "value": false,
+                            "fieldLabel": "__i18n_formElements.isGlobal",
+                            "xtype": "checkbox"
+                        },
+                        {
+                            "name": "fieldLabel",
+                            "value": "{\"de\":\"Pflichtfeld\",\"en\":\"Required\"}",
+                            "xtype": "textfield",
+                            "allowBlank": true,
+                            "emptyText": "__i18n_formElements.fieldLabelOptionalEmptyText",
+                            "fieldLabel": "__i18n_formElements.fieldLabel"
+                        },
+                        {
+                            "name": "value",
+                            "value": false,
+                            "xtype": null
+                        }
+                    ],
+                    "descr": {
+                        "text": "__i18n_formElements.elementOnOffFieldSet",
+                        "iconCls": "onofffieldset",
+                        "allowChildNodes": true,
+                        "hasValue": true
+                    },
+                    "items": [
+                        {
+                            "params": [
+                                {
+                                    "name": "CMSvar",
+                                    "value": "requiredErrorMessage",
+                                    "allowBlank": false,
+                                    "minLength": 3,
+                                    "maskRe": {},
+                                    "stripCharsRe": {},
+                                    "xtype": "textfield",
+                                    "emptyText": "__i18n_generatedFormPanel.varNameEmptyText",
+                                    "fieldLabel": "__i18n_generatedFormPanel.varNameLabel"
+                                },
+                                {
+                                    "name": "xtype",
+                                    "value": "textfield",
+                                    "xtype": null
+                                },
+                                {
+                                    "name": "isMeta",
+                                    "value": false,
+                                    "fieldLabel": "__i18n_formElements.isGlobal",
+                                    "xtype": "checkbox"
+                                },
+                                {
+                                    "name": "fieldLabel",
+                                    "value": "{\"de\":\"Fehlermeldung\",\"en\":\"Error message\"}",
+                                    "xtype": "textfield",
+                                    "allowBlank": false,
+                                    "emptyText": "__i18n_formElements.fieldLabelEmptyText",
+                                    "fieldLabel": "__i18n_formElements.fieldLabel"
+                                },
+                                {
+                                    "name": "labelAlign",
+                                    "value": "top",
+                                    "xtype": "combo",
+                                    "fieldLabel": "__i18n_formTabEditor.labelAlignLabel",
+                                    "editable": false,
+                                    "lazyRender": true,
+                                    "triggerAction": "all",
+                                    "store": [
+                                        [
+                                            "left",
+                                            "__i18n_formTabEditor.labelAlignLeft"
+                                        ],
+                                        [
+                                            "top",
+                                            "__i18n_formTabEditor.labelAlignTop"
+                                        ],
+                                        [
+                                            "right",
+                                            "__i18n_formTabEditor.labelAlignRight"
+                                        ],
+                                        [
+                                            "hide",
+                                            "__i18n_formTabEditor.labelAlignHide"
+                                        ]
+                                    ]
+                                },
+                                {
+                                    "name": "emptyText",
+                                    "value": "",
+                                    "xtype": "textfield",
+                                    "allowBlank": true,
+                                    "emptyText": "__i18n_formElements.emptyTextEmptyText",
+                                    "fieldLabel": "__i18n_formElements.emptyTextLabel"
+                                },
+                                {
+                                    "name": "minLength",
+                                    "value": 0,
+                                    "xtype": "numberfield",
+                                    "allowBlank": false,
+                                    "allowDecimals": false,
+                                    "emptyText": "__i18n_formElements.minLengthEmptyText",
+                                    "fieldLabel": "__i18n_formElements.minLengthLabel"
+                                },
+                                {
+                                    "name": "maxLength",
+                                    "value": 255,
+                                    "xtype": "numberfield",
+                                    "allowBlank": false,
+                                    "allowDecimals": false,
+                                    "emptyText": "__i18n_formElements.maxLengthEmptyText",
+                                    "fieldLabel": "__i18n_formElements.maxLengthLabel"
+                                },
+                                {
+                                    "name": "allowBlank",
+                                    "value": true,
+                                    "xtype": "checkbox",
+                                    "fieldLabel": "__i18n_formElements.allowBlankLabel"
+                                },
+                                {
+                                    "name": "value",
+                                    "value": "Please fill out this field.",
+                                    "xtype": null
+                                }
+                            ],
+                            "descr": {
+                                "text": "__i18n_formElements.elementTextField",
+                                "iconCls": "textfield",
+                                "hasValue": true
+                            }
+                        }
+                    ]
+                },
+                {
+                    "params": [
+                        {
+                            "name": "CMSvar",
+                            "value": "cssEnableStyling",
+                            "allowBlank": false,
+                            "minLength": 3,
+                            "maskRe": {},
+                            "stripCharsRe": {},
+                            "xtype": "textfield",
+                            "emptyText": "__i18n_generatedFormPanel.varNameEmptyText",
+                            "fieldLabel": "__i18n_generatedFormPanel.varNameLabel"
+                        },
+                        {
+                            "name": "xtype",
+                            "value": "CMSonofffieldset",
+                            "xtype": null
+                        },
+                        {
+                            "name": "isResponsive",
+                            "value": true,
+                            "fieldLabel": "__i18n_formElements.isResponsive",
+                            "xtype": "checkbox"
+                        },
+                        {
+                            "name": "isMeta",
+                            "value": false,
+                            "fieldLabel": "__i18n_formElements.isGlobal",
+                            "xtype": "checkbox"
+                        },
+                        {
+                            "name": "fieldLabel",
+                            "value": "{\"de\":\"Position des Labels\",\"en\":\"Label position\"}",
+                            "xtype": "textfield",
+                            "allowBlank": true,
+                            "emptyText": "__i18n_formElements.fieldLabelOptionalEmptyText",
+                            "fieldLabel": "__i18n_formElements.fieldLabel"
+                        },
+                        {
+                            "name": "value",
+                            "value": {
+                                "type": "bp",
+                                "default": false
+                            },
+                            "xtype": null
+                        }
+                    ],
+                    "descr": {
+                        "text": "__i18n_formElements.elementOnOffFieldSet",
+                        "iconCls": "onofffieldset",
+                        "allowChildNodes": true,
+                        "hasValue": true
+                    },
+                    "items": [
+                        {
+                            "params": [
+                                {
+                                    "name": "CMSvar",
+                                    "value": "cssEnableLabelAlign",
+                                    "allowBlank": false,
+                                    "minLength": 3,
+                                    "maskRe": {},
+                                    "stripCharsRe": {},
+                                    "xtype": "textfield",
+                                    "emptyText": "__i18n_generatedFormPanel.varNameEmptyText",
+                                    "fieldLabel": "__i18n_generatedFormPanel.varNameLabel"
+                                },
+                                {
+                                    "name": "xtype",
+                                    "value": "CMStabbedfieldset",
+                                    "xtype": null
+                                },
+                                {
+                                    "name": "isResponsive",
+                                    "value": false,
+                                    "fieldLabel": "__i18n_formElements.isResponsive",
+                                    "xtype": "checkbox"
+                                },
+                                {
+                                    "name": "isMeta",
+                                    "value": false,
+                                    "fieldLabel": "__i18n_formElements.isGlobal",
+                                    "xtype": "checkbox"
+                                },
+                                {
+                                    "name": "fieldLabel",
+                                    "value": "",
+                                    "xtype": "textfield",
+                                    "allowBlank": true,
+                                    "emptyText": "__i18n_formElements.fieldLabelOptionalEmptyText",
+                                    "fieldLabel": "__i18n_formElements.fieldLabel"
+                                },
+                                {
+                                    "name": "value",
+                                    "value": "left",
+                                    "xtype": null
+                                }
+                            ],
+                            "descr": {
+                                "text": "__i18n_formElements.elementTabbedFieldSet",
+                                "iconCls": "tabbedfieldset",
+                                "hasValue": true,
+                                "allowChildNodes": true
+                            },
+                            "items": [
+                                {
+                                    "params": [
+                                        {
+                                            "name": "xtype",
+                                            "value": "CMStabpage",
+                                            "xtype": null
+                                        },
+                                        {
+                                            "name": "tabValue",
+                                            "xtype": "textfield",
+                                            "allowBlank": false,
+                                            "emptyText": "__i18n_formElements.groupValueEmptyText",
+                                            "fieldLabel": "__i18n_formElements.groupValueFieldLabel",
+                                            "value": "left"
+                                        },
+                                        {
+                                            "name": "title",
+                                            "value": "{\"de\":\"links anzeigen\",\"en\":\"Show before field\"}",
+                                            "xtype": "textfield",
+                                            "allowBlank": false,
+                                            "emptyText": "__i18n_formElements.title",
+                                            "fieldLabel": "__i18n_formElements.title"
+                                        },
+                                        {
+                                            "name": "value",
+                                            "value": "left",
+                                            "xtype": null
+                                        }
+                                    ],
+                                    "descr": {
+                                        "text": "__i18n_formElements.elementTabPage",
+                                        "iconCls": "tabpage",
+                                        "hasValue": false,
+                                        "allowChildNodes": true
+                                    }
+                                },
+                                {
+                                    "params": [
+                                        {
+                                            "name": "xtype",
+                                            "value": "CMStabpage",
+                                            "xtype": null
+                                        },
+                                        {
+                                            "name": "tabValue",
+                                            "xtype": "textfield",
+                                            "allowBlank": false,
+                                            "emptyText": "__i18n_formElements.groupValueEmptyText",
+                                            "fieldLabel": "__i18n_formElements.groupValueFieldLabel",
+                                            "value": "top"
+                                        },
+                                        {
+                                            "name": "title",
+                                            "value": "{\"de\":\"oberhalb anzeigen\",\"en\":\"Show above field\"}",
+                                            "xtype": "textfield",
+                                            "allowBlank": false,
+                                            "emptyText": "__i18n_formElements.title",
+                                            "fieldLabel": "__i18n_formElements.title"
+                                        },
+                                        {
+                                            "name": "value",
+                                            "value": "top",
+                                            "xtype": null
+                                        }
+                                    ],
+                                    "descr": {
+                                        "text": "__i18n_formElements.elementTabPage",
+                                        "iconCls": "tabpage",
+                                        "hasValue": false,
+                                        "allowChildNodes": true
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "formValues": {
+        "fieldLabel": "Name",
+        "listType": "select",
+        "listFieldOptions": "Option 1\nOption 2*\nOption 3",
+        "enableRequired": false,
+        "requiredErrorMessage": "Please fill out this field.",
+        "cssEnableStyling": {
+            "type": "bp",
+            "default": false
+        },
+        "cssEnableLabelAlign": "left"
+    }
+}

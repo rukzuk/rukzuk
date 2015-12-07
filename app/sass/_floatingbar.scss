@@ -1,0 +1,16 @@
+/* little floating menu that attaches itself to an element on hover */
+.CMSfloatingbar .x-menu-list-item {
+    float: left;
+    padding: 2px;
+}
+
+.CMSfloatingbar .x-menu-item-icon {
+    display: none;
+}
+
+.CMSfloatingbar button {
+    width: 16px;
+    padding: 0px;
+    background-position-x: 1px;
+    padding-left: 16px !important;
+}

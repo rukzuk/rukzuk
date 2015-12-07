@@ -1,0 +1,53 @@
+{
+    "website": [
+        {
+            "id": "SITE-update00-defa-ult0-form-values000001-SITE",
+            "name": "ContentUpdater-Test",
+            "description": "",
+            "navigation": "[{}]",
+            "usedsetid": "contentupdate_test",
+            "shortid": "",
+            "colorscheme": "",
+            "resolutions": "",
+            "version": 0,
+            "home": "",
+            "ismarkedfordeletion": 0
+        }
+    ],
+    "template": [
+        {
+            "websiteid": "SITE-update00-defa-ult0-form-values000001-SITE",
+            "id": "TPL-update00-defa-ult0-form-values000001-TPL",
+            "name": "template for updateDefaultFormValues tests",
+            "pagetype": null,
+            "usedmoduleids": "[\"rz_testing_001\", \"rz_testing_002\"]",
+            "content": "[{\"id\": \"unit_001\",\"moduleId\": \"rz_testing_001\",\"formValues\": {},\"children\": [{\"id\": \"unit_002\",\"moduleId\": \"rz_testing_001\",\"children\": null},{\"id\": \"unit_003\",\"moduleId\": \"rz_testing_001\",\"formValues\": {\"my_key\": \"my_unit_003_value\"}, \"ghostContainer\": true, \"children\": [{\"id\": \"unit_004\",\"moduleId\": \"rz_testing_001\",\"formValues\": {\"foo\": \"bar\"},\"children\": [{\"id\": \"unit_005\",\"moduleId\": \"rz_testing_002\",\"formValues\": {\"key_from_unit_005\": \"value_from_unit_005\"},\"children\": null}]}]}]}]",
+            "contentchecksum": "theoriginaltemplatechecksum"
+        }
+    ],
+    "template_snippet": [
+        {
+            "websiteid": "SITE-update00-defa-ult0-form-values000001-SITE",
+            "id": "TPLS-update00-defa-ult0-form-values000001-TPLS",
+            "name": "template for updateDefaultFormValues tests",
+            "description": "",
+            "category": "",
+            "content": "[{\"id\": \"unit_001\",\"moduleId\": \"rz_testing_001\",\"formValues\": {\"foo\": \"bar_rz_testing_001\"},\"children\": [{\"id\": \"unit_002\",\"moduleId\": \"rz_testing_002\",\"formValues\": {\"key_from_unit_005\": \"value_from_unit_002\",\"foo\": \"bar_rz_testing_002\",\"this_is_a_array\": [\"foo\",\"bar\"],\"this_is_a_object\": {\"foo\": \"bar\"},\"this_is_null\": null,\"this_is_empty_string\": \"\",\"this_is_empty_array\": [],\"this_is_empty_object\": {},\"this_is_int_0\": 0,\"this_is_false\": false},\"children\": null}]}]"
+        }
+    ],
+    "page": [
+        {
+            "websiteid": "SITE-update00-defa-ult0-form-values000001-SITE",
+            "id": "PAGE-update00-defa-ult0-form-values000001-PAGE",
+            "templateid": "TPL-update00-defa-ult0-form-values000001-TPL",
+            "name": "page 1 for updateDefaultFormValues tests",
+            "description": "",
+            "content": "[{\"id\": \"page_unit_001\",\"templateUnitId\": \"unit_001\",\"moduleId\": \"rz_testing_001\",\"formValues\": {},\"children\": [{\"id\": \"page_unit_002\",\"templateUnitId\": \"unit_002\",\"moduleId\": \"rz_testing_001\",\"children\": []},{\"id\": \"page_unit_003\",\"templateUnitId\": \"unit_003\",\"moduleId\": \"rz_testing_001\",\"formValues\": {\"my_key\": \"my_unit_003_value\",\"page_unit_003\": \"value_from_page_unit_003\"},\"ghostContainer\": true,\"ghostChildren\": [{\"id\": \"page_unit_004\",\"templateUnitId\": \"unit_004\",\"moduleId\": \"rz_testing_001\",\"formValues\": {\"foo\": \"bar\"},\"children\": [{\"id\": \"page_unit_005\",\"templateUnitId\": \"unit_005\",\"moduleId\": \"rz_testing_002\",\"formValues\": {\"key_from_unit_005\": \"value_from_unit_005\"},\"children\": []}]}]}]}]",
+            "templatecontent": "[{\"id\": \"unit_001\",\"moduleId\": \"rz_testing_001\",\"formValues\": {},\"children\": [{\"id\": \"unit_002\",\"moduleId\": \"rz_testing_001\",\"children\": null},{\"id\": \"unit_003\",\"moduleId\": \"rz_testing_001\",\"formValues\": {\"my_key\": \"my_unit_003_value\"}, \"ghostContainer\": true, \"children\": [{\"id\": \"unit_004\",\"moduleId\": \"rz_testing_001\",\"formValues\": {\"foo\": \"bar\"},\"children\": [{\"id\": \"unit_005\",\"moduleId\": \"rz_testing_002\",\"formValues\": {\"key_from_unit_005\": \"value_from_unit_005\"},\"children\": null}]}]}]}]",
+            "templatecontentchecksum": "theoriginaltemplatechecksum",
+            "date": 0,
+            "innavigation": 0,
+            "navigationtitle": ""
+        }
+    ]
+}

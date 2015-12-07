@@ -1,0 +1,30 @@
+{
+    "descr": {
+        "id": "HiddenField",
+        "text": "__i18n_formElements.elementHiddenField",
+        "iconCls": "hidden",
+        "hasValue": true
+    },
+    "params": [
+        {
+            "name": "xtype",
+            "value": "hidden",
+            "xtype": null
+        },
+        {
+            "name": "isMeta",
+            "value": false,
+            "fieldLabel": "__i18n_formElements.isGlobal",
+            "xtype": "checkbox"
+        },
+        {
+            "name": "fieldLabel",
+            "xtype": null,
+            "value": "__i18n_formElements.hiddenField"
+        },
+        {
+            "name": "value",
+            "value": ""
+        }
+    ]
+}

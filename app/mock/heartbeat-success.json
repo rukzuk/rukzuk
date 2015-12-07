@@ -1,0 +1,17 @@
+{
+    "success": true,
+    "data": {
+        "expired": {
+            "SITE-dc1a0dc6-abfd-4a66-b20d-334657ceb36f-SITE" : {
+                "modules":["MODUL-23258527-f9bb-41c6-865a-a8ed23314dcc-MODUL"],
+                "pages": ["PAGE-50adaaac-8185-44bc-b6ac-1c5479aeb289-PAGE"]
+            }
+        },
+        "invalid": {
+            "SITE-123-SITE" : {
+                "pages": ["PAGE-123-PAGE"],
+                "templates": ["TPL-456-TPL", "TPL-789-TPL"]
+            }
+        }
+    }
+}

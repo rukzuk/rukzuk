@@ -1,0 +1,49 @@
+{
+    "website": [
+        {
+            "id": "SITE-controll-er0e-xpor-t0we-bsite0000001-SITE",
+            "name": "Export_Test_Website_3",
+            "description": "A sample website",
+            "navigation": "[]",
+            "colorscheme": "[{\"id\":\"860ac1af-c52f-4bbc-965e-cd35533d30fe\",\"value\":\"rgba(59,78,255,1)\",\"name\":\"Farbe 2\"}]",
+            "resolutions": "{}",
+            "version": 15,
+            "home": "something",
+            "usedsetid": "rukzuk_test",
+            "shortid": "",
+            "ismarkedfordeletion": 0
+        }
+    ],
+    "website_settings": [
+        {
+            "websiteid": "SITE-controll-er0e-xpor-t0we-bsite0000001-SITE",
+            "id": "rz_shop",
+            "formValues": "{\"foo\":\"bar\"}"
+        },
+        {
+            "websiteid": "SITE-controll-er0e-xpor-t0we-bsite0000001-SITE",
+            "id": "rz_shop_pro",
+            "formValues": "{\"bar\":\"foo\"}"
+        }
+    ],
+    "template": [
+        {
+            "websiteid": "SITE-controll-er0e-xpor-t0we-bsite0000001-SITE",
+            "id": "TPL-controll-er0e-xpor-t0we-bsite0000001-TPL",
+            "name": "template export 1",
+            "content": "[{\"abc\":\"def\"}]",
+            "pagetype": "the_page_type_id",
+            "usedmoduleids": "[]",
+            "contentchecksum": ""
+        },
+        {
+            "websiteid": "SITE-controll-er0e-xpor-t0we-bsite0000001-SITE",
+            "id": "TPL-controll-er0e-xpor-t0we-bsite0000002-TPL",
+            "name": "template export 2",
+            "content": "[]",
+            "pagetype": null,
+            "usedmoduleids": "[]",
+            "contentchecksum": ""
+        }
+    ]
+}

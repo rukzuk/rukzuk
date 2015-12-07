@@ -1,0 +1,11 @@
+{
+    "name":"Module 002 for testing",
+    "description":"",
+    "version":"test",
+    "icon":"application.png",
+    "category":"{\"de\":\"Default Module\",\"en\":\"Default Modules\"}",
+    "moduleType":"default",
+    "allowedChildModuleType":"*",
+    "reRenderRequired":true,
+    "apiType":"APIv1"
+}

@@ -1,0 +1,42 @@
+/* drag handles */
+.isColumnBox .columnBoxDragHandler {
+    position: fixed;
+    top: 0;
+    background-color: rgba(155, 155, 155, 0.15);
+    border-left: 1px dashed rgba(155, 155, 155, 0.42);
+    border-right: 1px dashed rgba(155, 155, 155, 0.42);
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    min-width: 2px;
+    height: 100%;
+    z-index: 10103;
+    cursor: e-resize;
+}
+
+.isColumnBox .columnBoxDragHandler:hover,
+.isColumnBox .columnBoxDragHandler:active {
+    background-color: rgba(155, 155, 155, 0.25);
+}
+
+.isColumnBox .boxPreview {
+    display: table-cell;
+    vertical-align: top;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    z-index: 9995;
+    border: 1px solid transparent;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* add module button quirks */
+body.RUKZUKenableInputHints .isColumnBox .boxPreviewAddButton {
+    /* show hidden column boxes if we want to show the add button (input hints are on and this is a button box) */
+    display: table-cell !important;
+}
+
+/* last box spacer height handling (needs to be 0 if there is not a 'virtual' box to display the add button) */
+body.RUKZUKenableInputHints .isColumnBox .boxSpacerLast {
+    height: auto;
+}

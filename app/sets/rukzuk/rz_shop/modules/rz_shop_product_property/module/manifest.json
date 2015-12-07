@@ -1,0 +1,12 @@
+{
+    "name": "{\"de\": \"Produkteigenschaft\",\"en\": \"Product Property\"}",
+    "description": "{\"de\":\"Zeigt eine Produkteigenschaft wie Name, Beschreibung, Bild oder Preis der aktuellen Produktseite an. In Kombination mit der Produktliste können Listen und Galerieansichten realisiert werden.\",\"en\":\"Displays one property such as name, description, image or price of the current product page. In combination with the Product List module, list and gallery views can be realized.\"}",
+    "version": "dev",
+    "icon": "shop-product-detail.svg",
+    "category": "{\"de\":\"Shop\",\"en\":\"Shop\"}",
+    "moduleType": "default",
+    "allowedChildModuleType": "extension",
+    "ghostContainerMode": "force_off",
+    "reRenderRequired": false,
+    "apiType": "APIv1"
+}

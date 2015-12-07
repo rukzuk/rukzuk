@@ -1,0 +1,14 @@
+{
+  "name": {
+    "de": "Pro-Shop Konfiguration",
+    "en": "Pro shop configuration"
+  },
+  "version": "rz_shop_pro.version",
+  "form": [
+    {
+      "foo": "bar",
+      "emtpyStdClass": {},
+      "emptyArray": []
+    }
+  ]
+}

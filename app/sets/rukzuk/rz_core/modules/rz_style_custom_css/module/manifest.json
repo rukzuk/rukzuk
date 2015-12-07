@@ -1,0 +1,12 @@
+{
+    "name": "{\"de\":\"Eigenes CSS\",\"en\":\"Custom CSS\"}",
+    "description": "{\"de\":\"Eingabe von eigenem CSS-Code. Unterstützt sowohl direkte CSS-Regeln als auch Selektoren wie h1 { color: red; }\",\"en\":\"Insert custom CSS code. Supports plain CSS rules as well as selectors like h1 { color: red; }\"}",
+    "version": "dev",
+    "icon": "style-css.png",
+    "category": "90",
+    "moduleType": "extension",
+    "allowedChildModuleType": "",
+    "reRenderRequired": false,
+    "apiType": "APIv1",
+    "ghostContainerMode": "force_off"
+}

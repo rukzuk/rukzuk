@@ -1,0 +1,39 @@
+{
+    "website_settings": [
+        {
+            "websiteid": "SITE-website0-sett-ings-test-000000000001-SITE",
+            "id": "rz_shop",
+            "formValues": "{\"foo\":\"bar\"}"
+        },
+        {
+            "websiteid": "SITE-website0-sett-ings-test-000000000001-SITE",
+            "id": "rz_shop_pro",
+            "formValues": "{\"bar\":\"foo\"}"
+        },
+        {
+            "websiteid": "SITE-website0-sett-ings-test-000000000002-SITE",
+            "id": "rz_shop",
+            "formValues": "{\"bar\":\"foo\"}"
+        },
+        {
+            "websiteid": "SITE-website0-sett-ings-test-000000000002-SITE",
+            "id": "rz_shop_pro",
+            "formValues": "{\"foo\":\"bar\"}"
+        }
+    ],
+    "website": [
+        {
+            "id": "SITE-website0-sett-ings-impo-rt0test00001-SITE",
+            "name": "this is the name: website/getAllWebsiteSettings; Website 01",
+            "description": "this is the description",
+            "navigation": "[{}]",
+            "usedsetid": "rukzuk_test",
+            "shortid": "",
+            "colorscheme": "",
+            "resolutions": "",
+            "version": 0,
+            "home": "",
+            "ismarkedfordeletion": 0
+        }
+    ]
+}

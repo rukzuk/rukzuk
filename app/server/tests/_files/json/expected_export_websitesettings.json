@@ -1,0 +1,14 @@
+{
+  "rz_shop": {
+    "id": "rz_shop",
+    "formValues": {"foo": "bar"}
+  },
+  "rz_shop_pro": {
+    "id": "rz_shop_pro",
+    "formValues": {"bar": "foo"}
+  },
+  "rz_website_settings_test": {
+    "id": "rz_website_settings_test",
+    "formValues": null
+  }
+}

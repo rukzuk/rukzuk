@@ -1,0 +1,65 @@
+.rz_form_field_select > div {
+    display: table;
+    width: 100%;
+    position: relative;
+    table-layout: fixed;
+    vertical-align: top;
+    height: 100%;
+}
+
+.rz_form_field_select fieldset {
+    border: none;
+}
+
+.rz_form_field_select fieldset label input {
+    width: auto;
+    margin-right: 10px;
+}
+
+.rz_form_field_select fieldset label span {
+    margin-right: 10px;
+}
+
+.rz_form_field_select label {
+    cursor: pointer;
+    display: table-cell;
+    vertical-align: top;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.rz_form_field_select fieldset label {
+    text-align: left;
+    width: auto !important;
+    margin-top: 5px;
+}
+
+.rz_form_field_select input,
+.rz_form_field_select select {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.rz_form_field_select .vf__list input {
+    width: auto;
+    display: inline;
+}
+
+.rz_form_field_select .vf__list label {
+    display: block !important;
+}
+
+.rz_form_field_select .vf__list {
+    border: none;
+}
+
+.rz_form_field_select p.vf__error {
+    display: table-caption;
+    caption-side: top;
+    color: red;
+    font-size: small;
+}

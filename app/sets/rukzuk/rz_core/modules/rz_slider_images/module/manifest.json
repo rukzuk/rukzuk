@@ -1,0 +1,12 @@
+{
+    "name": "{\"de\":\"Bilder-Slider\",\"en\":\"Image Slider\"}",
+    "description": "{\"de\":\"Slider-Modul mit Mehrfach-Auswahl von Bildern. Manuelle sowie automatische Slideshows sind möglich.\",\"en\":\"Slider module with multiple image selection and manual or automatic slideshow.\"}",
+    "version": "dev",
+    "icon": "slider-bilder.png",
+    "category": "{\"de\":\"Bildergalerie\",\"en\":\"Image gallery\"}",
+    "moduleType": "default",
+    "allowedChildModuleType": "extension",
+    "ghostContainerMode": "force_off",
+    "reRenderRequired": false,
+    "apiType": "APIv1"
+}

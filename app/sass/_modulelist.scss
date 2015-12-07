@@ -1,0 +1,196 @@
+@import 'colors';
+@import 'mixins';
+
+.x-grid3-dirty-cell {
+    background-image: none;
+}
+
+.CMSversion {
+    width: 70px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    @include gradient-vertical($grey-top, $grey-bottom);
+    @include shadow();
+}
+
+.CMSname {
+    font-size: 14px;
+}
+
+.CMSdescription {
+    color: $text-color-dark;
+}
+
+.x-grid3 {
+    .x-grid3-scroller {
+        overflow-x: hidden;
+    }
+
+    .x-grid-group-hd {
+        padding: 6px;
+        background-color: $bg-layer-light;
+
+        .x-grid-group-title {
+            font-style: italic;
+            padding: 0 0 0 17px;
+            background-image: url('../images/tool_sprites.png');
+            background-repeat: no-repeat;
+            background-position: -15px -77px;
+
+            .CMSnum {
+                color: $text-color-dark;
+            }
+        }
+    }
+
+    .x-grid-group-collapsed .x-grid-group-hd .x-grid-group-title {
+        background-position: -15px -122px;
+    }
+
+    .x-grid3-row td {
+        line-height: 80px;
+        vertical-align: middle;
+
+        .x-grid3-cell-inner {
+            line-height: 16px;
+
+            .CMSiconwrap {
+                width: 70px;
+                height: 60px;
+                @include gradient-vertical($black-top, $black-bottom);
+                @include shadow();
+
+                img {
+                    margin: 22px 27px;
+                }
+            }
+
+            // a little padding to the first visible row to distinguish rows and groups more clearly
+            .CMStemplatesnippetwindow &.x-grid3-col-name,
+            .CMSmodulegrid &.x-grid3-col-icon {
+                padding-left: 20px;
+            }
+        }
+    }
+
+    #modulesPanel & .x-grid3-row .x-grid3-cell-inner {
+        padding: 20px 0;
+
+        &.x-grid3-col-icon {
+            padding-left: 20px;
+        }
+    }
+}
+
+.CMSmodulegrid .x-grid3 {
+    .x-grid3-hd-name {
+        line-height: 12px;
+        padding-left: 20px;
+
+        .x-grid3-hd-btn {
+            display: block;
+            opacity: 0.3;
+            height: 20px;
+            left: 5px;
+            top: -2px;
+
+        }
+
+    }
+
+    & .x-grid3-hd-over .x-grid3-hd-name .x-grid3-hd-btn,
+    & .x-grid3-hd-menu-open .x-grid3-hd-name .x-grid3-hd-btn {
+        opacity: 1;
+    }
+
+    .x-grid3-cell-inner {
+        white-space: normal;
+        text-wrap: normal;
+    }
+}
+
+#modulesPanel .x-form-radio-group:not(.x-form-invalid),
+#modulesPanel .x-form-radio-group {
+
+    .x-form-element .x-form-check-wrap {
+        padding: 30px 30px 10px 30px;
+
+        label {
+            cursor: pointer;
+            display: block;
+            height: 80px;
+            width: 245px;
+            line-height: 80px;
+            padding: 0 0 0 40px;
+            margin: 0;
+            text-align: center;
+            @include shadow();
+
+            @include gradient-vertical($bg-button-top, $bg-button-bottom);
+
+            &:hover {
+                @include gradient-vertical($bg-button-hover-top, $bg-button-hover-bottom);
+            }
+        }
+
+    }
+
+    .all.x-form-element .x-form-check-wrap {
+        label {
+            padding-left: 0;
+            width: 285px;
+        }
+    }
+
+    .default.x-form-element .x-form-check-wrap {
+        label {
+            @include gradient-vertical-image('../images/modules-filter-sprite.png', $bg-button-top, $bg-button-bottom, 0, 0, true);
+            &:hover {
+                @include gradient-vertical-image('../images/modules-filter-sprite.png', $bg-button-hover-top, $bg-button-hover-bottom, 0, 0, true);
+            }
+        }
+    }
+
+    .extensions.x-form-element .x-form-check-wrap {
+        label {
+            @include gradient-vertical-image('../images/modules-filter-sprite.png', $bg-button-top, $bg-button-bottom, 0, -80, true);
+            &:hover {
+                @include gradient-vertical-image('../images/modules-filter-sprite.png', $bg-button-hover-top, $bg-button-hover-bottom, 0, -80, true);
+            }
+        }
+    }
+
+    .root.x-form-element .x-form-check-wrap {
+        label {
+            @include gradient-vertical-image('../images/modules-filter-sprite.png', $bg-button-top, $bg-button-bottom, 0, -160, true);
+            &:hover {
+                @include gradient-vertical-image('../images/modules-filter-sprite.png', $bg-button-hover-top, $bg-button-hover-bottom, 0, -160, true);
+            }
+        }
+    }
+
+    .x-btn.store {
+        margin: 90px 30px;
+        border: 1px solid $grey-top;
+        background: transparent none;
+        background-image: url('../images/modules-filter-sprite.png');
+        background-position: -3px -243px;
+        background-repeat: no-repeat;
+        @include shadow();
+
+        button {
+            padding-left: 40px;
+        }
+
+        &.x-btn-over {
+            border-color: $bg-button-hover-top;
+            @include gradient-vertical-image('../images/modules-filter-sprite.png', $bg-button-hover-top, $bg-button-hover-bottom, -3, -243, true);
+
+            .ext-gecko & {
+                border-width: 2px; // fix white outline in FF
+            }
+        }
+    }
+}
+

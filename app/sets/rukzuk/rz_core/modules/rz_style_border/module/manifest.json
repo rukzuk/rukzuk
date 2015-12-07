@@ -1,0 +1,12 @@
+{
+    "name": "{\"de\":\"Rahmen\",\"en\":\"Border\"}",
+    "description": "{\"de\":\"Konturen mit verschiedenen Stärken, Farben und Stilen.\",\"en\":\"Outlines with different widths, colors and styles.\"}",
+    "version": "dev",
+    "icon": "style-border.png",
+    "category": "10",
+    "moduleType": "extension",
+    "allowedChildModuleType": "",
+    "reRenderRequired": false,
+    "apiType": "APIv1",
+    "ghostContainerMode": "force_off"
+}

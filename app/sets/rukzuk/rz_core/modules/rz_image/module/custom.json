@@ -1,0 +1,46 @@
+{
+    "assets":{
+        "js":[
+            {
+                "file":"notlive\/jquery.panzoom.js",
+                "mode":"edit",
+                "type":"module"
+            },
+            {
+                "file":"notlive\/jquery.mousewheel.js",
+                "mode":"edit",
+                "type":"module"
+            },
+            {
+                "file":"notlive\/editMode.js",
+                "mode":"edit",
+                "type":"module"
+            }
+        ],
+        "css":[
+            {
+                "file":"main.css"
+            },
+            {
+                "file":"notlive\/editMode.css",
+                "mode":"edit"
+            }
+        ]
+    },
+    "i18n":{
+        "button.cropIconTitle":{
+            "de":"Bildausschnitt w\u00e4hlen",
+            "en":"Select image section"
+        },
+        "selector.imageElement":{
+            "de":"Bild-Element",
+            "en":"Image element"
+        }
+    },
+    "selectors":[
+        {
+            "title":"__i18n_selector.imageElement",
+            "selector":"img.imageModuleImg"
+        }
+    ]
+}

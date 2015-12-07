@@ -1,0 +1,31 @@
+{
+    "success": false,
+    "error": [{
+        "code": "TODO-conflicterrorcode-SBMCS-852"
+    }],
+    "data": {
+        "importId": "IMPORT-123",
+        "conflict": {
+            "type": "template",
+            "templates": [{
+                "id": "TPL-123",
+                "oldName": "Startseite",
+                "newName": "Endseite"
+            }],
+            "modules": [{
+                "id": "MODULE-123",
+                "oldName": "Basismodul",
+                "newName": "!!!!1111Basismodul neu"
+            }, {
+                "id": "MODULE-456",
+                "oldName": "Eierlegendes Wollmilchsaumodul",
+                "newName": "Kannnixmodul"
+            }],
+            "media": [{
+                "id": "MDB-123",
+                "oldName": "Bundespräsi.jpg",
+                "newName": "Ex-Bundespräsi.jpg"
+            }]
+        }
+    }
+}

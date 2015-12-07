@@ -1,0 +1,156 @@
+.CMSrichtexteditortoolbar {
+    button {
+        width: 18px;
+        background-image: url("../images/tiny-editor-icons.png");
+    }
+
+    button.undo {
+        background-position: 6px 3px !important;
+    }
+
+    button.redo {
+        background-position: 6px -47px !important;
+    }
+
+    button.charmap {
+        background-position: 6px -97px !important;
+    }
+
+    button.bold {
+        background-position: 6px -147px !important
+    }
+
+    button.italic {
+        background-position: 6px -197px !important;
+    }
+
+    button.underline {
+        background-position: 6px -248px !important;
+    }
+
+    button.strikethrough {
+        background-position: 6px -297px !important;
+    }
+
+    button.subscript {
+        background-position: 4px -347px !important;
+    }
+
+    button.superscript {
+        background-position: 4px -400px !important;
+    }
+
+    button.bullist {
+        background-position: 4px -448px !important;
+    }
+
+    button.numlist {
+        background-position: 4px -498px !important;
+    }
+
+    button.link {
+        background-position: 4px -548px !important;
+    }
+
+    button.unlink {
+        background-position: 4px -598px !important;
+    }
+
+    button.tableMenu {
+        background-position: 3px -648px !important;
+    }
+}
+
+.x-menu.CMStablemenu {
+    .x-menu-item-icon {
+        width: 18px;
+        background-image: url("../images/tiny-editor-icons.png");
+    }
+
+    .x-menu-item-icon.tableInsert {
+        background-position: 2px -648px !important;
+    }
+
+    .x-menu-item-icon.tableDelete {
+        background-position: 2px -698px !important;
+    }
+
+    .x-menu-item-icon.tableInsertColAfter {
+        background-position: 2px -748px !important;
+    }
+
+    .x-menu-item-icon.tableInsertColBefore {
+        background-position: 2px -798px !important;
+    }
+
+    .x-menu-item-icon.tableDeleteCol {
+        background-position: 2px -848px !important;
+    }
+
+    .x-menu-item-icon.tableInsertRowAfter {
+        background-position: 2px -899px !important;
+    }
+
+    .x-menu-item-icon.tableInsertRowBefore {
+        background-position: 2px -949px !important;
+    }
+
+    .x-menu-item-icon.tableDeleteRow {
+        background-position: 2px -998px !important;
+    }
+}
+
+.CMSrtetoolbarwindow {
+    &.x-window {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .x-window-tl {
+        display: none;
+    }
+
+    .x-window-bwrap {
+        border: none;
+    }
+}
+
+.CMSinsertcharacterlist {
+    width: 450px;
+
+    .CMScharwrap {
+        $size: 30px;
+        display: block;
+        float: left;
+        width: $size;
+        height: $size;
+        line-height: $size;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 18px;;
+        cursor: pointer;
+    }
+}
+
+.CMSinserttableview {
+    background-color: $black-top;
+
+    .CMSinserttablegrid {
+        width: 200px;
+        height: 200px;
+
+        .cell {
+            cursor: pointer;
+            display: block;
+            margin: 1px;
+            width: 18px;
+            height: 18px;
+            float: left;
+
+        }
+    }
+
+    .CMSinserttableinfo {
+        padding: 6px;
+        text-align: center;
+    }
+}

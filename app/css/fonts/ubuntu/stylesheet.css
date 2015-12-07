@@ -1,0 +1,65 @@
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('Ubuntu-R-webfont.eot');
+    src: url('Ubuntu-R-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Ubuntu-R-webfont.woff') format('woff'),
+         url('Ubuntu-R-webfont.ttf') format('truetype'),
+         url('Ubuntu-R-webfont.svg#UbuntuRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('Ubuntu-RI-webfont.eot');
+    src: url('Ubuntu-RI-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Ubuntu-RI-webfont.woff') format('woff'),
+         url('Ubuntu-RI-webfont.ttf') format('truetype'),
+         url('Ubuntu-RI-webfont.svg#UbuntuItalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('Ubuntu-B-webfont.eot');
+    src: url('Ubuntu-B-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Ubuntu-B-webfont.woff') format('woff'),
+         url('Ubuntu-B-webfont.ttf') format('truetype'),
+         url('Ubuntu-B-webfont.svg#UbuntuBold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('Ubuntu-BI-webfont.eot');
+    src: url('Ubuntu-BI-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Ubuntu-BI-webfont.woff') format('woff'),
+         url('Ubuntu-BI-webfont.ttf') format('truetype'),
+         url('Ubuntu-BI-webfont.svg#UbuntuBoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('Ubuntu-L-webfont.eot');
+    src: url('Ubuntu-L-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Ubuntu-L-webfont.woff') format('woff'),
+         url('Ubuntu-L-webfont.ttf') format('truetype'),
+         url('Ubuntu-L-webfont.svg#UbuntuLight') format('svg');
+    font-weight: lighter;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'UbuntuCondensed';
+    src: url('Ubuntu-C-webfont.eot');
+    src: url('Ubuntu-C-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Ubuntu-C-webfont.woff') format('woff'),
+         url('Ubuntu-C-webfont.ttf') format('truetype'),
+         url('Ubuntu-C-webfont.svg#UbuntuCondensedRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

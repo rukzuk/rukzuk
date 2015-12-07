@@ -1,0 +1,36 @@
+{
+    "assets":{
+        "css":[
+            {
+                "file":"style.css"
+            }
+        ],
+        "js":[
+            {
+                "file":"notlive\/jquery_prevent_default.js",
+                "mode":"edit",
+                "type":"module"
+            }
+        ]
+    },
+    "i18n":{
+        "selector.label":{
+            "de":"Labels",
+            "en":"Labels"
+        },
+        "selector.submitButton":{
+            "de":"Sende-Button",
+            "en":"Submit button"
+        },
+        "error.moduleOnlyWorkingInForm":{
+            "de":"Dieses Modul muss sich innerhalb eines Formular-Moduls befinden.",
+            "en":"This module must be used inside a form module."
+        }
+    },
+    "selectors":[
+        {
+            "title":"__i18n_selector.submitButton",
+            "selector":"input[id^=fieldMUNIT][type=submit]"
+        }
+    ]
+}

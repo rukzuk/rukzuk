@@ -1,0 +1,149 @@
+@import "mixins";
+
+/*!!
+ * Ext JS Library 3.2.1
+ * Copyright(c) 2006-2010 Ext JS, Inc.
+ * licensing@extjs.com
+ * http://www.extjs.com/license
+ */
+.ext-el-mask {
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    zoom: 1;
+    opacity: .5;
+}
+
+.ext-el-mask-msg {
+    z-index: 20001;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.ext-el-mask-msg div {
+    cursor: wait;
+    padding: 3px;
+}
+
+.ext-shim {
+    position: absolute;
+    visibility: hidden;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+}
+
+.ext-ie .ext-shim {
+    filter: alpha(opacity=0);
+}
+
+/* class for hiding elements without using display:none */
+.x-hidden, .x-hide-offsets {
+    position: absolute !important;
+    left: -10000px;
+    top: -10000px;
+    visibility: hidden;
+}
+
+.x-hide-display {
+    display: none !important;
+}
+
+.x-hide-visibility {
+    visibility: hidden !important;
+}
+
+.x-masked {
+    overflow: hidden !important;
+}
+
+.x-masked-relative {
+    position: relative !important;
+}
+
+.x-masked select, .x-masked object, .x-masked embed {
+    visibility: hidden;
+}
+
+.x-layer {
+    visibility: hidden;
+}
+
+.x-unselectable, .x-unselectable * {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: ignore;
+}
+
+.x-repaint {
+    zoom: 1;
+    background-color: transparent;
+    -moz-outline: none;
+    outline: none;
+}
+
+.x-item-disabled, input:disabled {
+    cursor: default;
+    opacity: 0.3;
+}
+
+.x-item-disabled * {
+    cursor: default !important;
+}
+
+.x-form-radio-group .x-item-disabled {
+    filter: none;
+}
+
+.x-splitbar-proxy {
+    position: absolute;
+    visibility: hidden;
+    z-index: 20001;
+    zoom: 1;
+    line-height: 1px;
+    font-size: 1px;
+    overflow: hidden;
+}
+
+.x-splitbar-h, .x-splitbar-proxy-h {
+    cursor: e-resize;
+    cursor: col-resize;
+}
+
+.x-splitbar-v, .x-splitbar-proxy-v {
+    cursor: s-resize;
+    cursor: row-resize;
+}
+
+/* used to detect when the user changes font size */
+/*.x-text-resize {
+    position: absolute;
+    left: -1000px;
+    top: -1000px;
+    visibility: hidden;
+    zoom: 1;
+}*/
+
+/* split bar ghost */
+.x-drag-overlay {
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: url(../images/default/s.gif);
+    z-index: 20000;
+}
+
+.x-clear {
+    clear: both;
+    height: 0;
+    overflow: hidden;
+    line-height: 0;
+    font-size: 0;
+}

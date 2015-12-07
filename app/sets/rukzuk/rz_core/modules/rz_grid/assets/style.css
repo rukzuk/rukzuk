@@ -1,0 +1,21 @@
+.rz_grid > .gridElements {
+    width: 100%;
+    display: inline-block;
+    position: relative;
+}
+
+.rz_grid > .gridElements > div {
+    display: inline-block;
+    position: relative;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+
+/* needed for vertical alignment when grid is higher than grid elements */
+.rz_grid > .fillHeight {
+    display: inline-block;
+    height: 100%;
+    width: 0;
+}

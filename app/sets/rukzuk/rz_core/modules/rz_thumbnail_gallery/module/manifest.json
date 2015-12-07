@@ -1,0 +1,12 @@
+{
+    "name": "{\"de\":\"Bildergalerie\",\"en\":\"Image Gallery\"}",
+    "description": "{\"de\":\"Mehrere Bilder als Miniatur anzeigen. In den Einstellungen werden Bildauswahl, Spaltenanzahl- und -abstand vorgenommen. In Kombination mit dem Lightbox-Modul wird beim Klick das jeweilige Miniaturbild groß anzeigt. \",\"en\":\"Show multiple pictures in a thumbnail gallery. The pictures, number of columns and size of the gap in between can be set in the properties. In combination with the Lightbox module, images will enlarge on click.\"}",
+    "version": "dev",
+    "icon": "layout.png",
+    "category": "{\"de\":\"Bildergalerie\",\"en\":\"Image gallery\"}",
+    "moduleType": "default",
+    "allowedChildModuleType": "extension",
+    "ghostContainerMode": "force_off",
+    "reRenderRequired": false,
+    "apiType": "APIv1"
+}

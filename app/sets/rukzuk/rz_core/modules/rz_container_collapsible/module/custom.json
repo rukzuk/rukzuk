@@ -1,0 +1,60 @@
+{
+    "assets":{
+        "css":[
+            {
+                "file":"style.css"
+            }
+        ],
+        "js":[
+            {
+                "file":"notlive\/editMode.js",
+                "type":"module",
+                "mode":"edit"
+            },
+            {
+                "file":"notlive\/css.js",
+                "type":"module",
+                "mode":"edit"
+            },
+            {
+                "file":"collapsibleInit.js",
+                "type":"module",
+                "mode":"live"
+            }
+        ]
+    },
+    "i18n":{
+        "selector.button.all":{
+            "de":"Button",
+            "en":"Button"
+        },
+        "selector.button.expanded":{
+            "de":"Button eingeklappt",
+            "en":"Button expanded"
+        },
+        "selector.button.collapsed":{
+            "de":"Button ausgeklappt",
+            "en":"Button collapsed"
+        },
+        "button.missingInputHint":{
+            "de":"Bitte gew\u00fcnschte Bilder ausw\u00e4hlen.",
+            "en":"Please select images."
+        }
+    },
+    "selectors":[
+        {
+            "title":"__i18n_selector.button.all",
+            "selector":".collapsibleHandle span",
+            "items":[
+                {
+                    "title":"__i18n_selector.button.expanded",
+                    "selector":".collapsibleHandle div.expand span"
+                },
+                {
+                    "title":"__i18n_selector.button.collapsed",
+                    "selector":".collapsibleHandle div.collapse span"
+                }
+            ]
+        }
+    ]
+}

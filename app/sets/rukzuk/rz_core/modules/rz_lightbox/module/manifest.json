@@ -1,0 +1,12 @@
+{
+    "name": "{\"de\":\"Lightbox\",\"en\":\"Lightbox\"}",
+    "description": "{\"de\":\"Ermöglicht die Großansicht von Bildern. Alle Bilder in untergeordneten Modulen werden beim Klick bildschirmfüllend angezeigt.\",\"en\":\"Enables the enlarged view of images. The lightbox opens after clicking on images of the submodules.\"}",
+    "version": "dev",
+    "icon": "lightbox.png",
+    "category": "{\"de\":\"Bildergalerie\",\"en\":\"Image gallery\"}",
+    "moduleType": "default",
+    "allowedChildModuleType": "*",
+    "ghostContainerMode": "force_off",
+    "reRenderRequired": false,
+    "apiType": "APIv1"
+}

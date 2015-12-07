@@ -1,0 +1,12 @@
+{
+    "name": "{\"de\":\"Seiteneigenschaft\",\"en\":\"Page Property\"}",
+    "description": "{\"de\":\"Zeigt eine Seiteneigenschaft wie Titel, Beschreibung, Datum oder Bild der aktuellen Seite an. In Kombination mit der Seitenliste können auch News-Bereiche und Blogs realisiert werden.\",\"en\":\"Displays one property such as title, description, date or image of the current page. In combination with the Page List module, blogs and news areas can be realized.\"}",
+    "version": "dev",
+    "icon": "page.png",
+    "category": "{\"de\":\"Teaser, Blog, Veranstaltungen\",\"en\":\"Teaser, Blog, Events\"}",
+    "moduleType": "default",
+    "allowedChildModuleType": "extension",
+    "ghostContainerMode": "force_off",
+    "reRenderRequired": false,
+    "apiType": "APIv1"
+}

@@ -1,0 +1,12 @@
+{
+    "name": "{\"de\":\"Schriftformat\",\"en\":\"Font Style\"}",
+    "description": "{\"de\":\"Schriftart, -farbe, -größe, -auszeichnung, sowie Textausrichtung, -transformation, Zeilenhöhe und Zeichenabstand bestimmen.\",\"en\":\"Define fonts and their style, color, size, letter spacing, line height or text transformation and alignment.\"}",
+    "version": "dev",
+    "icon": "style.png",
+    "category": "10",
+    "moduleType": "extension",
+    "allowedChildModuleType": "",
+    "reRenderRequired": false,
+    "apiType": "APIv1",
+    "ghostContainerMode": "force_off"
+}

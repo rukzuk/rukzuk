@@ -1,0 +1,12 @@
+{
+    "action_log": [
+        {
+            "timestamp": "1402053647",
+            "websiteid": "unknown-websiteid",
+            "id": "unknown-id",
+            "name": "unknown-name",
+            "userlogin": "max@example.com",
+            "action": "SPACE_INIT_ACTION"
+        }
+    ]
+}

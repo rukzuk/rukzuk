@@ -1,0 +1,23 @@
+<?php
+if (!empty($this->useClientTemplate) && file_exists($this->useClientTemplate)) {
+  // init variables for client template
+  $base_path = '/';
+  $title = $this->translate('view.shortener.ticket.header.title');
+  $error = $this->errorMessage;
+  if (empty($error)) {
+    $error = $this->translate('view.shortener.ticket.unknown_error');
+  }
+  
+  // include client template
+  return include($this->useClientTemplate);
+}
+?>
+<html>
+  <head>
+    <title><?php echo $this->translate('view.shortener.header.title'); ?></title>
+  </head>
+  <body>
+    <h1><?php echo $this->translate('view.shortener.ticket.headline'); ?></h1>
+    <p style="color:red;"><?php echo $this->errorMessage; ?></p>
+  </body>
+</html>

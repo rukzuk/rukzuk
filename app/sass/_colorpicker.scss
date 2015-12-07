@@ -1,0 +1,22 @@
+@import "colors";
+
+.ux-colorpicker-wrap {
+    background: transparent url("data:image/gif;base64,R0lGODlhCAAIAPABAODg4P///yH5BAAKAAAALAAAAAAIAAgAAAINjAMJh8q6DoTPSWvoKQA7") repeat scroll left top;
+}
+
+.ext-ie8 .ux-colorpicker-wrap {
+    height: 22px !important;
+}
+
+.x-form-field.ux-colorpicker.x-form-focus {
+    padding: 0 3px;
+}
+
+.colorpickerwindow .x-box-item {
+    border: 1px inset $bg-main;
+    background-color: white;
+}
+
+.colorpickerwindow .x-window-bl {
+    height: 6px;
+}

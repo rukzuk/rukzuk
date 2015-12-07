@@ -1,0 +1,36 @@
+{
+  "children":{
+    "export.json":{
+      "type":"file"
+    },
+    "templatesnippets":{
+      "children":{
+        "TPLS-template-snip-pet0-test-000000000021-TPLS":{
+          "children":{
+            "templateSnippet.json":{
+              "type":"file"
+            }
+          },
+          "type":"dir"
+        },
+        "TPLS-template-snip-pet0-test-000000000022-TPLS":{
+          "children":{
+            "templateSnippet.json":{
+              "type":"file"
+            }
+          },
+          "type":"dir"
+        },
+        "TPLS-template-snip-pet0-test-000000000023-TPLS":{
+          "children":{
+            "templateSnippet.json":{
+              "type":"file"
+            }
+          },
+          "type":"dir"
+        }
+      },
+      "type":"dir"
+    }
+  }
+}

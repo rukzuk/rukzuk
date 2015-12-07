@@ -1,0 +1,104 @@
+@import "mixins";
+@import "colors";
+
+/*!!
+ * Ext JS Library 3.2.1
+ * Copyright(c) 2006-2010 Ext JS, Inc.
+ * licensing@extjs.com
+ * http://www.extjs.com/license
+ */
+.x-dd-drag-proxy {
+    position: absolute;
+    left: 0;
+    top: 0;
+    visibility: hidden;
+    z-index: 15000;
+    background: url('../images/background.png') repeat repeat;
+    @include shadow();
+}
+
+.x-dd-drag-ghost {
+    opacity: 1;
+    background: transparent;
+    padding: 8px 8px 8px 25px;
+    white-space: nowrap;
+    min-height: 14px;
+
+    .x-tree-node-el {
+        .x-tree-node-icon {
+            display: none;
+        }
+        background: transparent !important;
+    }
+}
+
+.x-dd-drag-repair .x-dd-drag-ghost, .x-dd-drag-repair {
+    opacity: .0;
+    border: 0 none;
+    padding: 0;
+    background: transparent;
+}
+
+.x-dd-drag-repair .x-dd-drop-icon {
+    visibility: hidden;
+}
+
+.x-dd-drop-icon {
+    position: absolute;
+    top: 8px;
+    left: 5px;
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: transparent;
+    z-index: 1;
+    background-image: url('../images/tree-sprite.png') !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.x-view-selector {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    border: 1px dotted;
+    opacity: .5;
+    zoom: 1;
+}
+
+.x-dd-drop-ok, .x-tree-drop-ok-append,
+.x-tree-drop-ok-between, .x-tree-drop-ok-above,
+.x-tree-drop-ok-below {
+    .x-dd-drag-ghost {
+        background-color: $dd-ok-bg;
+    }
+}
+
+.x-dd-drop-nodrop .x-dd-drag-ghost {
+    background-color: $dd-fail-bg;
+}
+
+.x-dd-drop-ok .x-dd-drop-icon {
+    background-position: 0 -250px;
+}
+
+.x-tree-drop-ok-append .x-dd-drop-icon {
+    background-position: 0 0px;
+}
+
+.x-dd-drop-nodrop .x-dd-drop-icon {
+    background-position: 0 -50px;
+}
+
+.x-tree-drop-ok-between .x-dd-drop-icon {
+    background-position: 0 -100px;
+}
+
+.x-tree-drop-ok-above .x-dd-drop-icon {
+    background-position: 0 -150px;
+}
+
+.x-tree-drop-ok-below .x-dd-drop-icon {
+    background-position: 0 -200px;
+}

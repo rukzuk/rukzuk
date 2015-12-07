@@ -1,0 +1,65 @@
+[
+    {
+        "id": "page_unit_001",
+        "templateUnitId": "unit_001",
+        "moduleId": "rz_testing_001",
+        "formValues": {
+            "foo": "bar_rz_testing_001"
+        },
+        "children": [
+            {
+                "id": "page_unit_002",
+                "templateUnitId": "unit_002",
+                "moduleId": "rz_testing_001",
+                "formValues": {
+                    "foo": "bar_rz_testing_001"
+                }
+            },
+            {
+                "id": "page_unit_003",
+                "templateUnitId": "unit_003",
+                "moduleId": "rz_testing_001",
+                "formValues": {
+                    "foo": "bar_rz_testing_001",
+                    "my_key": "my_unit_003_value",
+                    "page_unit_003": "value_from_page_unit_003"
+                },
+                "children": [],
+                "ghostContainer": true,
+                "ghostChildren": [
+                    {
+                        "id": "page_unit_004",
+                        "templateUnitId": "unit_004",
+                        "moduleId": "rz_testing_001",
+                        "formValues": {
+                            "foo": "bar"
+                        },
+                        "children": [
+                            {
+                                "id": "page_unit_005",
+                                "templateUnitId": "unit_005",
+                                "moduleId": "rz_testing_002",
+                                "formValues": {
+                                    "key_from_unit_005": "value_from_unit_005",
+                                    "foo": "bar_rz_testing_002",
+                                    "this_is_a_array": [
+                                        "foo",
+                                        "bar"
+                                    ],
+                                    "this_is_a_object": {"foo": "bar"},
+                                    "this_is_null": null,
+                                    "this_is_empty_string": "",
+                                    "this_is_empty_array": [],
+                                    "this_is_empty_object": [],
+                                    "this_is_int_0": 0,
+                                    "this_is_false": false
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,37 @@
+@mixin gradient-vertical($top, $bottom) {
+    background: $top;
+    background: linear-gradient(to top, $top 0%, $bottom 100%);
+}
+
+@mixin gradient-vertical-image($src, $colortop, $colorbottom, $imageleft: 0, $imagetop: 0, $no-repeat: false) {
+    background: $colortop url($src) $imageleft + px $imagetop + px;
+    background: url($src) $imageleft + px $imagetop + px, linear-gradient(to top, $colortop 0%, $colorbottom 100%) 0 0;
+
+    @if $no-repeat {
+        background-repeat: no-repeat;
+    }
+}
+
+@mixin border-radius($topleft, $topright: 0, $bottomright: 0, $bottomleft: 0) {
+    border-radius: $topleft $topright $bottomright $bottomleft;
+}
+
+@mixin transition($property, $duration, $timing-function: ease, $delay: 0s) {
+    transition-property: $property;
+    transition-duration: $duration;
+    transition-timing-function: $timing-function;
+    transition-delay: $delay;
+}
+
+@mixin transform($value) {
+    transform: $value;
+}
+
+@mixin shadow($opacity: 0.2) {
+    box-shadow: 0 0 10px rgba(0, 0, 0, $opacity);
+}
+
+@mixin box-sizing {
+    -moz-box-sizing: border-box; // ff < 29
+    box-sizing: border-box;
+}

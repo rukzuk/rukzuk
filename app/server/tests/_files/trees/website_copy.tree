@@ -1,0 +1,31 @@
+{
+  "children":{
+    "backbone.js":{
+      "type":"file"
+    },
+    "footer.jpg":{
+      "type":"file"
+    },
+    "grumble.js":{
+      "type":"file"
+    },
+    "header_0.gif":{
+      "type":"file"
+    },
+    "header_0.png":{
+      "type":"file"
+    },
+    "pdf.js":{
+      "type":"file"
+    },
+    "report_2009.pdf":{
+      "type":"file"
+    },
+    "report_2010.pdf":{
+      "type":"file"
+    },
+    "report_2011.pdf":{
+      "type":"file"
+    }
+  }
+}

@@ -1,0 +1,48 @@
+@import 'colors';
+@import 'mixins';
+
+.CMSprogress .x-panel-body {
+    background-color: transparent;
+}
+
+.CMSprogress span.spinner,
+.CMSimportwindow span.spinner,
+.CMSdownloadprogress a.downloadlink {
+    line-height: 4;
+    padding: 10px 0 10px 30px;
+}
+
+.CMSprogress span.spinner {
+    background: url("../images/default/grid/loading-grey.gif") no-repeat scroll 5px center transparent;
+}
+
+.CMSdownloadprogress a.downloadlink {
+    background: url("../images/icons/disk.png") no-repeat scroll 5px center transparent;
+}
+
+.x-progress-wrap {
+    overflow: hidden;
+    background-color: $bg-taskbar;
+
+    .x-progress-inner {
+        height: 40px;
+        background: repeat-x;
+        position: relative;
+
+        .x-progress-bar {
+            height: 40px;
+            float: left;
+            width: 0;
+        }
+
+        .x-progress-text {
+            color: #fff;
+            padding: 1px 5px;
+            line-height: 38px;
+            overflow: hidden;
+            position: absolute;
+            left: 0;
+            text-align: center;
+        }
+    }
+}

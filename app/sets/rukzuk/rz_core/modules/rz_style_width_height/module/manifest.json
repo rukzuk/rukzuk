@@ -1,0 +1,12 @@
+{
+    "name": "{\"de\":\"Breite und Höhe\",\"en\":\"Width and Height\"}",
+    "description": "{\"de\":\"Anpassen der Breite und Höhe in Pixeln oder Prozent.\",\"en\":\"Adjust the width and height in pixel or percentage.\"}",
+    "version": "dev",
+    "icon": "box-1.png",
+    "category": "40",
+    "moduleType": "extension",
+    "allowedChildModuleType": "",
+    "reRenderRequired": false,
+    "apiType": "APIv1",
+    "ghostContainerMode": "force_off"
+}

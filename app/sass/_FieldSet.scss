@@ -1,0 +1,11 @@
+.CMSfieldset.x-fieldset {
+    margin: 0;
+}
+
+.CMSfieldset-wrapper {
+    /* direct label */
+    > .x-form-item > label.x-form-item-label {
+        cursor: default;
+        font-size: 15px;
+    }
+}

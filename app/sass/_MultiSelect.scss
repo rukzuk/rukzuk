@@ -1,0 +1,71 @@
+@import "colors";
+
+.ux-mselect {
+    position: relative; /* for calculating scroll offsets */
+    zoom: 1;
+    overflow: auto;
+}
+
+.ux-mselect dl:first-child, .ux-mselect dl:last-child {
+    margin: 0;
+}
+
+.ux-mselect dl {
+    margin: 3px 0;
+    padding: 3px 0;
+}
+
+.ux-mselect .x-list-selected {
+    background: $bg-thumb-titlebar-selected;
+}
+
+.ux-mselect .x-list-over {
+    background: $bg-thumb-titlebar-selected-hover;
+}
+
+.ux-mselect-indent {
+
+}
+
+.ux-mselect-indent-l0 {
+
+}
+
+.ux-mselect-indent-l1 {
+    margin-left: 10px;
+}
+
+.ux-mselect-indent-l2 {
+    margin-left: 20px;
+}
+
+.ux-mselect-indent-l3 {
+    margin-left: 30px;
+}
+
+.ux-mselect-indent-l4 {
+    margin-left: 40px;
+}
+
+.ux-mselect-indent-l5 {
+    margin-left: 50px;
+}
+
+.ux-mselect-indent-l6 {
+    margin-left: 60px;
+}
+
+.ux-mselect-indent-l7 {
+    margin-left: 70px;
+}
+
+/*
+.x-view-drag-insert-above {
+  border-top:1px dotted #3366cc;
+}
+*/
+/*
+.x-view-drag-insert-below {
+  border-bottom:1px dotted #3366cc;
+}
+*/

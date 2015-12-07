@@ -1,0 +1,74 @@
+@import "colors";
+@import "mixins";
+
+/**
+ * styles for the trigger of the spinner field
+ */
+
+.CMSsplider .CMSsplider-spinner .x-form-spinner-trigger {
+    background-image: url("../images/spinner.png");
+    border: 1px solid black;
+}
+
+.CMSsplider-spinner .x-form-text {
+    border: 0;
+}
+
+.CMSsplider .CMSsplider-spinner .x-form-spinner-overup {
+    background-position: -17px 0;
+}
+
+.CMSsplider .CMSsplider-spinner .x-form-spinner-clickup {
+    background-position: -34px 0;
+}
+
+.CMSsplider .CMSsplider-spinner .x-form-spinner-overdown {
+    background-position: -51px 0;
+}
+
+.CMSsplider .CMSsplider-spinner .x-form-spinner-clickdown {
+    background-position: -68px 0;
+}
+
+/**
+ * styles for the trigger of the spinner field if the field is focused
+ */
+/*
+.CMSsplider .CMSsplider-spinner.x-trigger-wrap-focus .x-form-spinner-trigger{
+   background-position:-85px 0;
+}
+*/
+.CMSsplider .CMSsplider-spinner.x-trigger-wrap-focus .x-form-spinner-overup {
+    background-position: -102px 0;
+}
+
+.CMSsplider .CMSsplider-spinner.x-trigger-wrap-focus .x-form-spinner-clickup {
+    background-position: -119px 0;
+}
+
+.CMSsplider .CMSsplider-spinner.x-trigger-wrap-focus .x-form-spinner-overdown {
+    background-position: -136px 0;
+}
+
+.CMSsplider .CMSsplider-spinner.x-trigger-wrap-focus .x-form-spinner-clickdown {
+    background-position: -153px 0;
+}
+
+.CMSsplider .CMSsplider-spinner.x-trigger-wrap-focus .x-form-trigger {
+    border-bottom: 1px solid #7eadd9;
+}
+
+/**
+ * styles for separator within the trigger of the spinner field
+ */
+.CMSsplider .CMSsplider-spinner .x-form-spinner-splitter {
+    /*background: transparent url(../images/spinner-split.gif) no-repeat scroll 0 0;*/
+    cursor: n-resize;
+    font-size: 1px;
+    line-height: 1px;
+    position: absolute;
+}
+
+.CMSsplider .CMSsplider-spinner.x-trigger-wrap-focus .x-form-spinner-splitter {
+    background-position: -14px 0;
+}

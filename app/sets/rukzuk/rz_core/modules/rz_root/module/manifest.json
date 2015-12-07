@@ -1,0 +1,12 @@
+{
+    "name": "{\"de\":\"Basismodul\",\"en\":\"Root Module\"}",
+    "description": "{\"de\":\"Grundgerüst jedes Layout. Bietet grundlegende Einstellungen wie Sprache, Favicon und Seitentitel.\",\"en\":\"Base of every layout. Offers fundamental settings like language, favicon and page title.\"}",
+    "version": "dev",
+    "icon": "root.png",
+    "category": "{\"de\":\"Basismodule\",\"en\":\"Root Modules\"}",
+    "moduleType": "root",
+    "allowedChildModuleType": "*",
+    "ghostContainerMode": "force_off",
+    "reRenderRequired": true,
+    "apiType": "RootAPIv1"
+}

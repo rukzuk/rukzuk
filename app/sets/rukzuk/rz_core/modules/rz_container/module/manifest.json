@@ -1,0 +1,12 @@
+{
+    "name": "{\"de\":\"Container\",\"en\":\"Container\"}",
+    "description": "{\"de\":\"Grundlegendes Layoutmodul. Nützlich um Module zu gruppieren.\",\"en\":\"Basic layout module. Useful to group modules.\"}",
+    "version": "dev",
+    "icon": "shape_square.png",
+    "category": "{\"de\":\" Layout\",\"en\":\" Layout\"}",
+    "moduleType": "default",
+    "allowedChildModuleType": "*",
+    "reRenderRequired": false,
+    "ghostContainerMode": "force_off",
+    "apiType": "APIv1"
+}

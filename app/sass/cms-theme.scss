@@ -1,0 +1,376 @@
+//
+// CMS Theme File
+// all theme vars need to be in _theme.scss
+//
+@import "mixins";
+@import "theme";
+
+// _combo.scss
+.x-combo-list .x-combo-selected {
+  background-color: $primary;
+}
+
+.x-resizable-pinned .x-combo-list-inner {
+  border-bottom-color: $color-main-dark;
+}
+
+// -date-picker.scss
+.x-date-inner a:hover, .x-date-inner .x-date-disabled a:hover {
+  background-color: $primary;
+}
+
+td.x-date-mp-month a:hover, td.x-date-mp-year a:hover {
+  background-color: $primary;
+}
+
+td.x-date-mp-sel a {
+  background-color: $primary;
+}
+
+.x-date-inner .x-date-selected a {
+  border: 1px solid $color-main-dark;
+  background-color: $primary;
+}
+
+td.x-date-mp-sel a {
+  border: 1px solid $color-main-dark;
+}
+
+.x-date-middle, .x-date-left, .x-date-right {
+  @include gradient-vertical($bg-window-head-top, $bg-window-head-bottom);
+}
+
+/*style selected and today*/
+.x-date-inner .x-date-today a {
+  border: 1px solid $color-main-darker;
+  background-color: $color-main-dark;
+}
+
+// _dialog.scss
+.x-window-footer .x-toolbar-left-row .x-hide-offsets + .x-toolbar-cell .x-btn,
+.x-window-footer .x-toolbar-left-row .x-toolbar-cell:not(.x-hide-offsets):first-child .x-btn {
+  @include gradient-vertical($primary-top, $primary-bottom);
+
+  &.x-btn-over {
+    @include gradient-vertical($primary-dark-top, $primary-dark-bottom);
+  }
+}
+
+// _klickibunti.scss
+.x-tab-strip-top li.x-tab-strip-active {
+  background: $primary;
+}
+
+.CMSsplider .CMSsplider-spinner .x-form-spinner-splitter {
+  legend {
+    background-color: $primary;
+  }
+}
+
+// _klickigraui.scss
+
+.grid-row-insert-above {
+  .x-grid3-row-table {
+    border-top-color: $primary;
+  }
+}
+
+.grid-row-insert-below {
+  border-bottom: 1px solid $color-main !important;
+}
+
+.x-btn.x-btn-icon {
+  &.primary {
+    @include gradient-vertical($primary-top, $primary-bottom);
+
+    &.x-btn-over {
+      @include gradient-vertical($primary-dark-top, $primary-dark-bottom);
+    }
+  }
+}
+
+// _menu.scss
+
+.x-menu-list {
+  li.x-menu-list-item {
+    &.x-menu-item-active a {
+      background-color: $primary;
+    }
+  }
+}
+
+// _richtexteditor.scss
+.CMSinsertcharacterlist {
+  .CMScharwrap {
+    &.CMSover {
+      background-color: $primary;
+    }
+  }
+}
+
+.CMSinserttableview {
+  .CMSinserttablegrid {
+    .cell {
+      &.CMSselected {
+        background-color: $primary;
+      }
+    }
+  }
+}
+
+// _slider.scss
+
+.x-slider-horz .x-slider-thumb:after,
+.x-slider-vert .x-slider-thumb:after
+{
+  border-right: 1px solid $primary;
+  border-left: 1px solid $border-main;
+}
+
+.x-btn.primary,
+.x-slider-vert .x-slider-thumb,
+.CMSsplider .CMSsplider-spinner .x-form-spinner-trigger {
+  @include gradient-vertical($color-main, $color-main-dark);
+}
+
+.x-slider-vert .x-slider-thumb, .x-slider-horz .x-slider-thumb {
+  border-color: $border-main;
+}
+
+.x-slider-horz .x-slider-thumb, .CMSsplider .CMSsplider-spinner .x-form-spinner-trigger {
+  @include gradient-vertical($color-main, $color-main-dark);
+}
+
+.x-slider-horz .x-slider-thumb-over {
+  @include gradient-vertical(lighten($color-main, 5%), lighten($color-main-dark, 5%));
+}
+
+.x-slider-horz .x-slider-thumb-drag {
+  @include gradient-vertical(darken($color-main, 5%), darken($color-main-dark, 5%));
+}
+
+// _resizeable.scss
+.x-resizable-over .x-resizable-handle-south,
+.x-resizable-over .x-resizable-handle-north {
+  background-color: $color-main-dark;
+}
+
+.x-resizable-over .x-resizable-handle-east,
+.x-resizable-over .x-resizable-handle-west {
+  background-color: $color-main-dark;
+}
+
+// _tabs.scss
+.x-tab-strip-spacer {
+  background: $bg-tab-active-bottom;
+}
+
+// _buttons.scss
+.x-btn.primary {
+  @include gradient-vertical($color-main, $color-main-dark);
+}
+
+// _window.scss
+.x-panel-ghost .x-window-tl,
+.x-window:not(.x-window-notitle) .x-window-tl {
+  @include gradient-vertical($bg-window-head-top, $bg-window-head-bottom);
+}
+
+// _progress.scss
+.x-progress-wrap {
+  .x-progress-inner {
+    .x-progress-bar {
+      @include gradient-vertical($bg-window-head-top, $bg-window-head-bottom);
+    }
+  }
+}
+
+
+// _NewTemplateWindow
+.CMSnewtemplatewindow .pl-wrap {
+  &.selected, &.selected:hover {
+    .pl-titlebar {
+      @include gradient-vertical($bg-button-selected-top, $bg-button-selected-bottom);
+    }
+  }
+}
+// NewWebsiteWindow
+.CMSthumbview.CMSnewwindowthumbview .wrap {
+  .ctaBtn {
+    @include gradient-vertical($color-main, $color-main-dark);
+  }
+}
+
+// _OnOffFieldSet.scss
+
+.CMSonofffieldset.x-fieldset {
+  /* on */
+  > legend > input:checked + label {
+    &:after {
+      background-color: $ttbt-button-active-top;
+    }
+  }
+}
+
+// _OnOffToggleButton
+
+.CMSonofftogglebutton {
+  &.on .inner {
+    &:after {
+      background-color: $ttbt-button-active-top;
+    }
+  }
+}
+
+// _TabbedFieldSet
+
+.CMStabbedfieldset {
+  .x-tab-panel-header .x-tab-strip-top {
+    li {
+      &.x-tab-strip-active {
+        @include gradient-vertical($ttbt-button-active-top, $ttbt-button-active-bottom);
+        &.x-tab-strip-over, &.x-tab-strip-over:hover {
+          @include gradient-vertical($ttbt-button-active-top, $ttbt-button-active-bottom);
+        }
+      }
+    }
+  }
+}
+
+// _insertwindow.scss
+
+
+.CMSinsertunitwindow {
+  .x-form-radio-group:not(.x-form-invalid),
+  .x-form-radio-group {
+    .inside.x-form-element .x-form-check-wrap input:checked + label,
+    .inside.x-form-element .x-form-check-wrap input:checked + label:hover {
+      background-color: $bg-button-selected-top;
+    }
+
+    .below.x-form-element .x-form-check-wrap input:checked + label,
+    .below.x-form-element .x-form-check-wrap input:checked + label:hover {
+      background-color: $bg-button-selected-top;
+    }
+
+    .above.x-form-element .x-form-check-wrap input:checked + label,
+    .above.x-form-element .x-form-check-wrap input:checked + label:hover {
+      background-color: $bg-button-selected-top;
+    }
+  }
+}
+
+// _mediadb
+
+.x-datacarousel .x-view-selected .thumb-bg,
+.x-datacarousel .x-view-over .thumb-bg {
+  background: transparentize($focus, .8);
+}
+
+.mediaDBSelectionGrid.highlight {
+  background: transparentize($color-main, .8);
+}
+
+// _tre-overrides.scss
+.CMSpageunittreepanel,
+.CMStemplateunittreepanel {
+  .extensionUnit > div {
+    &.x-tree-selected {
+      background-color: $bg-tree-selected;
+    }
+
+  }
+}
+
+
+// _CMSSplider
+
+.CMSsplider .CMSsplider-spinner .x-form-spinner-trigger {
+  background-color: $color-main;
+  border-color: $color-main-darker;
+}
+
+// _cms.scss
+
+.CMSformgroupeditor .CMSfocus .x-column-layout-ct .x-column {
+  background: $focus;
+}
+
+// _landingpanel.scss
+
+.CMSsitepropertypanel .x-tab-strip-top li.x-tab-strip-active {
+  background-color: $focus;
+  border-bottom: 1px solid $focus;
+}
+
+// _klickibunti.scss
+
+::-moz-selection {
+  background: $focus;
+}
+
+::selection {
+  background: $focus;
+}
+
+.x-form-field-wrap.x-trigger-wrap-focus .x-form-trigger {
+  border-color: $focus;
+}
+
+.ext-el-mask-msg {
+  background-color: $color-main;
+}
+
+// _screenshots.scss
+
+.CMSthumbview .wrap {
+  &.selected .titlebar {
+    @include gradient-vertical($bg-button-selected-top, $bg-button-selected-bottom);
+  }
+}
+
+// _richtexteditor.scss
+
+
+.CMSinserttableview {
+  .CMSinserttablegrid {
+    .cell {
+      background-color: $bg-insert-table-cell;
+    }
+  }
+}
+
+// _klickigraui.scss
+
+.x-tab-panel-header .x-tab-strip-top {
+  li.x-tab-strip-active {
+    @include gradient-vertical($bg-tab-active-top, $bg-tab-active-bottom);
+  }
+}
+
+div.x-tree-selected, .x-tree-selected {
+  background-color: $bg-tree-selected !important;
+}
+
+.CMSformgroupeditor .CMSfocus {
+  outline: 1px dashed $focus;
+}
+
+.SBtaskbar {
+  #openUpgradeUrlButton {
+    @include gradient-vertical($color-special-light, $color-special);
+
+    &:hover {
+      @include gradient-vertical($color-special, $color-special-dark);
+    }
+  }
+}
+
+.x-btn,
+.x-btn.x-btn-icon {
+  &.x-btn-menu-active,
+  &.x-btn-pressed {
+    @include gradient-vertical($bg-button-selected-top, $bg-button-selected-bottom);
+  }
+}
+

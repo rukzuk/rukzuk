@@ -1,0 +1,17 @@
+{
+  "name": "modules-i18n-tools",
+  "version": "0.0.1",
+  "description": "Some tools to ease translation of rukzuk modules",
+  "main": "static-module-str-replace.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "rukzuk AG <info@rukzuk.com>",
+  "license": "UNKNOWN",
+  "dependencies": {
+    "JSONPath": "~0.9.1",
+    "commander": "~2.0.0",
+    "yandex-translate": "git://github.com/carlos22/yandex-translate.git",
+    "sync": "~0.2.2"
+  }
+}

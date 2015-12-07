@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: inherit;
+    color: inherit;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+ul,li {
+    margin:0;
+    padding:0;
+}
+html,body {
+    height: 100%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+body {
+    background-color: #fff;
+}
+
+img {
+    border: none;
+    display: block;
+}
+
+.responsiveImageWrapper {
+    position: relative;
+}
+
+.responsiveImageWrapper > img.imgSize {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* keep preview stretched - original should not
+       be stretched as it has the correct height set via padding */
+    height: 100%;
+    width: 100%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.responsiveImageWrapper > img.imgSize.lazyload,
+.responsiveImageWrapper > img.imgSize.lazyloading {
+    object-fit: cover;
+    overflow: hidden;
+}
+
+img.blankImgPlaceholder {
+    background: url(../images/imagePlaceholder.png) no-repeat center center #efefef;
+    border: 2px solid #ccc;
+}
+
+iframe {
+    border: none;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.isModule {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    /* position and z-index needed for styleIcon */
+    position: relative;
+    z-index: 0;
+    /* needed for position:fixed on iOS (http://remysharp.com/2012/05/24/issues-with-position-fixed-scrolling-on-ios/) */
+    width: 100%;
+}
+
+/* Webkit bugfix */
+.wkFixTableLayoutRun {
+    display: inline-table !important;
+}
+
+@font-face {
+    font-family: 'sharedicons';
+    src: url('../fonts/sharedicons.eot?91540294');
+    src: url('../fonts/sharedicons.eot?91540294#iefix') format('embedded-opentype'),
+    url('../fonts/sharedicons.woff?91540294') format('woff'),
+    url('../fonts/sharedicons.ttf?91540294') format('truetype'),
+    url('../fonts/sharedicons.svg?91540294#slicons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

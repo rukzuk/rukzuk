@@ -1,0 +1,510 @@
+/* Buttons */
+.x-panel-icon {
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-image: url("../images/button-icon-sprite.png");
+}
+
+.x-grid3-col img,
+.CMScolorschemedefinitionpanel .CMSclearbutton .x-btn-text,
+button {
+    background: transparent url("../images/button-sprite.png") no-repeat 500px 500px;
+
+    &.add, &.addFile {
+        background-position: -3px -3px;
+    }
+    &.clone {
+        background-position: -3px -43px;
+    }
+    &.properties, &.settings {
+        background-position: -4px -83px;
+    }
+    &.delete {
+        background-position: -3px -123px;
+    }
+    &.upload {
+        background-position: -3px -163px;
+    }
+    &.download {
+        background-position: -3px -203px;
+    }
+    &.edit, &.open {
+        background-position: -3px -243px;
+    }
+    &.copy {
+        background-position: -3px -283px;
+    }
+    &.paste {
+        background-position: -3px -323px;
+    }
+    &.up {
+        background-position: -3px -363px;
+    }
+    &.down {
+        background-position: -3px -403px;
+    }
+    &.refresh {
+        background-position: -3px -443px;
+    }
+    &.view {
+        background-position: -3px -483px;
+    }
+    &.restore {
+        background-position: -3px -523px;
+    }
+    &.cancel {
+        background-position: -3px -563px;
+    }
+    &.rename {
+        background-position: -3px -603px;
+    }
+    &.ok {
+        background-position: -3px -643px;
+    }
+    &.save {
+        background-position: -3px -683px;
+    }
+    &.export {
+        background-position: -3px -723px;
+    }
+    &.import {
+        background-position: -3px -762px;
+    }
+    &.publishConfig {
+        background-position: -3px -803px;
+    }
+    &.createTemplateSnippet {
+        background-position: -3px -843px;
+    }
+    &.cut {
+        background-position: -3px -883px;
+    }
+    &.publish {
+        background-position: -3px -923px;
+    }
+    //&.smartphonePortrait {background-position: -3px -963px;}
+    //&.smartphoneLandscape {background-position: -3px -1003px;}
+    //&.tabletPortrait {background-position: -3px -1043px;}
+    //&.tabletLandscape {background-position: -3px -1083px;}
+    //&.laptop {background-position: -3px -1123px;}
+    &.editResolutions {
+        background-position: -3px -1163px;
+    }
+    &.mediaDB {
+        background-position: -3px -1203px;
+    }
+    &.qrCode {
+        background-position: -3px -1243px;
+    }
+    &.maxWidth {
+        background-position: -3px -1285px;
+    }
+    &.visualHelpers {
+        background-position: -3px -1324px;
+    }
+    &.addExtension {
+        background-position: -3px -1364px;
+    }
+    &.email {
+        background-position: -3px -1404px;
+    }
+    &.share {
+        background-position: -3px -1483px;
+    }
+    &.expandSidebar {
+        background-position: -3px -1603px;
+    }
+    &.visualHelpersToolbar {
+        background-position: -3px -1843px;
+    }
+}
+
+.x-btn-pressed button {
+  &.expandSidebar {
+      background-position: -3px -1643px;
+  }
+  &.visualHelpersToolbar {
+      background-position: -3px -1883px;
+  }
+  &.visualHelpers {
+      background-position: -3px -1804px;
+  }
+}
+
+.x-grid3-col img {
+    background-position: 100px 100px;
+}
+
+.x-btn-noicon button {
+    background-image: none;
+}
+
+.x-menu-item-icon {
+    background: transparent url("../images/button-sprite.png") no-repeat 500px 500px;
+
+    &.add {
+        background-position: -10px -10px;
+    }
+    &.addExtension {
+        background-position: -10px -1370px;
+    }
+    &.clone {
+        background-position: -10px -50px;
+    }
+    &.copy {
+        background-position: -10px -290px;
+    }
+    &.createTemplateSnippet {
+        background-position: -10px -850px;
+    }
+    &.delete {
+        background-position: -10px -130px;
+    }
+    &.edit, &.open {
+        background-position: -10px -250px;
+    }
+    &.export {
+        background-position: -10px -730px;
+    }
+    &.import {
+        background-position: -10px -770px;
+    }
+    &.paste {
+        background-position: -10px -330px;
+    }
+    &.properties, &.settings {
+        background-position: -10px -90px;
+    }
+    &.reset {
+      background-position: -10px -531px;
+    }
+    &.rename {
+        background-position: -10px -610px;
+    }
+    &.publish {
+        background-position: -10px -930px;
+    }
+    &.qrCode {
+        background-position: -10px -1250px;
+    }
+    &.upload {
+        background-position: -10px -170px;
+    }
+    &.view {
+        background-position: -10px -490px;
+    }
+    &.share {
+        background-position: -10px -1489px;
+    }
+    &.add.addsubpage {
+        background-position: -10px -1770px;
+    }
+}
+
+.SBtaskbarbutton button,
+.CMSMainMenu .x-menu-item-icon {
+    background-image: url("../images/taskbar-sprite.png");
+
+    // main toolbar buttons
+    &.pages {
+        background-position: -3px -4px;
+    }
+    &.templates {
+        background-position: -3px -83px;
+    }
+    &.modules {
+        background-position: -3px -163px;
+    }
+    &.menu {
+        background-position: -3px -243px;
+    }
+
+    // menu items
+    &.help {
+        background-position: -4px -324px;
+    }
+    &.colors {
+        background-position: -4px -404px;
+    }
+    &.groups {
+        background-position: -4px -484px;
+    }
+    &.media {
+        background-position: -4px -566px;
+    }
+    &.publish {
+        background-position: -4px -644px;
+    }
+    &.switch {
+        background-position: -3px -724px;
+    }
+    &.close {
+        background-position: -44px -724px;
+    }
+    &.users {
+        background-position: -4px -804px;
+    }
+    &.store {
+        background-position: -4px -884px;
+    }
+    &.fullscreen {
+        background-position: -4px -964px;
+    }
+    &.password {
+        background-position: -4px -1044px;
+    }
+    &.logout {
+        background-position: -4px -1124px;
+    }
+    &.templatesnippets {
+        background-position: -4px -1204px;
+    }
+    &.share {
+        background-position: -3px -1283px;
+    }
+    &.shared {
+        background-position: -3px -1362px;
+    }
+    &.video {
+        background-position: -3px -1442px;
+    }
+    &.websiteSettings {
+        background-position: -3px -1522px;
+    }
+
+    &.fixedSize34 {
+        height: 34px;
+        width: 34px;
+    }
+
+}
+
+// special icons on hover
+.SBtaskbarbutton.x-btn-menu-active button,
+.SBtaskbarbutton.x-btn-pressed button {
+    &.menu {
+        background-position: -43px -243px;
+    }
+}
+
+// special icons for check menu items
+.CMSMainMenu .x-menu-item-checked .x-menu-item-icon {
+    background-image: url("../images/taskbar-sprite.png") !important;
+
+    &.fullscreen {
+        background-position: -42px -962px;
+    }
+}
+
+// special icons for paging bar
+.paging-toolbar button {
+    background-image: url("../images/tool_sprites.png");
+
+    &.x-tbar-page-first {
+        background-position: 0 -179px;
+    }
+    &.x-tbar-page-prev {
+        background-position: 0 -104px;
+    }
+    &.x-tbar-page-next {
+        background-position: 0 -119px;
+    }
+    &.x-tbar-page-last {
+        background-position: 0 -164px;
+    }
+}
+
+.CMScolorschemedefinitionpanel .CMSclearbutton .x-btn-text {
+    background-position: -12px -132px;
+}
+
+.x-form-invalid-tip .x-tip-body {
+    background: transparent url('../images/warnings-sprite') no-repeat 0 -348px;
+}
+
+.clone .x-menu-item-icon {
+    background-image: url("../images/icons/arrow_divide.png");
+}
+
+.delete .x-menu-item-icon {
+    background-image: url("../images/icons/bin_empty.png");
+}
+
+.x-grid-panel .x-btn-icon .x-tbar-loading {
+    background-position: 0 -224px;
+}
+
+/* tabs */
+.x-tab-with-icon .assets {
+    background-image: url("../images/icons/text_padding_top.png");
+}
+
+.x-tab-with-icon .attributes {
+    background-image: url("../images/icons/tag_blue.png");
+}
+
+.x-tab-with-icon .css {
+    background-image: url("../images/icons/palette.png");
+}
+
+.x-tab-with-icon .contentdef {
+    background-image: url("../images/icons/page_white_picture.png");
+}
+
+.x-tab-with-icon .contentedit {
+    /*background-image: url("../images/icons/page_white_paint.png");*/
+    background-image: url("../images/icons/layout_edit.png");
+}
+
+.x-tab-with-icon .renderer {
+    background-image: url("../images/icons/page_white_code.png");
+}
+
+.x-tab-with-icon .style {
+    background-image: url("../images/icons/style.png");
+}
+
+/* menus */
+.addformfieldmenu .x-menu-item-icon {
+    background-position: 0 0;
+
+    &.anchor {
+        background-image: url("../images/icons/house_link.png");
+    }
+    &.button {
+        background-image: url("../images/icons/button.png");
+    }
+    &.checkbox {
+        background-image: url("../images/icons/tick.png");
+    }
+    &.checkboxfieldset {
+        background-image: url("../images/icons/checkboxfieldset.png");
+    }
+    &.colorpicker {
+        background-image: url("../images/icons/color_square.png");
+    }
+    &.colorpickerOld {
+        background-image: url("../images/icons/color_wheel.png");
+    }
+    &.colorschemepicker {
+        background-image: url("../images/icons/color_swatch.png");
+    }
+    &.date {
+        background-image: url("../images/icons/calendar_view_day.png");
+    }
+    &.fieldset {
+        background-image: url("../images/icons/application.png");
+    }
+    &.hidden {
+        background-image: url("../images/icons/eye.png");
+    }
+    &.mediaDB {
+        background-image: url("../images/icons/images.png");
+    }
+    &.plaintext {
+        background-image: url("../images/icons/text_smallcaps.png");
+    }
+    &.radiofieldset {
+        background-image: url("../images/icons/radiofieldset.png");
+    }
+    &.richtext {
+        background-image: url("../images/icons/text_dropcaps.png");
+    }
+    &.splitcol {
+        background-image: url("../images/icons/text_columns.png");
+    }
+    &.textarea {
+        background-image: url("../images/icons/text_align_left.png");
+    }
+    &.textfield {
+        background-image: url("../images/icons/textfield.png");
+    }
+    &.unitchooser {
+        background-image: url("../images/icons/brick_go.png");
+    }
+    &.upload {
+        background-image: url("../images/icons/Silk_upload.png");
+    }
+
+    &.combo {
+        background-image: url("../images/gray/form/trigger.gif");
+        background-position: 0px -1px;
+    }
+
+    &.slider {
+        background-image: url("../images/gray/slider/slider-thumb.png");
+        background-position: 1px 0px;
+    }
+}
+
+/* panel icons */
+.x-panel-icon.password {
+    background-position: 0 2px;
+}
+
+/* grid action column */
+.x-grid3-col img.action {
+    cursor: pointer;
+    opacity: 0.15;
+
+    .x-grid3-row-over & {
+        opacity: 0.6;
+    }
+    &:hover {
+        opacity: 1;
+    }
+
+    &.edit {
+        background-position: -12px -252px;
+    }
+    &.download {
+        background-position: -12px -212px;
+    }
+    &.delete {
+        background-position: -12px -132px;
+    }
+    &.remove, &.removeuserfromgroup {
+        background-position: -12px -572px;
+    }
+    &.publish {
+        background-position: -12px -932px;
+    }
+    &.replace {
+        background-position: -12px -1453px;
+    }
+}
+
+.x-grid3-col img.publishBuild {
+    background-position: 0px -1500px;
+}
+
+.x-grid3-check-col {
+    background: transparent url("../images/checkbox-unchecked.png") no-repeat 0 0;
+}
+
+.x-grid3-check-col-on {
+    background: transparent url("../images/checkbox-checked.png") no-repeat 0 0;
+}
+
+/* Panel Header Icons */
+.x-panel-header .headerIcon {
+    background: transparent url("../images/panel-header-sprite.png") no-repeat 0 0;
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+
+    &.share {
+        background-position: 0 0;
+    }
+
+}
+
+/* small Buttons */
+.smallBtn button {
+    background: transparent url("../images/button-sprite.png") no-repeat 500px 500px;
+    &.edit {
+        background-position: -12px -252px;
+    }
+}
+
+/* tinymce see richtexteditor.scss */

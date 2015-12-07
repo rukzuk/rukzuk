@@ -1,0 +1,6 @@
+#!/usr/bin/env php
+<?php
+
+define('APPLICATION_ENV', 'testing');
+
+include('doctrine.php');

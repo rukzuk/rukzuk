@@ -1,0 +1,12 @@
+{
+    "name": "{\"de\":\"Runde Ecken\",\"en\":\"Border Radius\"}",
+    "description": "{\"de\":\"Radius in Pixeln oder Prozent bestimmbar.\",\"en\":\"Radius for rounded corners in pixel or percent.\"}",
+    "version": "dev",
+    "icon": "style-box-radius.png",
+    "category": "50",
+    "moduleType": "extension",
+    "allowedChildModuleType": "",
+    "reRenderRequired": false,
+    "apiType": "APIv1",
+    "ghostContainerMode": "force_off"
+}

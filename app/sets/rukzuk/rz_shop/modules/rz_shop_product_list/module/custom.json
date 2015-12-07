@@ -1,0 +1,29 @@
+{
+    "assets":{
+        "css":[
+            {
+                "file":"style.css"
+            },
+            {
+                "file":"notlive\/editMode.css",
+                "mode":"edit"
+            }
+        ]
+    },
+    "i18n":{
+        "selector.productTeaserItem":{
+            "de":"Produkt-Element",
+            "en":"Product item"
+        },
+        "error.pleaseInsertModules":{
+            "de":"Bitte f\u00fcge nun Produkteigenschaften-Module oder andere Module ein.",
+            "en":"Please insert Product Detail modules or other modules."
+        }
+    },
+    "selectors":[
+        {
+            "title":"__i18n_selector.productTeaserItem",
+            "selector":".productTeaserItem"
+        }
+    ]
+}

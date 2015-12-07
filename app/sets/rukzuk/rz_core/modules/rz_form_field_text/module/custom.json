@@ -1,0 +1,57 @@
+{
+    "assets":{
+        "css":[
+            {
+                "file":"style.css"
+            }
+        ]
+    },
+    "i18n":{
+        "selector.label":{
+            "de":"Labels",
+            "en":"Labels"
+        },
+        "selector.input":{
+            "de":"Eingabefelder einzeilig",
+            "en":"Text fields single-line"
+        },
+        "selector.textarea":{
+            "de":"Eingabefelder mehrzeilig",
+            "en":"Text fields multi-line"
+        },
+        "selector.error":{
+            "de":"Fehlermeldungen",
+            "en":"Error messages"
+        },
+        "selector.invalidInput":{
+            "de":"Eingabefelder bei Fehlermeldung",
+            "en":"Input elements when error occurs"
+        },
+        "error.moduleOnlyWorkingInForm":{
+            "de":"Dieses Modul muss sich innerhalb eines Formular-Moduls befinden.",
+            "en":"This module must be used inside a form module."
+        }
+    },
+    "selectors":[
+        {
+            "title":"__i18n_selector.label",
+            "selector":"&.rz_form_field_text label"
+        },
+        {
+            "title":"__i18n_selector.input",
+            "selector":"input[id^='fieldMUNIT'][type=text], input[id^='fieldMUNIT'][type=email], input[id^='fieldMUNIT'][type=number], input[id^='fieldMUNIT'][type=password]"
+        },
+        {
+            "title":"__i18n_selector.textarea",
+            "selector":"textarea[id^='fieldMUNIT']"
+        },
+        {
+            "title":"__i18n_selector.error",
+            "selector":"p.vf__error"
+        },
+        {
+            "title":"__i18n_selector.invalidInput",
+            "selector":"input[id^='fieldMUNIT'][type=text].vf__error, input[id^='fieldMUNIT'][type=email].vf__error, input[id^='fieldMUNIT'][type=number].vf__error, input[id^='fieldMUNIT'][type=password].vf__error, textarea[id^='fieldMUNIT'].vf__error"
+        }
+    ]
+}

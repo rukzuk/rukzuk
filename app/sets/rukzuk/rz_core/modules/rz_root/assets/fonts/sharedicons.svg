@@ -1,0 +1,35 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata></metadata>
+<defs>
+<font id="slicons" horiz-adv-x="364" >
+  <font-face 
+    font-family="slicons"
+    font-weight="500"
+    font-stretch="normal"
+    units-per-em="1000"
+    panose-1="2 0 6 3 0 0 0 0 0 0"
+    ascent="850"
+    descent="-150"
+    bbox="15 0 485 666"
+    underline-thickness="50"
+    underline-position="-100"
+    unicode-range="U+2715-E75E"
+  />
+<missing-glyph 
+d="M33 0v666h265v-666h-265zM66 33h199v600h-199v-600z" />
+    <glyph glyph-name=".notdef" 
+d="M33 0v666h265v-666h-265zM66 33h199v600h-199v-600z" />
+    <glyph glyph-name=".null" horiz-adv-x="0" 
+ />
+    <glyph glyph-name="nonmarkingreturn" horiz-adv-x="333" 
+ />
+    <glyph glyph-name="uni2715" unicode="&#x2715;" horiz-adv-x="500" 
+d="M467 194q18 -18 18 -43t-17.5 -42t-43.5 -17t-43 16l-132 152l-132 -152q-17 -16 -43 -16t-43 16q-16 17 -16 43t16 43l138 156l-138 158q-16 17 -16 43t16 43q17 16 43 16t43 -16l132 -152l132 152q17 16 43 16t43.5 -17t17.5 -42t-18 -43l-138 -158z" />
+    <glyph glyph-name="uniE75D" unicode="&#xe75d;" horiz-adv-x="371" 
+d="M257 626q13 16 39 16q25 0 41 -16q38 -36 0 -80l-186 -196l186 -194q38 -44 0 -80q-16 -16 -40 -16t-40 16l-226 236q-16 16 -16 38q0 24 16 40q225 235 226 236z" />
+    <glyph glyph-name="uniE75E" unicode="&#xe75e;" horiz-adv-x="370" 
+d="M113 626l226 -236q16 -16 16 -40q0 -22 -16 -38l-226 -236q-16 -16 -40 -16t-40 16q-36 36 0 80l186 194l-186 196q-36 44 0 80q16 16 41 16q26 0 39 -16z" />
+  </font>
+</defs></svg>

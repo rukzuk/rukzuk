@@ -1,0 +1,16 @@
+{
+  "name": {
+    "de": "Blog Artikel",
+    "en": "Blog post"
+  },
+  "description": {
+    "de": "rz_blog_post.description"
+  },
+  "form": [
+    {
+      "foo": "bar",
+      "emtpyStdClass": {},
+      "emptyArray": []
+    }
+  ]
+}

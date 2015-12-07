@@ -1,0 +1,12 @@
+{
+    "name": "{\"de\":\"Google Maps\",\"en\":\"Google Maps\"}",
+    "description": "{\"de\":\"Zeigt eine Adresse in Google Maps an.\", \"en\":\"Shows a specific address in Google Maps.\"}",
+    "version": "dev",
+    "icon": "google-maps.png",
+    "category": "{\"de\":\"Externe Inhalte\",\"en\":\"External Content\"}",
+    "moduleType": "default",
+    "allowedChildModuleType": "extension",
+    "ghostContainerMode": "force_off",
+    "reRenderRequired": false,
+    "apiType": "APIv1"
+}

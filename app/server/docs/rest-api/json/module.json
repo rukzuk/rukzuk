@@ -1,0 +1,248 @@
+{
+    "basePath":"/cms/service",
+    "swaggerVersion":"1.2",
+    "apiVersion":"0.1",
+    "resourcePath":"/module",
+    "apis":[
+        {
+            "path":"/modul/delete",
+            "operations":[
+                {
+                    "method":"POST",
+                    "summary":"Deletes a module",
+                    "nickname":"delete",
+                    "type":"Response/Base",
+                    "parameters":[
+                        {
+                            "paramType":"query",
+                            "name":"params",
+                            "type":"Request/Module/Delete",
+                            "required":true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "path":"/modul/getall",
+            "operations":[
+                {
+                    "method":"POST",
+                    "summary":"Returns modules by website ID",
+                    "nickname":"getAll",
+                    "type":"ResponseData/Module/GetAll",
+                    "parameters":[
+                        {
+                            "paramType":"body",
+                            "name":"params",
+                            "type":"Request/Module/GetAll",
+                            "required":true
+                        }
+                    ],
+                    "notes":"Returns all modules given by website ID."
+                }
+            ]
+        }
+    ],
+    "models":{
+        "ResponseData/Module/GetAll":{
+            "id":"ResponseData/Module/GetAll",
+            "properties":{
+                "data":{
+                    "$ref":"Response/Module/GetAll"
+                }
+            },
+            "required":[
+                "data"
+            ]
+        },
+        "Request/Module/GetAll":{
+            "id":"Request/Module/GetAll",
+            "description":"Request object for Modul GetAll",
+            "properties":{
+                "websiteId":{
+                    "description":"ID of website from which all modules will be fetched",
+                    "type":"string"
+                }
+            },
+            "required":[
+                "websiteId"
+            ]
+        },
+        "Response/Module/GetAll":{
+            "id":"Response/Module/GetAll",
+            "description":"Response Ergebnis fuer GetAll",
+            "properties":{
+                "modules":{
+                    "description":"list of modules",
+                    "type":"array",
+                    "items":{
+                        "$ref":"Module"
+                    }
+                }
+            },
+            "required":[
+                "modules"
+            ]
+        },
+        "Module":{
+            "id":"Module",
+            "description":"Einzelnes Modul fuer Response-Darstellung",
+            "properties":{
+                "id":{
+                    "description":"id of the module",
+                    "type":"string"
+                },
+                "websiteId":{
+                    "description":"ID of the associated website",
+                    "type":"string"
+                },
+                "name":{
+                    "description":"name of the module",
+                    "type":"string"
+                },
+                "description":{
+                    "description":"description of the module",
+                    "type":"string"
+                },
+                "version":{
+                    "description":"version of the module",
+                    "type":"string"
+                },
+                "icon":{
+                    "description":"the icon of the module",
+                    "type":"string"
+                },
+                "form":{
+                    "description":"gui of the module as json string",
+                    "type":"string"
+                },
+                "formValues":{
+                    "description":"form values of the module as json string",
+                    "type":"string"
+                },
+                "category":{
+                    "description":"category of the module",
+                    "type":"string"
+                },
+                "moduleType":{
+                    "description":"type of the module",
+                    "type":"string",
+                    "enum":[
+                        "default",
+                        "root",
+                        "extension"
+                    ]
+                },
+                "allowedChildModuleType":{
+                    "description":"only children of these types are allowed. '*' = all types allowed",
+                    "type":"string",
+                    "enum":[
+                        "*",
+                        "default",
+                        "root",
+                        "extension"
+                    ]
+                },
+                "reRenderRequired":{
+                    "description":"page/template should be new rendered if form values changed",
+                    "type":"boolean"
+                },
+                "sourceType":{
+                    "description":"source type of the module",
+                    "type":"string",
+                    "enum":[
+                        "local",
+                        "repo"
+                    ]
+                },
+                "overwritten":{
+                    "description":"module has overwritten a global module with same id",
+                    "type":"boolean"
+                }
+            },
+            "required":[
+                "all",
+                "allowedChildModuleType",
+                "category",
+                "description",
+                "form",
+                "formValues",
+                "icon",
+                "id",
+                "moduleType",
+                "name",
+                "overwritten",
+                "reRenderRequired",
+                "sourceType",
+                "version",
+                "websiteId"
+            ]
+        },
+        "Response/Base":{
+            "id":"Response/Base",
+            "description":"Response Default",
+            "properties":{
+                "success":{
+                    "type":"boolean"
+                },
+                "error":{
+                    "type":"array",
+                    "items":{
+                        "$ref":"Response/Error"
+                    }
+                }
+            },
+            "required":[
+                "error",
+                "success"
+            ]
+        },
+        "Request/Module/Delete":{
+            "id":"Request/Module/Delete",
+            "description":"Request object for Modul DeleteById",
+            "properties":{
+                "runId":{
+                    "type":"string"
+                },
+                "id":{
+                    "description":"ID of the module which is to be deleted",
+                    "type":"string"
+                },
+                "websiteId":{
+                    "description":"website ID of the module which is to be deleted",
+                    "type":"string"
+                }
+            },
+            "required":[
+                "id",
+                "runId",
+                "websiteId"
+            ]
+        },
+        "Response/Error":{
+            "id":"Response/Error",
+            "description":"Abbildung des Response Error",
+            "properties":{
+                "code":{
+                    "type":"integer"
+                },
+                "logid":{
+                    "type":"integer"
+                },
+                "param":{
+                    "type":"array"
+                },
+                "text":{
+                    "type":"string"
+                }
+            },
+            "required":[
+                "code",
+                "logid",
+                "param",
+                "text"
+            ]
+        }
+    }
+}

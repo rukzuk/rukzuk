@@ -1,0 +1,11 @@
+{
+    "success": true,
+    "url": "client/mock/export.txt",
+    "message": [{
+        "code": 1,
+        "param": {
+            "foo": "bar"
+        },
+        "text": "Dummy-JSON mit <b>success=true!</b>"
+    }]
+}

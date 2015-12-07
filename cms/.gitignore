@@ -1,0 +1,21 @@
+##
+## Bitte diese .gitignore Datei immer mit ins GIT einchecken
+##
+
+/assets/*
+/builds/*
+/media/*
+/media_cache/*
+/screens/*
+/screens_cache/*
+/websites/*
+/var/feedback/*
+
+# Ausnahmen
+!/assets/.htaccess
+!/builds/.htaccess
+!/media/.htaccess
+!/media_cache/.htaccess
+!/screens/.htaccess
+!/screens_cache/.htaccess
+!/websites/.htaccess

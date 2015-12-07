@@ -1,0 +1,104 @@
+{
+    "success": true,
+    "error": [],
+    "data": {
+        "groups": [
+            {
+                "id": "GROUP-9ca7a328-6326-4e47-9133-24a0145a516d-GROUP",
+                "websiteId": "SITE-123710ac-b2a1-4dd5-91f2-7bbf4d39fc86-SITE",
+                "name": "Admins",
+                "rights": [
+                    {
+                        "area": "templates",
+                        "privilege": "all"
+                    },
+                    {
+                        "area": "modules",
+                        "privilege": "all"
+                    },
+                    {
+                        "area": "website",
+                        "privilege": "none"
+                    }
+                ],
+                "users": [
+                    {
+                        "id": "467ae779-0cb8-40cd-8c77-6dbfe6fd2478",
+                        "lastname": "He-Man",
+                        "firstname": "Adam",
+                        "gender": "male",
+                        "email": "he-man@mattel.com",
+                        "superuser": true,
+                        "groups": [
+                            "GROUP-9ca7a328-6326-4e47-9133-24a0145a516d-GROUP"
+                        ]
+                    },
+                    {
+                        "id": "2df8bfd8-1260-4688-a643-159f8d01696e",
+                        "lastname": "Man-At-Arms",
+                        "firstname": "Duncan",
+                        "gender": "male",
+                        "email": "man-at-arms@mattel.com",
+                        "superuser": true,
+                        "groups": [
+                            "GROUP-9ca7a328-6326-4e47-9133-24a0145a516d-GROUP"
+                        ]
+                    },
+                    {
+                        "id": "06e5e5cb-6225-4142-aa19-5024fb3d5762",
+                        "lastname": "Orko",
+                        "firstname": "unknown",
+                        "gender": "unknown",
+                        "email": "orko@mattel.com",
+                        "superuser": false,
+                        "groups": [
+                            "GROUP-9ca7a328-6326-4e47-9133-24a0145a516d-GROUP"
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "GROUP-824fed23-f8ce-48ba-a19c-ea5f0980fe52-GROUP",
+                "websiteId": "SITE-123710ac-b2a1-4dd5-91f2-7bbf4d39fc86-SITE",
+                "name": "Neue Gruppe",
+                "rights": [],
+                "users": [
+                    {
+                        "id": "521ec694-28e0-4bb1-aea4-4fbd41175f68",
+                        "lastname": "Battle Cat",
+                        "firstname": "Cringer",
+                        "gender": "male",
+                        "email": "battle-cat@mattel.com",
+                        "superuser": true,
+                        "groups": []
+                    },
+                    {
+                        "id": "4574d1e9-0225-43ea-b529-ee5f97b0eb1b",
+                        "lastname": "Man-E-Faces",
+                        "firstname": "Manny",
+                        "gender": "male",
+                        "email": "man-e-faces@mattel.com",
+                        "superuser": true,
+                        "groups": []
+                    },
+                    {
+                        "id": "b001cacb-5b5e-42e5-8876-8bb2c0a6e6f4",
+                        "lastname": "Sy-Klone",
+                        "firstname": "Dash-Shel",
+                        "gender": "malse",
+                        "email": "sy-klone@mattel.com",
+                        "superuser": false,
+                        "groups": []
+                    }
+                ]
+            },
+            {
+                "id": "GROUP-5e94cca7-7107-4106-b147-e79ff8046b24-GROUP",
+                "websiteId": "SITE-123710ac-b2a1-4dd5-91f2-7bbf4d39fc86-SITE",
+                "name": "Redakteure2",
+                "rights": [],
+                "users": []
+            }
+        ]
+    }
+}

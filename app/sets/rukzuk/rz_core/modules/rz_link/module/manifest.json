@@ -1,0 +1,12 @@
+{
+    "name": "{\"de\":\"Link\",\"en\":\"Link\"}",
+    "description": "{\"de\":\"Verknüpfung interner/externer Seiten, Dateien oder E-Mail-Adressen.\",\"en\":\"Link to internal/external pages, files or email addresses.\"}",
+    "version": "dev",
+    "icon": "link.png",
+    "category": "{\"de\":\" Inhalt\",\"en\":\" Content\"}",
+    "moduleType": "default",
+    "allowedChildModuleType": "*",
+    "ghostContainerMode": "force_off",
+    "reRenderRequired": false,
+    "apiType": "APIv1"
+}

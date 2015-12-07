@@ -1,0 +1,97 @@
+{
+    "success": true,
+    "error": [],
+    "data": {
+        "navigadtion": [{
+                "id": "Seite 1",
+                "name": "Seite 1",
+                "privileges": {
+                    "edit": {
+                        "value": true,
+                        "inherited": false
+                    },
+                    "subEdit": {
+                        "value": false,
+                        "inherited": false
+                    },
+                    "subAll": {
+                        "value": false,
+                        "inherited": false
+                    }
+                },
+                "children": [{
+                        "id": "Seite 2",
+                        "name": "Seite 2",
+                        "privileges": {
+                            "edit": {
+                                "value": false,
+                                "inherited": false
+                            },
+                            "subEdit": {
+                                "value": false,
+                                "inherited": false
+                            },
+                            "subAll": {
+                                "value": false,
+                                "inherited": false
+                            }
+                        }
+                    }, {
+                        "id": "Seite 3",
+                        "name": "Seite 3",
+                        "privileges": {
+                            "edit": {
+                                "value": false,
+                                "inherited": false
+                            },
+                            "subEdit": {
+                                "value": true,
+                                "inherited": false
+                            },
+                            "subAll": {
+                                "value": false,
+                                "inherited": false
+                            }
+                        },
+                        "children": [{
+                                "id": "Seite 4",
+                                "name": "Seite 4",
+                                "privileges": {
+                                    "edit": {
+                                        "value": true,
+                                        "inherited": true
+                                    },
+                                    "subEdit": {
+                                        "value": true,
+                                        "inherited": true
+                                    },
+                                    "subAll": {
+                                        "value": false,
+                                        "inherited": false
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }, {
+                "id": "Seite 5",
+                "name": "Seite 5",
+                "privileges": {
+                    "edit": {
+                        "value": false,
+                        "inherited": false
+                    },
+                    "subEdit": {
+                        "value": true,
+                        "inherited": false
+                    },
+                    "subAll": {
+                        "value": false,
+                        "inherited": false
+                    }
+                }
+            }
+        ]
+    }
+}

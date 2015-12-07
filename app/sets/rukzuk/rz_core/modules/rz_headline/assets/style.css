@@ -1,0 +1,5 @@
+.rz_headline > span:empty {
+    min-height: 16px;
+    display: block;
+    width: 100%;
+}

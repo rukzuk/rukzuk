@@ -1,0 +1,29 @@
+{
+    "i18n":{
+        "selector.other":{
+            "de":"Sonstige",
+            "en":"Other"
+        },
+        "selector.allChildModules":{
+            "de":"Alle Kindmodule",
+            "en":"All child modules"
+        },
+        "selector.allFirstLevelChildModules":{
+            "de":"Kindmodule der 1. Ebene",
+            "en":"Child modules on 1st level"
+        },
+        "selector.allXModules":{
+            "de":"Alle \u201e{moduleName}\u201c-Module",
+            "en":"All \u201c{moduleName}\u201d modules"
+        }
+    },
+    "assets":{
+        "js":[
+            {
+                "file":"notlive\/selectors.js",
+                "type":"module",
+                "mode":"edit"
+            }
+        ]
+    }
+}

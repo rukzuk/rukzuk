@@ -1,0 +1,37 @@
+[
+    {
+        "id": "UNIT-ID-ROOT::1",
+        "templateUnitId": "UNIT-ID-ROOT",
+        "moduleId": "rz_root",
+        "name": "",
+        "formValues": {},
+        "expanded": true,
+        "ghostContainer": false,
+        "children": [
+            {
+                "id": "UNIT-ID-IMAGE::1",
+                "templateUnitId": "UNIT-ID-IMAGE",
+                "moduleId": "rz_image",
+                "name": "",
+                "formValues": {
+                    "page_value_changed_to_null-template_values_not_changed": {
+                        "foo-1": null,
+                        "bar-1": "foo"
+                    },
+                    "page_value_changed_to_null-template_values_also_changed": {
+                        "foo-2": "bar",
+                        "bar-2": null
+                    },
+                    "page_value_removed-template_value_changed": {
+                        "bar-3": "foo"
+                    }
+                },
+                "expanded": true,
+                "ghostContainer": false,
+                "description": "",
+                "visibleFormGroups": [],
+                "children": []
+            }
+        ]
+    }
+]

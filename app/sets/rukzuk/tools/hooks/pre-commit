@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# config commands and parameters
+gruntfile="$(dirname $(readlink -e $0))/../../Gruntfile.js"
+gruntbin="grunt --gruntfile $gruntfile"
+$gruntbin "test";

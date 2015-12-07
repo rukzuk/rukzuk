@@ -1,0 +1,21 @@
+.CMSsidebar .CMSwebsitesettingssectionsidebar {
+  &.CMSthumbview {
+    padding: 15px;
+    .wrap {
+      width: 100%;
+      margin: 0 0 15px 0;
+      height: 40px;
+      .titlebar {
+        width: 100%;
+        span {
+          height: 40px;
+          line-height: 40px;
+        }
+      }
+    }
+  }
+}
+
+.CMSwebsitesettingssectionsidebar.CMSthumbview .dataViewContainer .CMSemptytext {
+  margin: 0;
+}

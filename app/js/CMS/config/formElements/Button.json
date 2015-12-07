@@ -1,0 +1,50 @@
+{
+    "descr": {
+        "id": "Button",
+        "text": "__i18n_formElements.elementButton",
+        "iconCls": "button",
+        "hasValue": true
+    },
+    "params": [
+        {
+            "name": "xtype",
+            "value": "CMStogglebutton",
+            "xtype": null
+        },
+        {
+            "name": "isMeta",
+            "value": false,
+            "fieldLabel": "__i18n_formElements.isGlobal",
+            "xtype": "checkbox"
+        },
+        {
+            "name": "fieldLabel",
+            "xtype": null,
+            "value": "&#160;"
+        },
+        {
+            "name": "labelSeparator",
+            "xtype": null,
+            "value": ""
+        },
+        {
+            "name": "labelAlign",
+            "value": "hide",
+            "xtype": null
+        },
+        {
+            "name": "text",
+            "value": "__i18n_formElements.buttonValue",
+            "xtype": "textfield",
+            "allowBlank": false,
+            "emptyText": "__i18n_formElements.buttonEmptyText",
+            "fieldLabel": "__i18n_formElements.buttonLabel"
+        },
+        {
+            "name": "enableToggle",
+            "value": false,
+            "xtype": "checkbox",
+            "fieldLabel": "__i18n_formElements.enableToggleLabel"
+        }
+    ]
+}

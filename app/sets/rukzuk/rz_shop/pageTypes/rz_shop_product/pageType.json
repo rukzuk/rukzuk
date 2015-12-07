@@ -1,0 +1,92 @@
+{
+    "name": {
+        "de": "Produkt",
+        "en": "Product"
+    },
+    "description": {
+        "de": "",
+        "en": ""
+    },
+    "version": "dev",
+    "form": [
+        {
+            "type": "TextField",
+            "CMSvar": "_name",
+            "fieldLabel": "{\"de\": \"Produktname\", \"en\":\"Product Name\"}",
+            "emptyText": "",
+            "minLength": 0,
+            "maxLength": 255,
+            "allowBlank": true
+        },
+        {
+            "type": "OnOffFieldSet",
+            "CMSvar": "_inNavigation",
+            "fieldLabel": "{\"de\": \"In Navigation anzeigen\", \"en\": \"Show in Navigation\"}",
+            "_items": [
+                {
+                    "type": "TextField",
+                    "CMSvar": "_navigationTitle",
+                    "fieldLabel": "{\"de\": \"Eigene Bezeichnung in Navigation (Standard: Produktname)\", \"en\": \"Name in Navigation (default: Product Name)\"}",
+                    "emptyText": "",
+                    "minLength": 0,
+                    "maxLength": 255,
+                    "allowBlank": true
+                }
+            ]
+        },
+        {
+            "type": "TextArea",
+            "CMSvar": "_description",
+            "fieldLabel": "{\"de\": \"Beschreibung für Teaser und Suchmaschinen\", \"en\": \"Description for Teaser and Search Engines\"}",
+            "height": 100
+        },
+        {
+            "type": "ImagePicker",
+            "CMSvar": "_mediaId",
+            "filterType": "image",
+            "showText": true,
+            "fieldLabel": "{\"de\": \"Bild\", \"en\": \"Image\"}",
+            "text": "{\"de\": \"Bild wählen\", \"en\": \"Select image\"}",
+            "multiSelect": false
+        },
+        {
+            "type": "SliderUnit",
+            "CMSvar": "price",
+            "fieldLabel": "{\"de\": \"Preis (brutto)\", \"en\":\"Price (gross)\"}",
+            "minValue": 0,
+            "maxValue": "",
+            "increment": 0.1,
+            "unitList": []
+        },
+        {
+            "type": "OnOffFieldSet",
+            "CMSvar": "enableVariants",
+            "fieldLabel": "{\"de\": \"Produktvarianten\", \"en\": \"Product Variants\"}",
+            "_items": [
+                {
+                    "type": "TextArea",
+                    "CMSvar": "variants",
+                    "fieldLabel": "{\"de\": \"Eine Variante pro Zeile\", \"en\":\"One Variant per Line\"}",
+                    "height": 100
+                }
+            ]
+        },
+        {
+            "type": "DateField",
+            "CMSvar": "_date",
+            "width": 200,
+            "fieldLabel": "{\"de\": \"Datum\", \"en\": \"Date\"}"
+        }
+    ],
+    "formValues": {
+        "_name": "",
+        "_inNavigation": true,
+        "_navigationTitle": "",
+        "_description": "",
+        "_mediaId": null,
+        "price": 0,
+        "enableVariants": false,
+        "variants": "",
+        "_date": null
+    }
+}

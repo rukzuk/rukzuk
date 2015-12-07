@@ -1,0 +1,12 @@
+{
+    "name": "{\"de\":\"Textschatten\",\"en\":\"Text Shadow\"}",
+    "description": "{\"de\":\"Schlagschatten, der sich auf einzelne Buchstaben im Text auswirkt. Durch mehrfaches Einfügen können mehrere Schatten definiert werden.\",\"en\":\"A drop shadow that is applied particularly on every letter of a text. Can be inserted multiple times for multiple shadows.\"}",
+    "version": "dev",
+    "icon": "style-text-shadow.png",
+    "category": "50",
+    "moduleType": "extension",
+    "allowedChildModuleType": "",
+    "reRenderRequired": false,
+    "apiType": "APIv1",
+    "ghostContainerMode": "force_off"
+}

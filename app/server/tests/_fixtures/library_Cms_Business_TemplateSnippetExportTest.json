@@ -1,0 +1,43 @@
+{
+    "website": [
+        {
+            "id": "SITE-export0t-empl-ates-nipp-et0test00001-SITE",
+            "name": "business/export template snippet: only local snippets exported",
+            "usedsetid": "with-template-snippets_test",
+            "shortid": "",
+            "description": "",
+            "navigation": "",
+            "colorscheme": "",
+            "resolutions": "",
+            "version": 0,
+            "home": "",
+            "ismarkedfordeletion": 0
+        }
+    ],
+    "template_snippet": [
+        {
+            "websiteid": "SITE-export0t-empl-ates-nipp-et0test00001-SITE",
+            "id": "TPLS-00000000-0000-0000-0000-000000000001-TPLS",
+            "name": "TEMPLATE_SNIPPET_NAME_1",
+            "description": "TEMPLATE_SNIPPET_DESCRIPTION_1",
+            "category": "TEMPLATE_SNIPPET_CATEGORY_1",
+            "content": "[]"
+        },
+        {
+            "websiteid": "SITE-export0t-empl-ates-nipp-et0test00001-SITE",
+            "id": "TPLS-00000000-0000-0000-0000-000000000002-TPLS",
+            "name": "TEMPLATE_SNIPPET_NAME_2",
+            "description": "TEMPLATE_SNIPPET_DESCRIPTION_2",
+            "category": "TEMPLATE_SNIPPET_CATEGORY_2",
+            "content": "[]"
+        },
+        {
+            "websiteid": "SITE-export0t-empl-ates-nipp-et0test00001-SITE",
+            "id": "TPLS-00000000-0000-0000-0000-000000000003-TPLS",
+            "name": "TEMPLATE_SNIPPET_NAME_3",
+            "description": "TEMPLATE_SNIPPET_DESCRIPTION_3",
+            "category": "TEMPLATE_SNIPPET_CATEGORY_3",
+            "content": "[]"
+        }
+    ]
+}

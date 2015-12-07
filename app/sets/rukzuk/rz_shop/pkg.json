@@ -1,0 +1,17 @@
+{
+  "name": {
+    "de": "E-Commerce Paket",
+    "en": "E-Commerce Package"
+  },
+  "description": {
+    "de": "",
+    "en": ""
+  },
+  "websiteSettings": ["rz_shop"],
+  "pageTypes": ["rz_shop_product"],
+  "modules": [
+    "rz_shop_cart",
+    "rz_shop_product_list",
+    "rz_shop_product_property"
+  ]
+}

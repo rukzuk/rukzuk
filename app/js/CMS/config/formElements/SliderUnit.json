@@ -1,0 +1,77 @@
+{
+    "descr": {
+        "id": "SliderUnit",
+        "text": "__i18n_formElements.elementSliderUnit",
+        "iconCls": "slider",
+        "hasValue": true
+    },
+    "params": [
+        {
+            "name": "xtype",
+            "value": "CMSnumberfieldunit",
+            "xtype": null
+        },
+        {
+            "name": "isMeta",
+            "value": false,
+            "fieldLabel": "__i18n_formElements.isGlobal",
+            "xtype": "checkbox"
+        },
+        {
+            "name": "isResponsive",
+            "value": false,
+            "fieldLabel": "__i18n_formElements.isResponsive",
+            "xtype": "checkbox"
+        },
+        {
+            "name": "fieldLabel",
+            "value": "__i18n_formElements.fieldLabel",
+            "xtype": "textfield",
+            "allowBlank": false,
+            "emptyText": "__i18n_formElements.fieldLabelEmptyText",
+            "fieldLabel": "__i18n_formElements.fieldLabel"
+        },
+        {
+            "name": "minValue",
+            "value": 0,
+            "xtype": "numberfield",
+            "allowBlank": true,
+            "allowDecimals": false,
+            "emptyText": "__i18n_formElements.minValueEmptyText",
+            "fieldLabel": "__i18n_formElements.minValueLabel"
+        },
+        {
+            "name": "maxValue",
+            "value": 100,
+            "xtype": "numberfield",
+            "allowBlank": true,
+            "allowDecimals": false,
+            "emptyText": "__i18n_formElements.maxValueEmptyText",
+            "fieldLabel": "__i18n_formElements.maxValueLabel"
+        },
+        {
+            "name": "increment",
+            "value": 1,
+            "xtype": "numberfield",
+            "allowBlank": false,
+            "allowDecimals": true,
+            "emptyText": "__i18n_formElements.incrementEmptyText",
+            "fieldLabel": "__i18n_formElements.incrementLabel"
+        },
+        {
+            "name": "unitList",
+            "value": [],
+            "xtype": "CMSkeyvaluetextareaconfigurable",
+            "allowBlank": true,
+            "numOfValues": 2,
+            "array": true,
+            "emptyText": "__i18n_formElements.sizeUnitsEmptyText",
+            "fieldLabel": "__i18n_formElements.sizeUnitsLabel"
+        },
+        {
+            "name": "value",
+            "value": "0",
+            "xtype": null
+        }
+    ]
+}

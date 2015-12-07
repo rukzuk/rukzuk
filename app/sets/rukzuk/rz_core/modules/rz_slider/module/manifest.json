@@ -1,0 +1,12 @@
+{
+    "name": "{\"de\":\"Slider\",\"en\":\"Slider\"}",
+    "description": "{\"de\":\"Erstellt aus den untergeordneten Modulen einen animierten Banner. Jedes untergeordnete Modul ist ein Slide. Manuelle sowie automatische Slideshows sind möglich.\",\"en\":\"Creates animated banners with manual or automatic slideshow out of the subordinate modules. Every subordinate module is one slide.\"}",
+    "version": "dev",
+    "icon": "slider.png",
+    "category": "{\"de\":\"Container\",\"en\":\"Container\"}",
+    "moduleType": "default",
+    "allowedChildModuleType": "*",
+    "ghostContainerMode": "unit",
+    "reRenderRequired": false,
+    "apiType": "APIv1"
+}

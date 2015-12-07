@@ -1,0 +1,28 @@
+{
+    "template_snippet": [
+        {
+            "websiteid": "SITE-template-snip-pet0-test-000000000001-SITE",
+            "id": "TPLS-template-snip-pet0-test-000000000001-TPLS",
+            "name": "TEMPLATE_SNIPPET_NAME_1",
+            "description": "TEMPLATE_SNIPPET_DESCRIPTION_1",
+            "category": "TEMPLATE_SNIPPET_CATEGORY_1",
+            "content": "[]"
+        },
+        {
+            "websiteid": "SITE-template-snip-pet0-test-000000000001-SITE",
+            "id": "TPLS-template-snip-pet0-test-000000000002-TPLS",
+            "name": "TEMPLATE_SNIPPET_NAME_2",
+            "description": "TEMPLATE_SNIPPET_DESCRIPTION_2",
+            "category": "TEMPLATE_SNIPPET_CATEGORY_2",
+            "content": "[]"
+        },
+        {
+            "websiteid": "SITE-template-snip-pet0-test-000000000001-SITE",
+            "id": "TPLS-template-snip-pet0-test-000000000003-TPLS",
+            "name": "TEMPLATE_SNIPPET_NAME_3",
+            "description": "TEMPLATE_SNIPPET_DESCRIPTION_3",
+            "category": "TEMPLATE_SNIPPET_CATEGORY_3",
+            "content": "[]"
+        }
+    ]
+}

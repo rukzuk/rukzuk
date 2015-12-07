@@ -1,0 +1,112 @@
+{
+    "assets":{
+        "js":[
+            {
+                "file":"notlive\/editMode.js",
+                "type":"module",
+                "mode":"edit"
+            }
+        ],
+        "css":[
+            {
+                "file":"style.css"
+            }
+        ]
+    },
+    "i18n":{
+        "selector.headline":{
+            "de":"Name",
+            "en":"Name"
+        },
+        "selector.text":{
+            "de":"Beschreibung",
+            "en":"Description"
+        },
+        "selector.textLink":{
+            "de":"Link in Beschreibung",
+            "en":"Link in description"
+        },
+        "selector.date":{
+            "de":"Datum",
+            "en":"Date"
+        },
+        "selector.image":{
+            "de":"Bild",
+            "en":"Image"
+        },
+        "selector.link":{
+            "de":"Link",
+            "en":"Link"
+        },
+        "selector.price": {
+          "de": "Preis",
+          "en": "Price"
+        },
+        "selector.addcart": {
+          "de": "In den Warenkorb",
+          "en": "Add to Cart"
+        },
+        "selector.addcartVariants": {
+          "de": "Variantenauswahl",
+          "en": "Variant selection"
+        },
+        "placeholder.pageTitle":{
+            "de":"Platzhalter - Produktname",
+            "en":"Placeholder - Product Name"
+        },
+        "placeholder.pageDescription":{
+            "de":"Platzhalter - Beschreibung",
+            "en":"Placeholder - Description"
+        },
+        "msg.noCartPage": {
+          "de": "Error: You need to define a Cart Page in Project Settings.",
+          "en": "Fehler: In den Projekteinstellungen muss eine Seite für den Warenkorb angegeben sein."
+        },
+        "msg.editTplModeError": {
+          "de": "Funktion im aktuellen Modus deaktiviert.",
+          "en": "Action is disabled in this mode."
+        },
+        "msg.moduleOnlyWorkingOnProductPages": {
+          "de": "Dieses Modul muss sich auf einer Produktseite oder innerhalb eines Produktlisten-Moduls befinden.",
+          "en": "This module must be used on a product page or inside of a product list."
+        }
+    },
+    "selectors":[
+        {
+            "title":"__i18n_selector.headline",
+            "selector":".teaserHeadline"
+        },
+        {
+            "title":"__i18n_selector.text",
+            "selector":".teaserText",
+            "items":[{
+                "title":"__i18n_selector.textLink",
+                "selector":".teaserTextLink"
+            }]
+        },
+        {
+            "title":"__i18n_selector.date",
+            "selector":".teaserDate"
+        },
+        {
+            "title":"__i18n_selector.image",
+            "selector":".teaserImage"
+        },
+        {
+            "title":"__i18n_selector.link",
+            "selector":".teaserLink"
+        },
+        {
+            "title":"__i18n_selector.price",
+            "selector":".pd-price"
+        },
+        {
+            "title":"__i18n_selector.addcart",
+            "selector":".pd-addToCartButton",
+            "items":[{
+                "title":"__i18n_selector.addcartVariants",
+                "selector":".pd-addToCartVariants"
+            }]
+        }
+    ]
+}

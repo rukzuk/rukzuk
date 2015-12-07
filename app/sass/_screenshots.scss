@@ -1,0 +1,196 @@
+@import "mixins";
+@import "colors";
+
+.CMSthumbview > .x-panel-bwrap > .x-panel-body {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.CMSthumbview .wrap {
+    float: left;
+    width: 256px;
+    overflow: hidden;
+    margin: 10px;
+    @include shadow();
+
+    .CMSsidebar & {
+        margin-left: 45px;
+    }
+}
+
+.CMSthumbview .wrap, .CMSthumbview .wrap * {
+    cursor: pointer;
+}
+
+.CMSthumbview .wrap {
+    .titlebar {
+        height: 2.7em;
+        overflow: hidden;
+
+        @include gradient-vertical($bg-button-top, $bg-button-bottom);
+
+        &.shared span {
+            background: transparent url("../images/button-sprite.png") no-repeat right -1484px
+        }
+    }
+
+    &:hover .titlebar {
+        @include gradient-vertical($bg-button-hover-top, $bg-button-hover-bottom);
+    }
+
+}
+
+/* new item ghost */
+.CMSthumbview .wrap.ghost {
+    background: transparent;
+    height: 224px;
+    min-height: 224px;
+
+    &:hover {
+        @include gradient-vertical($bg-taskbar, $bg-mask);
+    }
+
+    /* text and bg */
+    span {
+        width: 100%;
+        height: 100%;
+        padding-top: 122px;
+        display: block;
+        text-align: center;
+        background: url("../images/add-new-website-ghost.png") center 80px no-repeat;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        margin: 0;
+    }
+}
+
+/* required for website selection to float the item ghost */
+.CMSthumbview .dataViewContainer {
+    display: inline;
+
+    .CMSemptytext {
+        margin: 100px 0 0 0;
+        text-align: center;
+    }
+}
+
+.CMSthumbview .wrap > div {
+    display: table-row;
+}
+
+.CMSthumbview .wrap > div > * {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.CMSthumbview .wrap span {
+    text-align: center;
+    white-space: pre-wrap;
+    text-overflow: ellipsis;
+    width: 90%;
+    margin: 0 5%;
+    overflow: hidden;
+}
+
+.screenshot {
+    width: 256px;
+    height: 192px;
+    background-color: transparent;
+    background: url("../images/screenshot-icon.png") center center no-repeat;
+}
+
+.CMSPageTab .screenshot {
+    margin: 10px 54px -20px;
+    @include shadow();
+}
+
+.CMSPageTab .CMSactionBtnContainer .x-panel-body {
+    background: transparent;
+}
+
+.CMSsidebar .CMSthumbview .wrap,
+.CMSthumbview .wrap.templates {
+    width: 280px;
+    height: 56px;
+    margin-left: 10px;
+
+    .screenshot {
+        width: 75px;
+        height: 56px;
+    }
+
+    .thumb {
+        vertical-align: top;
+    }
+
+    .thumb, .titlebar, .titlebar span {
+        display: inline-block;
+    }
+
+    .titlebar {
+        height: 100%;
+        width: 205px;
+
+        span {
+            text-align: left;
+            vertical-align: middle;
+            line-height: 56px;
+            height: 56px;
+        }
+    }
+}
+
+.CMSthumbview .wrap {
+    position: relative;
+    .publishedIndicator {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 5px;
+        span {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            display: inline-block;
+            text-align: left;
+            margin: 0;
+            line-height: 114%;
+            height: 13px;
+            font-size: 11px;
+        }
+    }
+    .active {
+        background: $bg-layer-darker url("../images/publish-icon.png") 6px center no-repeat;
+        background-size: 20px 16px;
+        padding-left: 29px;
+        color: $text-color-dark;
+    }
+}
+
+
+.CMSthumbview .wrap.templates {
+
+  .titlebar {
+    span.text {
+      line-height: 12px;
+      height: auto;
+      width: calc(90% - 32px);
+      margin: 0 5%;
+      max-height: 36px;
+      overflow: hidden;
+    }
+    .pageTypePreview {
+      background-color: rgba(9, 8, 7, 0.1);
+      background-size: 50px;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+    .fillHeight {
+      width: 32px;
+      height: 56px;
+      display: inline-block;
+      margin: 0;
+    }
+  }
+
+}

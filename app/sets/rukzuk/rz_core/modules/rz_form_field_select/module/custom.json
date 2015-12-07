@@ -1,0 +1,65 @@
+{
+    "assets":{
+        "css":[
+            {
+                "file":"style.css"
+            }
+        ]
+    },
+    "i18n":{
+        "selector.label":{
+            "de":"Labels",
+            "en":"Labels"
+        },
+        "selector.select":{
+            "de":"Auswahlfelder",
+            "en":"Select field"
+        },
+        "selector.selectOption":{
+            "de":"Auswahlfeld-Optionen",
+            "en":"Select field options"
+        },
+        "selector.selectValue":{
+            "de":"Auswahlfeld-Checkbox/Radio",
+            "en":"Select field checkbox/radio"
+        },
+        "selector.error":{
+            "de":"Fehlermeldungen",
+            "en":"Error messages"
+        },
+        "selector.invalidInput":{
+            "de":"Auswahlfeld bei Fehlermeldung",
+            "en":"Select field when error occurs"
+        },
+        "error.moduleOnlyWorkingInForm":{
+            "de":"Dieses Modul muss sich innerhalb eines Formular-Moduls befinden.",
+            "en":"This module must be used inside a form module."
+        }
+    },
+    "selectors":[
+        {
+            "title":"__i18n_selector.label",
+            "selector":"&.rz_form_field_select div > label"
+        },
+        {
+            "title":"__i18n_selector.select",
+            "selector":"select[id^='fieldMUNIT']"
+        },
+        {
+            "title":"__i18n_selector.selectOption",
+            "selector":"select[id^='fieldMUNIT'] option, &.rz_form_field_select fieldset label span"
+        },
+        {
+            "title":"__i18n_selector.selectValue",
+            "selector":"input[id^=fieldMUNIT][type=checkbox], input[id^=fieldMUNIT][type=radio]"
+        },
+        {
+            "title":"__i18n_selector.error",
+            "selector":"p.vf__error"
+        },
+        {
+            "title":"__i18n_selector.invalidInput",
+            "selector":"fieldset.vf__error, select[id^=fieldMUNIT].vf__error"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+.rz_flexbox  > div {
+    display: -webkit-flex;
+    display: flex;
+    flex-grow: 1;
+    -webkit-flex-grow: 1;
+    min-height: inherit;
+    height: inherit;
+}
+.rz_flexbox  > div > .isModule {
+    float: left;
+}
+.rz_flexbox {
+    min-height: 5px;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+}

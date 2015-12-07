@@ -1,0 +1,12 @@
+{
+    "name": "{\"de\":\"Box\",\"en\":\"Box\"}",
+    "description": "{\"de\":\"[Veraltet, wird nicht mehr unterstützt] Grundlegendes Layoutmodul welches die untergeordneten Module auf mehrere Spalten verteilt. Die Spaltenbreite kann in Prozent oder Pixeln angegeben werden.\",\"en\":\"[Legacy module, not longer supported] Basic layout module which arranges the subordinate modules in multiple columns. Column widths can be defined in percent or pixel.\"}",
+    "version": "dev",
+    "icon": "multi-shape.png",
+    "category": "{\"zz\":\"\",\"de\":\"Nicht mehr unterstützt\",\"en\":\"Unsupported\"}",
+    "moduleType": "default",
+    "allowedChildModuleType": "*",
+    "reRenderRequired": false,
+    "ghostContainerMode": "force_off",
+    "apiType": "APIv1"
+}

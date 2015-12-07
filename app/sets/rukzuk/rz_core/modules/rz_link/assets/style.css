@@ -1,0 +1,9 @@
+.rz_link {
+    cursor: pointer;
+    /* inline block to allow width:auto; */
+    display: inline-block;
+    width: 100%;
+}
+.rz_link > * {
+    cursor: pointer;
+}

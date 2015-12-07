@@ -1,0 +1,321 @@
+{
+  "assets": {
+    "css": [
+      {
+        "file": "style.css"
+      }
+    ],
+    "js": [
+      {
+        "file": "cartEdit.js",
+        "type": "module",
+        "mode": "edit"
+      },
+      {
+        "file": "cart.js",
+        "type": "script"
+      }
+    ]
+  },
+  "i18n": {
+    "button.doCheckout": {
+      "de": "Kostenpflichtig bestellen",
+      "en": "Order with obligation to pay"
+    },
+    "button.backToCart": {
+      "de": "Warenkorb ändern",
+      "en": "Change Cart"
+    },
+    "button.showCheckout": {
+      "de": "Zur Kasse",
+      "en": "Checkout"
+    },
+    "cartTable.productName": {
+      "de": "Produkt",
+      "en": "Product"
+    },
+    "cartTable.price": {
+      "de": "Einzelpreis",
+      "en": "Unit Price"
+    },
+    "cartTable.amount": {
+      "de": "Anzahl",
+      "en": "Amount"
+    },
+    "cartTable.rowSum": {
+      "de": "Gesamtpreis",
+      "en": "Price"
+    },
+    "cartTable.includingVAT": {
+      "de": "inkl. %s MwSt.",
+      "en": "incl. %s VAT"
+    },
+    "cartTable.shippingCosts": {
+      "de": "Versandkosten:",
+      "en": "Shipping Costs:"
+    },
+    "cartTable.fullPrice": {
+      "de": "Gesamtpreis:",
+      "en": "Total:"
+    },
+    "cartTable.removeRow": {
+      "de": "Produkt entfernen",
+      "en": "Remove"
+    },
+    "cartTable.emptyCart": {
+      "de": "Warenkorb ist leer…",
+      "en": "Shopping Cart is empty…"
+    },
+    "fake.cartItem1.name": {
+      "de": "Produkt 1",
+      "en": "Product 1"
+    },
+    "fake.cartItem2.name": {
+      "de": "Produkt 2",
+      "en": "Product 2"
+    },
+    "fake.cartItem3.name": {
+      "de": "Produkt 3",
+      "en": "Product 3"
+    },
+    "formManager.input.email": {
+      "de": "Keine gültige E-Mail-Adresse",
+      "en": "This value is not a valid email"
+    },
+    "formManager.input.number": {
+      "de": "Keine gültige Nummer",
+      "en": "This value is not a valid number"
+    },
+    "formManager.attr.max": {
+      "de": "Größter erlaubter Wert ist %s",
+      "en": "The max value allowed is %s"
+    },
+    "formManager.attr.maxLength": {
+      "de": "Maximal %s Zeichen erlaubt",
+      "en": "The max length allowed is %s"
+    },
+    "formManager.attr.min": {
+      "de": "Wert muss größer als %s sein",
+      "en": "The min value allowed is %s"
+    },
+    "formManager.attr.pattern": {
+      "de": "Ungültige Eingabe",
+      "en": "This value is not valid"
+    },
+    "formManager.attr.required": {
+      "de": "Feld ist erforderlich",
+      "en": "This field is required"
+    },
+    "checkoutForm.billingAdr.title": {
+      "de": "Rechnungsadresse",
+      "en": "Billing Address"
+    },
+    "checkoutForm.shippingAdr.title": {
+      "de": "Lieferadresse",
+      "en": "Shipping Address"
+    },
+    "checkoutForm.customer.email": {
+      "de": "E-Mail",
+      "en": "Your e-mail"
+    },
+    "checkoutForm.customer.tel": {
+      "de": "Telefonnummer",
+      "en": "Telephone number"
+    },
+    "checkoutForm.customer.comment": {
+      "de": "Kommentar zur Bestellung",
+      "en": "Comments"
+    },
+    "checkoutForm.customer.title": {
+      "de": "Kundendaten und Zahlungsart",
+      "en": "Contact and Payment"
+    },
+    "checkoutForm.adr.name": {
+      "de": "Vor- und Nachname",
+      "en": "First and Last Name"
+    },
+    "checkoutForm.adr.company": {
+      "de": "Firma",
+      "en": "Company"
+    },
+    "checkoutForm.adr.street": {
+      "de": "Straße und Hausnummer",
+      "en": "Street"
+    },
+    "checkoutForm.adr.zip": {
+      "de": "PLZ",
+      "en": "ZIP Code"
+    },
+    "checkoutForm.adr.city": {
+      "de": "Stadt",
+      "en": "City"
+    },
+    "checkoutForm.adr.country": {
+      "de": "Land",
+      "en": "Country"
+    },
+    "checkoutForm.adr.customShippingAdr": {
+      "de": "Abweichende Lieferadresse",
+      "en": "Different Shipping Address"
+    },
+    "error.editSubmit": {
+      "de": "Deaktiviert im Bearbeitungsmodus.",
+      "en": "Disabled in edit mode."
+    },
+    "checkoutForm.paymentMethod": {
+      "de": "Zahlungsart wählen",
+      "en": "Payment Method"
+    },
+    "payment.paymentBanktransfer": {
+      "de": "Vorkasse",
+      "en": "Payment in advance"
+    },
+    "payment.paymentCollect": {
+      "de": "Bar bei Abholung",
+      "en": "Cash on Collect"
+    },
+    "payment.paymentCOD": {
+      "de": "Nachnahme",
+      "en": "Cash on Delivery"
+    },
+    "payment.paymentInvoice": {
+      "de": "Auf Rechnung",
+      "en": "Invoice"
+    },
+    "payment.paymentPayPalExpress": {
+      "de": "PayPal",
+      "en": "PayPal"
+    },
+    "checkoutSummary.shippingAdrSameAsBilling": {
+      "de": "(gleich wie Rechnungsadresse)",
+      "en": "(same as billing address)"
+    },
+    "checkoutForm.tosAccept": {
+      "de": "Ja, ich habe die <a href='%s' target='_blank'>AGB und Widerrufsbelehrung</a> gelesen und akzeptiere diese.",
+      "en": "Yes, I have read the <a href='%s' target='_blank'>Terms and Conditions</a> and accept them."
+    },
+    "doCheckout.fail": {
+      "de": "Fehler: Bestellung konnte nicht verarbeitet werden. Bitte erneut versuchen.",
+      "en": "Error: Order failed. Please try again."
+    },
+    "email.notificationSubjectOwner": {
+      "de": "Neue Bestellung im Online-Shop",
+      "en": "New Online Shop Order"
+    },
+    "email.confirmationSubjectBuyer": {
+      "de": "Vielen Dank für die Bestellung",
+      "en": "Thank you for your order"
+    },
+    "selector.links": {
+      "de": "Links",
+      "en": "Links"
+    },
+    "selector.cartTable": {
+      "de": "Tabelle",
+      "en": "Table"
+    },
+    "selector.cartTableHeader": {
+      "de": "Tabellenkopf",
+      "en": "Table Header"
+    },
+    "selector.cartTableRow": {
+      "de": "Tabellenzeile",
+      "en": "Table Row"
+    },
+    "selector.buttons": {
+      "de": "Buttons",
+      "en": "Buttons"
+    },
+    "selector.buttonsPrimary": {
+      "de": "Primär-Buttons",
+      "en": "Primary Buttons"
+    },
+    "selector.cartTableRowShipping": {
+      "de": "Versandkosten Zeile",
+      "en": "Shipping Costs Row"
+    },
+    "selector.cartTableRowFullSum": {
+      "de": "Gesamtpreis Zeile",
+      "en": "Total Row"
+    },
+    "selector.cartTableRowVatSum": {
+      "de": "MwSt. Zeile",
+      "en": "VAT Row"
+    },
+    "selector.checkoutForm": {
+      "de": "Bestellformular",
+      "en": "Checkout Form"
+    },
+    "selector.checkoutFormTextFields": {
+      "de": "Eingabefelder",
+      "en": "Input Fields"
+    },
+    "selector.checkoutFormComment": {
+      "de": "Kommentarfeld",
+      "en": "Comment Field"
+    },
+    "selector.checkoutFormSelects": {
+      "de": "Auswahlfelder",
+      "en": "Select Fields"
+    }
+  },
+  "selectors": [
+    {
+      "title": "__i18n_selector.links",
+      "selector": ".checkoutForm a, .cartOverview a"
+    },
+    {
+      "title": "__i18n_selector.cartTable",
+      "selector": ".cartOverview .cartTable",
+      "items": [
+        {
+          "title": "__i18n_selector.cartTableHeader",
+          "selector": ".cartOverview .cartTable th"
+        },
+        {
+          "title": "__i18n_selector.cartTableRow",
+          "selector": ".cartOverview .cartTable tr.itemRow",
+          "enableNthTypeOf": true
+        },
+        {
+          "title": "__i18n_selector.cartTableRowShipping",
+          "selector": ".cartOverview .cartTable tr.shippingSum"
+        },
+        {
+          "title": "__i18n_selector.cartTableRowFullSum",
+          "selector": ".cartOverview .cartTable tr.fullSum"
+        },
+        {
+          "title": "__i18n_selector.cartTableRowVatSum",
+          "selector": ".cartOverview .cartTable tr.vatSum"
+        }
+      ]
+    },
+    {
+      "title": "__i18n_selector.buttons",
+      "selector": ".cartButtonBar button"
+    },
+    {
+      "title": "__i18n_selector.buttonsPrimary",
+      "selector": ".cartButtonBar button.primary"
+    },
+    {
+      "title": "__i18n_selector.checkoutForm",
+      "selector": ".checkoutForm",
+      "items": [
+        {
+          "title": "__i18n_selector.checkoutFormTextFields",
+          "selector": ".checkoutForm input[type=text], .checkoutForm input[type=email], .checkoutForm input[type=tel]"
+        },
+        {
+          "title": "__i18n_selector.checkoutFormComment",
+          "selector": ".checkoutForm textarea"
+        },
+        {
+          "title": "__i18n_selector.checkoutFormSelects",
+          "selector": ".checkoutForm select"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,229 @@
+.swipebox {
+    overflow: hidden !important;
+}
+
+/* to make sure no modules below the lightbox will be visible when lightbox is open */
+.zIndexLightBox {
+    z-index: 100 !important;
+}
+
+/*
+#swipebox-overlay img {
+    border: none !important;
+}
+*/
+
+#swipebox-overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999 !important;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+#swipebox-slider {
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    white-space: nowrap;
+    position: absolute;
+    display: none;
+}
+
+#swipebox-slider .slide {
+    /*background: url("img/loader.gif") no-repeat center center;*/
+    height: 100%;
+    width: 100%;
+    line-height: 1px;
+    text-align: center;
+    display: inline-block;
+}
+
+#swipebox-slider .slide:before {
+    content: "";
+    display: inline-block;
+    height: 50%;
+    width: 1px;
+    margin-right: -1px;
+}
+
+#swipebox-slider .slide img {
+    display: inline-block;
+    max-height: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    height: auto;
+    vertical-align: middle;
+
+    /* for correct sizing when styling with rz_style_border */
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#swipebox-caption {
+    position: absolute;
+    left: 0;
+    z-index: 998;
+    height: 50px;
+    width: 100%;
+}
+
+#swipebox-action {
+    position: static;
+}
+
+#swipebox-caption {
+    bottom: 0px;
+    text-align: center;
+}
+
+#swipebox-caption:empty {
+    display: none;
+}
+
+#swipebox-action #swipebox-prev,
+#swipebox-action #swipebox-next,
+#swipebox-action #swipebox-close {
+    position: static;
+    z-index: 999;
+    cursor: pointer;
+}
+
+/* icons default style */
+#swipebox-close:after,
+#swipebox-prev:after,
+#swipebox-next:after {
+    position: absolute;
+    color: white;
+    cursor: pointer !important;
+    text-decoration: none;
+    font-family: 'sharedicons';
+    font-size: 32px;
+    text-shadow: 1px 1px 1px black;
+    /* default click area */
+    text-align: center;
+    padding: 20px;
+    margin-top: -32px;
+}
+
+#swipebox-close:after {
+    right: 4%;
+    top: 3%;
+    content: '\2715';
+}
+
+#swipebox-prev:after {
+    left: 4%;
+    top: 49%;
+    content: '\e75d';
+
+}
+
+#swipebox-next:after {
+    right: 4%;
+    top: 49%;
+    content: '\e75e';
+}
+
+#swipebox-action #swipebox-prev.disabled,
+#swipebox-action #swipebox-next.disabled {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
+    opacity: 0.3;
+}
+
+#swipebox-slider.rightSpring {
+    -moz-animation: rightSpring 0.3s;
+    -webkit-animation: rightSpring 0.3s;
+}
+
+#swipebox-slider.leftSpring {
+    -moz-animation: leftSpring 0.3s;
+    -webkit-animation: leftSpring 0.3s;
+}
+
+@-moz-keyframes rightSpring {
+    0% {
+        margin-left: 0px;
+    }
+
+    50% {
+        margin-left: -30px;
+    }
+
+    100% {
+        margin-left: 0px;
+    }
+}
+
+@-moz-keyframes leftSpring {
+    0% {
+        margin-left: 0px;
+    }
+
+    50% {
+        margin-left: 30px;
+    }
+
+    100% {
+        margin-left: 0px;
+    }
+}
+
+@-webkit-keyframes rightSpring {
+    0% {
+        margin-left: 0px;
+    }
+
+    50% {
+        margin-left: -30px;
+    }
+
+    100% {
+        margin-left: 0px;
+    }
+}
+
+@-webkit-keyframes leftSpring {
+    0% {
+        margin-left: 0px;
+    }
+
+    50% {
+        margin-left: 30px;
+    }
+
+    100% {
+        margin-left: 0px;
+    }
+}
+
+/* Skin
+--------------------------*/
+
+#swipebox-overlay {
+    background: #0d0d0d;
+}
+
+#swipebox-caption {
+    text-shadow: 1px 1px 1px black;
+    background-color: rgb(6, 8, 10);
+    background-color: rgba(6, 8, 10, 0.66);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=95);
+    opacity: 0.95;
+}
+
+#swipebox-caption {
+    color: white;
+    font-size: 15px;
+    line-height: 43px;
+    font-family: Helvetica, Arial, sans-serif;
+}

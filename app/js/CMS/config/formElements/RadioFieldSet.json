@@ -1,0 +1,49 @@
+{
+    "descr": {
+        "id": "RadioFieldSet",
+        "text": "__i18n_formElements.elementRadioFieldSet",
+        "iconCls": "radiofieldset",
+        "allowChildNodes": true,
+        "hasValue": true
+    },
+    "params": [
+        {
+            "name": "xtype",
+            "value": "CMSradiofieldset",
+            "xtype": null
+        },
+        {
+            "name": "isMeta",
+            "value": false,
+            "fieldLabel": "__i18n_formElements.isGlobal",
+            "xtype": "checkbox"
+        },
+        {
+            "name": "isResponsive",
+            "value": false,
+            "fieldLabel": "__i18n_formElements.isResponsive",
+            "xtype": "checkbox"
+        },
+        {
+            "name": "groupValue",
+            "xtype": "textfield",
+            "allowBlank": false,
+            "emptyText": "__i18n_formElements.groupValueEmptyText",
+            "fieldLabel": "__i18n_formElements.groupValueFieldLabel"
+        },
+        {
+            "name": "title",
+            "value": "__i18n_formElements.title",
+            "xtype": "textfield",
+            "allowBlank": true,
+            "emptyText": "__i18n_formElements.titleOptional",
+            "fieldLabel": "__i18n_formElements.title"
+        },
+        {
+            "name": "setAdditionalCls",
+            "value": false,
+            "fieldLabel": "__i18n_formElements.hideContent",
+            "xtype": "checkbox"
+        }
+    ]
+}

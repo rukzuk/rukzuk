@@ -1,0 +1,59 @@
+[
+    {
+        "id": "unit_001",
+        "moduleId": "rz_testing_001",
+        "formValues": {
+            "foo": "bar_rz_testing_001"
+        },
+        "children": [
+            {
+                "id": "unit_002",
+                "moduleId": "rz_testing_001",
+                "children": null,
+                "formValues": {
+                    "foo": "bar_rz_testing_001"
+                }
+            },
+            {
+                "id": "unit_003",
+                "moduleId": "rz_testing_001",
+                "formValues": {
+                    "foo": "bar_rz_testing_001",
+                    "my_key": "my_unit_003_value"
+                },
+                "ghostContainer": true,
+                "children": [
+                    {
+                        "id": "unit_004",
+                        "moduleId": "rz_testing_001",
+                        "formValues": {
+                            "foo": "bar"
+                        },
+                        "children": [
+                            {
+                                "id": "unit_005",
+                                "moduleId": "rz_testing_002",
+                                "formValues": {
+                                    "key_from_unit_005": "value_from_unit_005",
+                                    "foo": "bar_rz_testing_002",
+                                    "this_is_a_array": [
+                                        "foo",
+                                        "bar"
+                                    ],
+                                    "this_is_a_object": {"foo": "bar"},
+                                    "this_is_null": null,
+                                    "this_is_empty_string": "",
+                                    "this_is_empty_array": [],
+                                    "this_is_empty_object": {},
+                                    "this_is_int_0": 0,
+                                    "this_is_false": false
+                                },
+                                "children": null
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

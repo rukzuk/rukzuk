@@ -1,0 +1,29 @@
+{
+    "descr": {
+        "id": "InternalLinkChooser",
+        "text": "__i18n_formElements.elementInternalLinkChooser",
+        "iconCls": "anchor",
+        "hasValue": true
+    },
+    "params": [
+        {
+            "name": "xtype",
+            "value": "CMSinternallinkchooser",
+            "xtype": null
+        },
+        {
+            "name": "isMeta",
+            "value": false,
+            "fieldLabel": "__i18n_formElements.isGlobal",
+            "xtype": "checkbox"
+        },
+        {
+            "name": "fieldLabel",
+            "value": "__i18n_formElements.linkValue",
+            "xtype": "textfield",
+            "allowBlank": true,
+            "emptyText": "__i18n_formElements.fieldLabelOptionalEmptyText",
+            "fieldLabel": "__i18n_formElements.fieldLabel"
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "name": "{\"de\":\"Icon\",\"en\":\"Icon\"}",
+    "description": "{\"de\":\"Zeigt eine Grafik neben einem Modul/Element an; z.B. für eigene Aufzählungszeichen.\",\"en\":\"Displays a graphic next to a module/element, e.g. for own bullets.\"}",
+    "version": "dev",
+    "icon": "style-icons.png",
+    "category": "50",
+    "moduleType": "extension",
+    "allowedChildModuleType": "",
+    "reRenderRequired": false,
+    "apiType": "APIv1",
+    "ghostContainerMode": "force_off"
+}

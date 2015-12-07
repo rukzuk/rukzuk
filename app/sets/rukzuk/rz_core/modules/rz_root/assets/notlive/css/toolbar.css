@@ -1,0 +1,167 @@
+#RUKZUKtoolbar {
+    border: none;
+    left: 0;
+    top: 0;
+    margin: 0;
+    position: absolute;
+    -moz-user-select: -moz-none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    z-index: 10100;
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
+	max-width: 264px; /* overall maximum width */
+}
+
+/* Popover Arrows */
+#RUKZUKtoolbar .arrow {
+    position: absolute;
+    left: 50%;
+    margin-left: -7px;
+}
+#RUKZUKtoolbar .arrow div {
+    background: #454444;
+    -webkit-transform:rotate(45deg);
+    -moz-transform:rotate(45deg);
+    -ms-transform:rotate(45deg);
+    -o-transform:rotate(45deg);
+    transform:rotate(45deg);
+    width: 14px;
+    height: 14px;
+}
+
+/* Arrow top */
+#RUKZUKtoolbar.top .arrow {
+    bottom: -7px;
+    clip: rect(7px, 20px, 20px, -5px);
+}
+/* Arrow bottom */
+#RUKZUKtoolbar.bottom .arrow div{
+    background: #454444;
+}
+#RUKZUKtoolbar.bottom .arrow {
+    top: -7px;
+    clip: rect(-5px, 20px, 7px, -5px);
+}
+/* Arrow left */
+#RUKZUKtoolbar.left .arrow {
+    clip: rect(-5px, 7px, 20px, -5px);
+    left: 0px;
+    margin-top: -5px;
+    top: 50%;
+}
+/* Arrow right */
+#RUKZUKtoolbar.right .arrow {
+    clip: rect(-5px, 20px, 20px, 7px);
+    left: 139px;
+    margin-top: -5px;
+    top: 50%;
+}
+
+/* Toolbar Content */
+
+#RUKZUKtoolbar .header {
+	height: 32px;
+	background: #323232;
+	display: table;
+}
+
+
+#RUKZUKtoolbar .name {
+    color: #FFFFFF;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    font-size: 11px;
+    font-style: normal;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
+    text-decoration: none;
+    text-indent: 0;
+    text-overflow: ellipsis;
+	max-width: 100px;
+    overflow: hidden;
+    white-space: nowrap;
+	padding-left: 27px;
+    padding-right: 27px;
+	display: table-cell;
+	width: 100%;
+	vertical-align: middle;
+	padding-top: 1px;
+    background: rgb(51, 52, 53);
+	cursor: pointer;
+}
+
+#RUKZUKtoolbar .buttons {
+    background: rgb(9, 7, 6);
+	display: table-cell;
+	white-space: nowrap;
+	vertical-align: middle;
+}
+
+#RUKZUKtoolbar .action {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+	opacity: 0.8;
+}
+
+#RUKZUKtoolbar div.action:hover {
+	opacity: 1;
+}
+
+#RUKZUKtoolbar .action span {
+    height: 32px;
+    width: 32px;
+	display: block;
+    background: url(../icons/toolbarAddStyle.png) center center no-repeat;
+}
+
+#RUKZUKtoolbar .moduleIcon {
+    display: inline-block;
+    position: absolute;
+    top: 1px;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    margin: 7px;
+    cursor: pointer;
+}
+
+
+
+#RUKZUKtoolbar .extensionUnitButtons:empty {
+    display: none;
+}
+
+#RUKZUKtoolbar .extensionUnitButtons {
+    border-top: 2px solid #5c5c5c;
+    background: #454444;
+    line-height: 0;
+}
+
+#RUKZUKtoolbar .extensionUnitButtons div:last-type-of {
+    margin-right: 0px;
+}
+
+#RUKZUKtoolbar .extensionUnitButtons div {
+    display: inline-block;
+    padding: 8px;
+    margin-right: 1px;
+    cursor: pointer;
+
+    /* bg button*/
+    background: #323232;
+}
+
+#RUKZUKtoolbar .extensionUnitButtons div:hover {
+    background: #303030;
+}
+
+#RUKZUKtoolbar .extensionUnitButtons div.active,
+#RUKZUKtoolbar .extensionUnitButtons div.active:hover {
+    background: #000;
+
+}
+
+#RUKZUKtoolbar .extensionUnitButtons div img {
+    width: 16px;
+    height: 16px;
+}

@@ -1,0 +1,46 @@
+{
+    "assets":{
+        "css":[
+            {
+                "file":"style.css"
+            },
+            {
+                "file":"notlive\/editMode.css",
+                "mode":"edit"
+            }
+        ],
+        "js":[
+            {
+                "file":"notlive\/editMode.js",
+                "type":"module",
+                "mode":"edit"
+            }
+        ]
+    },
+    "i18n": {
+        "msg.emptyInEditMode": {
+            "de": "Alle direkt unterhalb des Page-Block-Bereichs liegenden Module werden zu Page-Blocks. Page-Blocks kannst du auf einer Seite beliebig oft einfügen und sortieren. Bei neuen Seiten ist dieser Bereich zunächst leer.",
+            "en": "All subordinate modules of the page block area are page blocks. Page blocks can be added and sorted multiple times in every page. In new pages this area is empty."
+        },
+        "toolbar.actionMoveUp": {
+            "de": "Nach oben",
+            "en": "Move up"
+        },
+        "toolbar.actionMoveDown": {
+            "de": "Nach unten",
+            "en": "Move down"
+        },
+        "toolbar.actionInsert": {
+            "de": "Page-Block einfügen",
+            "en": "Insert page block"
+        },
+        "toolbar.actionDuplicate": {
+            "de": "Duplizieren",
+            "en": "Clone"
+        },
+        "toolbar.actionRemove": {
+            "de": "Löschen",
+            "en": "Delete"
+        }
+    }
+}

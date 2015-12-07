@@ -1,0 +1,12 @@
+{
+    "name": "{\"de\":\"Textspalten\",\"en\":\"Text Columns\"}",
+    "description": "{\"de\":\"Teilt ein Textfeld in mehrere Spalten auf. Ermöglicht automatische Textumbrüche über mehrere Spalten.\",\"en\":\"Seperates a text field into several columns. Enables responsive text wrapping over multiple columns.\"}",
+    "version": "dev",
+    "icon": "text_columns.png",
+    "category": "90",
+    "moduleType": "extension",
+    "allowedChildModuleType": "",
+    "reRenderRequired": false,
+    "apiType": "APIv1",
+    "ghostContainerMode": "force_off"
+}

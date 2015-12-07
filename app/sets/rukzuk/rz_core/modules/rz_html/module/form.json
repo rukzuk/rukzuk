@@ -1,0 +1,204 @@
+{
+    "form": [
+        {
+            "id": "9b68effe-95e3-4c14-9582-82b370ee7f74",
+            "name": "{\"de\":\"Eigenschaften &lt;BODY&gt;-Bereich\",\"en\":\"Properties &lt;BODY&gt;\"}",
+            "icon": "",
+            "formGroupData": [
+                {
+                    "params": [
+                        {
+                            "name": "CMSvar",
+                            "value": "htmlCode",
+                            "allowBlank": false,
+                            "minLength": 3,
+                            "maskRe": {},
+                            "stripCharsRe": {},
+                            "xtype": "textfield",
+                            "emptyText": "__i18n_generatedFormPanel.varNameEmptyText",
+                            "fieldLabel": "__i18n_generatedFormPanel.varNameLabel"
+                        },
+                        {
+                            "name": "xtype",
+                            "value": "textarea",
+                            "xtype": null
+                        },
+                        {
+                            "name": "isMeta",
+                            "value": false,
+                            "fieldLabel": "__i18n_formElements.isGlobal",
+                            "xtype": "checkbox"
+                        },
+                        {
+                            "name": "fieldLabel",
+                            "value": "{\"de\":\"Zum Einbinden von Embed-Codes, Tracking-Codes, …\",\"en\":\"For embed codes, tracking codes, …\"}",
+                            "xtype": "textfield",
+                            "allowBlank": true,
+                            "emptyText": "__i18n_formElements.fieldLabelOptionalEmptyText",
+                            "fieldLabel": "__i18n_formElements.fieldLabel"
+                        },
+                        {
+                            "name": "height",
+                            "value": 200,
+                            "xtype": "numberfield",
+                            "allowBlank": false,
+                            "fieldLabel": "__i18n_formElements.heightLabel"
+                        },
+                        {
+                            "name": "value",
+                            "value": "",
+                            "xtype": null
+                        }
+                    ],
+                    "descr": {
+                        "text": "__i18n_formElements.elementTextArea",
+                        "iconCls": "textarea",
+                        "hasValue": true
+                    }
+                },
+                {
+                    "params": [
+                        {
+                            "name": "xtype",
+                            "value": "ux-multilinelabel",
+                            "xtype": null
+                        },
+                        {
+                            "name": "hideLabel",
+                            "value": true,
+                            "xtype": null
+                        },
+                        {
+                            "name": "text",
+                            "xtype": "textarea",
+                            "height": 200,
+                            "value": "{\"de\":\"Hinweis: Externe Dateien mit http://-Protokoll werden aufgrund der Sicherheitseinstellungen der Browser möglicherweise erst nach dem Publizieren angezeigt.\",\"en\":\"Note: External files with http:// protocol may only appear after publishing due to the browsers security preferences.\"}",
+                            "fieldLabel": "__i18n_formElements.commentLabel"
+                        },
+                        {
+                            "name": "autoLink",
+                            "value": false,
+                            "xtype": null
+                        },
+                        {
+                            "name": "cls",
+                            "value": "modulecomment",
+                            "xtype": null
+                        },
+                        {
+                            "name": "value",
+                            "xtype": null
+                        }
+                    ],
+                    "descr": {
+                        "id": "Comment",
+                        "text": "__i18n_formElements.elementComment",
+                        "iconCls": "plaintext"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "c064250f-15ef-4064-bb0c-937c1f1d6e3f",
+            "name": "{\"de\":\"Eigenschaften &lt;HEAD&gt;-Bereich\",\"en\":\"Properties &lt;HEAD&gt;\"}",
+            "icon": "",
+            "formGroupData": [
+                {
+                    "params": [
+                        {
+                            "name": "CMSvar",
+                            "value": "headCode",
+                            "allowBlank": false,
+                            "minLength": 3,
+                            "maskRe": {},
+                            "stripCharsRe": {},
+                            "xtype": "textfield",
+                            "emptyText": "__i18n_generatedFormPanel.varNameEmptyText",
+                            "fieldLabel": "__i18n_generatedFormPanel.varNameLabel"
+                        },
+                        {
+                            "name": "xtype",
+                            "value": "textarea",
+                            "xtype": null
+                        },
+                        {
+                            "name": "isMeta",
+                            "value": false,
+                            "fieldLabel": "__i18n_formElements.isGlobal",
+                            "xtype": "checkbox"
+                        },
+                        {
+                            "name": "fieldLabel",
+                            "value": "{\"de\":\"Zum Beispiel für Meta-Tags\",\"en\":\"For example for meta tags\"}",
+                            "xtype": "textfield",
+                            "allowBlank": true,
+                            "emptyText": "__i18n_formElements.fieldLabelOptionalEmptyText",
+                            "fieldLabel": "__i18n_formElements.fieldLabel"
+                        },
+                        {
+                            "name": "height",
+                            "value": 200,
+                            "xtype": "numberfield",
+                            "allowBlank": false,
+                            "fieldLabel": "__i18n_formElements.heightLabel"
+                        },
+                        {
+                            "name": "value",
+                            "value": "",
+                            "xtype": null
+                        }
+                    ],
+                    "descr": {
+                        "text": "__i18n_formElements.elementTextArea",
+                        "iconCls": "textarea",
+                        "hasValue": true
+                    }
+                },
+                {
+                    "params": [
+                        {
+                            "name": "xtype",
+                            "value": "ux-multilinelabel",
+                            "xtype": null
+                        },
+                        {
+                            "name": "hideLabel",
+                            "value": true,
+                            "xtype": null
+                        },
+                        {
+                            "name": "text",
+                            "xtype": "textarea",
+                            "height": 200,
+                            "value": "{\"de\":\"Hinweis: Externe Dateien mit http://-Protokoll werden aufgrund der Sicherheitseinstellungen der Browser möglicherweise erst nach dem Publizieren angezeigt.\",\"en\":\"Note: External files with http:// protocol may only appear after publishing due to the browsers security preferences.\"}",
+                            "fieldLabel": "__i18n_formElements.commentLabel"
+                        },
+                        {
+                            "name": "autoLink",
+                            "value": false,
+                            "xtype": null
+                        },
+                        {
+                            "name": "cls",
+                            "value": "modulecomment",
+                            "xtype": null
+                        },
+                        {
+                            "name": "value",
+                            "xtype": null
+                        }
+                    ],
+                    "descr": {
+                        "id": "Comment",
+                        "text": "__i18n_formElements.elementComment",
+                        "iconCls": "plaintext"
+                    }
+                }
+            ]
+        }
+    ],
+    "formValues": {
+        "htmlCode": "",
+        "headCode": ""
+    }
+}

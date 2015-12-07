@@ -1,0 +1,67 @@
+.rz_flexbox  > div > .isModule > .showModuleWidth {
+    font-size: 11px !important;
+	font-family: 'Trebuchet MS', sans-serif !important;
+	font-weight: normal !important;
+	line-height: 100% !important;
+	color: white !important;
+	padding: 1px 11px 1px 0 !important;
+	margin: 0 !important;
+	position: absolute !important;
+	z-index: 10611 !important;
+	pointer-events: all !important;
+	top: 0 !important;
+	left: 50% !important;
+	height: 11px !important;
+	display: none;
+	cursor: pointer !important;
+	background: url(dropdown.png) center right no-repeat #323232 !important;
+}
+.showModuleWidth  > .widthOptionDropdown  {
+    background: #454444;
+    text-align: right;
+    position: absolute;
+    width: 100%;
+    box-sizing: border-box;
+	display: none;
+}
+.showModuleWidth  > .widthOptionDropdown  > div {
+	pointer-events: all !important;
+	padding: 2px;
+}
+.showModuleWidth  > .widthOptionDropdown  > div:hover {
+	background: #bc4b00;
+}
+.rz_flexbox  > div > .isModule > .resizer {
+	position: absolute !important;
+    width: 19px !important;
+    height: 13px !important;
+    cursor: w-resize !important;
+    pointer-events: all !important;
+    z-index: 10611 !important;
+	top: 0 !important;
+	right: 50% !important;
+	background: url(resize.png) center center no-repeat #323232 !important;
+	padding: 0 !important;
+	margin: 0 !important;
+	display: none;
+}
+
+body.RUKZUKenableInputHints .isModule.CMShover > .showModuleWidth, body.RUKZUKenableInputHints .isModule.CMShover > .resizer {
+    display: block;
+    background-color: #666 !important;
+}
+body.RUKZUKenableInputHints .isModule.CMSselected > .showModuleWidth, body.RUKZUKenableInputHints .isModule.CMSselected > .resizer {
+    display: block;
+}
+
+
+/* UI blocker for resize handles */
+div.uiBlocker {
+    cursor: w-resize;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 11000;
+}

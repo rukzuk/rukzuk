@@ -1,0 +1,13 @@
+.rz_form .vf__main_error {
+    color: red;
+    font-size: small;
+}
+
+.rz_form_field_hide {
+    display: none;
+}
+
+.rz_form .noshow,
+.rz_form .noshow input {
+    display: none;
+}

@@ -1,0 +1,12 @@
+{
+    "name": "{\"de\":\"Abstände\",\"en\":\"Padding and Margin\"}",
+    "description": "{\"de\":\"Innen- und Außenabstände in Pixeln oder Prozent.\",\"en\":\"Padding and margin in pixel or percent.\"}",
+    "version": "dev",
+    "icon": "style-abstaende.png",
+    "category": "10",
+    "moduleType": "extension",
+    "allowedChildModuleType": "",
+    "reRenderRequired": false,
+    "apiType": "APIv1",
+    "ghostContainerMode": "force_off"
+}

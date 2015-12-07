@@ -1,0 +1,12 @@
+{
+    "name": "{\"de\":\"Position\",\"en\":\"Position\"}",
+    "description": "{\"de\":\"Freie Positionierung von Modulen und Elementen.\",\"en\":\"Enables free positioning of modules and elements.\"}",
+    "version": "dev",
+    "icon": "style-resize.png",
+    "category": "40",
+    "moduleType": "extension",
+    "allowedChildModuleType": "",
+    "reRenderRequired": false,
+    "apiType": "APIv1",
+    "ghostContainerMode": "force_off"
+}

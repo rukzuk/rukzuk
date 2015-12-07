@@ -1,0 +1,12 @@
+{
+    "name": "{\"de\":\"Bild\",\"en\":\"Image\"}",
+    "description": "{\"de\":\"Einbetten von Bildern und Grafiken (Dateiformate: jpg, png, gif). Bildtitel, Bildqualität und Höhe können eingestellt werden. Die Bildbreite ergibt sich vom übergeordneten Modul. Die Bildauflösung wird automatisch für die verschiedenen Endgeräte optimiert.\",\"en\":\"Embedding of images and graphics (supported file formats: jpg, png, gif). Image title, quality and height can be set. The image width is determined from the superior module. The optimal image resolution will be choosen automatically depending on the device.\"}",
+    "version": "dev",
+    "icon": "image.png",
+    "category": "{\"de\":\" Inhalt\",\"en\":\" Content\"}",
+    "moduleType": "default",
+    "allowedChildModuleType": "*",
+    "ghostContainerMode": "force_off",
+    "reRenderRequired": false,
+    "apiType": "APIv1"
+}

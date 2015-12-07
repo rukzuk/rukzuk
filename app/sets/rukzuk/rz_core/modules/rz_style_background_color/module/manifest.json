@@ -1,0 +1,12 @@
+{
+    "name": "{\"de\":\"Hintergrund-Farbe\",\"en\":\"Background Color\"}",
+    "description": "{\"de\":\"Einfärben des Hintergrunds mit einer Farbe aus dem Farbschema.\",\"en\":\"Fill the background with colors from the color scheme.\"}",
+    "version": "dev",
+    "icon": "style-background-color.png",
+    "category": "20",
+    "moduleType": "extension",
+    "allowedChildModuleType": "",
+    "reRenderRequired": false,
+    "apiType": "APIv1",
+    "ghostContainerMode": "force_off"
+}

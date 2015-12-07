@@ -1,0 +1,28 @@
+{
+    "descr": {
+        "id": "FieldSet",
+        "text": "__i18n_formElements.elementFieldSet",
+        "iconCls": "fieldset",
+        "allowChildNodes": true
+    },
+    "params": [
+        {
+            "name": "xtype",
+            "value": "CMSfieldset",
+            "xtype": null
+        },
+        {
+            "name": "fieldLabel",
+            "value": "",
+            "xtype": "textfield",
+            "allowBlank": true,
+            "emptyText": "__i18n_formElements.fieldLabelOptionalEmptyText",
+            "fieldLabel": "__i18n_formElements.fieldLabel"
+        },
+        {
+            "name": "collapsible",
+            "value": false,
+            "xtype": null
+        }
+    ]
+}

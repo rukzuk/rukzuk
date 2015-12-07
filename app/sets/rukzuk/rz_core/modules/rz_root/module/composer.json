@@ -1,0 +1,7 @@
+{
+    "name": "rukzuk/rz_root",
+    "description": "Rukzuk Root Module",
+    "require": {
+        "nette/mail": "2.3.*"
+     }
+}

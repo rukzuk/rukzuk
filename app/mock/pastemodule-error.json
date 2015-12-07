@@ -1,0 +1,13 @@
+{
+    "success": false,
+    "error": [{
+        "code": "TODO-existingModuleErrorCode",
+        "param": {
+            "modules": [{
+                "id": 123
+            }, {
+                "id": 456
+            }]
+        }
+    }]
+}

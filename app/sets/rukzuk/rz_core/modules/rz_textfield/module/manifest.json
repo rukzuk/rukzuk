@@ -1,0 +1,12 @@
+{
+    "name": "{\"de\":\"Textfeld\",\"en\":\"Text\"}",
+    "description": "{\"de\":\"Texte eingeben und bearbeiten. Erlaubte Schriftauszeichnungen und Elemente wie Links und Überschriften müssen zunächst im Modul aktiviert werden.\",\"en\":\"Enter and edit text. Allowed font styles and elements as links and headlines have to be activated before used.\"}",
+    "version": "dev",
+    "icon": "page_white_text.png",
+    "category": "{\"de\":\" Inhalt\",\"en\":\" Content\"}",
+    "moduleType": "default",
+    "allowedChildModuleType": "extension",
+    "ghostContainerMode": "force_off",
+    "reRenderRequired": false,
+    "apiType": "APIv1"
+}

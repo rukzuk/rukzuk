@@ -1,0 +1,21 @@
+{
+    "success": false,
+    "error": [{
+        "code": "TODO-conflicterrorcode-SBMCS-852"
+    }],
+    "data": {
+        "importId": "IMPORT-123",
+        "conflict": {
+            "type": "module",
+            "modules": [{
+                "id": "MODULE-123",
+                "oldName": "Basismodul",
+                "newName": "!!!!1111Basismodul neu"
+            }, {
+                "id": "MODULE-456",
+                "oldName": "Eierlegendes Wollmilchsaumodul",
+                "newName": "Kannnixmodul"
+            }]
+        }
+    }
+}

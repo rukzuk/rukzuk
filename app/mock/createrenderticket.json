@@ -1,0 +1,16 @@
+{
+    "success": true,
+    "error": [],
+    "data": {
+        "id": "TICKET-123456-TICKET",
+        "url": "http://sbcms/s/TICKET-123456-TICKET",
+        "protect": false,
+        "credentials": {
+            "username": "user1",
+            "password": "password1"
+        },
+        "ticketLifetime": 120,
+        "sessionLifetime": 300,
+        "remainingCalls": 10
+    }
+}

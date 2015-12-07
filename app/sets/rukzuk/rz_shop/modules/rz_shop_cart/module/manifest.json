@@ -1,0 +1,13 @@
+{
+    "name": "{\"de\": \"Warenkorb\",\"en\": \"Shopping Cart\"}",
+    "description": "",
+    "version": "dev",
+    "icon": "shop-cart.svg",
+    "category": "{\"de\":\"Shop\",\"en\":\"Shop\"}",
+    "moduleType": "default",
+    "allowedChildModuleType": "extension",
+    "reRenderRequired": false,
+    "ghostContainerMode": "force_off",
+    "apiType": "APIv1",
+    "sessionRequired": true
+}

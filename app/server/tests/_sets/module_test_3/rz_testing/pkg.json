@@ -1,0 +1,12 @@
+{
+    "name": {
+        "en": "rz_testing.name"
+    },
+    "websiteSettings": [],
+    "pageTypes": [],
+    "modules": [
+        "rz_tests_global_default_module_v2",
+        "rz_tests_global_extension_module_v2",
+        "rz_tests_global_root_module_v2"
+    ]
+}

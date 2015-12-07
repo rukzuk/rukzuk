@@ -1,0 +1,45 @@
+/*!
+ * Ext JS Library 3.1.1
+ * Copyright(c) 2006-2010 Ext JS, LLC
+ * licensing@extjs.com
+ * http://www.extjs.com/license
+ */
+/* FileUploadField component styles */
+.x-form-file-wrap,
+.ext-ie .x-toolbar-cell .x-form-file-wrap {
+  position: relative;
+  height: 40px;
+  overflow: hidden;
+  vertical-align: top; }
+
+.x-form-file-wrap .x-form-file {
+  position: absolute;
+  right: 0;
+  -moz-opacity: 0;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  z-index: 2;
+  height: 40px;
+  cursor: pointer; }
+
+.x-form-file-wrap .x-form-file-btn {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  -moz-box-shadow: none; }
+
+.x-form-file-wrap .x-form-file-text {
+  position: absolute;
+  left: 0;
+  z-index: 3;
+  color: #777; }
+
+.x-form-file-btn button {
+  width: auto !important; }
+
+.x-form-file-btn {
+  margin: 0 !important; }
+
+.CMSimortwebsite {
+  margin: 15px auto; }

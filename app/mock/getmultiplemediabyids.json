@@ -1,0 +1,15 @@
+{
+    "success": true,
+    "error": [],
+    "data": {
+        "media": {
+            "id1": {
+                "name": "Testdatei 1"
+            },
+            "id2": false,
+            "id3": {
+                "name": "Testdatei 3"
+            }
+        }
+    }
+}

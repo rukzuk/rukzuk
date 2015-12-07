@@ -1,0 +1,108 @@
+@import 'colors';
+@import 'mixins';
+
+.CMSinsertunitwindow {
+    .x-form-radio-group:not(.x-form-invalid),
+    .x-form-radio-group {
+        .x-form-element .x-form-check-wrap {
+            padding: 20px 20px 10px 20px;
+
+            label {
+                cursor: pointer;
+                display: block;
+                height: 60px;
+                width: 240px;
+                line-height: 60px;
+                padding: 0;
+                margin: 0;
+                text-align: center;
+            }
+
+        }
+
+        .inside.x-form-element .x-form-check-wrap label {
+            background: $bg-button-top url('../images/innerhalb.png') 10px 10px no-repeat;
+        }
+        .inside.x-form-element .x-form-check-wrap:not(.x-item-disabled) label:hover {
+            background: $bg-button-hover-top url('../images/innerhalb.png') 10px 10px no-repeat;
+        }
+        .inside.x-form-element .x-form-check-wrap input:checked + label,
+        .inside.x-form-element .x-form-check-wrap input:checked + label:hover {
+            background: url('../images/innerhalb.png') 10px 10px no-repeat;
+        }
+
+        .below.x-form-element .x-form-check-wrap label {
+            background: $bg-button-top url('../images/unterhalb.png') 10px 10px no-repeat;
+        }
+        .below.x-form-element .x-form-check-wrap:not(.x-item-disabled) label:hover {
+            background: $bg-button-hover-top url('../images/unterhalb.png') 10px 10px no-repeat;
+        }
+        .below.x-form-element .x-form-check-wrap input:checked + label,
+        .below.x-form-element .x-form-check-wrap input:checked + label:hover {
+            background: url('../images/unterhalb.png') 10px 10px no-repeat;
+        }
+
+        .above.x-form-element .x-form-check-wrap label {
+            background: $bg-button-top url('../images/unterhalb.png') 10px 10px no-repeat;
+        }
+        .above.x-form-element .x-form-check-wrap:not(.x-item-disabled) label:hover {
+            background: $bg-button-hover-top url('../images/unterhalb.png') 10px 10px no-repeat;
+        }
+        .above.x-form-element .x-form-check-wrap input:checked + label,
+        .above.x-form-element .x-form-check-wrap input:checked + label:hover {
+            background: url('../images/unterhalb.png') 10px 10px no-repeat;
+        }
+
+    }
+
+    .CMSunitselection {
+        overflow-y: auto;
+    }
+
+    .CMSunit {
+        padding: 20px;
+        line-height: 16px;
+        border-bottom: $border-dark 1px solid;
+        cursor: pointer;
+    }
+}
+
+.CMSinsertpagewindow {
+    /* panel header */
+    .x-panel-header {
+      background-color: transparent;
+      padding: 13px 12px 0 13px;
+      .x-panel-header-text {
+        text-transform: none;
+        font-size: 12px;
+      }
+    }
+
+    .x-form-radio-group .x-form-element {
+
+        .x-form-check-wrap,
+        label {
+            background-repeat: no-repeat;
+            padding-top: 30px;
+        }
+
+        input:checked + label,
+        label {
+            cursor: pointer;
+            background-position: left bottom;
+        }
+
+        .x-form-check-wrap {
+            background-position: 10px 5px;
+        }
+
+        &.inside .x-form-check-wrap {
+            background-image: url("../images/child.png");
+        }
+
+        &.below .x-form-check-wrap {
+            background-image: url("../images/sibling.png");
+        }
+    }
+}
+

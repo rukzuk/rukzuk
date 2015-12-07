@@ -1,0 +1,52 @@
+@import "colors";
+@import "mixins";
+
+.CMSchoosebaselayoutwindow {
+    .baselayout-wrap {
+        display: inline-table;
+        margin-top: 6.25%;
+        margin-left: 6.25%;
+        width: 25%;
+        cursor: pointer;
+        box-sizing: border-box;
+        box-shadow: 0px 0px 10px $bg-layer-mid-dark;
+        position: relative;
+        transition: box-shadow .25s ease;
+
+        &:last-child {
+            margin-bottom: 6.25%;
+        }
+
+        &:hover {
+            box-shadow: 0px 0px 10px $bg-layer-dark;
+
+            .baselayout-titlebar {
+                @include gradient-vertical($bg-button-hover-top, $bg-button-hover-bottom);
+            }
+        }
+
+        .baselayout-thumb {
+            background-color: white;
+            position: relative;
+            height: 25%;
+        }
+
+        .baselayout-titlebar {
+            width: 100%;
+            height: 50px;
+            position: relative;
+            display: table;
+            @include gradient-vertical($bg-button-top, $bg-button-bottom);
+
+            span {
+                display: table-cell;
+                vertical-align: middle;
+                text-align: center;
+                width: calc(100% - 20px);
+                font-size: 14px;
+                padding: 10px;
+                text-shadow: 0px 0px 1px black;
+            }
+        }
+    }
+}

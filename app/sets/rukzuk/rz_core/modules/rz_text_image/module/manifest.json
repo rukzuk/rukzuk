@@ -1,0 +1,12 @@
+{
+    "name": "{\"de\":\"Text mit Bild\",\"en\":\"Text with Image\"}",
+    "description": "{\"de\":\"Textfeld mit optionalem Bild (Kombination aus Textfeld- und Bildmodul).\",\"en\":\"Text with optional image (combination of text and image module).\"}",
+    "version": "dev",
+    "icon": "text-image.svg",
+    "category": "{\"de\":\" Inhalt\",\"en\":\" Content\"}",
+    "moduleType": "default",
+    "allowedChildModuleType": "extension",
+    "ghostContainerMode": "force_off",
+    "reRenderRequired": false,
+    "apiType": "APIv1"
+}

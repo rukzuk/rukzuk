@@ -1,0 +1,52 @@
+[
+    {
+        "id": "UNIT-ID-ROOT",
+        "moduleId": "rz_root",
+        "name": "",
+        "formValues": {},
+        "expanded": true,
+        "ghostContainer": false,
+        "children": [
+            {
+                "id": "UNIT-ID-IMAGE",
+                "moduleId": "rz_image",
+                "name": "",
+                "formValues": {
+                    "page_values_not_changed-template_values_not_changed": {
+                        "foo-1": "bar",
+                        "bar-1": "foo"
+                    },
+                    "page_values_not_changed-template_value_changed": {
+                        "foo-2": "bar",
+                        "bar-2": "foo"
+                    },
+                    "page_values_not_changed-template_value_set_to_null": {
+                        "foo-3": "bar",
+                        "bar-3": "foo"
+                    },
+                    "page_values_changed-template_value_set_to_null": {
+                        "foo-4": "bar",
+                        "bar-4": "foo"
+                    },
+                    "all_page_value_changed-template_values_not_changed" : {
+                        "foo-5": "bar",
+                        "bar-5": "foo"
+                    },
+                    "all_page_value_changed-template_values_also_changed" : {
+                        "foo-6": "bar",
+                        "bar-6": "foo"
+                    },
+                    "some_page_values_changed-template_values_not_changed" : {
+                        "foo-7": "bar",
+                        "bar-7": "foo"
+                    }
+                },
+                "expanded": true,
+                "ghostContainer": false,
+                "description": "",
+                "visibleFormGroups": [],
+                "children": []
+            }
+        ]
+    }
+]

@@ -1,0 +1,11 @@
+{
+    "name":"{\"de\":\"Erweiterungs Modul fuer Testing\",\"en\":\"Extension Module for testing\"}",
+    "description":"",
+    "version":"test",
+    "icon":"application.png",
+    "category":"{\"de\":\"Erweiterungs Module\",\"en\":\"Extension Modules\"}",
+    "moduleType":"extension",
+    "allowedChildModuleType":"*",
+    "reRenderRequired":true,
+    "apiType":"APIv1"
+}

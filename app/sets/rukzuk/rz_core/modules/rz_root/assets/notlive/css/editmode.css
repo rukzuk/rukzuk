@@ -1,0 +1,129 @@
+body {
+    /* force scrollbars to prevent content jumping */
+    overflow-x: scroll;
+    overflow-y: scroll;
+}
+
+/* hides the outline in WebKit */
+*[contentEditable="true"] {
+    outline: none;
+}
+
+/* show table cells when editing */
+body.RUKZUKenableSelectionHelper *[contentEditable="true"] table,
+body.RUKZUKenableSelectionHelper *[contentEditable="true"] table td,
+body.RUKZUKenableSelectionHelper *[contentEditable="true"] table th,
+body.RUKZUKenableSelectionHelper *[contentEditable="true"] table caption {
+    outline: 1px dashed rgba(155, 13, 84, .2);
+    outline-offset: 0;
+}
+
+/* make sure focus can be set into empty cells */
+body.RUKZUKenableSelectionHelper *[contentEditable="true"] table td:empty {
+    padding: 5px;
+}
+
+body.RUKZUKenableSelectionMarker .CMSselected.CMSeditable {
+    outline: 1px dashed #303030 !important;
+    outline-offset: -1px;
+}
+
+body.RUKZUKenableSelectionHelper .CMShover.CMSeditable *:not(.isModule) {
+    pointer-events: none;
+}
+
+body.RUKZUKenableSelectionHelper .isModule {
+    pointer-events: all;
+}
+
+body.RUKZUKenableSelectionHelper .CMShover.CMSeditable {
+    outline: 1px dashed #000;
+}
+
+/* toolbar parent ghostContainer hint */
+body.RUKZUKenableSelectionHelper .CMSghost {
+    outline: 1px dashed #aaa;
+}
+
+.RUKZUKmissingInputHint {
+    display: none;
+}
+
+/* RUKZUKenableInputHints (used for modules in page mode which have ghostChildren, e.g. module add button in box) */
+
+body.RUKZUKenableInputHints .RUKZUKmissingInputHint {
+    display: table;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    text-align: center;
+    min-height: 50px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    font-size: 13px;
+    color: #000;
+}
+
+body.RUKZUKenableInputHints .RUKZUKmissingInputHint div {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+body.RUKZUKenableInputHints .RUKZUKmissingInputHint button {
+    font-family: inherit;
+    font-size: inherit;
+    color: #000;
+    margin: 10px;
+    min-height: 28px;
+    min-width: 28px;
+    outline: 0;
+    cursor: pointer;
+    border: #8F8F8F 1px dashed;
+    pointer-events: all;
+    background-color: #eee;
+    z-index: 9999;
+    padding: 0 10px;
+}
+
+body.RUKZUKenableInputHints .RUKZUKmissingInputHint button.add {
+    background: rgba(6, 8, 10, 0.66) url(../icons/addModule.png) 0 0 no-repeat;
+    border: none;
+    width: 32px;
+    height: 32px;
+}
+
+/* empty box */
+body.RUKZUKenableInputHints .RUKZUKemptyBox ,
+body.RUKZUKenableInputHints .RUKZUKaddModuleBox {
+    background-image: url(../icons/patternPreview.png);
+    width: 100%;
+    min-height: 50px;
+    display: block;
+    background-color: rgba(0, 0, 0, .2);
+}
+
+body.RUKZUKenableInputHints .RUKZUKemptyBox {
+    height: 100%;
+}
+
+.RUKZUKbackground {
+    background: url(../icons/backgroundGrey.png) 0 0 repeat scroll rgb(150, 150, 150);
+}
+
+/* prevent selection on click in Firefox; caused by our pointer-events:none */
+img.responsiveImage {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.dyncssErrorConsole {
+    overflow: auto;
+    width: 90%;
+    padding: 20px;
+    height: 120px;
+    background-color: red;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin-left: 5%;
+}

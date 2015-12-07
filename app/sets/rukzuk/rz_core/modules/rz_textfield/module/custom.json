@@ -1,0 +1,230 @@
+{
+    "assets":{
+        "css":[
+            {
+                "file":"style.css"
+            }
+        ],
+        "js":[
+            {
+                "file":"notlive\/textField.js",
+                "type":"module",
+                "mode":"edit"
+            }
+        ]
+    },
+    "i18n":{
+        "selector.paragraph":{
+            "de":"Absatz",
+            "en":"Paragraph"
+        },
+        "selector.links":{
+            "de":"Links",
+            "en":"Links"
+        },
+        "selector.linkExternal":{
+            "de":"Link extern",
+            "en":"External link"
+        },
+        "selector.lists":{
+            "de":"Listen",
+            "en":"Lists"
+        },
+        "selector.listItems":{
+            "de":"Listen-Elemente",
+            "en":"List items"
+        },
+        "selector.listUnordered":{
+            "de":"Ungeordnete Listen",
+            "en":"Unordered lists"
+        },
+        "selector.listUnorderedItems":{
+            "de":"Ungeordnete Liste: Elemente",
+            "en":"Unordered list items"
+        },
+        "selector.listOrdered":{
+            "de":"Geordnete Listen",
+            "en":"Ordered lists"
+        },
+        "selector.listOrderedItems":{
+            "de":"Geordnete Liste: Elemente",
+            "en":"Ordered list items"
+        },
+        "selector.headlines":{
+            "de":"\u00dcberschriften (1-6)",
+            "en":"Headings (1-6)"
+        },
+        "selector.headline1":{
+            "de":"\u00dcberschrift 1",
+            "en":"Heading 1"
+        },
+        "selector.headline2":{
+            "de":"\u00dcberschrift 2",
+            "en":"Heading 2"
+        },
+        "selector.headline3":{
+            "de":"\u00dcberschrift 3",
+            "en":"Heading 3"
+        },
+        "selector.headline4":{
+            "de":"\u00dcberschrift 4",
+            "en":"Heading 4"
+        },
+        "selector.headline5":{
+            "de":"\u00dcberschrift 5",
+            "en":"Heading 5"
+        },
+        "selector.headline6":{
+            "de":"\u00dcberschrift 6",
+            "en":"Heading 6"
+        },
+        "selector.customStyle1":{
+            "de":"Formatvorlage 1",
+            "en":"Custom style 1"
+        },
+        "selector.customStyle2":{
+            "de":"Formatvorlage 2",
+            "en":"Custom style 2"
+        },
+        "selector.customStyle3":{
+            "de":"Formatvorlage 3",
+            "en":"Custom style 3"
+        },
+        "selector.customStyle4":{
+            "de":"Formatvorlage 4",
+            "en":"Custom style 4"
+        },
+        "selector.table":{
+            "de":"Tabelle",
+            "en":"Table"
+        },
+        "selector.tableRow":{
+            "de":"Zeile",
+            "en":"Row"
+        },
+        "selector.tableColumn":{
+            "de":"Spalte",
+            "en":"Column"
+        }
+    },
+    "selectors":[
+        {
+            "title":"__i18n_selector.paragraph",
+            "selector":".text p",
+            "enableNthTypeOf":true
+        },
+        {
+            "title":"__i18n_selector.links",
+            "selector":".text a",
+            "enableNthTypeOf":true,
+            "items":[
+                {
+                    "title":"__i18n_selector.linkExternal",
+                    "selector":".text a[href^=\"http\"]",
+                    "enableNthTypeOf":true
+                }
+            ]
+        },
+        {
+            "title":"__i18n_selector.lists",
+            "selector":".text ul, .text ol",
+            "items":[
+                {
+                    "title":"__i18n_selector.listItems",
+                    "selector":"div.text li",
+                    "enableNthTypeOf":true
+                },
+                {
+                    "title":"__i18n_selector.listUnordered",
+                    "selector":"div.text ul",
+                    "items":[
+                        {
+                            "title":"__i18n_selector.listUnorderedItems",
+                            "selector":".text ul li",
+                            "enableNthTypeOf":true
+                        }
+                    ]
+                },
+                {
+                    "title":"__i18n_selector.listOrdered",
+                    "selector":"div.text ol",
+                    "items":[
+                        {
+                            "title":"__i18n_selector.listOrderedItems",
+                            "selector":".text ol li",
+                            "enableNthTypeOf":true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title":"__i18n_selector.headlines",
+            "selector":".text h1, .text h2, .text h3, .text h4, .text h5, .text h6",
+            "items":[
+                {
+                    "title":"__i18n_selector.headline1",
+                    "selector":"div.text h1",
+                    "enableNthTypeOf":true
+                },
+                {
+                    "title":"__i18n_selector.headline2",
+                    "selector":"div.text h2",
+                    "enableNthTypeOf":true
+                },
+                {
+                    "title":"__i18n_selector.headline3",
+                    "selector":"div.text h3",
+                    "enableNthTypeOf":true
+                },
+                {
+                    "title":"__i18n_selector.headline4",
+                    "selector":"div.text h4",
+                    "enableNthTypeOf":true
+                },
+                {
+                    "title":"__i18n_selector.headline5",
+                    "selector":"div.text h5",
+                    "enableNthTypeOf":true
+                },
+                {
+                    "title":"__i18n_selector.headline6",
+                    "selector":"div.text h6",
+                    "enableNthTypeOf":true
+                }
+            ]
+        },
+        {
+            "title":"__i18n_selector.customStyle1",
+            "selector":".text .rteStyle1"
+        },
+        {
+            "title":"__i18n_selector.customStyle2",
+            "selector":".text .rteStyle2"
+        },
+        {
+            "title":"__i18n_selector.customStyle3",
+            "selector":".text .rteStyle3"
+        },
+        {
+            "title":"__i18n_selector.customStyle4",
+            "selector":".text .rteStyle4"
+        },
+        {
+            "title":"__i18n_selector.table",
+            "selector":".text table",
+            "items":[
+                {
+                    "title":"__i18n_selector.tableRow",
+                    "selector":".text tr",
+                    "enableNthTypeOf":true
+                },
+                {
+                    "title":"__i18n_selector.tableColumn",
+                    "selector":".text td",
+                    "enableNthTypeOf":true
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+# Declare files that will always have LF
+*.sh text eol=lf
+# Images should be treated as binary
+# (binary is a macro for -text -diff)
+*.png     binary
+*.jepg    binary
+*.jpg     binary
+*.gif     binary
+
+# Text files
+*.php     text eol=lf
+*.sh 	  text eol=lf

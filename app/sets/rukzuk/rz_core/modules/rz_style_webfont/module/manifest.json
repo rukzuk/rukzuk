@@ -1,0 +1,12 @@
+{
+    "name": "{\"de\":\"Webfont\",\"en\":\"Webfont\"}",
+    "description": "{\"de\":\"Zum Einbinden eigener Schriftarten. Nötige Dateiformate: WOFF and TTF.\",\"en\":\"Use own fonts. WOFF and TTF files are required.\"}",
+    "version": "dev",
+    "icon": "font.png",
+    "category": "90",
+    "moduleType": "extension",
+    "allowedChildModuleType": "",
+    "reRenderRequired": false,
+    "apiType": "APIv1",
+    "ghostContainerMode": "force_off"
+}

@@ -1,0 +1,29 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# IDEs
+.buildpath
+.project
+.settings/
+.build/
+.idea/
+nbproject/
+atlassian-ide-plugin.xml
+*.iml
+
+# Backup Files
+*~
+*.swp
+*.bak
+
+# node
+node_modules
+
+# local config files
+tests/php/local.conf.php
+
+# other
+.grunt
+_SpecRunner.html
+build/

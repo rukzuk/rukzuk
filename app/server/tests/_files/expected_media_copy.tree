@@ -1,0 +1,22 @@
+{
+  "children":{
+    "foo.json":{
+      "type":"file"
+    },
+    "green.png":{
+      "type":"file"
+    },
+    "node.js":{
+      "type":"file"
+    },
+    "order.pdf":{
+      "type":"file"
+    },
+    "red.gif":{
+      "type":"file"
+    },
+    "sammy.js":{
+      "type":"file"
+    }
+  }
+}

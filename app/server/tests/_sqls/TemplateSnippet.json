@@ -1,0 +1,44 @@
+{
+    "template_snippet": [
+        {
+            "websiteid": "SITE-ae6e702f-10ac-4e1e-exmo-307e4b8765db-SITE",
+            "id": "TPLS-template-snip-pet0-test-000000000021-TPLS",
+            "name": "TEMPLATE_SNIPPET_NAME_21",
+            "description": "TEMPLATE_SNIPPET_DESCRIPTION_21",
+            "category": "TEMPLATE_SNIPPET_CATEGORY_21",
+            "content": "[{\"id\":\"MUNIT-00000000-0000-0000-0000-000000000001-MUNIT\",\"moduleId\":\"MODUL-0rap5eb8-0df3-47e9-exmo-90ae9d96d3c0-MODUL\",\"name\":\"SnippetUnit_01\",\"description\":\"\",\"formValues\":{},\"children\":[],\"deletable\":false,\"ghostContainer\":false,\"visibleFormGroups\":[]}]"
+        },
+        {
+            "websiteid": "SITE-ae6e702f-10ac-4e1e-exmo-307e4b8765db-SITE",
+            "id": "TPLS-template-snip-pet0-test-000000000022-TPLS",
+            "name": "TEMPLATE_SNIPPET_NAME_22",
+            "description": "TEMPLATE_SNIPPET_DESCRIPTION_22",
+            "category": "TEMPLATE_SNIPPET_CATEGORY_22",
+            "content": "[{\"id\":\"MUNIT-00000000-0000-0000-0000-000000000001-MUNIT\",\"moduleId\":\"MODUL-0rap5eb8-0df3-47e9-exmo-90ae9d96d3c0-MODUL\",\"name\":\"SnippetUnit_01\",\"description\":\"\",\"formValues\":{},\"children\":[],\"deletable\":false,\"ghostContainer\":false,\"visibleFormGroups\":[{\"id\":\"MUNIT-00000000-0000-0000-0000-000000000002-MUNIT\",\"moduleId\":\"MODUL-0rap5eb8-0df3-47e9-exmo-90ae9d96d3c0-MODUL\",\"name\":\"SnippetUnit_02\",\"description\":\"\",\"formValues\":{},\"children\":[],\"deletable\":false,\"ghostContainer\":false,\"visibleFormGroups\":[]}]}]"
+        },
+        {
+            "websiteid": "SITE-ae6e702f-10ac-4e1e-exmo-307e4b8765db-SITE",
+            "id": "TPLS-template-snip-pet0-test-000000000023-TPLS",
+            "name": "TEMPLATE_SNIPPET_NAME_23",
+            "description": "TEMPLATE_SNIPPET_DESCRIPTION_23",
+            "category": "TEMPLATE_SNIPPET_CATEGORY_23",
+            "content": "[]"
+        },
+        {
+            "websiteid": "SITE-im12maec-ovwr-4ea8-a477-t4e79e8e62m6-SITE",
+            "id": "TPLS-template-snip-pet0-test-000000000021-TPLS",
+            "name": "TEMPLATE_SNIPPET_NAME_21",
+            "description": "TEMPLATE_SNIPPET_DESCRIPTION_21",
+            "category": "TEMPLATE_SNIPPET_CATEGORY_21",
+            "content": "[{\"id\":\"MUNIT-00000000-0000-0000-0000-000000000001-MUNIT\",\"moduleId\":\"MODUL-0rap5eb8-0df3-47e9-exmo-90ae9d96d3c0-MODUL\",\"name\":\"SnippetUnit_01\",\"description\":\"\",\"formValues\":{},\"children\":[],\"deletable\":false,\"ghostContainer\":false,\"visibleFormGroups\":[]}]"
+        },
+        {
+            "websiteid": "SITE-1964e89c-22af-46cd-a651-fc42dc78fe50-SITE",
+            "id": "TPLS-website0-dele-te00-test-000000000001-TPLS",
+            "name": "NAME_WEBSITE_DELETE_TEST_1",
+            "description": "DESCRIPTION_WEBSITE_DELETE_TEST_1",
+            "category": "CATEGORY_WEBSITE_DELETE_TEST_1",
+            "content": "[]"
+        }
+    ]
+}

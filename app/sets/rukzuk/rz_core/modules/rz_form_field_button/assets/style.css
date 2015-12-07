@@ -1,0 +1,22 @@
+.rz_form_field_button > div {
+    display: table;
+    width: 100%;
+    position: relative;
+    table-layout: fixed;
+    vertical-align: top;
+    height: 100%;
+}
+
+.rz_form_field_button input[type=submit] {
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.rz_form_field_button input {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}

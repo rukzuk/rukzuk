@@ -1,0 +1,34 @@
+{
+    "assets":{
+        "css":[
+            {
+                "file":"animate.css"
+            },
+            {
+                "file":"style.css"
+            }
+        ],
+        "js":[
+            {
+                "file":"notlive\/animation.js",
+                "type":"module",
+                "mode":"edit"
+            },
+            {
+                "file":"jquery.fracs-0.15.0.js",
+                "type":"script"
+            },
+            {
+                "file":"animationInit.js",
+                "type":"module",
+                "mode":"live"
+            }
+        ]
+    },
+    "i18n":{
+        "error.insideExtensionModule":{
+            "de":"Hinweis: Der Style „Scroll-In-Animation“ funktioniert nicht innerhalb eines Selektors. Bitte den Style verschieben.",
+            "en":"Note: The style “Scroll-In-Animation” doesn't work inside selectors. Please move the style."
+        }
+    }
+}

@@ -1,0 +1,50 @@
+{
+    "descr": {
+        "id": "MultiSelectList",
+        "text": "__i18n_formElements.elementMultiSelectList",
+        "iconCls": "combo",
+        "hasValue": true
+    },
+    "params": [
+        {
+            "name": "xtype",
+            "value": "CMSselectlist",
+            "xtype": null
+        },
+        {
+            "name": "isMeta",
+            "value": false,
+            "fieldLabel": "__i18n_formElements.isGlobal",
+            "xtype": "checkbox"
+        },
+        {
+            "name": "fieldLabel",
+            "value": "__i18n_formElements.comboSelection",
+            "xtype": "textfield",
+            "allowBlank": true,
+            "emptyText": "__i18n_formElements.fieldLabelOptionalEmptyText",
+            "fieldLabel": "__i18n_formElements.fieldLabel"
+        },
+        {
+            "name": "options",
+            "value": [],
+            "xtype": "CMSkeyvaluetextarea",
+            "allowBlank": false,
+            "array": true,
+            "emptyText": "__i18n_formElements.listValuesEmptyText",
+            "fieldLabel": "__i18n_formElements.listValuesLabel"
+        },
+        {
+            "name": "multiSelect",
+            "value": true,
+            "xtype": "checkbox",
+            "fieldLabel": "__i18n_formElements.multiSelectEnableLabel"
+        },
+        {
+            "name": "height",
+            "value": "auto",
+            "xtype": "textfield",
+            "fieldLabel": "__i18n_formElements.heightLabel"
+        }
+    ]
+}

@@ -1,0 +1,79 @@
+/* Reset CSS */
+.cssReset,
+.cssReset:hover,
+.cssReset:active,
+.cssReset *,
+.cssReset *:hover,
+.cssReset *:active {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    font-size: 100%;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    line-height: 1;
+    vertical-align: baseline;
+    letter-spacing: normal;
+    text-align: left;
+    background: transparent;
+    background-clip: border-box;
+    border-radius: 0;
+    color: #ffffff;
+    text-transform: none;
+    text-shadow: none;
+    text-decoration: none;
+    -webkit-transition: none;
+       -moz-transition: none;
+        -ms-transition: none;
+         -o-transition: none;
+    transition: none;
+    -webkit-transform: none;
+       -moz-transform: none;
+        -ms-transform: none; 
+         -o-transform: none;
+    transform: none;
+    -webkit-box-shadow: none;
+       -moz-box-shadow: none;
+        -ms-box-shadow: none; 
+         -o-box-shadow: none;
+    box-shadow: none;
+    -webkit-text-stroke: none;
+
+}
+
+.cssReset a,
+.cssReset a:hover,
+.cssReset a:visited {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    color: #ffffff;
+}
+
+.cssReset ul,
+.cssReset ol {
+    list-style: none;
+}
+
+.cssReset blockquote,
+.cssReset q {
+    quotes: none;
+}
+
+.cssReset blockquote:before, 
+.cssReset blockquote:after,
+.cssReset q:before,
+.cssReset q:after {
+    content: '';
+    content: none;
+}
+
+.cssReset table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}

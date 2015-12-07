@@ -1,0 +1,28 @@
+{
+    "i18n":{
+        "testdata.page":{
+            "de":"Beispielseite",
+            "en":"Sample page"
+        },
+        "selector.breadcrumbNavLink":{
+            "de":"Alle Navigationslinks",
+            "en":"All navigation links"
+        },
+        "selector.breadcrumbNavSpacer":{
+            "de":"Alle Trennzeichen",
+            "en":"All spacers"
+        }
+    },
+    "selectors":[
+        {
+            "title":"__i18n_selector.breadcrumbNavLink",
+            "selector":"a.breadcrumbNavLink",
+			"enableNthTypeOf":true
+        },
+        {
+            "title":"__i18n_selector.breadcrumbNavSpacer",
+            "selector":"span.breadcrumbNavSpacer",
+			"enableNthTypeOf":true
+        }
+    ]
+}

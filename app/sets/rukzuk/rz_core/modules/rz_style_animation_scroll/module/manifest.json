@@ -1,0 +1,12 @@
+{
+    "name": "{\"de\":\"Scroll-In-Animation\",\"en\":\"Scroll-In Animation\"}",
+    "description": "{\"de\":\"Animiere Module wenn sie durch Scrollen sichtbar werden.\",\"en\":\"Animate modules when they become visible by scrolling the page.\"}",
+    "version": "dev",
+    "icon": "animation.png",
+    "category": "60",
+    "moduleType": "extension",
+    "allowedChildModuleType": "",
+    "reRenderRequired": false,
+    "ghostContainerMode": "",
+    "apiType": "APIv1"
+}

@@ -1,0 +1,22 @@
+.rz_container > .cntElements {
+    width: 100%;
+    display: inline-block;
+    position: relative;
+}
+
+.rz_container > .cntElements > div {
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+
+/* needed for vertical alignment when container is higher than contained children */
+.rz_container > .fillHeight {
+    display: inline-block;
+    height: 100%;
+    width: 0;
+}

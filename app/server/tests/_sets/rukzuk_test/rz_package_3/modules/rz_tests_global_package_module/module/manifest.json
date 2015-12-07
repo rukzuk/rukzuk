@@ -1,0 +1,11 @@
+{
+    "name":"{\"de\":\"Globales Package default Modul fuer Testing\",\"en\":\"Global package default module for testing\"}",
+    "description":"",
+    "version":"test",
+    "icon":"application.png",
+    "category":"{\"de\":\"Default Module\",\"en\":\"Default Modules\"}",
+    "moduleType":"default",
+    "allowedChildModuleType":"*",
+    "reRenderRequired":true,
+    "apiType":"APIv1"
+}

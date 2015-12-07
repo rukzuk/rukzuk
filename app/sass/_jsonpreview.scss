@@ -1,0 +1,17 @@
+/* JSON preview */
+code .key {
+    color: #aa0000;
+}
+
+code .number {
+    color: #aa00aa;
+}
+
+code .keyword {
+    color: #0000cc;
+}
+
+code .string,
+code .string span {
+    color: #008000;
+}

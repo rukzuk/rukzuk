@@ -1,0 +1,97 @@
+{
+    "assets":{
+        "css":[
+            {
+                "file":"style.css"
+            }
+        ]
+    },
+    "i18n":{
+        "selector.label_textfield":{
+            "de":"Labels",
+            "en":"Labels"
+        },
+        "selector.input":{
+            "de":"Eingabefelder einzeilig",
+            "en":"Text fields single-line"
+        },
+        "selector.textarea":{
+            "de":"Eingabefelder mehrzeilig",
+            "en":"Text fields multi-line"
+        },
+        "selector.select":{
+            "de":"Auswahlfelder",
+            "en":"Select fields"
+        },
+        "selector.selectOption":{
+            "de":"Auswahlfeld-Optionen",
+            "en":"Select field options"
+        },
+        "selector.selectValue":{
+            "de":"Auswahlfeld-Checkbox/Radio",
+            "en":"Select field checkbox/radio"
+        },
+        "selector.error":{
+            "de":"Fehlermeldungen",
+            "en":"Error messages"
+        },
+        "selector.invalidInput":{
+            "de":"Eingabefelder bei Fehlermeldung",
+            "en":"Form fields when error occurs"
+        },
+        "selector.submitButton":{
+            "de":"Sende-Button",
+            "en":"Submit button"
+        },
+        "selector.confirmationText":{
+            "de":"Text nach Absenden des Formulars",
+            "en":"Text after form submit"
+        },
+        "warning.noEmailInEditMode":{
+            "de":"Im Bearbeitungsmodus wird keine E-Mail versendet.",
+            "en":"No E-Mail will be sent in edit mode."
+        }
+    },
+    "selectors":[
+        {
+            "title":"__i18n_selector.label_textfield",
+            "selector":".rz_form_field_text label, .rz_form_field_select div > label"
+        },
+        {
+            "title":"__i18n_selector.input",
+            "selector":"input[id^=fieldMUNIT][type=text], input[id^=fieldMUNIT][type=email], input[id^=fieldMUNIT][type=number], input[id^=fieldMUNIT][type=password]"
+        },
+        {
+            "title":"__i18n_selector.textarea",
+            "selector":"textarea[id^='fieldMUNIT']"
+        },
+        {
+            "title":"__i18n_selector.select",
+            "selector":"select[id^='fieldMUNIT']"
+        },
+        {
+            "title":"__i18n_selector.selectOption",
+            "selector":"select[id^='fieldMUNIT'] option, .rz_form_field_select fieldset label span"
+        },
+        {
+            "title":"__i18n_selector.selectValue",
+            "selector":"input[id^=fieldMUNIT][type=checkbox], input[id^=fieldMUNIT][type=radio]"
+        },
+        {
+            "title":"__i18n_selector.error",
+            "selector":"p.vf__error"
+        },
+        {
+            "title":"__i18n_selector.invalidInput",
+            "selector":"input[id^=fieldMUNIT][type=text].vf__error, input[id^=fieldMUNIT][type=email].vf__error, input[id^=fieldMUNIT][type=number].vf__error, input[id^=fieldMUNIT][type=password].vf__error, input[id^=fieldMUNIT][type=checkbox].vf__error, input[id^=fieldMUNIT][type=radio].vf__error, textarea[id^=fieldMUNIT].vf__error"
+        },
+        {
+            "title":"__i18n_selector.submitButton",
+            "selector":"input[id^=fieldMUNIT][type=submit]"
+        },
+        {
+            "title":"__i18n_selector.confirmationText",
+            "selector":"form .confirmationText"
+        }
+    ]
+}

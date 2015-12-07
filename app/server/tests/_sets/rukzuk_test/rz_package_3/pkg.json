@@ -1,0 +1,8 @@
+{
+  "name": {
+    "en": "rz_package_3.name"
+  },
+  "websiteSettings": [],
+  "pageTypes": ["rz_blog_post", "rz_no_existing_page_type"],
+  "modules": ["rz_tests_global_package_module"]
+}

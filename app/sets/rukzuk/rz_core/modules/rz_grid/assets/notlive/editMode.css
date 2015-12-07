@@ -1,0 +1,144 @@
+/* grid raster */
+.rz_grid > span.gridRaster {
+    display: none;
+    width: 100%;
+    white-space: pre;
+    padding: inherit;
+    height: 100%;
+    position: absolute;
+    pointer-events: none;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    font-size: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+body.RUKZUKenableInputHints .rz_grid > span.gridRaster {
+    display: block;
+}
+
+.rz_grid > span.gridRaster > div {
+    background-color: rgba(155, 155, 155, 0.15);
+    display: inline-block;
+    height: 100%;
+    border-left: 1px rgba(155, 155, 155, 0.42) solid;
+    border-right: 1px rgba(155, 155, 155, 0.42) solid;
+    box-sizing: border-box;
+}
+
+.rz_grid > span.gridRaster > div:first-child {
+    margin-left: 0 !important;
+}
+
+
+/* margin marker for grid elements */
+.rz_grid > .gridElements > div > span.marker {
+    display: none;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    position: absolute;
+    height: 100%;
+    top: 0;
+}
+
+.rz_grid > .gridElements > div > span.markerCenter {
+    pointer-events: none;
+}
+
+.rz_grid > .gridElements > div > span.markerLeft {
+    background: url(redpixel.png) 0 50% repeat-x,
+                url(redpixel.png) 0 0 repeat-y rgba(0, 0, 0, .075);
+}
+
+.rz_grid > .gridElements > div > span.markerRight {
+    background: url(redpixel.png) 0 50% repeat-x,
+                url(redpixel.png) 100% 0 repeat-y rgba(0, 0, 0, .075);
+}
+
+body.RUKZUKenableInputHints .rz_grid.CMSselected.CMSeditable > .gridElements > div > span.marker {
+    display: block;
+}
+
+body.RUKZUKenableInputHints .rz_grid > .gridElements > div > .isModule.CMSselected.CMSeditable ~ span.marker {
+    display: block;
+}
+
+/* resize handles */
+.rz_grid > .gridElements span.resizeMarginLeft,
+.rz_grid > .gridElements span.resizeMarginRight,
+.rz_grid > .gridElements span.resizeWidth {
+    position: absolute;
+    width: 13px;
+    height: 12px;
+    cursor: w-resize;
+    pointer-events: all !important;
+    z-index: 10611;
+    background: url(grid-icons.png) no-repeat #303030;
+}
+
+.rz_grid > .gridElements span.resizeMarginLeft:hover,
+.rz_grid > .gridElements span.resizeMarginLeft:active,
+.rz_grid > .gridElements span.resizeMarginRight:hover,
+.rz_grid > .gridElements span.resizeMarginRight:active,
+.rz_grid > .gridElements span.resizeWidth:hover,
+.rz_grid > .gridElements span.resizeWidth:active {
+    background-color: #000;
+}
+
+/* handle margin left */
+.rz_grid > .gridElements span.resizeMarginLeft {
+    top: calc(50% - 6px);
+    left: 0;
+    background-position: 0px -32px;
+}
+
+/* handle margin right */
+.rz_grid > .gridElements span.resizeMarginRight {
+    top: calc(50% - 6px);
+    right: 0;
+    background-position: -1px -2px;
+}
+
+/* handle resize */
+.rz_grid > .gridElements span.resizeWidth {
+    right: 0px;
+    bottom: 0;
+    background-position: -1px -62px;
+}
+
+.rz_grid.CMSselected.CMSeditable > .resizeHeight {
+    display: none;
+    position: relative;
+    width: 50%;
+    height: 6px;
+    left: 25%;
+    background-color: #303030;
+    cursor: s-resize;
+    margin-top: -6px;
+}
+
+body.RUKZUKenableInputHints .rz_grid.CMSselected.CMSeditable > .resizeHeight {
+    display: block;
+}
+
+body.RUKZUKenableInputHints .rz_grid.CMSselected.CMSeditable > .resizeHeight:hover {
+    background-color: #000;
+}
+
+/* UI blocker for resize handles */
+div.uiBlocker {
+    cursor: w-resize;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 11000;
+}
+
+/* UI blocker for resize height */
+div.uiBlocker.uiBlockerResizeHeight {
+    cursor: s-resize;
+}

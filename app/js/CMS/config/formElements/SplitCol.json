@@ -1,0 +1,43 @@
+{
+    "descr": {
+        "id": "SplitCol",
+        "text": "__i18n_formElements.elementSplitCol",
+        "iconCls": "splitcol",
+        "allowChildNodes": true
+    },
+    "params": [
+        {
+            "name": "xtype",
+            "value": "container",
+            "xtype": null
+        },
+        {
+            "name": "layout",
+            "value": "multicolumn",
+            "xtype": null
+        },
+        {
+            "name": "columnCount",
+            "value": 2,
+            "xtype": "combo",
+            "fieldLabel": "__i18n_formElements.columnCount",
+            "store": [
+                [
+                    2,
+                    "2"
+                ],
+                [
+                    3,
+                    "3"
+                ],
+                [
+                    4,
+                    "4"
+                ]
+            ],
+            "editable": false,
+            "lazyRender": true,
+            "triggerAction": "all"
+        }
+    ]
+}

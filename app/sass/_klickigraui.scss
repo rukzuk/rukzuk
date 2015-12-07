@@ -1,0 +1,824 @@
+@import "colors";
+@import "mixins";
+
+/* Gruppen */
+
+.CMSgrouptablist .x-tool {
+    background-image: url("../images/tree-sprite.png") !important;
+    background-position: -2px -702px !important;
+}
+
+.CMSgrouptablist .x-panel-collapsed .x-tool {
+    background-image: url("../images/tree-sprite.png") !important;
+    background-position: -5px -802px !important;
+}
+
+.CMSpageprivilegestab .x-panel-bbar,
+.CMSotherprivilegestab .x-panel-bbar {
+    background: none repeat scroll 0 0 transparent;
+    border-top: 1px solid #343434;
+}
+
+.CMSgrouptablist .x-btn-pressed,
+.CMSgrouptablist .x-panel-header.selected {
+    background-color: $bg-thumb-titlebar-selected !important;
+}
+
+.CMSgrouptablist .x-panel-header:hover,
+.CMSgrouptablist .x-panel-header.selected:hover,
+.CMSgrouptablist .x-btn-over {
+    background-color: $bg-thumb-titlebar-selected-hover !important;
+}
+
+/* Notepad Icons */
+.CMSuniteditor > .x-box-inner:first-child {
+    background-color: #000000;
+}
+
+/* Tree */
+.x-tree-lines .x-tree-elbow-minus {
+    background-image: url("../images/tree-sprite.png");
+    background-position: 0 -650px;
+}
+
+.x-tree-lines .x-tree-elbow-end-minus {
+    background-image: url("../images/tree-sprite.png");
+    background-position: 0 -400px;
+}
+
+.x-tree-lines .x-tree-elbow-plus {
+    background-image: url("../images/tree-sprite.png");
+    background-position: 0 -750px;
+}
+
+.x-tree-lines .x-tree-elbow-end-plus {
+    background-image: url("../images/tree-sprite.png");
+    background-position: 0 -500px;
+}
+
+.x-tree-lines .x-tree-elbow-line {
+    background-image: url("../images/tree-sprite.png");
+    background-position: 0 -600px;
+}
+
+.x-tree-lines .x-tree-elbow {
+    background-image: url("../images/tree-sprite.png");
+    background-position: 0 -600px;
+}
+
+.x-tree-lines .x-tree-elbow-end {
+    background-image: url("../images/tree-sprite.png");
+    background-position: 0 -350px;
+}
+
+/* Page, Template open */
+
+fieldset.hideBox {
+    margin-bottom: 6px !important;
+}
+
+.x-border-panel .x-panel-header-text {
+    font-weight: normal;
+}
+
+.x-tab-panel-header .x-tab-strip-top {
+    li {
+        @include gradient-vertical($bg-tab-top, $bg-tab-bottom);
+        margin-right: 5px;
+    }
+
+    li.x-tab-strip-over {
+        @include gradient-vertical($bg-tab-hover-top, $bg-tab-hover-bottom);
+    }
+
+}
+
+.x-resizable-over .x-resizable-handle.x-resizable-handle-east,
+.x-resizable-pinned .x-resizable-handle.x-resizable-handle-east,
+.x-resizable-over .x-resizable-handle.x-resizable-handle-west,
+.x-resizable-pinned .x-resizable-handle.x-resizable-handle-west,
+.x-resizable-over .x-resizable-handle.x-resizable-handle-south,
+.x-resizable-pinned .x-resizable-handle.x-resizable-handle-south,
+.x-resizable-over .x-resizable-handle.x-resizable-handle-north,
+.x-resizable-pinned .x-resizable-handle.x-resizable-handle-north {
+    background-image: none;
+    background-color: transparent;
+}
+
+.x-resizable-handle.x-resizable-handle-east,
+.x-resizable-handle.x-resizable-handle-west,
+.x-resizable-handle.x-resizable-handle-north,
+.x-resizable-handle.x-resizable-handle-south,
+.x-layout-split.x-layout-split-west {
+    overflow: visible;
+
+    &:hover:after {
+        content: '';
+        display: block;
+        position: absolute;
+        border-radius: 4px;
+    }
+}
+
+.x-resizable-handle.x-resizable-handle-east,
+.x-resizable-handle.x-resizable-handle-west,
+.x-layout-split.x-layout-split-west {
+    width: 3px;
+    background-color: $border-dark;
+    opacity: 1;
+
+    &:hover {
+        overflow: visible;
+        background: $border-dark none;
+    }
+
+    &:hover:after {
+        top: 50%;
+        width: 8px;
+        height: 300px;
+        margin: -150px 0 0 -3px;
+        background: $border-dark-solid url('../images/resize-handle-vertical.png') no-repeat 3px 145px;
+    }
+}
+
+.x-resizable-handle.x-resizable-handle-south,
+.x-resizable-handle.x-resizable-handle-north {
+    height: 3px;
+    background-color: $border-dark;
+    opacity: 1;
+
+    &:hover {
+        overflow: visible;
+        background: $border-dark none;
+    }
+
+    &:hover:after {
+        left: 50%;
+        width: 200px;
+        height: 8px;
+        margin: -3px 0 0 -100px;
+        background: $border-dark-solid url('../images/resize-handle-horizontal.png') no-repeat 95px 3px;
+    }
+}
+
+.CMSiframeResizeContainer .x-resizable-handle.x-resizable-handle-east,
+.CMSiframeResizeContainer .x-resizable-handle.x-resizable-handle-south {
+    background-color: transparent;
+}
+
+.x-resizable-over.CMSiframeResizeContainer .x-resizable-handle.x-resizable-handle-east,
+.x-resizable-over.CMSiframeResizeContainer .x-resizable-handle.x-resizable-handle-south {
+    background-color: $border-dark;
+}
+
+.x-tab-panel.CMSresizable {
+    overflow: visible;
+}
+
+// adjust margin to prevent scrollbars
+.CMSiframeResizeContainer .x-resizable-handle.x-resizable-handle-east {
+    &:hover:after {
+        margin-left: -5px;
+    }
+}
+
+.CMSiframeResizeContainer .x-resizable-handle.x-resizable-handle-south {
+    &:hover:after {
+        margin-top: -5px;
+    }
+}
+
+.CMSsidebar {
+    border-right: $border-dark solid 3px;
+
+    &.CMSresizable {
+        border-right: none;
+    }
+}
+
+.CMSsidebar .CMSuniteditor .x-toolbar {
+    padding-left: 10px;
+}
+
+.CMSsidebar .x-tab-panel-header {
+    top: 0px;
+}
+
+.CMSsidebar .x-tab-panel-header .x-tab-strip-spacer {
+    top: 0;
+}
+
+.CMSsidebar .x-panel-tbar .x-toolbar .x-toolbar-ct .x-toolbar-right {
+    position: relative;
+    //right: 24px;
+}
+
+.CMSsidebar .x-toolbar-left-row > td:first-of-type .x-btn,
+.CMSsidebar .x-toolbar-right-row > td:first-of-type .x-btn {
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+}
+
+.CMSsidebar .x-toolbar-left-row > td:last-of-type .x-btn,
+.CMSsidebar .x-toolbar-right-row > td:last-of-type .x-btn {
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+/* Table Header */
+.x-grid3-header {
+    padding: 0;
+    background: transparent none;
+
+    .x-grid3-header-offset {
+        padding-left: 0px;
+    }
+
+    .x-grid3-hd {
+        -moz-user-select: none;
+        background-color: $bg-layer-dark;
+        border-bottom: transparent;
+        border-left: transparent;
+        border-right: 1px solid #252627;
+
+        &.x-grid3-hd-over {
+            background-color: $bg-layer-darker;
+        }
+    }
+}
+
+/* */
+.CMSgroupmanagementpanel .CMSDeleteGrid .x-panel-header,
+.CMSusermanagementpanel .CMSDeleteGrid .x-panel-header,
+.CMSPublishTab .x-panel-body .x-panel-header {
+    display: none;
+}
+
+.CMScreateuserwindow .CMSaddtogrouppanel .CMSgroupgrid .x-grid-empty {
+    //padding-left: 10px;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.CMSusermanagementpanel > .x-panel-bwrap > .x-panel-body > .x-panel > .x-panel-bwrap > .x-panel-body > .x-box-inner > .x-panel > .x-panel-bwrap > .x-panel-body > .x-grid3 {
+    border-right: 1px solid #343434 !important;
+}
+
+.CMSPageTab .x-panel-body {
+    border-color: transparent !important
+}
+
+.CMSPageTab .x-panel.x-panel-noborder.x-form-label-top.x-box-item {
+    background: none repeat scroll 0 0 rgba(20, 20, 20, 0.5);
+}
+
+.x-grid3-row-over,
+.x-view-over,
+.x-datacarousel .x-view-over .thumb-bg {
+    background-color: $bg-thumb-titlebar-hover;
+}
+
+div.x-tree-node-over {
+    background-color: $bg-tree-hover !important;
+}
+
+
+
+.x-grid3-row-selected,
+.x-view-selected,
+.x-datacarousel .x-view-selected .thumb-bg {
+    background-color: $bg-thumb-titlebar-hover;
+}
+
+.x-tree-node-over,
+.x-datacarousel .x-view-over,
+.x-datacarousel .x-view-selected,
+.x-datacarousel .x-view-selected.x-view-over {
+    background-color: transparent;
+}
+
+.x-grid3-row-selected.x-grid3-row-over,
+.x-view-selected.x-view-over,
+.CMSthumbview .wrap.selected:hover .titlebar,
+.x-datacarousel .x-view-selected.x-view-over .thumb-bg {
+    background-color: $bg-thumb-titlebar-selected-hover;
+}
+
+.x-btn-pressed,
+.x-toolbar .x-btn-pressed,
+.x-tip {
+    background: none repeat scroll 0 0 $border-main-dark;
+}
+
+.x-grid3-row {
+    border-bottom: 1px solid #343434;
+    border-right: 1px solid #343434;
+}
+
+.x-grid3-row-table {
+    border: none;
+    border: none;
+}
+
+.SBtaskbarbutton button span {
+    font-size: 13px;
+    font-weight: normal;
+}
+
+/* Admin Tabs */
+
+.CMSsitepropertypanel .x-tab-strip-top li {
+    background-color: transparent;
+}
+
+.CMSsitepropertypanel .x-tab-strip-text {
+    background-image: url("../images/admin-area-sprite.png");
+}
+
+.CMSsitepropertypanel .x-tab-strip span.CMSPageTab {
+    background-position: 18px 3px;
+}
+
+.x-tab-strip-top li:not(.x-tab-edge) {
+    box-shadow: none;
+}
+
+/* ####### */
+
+.x-fieldset,
+.x-form-text,
+.x-form-textarea {
+    box-shadow: inset 0 0 3px $bg-layer-light;
+    background-color: $bg-layer-light;
+    padding: 0 4px;
+}
+
+.x-form-text.x-form-num-field {
+    text-align: right;
+}
+
+.x-form-invalid, .ext-gecko .x-form-invalid {
+    background: $bg-field-invalid;
+}
+
+.x-fieldset {
+    padding: 8px;
+    margin: 6px 0;
+    height: auto;
+    box-shadow: none;
+    border: 0;
+}
+
+.x-fieldset.x-panel-collapsed {
+    height: auto;
+    box-shadow: none;
+    background-color: transparent;
+    border: none;
+}
+
+.x-form-radio-group .x-form-check-wrap label, fieldset legend label {
+    padding-left: 18px;
+}
+
+.x-fieldset legend {
+    margin: 0 0 0 -8px;
+    padding: 0;
+}
+
+.x-form-item label.x-form-item-label {
+    font-weight: normal;
+}
+
+.x-window-mc, legend, .x-window {
+    background: url("../images/background.png") repeat scroll 0 0;
+}
+
+legend {
+    background: none transparent;
+}
+
+.x-fieldset-header-text {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: normal;
+    text-shadow: 0 0 3px #111111;
+}
+
+fieldset fieldset .x-fieldset-header-text {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: normal;
+}
+
+fieldset fieldset fieldset .x-fieldset-header-text {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: bold;
+}
+
+.x-form-check-wrap {
+    line-height: 18px;
+}
+
+.x-panel-body > .x-form-label-left {
+
+}
+
+.x-form-cb-label {
+    font-weight: normal;
+}
+
+.x-panel-body {
+    background: none repeat scroll 0 0 transparent;
+}
+
+.CMSmodulemetaeditor .x-panel-body {
+    padding: 0;
+}
+
+/* Button */
+
+.SBtaskbarbutton .x-btn-split button:after {
+    background: none repeat scroll 0 0 #000000;
+    @include shadow();
+}
+
+/* Bottom Toolbar */
+.x-panel-noborder .x-panel-tbar-noborder .x-toolbar {
+    border-color: #000000;
+    border-style: solid;
+    border-width: 0 0 1px;
+}
+
+body > .x-toolbar > table, body > .x-toolbar .x-btn {
+    border-top: 0;
+}
+
+/* Checkboxen im Modultab "Kann folgende Module enthalten" */
+.x-grid3-body .x-grid3-check-col-td .x-grid3-cell-inner {
+    cursor: pointer;
+    padding: 0 6px 1px !important;
+}
+
+.x-toolbar-layout-ct .x-toolbar-ct {
+    background-color: transparent;
+}
+
+.CMSformgroupeditor .CMSfocus legend {
+    background-color: transparent;
+}
+
+.CMSformgroupeditor .CMSfocus .x-column-layout-ct .x-column {
+    background: none;
+}
+
+.CMSformgroupeditor .CMSfocus {
+    outline-offset: -1px;
+    background-color: transparent;
+}
+
+.x-datacarousel .thumb-bg {
+    border: none;
+}
+
+.grid-roworderable .x-grid3-body {
+    padding-top: 1px;
+}
+
+.grid-row-insert-above {
+    margin-top: -1px;
+    padding-top: 1px;
+    .x-grid3-row-table {
+        border-top: 1px solid black;
+    }
+}
+
+.ext-gecko .grid-row-insert-above {
+    margin-top: -2px;
+}
+
+.grid-row-insert-above, .grid-row-insert-below {
+    background-color: transparent !important;
+}
+
+.x-tab-panel.columns .CMSuniteditor.x-column {
+    border-left: 3px solid $border-panel;
+}
+
+.x-tab-panel.columns .CMSformfieldwrapper.x-column {
+    border-left: none;
+}
+
+.x-panel-floating {
+    background-color: $bg-layer-dark;
+}
+
+/* Main toolbar buttons */
+.x-toolbar-layout-ct,
+.x-toolbar,
+.CMSiframeresolutionswitchertoolbar {
+    background-color: $bg-taskbar;
+    border-color: $border-dark;
+    border-style: solid;
+    border-width: 0;
+
+    .x-panel-noborder .x-panel-bbar-noborder .x-toolbar.paging-toolbar,
+    &.x-panel-fbar,
+    .x-window-bbar &,
+    .x-panel-bbar & {
+        border-top: $border-dark solid 3px;
+    }
+
+    .spacer {
+        width: 20px;
+    }
+
+    &.CMSrichtexteditortoolbar {
+        .x-btn {
+            width: auto;
+            height: auto;
+
+            button {
+                min-width: 22px;
+                height: 16px;
+                padding: 0;
+            }
+        }
+    }
+
+    .x-toolbar-cell:last-child .x-btn {
+        margin-right: 0;
+    }
+}
+
+.SBtaskbar {
+
+    $break-small: 1300px;
+    $break-large: 1700px;
+
+    border-bottom-width: 3px;
+
+    .x-toolbar-right {
+        display: none;
+    }
+
+    .x-toolbar-cell.spacer {
+        width: 50%;
+    }
+
+    #overviewBtn {
+        button {
+            padding-left: 0px;
+
+            &.project-summary.depth-one {
+                opacity: .4;
+            }
+
+            &.project-summary.depth-two {
+                opacity: .16;
+            }
+        }
+    }
+
+    #websiteBtn, #infoBtn {
+        button {
+            padding-left: 20px;
+            background-position: -14px -1603px;
+
+            span {
+                display: inline-block;
+                max-width: 100%;
+                min-width: 100%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+    }
+
+    #infoBtn button {
+        @media screen and (max-width: $break-large) {
+            max-width: 650px;
+        }
+        @media screen and (max-width: $break-small) {
+            max-width: 360px;
+        }
+    }
+
+    #websiteBtn button {
+        @media screen and (max-width: $break-large) {
+            max-width: 180px;
+        }
+        opacity: .4;
+    }
+
+    #infoBtn, #websiteBtn, #overviewBtn {
+        margin: 0px;
+        background: transparent none;
+        span {
+            font-size: 12px;
+            pointer-events: none;
+        }
+    }
+}
+
+.CMSiframeresolutionswitchertoolbar {
+    width: 40px;
+
+    .CMSresolutionButtons {
+        padding-top: 20px;
+    }
+
+    .x-btn {
+        margin-bottom: 1px;
+
+        button span {
+            font-size: 12px;
+            font-weight: normal;
+        }
+
+        &.CMSmaxWidth {
+            height: 30px;
+            margin-bottom: 1px;
+
+            button {
+                height: 30px;
+                line-height: 30px;
+            }
+        }
+
+        &.CMSdefaultResolutions {
+            height: 10px;
+
+            em.x-btn-arrow {
+                padding-right: 0;
+                background-position: center;
+            }
+
+            button {
+                height: 10px;
+                line-height: 10px;
+            }
+        }
+
+    }
+
+    .CMSresolutioninfo {
+        width: 30px;
+        text-align: center;
+        padding: 22px 5px;
+        font-family: 'UbuntuCondensed', sans-serif;
+    }
+}
+
+.x-btn,
+.x-btn.x-btn-icon {
+    width: 40px;
+    height: 40px;
+    margin: 0px 1px 0px 0;
+    @include gradient-vertical($bg-button-top, $bg-button-bottom);
+
+    &.x-btn-over {
+        @include gradient-vertical($bg-button-hover-top, $bg-button-hover-bottom);
+    }
+
+    button {
+        min-width: 34px;
+        height: 34px;
+        line-height: 34px;
+        padding: 0 6px;
+
+        span {
+            font-size: 13px;
+            font-weight: bold;
+        }
+    }
+
+    &.SBsubtab button span {
+        font-weight: normal;
+    }
+}
+
+.paging-toolbar {
+    padding: 3px 0;
+
+    .x-btn {
+        width: 20px;
+        height: 20px;
+
+        button {
+            min-width: 14px;
+            height: 14px;
+            line-height: 14px;
+            padding: 0;
+        }
+    }
+}
+
+.x-btn-text-icon .x-btn-icon-small-left .x-btn-text {
+    padding-left: 34px;
+    height: 34px;
+}
+
+.CMScolorschemedefinitionpanel .x-btn.CMSclearbutton {
+    height: 22px;
+    margin-top: 0;
+
+    .x-btn-mc {
+        background: transparent;
+    }
+
+    .x-btn-text {
+        min-width: 16px;
+        width: 16px;
+        height: 16px;
+    }
+}
+
+.SBtaskbarbutton .x-btn-mc em.x-btn-split {
+    background-image: url("../images/btn-close.png");
+    background-position: right 10px;
+    margin-right: 6px;
+}
+
+.SBtaskbarbutton.x-btn-over .x-btn-mc em.x-btn-split,
+.SBtaskbarbutton.x-btn-click .x-btn-mc em.x-btn-split,
+.SBtaskbarbutton.x-btn-menu-active .x-btn-mc em.x-btn-split,
+.SBtaskbarbutton.x-btn-pressed .x-btn-mc em.x-btn-split {
+    background-image: url("../images/btn-close-hover.png");
+}
+
+.SBtaskbarbutton .x-btn-split button::after {
+    content: '';
+    display: block;
+    background: $button-splitter;
+    @include shadow();
+    height: 16px;
+    position: absolute;
+    right: 20px;
+    top: 12px; // (40 (=button) - 16 (=spacer height) ) / 2
+}
+
+/* The Main Menu */
+.CMSMainMenu {
+    a.x-menu-item {
+        line-height: 34px; // total height of 40px incl 6px padding
+        padding: 3px 20px 3px 46px;
+
+        img.x-menu-item-icon {
+            width: 34px;
+            height: 34px;
+        }
+
+        &.no-icon {
+            padding-left: 20px;
+
+            img.x-menu-item-icon {
+                width: 0;
+                height: 0;
+            }
+        }
+    }
+}
+
+.CMScontextmenu {
+    .x-menu-item {
+        padding: 6px 8px 6px 32px;
+        line-height: 20px;
+        padding-left: 32px;
+
+        .x-menu-item-icon {
+            width: 20px;
+            height: 20px;
+            top: 6px;
+            left: 5px;
+        }
+    }
+}
+
+.CMSbuildgrid .x-grid-empty {
+    margin-top: 20px;
+}
+
+.CMSbuildgrid .x-grid3-row {
+    &.success {
+        background-color: $bg-success;
+    }
+    &.error {
+        background-color: $bg-error;
+    }
+}
+
+.CMShelpwindow {
+    z-index: 9999999 !important;
+}
+
+.CMSnorightsinfo {
+    .x-panel-header {
+        display: none;
+    }
+
+    > .x-panel-bwrap > .x-panel-body {
+        padding: 20px;
+        font-weight: bold;
+    }
+}

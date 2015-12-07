@@ -1,0 +1,163 @@
+@import "colors";
+@import "mixins";
+
+.mediaSelector .x-grid3-body .x-grid3-cell {
+    height: 100px;
+    line-height: 100px;
+}
+
+.mediaSelector .x-grid3-cell-inner.x-grid3-col-icon img {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.mediaSelector .x-grid3-body .x-grid3-col-icon {
+    text-align: center;
+}
+
+.mediaSelector .x-grid3-cell-inner {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.mediaSelector .x-grid3-body .x-grid3-row {
+    cursor: pointer;
+}
+
+.mediaSelector .x-grid3-cell.x-grid3-td-icon,
+.mediaSelector .x-grid3-cell-inner.x-grid3-col-icon {
+    padding: 0;
+}
+
+.mediaSelector .x-grid3-body .x-grid3-cell, .mediaSelector .x-grid3-body .x-grid3-cell * {
+    vertical-align: middle;
+}
+
+.mediaSelector .x-grid3-row-over {
+    img.download,
+    img.edit,
+    img.delete {
+        visibility: visible;
+    }
+}
+
+.mediaDBSelectionGrid .x-grid3-row-over:not(.grid-row-insert-above):not(.grid-row-insert-below) img.removeimg {
+    visibility: visible;
+}
+
+.CMSmediadb .x-window-tbar .x-form-item {
+    margin: 2px 0px 3px;
+    padding: 0 5px;
+}
+
+.noCollapseTool .x-layout-mini {
+    display: none;
+}
+
+.noCollapseTool .x-layout-collapsed-over {
+    background-color: #d2e0f2;
+    cursor: default;
+}
+
+/* albumSelector dataCarousel */
+.x-datacarousel .button {
+    width: 9px;
+    height: 17px;
+    margin: 60px 15px;
+}
+
+.x-datacarousel-panelleft .button {
+    background: url(../images/arrow-left.gif) left top no-repeat;
+}
+
+.x-datacarousel-panelright .button {
+    background: url(../images/arrow-right.gif) left top no-repeat;
+}
+
+.x-datacarousel .x-masked {
+    cursor: default !important;
+}
+
+.x-datacarousel .thumb-bg {
+    background: transparent;
+    border-color: #999;
+    border-width: 1px;
+    border-style: solid;
+}
+
+
+.thumb-bg-topleft {
+    border-style: solid none none solid;
+}
+
+.thumb-bg-topright {
+    border-style: solid solid none none;
+}
+
+.thumb-bg-bottomleft {
+    border-style: none none solid solid;
+}
+
+.thumb-bg-bottomright {
+    border-style: none solid solid none;
+}
+
+.thumb-title {
+    height: 28px;
+    padding-top: 8px;
+}
+
+/* uploader */
+.mediaDBUploader .success {
+    color: $color-success;
+}
+
+.mediaDBUploader .error {
+    color: $color-error;
+}
+
+.mediaDBUploader input {
+    position: absolute;
+    right: 0;
+    width: auto !important;
+    cursor: pointer;
+}
+
+.mediaDBSelectionGrid {
+    border-left: 3px solid $border-dark;
+
+    .x-grid3-row-over .removeuser {
+        background-image: url(../images/icons/cancel.png);
+    }
+
+    .selection-info {
+        height: 20px;
+        line-height: 20px;
+        vertical-align: middle;
+        padding: 3px 6px;
+    }
+
+    .x-grid3-row-selected:not(:hover) {
+        background: transparent;
+    }
+
+    .x-grid3-col img.thumbnail {
+        cursor: default;
+        max-width: 100px;
+        max-height: 100px;
+    }
+}
+
+.mediaDBUploader .x-grid-empty {
+    background: transparent url("../images/upload.png") no-repeat 50% 50%;
+    margin: 0;
+    height: 100%;
+    padding: 0;
+
+    .empty-msg {
+        padding-top: 230px;
+        font-size: 14px;
+        display: block;
+    }
+}
+

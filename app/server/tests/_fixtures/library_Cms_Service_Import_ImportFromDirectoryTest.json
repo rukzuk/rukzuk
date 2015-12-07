@@ -1,0 +1,27 @@
+{
+    "website": [
+        {
+            "id": "SITE-import00-from-dir0-conf-lict00000001-SITE",
+            "name": "/cms/service/import::importFromDirectory : conflicted import",
+            "usedsetid": "",
+            "shortid": "",
+            "description": "",
+            "navigation": "",
+            "colorscheme": "",
+            "resolutions": "",
+            "version": 0,
+            "home": "",
+            "ismarkedfordeletion": 0
+        }
+    ],
+    "template_snippet": [
+        {
+            "websiteid": "SITE-import00-from-dir0-conf-lict00000001-SITE",
+            "id": "TPLS-00000000-0000-0000-0000-000000000001-TPLS",
+            "name": "EXISTING_TEMPLATE_SNIPPET_NAME_1",
+            "description": "EXISTING_TEMPLATE_SNIPPET_DESCRIPTION_1",
+            "category": "EXISTING_TEMPLATE_SNIPPET_CATEGORY_1",
+            "content": "[]"
+        }
+    ]
+}

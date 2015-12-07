@@ -1,0 +1,7 @@
+.rz_shop_product_property > a {
+    display: block;
+}
+
+.rz_shop_product_property > form > button {
+    cursor: pointer;
+}

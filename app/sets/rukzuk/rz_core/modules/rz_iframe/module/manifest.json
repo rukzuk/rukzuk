@@ -1,0 +1,12 @@
+{
+    "name": "{\"de\":\"IFrame\",\"en\":\"IFrame\"}",
+    "description": "{\"de\":\"Einbindung externer Webseiten innerhalb der eigenen Seite.\",\"en\":\"Embeds external websites.\"}",
+    "version": "dev",
+    "icon": "page.png",
+    "category": "{\"de\":\"Externe Inhalte\",\"en\":\"External Content\"}",
+    "moduleType": "default",
+    "allowedChildModuleType": "extension",
+    "ghostContainerMode": "force_off",
+    "reRenderRequired": false,
+    "apiType": "APIv1"
+}

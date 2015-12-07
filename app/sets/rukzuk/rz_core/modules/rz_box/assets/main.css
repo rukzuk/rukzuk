@@ -1,0 +1,23 @@
+.isColumnBoxTable {
+    display: table;
+    width: 100%;
+    height: 100%;
+    table-layout: fixed;
+    vertical-align: top;
+}
+
+.boxSpacer,
+.boxPreview,
+.boxPreviewSpacer {
+    display: table-cell;
+    position: relative;
+}
+
+.isColumnBoxCell {
+    display: table-cell;
+    vertical-align: top;
+}
+
+.boxSpacerLast {
+    height: 0 !important;
+}

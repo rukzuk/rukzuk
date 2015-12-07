@@ -1,0 +1,31 @@
+{
+    "descr": {
+        "id": "TabPage",
+        "text": "__i18n_formElements.elementTabPage",
+        "iconCls": "tabpage",
+        "hasValue": false,
+        "allowChildNodes": true
+    },
+    "params": [
+        {
+            "name": "xtype",
+            "value": "CMStabpage",
+            "xtype": null
+        },
+        {
+            "name": "tabValue",
+            "xtype": "textfield",
+            "allowBlank": false,
+            "emptyText": "__i18n_formElements.groupValueEmptyText",
+            "fieldLabel": "__i18n_formElements.groupValueFieldLabel"
+        },
+        {
+            "name": "title",
+            "value": "Tab",
+            "xtype": "textfield",
+            "allowBlank": false,
+            "emptyText": "__i18n_formElements.title",
+            "fieldLabel": "__i18n_formElements.title"
+        }
+    ]
+}

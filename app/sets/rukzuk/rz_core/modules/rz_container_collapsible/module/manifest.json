@@ -1,0 +1,12 @@
+{
+    "name": "{\"de\":\"Ausklapp-Container\",\"en\":\"Collapsible Container\"}",
+    "description": "{\"de\":\"Ermöglicht das Ein-/Ausblenden der darunterliegenden Module durch Klicken auf eine Schaltfläche.\",\"en\":\"Allows to show and hide the subordinate modules by clicking on a button.\"}",
+    "version": "dev",
+    "icon": "collapsible-container.png",
+    "category": "{\"de\":\"Container\",\"en\":\"Container\"}",
+    "moduleType": "default",
+    "allowedChildModuleType": "*",
+    "ghostContainerMode": "force_off",
+    "reRenderRequired": false,
+    "apiType": "APIv1"
+}

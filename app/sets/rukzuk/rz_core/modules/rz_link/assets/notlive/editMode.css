@@ -1,0 +1,6 @@
+/* reset cursor when module is selected */
+.rz_link.CMSselected,
+.rz_link.CMSselected > *,
+.rz_link > *.CMSselected {
+    cursor: auto;
+}

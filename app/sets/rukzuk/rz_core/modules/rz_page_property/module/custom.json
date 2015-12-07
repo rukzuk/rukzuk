@@ -1,0 +1,76 @@
+{
+    "assets":{
+        "js":[
+            {
+                "file":"notlive\/editMode.js",
+                "type":"module",
+                "mode":"edit"
+            }
+        ],
+        "css":[
+            {
+                "file":"style.css"
+            }
+        ]
+    },
+    "i18n":{
+        "selector.headline":{
+            "de":"Titel",
+            "en":"Title"
+        },
+        "selector.text":{
+            "de":"Beschreibung",
+            "en":"Description"
+        },
+        "selector.textLink":{
+            "de":"Link im Flie\u00dftext",
+            "en":"Link in text"
+        },
+        "selector.date":{
+            "de":"Datum",
+            "en":"Date"
+        },
+        "selector.image":{
+            "de":"Bild",
+            "en":"Image"
+        },
+        "selector.link":{
+            "de":"Link",
+            "en":"Link"
+        },
+        "placeholder.pageTitle":{
+            "de":"Platzhalter - Seitentitel",
+            "en":"Placeholder - Page Title"
+        },
+        "placeholder.pageDescription":{
+            "de":"Platzhalter - Beschreibung",
+            "en":"Placeholder - Description"
+        }
+    },
+    "selectors":[
+        {
+            "title":"__i18n_selector.headline",
+            "selector":".teaserHeadline"
+        },
+        {
+            "title":"__i18n_selector.text",
+            "selector":".teaserText",
+            "items":[{
+                "title":"__i18n_selector.textLink",
+                "selector":".teaserTextLink"
+            }]
+        },
+        {
+            "title":"__i18n_selector.date",
+            "selector":".teaserDate"
+        },
+        {
+            "title":"__i18n_selector.image",
+            "selector":".teaserImage"
+        },
+        {
+            "title":"__i18n_selector.link",
+            "selector":".teaserLink"
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+##
+## Bitte diese .gitignore Datei immer mit ins GIT einchecken
+##
+
+/application/configs/local-application.ini
+/application/configs/local-application.ini.*
+/tests/_files/responses
+/tests/_coverage-report
+/tests/_report/
+/tests/reports/
+/tests/_data/
+/tests/_output/theme/
+/vendor/
+/library/vendor/*
+
+# Ausnahmen
+!/application/configs/local-application.ini.dist

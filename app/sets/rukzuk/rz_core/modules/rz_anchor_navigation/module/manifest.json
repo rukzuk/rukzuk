@@ -1,0 +1,12 @@
+{
+    "name": "{\"de\":\"Sprungmarken-Navigation\",\"en\":\"Anchor Navigation\"}",
+    "description": "{\"de\":\"Erstellt eine Navigation aus allen vorhandenen Sprungmarken. Eignet sich vor allem für One-Page-Websites.\",\"en\":\"Creates a navigation of all anchors. Perfect for one page websites.\"}",
+    "version": "dev",
+    "icon": "sprungmarkennavigation.png",
+    "category": "{\"de\":\"Navigation\",\"en\":\"Navigation\"}",
+    "moduleType": "default",
+    "allowedChildModuleType": "extension",
+    "ghostContainerMode": "force_off",
+    "reRenderRequired": false,
+    "apiType": "APIv1"
+}

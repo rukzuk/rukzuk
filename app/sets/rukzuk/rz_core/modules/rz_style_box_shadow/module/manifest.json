@@ -1,0 +1,12 @@
+{
+    "name": "{\"de\":\"Schlagschatten\",\"en\":\"Drop Shadow\"}",
+    "description": "{\"de\":\"Die Farbe, Unschärfe, Ausbreitung und Position des Schattens ist regulierbar. Durch mehrfaches Einfügen können mehrere Schatten definiert werden.\",\"en\":\"Adjust color, blur, spread and position of the shadow. Can be inserted multiple times for multiple shadows.\"}",
+    "version": "dev",
+    "icon": "style-dropshadow.png",
+    "category": "50",
+    "moduleType": "extension",
+    "allowedChildModuleType": "",
+    "reRenderRequired": false,
+    "apiType": "APIv1",
+    "ghostContainerMode": "force_off"
+}

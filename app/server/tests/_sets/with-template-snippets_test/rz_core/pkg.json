@@ -1,0 +1,15 @@
+{
+    "name": {
+        "en": "rz_package_1.name"
+    },
+    "description": {
+        "en": "rz_package_1.description"
+    },
+    "version": "rz_package_1.version",
+    "websiteSettings": [],
+    "pageTypes": [],
+    "templateSnippets": [
+        "TPLS-global00-test-0000-0001-000000000001-TPLS",
+        "TPLS-global00-test-0000-0001-000000000002-TPLS"
+    ]
+}

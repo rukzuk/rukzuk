@@ -1,0 +1,97 @@
+[
+    {
+        "id": "UNIT-ID-ROOT",
+        "moduleId": "rz_root",
+        "name": "",
+        "formValues": {},
+        "expanded": true,
+        "ghostContainer": false,
+        "children": [
+            {
+                "id": "UNIT-ID-IMAGE",
+                "moduleId": "rz_image",
+                "name": "",
+                "formValues": {
+                    "enableImageQuality": false
+                },
+                "expanded": true,
+                "ghostContainer": false,
+                "description": "",
+                "visibleFormGroups": []
+            },
+            {
+                "id": "UNIT-ID-GHOST",
+                "moduleId": "rz_ghost_container",
+                "name": "",
+                "formValues": {
+                    "cssHSpace": {
+                        "type": "bp",
+                        "default": "0px"
+                    },
+                    "cssVSpace": {
+                        "type": "bp",
+                        "default": "0px"
+                    }
+                },
+                "expanded": true,
+                "ghostContainer": true,
+                "children": [
+                    {
+                        "id": "UNIT-ID-STYLE-INSIDE-GHOST",
+                        "moduleId": "rz_style_padding_margin",
+                        "name": "",
+                        "formValues": {
+                            "cssEnablePadding": {
+                                "type": "bp",
+                                "default": true
+                            },
+                            "cssEnableMargin": {
+                                "type": "bp",
+                                "default": true
+                            }
+                        },
+                        "expanded": true,
+                        "ghostContainer": false
+                    },
+                    {
+                        "id": "UNIT-ID-IMAGE-INSIDE-GHOST",
+                        "moduleId": "rz_image",
+                        "name": "",
+                        "formValues": {
+                            "enableImageQuality": true,
+                            "imageQuality": "100"
+                        },
+                        "expanded": true,
+                        "ghostContainer": false,
+                        "description": "",
+                        "visibleFormGroups": [
+                            "4ae8ae60-50d9-4a88-a924-cf96cec69941",
+                            "bd628fb7-67ed-4150-9e0f-27c7a4b85564",
+                            "297f073a-008d-4667-8a8b-e1db0434e8b1"
+                        ]
+                    },
+                    {
+                        "id": "UNIT-ID-IMAGE-INSIDE-GHOST-SHOULD-REMOVED",
+                        "moduleId": "rz_image",
+                        "name": "",
+                        "formValues": {},
+                        "expanded": true,
+                        "ghostContainer": false,
+                        "description": "",
+                        "visibleFormGroups": []
+                    }
+                ]
+            },
+            {
+                "id": "UNIT-ID-IMAGE-SHOULD-REMOVED",
+                "moduleId": "rz_image",
+                "name": "",
+                "formValues": {},
+                "expanded": true,
+                "ghostContainer": false,
+                "description": "",
+                "visibleFormGroups": []
+            }
+        ]
+    }
+]

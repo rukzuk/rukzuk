@@ -1,0 +1,70 @@
+@import "colors";
+@import "mixins";
+
+.CMSimportconflictwindow {
+    .icon {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        width: 40px;
+        height: 40px;
+        background: transparent url("../images/warnings-sprite.png") no-repeat 0 -99px;
+    }
+
+    .x-form-check-wrap:not(.x-form-tricheck-wrap) {
+        padding-left: 6px;
+    }
+
+    .CMSimportconflicttext {
+        padding: 15px 15px 15px 60px;
+
+        div:last-child {
+            margin-top: 10px;
+        }
+
+        .lock-warning {
+            color: $color-error;
+
+            a.lnk-lock-details {
+                text-decoration: underline;
+                cursor: pointer;
+                padding-left: 0.5em;
+            }
+        }
+    }
+
+    .CMSconfictlistwrap {
+        padding: 15px;
+    }
+
+    .x-panel,
+    .box-label {
+        span {
+            font-size: 15px;
+        }
+    }
+
+    .x-form-cb-label {
+        margin: 0;
+        padding: 0 0 0 10px;
+    }
+
+    .x-form-checkbox + .x-form-cb-label {
+        padding-left: 25px;
+    }
+
+    .x-grid-panel {
+        padding: 0;
+        margin: 0;
+        background-color: $bg-layer-light;
+
+        .x-grid3-row td.x-grid3-td-checked {
+            padding: 0;
+            margin: 0;
+        }
+
+        .x-grid3-row {
+            border: none;
+        }
+    }
+}

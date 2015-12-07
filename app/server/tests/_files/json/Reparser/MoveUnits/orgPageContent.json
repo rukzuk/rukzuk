@@ -1,0 +1,96 @@
+[
+    {
+        "id": "UNIT-ID-ROOT::1",
+        "templateUnitId": "UNIT-ID-ROOT",
+        "moduleId": "rz_root",
+        "name": "",
+        "formValues": {},
+        "expanded": true,
+        "ghostContainer": false,
+        "children": [
+            {
+                "id": "UNIT-ID-IMAGE::1",
+                "templateUnitId": "UNIT-ID-IMAGE",
+                "moduleId": "rz_image",
+                "name": "",
+                "formValues": {},
+                "expanded": true,
+                "ghostContainer": false,
+                "description": "",
+                "visibleFormGroups": [],
+                "children": []
+            },
+            {
+                "id": "UNIT-ID-GHOST-SHOULD-MOVED::1",
+                "templateUnitId": "UNIT-ID-GHOST-SHOULD-MOVED",
+                "moduleId": "rz_ghost_container",
+                "name": "",
+                "formValues": {},
+                "expanded": true,
+                "ghostContainer": true,
+                "children": [
+                    {
+                        "id": "UNIT-ID-STYLE-INSIDE-GHOST::1",
+                        "templateUnitId": "UNIT-ID-STYLE-INSIDE-GHOST",
+                        "moduleId": "rz_style_padding_margin",
+                        "name": "",
+                        "formValues": {},
+                        "expanded": true,
+                        "ghostContainer": false,
+                        "children": []
+                    },
+                    {
+                        "id": "UNIT-ID-IMAGE-INSIDE-GHOST::1",
+                        "templateUnitId": "UNIT-ID-IMAGE-INSIDE-GHOST",
+                        "moduleId": "rz_image",
+                        "name": "",
+                        "formValues": {},
+                        "expanded": true,
+                        "ghostContainer": false,
+                        "description": "",
+                        "visibleFormGroups": [],
+                        "children": []
+                    }
+                ],
+                "ghostChildren": [
+                    {
+                        "id": "UNIT-ID-IMAGE-INSIDE-GHOST::1",
+                        "templateUnitId": "UNIT-ID-IMAGE-INSIDE-GHOST",
+                        "moduleId": "rz_image",
+                        "name": "",
+                        "formValues": {},
+                        "expanded": true,
+                        "ghostContainer": false,
+                        "description": "",
+                        "visibleFormGroups": [],
+                        "children": []
+                    },
+                    {
+                        "id": "UNIT-ID-IMAGE-2-INSIDE-GHOST::1",
+                        "templateUnitId": "UNIT-ID-IMAGE-2-INSIDE-GHOST",
+                        "moduleId": "rz_image",
+                        "name": "",
+                        "formValues": {},
+                        "expanded": true,
+                        "ghostContainer": false,
+                        "description": "",
+                        "visibleFormGroups": [],
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "id": "UNIT-ID-IMAGE-SHOULD-MOVED::1",
+                "templateUnitId": "UNIT-ID-IMAGE-SHOULD-MOVED",
+                "moduleId": "rz_image",
+                "name": "",
+                "formValues": {},
+                "expanded": true,
+                "ghostContainer": false,
+                "description": "",
+                "visibleFormGroups": [],
+                "children": []
+            }
+        ]
+    }
+]

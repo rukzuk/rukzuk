@@ -1,0 +1,12 @@
+{
+    "name": "{\"de\":\"Video\",\"en\":\"Video\"}",
+    "description": "{\"de\":\"Einbetten von YouTube- oder Vimeo-Videos.\",\"en\":\"Embed YouTube or Vimeo videos.\"}",
+    "version": "dev",
+    "icon": "film.png",
+    "category": "{\"de\":\"Externe Inhalte\",\"en\":\"External Content\"}",
+    "moduleType": "default",
+    "allowedChildModuleType": "extension",
+    "ghostContainerMode": "force_off",
+    "reRenderRequired": false,
+    "apiType": "APIv1"
+}

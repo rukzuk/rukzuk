@@ -1,0 +1,24 @@
+.CMSsharewebsitepanel {
+    .x-panel-header {
+        display: table;
+
+        .x-panel-inline-icon {
+            margin: 5px 0 0 0;
+            display: table-cell;
+        }
+
+        .x-panel-header-text {
+            line-height: 1.4;
+            display: table-cell;
+            width: 100%;
+            vertical-align: middle;
+            padding-left: 10px;
+        }
+    }
+}
+
+.CMSsharewebsitewindowinfopanel {
+    .shareText {
+        line-height: 1.4;
+    }
+}

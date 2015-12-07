@@ -1,0 +1,16 @@
+{
+  "name": "rukzuk/rz_shop_cart",
+  "description": "Rukzuk Shopping Cart Module",
+  "authors": [
+    {
+      "name": "rukzuk AG",
+      "email": "info@rukzuk.com"
+    }
+  ],
+  "require": {
+    "mike182uk/cart": "2.2.*",
+    "form-manager/form-manager": "~3.10",
+    "guzzle/guzzle": "~3.1",
+    "omnipay/paypal": "~2.4"
+  }
+}

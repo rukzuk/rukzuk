@@ -1,0 +1,11 @@
+{
+    "quota": "quota from meta.json",
+    "owner": "owner from meta.json",
+    "services":  {
+        "someConfig": "services.someConfig from meta.json"
+    },
+    "publisher": {
+        "liveHostingDomain": "publisher.liveHostingDomain from meta.json",
+        "tokens": "publisher.tokens from meta.json"
+    }
+}

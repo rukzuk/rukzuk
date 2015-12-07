@@ -1,0 +1,117 @@
+#!/bin/bash
+# -----------------------------------------------------------------------------
+# cms cli call wrapper
+# -----------------------------------------------------------------------------
+
+set -e
+export LANG=C
+
+
+# -----------------------------------------------------
+# init
+# -----------------------------------------------------
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+DEFAULT_PATH="$( cd "${DIR}/../../../" && pwd )"
+
+
+# -----------------------------------------------------------------------------
+# functions
+# -----------------------------------------------------------------------------
+
+showHelp()
+{
+    echo "cms cli wrapper"
+    echo ""
+    echo "Syntax:"
+    echo ""
+    echo "--action          action to run (initSystem|updateSystem|garbageCollection|sendStatistic)"
+    echo ""
+    echo "--params          (optional) additional action parameter"
+    echo ""
+    echo "--docroot         (optional) the DOCUMENT_ROOT path (absolute) of the cms (default: current tree)"
+    echo ""
+    echo "--templatepath    (optional) the absolute path to the application (default: current tree)"
+    echo ""
+    echo "-q|--quiet        suppress result output"
+    echo ""
+    echo "-h|--help         show this help"
+    echo ""
+}
+
+
+# -----------------------------------------------------------------------------
+# check arguments
+# -----------------------------------------------------------------------------
+
+SHOWHELP="NO"
+QUIET="NO"
+ACTION=""
+PARAMS=""
+DOCROOT="${DEFAULT_PATH}"
+TEMPLATE_PATH="${DEFAULT_PATH}"
+
+# -- parse parameters --
+while [ -n "$1" ];
+do
+    ORG_OPTION="${1}"
+    ORG_VALUE="${2}"
+    OPTION=${ORG_OPTION%%=*}
+    OPT_VALUE=${ORG_OPTION/${OPTION}/}
+    if [ "${OPT_VALUE}" == "" ]; then
+      OPT_VALUE="${ORG_VALUE}"
+    fi
+    OPT_VALUE=${OPT_VALUE/=/}
+    case "${OPTION}" in
+        --action)         ACTION="${OPT_VALUE}"
+                          ;;
+        --params)         PARAMS="${OPT_VALUE}"
+                          ;;
+        --docroot)        DOCROOT="$( cd "${OPT_VALUE}" && pwd )"
+                          ;;
+        --templatepath)   TEMPLATE_PATH="$( cd "${OPT_VALUE}" && pwd )"
+                          ;;
+        -q|--quiet)       QUIET="YES"
+                          ;;
+        -h|--help)        SHOWHELP="YES"
+                          ;;
+    esac
+    shift
+done
+
+if [ "${SHOWHELP}" == "YES" ] || [ "${ACTION}" == "" ]; then
+    showHelp
+    exit 1
+fi
+
+if [ ! -d "${DOCROOT}" ]; then
+    if [ "${QUIET}" == "NO" ]; then
+      echo "error: DOCUMENT_ROOT doesn't exists"
+    fi
+    exit 1
+fi
+
+if [ ! -d "${TEMPLATE_PATH}" ]; then
+    if [ "${QUIET}" == "NO" ]; then
+      echo "error: application path doesn't exists"
+    fi
+    exit 1
+fi
+
+
+# -----------------------------------------------------------------------------
+# calling cms cli controller
+# -----------------------------------------------------------------------------
+RESULT="$( php ${TEMPLATE_PATH}/app/server/bin/run.php --docroot="${DOCROOT}/" --action="cli/${ACTION}" --params="${PARAMS}" || true )"
+
+# output result
+if [ "${QUIET}" == "NO" ]; then
+  echo -n "${RESULT}"
+fi
+
+# change exit code by json result
+if [ "${RESULT:0:15}" != "{\"success\":true" ]; then
+    exit 1
+fi
+
+exit 0

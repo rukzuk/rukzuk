@@ -1,0 +1,30 @@
+{
+    "descr": {
+        "id": "CheckboxFieldSet",
+        "text": "__i18n_formElements.elementCheckboxFieldSet",
+        "iconCls": "checkboxfieldset",
+        "allowChildNodes": true,
+        "hasValue": true
+    },
+    "params": [
+        {
+            "name": "xtype",
+            "value": "CMScheckboxfieldset",
+            "xtype": null
+        },
+        {
+            "name": "isMeta",
+            "value": false,
+            "fieldLabel": "__i18n_formElements.isGlobal",
+            "xtype": "checkbox"
+        },
+        {
+            "name": "title",
+            "value": "__i18n_formElements.title",
+            "xtype": "textfield",
+            "allowBlank": true,
+            "emptyText": "__i18n_formElements.titleOptional",
+            "fieldLabel": "__i18n_formElements.title"
+        }
+    ]
+}

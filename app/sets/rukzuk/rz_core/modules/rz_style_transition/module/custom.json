@@ -1,0 +1,20 @@
+{
+    "assets":{
+        "css":[
+            {
+                "file":"style.css"
+            },
+            {
+                "file":"notlive\/editMode.css",
+                "mode":"edit"
+            }
+        ],
+        "js":[
+            {
+                "file":"notlive\/editMode.js",
+                "type":"module",
+                "mode":"edit"
+            }
+        ]
+    }
+}

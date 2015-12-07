@@ -1,0 +1,12 @@
+{
+    "name": "{\"de\":\"Formular-Auswahlfeld\",\"en\":\"Form Select Field\"}",
+    "description": "{\"de\":\"Bietet angegebene Optionen als Drop-Down-, Checkbox- oder Radio-Auswahl an. Zur Verwendung im Formular-Modul.\",\"en\":\"Offers the defined options as drop-down, check box or radio selection. For the use inside the form module.\"}",
+    "version": "dev",
+    "icon": "form-element.png",
+    "category": "{\"de\":\"Formular\",\"en\":\"Form\"}",
+    "moduleType": "default",
+    "allowedChildModuleType": "extension",
+    "ghostContainerMode": "force_off",
+    "reRenderRequired": false,
+    "apiType": "APIv1"
+}

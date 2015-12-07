@@ -1,0 +1,112 @@
+//
+// Colors
+//
+// this needs to be a really dark color
+$secondary: rgb(6, 8, 10);
+
+// status base colors (mostly used for backgrounds)
+$color-error: #cf1e23;
+$color-success: #56b451;
+
+// text base color
+$text-color: white;
+
+// should be sync with index.html.tpl
+$bg-system-body: rgb(69, 68, 68);
+
+// -------------------------------------------------------------
+
+$grey-top: mix($secondary, $text-color, 90%);
+$grey-bottom: mix($secondary, $text-color, 90%);
+$black-top: $secondary;
+$black-bottom: darken($secondary, 20%);
+
+$bg-success: transparentize($color-success, 0.75);
+
+$bg-error: rgba($color-error, 0.17);
+$bg-layer-light: rgba($secondary, 0.125);
+$bg-layer-mid: rgba($secondary, 0.25);
+$bg-layer-mid-dark: rgba($secondary, 0.4);
+$bg-layer-dark: rgba($secondary, 0.6);
+$bg-layer-darker: rgba($secondary, 0.8);
+$bg-layer-darkest: $secondary;
+
+$bg-taskbar: rgba($secondary, 0.3);
+$bg-mask: rgba($secondary, 0.4);
+$bg-mask-dark: rgba($secondary, 0.8);
+$bg-mask-darker: rgba($secondary, 0.9);
+$border-dark: rgba($secondary, 0.66);
+$border-dark-solid: $secondary;
+$bg-panel-header: rgba($secondary, 0.8);
+
+
+$bg-button-top: $grey-top;
+$bg-button-bottom: $grey-bottom;
+$bg-button-hover-top: $black-top;
+$bg-button-hover-bottom: $black-bottom;
+
+$bg-tab-top: $bg-button-top;
+$bg-tab-bottom: $bg-button-bottom;
+$bg-tab-hover-top: $bg-button-hover-top;
+$bg-tab-hover-bottom: $bg-button-hover-bottom;
+
+$bg-tree-hover: $bg-layer-dark;
+
+// new ToggleTabButtonToolbars
+$ttbt-button-inactive-bottom: rgba($secondary, 0.125);
+$ttbt-button-inactive-top: rgba($secondary, 0.1);
+
+$ttbt-button-bg: $bg-layer-mid;
+$ttbt-button-hover-top: $bg-button-top;
+$ttbt-button-hover-bottom: $bg-button-bottom;
+
+//
+//
+//  Legacy colors
+//
+//
+
+$bg-main: $secondary;
+$bg-dark: darken($bg-main, 25%);
+$bg-toolbar: $bg-main;
+
+$border-main-dark: darken($bg-main, 30%);
+$border-toolbar-dark: darken($bg-main, 40%);
+$border-toolbar-light: darken($bg-main, 25%);
+
+$shadow-screenshot: $secondary;
+
+$bg-field: rgba($secondary, 0.5);
+$bg-field-invalid: rgba($color-error, 0.35);
+
+$bg-thumb-titlebar: rgba($secondary, 0.25);
+$bg-thumb-titlebar-hover: transparentize($secondary, 0.8);
+$bg-thumb-titlebar-selected: transparentize($secondary, 0.7);
+$bg-thumb-titlebar-selected-hover: $bg-thumb-titlebar-hover;
+
+$button-splitter: $secondary;
+$button-splitter-drop: lighten($button-splitter, 23%);
+
+$border-grid: darken($bg-main, 10%);
+$border-grid-hd: $border-grid;
+
+$text-color-mid: darken($text-color, 10%);
+$text-color-dark: darken($text-color, 30%);
+$textshadow-color: rgba($secondary, .45);
+
+$border-panel: $secondary;
+
+/* placeholder for not yet styled widgets */
+
+/* Tree Drag and Drop */
+$dd-ok-bg: transparentize($color-success, 0.85);
+$dd-fail-bg: $bg-error;
+
+/* breakpoint base colors */
+$breakpoint-color-default: rgb(25, 25, 25);
+$breakpoint-colors: #148dba #cf1e23 #56b451 #8e74c9 #ff6100 #be5da7;
+$breakpoint-transparency-dark: 0.4;
+$breakpoint-transparency-light: 0.65;
+$breakpoint-transparency-lighter: 0.75;
+
+$formpanel-title-font-color: $text-color;

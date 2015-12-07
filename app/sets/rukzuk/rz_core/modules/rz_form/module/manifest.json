@@ -1,0 +1,12 @@
+{
+    "name": "{\"de\":\"Formular\",\"en\":\"Form\"}",
+    "description": "{\"de\":\"Container für Formularfeld-Module. Versendet die in das Formular eingetragenen Daten per E-Mail.\",\"en\":\"Container for form field modules. Sends the form data by email.\"}",
+    "version": "dev",
+    "icon": "form.png",
+    "category": "{\"de\":\"Formular\",\"en\":\"Form\"}",
+    "moduleType": "default",
+    "allowedChildModuleType": "*",
+    "ghostContainerMode": "force_off",
+    "reRenderRequired": false,
+    "apiType": "APIv1"
+}

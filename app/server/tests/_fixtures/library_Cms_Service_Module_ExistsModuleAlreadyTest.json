@@ -1,0 +1,17 @@
+{
+    "website": [
+        {
+            "id": "SITE-module00-serv-ice0-test-000000000001-SITE",
+            "name": "Module service tests: website with local and globale modules",
+            "description": "",
+            "navigation": "[]",
+            "usedsetid": "module_test",
+            "shortid": "",
+            "colorscheme": "",
+            "resolutions": "",
+            "version": 0,
+            "home": "",
+            "ismarkedfordeletion": 0
+        }
+    ]
+}

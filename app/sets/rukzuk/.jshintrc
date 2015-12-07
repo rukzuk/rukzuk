@@ -1,0 +1,30 @@
+{
+    "passfail": false,
+    "maxerr": 100,
+    "browser": true,
+    "devel": true,
+    "globals": {
+        "define": true,
+        "require": true,
+        "webkitFixTableLayout": true,
+        "DynCSS": true
+    },
+    "strict": false,
+    "bitwise": true,
+    "curly": true,
+    "eqeqeq": false,
+    "noarg": true,
+    "regexp": false,
+    "undef": true,
+    "unused": "vars",
+    "newcap": true,
+    "noempty": false,
+    "nonew": true,
+    "nomen": false,
+    "onevar": false,
+    "plusplus": false,
+    "trailing": true,
+    "white": true,
+    "laxbreak": true,
+    "indent": 4
+}

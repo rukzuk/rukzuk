@@ -1,0 +1,12 @@
+{
+    "name": "{\"de\":\"Selektor\",\"en\":\"Selector\"}",
+    "description": "{\"de\":\"Zur Auswahl einzelner Elemente eines Moduls auf die sich untergeordnete Styles auswirken sollen. So können allen Modulen und Modulelementen übergeordnet oder spezifisch Styles zugewiesen werden.\",\"en\":\"Select single elements of a module where subordinate styles are applied to. By doing this every module and module element can be styled supervisory and explicitly.\"}",
+    "version": "dev",
+    "icon": "style-filter.png",
+    "category": "30",
+    "moduleType": "extension",
+    "allowedChildModuleType": "extension",
+    "ghostContainerMode": "force_off",
+    "reRenderRequired": false,
+    "apiType": "APIv1"
+}

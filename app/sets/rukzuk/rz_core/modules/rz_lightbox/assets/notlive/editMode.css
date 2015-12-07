@@ -1,0 +1,5 @@
+/* prevent unit selection flickering and make sure the lightbox buttons are always clickable */
+#swipebox-overlay,
+#swipebox-overlay * {
+    pointer-events: all !important;
+}

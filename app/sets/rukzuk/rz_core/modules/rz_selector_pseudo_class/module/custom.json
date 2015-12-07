@@ -1,0 +1,25 @@
+{
+    "i18n":{
+        "state.hover":{
+            "de":"Mouseover",
+            "en":"Mouseover"
+        },
+        "state.active":{
+            "de":"Gedr\u00fcckt",
+            "en":"Pressed"
+        },
+        "state.focus":{
+            "de":"Fokussiert",
+            "en":"Focused"
+        }
+    },
+    "assets":{
+        "js":[
+            {
+                "file":"notlive\/pseudo-class.js",
+                "type":"module",
+                "mode":"edit"
+            }
+        ]
+    }
+}

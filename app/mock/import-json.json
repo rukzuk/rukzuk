@@ -1,0 +1,14 @@
+{
+    "success": true,
+    "modules":    [],
+    "templates":  [],
+    "pages":      [],
+    "media":      [],
+    "website":    [],
+    "message": [{
+        "code": 1,
+        "param": {
+            "msg": "Dummy-JSON!"
+        }
+    }]
+}

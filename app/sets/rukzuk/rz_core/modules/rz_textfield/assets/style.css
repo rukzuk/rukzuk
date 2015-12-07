@@ -1,0 +1,27 @@
+.rz_textfield > .text:empty {
+    min-height: 16px;
+    width: 100%;
+}
+.rz_textfield > .text ul,
+.rz_textfield > .text ol {
+    margin-left: 40px;
+}
+
+/* fix positioning for icon style: all elements which can be selected via selector */
+.rz_textfield > .text p,
+.rz_textfield > .text span,
+.rz_textfield > .text li,
+.rz_textfield > .text ul,
+.rz_textfield > .text ol,
+.rz_textfield > .text a,
+.rz_textfield > .text h1,
+.rz_textfield > .text h2,
+.rz_textfield > .text h3,
+.rz_textfield > .text h4,
+.rz_textfield > .text h5,
+.rz_textfield > .text h6,
+.rz_textfield > .text table,
+.rz_textfield > .text tr,
+.rz_textfield > .text td {
+    position: relative;
+}

@@ -1,0 +1,13 @@
+{
+    "name": "{\"de\":\"Flexbox\",\"en\":\"Flexbox\"}",
+    "description": "{\"de\":\"Grundlegendes Layoutmodul das die untergeordneten Module nebeneinander anordnet.\",\"en\":\"Basic layout module which arranges the subordinate modules side by side.\"}",
+    "version": "dev",
+    "icon": "multi-shape.png",
+    "category": "{\"de\":\" Layout\",\"en\":\" Layout\"}",
+    "moduleType": "default",
+    "allowedChildModuleType": "*",
+    "reRenderRequired": false,
+    "ghostContainerMode": "force_off",
+    "apiType": "APIv1",
+    "sessionRequired": false
+}

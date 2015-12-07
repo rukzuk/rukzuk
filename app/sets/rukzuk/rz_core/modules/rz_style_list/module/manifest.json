@@ -1,0 +1,12 @@
+{
+    "name": "{\"de\":\"Liste\",\"en\":\"List\"}",
+    "description": "{\"de\":\"Dient der Gestaltung der Aufzählungszeichen von Listen im Textmodul.\",\"en\":\"For designing bullets of lists in the text module.\"}",
+    "version": "dev",
+    "icon": "style-list.png",
+    "category": "90",
+    "moduleType": "extension",
+    "allowedChildModuleType": "",
+    "reRenderRequired": false,
+    "apiType": "APIv1",
+    "ghostContainerMode": "force_off"
+}

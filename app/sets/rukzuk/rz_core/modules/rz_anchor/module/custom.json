@@ -1,0 +1,25 @@
+{
+    "assets":{
+        "js":[
+            {
+                "file":"notlive\/editMode.js",
+                "type":"module",
+                "mode":"edit"
+            },
+            {
+                "file":"notlive\/lib\/urlify.js",
+                "type":"script",
+                "mode":"edit"
+            }
+        ],
+        "css":[
+            {
+                "file":"main.css"
+            },
+            {
+                "file":"notlive\/editMode.css",
+                "mode":"edit"
+            }
+        ]
+    }
+}

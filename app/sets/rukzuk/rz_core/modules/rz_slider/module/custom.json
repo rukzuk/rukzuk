@@ -1,0 +1,104 @@
+{
+    "assets":{
+        "css":[
+            {
+                "file":"lib\/jquery.bxslider.css"
+            },
+            {
+                "file":"style.css"
+            }
+        ],
+        "js":[
+            {
+                "file":"notlive\/slider.js",
+                "type":"module",
+                "mode":"edit"
+            },
+            {
+                "file":"sliderInit.js",
+                "type":"module",
+                "mode":"live"
+            },
+            {
+                "file":"lib\/jquery.bxslider.js",
+                "type":"script"
+            }
+        ]
+    },
+    "i18n":{
+        "button.missingInputHintTitle":{
+            "de":"Folie hinzuf\u00fcgen",
+            "en":"Insert a slide"
+        },
+        "selector.nextPrevButtons":{
+            "de":"Vor-\/Zur\u00fcck-Buttons",
+            "en":"Next\/previous buttons"
+        },
+        "selector.nextButton":{
+            "de":"Vor-Button",
+            "en":"Next button"
+        },
+        "selector.prevButton":{
+            "de":"Zur\u00fcck-Button",
+            "en":"Previous button"
+        },
+        "selector.navigation":{
+            "de":"Navigationsleiste",
+            "en":"Navigation"
+        },
+        "selector.navigationItem":{
+            "de":"Navigationspunkt",
+            "en":"Navigation item"
+        },
+        "selector.navigationItemActive":{
+            "de":"Navigationspunkt aktiv",
+            "en":"Navigation item active"
+        },
+        "selector.slide":{
+            "de":"Slide",
+            "en":"Slide"
+        },
+        "selector.slideActive":{
+            "de":"Slide aktiv",
+            "en":"Slide active"
+        }
+    },
+    "selectors":[
+        {
+            "title":"__i18n_selector.nextPrevButtons",
+            "selector":".bx-wrapper .bx-controls-direction > a",
+            "items":[
+                {
+                    "title":"__i18n_selector.nextButton",
+                    "selector":".bx-wrapper .bx-controls-direction a.bx-next"
+                },
+                {
+                    "title":"__i18n_selector.prevButton",
+                    "selector":".bx-wrapper .bx-controls-direction a.bx-prev"
+                }
+            ]
+        },
+        {
+            "title":"__i18n_selector.navigation",
+            "selector":".bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto",
+            "items":[
+                {
+                    "title":"__i18n_selector.navigationItem",
+                    "selector":".bx-wrapper .bx-pager.bx-default-pager a"
+                },
+                {
+                    "title":"__i18n_selector.navigationItemActive",
+                    "selector":".bx-wrapper .bx-pager.bx-default-pager a.active"
+                }
+            ]
+        },
+        {
+            "title":"__i18n_selector.slide",
+            "selector":".slides > .slide"
+        },
+        {
+            "title":"__i18n_selector.slideActive",
+            "selector":".slides > .slideActive"
+        }
+    ]
+}

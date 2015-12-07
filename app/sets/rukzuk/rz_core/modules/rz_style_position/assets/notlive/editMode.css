@@ -1,0 +1,85 @@
+body.RUKZUKenableResizeHandles .stylePositionWrapper, .stylePositionWrapper:hover {
+    opacity: 1;
+}
+
+.stylePositionWrapper {
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    cursor: move;
+    background: transparent;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -16px;
+    margin-left: -16px;
+    opacity: 0;
+    z-index: 10110;
+    pointer-events: all !important;
+}
+
+body.RUKZUKenableSelectionMarker .stylePositionWrapper.CMSselected.CMSeditable {
+    outline: 0 !important;
+}
+
+.stylePositionWrapper > .dragHandle {
+    width: 32px;
+    height: 32px;
+    background: url(dragIcon.png) no-repeat scroll center center rgba(6, 8, 10, 0.5);
+    cursor: move;
+    pointer-events: all !important;
+    z-index: 100;
+}
+
+._jsPlumb_endpoint, ._jsPlumb_connector {
+    z-index: 10100;
+    opacity: 0;
+}
+
+body.RUKZUKenableResizeHandles ._jsPlumb_endpoint {
+    opacity: 1;
+}
+
+body.RUKZUKenableResizeHandles ._jsPlumb_connector {
+    opacity: 0.8;
+}
+
+.floatMarker {
+    z-index: 10101;
+    position: absolute;
+}
+
+.floatMarker.BottomLeft {
+    bottom: 0;
+    left: 0;
+}
+
+.floatMarker.TopLeft {
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.floatMarker.BottomRight {
+    bottom: 0;
+    right: 0;
+    position: absolute;
+}
+
+.floatMarker.TopRight {
+    top: 0;
+    right: 0;
+    z-index: 10101;
+    position: absolute;
+}
+
+.floatMarker.floatMarkerFixed {
+    position: fixed;
+}
+
+/* make parentUnit.parentOffset() working for boxes which are direct childs of the root module */
+body {
+    position: relative;
+}
+

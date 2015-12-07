@@ -1,0 +1,36 @@
+{
+    "descr": {
+        "id": "Comment",
+        "text": "__i18n_formElements.elementComment",
+        "iconCls": "plaintext"
+    },
+    "params": [
+        {
+            "name": "xtype",
+            "value": "ux-multilinelabel",
+            "xtype": null
+        },
+        {
+            "name": "hideLabel",
+            "value": true,
+            "xtype": null
+        },
+        {
+            "name": "text",
+            "xtype": "textarea",
+            "height": 200,
+            "value": "__i18n_formElements.commentValue",
+            "fieldLabel": "__i18n_formElements.commentLabel"
+        },
+        {
+            "name": "autoLink",
+            "value": true,
+            "xtype": null
+        },
+        {
+            "name": "cls",
+            "value": "modulecomment",
+            "xtype": null
+        }
+    ]
+}

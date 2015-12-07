@@ -1,0 +1,27 @@
+{
+    "assets":{
+        "css":[
+            {
+                "file":"notlive\/editMode.css",
+                "mode":"edit"
+            }
+        ],
+        "js":[
+            {
+                "file":"notlive\/jquery.event.drag.live-2.2.js",
+                "type":"script",
+                "mode":"edit"
+            },
+            {
+                "file":"notlive\/jquery.jsPlumb-1.3.16-all-min.js",
+                "type":"script",
+                "mode":"edit"
+            },
+            {
+                "file":"notlive\/editMode.js",
+                "type":"module",
+                "mode":"edit"
+            }
+        ]
+    }
+}

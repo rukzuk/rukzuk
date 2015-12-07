@@ -1,0 +1,36 @@
+{
+    "descr": {
+        "id": "TabbedFieldSet",
+        "text": "__i18n_formElements.elementTabbedFieldSet",
+        "iconCls": "tabbedfieldset",
+        "hasValue": true,
+        "allowChildNodes": true
+    },
+    "params": [
+        {
+            "name": "xtype",
+            "value": "CMStabbedfieldset",
+            "xtype": null
+        },
+        {
+            "name": "isResponsive",
+            "value": false,
+            "fieldLabel": "__i18n_formElements.isResponsive",
+            "xtype": "checkbox"
+        },
+        {
+            "name": "isMeta",
+            "value": false,
+            "fieldLabel": "__i18n_formElements.isGlobal",
+            "xtype": "checkbox"
+        },
+        {
+            "name": "fieldLabel",
+            "value": "",
+            "xtype": "textfield",
+            "allowBlank": true,
+            "emptyText": "__i18n_formElements.fieldLabelOptionalEmptyText",
+            "fieldLabel": "__i18n_formElements.fieldLabel"
+        }
+    ]
+}

@@ -1,0 +1,57 @@
+//
+// Theme Variables
+//
+
+// the primary brand color
+$primary: #bc4b00;
+
+// url to the logo
+$logo-url: '../login/images/rukzuk-logo-rgb-white.svg';
+
+// use brand values if available
+@if variable-exists(brand-color) {
+  $primary: $brand-color;
+}
+
+@if variable-exists(brand-logo) {
+  $logo-url: $brand-logo;
+}
+
+// ************ colors based on primary in any way
+
+$primary-top: $primary;
+$primary-bottom: $primary;
+$primary-dark-top: darken($primary-top, 5%);
+$primary-dark-bottom: darken($primary-bottom, 5%);
+
+$ttbt-button-active-top: $primary;
+$ttbt-button-active-bottom: $ttbt-button-active-top;
+
+$color-main: $primary;
+$color-main-dark: $primary;
+$color-main-darker: darken($color-main, 28%);
+
+$color-special: $primary;
+$color-special-light: lighten($color-special, 3%);
+$color-special-dark: darken($color-special, 3%);
+$color-register: $color-special;
+
+$bg-window-head-top: $primary-top;
+$bg-window-head-bottom: $primary-bottom;
+
+$bg-button-selected-top: $primary-top;
+$bg-button-selected-bottom: $primary-bottom;
+$bg-tree-selected: $primary;
+$bg-tab-active-top: $bg-button-selected-top;
+$bg-tab-active-bottom: $bg-button-selected-bottom;
+$bg-insert-table-cell: rgba($primary, 0.1);
+
+$focus: lighten($primary, 10%);
+
+$unstyled: lighten($primary, 20%);
+
+
+$border-main: $color-main-darker;
+
+$border-toolbar-active-dark: darken($color-main, 20%);
+$border-toolbar-active-light: lighten($color-main, 12%);

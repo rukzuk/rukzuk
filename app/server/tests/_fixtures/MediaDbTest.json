@@ -1,0 +1,35 @@
+{
+    "website": [
+        {
+            "id": "SITE-20b2394c-b41c-490f-1111-70bb15968c52-SITE",
+            "name": "Website for Render Color Tests",
+            "description": "",
+            "navigation": "[]",
+            "publish": null,
+            "colorscheme": "[{\"id\":\"572b5704-9ab5-4962-aa59-6f826d728130\",\"value\":\"rgba(227,0,116,1)\",\"name\":\"Magenta\"},{\"id\":\"114678c7-2698-45d2-acd5-a22872bc0f72\",\"value\":\"rgba(0,0,0,1)\",\"name\":\"schwarz\"},{\"id\":\"6f11f819-618b-4116-937c-45067d3329e7\",\"value\":\"rgba(255,255,255,1)\",\"name\":\"weiss\"},{\"id\":\"7bbd4dfc-c9a4-472f-b9b3-69918dc8e565\",\"value\":\"rgba(72,72,72,1)\",\"name\":\"dunkelgrau\"},{\"id\":\"0235cb3a-6817-44b8-a01e-b3d635ab4f67\",\"value\":\"rgba(164,164,164,1)\",\"name\":\"hellgrau\"},{\"id\":\"4e8af5a2-48ca-41f6-bccd-21cd98d322eb\",\"value\":\"rgba(66,149,209,1)\",\"name\":\"t\\u00fcrkis hell\"},{\"id\":\"d3942192-2959-4323-96bf-b00739179003\",\"value\":\"rgba(51,102,153,1)\",\"name\":\"t\\u00fcrkis dunkel\"},{\"id\":\"8b958ac1-a204-488a-a902-0a8b758190e6\",\"value\":\"rgba(181,0,93,1)\",\"name\":\"magenta dunkel\"},{\"id\":\"bcf3fca3-ae67-4ca1-ad8f-36f13a32ed15\",\"value\":\"rgba(220,220,220,1)\",\"name\":\"hellgrau2\"}]",
+            "version": 0,
+            "shortid": "",
+            "resolutions": "",
+            "home": "",
+            "ismarkedfordeletion": 0
+        }
+    ],
+    "media_item": [
+        {
+            "id": "MDB-exp0d0ec-cb0f-4961-bbbb-765d4aa581n2-MDB",
+            "websiteid": "SITE-20b2394c-b41c-490f-1111-70bb15968c52-SITE",
+            "name": "Overwritten_2",
+            "filename": "red.gif",
+            "file": "red.gif",
+            "extension": "gif",
+            "type": "image"
+        }
+    ],
+    "album": [
+        {
+            "id": "ALBUM-45ee0958-f040-447f-cccc-4ebacc2ba770-ALBUM",
+            "websiteid": "SITE-20b2394c-b41c-490f-1111-70bb15968c52-SITE",
+            "name": "MediaDb::getById test"
+        }
+    ]
+}

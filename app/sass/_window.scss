@@ -1,0 +1,184 @@
+@import "mixins";
+@import "colors";
+
+/*!!
+ * Ext JS Library 3.2.1
+ * Copyright(c) 2006-2010 Ext JS, Inc.
+ * licensing@extjs.com
+ * http://www.extjs.com/license
+ */
+.x-window {
+    zoom: 1;
+}
+
+.x-window .x-window-handle {
+    opacity: 0;
+}
+
+.x-window-proxy {
+    z-index: 12000;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+    opacity: .5;
+}
+
+.x-window-header {
+    overflow: hidden;
+    zoom: 1;
+
+    .x-tool {
+        margin-top: 12px;
+    }
+}
+
+.x-window-bwrap {
+    border-top: $border-dark solid 3px;
+    z-index: 1;
+    position: relative;
+    zoom: 1;
+    left: 0;
+    top: 0;
+
+    .x-window-notitle & {
+        border-top: none;
+    }
+}
+
+.x-window-header {
+    height: 40px;
+
+    .x-window-header-text {
+        font-size: 14px;
+        line-height: 40px;
+        cursor: pointer;
+    }
+
+    .x-window-notitle & {
+        height: 6px;
+    }
+}
+
+.x-window-tc {
+    background: transparent repeat-x 0 0;
+    overflow: hidden;
+    zoom: 1;
+}
+
+.x-window-tl {
+    background: transparent no-repeat 0 0;
+    padding-left: 20px;
+    zoom: 1;
+    z-index: 1;
+    position: relative;
+}
+
+.x-window-tr {
+    background: transparent no-repeat right 0;
+    padding-right: 15px;
+}
+
+.x-window-bc .x-window-footer {
+    zoom: 1;
+    font-size: 0;
+    line-height: 0;
+}
+
+.x-window-bc,
+.x-window-bl,
+.x-window-br,
+.x-window-ml,
+.x-window-mr {
+    background: transparent no-repeat right bottom;
+    zoom: 1;
+}
+
+.x-window-mc {
+    padding: 0;
+    margin: 0;
+}
+
+.x-window-body {
+    overflow: hidden;
+}
+
+.x-window-bwrap {
+    overflow: hidden;
+}
+
+.x-window-maximized .x-window-bl,
+.x-window-maximized .x-window-br,
+.x-window-maximized .x-window-ml,
+.x-window-maximized .x-window-mr,
+.x-window-maximized .x-window-tl,
+.x-window-maximized .x-window-tr {
+    padding: 0;
+}
+
+.x-window-maximized .x-window-footer {
+    padding-bottom: 0;
+}
+
+.x-window-maximized .x-window-tc {
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.x-window-draggable, .x-window-draggable .x-window-header-text {
+    cursor: move;
+}
+
+.x-window-maximized .x-window-draggable, .x-window-maximized .x-window-draggable .x-window-header-text {
+    cursor: default;
+}
+
+.x-window-maximized-ct {
+    overflow: hidden;
+}
+
+.x-window-maximized .x-window-handle {
+    display: none;
+}
+
+.x-dlg-focus {
+    -moz-outline: 0 none;
+    outline: 0 none;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.ext-webkit .x-dlg-focus {
+    width: 1px;
+    height: 1px;
+}
+
+.x-dlg-mask {
+    z-index: 10000;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    background-color: $bg-mask;
+}
+
+body.ext-ie6.x-body-masked select {
+    visibility: hidden;
+}
+
+body.ext-ie6.x-body-masked .x-window select {
+    visibility: visible;
+}
+
+.x-window .x-window-body > .x-dlg-icon,
+.x-window .x-window-body > .x-plain > .x-plain-bwrap > .x-plain-body,
+.x-window.CMSimportwindow .x-window-body > .x-panel > .x-panel-bwrap > .x-panel-body,
+.x-window.CMSprogress .x-window-body > .x-panel > .x-panel-bwrap > .x-panel-body {
+    padding: 15px;
+}

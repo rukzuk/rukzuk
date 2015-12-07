@@ -1,0 +1,280 @@
+{
+    "name": {
+        "de": "Shop-Einstellungen",
+        "en": "Shop Settings"
+    },
+    "description": {
+        "de": "",
+        "en": ""
+    },
+    "version": "dev",
+    "formValues": {
+        "currency": "EUR",
+        "vat": "19%",
+        "cartPage": null,
+        "tosPage": null,
+        "thanksText": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "shippingCosts": 5,
+        "paymentInvoice": true,
+        "paymentInvoiceDesc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "paymentBanktransfer": false,
+        "paymentBanktransferDesc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "emailConfirmationText": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "emailNotificationAddress": "",
+        "paymentPayPalExpress": false,
+        "paymentPayPalExpressApiSandboxMode": true,
+        "countryList": "DE:Germany\nAT:Austria\nCH:Switzerland"
+    },
+    "form": [
+        {
+            "type": "ComboSelect",
+            "CMSvar": "currency",
+            "fieldLabel": "{\"de\": \"Währung\", \"en\": \"Currency\"}",
+            "emptyText": "",
+            "options": [
+                [
+                    "EUR",
+                    "EUR (Euro)",
+                    0
+                ],
+                [
+                    "USD",
+                    "USD (U.S. Dollar)",
+                    0
+                ],
+                [
+                    "GBP",
+                    "GBP (British Pound)",
+                    0
+                ],
+                [
+                    "CHF",
+                    "{\"de\": \"CHF (Schweizer Franken)\", \"en\": \"CHF (Swiss Franc)\"}",
+                    0
+                ],
+                [
+                    "AUD",
+                    "AUD (Australian Dollar)",
+                    0
+                ],
+                [
+                    "BRL",
+                    "BRL (Brazilian Real)",
+                    0
+                ],
+                [
+                    "CAD",
+                    "CAD (Canadian Dollar)",
+                    0
+                ],
+                [
+                    "CZK",
+                    "CZK (Czech Koruna)",
+                    0
+                ],
+                [
+                    "DKK",
+                    "DKK (Danish Krone)",
+                    0
+                ],
+                [
+                    "HKD",
+                    "HKD (Hong Kong Dollar)",
+                    0
+                ],
+                [
+                    "HUF",
+                    "HUF (Hungarian Forint)",
+                    0
+                ],
+                [
+                    "ILS",
+                    "ILS (Israeli New Shekel)",
+                    0
+                ],
+                [
+                    "JPY",
+                    "JPY (Japanese Yen)",
+                    0
+                ],
+                [
+                    "MXN",
+                    "MXN (Mexican Peso)",
+                    0
+                ],
+                [
+                    "MYR",
+                    "MYR (Malaysian Ringgit)",
+                    0
+                ],
+                [
+                    "NOK",
+                    "NOK (Norwegian Krone)",
+                    0
+                ],
+                [
+                    "NZD",
+                    "NZD (New Zealand Dollar)",
+                    0
+                ],
+                [
+                    "PHP",
+                    "PHP (Philippine Peso)",
+                    0
+                ],
+                [
+                    "PLN",
+                    "PLN (Polish Zloty)",
+                    0
+                ],
+                [
+                    "RUB",
+                    "RUB (Russian Ruble)",
+                    0
+                ],
+                [
+                    "SEK",
+                    "SEK (Swedish Krona)",
+                    0
+                ],
+                [
+                    "SGD",
+                    "SGD (Singapore Dollar)",
+                    0
+                ],
+                [
+                    "THB",
+                    "THB (Thai Baht)",
+                    0
+                ],
+                [
+                    "TRY",
+                    "TRY (Turkish Lira)",
+                    0
+                ],
+                [
+                    "TWD",
+                    "TWD (New Taiwan Dollar)",
+                    0
+                ]
+            ],
+            "forceSelection": true
+        },
+        {
+            "type": "SliderUnit",
+            "CMSvar": "vat",
+            "fieldLabel": "{\"de\": \"MwSt.\", \"en\":\"VAT\"}",
+            "minValue": 0,
+            "maxValue": 100,
+            "increment": 0.1,
+            "unitList": [
+                [
+                    "%",
+                    "%"
+                ]
+            ]
+        },
+        {
+            "type": "SliderUnit",
+            "CMSvar": "shippingCosts",
+            "fieldLabel": "{\"de\": \"Versandkosten (brutto)\", \"en\":\"Shipping Costs (gross)\"}",
+            "minValue": 0,
+            "maxValue": 99999,
+            "increment": 0.1
+        },
+        {
+            "type": "TextArea",
+            "CMSvar": "countryList",
+            "fieldLabel": "{\"de\": \"Versandländer (ein Land pro Zeile; z.B. DE:Deutschland)\", \"en\": \"Operating countries (one country per line; e.g. US:USA)\"}",
+            "height": 80
+        },
+        {
+            "type": "InternalLinkChooser",
+            "CMSvar": "cartPage",
+            "fieldLabel": "{\"de\": \"Seite mit Warenkorb\", \"en\": \"Page with Shopping Cart\"}"
+        },
+        {
+            "type": "InternalLinkChooser",
+            "CMSvar": "tosPage",
+            "fieldLabel": "{\"de\": \"Seite mit AGB und Widerrufsbelehrung\", \"en\": \"Page with TOS and Cancellation Policy\"}"
+        },
+        {
+            "type": "OnOffFieldSet",
+            "CMSvar": "paymentInvoice",
+            "fieldLabel": "{\"de\": \"Auf Rechnung\", \"en\": \"Invoice\"}",
+            "_items": [
+                {
+                    "type": "TextArea",
+                    "CMSvar": "paymentInvoiceDesc",
+                    "fieldLabel": "{\"de\": \"Weiterer Text in E-Mail\", \"en\": \"Additional text in e-mail\"}",
+                    "height": 80
+                }
+            ]
+        },
+        {
+            "type": "OnOffFieldSet",
+            "CMSvar": "paymentBanktransfer",
+            "fieldLabel": "{\"de\": \"Vorkasse\", \"en\": \"Bank transfer\"}",
+            "_items": [
+                {
+                    "type": "TextArea",
+                    "CMSvar": "paymentBanktransferDesc",
+                    "fieldLabel": "{\"de\": \"Weiterer Text in E-Mail, z.B. Bankverbindung\", \"en\": \"Additional text in e-mail, e.g. banking account\"}",
+                    "height": 80
+                }
+            ]
+        },
+        {
+            "type": "OnOffFieldSet",
+            "CMSvar": "paymentPayPalExpress",
+            "fieldLabel": "{\"de\": \"PayPal Express\", \"en\": \"PayPal Express\"}",
+            "_items": [
+                {
+                    "type": "TextField",
+                    "CMSvar": "paymentPayPalExpressApiUsername",
+                    "fieldLabel": "{\"de\": \"API-Benutzername\", \"en\": \"API username\"}",
+                    "minLength": 0,
+                    "maxLength": 255,
+                    "allowBlank": false
+                },
+                {
+                    "type": "TextField",
+                    "CMSvar": "paymentPayPalExpressApiPassword",
+                    "fieldLabel": "{\"de\": \"API-Passwort\", \"en\": \"API password\"}",
+                    "minLength": 0,
+                    "maxLength": 255,
+                    "allowBlank": false
+                },
+                {
+                    "type": "TextField",
+                    "CMSvar": "paymentPayPalExpressApiSignature",
+                    "fieldLabel": "{\"de\": \"API-Unterschrift\", \"en\": \"API signature\"}",
+                    "minLength": 0,
+                    "maxLength": 255,
+                    "allowBlank": false
+                }
+            ]
+        },
+        {
+            "type": "TextArea",
+            "CMSvar": "emailConfirmationText",
+            "fieldLabel": "{\"de\": \"E-Mail-Text an Käufer\", \"en\": \"E-mail text for buyer\"}",
+            "height": 80
+        },
+        {
+            "type": "TextField",
+            "CMSvar": "emailNotificationAddress",
+            "fieldLabel": "{\"de\": \"E-Mail-Adresse für Benachrichtigung\", \"en\": \"Notification e-mail address\"}",
+            "emptyText": "you@example.com",
+            "minLength": 0,
+            "maxLength": 255,
+            "allowBlank": true
+        },
+        {
+            "type": "TextArea",
+            "CMSvar": "thanksText",
+            "fieldLabel": "{\"de\": \"Meldung nach Bestellung\", \"en\": \"After buy message\"}",
+            "height": 80
+        }
+    ]
+}

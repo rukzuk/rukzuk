@@ -1,0 +1,109 @@
+<phpunit bootstrap="./initBootstrap.php"
+         backupGlobals="false"
+         backupStaticAttributes="false"
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         verbose="true">
+  <testsuites>
+    <testsuite name="rukzuk Test Suite">
+      <!-- see the ./application, ./library and ./environment config entry at the bottom of the list -->
+
+      <directory>./application/controllers/ActionLog</directory>
+      <directory>./application/controllers/Album</directory>
+      <directory>./application/controllers/Builder</directory>
+      <directory>./application/controllers/Cdn</directory>
+      <directory>./application/controllers/Cli</directory>
+      <directory>./application/controllers/Export</directory>
+      <directory>./application/controllers/Feedback</directory>
+      <directory>./application/controllers/Group</directory>
+      <directory>./application/controllers/Heartbeat</directory>
+      <directory>./application/controllers/Import</directory>
+      <directory>./application/controllers/Lock</directory>
+      <directory>./application/controllers/Media</directory>
+      <directory>./application/controllers/Modul</directory>
+      <directory>./application/controllers/Page</directory>
+      <directory>./application/controllers/Render</directory>
+      <directory>./application/controllers/Shortener</directory>
+      <directory>./application/controllers/Template</directory>
+      <directory>./application/controllers/TemplateSnippet</directory>
+      <directory>./application/controllers/User</directory>
+      <directory>./application/controllers/Uuid</directory>
+      <directory>./application/controllers/Website</directory>
+
+      <directory>./library/Cms/Business/Album</directory>
+      <directory>./library/Cms/Business/Cli</directory>
+      <directory>./library/Cms/Business/Export</directory>
+      <directory>./library/Cms/Business/Import</directory>
+      <directory>./library/Cms/Business/Media</directory>
+      <directory>./library/Cms/Business/Modul</directory>
+      <directory>./library/Cms/Business/Page</directory>
+      <directory>./library/Cms/Business/Reparser</directory>
+      <directory>./library/Cms/Business/Screenshot</directory>
+      <directory>./library/Cms/Business/Template</directory>
+      <directory>./library/Cms/Business/User</directory>
+      <directory>./library/Cms/Business/Uuid</directory>
+      <directory>./library/Cms/Business/Website</directory>
+
+      <directory>./library/Cms/Service/Album</directory>
+      <directory>./library/Cms/Service/Group</directory>
+      <directory>./library/Cms/Service/Import</directory>
+      <directory>./library/Cms/Service/Indexer</directory>
+      <directory>./library/Cms/Service/MailBuilder</directory>
+      <directory>./library/Cms/Service/Media</directory>
+      <directory>./library/Cms/Service/Modul</directory>
+      <directory>./library/Cms/Service/Optin</directory>
+      <directory>./library/Cms/Service/Page</directory>
+      <directory>./library/Cms/Service/Publisher</directory>
+      <directory>./library/Cms/Service/Template</directory>
+      <directory>./library/Cms/Service/TemplateSnippet</directory>
+      <directory>./library/Cms/Service/User</directory>
+      <directory>./library/Cms/Service/Website</directory>
+
+      <directory>./library/Cms/Dao/Module</directory>
+      <directory>./library/Cms/Dao/Page</directory>
+      <directory>./library/Cms/Dao/Template</directory>
+      <directory>./library/Cms/Dao/User</directory>
+      <directory>./library/Cms/Dao/Website</directory>
+
+      <directory>./library/Cms/Access</directory>
+      <directory>./library/Cms/Controller</directory>
+      <directory>./library/Cms/Creator</directory>
+      <directory>./library/Cms/Feedback</directory>
+      <directory>./library/Cms/Mail</directory>
+      <directory>./library/Cms/Publisher</directory>
+      <directory>./library/Cms/Reparser</directory>
+      <directory>./library/Cms/Request</directory>
+      <directory>./library/Cms/Validator</directory>
+
+      <directory>./library/Dual/Render</directory>
+      <directory>./library/Render</directory>
+
+      <directory>./library/Seitenbau</directory>
+      <directory>./environment/Initial</directory>
+
+      <directory>./application/config</directory>
+
+      <!-- comment out the next wildcard lines, if you only want use the directory list above -->
+      <directory>./application</directory>
+      <directory>./library</directory>
+      <directory>./environment</directory>
+    </testsuite>
+  </testsuites>
+  <filter>
+    <whitelist>
+      <directory suffix=".php">../application/controllers</directory>
+      <directory suffix=".php">../library/Cms</directory>
+      <directory suffix=".php">../library/Dual</directory>
+      <directory suffix=".php">../library/Render</directory>
+      <directory suffix=".php">../library/Orm/Repository</directory>
+      <directory suffix=".php">../library/Seitenbau</directory>
+    </whitelist>
+  </filter>
+  <php>
+    <ini name="error_reporting" value="-1"/>
+    <ini name="memory_limit" value="2048M"/>
+    <ini name="display_errors" value="On"/>
+  </php>
+</phpunit>

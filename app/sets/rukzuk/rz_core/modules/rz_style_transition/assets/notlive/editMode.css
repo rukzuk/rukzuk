@@ -1,0 +1,8 @@
+/* disable all transitions for selected modules
+ * TODO also used in rz_style_position; fix when formValueChange is fired for API calls
+ */
+body.preventTransitions .isModule {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    transition: none !important;
+}

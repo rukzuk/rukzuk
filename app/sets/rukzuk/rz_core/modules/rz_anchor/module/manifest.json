@@ -1,0 +1,12 @@
+{
+    "name": "{\"de\":\"Sprungmarke\",\"en\":\"Anchor\"}",
+    "description": "{\"de\":\"Sprungmarken definieren Bezugspunkte innerhalb einer Seite. Sie können für sich alleine stehen oder Module enthalten.\",\"en\":\"Anchors define reference points within a page. They can stand alone or contain modules.\"}",
+    "version": "dev",
+    "icon": "sprungmarke.png",
+    "category": "{\"de\":\"Navigation\",\"en\":\"Navigation\"}",
+    "moduleType": "default",
+    "allowedChildModuleType": "*",
+    "reRenderRequired": true,
+    "ghostContainerMode": "force_off",
+    "apiType": "APIv1"
+}

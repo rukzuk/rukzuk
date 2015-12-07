@@ -1,0 +1,14 @@
+{
+    "apiVersion":"0.1",
+    "swaggerVersion":"2.0",
+    "apis":[
+        {
+            "path":"/module.{format}",
+            "description":"ModulController"
+        },
+        {
+            "path":"/website.{format}",
+            "description":"Website Controller"
+        }
+    ]
+}

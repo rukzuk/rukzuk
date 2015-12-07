@@ -1,0 +1,66 @@
+{
+    "descr": {
+        "id": "ImagePicker",
+        "text": "__i18n_formElements.elementImagePicker",
+        "iconCls": "mediaDB",
+        "hasValue": true
+    },
+    "params": [
+        {
+            "name": "xtype",
+            "value": "CMSclearablemediabutton",
+            "xtype": null
+        },
+        {
+            "name": "isMeta",
+            "value": false,
+            "fieldLabel": "__i18n_formElements.isGlobal",
+            "xtype": "checkbox"
+        },
+        {
+            "name": "isResponsive",
+            "value": false,
+            "fieldLabel": "__i18n_formElements.isResponsive",
+            "xtype": "checkbox"
+        },
+        {
+            "name": "style",
+            "value": {
+                "padding": "5px 0"
+            },
+            "xtype": null
+        },
+        {
+            "name": "filterType",
+            "value": "image",
+            "xtype": null
+        },
+        {
+            "name": "showText",
+            "value": true,
+            "xtype": null
+        },
+        {
+            "name": "fieldLabel",
+            "value": "",
+            "xtype": "textfield",
+            "allowBlank": true,
+            "emptyText": "__i18n_formElements.fieldLabelOptionalEmptyText",
+            "fieldLabel": "__i18n_formElements.fieldLabel"
+        },
+        {
+            "name": "text",
+            "value": "__i18n_formElements.imageChoose",
+            "xtype": "textfield",
+            "allowBlank": false,
+            "emptyText": "__i18n_formElements.buttonEmptyText",
+            "fieldLabel": "__i18n_formElements.buttonLabel"
+        },
+        {
+            "name": "multiSelect",
+            "value": false,
+            "xtype": "checkbox",
+            "fieldLabel": "__i18n_formElements.multiSelectLabel"
+        }
+    ]
+}

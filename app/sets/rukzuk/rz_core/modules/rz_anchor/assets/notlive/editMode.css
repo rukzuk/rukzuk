@@ -1,0 +1,42 @@
+body.RUKZUKenableSelectionMarker .isAnchorAbsolute.CMSeditable,
+body.RUKZUKenableSelectionMarker .isAnchorAbsolute.CMSeditable.CMSselected {
+    outline: none !important;
+}
+
+body.RUKZUKenableSelectionMarker .rz_anchor > .anchor {
+    width: 100%;
+    position: absolute;
+    height: 0;
+    z-index: 1;
+}
+
+.rz_anchor > .anchor > div {
+    display: none;
+}
+
+body.RUKZUKenableSelectionMarker .rz_anchor > .anchor > div {
+    display: inline-block;
+    background-color: rgba(6, 8, 10, 0.5);
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    font-size: 11px;
+    font-weight: normal;
+    color: #fff;
+    line-height: 16px;
+    padding: 0 4px;
+    text-shadow: 0px 1px 0px rgba(6, 8, 10, .4);
+    vertical-align: top;
+    cursor: pointer;
+    pointer-events: all !important;
+}
+
+body.RUKZUKenableSelectionMarker .rz_anchor > .anchor > div:before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    left: 0px;
+    height: 0;
+    top: -1px;
+    border-top: 1px dotted rgba(255, 255, 255, .5);
+    border-bottom: 1px dotted rgba(0, 0, 0, .5);
+}

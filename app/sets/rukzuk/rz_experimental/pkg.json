@@ -1,0 +1,16 @@
+{
+  "name": {
+    "de": "rukzuk experimental",
+    "en": "rukzuk experimental"
+  },
+  "description": {
+    "de": "",
+    "en": ""
+  },
+  "websiteSettings": [],
+  "pageTypes": [],
+  "modules": [
+    "rz_container_flow",
+    "rz_opengraph"
+  ]
+}

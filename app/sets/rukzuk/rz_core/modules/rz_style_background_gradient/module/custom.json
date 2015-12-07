@@ -1,0 +1,11 @@
+{
+    "assets":{
+        "js":[
+            {
+                "file":"notlive\/switchColorsBtn.js",
+                "type":"module",
+                "mode":"edit"
+            }
+        ]
+    }
+}

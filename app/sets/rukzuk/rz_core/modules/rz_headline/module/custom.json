@@ -1,0 +1,116 @@
+{
+    "assets":{
+        "css":[
+            {
+                "file":"style.css"
+            }
+        ],
+        "js":[
+            {
+                "file":"notlive\/headline.js",
+                "type":"module",
+                "mode":"edit"
+            }
+        ]
+    },
+    "i18n":{
+        "selector.headline1":{
+            "de":"\u00dcberschrift 1",
+            "en":"Heading 1"
+        },
+        "selector.headline1Text":{
+            "de":"\u00dcberschrift 1: nur Text",
+            "en":"Heading 1: only text"
+        },
+        "selector.headline2":{
+            "de":"\u00dcberschrift 2",
+            "en":"Heading 2"
+        },
+        "selector.headline2Text":{
+            "de":"\u00dcberschrift 2: nur Text",
+            "en":"Heading 2: only text"
+        },
+        "selector.headline3":{
+            "de":"\u00dcberschrift 3",
+            "en":"Heading 3"
+        },
+        "selector.headline3Text":{
+            "de":"\u00dcberschrift 3: nur Text",
+            "en":"Heading 3: only text"
+        },
+        "selector.headline4":{
+            "de":"\u00dcberschrift 4",
+            "en":"Heading 4"
+        },
+        "selector.headline4Text":{
+            "de":"\u00dcberschrift 4: nur Text",
+            "en":"Heading 4: only text"
+        },
+        "selector.headline5":{
+            "de":"\u00dcberschrift 5",
+            "en":"Heading 5"
+        },
+        "selector.headline5Text":{
+            "de":"\u00dcberschrift 5: nur Text",
+            "en":"Heading 5: only text"
+        },
+        "selector.headline6":{
+            "de":"\u00dcberschrift 6",
+            "en":"Heading 6"
+        },
+        "selector.headline6Text":{
+            "de":"\u00dcberschrift 6: nur Text",
+            "en":"Heading 6: only text"
+        }
+    },
+    "selectors":[
+        {
+            "title":"__i18n_selector.headline1",
+            "selector":" .headline1"
+        },
+        {
+            "title":"__i18n_selector.headline1Text",
+            "selector":" .headline1Text"
+        },
+        {
+            "title":"__i18n_selector.headline2",
+            "selector":" .headline2"
+        },
+        {
+            "title":"__i18n_selector.headline2Text",
+            "selector":" .headline2Text"
+        },
+        {
+            "title":"__i18n_selector.headline3",
+            "selector":" .headline3"
+        },
+        {
+            "title":"__i18n_selector.headline3Text",
+            "selector":" .headline3Text"
+        },
+        {
+            "title":"__i18n_selector.headline4",
+            "selector":" .headline4"
+        },
+        {
+            "title":"__i18n_selector.headline4Text",
+            "selector":" .headline4Text"
+        },
+        {
+            "title":"__i18n_selector.headline5",
+            "selector":" .headline5"
+        },
+        {
+            "title":"__i18n_selector.headline5Text",
+            "selector":" .headline5Text"
+        },
+        {
+            "title":"__i18n_selector.headline6",
+            "selector":" .headline6"
+        },
+        {
+            "title":"__i18n_selector.headline6Text",
+            "selector":" .headline6Text"
+        }
+    ]
+}

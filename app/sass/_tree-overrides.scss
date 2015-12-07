@@ -1,0 +1,521 @@
+@import 'colors';
+@import 'mixins';
+
+/* Template tree */
+.x-tree-node {
+    font-style: normal;
+}
+
+.x-tree-node-el {
+    margin-bottom: 0px;
+    border-bottom: 1px solid transparent;
+    position: relative;
+}
+
+.x-tree-drag-insert-above {
+    margin-top: -1px;
+}
+
+.x-tree-drag-insert-below {
+    margin-bottom: 0px;
+}
+
+.x-tree-node .x-tree-drag-append a span {
+    border-width: 0px;
+    background-color: transparent;
+}
+
+.x-tree-node-el .CMSdelete,
+.x-tree-node-el .CMSapply {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: none;
+    height: 16px;
+    vertical-align: bottom;
+    width: 16px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.x-tree-node-el .CMSdelete {
+    background-image: url("../images/icons/bin_empty.png");
+}
+
+.x-tree-node-el .CMSapply {
+    background-image: url("../images/icons/page_white_go.png");
+}
+
+.x-tree-node-over .CMSdelete,
+.x-tree-node-over .CMSapply {
+    display: inline-block;
+}
+
+.x-tree-node-over .x-tree-node .CMSdelete,
+.x-tree-node-over .x-tree-node .CMSapply {
+    display: none;
+}
+
+.x-dd-drag-proxy .x-tree-node-el .CMSdelete,
+.x-dd-drag-proxy .x-tree-node-el .CMSapply {
+    display: none;
+}
+
+/*
+.x-tree-node-collapsed .x-tree-node-icon, .x-tree-node-expanded .x-tree-node-icon, .x-tree-node-leaf .x-tree-node-icon {
+    margin-top: -1px;
+}
+.x-tree-icon, .x-tree-ec-icon, .x-tree-elbow-line, .x-tree-elbow, .x-tree-elbow-end, .x-tree-elbow-plus, .x-tree-elbow-minus, .x-tree-elbow-end-plus, .x-tree-elbow-end-minus {
+    margin-top: -1px;
+}
+*/
+.x-tree-node-over.x-tree-drag-insert-above,
+.x-tree-node-over.x-tree-drag-insert-below,
+.x-tree-node-over.x-tree-drag-append {
+    background-color: transparent;
+}
+
+.x-tree-node-el.readonly a span {
+    color: gray;
+}
+
+.CMSforbiddendroptarget a span {
+    color: red !important;
+}
+
+.CMSalloweddropsibling a span {
+    color: yellow !important;
+}
+
+.CMSalloweddroptarget a span {
+    color: lime !important;
+}
+
+.CMSpageunittreepanel,
+.CMStemplateunittreepanel {
+    .x-panel-body {
+        overflow-y: auto !important;
+    }
+
+    // make sure unit name doesn't overlap extensionUnit icon
+    .x-tree-node:not(.extensionUnit) > .x-tree-node-el {
+        @include box-sizing;
+        max-width: 100%;
+        min-width: 100%;
+        overflow: hidden;
+        padding-right: 45px;
+        text-overflow: ellipsis;
+    }
+
+    .x-tree-node-el .CMSshowContextMenu,
+    .x-tree-node-el .CMSshowExtensionUnits {
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-position: center center;
+        width: 16px;
+        height: 16px;
+        top: 2px;
+        vertical-align: bottom;
+        position: absolute;
+        cursor: pointer;
+        display: none;
+    }
+
+    .x-tree-node-el .CMSshowContextMenu {
+        background-image: url(../images/tool_sprites.png);
+        background-position: -11px -388px;
+        right: 27px;
+        opacity: .5;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+    .x-tree-node-over .x-tree-node .CMSshowContextMenu {
+        display: none;
+    }
+    .x-tree-selected .CMSshowContextMenu,
+    .x-tree-node-over .x-tree-selected .CMSshowContextMenu,
+    .x-tree-node-over .CMSshowContextMenu {
+        display: inline-block;
+    }
+
+    .x-tree-node-el .CMSshowExtensionUnits {
+        background-image: url(../images/icons/bullet_arrow_down.png);
+        right: 5px;
+        opacity: .5;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+    .x-tree-node.hasExtensionUnits > .x-tree-node-el .CMSshowExtensionUnits {
+        display: inline-block;
+    }
+    .x-tree-node.showExtensionUnits > .x-tree-node-el .CMSshowExtensionUnits {
+        background-image: url(../images/icons/bullet_arrow_up.png);
+    }
+
+    .x-dd-drag-proxy .x-tree-node-el .CMSshowContextMenu,
+    .x-dd-drag-proxy .x-tree-node-el .CMSshowExtensionUnits {
+        display: none;
+    }
+
+    // add devision line; border can't be used since it's used for drag&drop marks
+    .x-tree-node:not(.extensionUnit) > .x-tree-node-el:after {
+        background-color: rgba(0, 0, 0, 0.2);
+        content: '';
+        display: block;
+        height: 1px;
+        position: absolute;
+        width: 100%;
+    }
+
+    // don't hide complete lists since we want to show extension units
+    ul {
+        display: block !important;
+    }
+
+    li.extensionUnit > .x-tree-node-el {
+        -webkit-transition: height .1s ease-in, opacity .1s ease-in;
+        -moz-transition: height .1s ease-in, opacity .1s ease-in;
+        transition: height .1s ease-in, opacity .1s ease-in;
+        -webkit-transform: translateZ(0);
+        -moz-transform: translateZ(0);
+        transform: translateZ(0);
+        overflow: hidden;
+        opacity: 0;
+        height: 1px; // should not be 0 since layout bug in webkit (SBCMS-1016, SBCMS-1361)
+        margin-bottom: -1px; // neutralize the 1px height
+        border-bottom-width: 0;
+        display: block;
+        padding-right: 45px;
+        text-overflow: ellipsis;
+    }
+
+    //TODO find a better solution for this; currently only 4 nesting levels of extension units are supported
+    .x-tree-node.showExtensionUnits > ul > li.extensionUnit > .x-tree-node-el,
+    .x-tree-node.showExtensionUnits > ul > li.extensionUnit > .x-tree-node-expanded + ul > li > .x-tree-node-el,
+    .x-tree-node.showExtensionUnits > ul > li.extensionUnit > .x-tree-node-expanded + ul > li.extensionUnit > .x-tree-node-expanded + ul > li > .x-tree-node-el,
+    .x-tree-node.showExtensionUnits > ul > li.extensionUnit > .x-tree-node-expanded + ul > li.extensionUnit > .x-tree-node-expanded + ul > li.extensionUnit > .x-tree-node-expanded + ul > li > .x-tree-node-el,
+    .x-tree-node.showExtensionUnits > ul > li.extensionUnit > .x-tree-node-expanded + ul > li.extensionUnit > .x-tree-node-expanded + ul > li.extensionUnit > .x-tree-node-expanded + ul > li.extensionUnit > .x-tree-node-expanded + ul > li > .x-tree-node-el,
+    .x-tree-node.showExtensionUnits > ul > li.extensionUnit > .x-tree-node-expanded + ul > li.extensionUnit > .x-tree-node-expanded + ul > li.extensionUnit > .x-tree-node-expanded + ul > li.extensionUnit > .x-tree-node-expanded + ul > li.extensionUnit > .x-tree-node-expanded + ul > li > .x-tree-node-el {
+        height: 16px;
+        margin-bottom: 0px;
+        opacity: 1;
+        border-bottom-width: 1px;
+    }
+
+    // hide/show regular units if tree node is collapsed/expanded
+    .x-tree-node-collapsed + ul > li:not(.extensionUnit) {
+        display: none;
+    }
+    .x-tree-node-expanded + ul > li:not(.extensionUnit) {
+        display: block;
+    }
+
+    .x-tree-node:not(.extensionUnit) > .x-tree-node-el {
+        line-height: 22px;
+    }
+
+    a span {
+        color: rgb(166, 164, 159);
+    }
+
+    .ghostContainer,
+    .editable {
+        a span {
+            color: white;
+        }
+
+        .x-tree-node-icon {
+            opacity: 1;
+        }
+    }
+
+    .x-tree-node-icon {
+        opacity: .5;
+        margin-top: 2px;
+    }
+
+    .x-tree-ec-icon {
+        margin-top: 2px;
+    }
+
+    .x-tree-ec-icon.x-tree-elbow-plus,
+    .x-tree-ec-icon.x-tree-elbow-end-plus {
+        background-position: 3px 0;
+        background-image: url(../images/tree-arrows.png);
+    }
+
+    .x-tree-ec-icon.x-tree-elbow-minus,
+    .x-tree-ec-icon.x-tree-elbow-end-minus {
+        background-position: -14px 0;
+        background-image: url(../images/tree-arrows.png);
+    }
+
+    .x-tree-ec-icon.x-tree-elbow-plus,
+    .x-tree-ec-icon.x-tree-elbow-end-plus,
+    .x-tree-ec-icon.x-tree-elbow-minus,
+    .x-tree-ec-icon.x-tree-elbow-end-minus {
+        visibility: hidden;
+    }
+
+    .x-tree-node.hasDefaultUnits > div,
+    .x-tree-node.extensionUnit > div {
+        .x-tree-ec-icon.x-tree-elbow-plus,
+        .x-tree-ec-icon.x-tree-elbow-end-plus,
+        .x-tree-ec-icon.x-tree-elbow-minus,
+        .x-tree-ec-icon.x-tree-elbow-end-minus {
+            visibility: visible;
+        }
+    }
+
+    .extensionUnit > div {
+        background-color: rgba(0, 0, 0, .2);
+        line-height: 13px;
+
+        .CMSshowContextMenu {
+            top: 0px;
+            height: 14px;
+            background-position: 4px -390px;
+
+            &:hover {
+                background-position: -11px -390px;
+            }
+        }
+
+        a span:first-child {
+            font-size: 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0);
+            width: 100%;
+            line-height: 15px;
+            font-style: normal !important;
+            color: rgba(255, 255, 255, .5);
+            font-family: UbuntuCondensed;
+        }
+
+        &.editable {
+            a span:first-child {
+                //color: white;
+                color: rgba(255, 255, 255, .8);
+            }
+        }
+
+        .x-tree-elbow,
+        .x-tree-elbow-line,
+        .x-tree-elbow-end {
+            visibility: hidden;
+        }
+
+        .x-tree-ec-icon {
+            margin-top: 0;
+        }
+
+        & > .x-tree-ec-icon.x-tree-elbow-plus,
+        & > .x-tree-ec-icon.x-tree-elbow-end-plus,
+        & > .x-tree-ec-icon.x-tree-elbow-minus,
+        & > .x-tree-ec-icon.x-tree-elbow-end-minus {
+            background-image: url(../images/tree-sprite.png);
+            opacity: .6;
+        }
+
+        & > .x-tree-ec-icon.x-tree-elbow-plus,
+        & > .x-tree-ec-icon.x-tree-elbow-end-plus {
+            background-position: 4px -802px;
+        }
+
+        & > .x-tree-ec-icon.x-tree-elbow-minus,
+        & > .x-tree-ec-icon.x-tree-elbow-end-minus {
+            background-position: 4px -702px;
+        }
+
+        &.x-tree-selected {
+            display: inherit;
+        }
+
+        .x-tree-node-icon {
+            display: none;
+        }
+    }
+}
+
+/* show hand cursor only if unit is editable */
+.CMSpageunittreepanel {
+    .x-tree-node-el,
+    .x-tree-node-el a {
+        cursor: default;
+    }
+
+    .ghostContainer,
+    .editable {
+        cursor: pointer;
+
+        a span {
+            cursor: pointer;
+        }
+    }
+}
+
+.CMStemplateunittreepanel {
+    .x-tree-node-icon {
+        opacity: 1;
+    }
+
+    a span {
+        color: white;
+    }
+
+    .extensionUnit > div {
+        a span:first-child {
+            color: rgba(255, 255, 255, .8);
+        }
+    }
+
+    .ghostContainer {
+        & + ul > li {
+            font-style: italic;
+        }
+    }
+
+    &.highlightDropTarget:before {
+        content: "";
+        position: absolute;
+        border: 3px dashed rgba(255, 255, 255, .5);
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        pointer-events: none;
+        z-index: 1;
+    }
+}
+
+/* Site Tree */
+.CMSPageTab .x-tree-node-collapsed .x-tree-node-icon,
+.CMSPageTab .x-tree-node-expanded .x-tree-node-icon,
+.CMSPageTab .x-tree-node-leaf .x-tree-node-icon {
+    display: none; /* hide icon */
+}
+
+/* DEBUG */
+/*
+.x-tree-node {
+    margin: 10px 5px 5px 15px;
+    outline: 2px solid #ccc;
+    overflow: hidden;
+    background: rgba(255, 255, 0, .01);
+}
+.x-tree-node .x-tree-node {
+    background: #fafaff;
+}
+.x-tree-node .x-tree-node .x-tree-node {
+    background: #fffafa;
+}
+.x-tree-node .x-tree-node .x-tree-node .x-tree-node {
+    background: #fafafa;
+}
+.x-tree-node .x-tree-node .x-tree-node .x-tree-node .x-tree-node {
+    background: #fffffa;
+}
+.x-tree-node .x-tree-node .x-tree-node .x-tree-node .x-tree-node .x-tree-node {
+    background: #fafaff;
+}
+.x-tree-node .x-tree-node .x-tree-node .x-tree-node .x-tree-node .x-tree-node .x-tree-node {
+    background: #fffafa;
+}
+.x-tree-node .x-tree-node .x-tree-node .x-tree-node .x-tree-node .x-tree-node .x-tree-node .x-tree-node {
+    background: #fafafa;
+}
+.x-tree-node-el,
+.x-tree-root-node {
+    padding: 5px;
+    margin-bottom: 0;
+}
+.x-tree-node-el .CMSdelete {
+    top: 5px;
+}
+.x-tree-root-node > .x-tree-node {
+    margin-left: 0;
+    margin-right: 0;
+}
+.x-tree-root-node > .x-tree-node:first-child {
+    margin-top: 0;
+}
+.x-tree-icon, .x-tree-ec-icon, .x-tree-elbow-line, .x-tree-elbow, .x-tree-elbow-end, .x-tree-elbow-plus, .x-tree-elbow-minus, .x-tree-elbow-end-plus, .x-tree-elbow-end-minus {
+    display: none;
+}*/
+
+/* Group Rights Tree */
+.x-tree-node-cbs {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    cursor: pointer;
+}
+
+.x-tree-node-cb-edit,
+.x-tree-node-cb-subAll,
+.x-tree-node-cb-subEdit {
+    display: none;
+}
+
+.x-tree-node-cb-label-edit,
+.x-tree-node-cb-label-subAll,
+.x-tree-node-cb-label-subEdit {
+    display: inline-block;
+    width: 15px;
+    height: 18px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin-right: 100px;
+    cursor: pointer;
+}
+
+.CMSPagePrivilegesTab .x-tree-node-icon {
+    display: none;
+}
+
+.CMSPagePrivilegesTab .x-tree-column-edit,
+.CMSPagePrivilegesTab .x-tree-column-subEdit,
+.CMSPagePrivilegesTab .x-tree-column-subAll {
+    position: absolute;
+    top: 5px;
+    width: 100px;
+    text-align: center;
+    font-size: 10px;
+}
+
+.CMSPagePrivilegesTab .x-tree-column-edit {
+    right: 295px;
+}
+
+.CMSPagePrivilegesTab .x-tree-column-subAll {
+    right: 65px;
+}
+
+.CMSPagePrivilegesTab .x-tree-column-subEdit {
+    right: 180px;
+}
+
+.CMSuniteditoreastwrapper {
+    border-left: 3px solid $bg-layer-mid-dark;
+}
+
+.CMStemplateEditorPanel .CMSstructureeditor .x-tree-node ul div.x-tree-node-el.editable:after {
+    display: block;
+    width: 4px;
+    height: 6px;
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 7px;
+    background-image: url('../images/lock.png');
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    opacity: .6;
+}
+
+.CMStemplateEditorPanel .CMSstructureeditor .x-tree-node.extensionUnit div.x-tree-node-el.editable:after {
+    top: 5px;
+}

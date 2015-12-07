@@ -1,0 +1,14 @@
+{
+    "name": {
+        "de": "Test-Package-1",
+        "en": "Test package 1"
+    },
+    "description": {
+        "de": "",
+        "en": ""
+    },
+    "websiteSettings": [],
+    "pageTypes": [],
+    "templateSnippets": [],
+    "modules": []
+}

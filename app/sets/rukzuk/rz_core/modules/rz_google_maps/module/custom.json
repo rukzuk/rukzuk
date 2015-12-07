@@ -1,0 +1,10 @@
+{
+    "selectors":true,
+    "assets":{
+        "css":[
+            {
+                "file":"style.css"
+            }
+        ]
+    }
+}

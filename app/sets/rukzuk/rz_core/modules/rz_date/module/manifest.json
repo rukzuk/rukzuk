@@ -1,0 +1,12 @@
+{
+    "name": "{\"de\":\"Datum\",\"en\":\"Date\"}",
+    "description": "{\"de\":\"Anzeige eines Datums mit festem Anzeigeformat.\",\"en\":\"Displays a formatted date.\"}",
+    "version": "dev",
+    "icon": "date.png",
+    "category": "{\"de\":\" Inhalt\",\"en\":\" Content\"}",
+    "moduleType": "default",
+    "allowedChildModuleType": "extension",
+    "ghostContainerMode": "force_off",
+    "reRenderRequired": false,
+    "apiType": "APIv1"
+}

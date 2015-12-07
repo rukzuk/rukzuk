@@ -1,0 +1,12 @@
+{
+    "name": "{\"de\":\"Formular-Button\",\"en\":\"Form Button\"}",
+    "description": "{\"de\":\"Bietet einen Schaltfläche zum Absenden des Formulars. Zur Verwendung im Formular-Modul.\",\"en\":\"Offers a submit button to send the form. For the use inside the form module.\"}",
+    "version": "dev",
+    "icon": "form-element.png",
+    "category": "{\"de\":\"Formular\",\"en\":\"Form\"}",
+    "moduleType": "default",
+    "allowedChildModuleType": "extension",
+    "ghostContainerMode": "force_off",
+    "reRenderRequired": false,
+    "apiType": "APIv1"
+}

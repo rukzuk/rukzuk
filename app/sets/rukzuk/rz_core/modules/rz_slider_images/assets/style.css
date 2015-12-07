@@ -1,0 +1,9 @@
+.bx-wrapper .bx-loading {
+    background: url('loader.gif') center center no-repeat #fff;
+}
+
+/* TODO: fixme */
+/* required to override 'position: relative' added by icon module - gets overridden by position module (see selectors in header!) */
+/*body.isBody .isModule [id=ID] .bx-wrapper .bx-controls-direction > a {
+    position: static;
+}*/

@@ -1,0 +1,26 @@
+{
+  "packages": [
+    {
+      "id": "rz_core",
+      "channels": [
+        "dev",
+        "beta",
+        "stable"
+      ]
+    },
+    {
+      "id": "rz_shop",
+      "channels": [
+        "dev",
+        "beta",
+        "stable"
+      ]
+    },
+    {
+      "id": "rz_experimental",
+      "channels": [
+        "dev"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+    "success": true,
+    "data": [{
+        "id": "PAGE-1",
+        "name": "page no.1"
+    },  {
+        "id": "PAGE-2",
+        "name": "page no.2"
+    }],
+    "message": [{
+        "code": 1,
+        "param": {
+            "msg": "Dummy-JSON!"
+        }
+    }]
+}

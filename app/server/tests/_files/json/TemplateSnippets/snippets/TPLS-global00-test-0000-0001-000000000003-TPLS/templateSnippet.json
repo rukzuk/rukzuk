@@ -1,0 +1,9 @@
+{
+  "id": "TPLS-global00-test-0000-0001-000000000003-TPLS",
+  "name": "global_test_snippet_name_1-3",
+  "description": "global_test_snippet_name_1-3",
+  "category": "Inhalt",
+  "baseLayout": true,
+  "pageTypes": ["page"],
+  "content": "[{\"id\":\"MUNIT-00000000-0000-0000-0000-000000000003-MUNIT\",\"moduleId\":\"rz_image\",\"name\":\"rz_image_unit\",\"formValues\":{\"imgHeight\":\"70%\"},\"expanded\":true,\"children\":[],\"description\":\"my_description_search_string\",\"ghostContainer\":false,\"visibleFormGroups\":[\"4ae8ae60-50d9-4a88-a924-cf96cec69941\"]}]"
+}

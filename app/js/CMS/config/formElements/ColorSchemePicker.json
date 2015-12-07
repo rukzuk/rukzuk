@@ -1,0 +1,41 @@
+{
+    "descr": {
+        "id": "ColorSchemePicker",
+        "text": "__i18n_formElements.elementColorSchemePicker",
+        "iconCls": "colorschemepicker",
+        "hasValue": true
+    },
+    "params": [
+        {
+            "name": "xtype",
+            "value": "CMScolorschemepickerwitheditbutton",
+            "xtype": null
+        },
+        {
+            "name": "isMeta",
+            "value": false,
+            "fieldLabel": "__i18n_formElements.isGlobal",
+            "xtype": "checkbox"
+        },
+        {
+            "name": "isResponsive",
+            "value": false,
+            "fieldLabel": "__i18n_formElements.isResponsive",
+            "xtype": "checkbox"
+        },
+        {
+            "name": "fieldLabel",
+            "value": "__i18n_formElements.colorLabelValue",
+            "xtype": "textfield",
+            "allowBlank": true,
+            "emptyText": "__i18n_formElements.fieldLabelOptionalEmptyText",
+            "fieldLabel": "__i18n_formElements.fieldLabel"
+        },
+        {
+            "name": "allowBlank",
+            "value": true,
+            "xtype": "checkbox",
+            "fieldLabel": "__i18n_formElements.allowBlankLabel"
+        }
+    ]
+}

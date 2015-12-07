@@ -1,0 +1,12 @@
+{
+    "name": "{\"de\":\"Sichtbarkeit\",\"en\":\"Visibility\"}",
+    "description": "{\"de\":\"Module in einer bestimmten oder mehreren Auflösungen ein- oder ausblenden.\",\"en\":\"Hide or show modules when overstepping a certain breakpoint.\"}",
+    "version": "dev",
+    "icon": "style-visibility.png",
+    "category": "90",
+    "moduleType": "extension",
+    "allowedChildModuleType": "",
+    "reRenderRequired": false,
+    "apiType": "APIv1",
+    "ghostContainerMode": "force_off"
+}

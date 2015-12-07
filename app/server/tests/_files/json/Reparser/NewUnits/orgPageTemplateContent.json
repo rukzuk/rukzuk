@@ -1,0 +1,33 @@
+[
+    {
+        "id": "UNIT-ID-ROOT::1",
+        "templateUnitId": "UNIT-ID-ROOT",
+        "moduleId": "rz_root",
+        "name": "",
+        "formValues": {},
+        "expanded": true,
+        "ghostContainer": false,
+        "children": [
+            {
+                "id": "UNIT-ID-GHOST::1",
+                "templateUnitId": "UNIT-ID-GHOST",
+                "moduleId": "rz_ghost_container",
+                "name": "",
+                "formValues": {
+                    "cssHSpace": {
+                        "type": "bp",
+                        "default": "0px"
+                    },
+                    "cssVSpace": {
+                        "type": "bp",
+                        "default": "0px"
+                    }
+                },
+                "expanded": true,
+                "ghostContainer": true,
+                "children": [],
+                "ghostChildren": []
+            }
+        ]
+    }
+]

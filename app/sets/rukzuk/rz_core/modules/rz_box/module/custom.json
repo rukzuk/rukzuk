@@ -1,0 +1,32 @@
+{
+    "assets":{
+        "js":[
+            {
+                "file":"notlive\/mbox_edit_interface.js",
+                "mode":"edit",
+                "type":"module"
+            }
+        ],
+        "css":[
+            {
+                "file":"notlive\/mbox_edit_interface.css",
+                "mode":"edit"
+            },
+            {
+                "file":"main.css"
+            }
+        ]
+    },
+    "i18n":{
+        "selector.cells":{
+            "de":"Zellen",
+            "en":"Cells"
+        }
+    },
+    "selectors":[
+        {
+            "title":"__i18n_selector.cells",
+            "selector":".isColumnBoxCell"
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "name": "{\"de\":\"Produktliste\",\"en\":\"Product List\"}",
+    "description": "{\"de\":\"Eignet sich für Auflistungen und Galerieansichten von Produktseiten. In Kombination mit Produkteigenschaft-Modulen ermöglicht es die Anzeige von Produkteigenschaften wie Name, Beschreibung, Bild oder Preis mit Verlinkung zur jeweiligen Produktseite.\",\"en\":\"Good for creating list and gallery views of product pages. In combination with Product Property modules, product properties such as name, description, image and price with the corresponding link can be displayed.\"}",
+    "version": "dev",
+    "icon": "shop-product-list.svg",
+    "category": "{\"de\":\"Shop\",\"en\":\"Shop\"}",
+    "moduleType": "default",
+    "allowedChildModuleType": "*",
+    "ghostContainerMode": "force_off",
+    "reRenderRequired": false,
+    "apiType": "APIv1"
+}

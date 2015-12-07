@@ -1,0 +1,46 @@
+.rz_text_image .imageModuleImg {
+    max-width: 100%;
+    display: block;
+    width: 100% !important;
+    height: auto;
+}
+
+.rz_text_image > .text:empty {
+    min-height: 16px;
+    width: 100%;
+}
+
+.rz_text_image > .text {
+    box-sizing: border-box;
+}
+
+.rz_text_image > .text ul,
+.rz_text_image > .text ol {
+    margin-left: 40px;
+}
+
+/* fix positioning for icon style: all elements which can be selected via selector */
+.rz_text_image > .text p,
+.rz_text_image > .text span,
+.rz_text_image > .text li,
+.rz_text_image > .text ul,
+.rz_text_image > .text ol,
+.rz_text_image > .text a,
+.rz_text_image > .text h1,
+.rz_text_image > .text h2,
+.rz_text_image > .text h3,
+.rz_text_image > .text h4,
+.rz_text_image > .text h5,
+.rz_text_image > .text h6,
+.rz_text_image > .text table,
+.rz_text_image > .text tr,
+.rz_text_image > .text td {
+    position: relative;
+}
+
+.rz_text_image > .imageContainer {
+    box-sizing: border-box;
+    z-index: 2;
+    position: relative;
+    pointer-events: all !important;
+}

@@ -1,0 +1,12 @@
+{
+    "name": "{\"de\":\"SVG-Vektorgrafik\",\"en\":\"SVG Vector Graphic\"}",
+    "description": "{\"de\":\"Einbindung von Vektorgrafiken im SVG-Format. Diese werden unabhängig von der Darstellungsgröße immer in optimaler Schärfe angezeigt.\",\"en\":\"Embedding of SVG vector graphics. They always render in optimal sharpness, independent of the size.\"}",
+    "version": "dev",
+    "icon": "image.png",
+    "category": "{\"de\":\" Inhalt\",\"en\":\" Content\"}",
+    "moduleType": "default",
+    "allowedChildModuleType": "extension",
+    "ghostContainerMode": "force_off",
+    "reRenderRequired": false,
+    "apiType": "APIv1"
+}

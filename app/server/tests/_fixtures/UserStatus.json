@@ -1,0 +1,14 @@
+{
+    "user_status": [
+        {
+            "userid": "USER-1",
+            "authbackend": "cms",
+            "lastlogin": "2015-01-02 03:04:05"
+        },
+        {
+            "userid": "USER-1",
+            "authbackend": "oauth",
+            "lastlogin": "2015-06-07 08:09:10"
+        }
+    ]
+}

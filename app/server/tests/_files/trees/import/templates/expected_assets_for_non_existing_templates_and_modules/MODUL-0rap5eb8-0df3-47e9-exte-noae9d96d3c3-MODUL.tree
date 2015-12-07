@@ -1,0 +1,18 @@
+{
+  "children":{
+    "json":{
+      "children":{
+        "auth-log.json":{
+          "type":"file"
+        },
+        "queue-log.json":{
+          "type":"file"
+        }
+      },
+      "type":"dir"
+    },
+    "node-v4.js":{
+      "type":"file"
+    }
+  }
+}

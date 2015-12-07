@@ -1,0 +1,34 @@
+{
+    "descr": {
+        "id": "DateField",
+        "text": "__i18n_formElements.elementDateField",
+        "iconCls": "date",
+        "hasValue": true
+    },
+    "params": [
+        {
+            "name": "xtype",
+            "value": "ux-unixdatefield",
+            "xtype": null
+        },
+        {
+            "name": "isMeta",
+            "value": false,
+            "fieldLabel": "__i18n_formElements.isGlobal",
+            "xtype": "checkbox"
+        },
+        {
+            "name": "width",
+            "value": 200,
+            "xtype": null
+        },
+        {
+            "name": "fieldLabel",
+            "value": "__i18n_formElements.dateValue",
+            "xtype": "textfield",
+            "allowBlank": false,
+            "emptyText": "__i18n_formElements.fieldLabelEmptyText",
+            "fieldLabel": "__i18n_formElements.fieldLabel"
+        }
+    ]
+}

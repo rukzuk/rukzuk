@@ -1,0 +1,92 @@
+{
+    "website": [
+        {
+            "id": "SITE-dao0page-doct-rine-test-000000000001-SITE",
+            "name": "Dao Page Doctrine test: website with pages",
+            "description": "",
+            "navigation": "[{\"id\":\"PAGE-dao0page-doct-rine-test-100000000001-PAGE\"},{\"id\":\"PAGE-dao0page-doct-rine-test-200000000001-PAGE\"},{\"id\":\"PAGE-dao0page-doct-rine-test-300000000001-PAGE\",\"children\":[{\"id\":\"PAGE-dao0page-doct-rine-test-310000000001-PAGE\"}]}]",
+            "shortid": "",
+            "colorscheme": "",
+            "resolutions": "",
+            "version": 0,
+            "home": "",
+            "ismarkedfordeletion": 0
+        },
+        {
+            "id": "SITE-dao0page-doct-rine-test-000000000002-SITE",
+            "name": "Dao Page Doctrine test: website without pages",
+            "description": "",
+            "navigation": "[]",
+            "shortid": "",
+            "colorscheme": "",
+            "resolutions": "",
+            "version": 0,
+            "home": "",
+            "ismarkedfordeletion": 0
+        }
+    ],
+    "template": [
+        {
+            "id": "TPL-dao0page-doct-rine-test-100000000001-TPL",
+            "websiteid": "SITE-dynamic0-crea-tor0-test-000000000001-SITE",
+            "name": "",
+            "content": "[]",
+            "usedmoduleids": "[]",
+            "contentchecksum": ""
+        }
+    ],
+    "page": [
+        {
+            "id": "PAGE-dao0page-doct-rine-test-100000000001-PAGE",
+            "websiteid": "SITE-dao0page-doct-rine-test-000000000001-SITE",
+            "name": "Dao Page Doctrine test: Page 1",
+            "templateid": "",
+            "description": "",
+            "date": 0,
+            "innavigation": 0,
+            "navigationtitle": "",
+            "content": "",
+            "templatecontent": "",
+            "templatecontentchecksum": ""
+        },
+        {
+            "id": "PAGE-dao0page-doct-rine-test-200000000001-PAGE",
+            "websiteid": "SITE-dao0page-doct-rine-test-000000000001-SITE",
+            "name": "Dao Page Doctrine test: Page 2",
+            "templateid": "",
+            "description": "",
+            "date": 0,
+            "innavigation": 0,
+            "navigationtitle": "",
+            "content": "",
+            "templatecontent": "",
+            "templatecontentchecksum": ""
+        },
+        {
+            "id": "PAGE-dao0page-doct-rine-test-300000000001-PAGE",
+            "websiteid": "SITE-dao0page-doct-rine-test-000000000001-SITE",
+            "name": "Dao Page Doctrine test: Page 3",
+            "templateid": "",
+            "description": "",
+            "date": 0,
+            "innavigation": 0,
+            "navigationtitle": "",
+            "content": "",
+            "templatecontent": "",
+            "templatecontentchecksum": ""
+        },
+        {
+            "id": "PAGE-dao0page-doct-rine-test-310000000001-PAGE",
+            "websiteid": "SITE-dao0page-doct-rine-test-000000000001-SITE",
+            "name": "Dao Page Doctrine test: Page 3.1",
+            "templateid": "",
+            "description": "",
+            "date": 0,
+            "innavigation": 0,
+            "navigationtitle": "",
+            "content": "",
+            "templatecontent": "",
+            "templatecontentchecksum": ""
+        }
+    ]
+}

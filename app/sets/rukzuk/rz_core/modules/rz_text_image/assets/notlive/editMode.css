@@ -1,0 +1,169 @@
+.rzImageLoading {
+    background: transparent url('loader.gif') center center no-repeat !important;
+}
+
+.unitClone {
+    position: absolute;
+    -moz-transform: translateZ(10200px) !important;
+    -webkit-transform: translateZ(10200px) !important;
+    transform: translateZ(10200px) !important;
+    z-index: 100020;
+}
+
+.unitClone img {
+    -moz-user-select: none;
+}
+
+#rzImageCropMask {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity .3s ease;
+    background-color: #000;
+    z-index: 10210;
+    -webkit-transform: translateZ(10200px);
+    -moz-transform: translateZ(10200px);
+    transform: translateZ(10200px);
+}
+
+#rzImageCropMask.show {
+    opacity: .7;
+}
+
+#rzImageCropMaskControls {
+    -webkit-transform: translateZ(10300px);
+    -moz-transform: translateZ(10300px);
+    transform: translateZ(10300px);
+    margin-top: 6px;
+    right: 0;
+    width: auto;
+    clear: both;
+}
+
+#rzImageCropMaskControls .apply,
+#rzImageCropMaskControls .cancel {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    float: right;
+}
+
+#rzImageCropMaskControls .apply {
+    background-color: #9b0d54;
+    background-image: url(apply.png);
+    margin: 0 6px;
+}
+
+#rzImageCropMaskControls .apply:hover {
+    background-color: #890b4a;
+}
+
+#rzImageCropMaskControls .cancel {
+    background-color: #060810;
+    background-image: url(cancel.png);
+}
+
+#rzImageCropMaskControls .cancel:hover {
+    background-color: #000;
+}
+
+.rz_text_image .cropIcon {
+    display: none;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 9999;
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    right: 6px;
+    top: 6px;
+    -webkit-transform: translateZ(10200px);
+    -moz-transform: translateZ(10200px);
+    transform: translateZ(10200px);
+    background: #9b0d54 url('crop.png') center center no-repeat;
+}
+
+body.RUKZUKenableInputHints .rz_text_image .cropIcon {
+    opacity: 1;
+}
+
+.rz_text_image .cropIcon:hover,
+body.RUKZUKenableInputHints .rz_text_image .cropIcon:hover {
+    opacity: 1;
+    background-color: #890b4a;
+}
+
+.rz_text_image.CMSselected.CMSeditable > .imageContainer > .responsiveImageWrapper > .resizeHeight {
+    display: none;
+    position: relative;
+    width: 50%;
+    height: 6px;
+    left: 25%;
+    background-color: #890b4a;
+    cursor: s-resize;
+    margin-top: -6px;
+}
+
+.rz_text_image > .responsiveImageWrapper > img.imageModuleImg.blankImgPlaceholder {
+    /* but stretch blank place holder */
+    height: 100%;
+}
+
+body.RUKZUKenableInputHints .rz_text_image.CMSselected.CMSeditable > .imageContainer > .responsiveImageWrapper > .resizeHeight {
+    display: block;
+}
+
+/* UI blocker for resize handles */
+div.resizeHeightUiBlocker {
+    cursor: s-resize;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 11000;
+}
+
+.imageContainer:hover .rzImageZoomOut, .imageContainer:hover .rzImageZoomIn {
+    opacity: .7;
+}
+
+/* zoom icons */
+.rzImageZoomOut, .rzImageZoomIn {
+    opacity: 0;
+    position: absolute;
+    right: 6px;
+    width: 14px;
+    height: 14px;
+    background: rgb(240, 220, 220) url('zoom_icons.png') no-repeat;
+    cursor: pointer;
+    border: 4px rgb(6, 8, 10) solid;
+}
+
+.rzImageZoomOut:hover, .rzImageZoomIn:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+.rzImageZoomIn {
+    bottom: 26px;
+    background-position: 0 0;
+    border-bottom-width: 2px;
+}
+
+.rzImageZoomOut {
+    bottom: 6px;
+    background-position: -50px 0;
+    border-top-width: 2px;
+}
+
+.rz_text_image.isModule::after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    font-size: 0;
+    visibility: hidden;
+}

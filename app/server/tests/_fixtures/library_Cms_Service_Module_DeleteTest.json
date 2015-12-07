@@ -1,0 +1,27 @@
+{
+    "website": [
+        {
+            "id": "SITE-module00-serv-ice0-test-000000000001-SITE",
+            "name": "Service Module Delete test: website with local and globale modules",
+            "description": "",
+            "navigation": "[]",
+            "usedsetid": "module_test",
+            "shortid": "",
+            "colorscheme": "",
+            "resolutions": "",
+            "version": 0,
+            "home": "",
+            "ismarkedfordeletion": 0
+        }
+    ],
+    "template": [
+        {
+            "id": "TPL-module00-serv-ice0-test-100000000001-TPL",
+            "websiteid": "SITE-module00-serv-ice0-test-000000000001-SITE",
+            "name": "Template in relation",
+            "content": "[{\"moduleId\":\"rz_tests_module_local_and_global\"},{\"moduleId\":\"rz_tests_module_only_local\"},{\"moduleId\":\"rz_tests_module_only_global\"}]",
+            "usedmoduleids": "[\"rz_tests_module_local_and_global\", \"rz_tests_module_only_local\",\"rz_tests_module_only_global\"]",
+            "contentchecksum": ""
+        }
+    ]
+}

@@ -1,0 +1,587 @@
+@import "mixins";
+@import "colors";
+
+/*!!
+ * Ext JS Library 3.2.1
+ * Copyright(c) 2006-2010 Ext JS, Inc.
+ * licensing@extjs.com
+ * http://www.extjs.com/license
+ */
+/* all fields */
+.x-form-field {
+    margin: 0 0 0 0;
+}
+
+.ext-webkit *:focus {
+    outline: none !important;
+}
+
+.x-form-text,
+.x-form-display-field,
+.ext-ie .x-form-file {
+    height: 22px;
+    line-height: 22px;
+    vertical-align: middle;
+}
+
+textarea {
+    resize: none; /* Disable browser resizable textarea */
+}
+
+/* select boxes */
+.x-form-select-one {
+    height: 20px;
+    line-height: 18px;
+    vertical-align: middle;
+}
+
+/* multi select boxes */
+.x-form-check-wrap {
+    line-height: 16px;
+    height: auto;
+}
+
+.x-form-check-wrap input {
+    vertical-align: bottom;
+}
+
+.x-editor .x-form-checkbox {
+    height: 13px;
+}
+
+.x-form-check-group {
+    border: 1px solid transparent;
+}
+
+.x-form-check-group-label {
+    margin-bottom: 5px;
+    padding-left: 3px !important;
+    float: none !important;
+}
+
+/* wrapped fields and triggers */
+.x-form-field-wrap .x-form-trigger {
+    width: 17px;
+    height: 22px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+}
+
+.x-form-field-wrap .x-form-date-trigger, .x-form-field-wrap .x-form-clear-trigger, .x-form-field-wrap .x-form-search-trigger {
+    cursor: pointer;
+}
+
+.x-form-field-wrap .x-form-twin-triggers .x-form-trigger {
+    position: static;
+    top: auto;
+    vertical-align: top;
+}
+
+.x-form-field-wrap {
+    position: relative;
+    left: 0;
+    top: 0;
+    text-align: left;
+    zoom: 1;
+    white-space: nowrap;
+}
+
+.ext-strict .ext-ie8 .x-toolbar-cell .x-form-field-trigger-wrap .x-form-trigger {
+    right: 0; /* IE8 Strict mode trigger bug */
+}
+
+/*
+.x-form-field-wrap .x-form-trigger-over{
+    background-position:-17px 0;
+}
+
+.x-form-field-wrap .x-form-trigger-click{
+    background-position:-34px 0;
+}
+
+.x-trigger-wrap-focus .x-form-trigger{
+    background-position:-51px 0;
+}
+
+.x-trigger-wrap-focus .x-form-trigger-over{
+    background-position:-68px 0;
+}
+
+.x-trigger-wrap-focus .x-form-trigger-click{
+    background-position:-85px 0;
+}
+
+.x-item-disabled .x-form-trigger-over{
+    background-position:0 0 !important;
+}
+
+.x-item-disabled .x-form-trigger-click{
+    background-position:0 0 !important;
+}
+*/
+.x-trigger-noedit {
+    cursor: pointer;
+}
+
+/* editors */
+.x-editor {
+    visibility: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+/*
+.x-form-grow-sizer {
+    left: -10000px;
+    padding: 8px 3px;
+    position: absolute;
+    visibility:hidden;
+    top: -10000px;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+    zoom:1;
+}
+*/
+
+/* Form Items CSS */
+
+.x-form-item {
+    display: block;
+    margin-bottom: 10px;
+    zoom: 1;
+}
+
+.x-form-item label.x-form-item-label {
+    display: block;
+    float: left;
+    width: 100px;
+    padding: 3px;
+    padding-left: 0;
+    clear: left;
+    z-index: 2;
+    position: relative;
+}
+
+.x-form-element {
+    padding-left: 105px;
+    position: relative;
+}
+
+.x-form-invalid-msg {
+    padding: 2px;
+    padding-left: 18px;
+    line-height: 16px;
+    width: 200px;
+}
+
+.x-form-label-left label.x-form-item-label {
+    text-align: left;
+}
+
+.x-form-label-right label.x-form-item-label {
+    text-align: right;
+}
+
+.x-form-label-top .x-form-item label.x-form-item-label {
+    width: auto;
+    float: none;
+    clear: none;
+    display: inline;
+    margin-bottom: 4px;
+    position: static;
+}
+
+.x-form-label-top .x-form-element {
+    padding-left: 0;
+    padding-top: 4px;
+}
+
+.x-form-label-top .x-form-item {
+    padding-bottom: 4px;
+}
+
+/* Editor small font for grid, toolbar and tree */
+.x-small-editor .x-form-text {
+    height: 20px;
+    line-height: 16px;
+    vertical-align: middle;
+}
+
+.ext-ie6 .x-small-editor .x-form-text, .ext-ie7 .x-small-editor .x-form-text {
+    margin-top: -1px !important; /* ie bogus margin bug */
+    margin-bottom: -1px !important;
+    height: 20px !important; /* ie quirks */
+    line-height: 16px !important;
+}
+
+.ext-strict .x-small-editor .x-form-text {
+    height: 16px !important;
+}
+
+.ext-ie6 .x-small-editor .x-form-text, .ext-ie7 .x-small-editor .x-form-text {
+    height: 20px;
+    line-height: 16px;
+}
+
+.ext-border-box .x-small-editor .x-form-text {
+    height: 20px;
+}
+
+.x-small-editor .x-form-select-one {
+    height: 20px;
+    line-height: 16px;
+    vertical-align: middle;
+}
+
+.x-small-editor .x-form-num-field {
+    text-align: right;
+}
+
+.x-small-editor .x-form-field-wrap .x-form-trigger {
+    height: 19px;
+}
+
+.ext-webkit .x-small-editor .x-form-text {
+    padding-top: 3px;
+    font-size: 100%;
+}
+
+.x-form-clear {
+    clear: both;
+    height: 0;
+    overflow: hidden;
+    line-height: 0;
+    font-size: 0;
+}
+
+.x-form-clear-left {
+    clear: left;
+    height: 0;
+    overflow: hidden;
+    line-height: 0;
+    font-size: 0;
+}
+
+.x-form-cb-label {
+    position: relative;
+    margin-left: 4px;
+    top: 2px;
+}
+
+.x-form-column {
+    float: left;
+    padding: 0;
+    margin: 0;
+    width: 48%;
+    overflow: hidden;
+    zoom: 1;
+}
+
+/* buttons */
+.x-form .x-form-btns-ct .x-btn {
+    float: right;
+    clear: none;
+}
+
+.x-form .x-form-btns-ct .x-form-btns td {
+    padding: 0;
+}
+
+.x-form .x-form-btns-ct .x-form-btns-right table {
+    float: right;
+    clear: none;
+}
+
+.x-form .x-form-btns-ct .x-form-btns-left table {
+    float: left;
+    clear: none;
+}
+
+.x-form .x-form-btns-ct .x-form-btns-center {
+    text-align: center; /*ie*/
+}
+
+.x-form .x-form-btns-ct .x-form-btns-center table {
+    margin: 0 auto; /*everyone else*/
+}
+
+.x-form .x-form-btns-ct table td.x-form-btn-td {
+    padding: 3px;
+}
+
+/*
+.x-form .x-form-btns-ct .x-btn-focus .x-btn-left{
+    background-position:0 -147px;
+}
+
+.x-form .x-form-btns-ct .x-btn-focus .x-btn-right{
+    background-position:0 -168px;
+}
+
+.x-form .x-form-btns-ct .x-btn-focus .x-btn-center{
+    background-position:0 -189px;
+}
+
+.x-form .x-form-btns-ct .x-btn-click .x-btn-center{
+    background-position:0 -126px;
+}
+
+.x-form .x-form-btns-ct .x-btn-click  .x-btn-right{
+    background-position:0 -84px;
+}
+
+.x-form .x-form-btns-ct .x-btn-click .x-btn-left{
+    background-position:0 -63px;
+}
+*/
+.x-form-invalid-icon {
+    width: 16px;
+    height: 18px;
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    top: -10px !important;
+}
+
+/* fieldsets */
+.x-fieldset {
+    padding: 10px;
+    margin-bottom: 10px;
+    display: block; /* preserve margins in IE */
+}
+
+/* make top of checkbox/tools visible in webkit */
+.ext-webkit .x-fieldset-header {
+    padding-top: 1px;
+}
+
+.ext-ie .x-fieldset legend {
+    margin-bottom: 10px;
+}
+
+.ext-ie .x-fieldset {
+    padding-top: 0;
+    padding-bottom: 10px;
+}
+
+.x-fieldset legend .x-tool-toggle {
+    margin-right: 3px;
+    margin-left: 0;
+    float: left !important;
+}
+
+.x-fieldset legend input {
+    margin-right: 3px;
+    float: left !important;
+    height: 13px;
+    width: 13px;
+}
+
+fieldset.x-panel-collapsed {
+    padding-bottom: 0 !important;
+}
+
+.ext-ie6 fieldset.x-panel-collapsed {
+    padding-bottom: 0 !important;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+fieldset.x-panel-collapsed .x-fieldset-bwrap {
+    visibility: hidden;
+    position: absolute;
+    left: -1000px;
+    top: -1000px;
+}
+
+.ext-ie .x-fieldset-bwrap {
+    zoom: 1;
+}
+
+.x-fieldset-noborder legend {
+    margin-left: -3px;
+}
+
+/* IE legend positioning bug */
+.ext-ie .x-fieldset-noborder legend {
+    position: relative;
+    margin-bottom: 23px;
+}
+
+.ext-ie .x-fieldset-noborder legend span {
+    position: absolute;
+    left: 16px;
+}
+
+.ext-gecko .x-window-body .x-form-item {
+    -moz-outline: none;
+    outline: none;
+    overflow: auto;
+}
+
+.ext-gecko .x-form-item {
+    -moz-outline: none;
+    outline: none;
+}
+
+.CMSgeneratedformpanel .x-form-item.x-hide-label label.x-form-item-label,
+.x-form-item.x-hide-label label.x-form-item-label,
+.x-form-label-top .x-hide-label label.x-form-item-label,
+.x-hide-label label.x-form-item-label {
+    display: none;
+}
+
+.x-hide-label .x-form-element {
+    padding-left: 0 !important;
+}
+
+.x-fieldset {
+    overflow: hidden;
+}
+
+.x-fieldset-bwrap {
+    overflow: hidden;
+    zoom: 1;
+}
+
+.x-fieldset-body {
+    overflow: hidden;
+}
+
+/*invalid icon*/
+.x-form-invalid-icon {
+    background-image: url("../images/icons/icon_required.png");
+    background-repeat: no-repeat;
+    margin: 7px 0 0 3px;
+}
+
+.x-form-element .x-form-invalid-icon {
+    margin-top: 13px;
+}
+
+/*Checkbox*/
+.x-form-check-wrap input[type="checkbox"], fieldset legend input[type="checkbox"] {
+    display: none;
+}
+
+.x-form-check-wrap label, fieldset legend label {
+    background-repeat: no-repeat;
+    background-position: left 2px;
+    padding-left: 16px;
+}
+
+textarea.x-form-field {
+    border: 0 none;
+    padding: 4px;
+}
+
+.x-form-field-trigger-wrap .x-form-text, .x-form-field-trigger-wrap .x-form-textarea, .ext-gecko .x-form-text, .x-form-field-trigger-wrap .ext-gecko .x-form-textarea, textarea.x-form-invalid,
+.x-form-text, .x-form-textarea, .ext-gecko .x-form-text, .ext-gecko .x-form-textarea, textarea.x-form-invalid {
+    border: 0;
+}
+
+/*Radio-Button*/
+.x-form-radio-group .x-form-check-wrap input[type="radio"], fieldset legend input[type="radio"] {
+    display: none;
+}
+
+.x-form-radio-group .x-form-check-wrap label, fieldset legend label {
+    background-repeat: no-repeat;
+    background-position: left 2px;
+    padding-left: 16px;
+}
+
+/*fieldset checkboxes and radiobuttons*/
+input[type="checkbox"] + label, fieldset.x-panel-collapsed > legend > label,
+.CMScheckboxfieldset.x-panel-collapsed > legend > label {
+    background: transparent url("../images/checkbox-unchecked.png") no-repeat 0 0;
+}
+
+input:checked + label, fieldset > legend > label,
+.CMScheckboxfieldset > legend > label {
+    background: transparent url("../images/checkbox-checked.png") no-repeat 0 0;
+}
+
+.x-form-radio-group .x-form-check-wrap input:checked + label,
+fieldset > legend > label,
+.CMSradiofieldset > legend > label {
+    background-image: url("../images/radiobutton-checked.png");
+    background-position: 0 1px;
+}
+
+.x-form-radio-group .x-form-check-wrap label,
+fieldset.x-panel-collapsed > legend > label,
+.CMSradiofieldset.x-panel-collapsed > legend > label {
+    cursor: pointer;
+    background-image: url("../images/radiobutton-unchecked.png");
+    background-position: 0 1px;
+}
+
+/* font settings for labels in GeneratedForm Panel and FormGroupEditor */
+.CMSgeneratedformpanel, .CMSformgroupeditor {
+
+    .x-form-item label.x-form-item-label {
+        text-shadow: none;
+        font-size: 13px;
+        font-family: UbuntuCondensed;
+        color: $formpanel-title-font-color;
+
+        /* define height of label */
+        height: 13px;
+        line-height: 15px;
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+        &::first-letter {
+            text-transform: uppercase;
+        }
+    }
+    .x-fieldset-header-text {
+        font-size: 15px;
+        color: $formpanel-title-font-color;
+    }
+}
+
+/* Panel Headers */
+.CMSgeneratedformpanel {
+    .x-panel-header.x-accordion-hd .x-panel-header-text {
+        font-family: 'UbuntuCondensed';
+        padding-left: 7px;
+        line-height: 27px;
+    }
+    .x-panel-header.x-accordion-hd {
+        height: 28px;
+    }
+    .x-tool-toggle {
+        display: none;
+    }
+    &.CMSmetaeditor .x-panel-header.x-accordion-hd .x-panel-header-text {
+        line-height: 28px;
+    }
+
+    .x-tool.x-tool-visibleFormGroupsToggle {
+        position: absolute;
+        right: 0px;
+        width: 40px;
+        margin: 0;
+        height: 27px;
+        background: transparent url("../images/button-sprite.png") no-repeat 0 -1686px;
+        opacity: .4;
+        &:hover {
+            background-color: $bg-button-hover-top;
+        }
+        &.enabled {
+            background: transparent url("../images/button-sprite.png") no-repeat 1px -1727px;
+            opacity: 1;
+            &:hover {
+                background-color: $bg-button-hover-top;
+            }
+        }
+    }
+}

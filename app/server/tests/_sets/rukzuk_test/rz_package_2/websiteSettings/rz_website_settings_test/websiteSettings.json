@@ -1,0 +1,13 @@
+{
+  "name": {
+    "de": "Website Konfiguration",
+    "en": "Website configuration"
+  },
+  "form": [
+    {
+      "foo": "bar",
+      "emtpyStdClass": {},
+      "emptyArray": []
+    }
+  ]
+}

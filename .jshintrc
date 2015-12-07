@@ -1,0 +1,32 @@
+{
+    "passfail": false,
+    "maxerr": 100,
+    "browser": true,
+    "devel": true,
+    "globals": {
+        "Ext": false,
+        "CMS": false,
+        "SB": false,
+        "CMSSERVER": false,
+        "$": false,
+        "_paq": false
+    },
+    "strict": false,
+    "bitwise": true,
+    "curly": true,
+    "eqeqeq": false,
+    "noarg": true,
+    "regexp": false,
+    "undef": true,
+    "unused": "vars",
+    "newcap": true,
+    "noempty": false,
+    "nonew": true,
+    "nomen": false,
+    "onevar": false,
+    "plusplus": false,
+    "trailing": true,
+    "white": true,
+    "laxbreak": true,
+    "indent": 4
+}

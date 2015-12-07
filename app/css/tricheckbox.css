@@ -1,0 +1,19 @@
+.x-checkbox, .x-radio {
+  height: 15px;
+  width: 15px;
+  margin-top: 3px; }
+
+.x-checkbox {
+  background: url("../images/checkbox-triple-state.png") no-repeat 0 0; }
+
+.x-radio {
+  background: url("../images/radio.gif") no-repeat 0 0; }
+
+.x-checkbox-checked .x-checkbox, .x-checkbox-checked .x-radio {
+  background-position: 0 -15px; }
+
+.x-form-tricheck-wrap {
+  float: left; }
+
+.x-form-tricheck-wrap img {
+  cursor: pointer; }

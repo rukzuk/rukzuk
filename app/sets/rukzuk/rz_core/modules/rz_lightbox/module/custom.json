@@ -1,0 +1,96 @@
+{
+    "assets":{
+        "css":[
+            {
+                "file":"style.css"
+            },
+            {
+                "file":"swipebox.css"
+            },
+            {
+                "file":"notlive\/editMode.css",
+                "mode":"edit"
+            }
+        ],
+        "js":[
+            {
+                "file":"jquery.swipebox.js",
+                "type":"script"
+            },
+            {
+                "file":"lightboxInit.js",
+                "type":"module",
+                "mode":"live"
+            },
+            {
+                "file":"notlive\/swipebox.extended.js",
+                "type":"module",
+                "mode":"edit"
+            }
+        ]
+    },
+    "i18n":{
+        "error.noLightboxModuleInheritance":{
+            "de":"Dieses Modul darf sich nicht innerhalb eines anderen Lightbox-Moduls befinden.",
+            "en":"This module may not be used inside a Lightbox module."
+        },
+        "selector.overlay":{
+            "de":"Overlay",
+            "en":"Overlay"
+        },
+        "selector.image":{
+            "de":"Bild",
+            "en":"Image"
+        },
+        "selector.close":{
+            "de":"Schlie\u00dfen-Button",
+            "en":"Close button"
+        },
+        "selector.nextButton":{
+            "de":"Vor-Button",
+            "en":"Next button"
+        },
+        "selector.prevButton":{
+            "de":"Zur\u00fcck-Button",
+            "en":"Previous button"
+        },
+        "selector.caption":{
+            "de":"\u00dcberschrift",
+            "en":"Caption"
+        },
+        "selector.loader":{
+            "de":"Ladeanzeige",
+            "en":"Loader"
+        }
+    },
+    "selectors":[
+        {
+            "title":"__i18n_selector.overlay",
+            "selector":"#swipebox-overlay"
+        },
+        {
+            "title":"__i18n_selector.image",
+            "selector":"#swipebox-overlay .slide img"
+        },
+        {
+            "title":"__i18n_selector.close",
+            "selector":"#swipebox-close"
+        },
+        {
+            "title":"__i18n_selector.nextButton",
+            "selector":"#swipebox-next"
+        },
+        {
+            "title":"__i18n_selector.prevButton",
+            "selector":"#swipebox-prev"
+        },
+        {
+            "title":"__i18n_selector.caption",
+            "selector":"#swipebox-caption"
+        },
+        {
+            "title":"__i18n_selector.loader",
+            "selector":"#swipebox-slider .slide"
+        }
+    ]
+}

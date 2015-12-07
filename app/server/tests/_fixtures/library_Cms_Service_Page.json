@@ -1,0 +1,73 @@
+{
+    "website": [
+        {
+            "id": "SITE-k1s28dky-1dxq-4e1e-951f-307e4b8765db-SITE",
+            "name": "copy pages to website",
+            "description": "",
+            "navigation": "",
+            "shortid": "",
+            "colorscheme": "",
+            "resolutions": "",
+            "version": 0,
+            "home": "",
+            "ismarkedfordeletion": 0
+        },
+        {
+            "id": "SITE-k2s28dky-1dxq-4e1e-951f-307e4b8765db-SITE",
+            "name": "copy pages to website2",
+            "description": "",
+            "navigation": "",
+            "shortid": "",
+            "colorscheme": "",
+            "resolutions": "",
+            "version": 0,
+            "home": "",
+            "ismarkedfordeletion": 0
+        }
+    ],
+    "page": [
+        {
+            "id": "PAGE-25s3hjws-jk63-4he9-af5c-90ae9d96d3c2-PAGE",
+            "websiteid": "SITE-k1s28dky-1dxq-4e1e-951f-307e4b8765db-SITE",
+            "name": "copy page to new website 1",
+            "pagetype": "page_type_id",
+            "templateid": "",
+            "description": "",
+            "date": 0,
+            "innavigation": 0,
+            "navigationtitle": "",
+            "content": "",
+            "templatecontent": "",
+            "templatecontentchecksum": ""
+        },
+        {
+            "id": "PAGE-15s3hjws-jk63-4he9-af5c-90ae9d96d3c2-PAGE",
+            "websiteid": "SITE-k1s28dky-1dxq-4e1e-951f-307e4b8765db-SITE",
+            "name": "copy page to new website 2",
+            "pageattributes": "{\"foo\":\"bar\"}",
+            "templateid": "",
+            "description": "",
+            "date": 0,
+            "innavigation": 0,
+            "navigationtitle": "",
+            "content": "",
+            "templatecontent": "",
+            "templatecontentchecksum": ""
+        },
+        {
+            "id": "PAGE-35s3hjws-jk63-4he9-af5c-90ae9d96d3c2-PAGE",
+            "websiteid": "SITE-k1s28dky-1dxq-4e1e-951f-307e4b8765db-SITE",
+            "name": "copy page to new website 3",
+            "pagetype": "page_type_id",
+            "pageattributes": "{\"myArray\":[\"foo\",\"bar\"],\"myObject\":{\"foo\":\"bar\"}}",
+            "templateid": "",
+            "description": "",
+            "date": 0,
+            "innavigation": 0,
+            "navigationtitle": "",
+            "content": "",
+            "templatecontent": "",
+            "templatecontentchecksum": ""
+        }
+    ]
+}

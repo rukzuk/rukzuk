@@ -1,0 +1,17 @@
+{
+    "website": [
+        {
+            "id": "SITE-website0-getU-sedS-etSo-urce00000001-SITE",
+            "name": "Test: Cms/Service/Website::getUsedSetSource",
+            "usedsetid": "rukzuk_test",
+            "shortid": "",
+            "description": "",
+            "navigation": "",
+            "colorscheme": "",
+            "resolutions": "",
+            "version": 0,
+            "home": "",
+            "ismarkedfordeletion": 0
+        }
+    ]
+}

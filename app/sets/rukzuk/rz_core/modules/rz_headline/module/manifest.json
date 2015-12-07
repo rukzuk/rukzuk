@@ -1,0 +1,12 @@
+{
+    "name": "{\"de\":\"Überschrift\",\"en\":\"Heading\"}",
+    "description": "{\"de\":\"Überschriften mit einer bestimmten semantischen Bedeutung erstellen. H1 ist die Überschrift mit der höchsten Gewichtung.\",\"en\":\"Create headings with a specific semantic meaning. H1 defines the most important heading.\"}",
+    "version": "dev",
+    "icon": "font.png",
+    "category": "{\"de\":\" Inhalt\",\"en\":\" Content\"}",
+    "moduleType": "default",
+    "allowedChildModuleType": "extension",
+    "ghostContainerMode": "force_off",
+    "reRenderRequired": false,
+    "apiType": "APIv1"
+}

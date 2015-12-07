@@ -1,0 +1,605 @@
+<!-- quirks mode FTW !-->
+<html style="height: 100%;">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=8,chrome=1">
+
+<title>
+    All Widgets
+</title>
+
+<!-- ### COPY src="js" exclude="Ext/ext-3.2.1" exclude="tiny_mce/tiny_mce.js" exclude="plupload" ### -->
+<!-- ### COPY src="js/Ext/ext-3.2.1/ext-overrides.js" out="js/ext-overrides.js" ### -->
+
+<!-- ### COPY src="images/favicon.ico" ### -->
+<!-- ### COPY src="images/favicon.ico" out="." ### -->
+<!-- ### COPY src="js/Ext/ext-3.2.1/resources/images/gray" out="images/gray" ### -->
+<!-- ### COPY src="js/Ext/ext-3.2.1/resources/images/default" out="images/default" ### -->
+<!-- ### COPY src="css" ### -->
+<!-- ### COPY src=".htaccess" ### -->
+<!-- ### COPY src="blank.html" ### -->
+<!-- ### COPY src="login.html" ### -->
+    <link rel="stylesheet" type="text/css" href="css/fileuploadfield.css">
+    <link rel="stylesheet" type="text/css" href="css/tricheckbox.css">
+
+    <link rel="stylesheet" type="text/css" href="css/fonts/ubuntu/stylesheet.css">
+
+<!-- ### CSS out="css/ext-all.css" prefix="copyright/rukzuk.txt" ### -->
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/core.css">
+    <link rel="stylesheet" type="text/css" href="css/resizable.css">
+    <link rel="stylesheet" type="text/css" href="css/tabs.css">
+    <link rel="stylesheet" type="text/css" href="css/form.css">
+    <link rel="stylesheet" type="text/css" href="css/button.css">
+    <link rel="stylesheet" type="text/css" href="css/toolbar.css">
+    <link rel="stylesheet" type="text/css" href="css/grid.css">
+    <link rel="stylesheet" type="text/css" href="css/dd.css">
+    <link rel="stylesheet" type="text/css" href="css/tree.css">
+    <link rel="stylesheet" type="text/css" href="css/date-picker.css">
+    <link rel="stylesheet" type="text/css" href="css/qtips.css">
+    <link rel="stylesheet" type="text/css" href="css/menu.css">
+    <link rel="stylesheet" type="text/css" href="css/box.css">
+    <link rel="stylesheet" type="text/css" href="css/combo.css">
+    <link rel="stylesheet" type="text/css" href="css/panel.css">
+    <link rel="stylesheet" type="text/css" href="css/panel-reset.css">
+    <link rel="stylesheet" type="text/css" href="css/window.css">
+    <link rel="stylesheet" type="text/css" href="css/editor.css">
+    <!--link rel="stylesheet" type="text/css" href="css/borders.css"-->
+    <link rel="stylesheet" type="text/css" href="css/layout.css">
+    <link rel="stylesheet" type="text/css" href="css/progress.css">
+    <link rel="stylesheet" type="text/css" href="css/list-view.css">
+    <link rel="stylesheet" type="text/css" href="css/slider.css">
+    <link rel="stylesheet" type="text/css" href="css/dialog.css">
+<!-- ### /CSS ### -->
+
+<!-- ### CSS out="css/cms-all.css" prefix="copyright/rukzuk.txt" ### -->
+    <link rel="stylesheet" type="text/css" href="css/ClearableMediaButton.css">
+    <link rel="stylesheet" type="text/css" href="css/MultiSelect.css">
+    <link rel="stylesheet" type="text/css" href="css/InfiniteSlider.css">
+    <link rel="stylesheet" type="text/css" href="css/floatingbar.css">
+    <link rel="stylesheet" type="text/css" href="css/icons.css">
+    <link rel="stylesheet" type="text/css" href="css/insertwindow.css">
+    <link rel="stylesheet" type="text/css" href="css/qrcodewindow.css">
+    <link rel="stylesheet" type="text/css" href="css/jsonpreview.css">
+    <link rel="stylesheet" type="text/css" href="css/mediadb.css">
+    <link rel="stylesheet" type="text/css" href="css/modulelist.css">
+    <link rel="stylesheet" type="text/css" href="css/tree-overrides.css">
+    <link rel="stylesheet" type="text/css" href="css/groupmanagement.css">
+    <link rel="stylesheet" type="text/css" href="css/CMSSplider.css">
+    <link rel="stylesheet" type="text/css" href="css/ImportConflictWindow.css">
+
+    <link rel="stylesheet" type="text/css" href="css/cms.css">
+    <link rel="stylesheet" type="text/css" href="css/landingpanel.css">
+    <link rel="stylesheet" type="text/css" href="css/klickibunti.css">
+
+    <link rel="stylesheet" type="text/css" href="css/screenshots.css">
+    <link rel="stylesheet" type="text/css" href="css/progress.css">
+
+    <link rel="stylesheet" type="text/css" href="css/colorpicker.css">
+
+    <link rel="stylesheet" type="text/css" href="css/sb-multiimage.css">
+
+    <link rel="stylesheet" type="text/css" href="css/richtexteditor.css">
+    <link rel="stylesheet" type="text/css" href="css/klickigraui.css">
+<!-- ### /CSS ### -->
+
+
+
+<!-- 3rd party scripts -->
+
+
+<script src="js/JSColor/jscolor.js" type="text/javascript"></script><!-- required by ColorPickerField TODO: remove this when database is cleared from legacy modules -->
+<!-- ### JS prefix="copyright/codemirror.txt" ### -->
+    <script src="js/CodeMirror/js/codemirror.js" type="text/javascript"></script>
+<!-- ### /JS ### -->
+<!-- ### JS out="js/plupload.js" prefix="copyright/gplv2.txt" ### -->
+    <script src="js/plupload/plupload.js" type="text/javascript"></script>
+    <script src="js/plupload/plupload.html5.js" type="text/javascript"></script>
+    <script src="js/plupload/plupload.html4.js" type="text/javascript"></script>
+    <script src="js/plupload/plupload.flash.js" type="text/javascript"></script>
+<!-- ### /JS ### -->
+
+<!-- ### JS out="js/tiny_mce/tiny_mce.js" prefix="copyright/tinymce.txt" ### -->
+    <script src="js/tiny_mce/tiny_mce.js" type="text/javascript"></script>
+<!-- ### /JS ### -->
+
+
+
+<!-- Ext -->
+
+
+<!-- ### JS out="js/ext-all.js" prefix="copyright/ext.txt" ### -->
+    <script src="js/Ext/ext-3.2.1/adapter/ext/ext-base-debug.js" type="text/javascript"></script>
+
+    <script src="js/Ext/ext-3.2.1/src/ext-core/src/core/DomHelper.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/core/DomHelper-more.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/ext-core/src/core/Template.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/core/Template-more.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/ext-core/src/core/DomQuery.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/ext-core/src/util/DelayedTask.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/ext-core/src/util/Observable.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/util/Observable-more.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/ext-core/src/core/EventManager.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/core/EventManager-more.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/ext-core/src/core/Element.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/core/Element-more.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/core/Element.alignment.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/ext-core/src/core/Element.traversal.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/core/Element.traversal-more.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/ext-core/src/core/Element.insertion.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/core/Element.insertion-more.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/ext-core/src/core/Element.style.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/core/Element.style-more.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/ext-core/src/core/Element.position.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/core/Element.position-more.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/ext-core/src/core/Element.scroll.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/core/Element.scroll-more.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/ext-core/src/core/Element.fx.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/core/Element.fx-more.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/core/Element.keys.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/ext-core/src/core/Fx.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/ext-core/src/core/CompositeElementLite.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/core/CompositeElementLite-more.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/core/CompositeElement.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/ext-core/src/data/Connection.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/util/UpdateManager.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/util/Date.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/util/MixedCollection.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/ext-core/src/util/JSON.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/util/Format.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/util/XTemplate.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/util/CSS.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/util/ClickRepeater.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/util/KeyNav.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/util/KeyMap.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/util/TextMetrics.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/util/Cookies.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/core/Error.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/ComponentMgr.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/Component.js" type="text/javascript"></script>
+    <!--script src="js/Ext/ext-3.2.1/src/widgets/Action.js" type="text/javascript"></script-->
+    <script src="js/Ext/ext-3.2.1/src/widgets/Layer.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/Shadow.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/BoxComponent.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/SplitBar.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/Container.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/layout/ContainerLayout.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/layout/AutoLayout.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/layout/FitLayout.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/layout/CardLayout.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/layout/AnchorLayout.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/layout/ColumnLayout.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/layout/BorderLayout.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/layout/FormLayout.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/layout/AccordionLayout.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/layout/TableLayout.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/layout/AbsoluteLayout.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/layout/BoxLayout.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/layout/ToolbarLayout.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/layout/MenuLayout.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/Viewport.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/Panel.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/Editor.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/ColorPalette.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/DatePicker.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/LoadMask.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/Slider.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/ProgressBar.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/dd/DDCore.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/dd/DragTracker.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/dd/ScrollManager.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/dd/Registry.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/dd/StatusProxy.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/dd/DragSource.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/dd/DropTarget.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/dd/DragZone.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/dd/DropZone.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/core/Element.dd.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/data/Api.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/data/SortTypes.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/data/Record.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/data/StoreMgr.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/data/Store.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/data/DataField.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/data/DataReader.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/data/DataWriter.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/data/DataProxy.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/data/Request.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/data/Response.js" type="text/javascript"></script>
+    <!--script src="js/Ext/ext-3.2.1/src/data/ScriptTagProxy.js" type="text/javascript"></script-->
+    <script src="js/Ext/ext-3.2.1/src/data/HttpProxy.js" type="text/javascript"></script>
+    <!--script src="js/Ext/ext-3.2.1/src/data/MemoryProxy.js" type="text/javascript"></script-->
+    <script src="js/Ext/ext-3.2.1/src/data/Types.js" type="text/javascript"></script>
+    <!--script src="js/Ext/ext-3.2.1/src/data/JsonWriter.js" type="text/javascript"></script-->
+    <script src="js/Ext/ext-3.2.1/src/data/JsonReader.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/data/ArrayReader.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/data/ArrayStore.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/data/JsonStore.js" type="text/javascript"></script>
+    <!--script src="js/Ext/ext-3.2.1/src/data/XmlWriter.js" type="text/javascript"></script-->
+    <!--script src="js/Ext/ext-3.2.1/src/data/XmlReader.js" type="text/javascript"></script-->
+    <!--script src="js/Ext/ext-3.2.1/src/data/XmlStore.js" type="text/javascript"></script-->
+    <script src="js/Ext/ext-3.2.1/src/data/GroupingStore.js" type="text/javascript"></script>
+    <!--script src="js/Ext/ext-3.2.1/src/data/DirectProxy.js" type="text/javascript"></script-->
+    <!--script src="js/Ext/ext-3.2.1/src/data/DirectStore.js" type="text/javascript"></script-->
+    <!--script src="js/Ext/ext-3.2.1/src/direct/Direct.js" type="text/javascript"></script-->
+    <!--script src="js/Ext/ext-3.2.1/src/direct/Transaction.js" type="text/javascript"></script-->
+    <!--script src="js/Ext/ext-3.2.1/src/direct/Event.js" type="text/javascript"></script-->
+    <!--script src="js/Ext/ext-3.2.1/src/direct/Provider.js" type="text/javascript"></script-->
+    <!--script src="js/Ext/ext-3.2.1/src/direct/JsonProvider.js" type="text/javascript"></script-->
+    <!--script src="js/Ext/ext-3.2.1/src/direct/PollingProvider.js" type="text/javascript"></script-->
+    <!--script src="js/Ext/ext-3.2.1/src/direct/RemotingProvider.js" type="text/javascript"></script-->
+    <script src="js/Ext/ext-3.2.1/src/widgets/Resizable.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/Window.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/WindowManager.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/MessageBox.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/PanelDD.js" type="text/javascript"></script>
+    <!--script src="js/Ext/ext-3.2.1/src/state/Provider.js" type="text/javascript"></script-->
+    <!--script src="js/Ext/ext-3.2.1/src/state/StateManager.js" type="text/javascript"></script-->
+    <!--script src="js/Ext/ext-3.2.1/src/state/CookieProvider.js" type="text/javascript"></script-->
+    <script src="js/Ext/ext-3.2.1/src/widgets/DataView.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/list/ListView.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/list/Column.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/list/ColumnResizer.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/list/Sorter.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/TabPanel.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/Button.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/SplitButton.js" type="text/javascript"></script>
+    <!--script src="js/Ext/ext-3.2.1/src/widgets/CycleButton.js" type="text/javascript"></script-->
+    <script src="js/Ext/ext-3.2.1/src/widgets/Toolbar.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/ButtonGroup.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/PagingToolbar.js" type="text/javascript"></script>
+    <!--script src="js/Ext/ext-3.2.1/src/util/History.js" type="text/javascript"></script-->
+    <script src="js/Ext/ext-3.2.1/src/widgets/tips/Tip.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/tips/ToolTip.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/tips/QuickTip.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/tips/QuickTips.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/tips/SliderTip.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/tree/TreePanel.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/tree/TreeEventModel.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/tree/TreeSelectionModel.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/data/Tree.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/tree/TreeNode.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/tree/AsyncTreeNode.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/tree/TreeNodeUI.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/tree/TreeLoader.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/tree/TreeFilter.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/tree/TreeSorter.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/tree/TreeDropZone.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/tree/TreeDragZone.js" type="text/javascript"></script>
+    <!--script src="js/Ext/ext-3.2.1/src/widgets/tree/TreeEditor.js" type="text/javascript"></script-->
+    <!--script src="js/Ext/ext-3.2.1/src/widgets/chart/swfobject.js" type="text/javascript"></script-->
+    <!--script src="js/Ext/ext-3.2.1/src/widgets/chart/FlashComponent.js" type="text/javascript"></script-->
+    <!--script src="js/Ext/ext-3.2.1/src/widgets/chart/EventProxy.js" type="text/javascript"></script-->
+    <!--script src="js/Ext/ext-3.2.1/src/widgets/chart/Chart.js" type="text/javascript"></script-->
+    <script src="js/Ext/ext-3.2.1/src/widgets/menu/Menu.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/menu/MenuMgr.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/menu/BaseItem.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/menu/TextItem.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/menu/Separator.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/menu/Item.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/menu/CheckItem.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/menu/DateMenu.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/menu/ColorMenu.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/form/Field.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/form/TextField.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/form/TriggerField.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/form/TextArea.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/form/NumberField.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/form/DateField.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/form/DisplayField.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/form/Combo.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/form/Checkbox.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/form/CheckboxGroup.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/form/CompositeField.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/form/Radio.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/form/RadioGroup.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/form/Hidden.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/form/BasicForm.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/form/Form.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/form/FieldSet.js" type="text/javascript"></script>
+    <!--script src="js/Ext/ext-3.2.1/src/widgets/form/HtmlEditor.js" type="text/javascript"></script-->
+    <script src="js/Ext/ext-3.2.1/src/widgets/form/TimeField.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/form/SliderField.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/form/Label.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/form/Action.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/form/VTypes.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/grid/GridPanel.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/grid/GridView.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/grid/ColumnDD.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/grid/ColumnSplitDD.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/grid/GridDD.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/grid/ColumnModel.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/grid/AbstractSelectionModel.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/grid/RowSelectionModel.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/grid/Column.js" type="text/javascript"></script>
+    <!--script src="js/Ext/ext-3.2.1/src/widgets/grid/RowNumberer.js" type="text/javascript"></script-->
+    <!--script src="js/Ext/ext-3.2.1/src/widgets/grid/CheckboxSelectionModel.js" type="text/javascript"></script-->
+    <script src="js/Ext/ext-3.2.1/src/widgets/grid/CellSelectionModel.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/grid/EditorGrid.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/grid/GridEditor.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/grid/PropertyGrid.js" type="text/javascript"></script>
+    <script src="js/Ext/ext-3.2.1/src/widgets/grid/GroupingView.js" type="text/javascript"></script>
+
+    <script src="js/Ext/ext-3.2.1/src/locale/ext-lang-de.js" type="text/javascript"></script>
+<!-- ### /JS ### -->
+
+
+
+<!-- Ext fixes by SB -->
+
+
+<!-- ### REMOVE ### -->
+    <script src="js/Ext/ext-3.2.1/ext-lint.js" type="text/javascript"></script>
+<!-- ### /REMOVE ### -->
+<!-- ### JS out="js/cms-ux.js" prefix="copyright/rukzuk.txt" ### -->
+    <script src="js/ext-disableshadows.js" type="text/javascript"></script>
+    <script src="js/ext-overrides.js" type="text/javascript"></script>
+    <script src="js/Ext/ux/UnixDateField.js" type="text/javascript"></script>
+    <script src="js/Ext/ux/EncodingComponents.js" type="text/javascript"></script>
+    <script src="js/Ext/ux/form/TriCheckbox.js" type="text/javascript"></script>
+    <script src="js/Ext/ux/form/ComboSelect.js" type="text/javascript"></script>
+    <script src="js/Ext/ux/Toast.js" type="text/javascript"></script>
+<!-- ### /JS ### -->
+
+
+
+<!-- Ext.ux (not by SB) -->
+
+
+<!-- ### JS out="js/ux-colorpickerfield.js" prefix="UNKNOWN LICENSE" ### -->
+    <script src="js/Ext/ux/form/ColorPickerField.js" type="text/javascript"></script><!-- TODO: remove this when database is cleared from legacy modules -->
+<!-- ### /JS ### -->
+<!-- ### JS out="js/ext-ux.js" prefix="copyright/ext.txt" ### -->
+    <script src="js/Ext/ux/grid/CheckColumn.js" type="text/javascript"></script>
+    <script src="js/Ext/ux/form/FileUploadField.js" type="text/javascript"></script>
+<!-- ### /JS ### -->
+<!-- ### JS prefix="copyright/ux-spinner.txt" ### -->
+    <script src="js/Ext/ux/Spinner.js" type="text/javascript"></script>
+<!-- ### /JS ### -->
+<!-- ### JS out="js/ux-remotetree.js" prefix="copyright/ux-remotetree.txt" ### -->
+    <script src="js/Ext/ux/tree/RemoteTreePanel.js" type="text/javascript"></script>
+<!-- ### /JS ### -->
+<!-- ### JS out="js/ux-tinymce.js" prefix="copyright/ux-tinymce.txt" ### -->
+    <script src="js/Ext/ux/TinyMCE.js" type="text/javascript"></script>
+<!-- ### /JS ### -->
+
+
+
+    <!-- SB libs -->
+
+
+<!-- ### REMOVE ### -->
+    <script src="js/SB/debug.js" type="text/javascript"></script>
+    <script src="tools/css-reloader.js?files=css/klickibunti.css,css/reset.css,css/core.css,css/resizable.css,css/tabs.css,css/form.css,css/button.css,css/toolbar.css,css/grid.css,css/dd.css,css/tree.css,css/date-picker.css,css/qtips.css,css/menu.css,css/box.css,css/combo.css,css/panel.css,css/panel-reset.css,css/window.css,css/editor,css/layout.css,css/progress.css,css/list-view.css,css/slider.css,css/dialog.css,css/cms.css,css/CMSsplider.css" type="text/javascript"></script>
+<!-- ### /REMOVE ### -->
+
+<!-- ### JS out="js/cms-components.js" prefix="copyright/rukzuk.txt" ### -->
+    <script src="js/SB/util.js" type="text/javascript"></script>
+    <script src="js/SB/color.js" type="text/javascript"></script>
+    <script src="js/SB/date.js" type="text/javascript"></script>
+    <script src="js/SB/string.js" type="text/javascript"></script>
+    <script src="js/SB/json.js" type="text/javascript"></script>
+    <script src="js/SB/Element.js" type="text/javascript"></script>
+
+
+
+    <!-- SB components -->
+
+
+    <script src="js/SB/image/MultiImageStack.js" type="text/javascript"></script>
+    <script src="js/SB/TheIframe.js" type="text/javascript"></script>
+    <script src="js/SB/ColorPickerWindow.js" type="text/javascript"></script>
+    <script src="js/SB/form/ColorPickerField.js" type="text/javascript"></script>
+    <script src="js/SB/form/MultiLineLabel.js" type="text/javascript"></script>
+    <script src="js/SB/form/LabelPositionPlugin.js" type="text/javascript"></script>
+    <script src="js/SB/grid.js" type="text/javascript"></script>
+    <script src="js/SB/form/TwinTriggerComboBox.js" type="text/javascript"></script>
+    <script src="js/SB/form/ColorSchemePicker.js" type="text/javascript"></script>
+    <script src="js/SB/TaskbarViewport.js" type="text/javascript"></script>
+    <script src="js/SB/DataCarousel.js" type="text/javascript"></script>
+<!-- ### /JS ### -->
+
+
+<!-- CMS -->
+
+
+<!-- CMS lang and config -->
+<!-- ### REMOVE ### -->
+    <script src="mock/language.js" type="text/javascript"></script>
+<!-- ### /REMOVE ### -->
+
+<script src="js/CMS/config/config.js" type="text/javascript"></script>
+<script src="js/CMS/config/validation.js" type="text/javascript"></script>
+<script src="js/CMS/config/network.js" type="text/javascript"></script>
+<script src="js/CMS/config/errors.js" type="text/javascript"></script>
+<script src="js/CMS/config/formElements.js" type="text/javascript"></script>
+
+<script src="js/CMS/i18n.js" type="text/javascript"></script><!-- include between config and first component -->
+
+<!-- ### JS out="js/cms-all.js" prefix="copyright/rukzuk.txt" ### -->
+
+    <!-- CMS models -->
+    <script src="js/CMS/data/Record.js" type="text/javascript"></script>
+    <script src="js/CMS/data/HttpProxy.js" type="text/javascript"></script>
+    <script src="js/CMS/data/JsonStore.js" type="text/javascript"></script>
+    <script src="js/CMS/data/ArrayField.js" type="text/javascript"></script>
+    <script src="js/CMS/data/JsonField.js" type="text/javascript"></script>
+    <script src="js/CMS/data/ModuleStore.js" type="text/javascript"></script>
+    <script src="js/CMS/data/UserGroupStore.js" type="text/javascript"></script>
+    <script src="js/CMS/data/MediaStore.js" type="text/javascript"></script>
+    <script src="js/CMS/data/WebsiteStore.js" type="text/javascript"></script>
+    <script src="js/CMS/data/AlbumStore.js" type="text/javascript"></script>
+    <script src="js/CMS/data/UnitStore.js" type="text/javascript"></script>
+    <script src="js/CMS/data/FormGroupRecord.js" type="text/javascript"></script>
+    <script src="js/CMS/data/TemplateStore.js" type="text/javascript"></script>
+    <script src="js/CMS/data/PageStore.js" type="text/javascript"></script>
+    <script src="js/CMS/data/StoreManager.js" type="text/javascript"></script>
+    <script src="js/CMS/data/MultiStoreLoader.js" type="text/javascript"></script>
+    <script src="js/CMS/data/UserStore.js" type="text/javascript"></script>
+    <script src="js/CMS/data/BuildStore.js" type="text/javascript"></script>
+
+    <!-- CMS application logic -->
+    <script src="js/CMS/app/Application.js" type="text/javascript"></script>
+    <script src="js/CMS/app/ErrorManager.js" type="text/javascript"></script>
+    <script src="js/CMS/app/TrafficManager.js" type="text/javascript"></script>
+    <script src="js/CMS/app/UIDManager.js" type="text/javascript"></script>
+    <script src="js/CMS/app/UserInfo.js" type="text/javascript"></script>
+    <script src="js/CMS/app/LoginHelper.js" type="text/javascript"></script>
+
+    <!-- CMS components -->
+    <script src="js/CMS/FilterBox.js" type="text/javascript"></script>
+    <script src="js/CMS/TextWindow.js" type="text/javascript"></script>
+    <script src="js/CMS/Message.js" type="text/javascript"></script>
+    <script src="js/CMS/ModuleGrid.js" type="text/javascript"></script>
+    <script src="js/CMS/PromptWindow.js" type="text/javascript"></script>
+    <script src="js/CMS/ToggleRowSelectionModel.js" type="text/javascript"></script>
+    <script src="js/CMS/TreeNodeUI.js" type="text/javascript"></script>
+    <script src="js/CMS/TreePanel.js" type="text/javascript"></script>
+    <script src="js/CMS/TreeLoader.js" type="text/javascript"></script>
+    <script src="js/CMS/FeedbackWindow.js" type="text/javascript"></script>
+
+    <script src="js/CMS/form/Chooser.js" type="text/javascript"></script>
+    <script src="js/CMS/form/AlbumChooser.js" type="text/javascript"></script>
+    <script src="js/CMS/form/CheckboxFieldSet.js" type="text/javascript"></script>
+    <script src="js/CMS/form/ClearableColorField.js" type="text/javascript"></script>
+    <script src="js/CMS/form/ClearableMediaButton.js" type="text/javascript"></script>
+    <script src="js/CMS/form/GeneratedFormPanel.js" type="text/javascript"></script>
+    <script src="js/CMS/form/ImportButton.js" type="text/javascript"></script>
+    <script src="js/CMS/form/InternalLinkChooser.js" type="text/javascript"></script>
+    <script src="js/CMS/form/KeyValueTextArea.js" type="text/javascript"></script>
+    <script src="js/CMS/form/ModuleChooser.js" type="text/javascript"></script>
+    <script src="js/CMS/form/RadioFieldSet.js" type="text/javascript"></script>
+    <script src="js/CMS/form/RadioFieldSetPlugin.js" type="text/javascript"></script>
+    <script src="js/CMS/form/SpliderField.js" type="text/javascript"></script>
+    <script src="js/CMS/form/UnitChooser.js" type="text/javascript"></script>
+    <script src="js/CMS/form/AddRecordComboBox.js" type="text/javascript"></script>
+
+    <script src="js/CMS/layout/WorkbenchPanel.js" type="text/javascript"></script>
+    <script src="js/CMS/layout/ApplicationViewport.js" type="text/javascript"></script>
+    <script src="js/CMS/layout/IframeWorkbenchPanel.js" type="text/javascript"></script>
+    <script src="js/CMS/layout/PageWorkbenchPanel.js" type="text/javascript"></script>
+    <script src="js/CMS/layout/SideBarButton.js" type="text/javascript"></script>
+    <script src="js/CMS/layout/TemplateWorkbenchPanel.js" type="text/javascript"></script>
+
+    <script src="js/CMS/home/ManagementPanel.js" type="text/javascript"></script>
+    <script src="js/CMS/home/BuildGrid.js" type="text/javascript"></script>
+    <script src="js/CMS/home/ColorSchemeDefinitionPanel.js" type="text/javascript"></script>
+    <script src="js/CMS/home/CreatePageWindow.js" type="text/javascript"></script>
+    <script src="js/CMS/home/ModuleManagementPanel.js" type="text/javascript"></script>
+    <script src="js/CMS/home/PageManagementPanel.js" type="text/javascript"></script>
+    <script src="js/CMS/home/PageTemplateComboBox.js" type="text/javascript"></script>
+    <script src="js/CMS/home/PagePropertyForm.js" type="text/javascript"></script>
+    <script src="js/CMS/home/PageTreeDragZone.js" type="text/javascript"></script>
+    <script src="js/CMS/home/PageTreeDropZone.js" type="text/javascript"></script>
+    <script src="js/CMS/home/PageTreeLoader.js" type="text/javascript"></script>
+    <script src="js/CMS/home/PageTreeNode.js" type="text/javascript"></script>
+    <script src="js/CMS/home/PageTreePanel.js" type="text/javascript"></script>
+    <script src="js/CMS/home/PublishPanel.js" type="text/javascript"></script>
+    <script src="js/CMS/home/PublishConfigWindow.js" type="text/javascript"></script>
+    <script src="js/CMS/home/TemplateGrid.js" type="text/javascript"></script>
+    <script src="js/CMS/home/TemplateManagementPanel.js" type="text/javascript"></script>
+    <script src="js/CMS/home/WebsiteGrid.js" type="text/javascript"></script>
+    <script src="js/CMS/home/MediaDBManagementPanel.js" type="text/javascript"></script>
+
+    <script src="js/CMS/liveView/FloatingBar.js" type="text/javascript"></script>
+    <script src="js/CMS/liveView/ImageCropper.js" type="text/javascript"></script>
+    <script src="js/CMS/liveView/InsertUnitWindow.js" type="text/javascript"></script>
+    <script src="js/CMS/liveView/PreviewArea.js" type="text/javascript"></script>
+    <script src="js/CMS/liveView/TheEditableIframe.js" type="text/javascript"></script>
+    <script src="js/CMS/liveView/TheIframeEventModel.js" type="text/javascript"></script>
+    <script src="js/CMS/liveView/TheIframeSelectionPlugin.js" type="text/javascript"></script>
+
+    <script src="js/CMS/mediaDB/Selector.js" type="text/javascript"></script>
+    <script src="js/CMS/mediaDB/MediaDBButton.js" type="text/javascript"></script>
+    <script src="js/CMS/mediaDB/MediaDBPanel.js" type="text/javascript"></script>
+    <script src="js/CMS/mediaDB/MediaDBWindow.js" type="text/javascript"></script>
+    <script src="js/CMS/mediaDB/MediaPropertyWindow.js" type="text/javascript"></script>
+    <script src="js/CMS/mediaDB/MediaSelector.js" type="text/javascript"></script>
+    <script src="js/CMS/mediaDB/AlbumSelector.js" type="text/javascript"></script>
+    <script src="js/CMS/mediaDB/UploadWindow.js" type="text/javascript"></script>
+    <script src="js/CMS/mediaDB/Uploader.js" type="text/javascript"></script>
+
+    <script src="js/CMS/moduleEditor/CodeEditor.js" type="text/javascript"></script>
+    <script src="js/CMS/moduleEditor/CodeEditorAndTree.js" type="text/javascript"></script>
+    <script src="js/CMS/moduleEditor/FileTreeNodeUI.js" type="text/javascript"></script>
+    <script src="js/CMS/moduleEditor/FileTreeLoader.js" type="text/javascript"></script>
+    <script src="js/CMS/moduleEditor/FileTreePanel.js" type="text/javascript"></script>
+    <script src="js/CMS/moduleEditor/FormEditor.js" type="text/javascript"></script>
+    <script src="js/CMS/moduleEditor/FormTabEditor.js" type="text/javascript"></script>
+    <script src="js/CMS/moduleEditor/FormTabList.js" type="text/javascript"></script>
+    <script src="js/CMS/moduleEditor/ModuleEditorPanel.js" type="text/javascript"></script>
+    <script src="js/CMS/moduleEditor/ModuleMetaEditor.js" type="text/javascript"></script>
+    <script src="js/CMS/moduleEditor/PropertyEditorFormPanel.js" type="text/javascript"></script>
+
+    <script src="js/CMS/richTextEditor/RichTextEditor.js" type="text/javascript"></script>
+    <script src="js/CMS/richTextEditor/FallbackRichTextEditor.js" type="text/javascript"></script>
+    <script src="js/CMS/richTextEditor/InlineRichTextEditor.js" type="text/javascript"></script>
+    <script src="js/CMS/richTextEditor/RichTextEditorToolbar.js" type="text/javascript"></script>
+    <script src="js/CMS/richTextEditor/RichTextEditorConfigField.js" type="text/javascript"></script>
+    <script src="js/CMS/richTextEditor/RichTextEditorButton.js" type="text/javascript"></script>
+    <script src="js/CMS/richTextEditor/LinkWindow.js" type="text/javascript"></script>
+
+    <script src="js/CMS/structureEditor/UnitTreePanel.js" type="text/javascript"></script>
+    <script src="js/CMS/structureEditor/StructureEditor.js" type="text/javascript"></script>
+    <script src="js/CMS/structureEditor/PageStructureEditor.js" type="text/javascript"></script>
+    <script src="js/CMS/structureEditor/PageUnitTreeDragZone.js" type="text/javascript"></script>
+    <script src="js/CMS/structureEditor/PageUnitTreeDropZone.js" type="text/javascript"></script>
+    <script src="js/CMS/structureEditor/PageUnitTreeNodeUI.js" type="text/javascript"></script>
+    <script src="js/CMS/structureEditor/PageUnitTreeNode.js" type="text/javascript"></script>
+    <script src="js/CMS/structureEditor/PageUnitTreeLoader.js" type="text/javascript"></script>
+    <script src="js/CMS/structureEditor/PageUnitTreePanel.js" type="text/javascript"></script>
+    <script src="js/CMS/structureEditor/TemplateStructureEditor.js" type="text/javascript"></script>
+    <script src="js/CMS/structureEditor/TemplateUnitTreeDragZone.js" type="text/javascript"></script>
+    <script src="js/CMS/structureEditor/TemplateUnitTreeDropZone.js" type="text/javascript"></script>
+    <script src="js/CMS/structureEditor/TemplateUnitTreeNodeUI.js" type="text/javascript"></script>
+    <script src="js/CMS/structureEditor/TemplateUnitTreeNode.js" type="text/javascript"></script>
+    <script src="js/CMS/structureEditor/TemplateUnitTreeLoader.js" type="text/javascript"></script>
+    <script src="js/CMS/structureEditor/TemplateUnitTreePanel.js" type="text/javascript"></script>
+
+    <script src="js/CMS/unitEditor/UnitEditor.js" type="text/javascript"></script>
+    <script src="js/CMS/unitEditor/PageUnitEditor.js" type="text/javascript"></script>
+    <script src="js/CMS/unitEditor/TemplateUnitEditor.js" type="text/javascript"></script>
+    <script src="js/CMS/unitEditor/TemplateUnitMetaEditor.js" type="text/javascript"></script>
+
+    <script src="js/CMS/userManagement/CreateUserWindow.js" type="text/javascript"></script>
+    <script src="js/CMS/userManagement/EditUserWindow.js" type="text/javascript"></script>
+    <script src="js/CMS/userManagement/AddGroupComboBox.js" type="text/javascript"></script>
+    <script src="js/CMS/userManagement/GroupGrid.js" type="text/javascript"></script>
+    <script src="js/CMS/userManagement/AddToGroupPanel.js" type="text/javascript"></script>
+    <script src="js/CMS/userManagement/AllUsersGrid.js" type="text/javascript"></script>
+    <script src="js/CMS/userManagement/UserManagementPanel.js" type="text/javascript"></script>
+    <script src="js/CMS/userManagement/UserGroupManagementPanel.js" type="text/javascript"></script>
+    <script src="js/CMS/userManagement/PagePrivilegesTreeNodeUI.js" type="text/javascript"></script>
+    <script src="js/CMS/userManagement/PagePrivilegesLoader.js" type="text/javascript"></script>
+    <script src="js/CMS/userManagement/PagePrivilegesTreePanel.js" type="text/javascript"></script>
+    <script src="js/CMS/userManagement/OtherPrivilegesPanel.js" type="text/javascript"></script>
+    <script src="js/CMS/userManagement/GroupUserGrid.js" type="text/javascript"></script>
+    <script src="js/CMS/userManagement/AddUserComboBox.js" type="text/javascript"></script>
+    <script src="js/CMS/userManagement/AddUserPanel.js" type="text/javascript"></script>
+
+
+
+    <!-- API -->
+
+
+    <script src="js/CMS/api/ApiPlugin.js" type="text/javascript"></script>
+    <script src="js/CMS/api/API.js" type="text/javascript"></script>
+
+
+
+    <!-- CMS init -->
+
+
+    <!--script src="js/init.js" type="text/javascript"></script-->
+    <script src="mock/allwidgets.js" type="text/javascript"></script>
+<!-- ### /JS ### -->
+
+</head>
+<body>
+    <noscript>
+        <h2>
+            Aktivieren Sie JavaScript oder ActiveScripting in Ihrem Browser.
+        </h2>
+    </noscript>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+    "form": [],
+    "formValues": {
+        "foo": "bar_rz_testing_002",
+        "this_is_a_array": [
+            "foo",
+            "bar"
+        ],
+        "this_is_a_object": {"foo": "bar"},
+        "this_is_null": null,
+        "this_is_empty_string": "",
+        "this_is_empty_array": [],
+        "this_is_empty_object": {},
+        "this_is_int_0": 0,
+        "this_is_false": false
+    }
+}

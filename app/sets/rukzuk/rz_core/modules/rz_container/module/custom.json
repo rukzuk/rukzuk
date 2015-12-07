@@ -1,0 +1,33 @@
+{
+    "assets":{
+        "js":[
+            {
+                "file":"notlive\/editMode.js",
+                "mode":"edit",
+                "type":"module"
+            }
+        ],
+        "css":[
+            {
+                "file":"style.css"
+            },
+            {
+                "file":"notlive\/editMode.css",
+                "mode":"edit"
+            }
+        ]
+    },
+    "i18n":{
+        "selector.cells":{
+            "de":"Zeilen",
+            "en":"Rows"
+        }
+    },
+    "selectors":[
+        {
+            "title":"__i18n_selector.cells",
+            "selector":".cntElements > div",
+            "enableNthTypeOf":true
+        }
+    ]
+}

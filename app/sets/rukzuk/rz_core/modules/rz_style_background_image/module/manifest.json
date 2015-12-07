@@ -1,0 +1,12 @@
+{
+    "name": "{\"de\":\"Hintergrund-Bild\",\"en\":\"Background Image\"}",
+    "description": "{\"de\":\"Flächendeckend, gekachelt oder fixierte Hintergrundbilder. Genaues und dynamisches Positionieren möglich.\",\"en\":\"Area-wide, tiled or fixed background images. Specific and dynamic positioning possible.\"}",
+    "version": "dev",
+    "icon": "style-background-image.png",
+    "category": "20",
+    "moduleType": "extension",
+    "allowedChildModuleType": "",
+    "reRenderRequired": false,
+    "apiType": "APIv1",
+    "ghostContainerMode": "force_off"
+}

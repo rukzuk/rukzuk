@@ -1,0 +1,12 @@
+{
+    "name": "{\"de\":\"Breadcrumb-Navigation\",\"en\":\"Breadcrumb Navigation\"}",
+    "description": "{\"de\":\"Anzeige des Pfades zur aktuellen Seite im Navigationsbaum.\",\"en\":\"Displays the path of the current page in the sitemap.\"}",
+    "version": "dev",
+    "icon": "sitemap_color.png",
+    "category": "{\"de\":\"Navigation\",\"en\":\"Navigation\"}",
+    "moduleType": "default",
+    "allowedChildModuleType": "extension",
+    "ghostContainerMode": "force_off",
+    "reRenderRequired": false,
+    "apiType": "APIv1"
+}

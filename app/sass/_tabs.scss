@@ -1,0 +1,324 @@
+@import "colors";
+@import "mixins";
+
+/*!!
+ * Ext JS Library 3.2.1
+ * Copyright(c) 2006-2010 Ext JS, Inc.
+ * licensing@extjs.com
+ * http://www.extjs.com/license
+ */
+.x-tab-panel, .x-tab-panel-header, .x-tab-panel-footer {
+    overflow: hidden;
+}
+
+.x-tab-panel-header, .x-tab-panel-footer {
+    zoom: 1;
+}
+
+.x-tab-strip-wrap {
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: visible;
+    position: relative;
+    zoom: 1;
+    z-index: 2;
+}
+
+ul.x-tab-strip {
+    display: block;
+    width: 5000px;
+    zoom: 1;
+    border: 0 none;
+    padding-left: 3px;
+}
+
+ul.x-tab-strip li {
+    float: left;
+}
+
+ul.x-tab-strip li.x-tab-edge {
+    float: left;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 none !important;
+    font-size: 1px !important;
+    line-height: 1px !important;
+    overflow: hidden;
+    zoom: 1;
+    background: transparent !important;
+    width: 1px;
+}
+
+.x-tab-strip a, .x-tab-strip span, .x-tab-strip em {
+    display: block;
+}
+
+.x-tab-strip a {
+    text-decoration: none !important;
+    -moz-outline: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.x-tab-strip-inner {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.x-tab-strip span.x-tab-strip-text {
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.x-tab-strip .x-tab-with-icon span.x-tab-strip-text {
+    padding-left: 20px;
+    background-position: 0 3px;
+    background-repeat: no-repeat;
+}
+
+.x-tab-strip-active, .x-tab-strip-active a.x-tab-right, .x-tab-strip-active span.x-tab-strip-text, .x-tab-strip-disabled .x-tabs-text {
+    cursor: default;
+}
+
+.x-tab-panel-body, .x-tab-panel-bwrap {
+    overflow: hidden;
+}
+
+.x-tab-panel-header .x-tab-strip-spacer {
+    z-index: 1;
+    top: -1px;
+    position: relative;
+}
+
+.ext-ie .x-tab-strip .x-tab-right {
+    position: relative;
+}
+
+/*
+ * Horrible hack for IE8 in quirks mode
+ */
+.ext-ie8 ul.x-tab-strip li {
+    position: relative;
+}
+
+.ext-ie8 .x-tab-strip .x-tab-right {
+    margin-bottom: 0 !important;
+    top: 1px;
+}
+
+.ext-ie8 ul.x-tab-strip-top {
+    padding-top: 0;
+}
+
+.ext-ie8 .x-tab-strip .x-tab-strip-closable a.x-tab-strip-close {
+    top: 4px;
+}
+
+.ext-ie8 .x-tab-strip-bottom .x-tab-right {
+    top: 0;
+}
+
+/*
+.x-tab-strip-top .x-tab-strip-active .x-tab-right span.x-tab-strip-text {
+    padding-bottom:5px;
+}
+
+.x-tab-strip-bottom .x-tab-strip-active .x-tab-right {
+    margin-top:-1px;
+}
+
+.x-tab-strip-bottom .x-tab-strip-active .x-tab-right span.x-tab-strip-text {
+    padding-top:5px;
+}
+
+.x-tab-strip-top .x-tab-right {
+    background: transparent no-repeat 0 -51px;
+    padding-left:10px;
+}
+
+.x-tab-strip-top .x-tab-left {
+    background: transparent no-repeat right -351px;
+    padding-right:10px;
+}
+
+.x-tab-strip-top .x-tab-strip-inner {
+    background: transparent repeat-x 0 -201px;
+}
+
+.x-tab-strip-top .x-tab-strip-over .x-tab-right {
+     background-position:0 -101px;
+}
+
+.x-tab-strip-top .x-tab-strip-over .x-tab-left {
+     background-position:right -401px;
+}
+
+.x-tab-strip-top .x-tab-strip-over .x-tab-strip-inner {
+     background-position:0 -251px;
+}
+
+.x-tab-strip-top .x-tab-strip-active .x-tab-right {
+    background-position: 0 0;
+}
+
+.x-tab-strip-top .x-tab-strip-active .x-tab-left {
+    background-position: right -301px;
+}
+
+.x-tab-strip-top .x-tab-strip-active .x-tab-strip-inner {
+    background-position: 0 -151px;
+}
+
+.x-tab-strip-bottom .x-tab-right {
+    background: no-repeat bottom right;
+}
+
+.x-tab-strip-bottom .x-tab-left {
+    background: no-repeat bottom left;
+}
+
+.x-tab-strip-bottom .x-tab-strip-active .x-tab-right {
+    background: no-repeat bottom right;
+}
+
+.x-tab-strip-bottom .x-tab-strip-active .x-tab-left {
+    background: no-repeat bottom left;
+}
+
+.x-tab-strip-bottom .x-tab-left {
+    margin-right: 3px;
+    padding:0 10px;
+}
+
+.x-tab-strip-bottom .x-tab-right {
+    padding:0;
+}
+*/
+.x-tab-strip .x-tab-strip-close {
+    display: none;
+}
+
+.x-tab-strip-closable {
+    position: relative;
+}
+
+.x-tab-strip-closable .x-tab-left {
+    padding-right: 19px;
+}
+
+.x-tab-strip .x-tab-strip-closable a.x-tab-strip-close {
+    opacity: .6;
+    background-repeat: no-repeat;
+    background-image: url("../images/icons/close.png");
+    display: block;
+    width: 11px;
+    height: 11px;
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.x-tab-strip .x-tab-strip-active a.x-tab-strip-close {
+    opacity: .8;
+}
+
+.x-tab-strip .x-tab-strip-closable a.x-tab-strip-close:hover {
+    opacity: 1;
+}
+
+$tabscroller-width: 18px;
+
+.x-tab-scroller-left, .x-tab-scroller-right {
+    width: $tabscroller-width;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.x-tab-scroller-left {
+    left: 0;
+    /*background-image: url("../images/default/tabs/scroll-left.gif");*/
+    background-image: url("../images/tool_sprites.png");
+    background-position: 0 -342px;
+    //background-color: $unstyled;
+    border: 1px solid $border-panel;
+    margin-top: 1px;
+}
+
+.x-tab-scroller-right {
+    right: 0;
+    background-image: url("../images/tool_sprites.png");
+    background-position: 1px -327px;
+    //background-color: $unstyled;
+    border: 1px solid $border-panel;
+    margin-top: 1px;
+    margin-right: 2px;
+    /*@include gradient-vertical-image("../images/tool_sprites.png", $color-main, $color-main-dark);*/
+}
+
+.x-tab-scroller-left-disabled, .x-tab-scroller-right-disabled {
+    opacity: .5;
+    cursor: default;
+}
+
+.x-tab-scrolling .x-tab-strip-wrap {
+    margin-left: $tabscroller-width;
+    margin-right: $tabscroller-width;
+}
+
+.x-tab-scrolling {
+    position: relative;
+}
+
+.x-tab-panel-bbar .x-toolbar, .x-tab-panel-tbar .x-toolbar {
+    overflow: hidden;
+}
+
+.x-tab-strip .x-tab-with-icon {
+    padding-left: 5px;
+}
+
+.x-tab-strip-text {
+    padding: 5px 6px;
+}
+
+.x-tab-strip-spacer {
+    height: 3px;
+}
+
+/*header*/
+.x-tab-panel .x-tab-scrolling {
+    background-color: transparent;
+}
+
+/* Adjusted Tab Panel Header Tabs Style (no border - bigger size) */
+.x-tab-panel {
+    .x-tab-panel-header {
+        .x-tab-strip-text {
+            padding: 9px 14px;
+        }
+        .x-tab-strip-top li {
+            margin-right: 1px;
+            border: none;
+        }
+
+        ul.x-tab-strip {
+            padding-left: 0px;
+        }
+        .x-tab-strip-spacer {
+            margin-top: 1px;
+        }
+    }
+}
+
+.CMSresizable .x-tab-panel .x-tab-panel-header {
+    .x-tab-strip-spacer {
+        margin-top: 0px;
+    }
+    .x-tab-strip-top li {
+        margin-top: 3px;
+    }
+}

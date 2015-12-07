@@ -1,0 +1,47 @@
+<?php
+if (!empty($this->useClientTemplate) && file_exists($this->useClientTemplate)) {
+  // init variables for client template
+  $base_path = '/';
+  $title = $this->translate('view.login.login.header.title');
+  $error = null;
+  $login_result = ($this->loginFailed)
+                    ? $this->translate('view.login.login.login_failed')
+                    : null;
+  $login_action = '';
+  $hidden_fields = '<input type="hidden" name="url" value="'.$this->url.'" />'
+                  .'<input type="hidden" name="ticket" value="'.$this->ticket.'" />';
+  $lang = array(
+    'emailPlaceholder'    => $this->translate('view.login.login.form.emailPlaceholder'),
+    'passwordPlaceholder' => $this->translate('view.login.login.form.passwordPlaceholder'),
+    'loginButton'         => $this->translate('view.login.login.form.loginButton'),
+  );
+  
+  // include client template
+  return include($this->useClientTemplate);
+}
+?>
+<html>
+  <head>
+    <title><?php echo $this->translate('view.login.login.header.title'); ?></title>
+  </head>
+  <body>
+    
+  <h1><?php echo $this->translate('view.login.login.headline'); ?></h1>
+
+  <p><?php echo $this->translate('view.login.login.info'); ?></p>
+
+  <?php if ($this->loginFailed) { ?>
+  <p style="color:red;"><?php echo $this->translate('view.login.login.login_failed'); ?></p>
+  <?php } ?>
+
+  <form method="post" action="">
+    <label for="username"><?php echo $this->translate('view.login.login.form.label.nutzername'); ?></label>
+    <input id="username" name="username" type="text" value="" /><br />
+    <label for="password"><?php echo $this->translate('view.login.login.form.label.password'); ?></label>
+    <input id="password" name="password" type="password" value="" /><br />
+    <input type="hidden" name="url" value="<?php echo $this->url; ?>" />
+    <input type="hidden" name="ticket" value="<?php echo $this->ticket; ?>" />
+    <input type="submit" name="login" value="<?php echo $this->translate('view.login.login.form.button.register'); ?>" />
+</form>
+  </body>
+</html>

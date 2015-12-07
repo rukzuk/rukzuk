@@ -1,0 +1,12 @@
+{
+    "name": "{\"de\":\"Flow-Container\",\"en\":\"Flow Container\"}",
+    "description": "",
+    "version": "dev",
+    "icon": "multi-shape.png",
+    "category": "{\"de\":\" Layout\",\"en\":\" Layout\"}",
+    "moduleType": "default",
+    "allowedChildModuleType": "*",
+    "ghostContainerMode": "force_off",
+    "reRenderRequired": false,
+    "apiType": "APIv1"
+}

@@ -1,0 +1,12 @@
+/*! ************************************************************
+	Ext.ux.TinyMCE v0.8.5
+	ExtJS form field containing TinyMCE v3.
+
+	Author: Andrew Mayorov et al.
+	http://blogs.byte-force.com/xor
+
+	Copyright (c)2008-2010 BYTE-force
+	www.byte-force.com
+
+	License: LGPLv2.1 or later
+*/

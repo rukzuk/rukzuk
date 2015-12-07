@@ -1,0 +1,85 @@
+{
+    "website": [
+        {
+            "id": "SITE-im12maec-imal-4ea8-a477-t4e79e8e62m0-SITE",
+            "name": "Import into existing album",
+            "shortid": "",
+            "description": "",
+            "navigation": "",
+            "colorscheme": "",
+            "resolutions": "",
+            "version": 0,
+            "home": "",
+            "ismarkedfordeletion": 0
+        },
+        {
+            "id": "SITE-im12maec-imal-4ea8-a477-t4e79e8e62m1-SITE",
+            "name": "Import into non-existing album",
+            "shortid": "",
+            "description": "",
+            "navigation": "",
+            "colorscheme": "",
+            "resolutions": "",
+            "version": 0,
+            "home": "",
+            "ismarkedfordeletion": 0
+        }
+    ],
+    "album": [
+        {
+            "id": "ALBUM-ex0wcf0d-acc4-4fdb-imal-72ebb08780ig-ALBUM",
+            "websiteid": "SITE-im12maec-imal-4ea8-a477-t4e79e8e62m0-SITE",
+            "name": "Existing album to import into"
+        }
+    ],
+    "media_item": [
+        {
+            "id": "MDB-exp0d0ec-cb0f-4961-imal-765d4aa581a0-MDB",
+            "websiteid": "SITE-im12maec-imal-4ea8-a477-t4e79e8e62m0-SITE",
+            "name": "Overwritten_0",
+            "filename": "twitter-api.js",
+            "extension": "js",
+            "type": "misc"
+        },
+        {
+            "id": "MDB-exp0d0ec-cb0f-4961-imal-765d4aa581a1-MDB",
+            "websiteid": "SITE-im12maec-imal-4ea8-a477-t4e79e8e62m0-SITE",
+            "name": "Overwritten_1",
+            "filename": "poll-log.json",
+            "extension": "json",
+            "type": "misc"
+        },
+        {
+            "id": "MDB-exp0d0ec-cb0f-4961-imal-765d4aa581a2-MDB",
+            "websiteid": "SITE-im12maec-imal-4ea8-a477-t4e79e8e62m0-SITE",
+            "name": "Overwritten_2",
+            "filename": "red.gif",
+            "extension": "gif",
+            "type": "image"
+        },
+        {
+            "id": "MDB-exp0d0ec-cb0f-4961-imal-765d4aa581n0-MDB",
+            "websiteid": "SITE-im12maec-imal-4ea8-a477-t4e79e8e62m1-SITE",
+            "name": "Overwritten_0",
+            "filename": "twitter-api.js",
+            "extension": "js",
+            "type": "misc"
+        },
+        {
+            "id": "MDB-exp0d0ec-cb0f-4961-imal-765d4aa581n1-MDB",
+            "websiteid": "SITE-im12maec-imal-4ea8-a477-t4e79e8e62m1-SITE",
+            "name": "Overwritten_1",
+            "filename": "poll-log.json",
+            "extension": "json",
+            "type": "misc"
+        },
+        {
+            "id": "MDB-exp0d0ec-cb0f-4961-imal-765d4aa581n2-MDB",
+            "websiteid": "SITE-im12maec-imal-4ea8-a477-t4e79e8e62m1-SITE",
+            "name": "Overwritten_2",
+            "filename": "red.gif",
+            "extension": "gif",
+            "type": "image"
+        }
+    ]
+}

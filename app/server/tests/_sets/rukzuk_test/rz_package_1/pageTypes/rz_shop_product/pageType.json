@@ -1,0 +1,21 @@
+{
+  "name": {
+    "de": "Shop Produkt",
+    "en": "Shop product"
+  },
+  "description": {
+    "de": "rz_shop_product.description.de",
+    "en": "rz_shop_product.description.en"
+  },
+  "version": "rz_shop_product.version",
+  "formValues": {
+    "price": 9999
+  },
+  "form": [
+    {
+      "foo": "bar",
+      "emtpyStdClass": {},
+      "emptyArray": []
+    }
+  ]
+}

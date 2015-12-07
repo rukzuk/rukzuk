@@ -1,0 +1,118 @@
+{
+    "assets":{
+    },
+    "i18n":{
+        "selector.title":{
+            "de":"Formulartitel",
+            "en":"Form title"
+        },
+        "selector.label":{
+            "de":"Labels",
+            "en":"Labels"
+        },
+        "selector.input":{
+            "de":"Eingabefelder",
+            "en":"Input fields"
+        },
+        "selector.dropdown":{
+            "de":"Auswahlfelder",
+            "en":"Dropdown fields"
+        },
+        "selector.submit":{
+            "de":"Senden-Button",
+            "en":"Submit button"
+        },
+        "selector.required":{
+            "de":"Pflichtfeld",
+            "en":"Required Fields"
+        },
+        "selector.required_text":{
+            "de":"Pflichtfeld-Hinweis",
+            "en":"Required Text"
+        },
+        "selector.required_asterisk":{
+            "de":"Pflichtfeld-Stern",
+            "en":"Asterisk"
+        },
+        "selector.response":{
+            "de":"Antwort-Container",
+            "en":"Response Container"
+        },
+        "selector.response_success":{
+            "de":"Erfolgsmeldung",
+            "en":"Response Success"
+        },
+        "selector.response_error":{
+            "de":"Fehlermeldung",
+            "en":"Response Error"
+        },
+        "selector.inline_error":{
+            "de":"Fehlermeldung unter Formularfeld",
+            "en":"Inline Error"
+        },
+        "selector.invalid_field":{
+            "de":"Invalides Feld",
+            "en":"Invalid field"
+        }
+    },
+
+    "selectors":[
+        {
+            "title":"__i18n_selector.title",
+            "selector":" #mc_embed_signup h2"
+        },
+        {
+            "title":"__i18n_selector.label",
+            "selector":" #mc_embed_signup div.mc-field-group label"
+        },
+        {
+            "title":"__i18n_selector.input",
+            "selector":" #mc_embed_signup div.mc-field-group input"
+        },
+        {
+            "title":"__i18n_selector.dropdown",
+            "selector":" #mc_embed_signup div.mc-field-group select"
+        },
+        {
+            "title":"__i18n_selector.required",
+            "selector":" #mc_embed_signup div.mc-field-group input.required",
+            "items": [
+                {
+                    "title":"__i18n_selector.required_text",
+                    "selector":" #mc_embed_signup .indicates-required"
+                },
+                {
+                    "title":"__i18n_selector.required_asterisk",
+                    "selector":" #mc_embed_signup .asterisk"
+                },
+                {
+                    "title":"__i18n_selector.invalid_field",
+                    "selector":" #mc_embed_signup input.mce_inline_error"
+                }
+            ]
+        },
+
+        {
+            "title":"__i18n_selector.submit",
+            "selector":" #mc_embed_signup input.button"
+        },
+        {
+            "title":"__i18n_selector.response",
+            "selector":" #mc_embed_signup div.response",
+            "items": [
+                {
+                    "title":"__i18n_selector.response_success",
+                    "selector":" #mc_embed_signup #mce-success-response"
+                },
+                {
+                    "title":"__i18n_selector.response_error",
+                    "selector":" #mc_embed_signup #mce-error-response"
+                },
+                {
+                    "title":"__i18n_selector.inline_error",
+                    "selector":" #mc_embed_signup div.mce_inline_error"
+                }
+            ]
+        }
+    ]
+}

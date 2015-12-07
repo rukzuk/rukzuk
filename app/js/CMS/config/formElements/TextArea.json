@@ -1,0 +1,42 @@
+{
+    "descr": {
+        "id": "TextArea",
+        "text": "__i18n_formElements.elementTextArea",
+        "iconCls": "textarea",
+        "hasValue": true
+    },
+    "params": [
+        {
+            "name": "xtype",
+            "value": "textarea",
+            "xtype": null
+        },
+        {
+            "name": "isMeta",
+            "value": false,
+            "fieldLabel": "__i18n_formElements.isGlobal",
+            "xtype": "checkbox"
+        },
+        {
+            "name": "isResponsive",
+            "value": false,
+            "fieldLabel": "__i18n_formElements.isResponsive",
+            "xtype": "checkbox"
+        },
+        {
+            "name": "fieldLabel",
+            "value": "__i18n_formElements.fieldLabel",
+            "xtype": "textfield",
+            "allowBlank": true,
+            "emptyText": "__i18n_formElements.fieldLabelOptionalEmptyText",
+            "fieldLabel": "__i18n_formElements.fieldLabel"
+        },
+        {
+            "name": "height",
+            "value": 200,
+            "xtype": "numberfield",
+            "allowBlank": false,
+            "fieldLabel": "__i18n_formElements.heightLabel"
+        }
+    ]
+}

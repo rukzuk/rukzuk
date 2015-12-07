@@ -1,0 +1,8 @@
+.isAnchorAbsolute {
+    position: absolute;
+    left: 0;
+    height: 0;
+    line-height: 0;
+    width: 100%;
+}
+

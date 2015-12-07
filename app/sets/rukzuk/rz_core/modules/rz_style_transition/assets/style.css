@@ -1,0 +1,4 @@
+/* Set default border to fix border transitions */
+* {
+    border: 0 solid transparent;
+}

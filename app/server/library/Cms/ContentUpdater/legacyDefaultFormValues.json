@@ -1,0 +1,1371 @@
+{
+  "rz_slider_images": {
+    "sliderImageIds": [],
+    "imgHeight": "50%",
+    "enableImageQuality": false,
+    "imageQuality": "85",
+    "enableDirectionNav": true,
+    "enableControlNav": true,
+    "enableInfiniteLoop": false,
+    "enableKeyboard": false,
+    "startSlide": 1,
+    "sliderMode": "horizontal",
+    "sliderSpeed": "500ms",
+    "enableSlideshow": false,
+    "slideshowSpeed": "5s",
+    "enableAutoStopOnHover": true
+  },
+  "rz_selector_pseudo_class": {
+    "pseudoClass": "hover",
+    "additionalSelector": ":hover"
+  },
+  "rz_root": {
+    "titlePrefix": "",
+    "titleSuffix": "",
+    "lang": "en-US",
+    "favicon": null,
+    "appleTouchIcon": null,
+    "enablePHPSession": false,
+    "debugShowPhpErrors": false,
+    "debugShowDynCssErrors": false
+  },
+  "rz_textfield": {
+    "enableRteBold": false,
+    "enableRteItalic": false,
+    "enableRteUnderline": false,
+    "enableRteStrikethrough": false,
+    "enableRteSubscript": false,
+    "enableRteSuperscript": false,
+    "enableRteList": false,
+    "enableRteLink": false,
+    "enableRteTable": false,
+    "enableRteHeadline1": false,
+    "rteHeadline1Title": "Heading 1",
+    "enableRteHeadline2": false,
+    "rteHeadline2Title": "Heading 2",
+    "enableRteHeadline3": false,
+    "rteHeadline3Title": "Heading 3",
+    "enableRteHeadline4": false,
+    "rteHeadline4Title": "Heading 4",
+    "enableRteHeadline5": false,
+    "rteHeadline5Title": "Heading 5",
+    "enableRteHeadline6": false,
+    "rteHeadline6Title": "Heading 6",
+    "enableRteStyle1": false,
+    "rteStyle1Title": "",
+    "rteStyle1Element": "",
+    "enableRteStyle2": false,
+    "rteStyle2Title": "",
+    "rteStyle2Element": "",
+    "enableRteStyle3": false,
+    "rteStyle3Title": "",
+    "rteStyle3Element": "",
+    "enableRteStyle4": false,
+    "rteStyle4Title": "",
+    "rteStyle4Element": "",
+    "text": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>"
+  },
+  "rz_anchor": {
+    "anchorName": "Lorem ipsum",
+    "anchorId": "",
+    "cssVisualHelperValign": "right"
+  },
+  "rz_style_background_color": {
+    "cssEnableBackgroundColor": {
+      "type": "bp",
+      "default": false
+    },
+    "cssBackgroundColor": {
+      "type": "bp",
+      "default": null
+    }
+  },
+  "rz_google_analytics": {
+    "trackingId": ""
+  },
+  "rz_form_field_select": {
+    "fieldLabel": "Name",
+    "listType": "select",
+    "listFieldOptions": "Option 1\nOption 2*\nOption 3",
+    "enableRequired": false,
+    "requiredErrorMessage": "Please fill out this field.",
+    "cssEnableStyling": {
+      "type": "bp",
+      "default": false
+    },
+    "cssEnableLabelAlign": "left"
+  },
+  "rz_google_maps": {
+    "address": "Bahnhofstrasse 1\n78462 Konstanz",
+    "zoom": "15",
+    "maptype": "roadmap",
+    "cssHeight": {
+      "type": "bp",
+      "default": "60%"
+    },
+    "googleMapsApiKey": ""
+  },
+  "rz_style_columns": {
+    "cssEnableColumns": {
+      "type": "bp",
+      "default": false
+    },
+    "cssColumnCount": {
+      "type": "bp",
+      "default": "1"
+    },
+    "cssColumnGap": {
+      "type": "bp",
+      "default": "0px"
+    },
+    "cssEnableColumnRule": {
+      "type": "bp",
+      "default": false
+    },
+    "cssColumnRuleColor": {
+      "type": "bp",
+      "default": null
+    },
+    "cssColumnRuleWidth": {
+      "type": "bp",
+      "default": "1px"
+    },
+    "cssColumnRuleStyle": {
+      "type": "bp",
+      "default": "solid"
+    }
+  },
+  "rz_style_font": {
+    "cssEnableFontFamily": {
+      "type": "bp",
+      "default": false
+    },
+    "cssWebFontId": {
+      "type": "bp",
+      "default": ""
+    },
+    "cssFontFamilyGoogle": {
+      "type": "bp",
+      "default": null
+    },
+    "cssFontFamily": {
+      "type": "bp",
+      "default": "Arial, Helvetica, sans-serif"
+    },
+    "cssEnableFontStyle": {
+      "type": "bp",
+      "default": false
+    },
+    "cssFontWeight": {
+      "type": "bp",
+      "default": 400
+    },
+    "cssEnableItalic": {
+      "type": "bp",
+      "default": false
+    },
+    "cssEnableCaps": {
+      "type": "bp",
+      "default": false
+    },
+    "cssEnableFontSize": {
+      "type": "bp",
+      "default": false
+    },
+    "cssFontSize": {
+      "type": "bp",
+      "default": "16px"
+    },
+    "cssEnableFontSizeVw": {
+      "type": "bp",
+      "default": false
+    },
+    "cssFontSizeVw": {
+      "type": "bp",
+      "default": "1vw"
+    },
+    "cssEnableColor": {
+      "type": "bp",
+      "default": false
+    },
+    "cssColor": {
+      "type": "bp",
+      "default": null
+    },
+    "cssEnableTextDecoration": {
+      "type": "bp",
+      "default": false
+    },
+    "cssEnableUnderline": {
+      "type": "bp",
+      "default": null
+    },
+    "cssEnableOverline": {
+      "type": "bp",
+      "default": null
+    },
+    "cssEnableLineThrough": {
+      "type": "bp"
+    },
+    "cssEnableTextTransform": {
+      "type": "bp",
+      "default": false
+    },
+    "cssTextTransform": {
+      "type": "bp",
+      "default": "uppercase"
+    },
+    "cssEnableTextAlign": {
+      "type": "bp",
+      "default": false
+    },
+    "cssTextAlign": {
+      "type": "bp",
+      "default": "left"
+    },
+    "cssEnableLineHeight": {
+      "type": "bp",
+      "default": false
+    },
+    "cssLineHeight": {
+      "type": "bp",
+      "default": "130%"
+    },
+    "cssEnableLetterSpacing": {
+      "type": "bp",
+      "default": false
+    },
+    "cssLetterSpacing": {
+      "type": "bp",
+      "default": "0px"
+    }
+  },
+  "rz_html": {
+    "htmlCode": "",
+    "headCode": ""
+  },
+  "rz_video": {
+    "htmlCode": ""
+  },
+  "rz_style_visibility": {
+    "cssVisibility": {
+      "type": "bp",
+      "default": "visible"
+    }
+  },
+  "rz_style_icon": {
+    "cssEnableIcon": {
+      "type": "bp",
+      "default": false
+    },
+    "cssIcon": {
+      "type": "bp"
+    },
+    "cssIconSize": {
+      "type": "bp",
+      "default": "0px"
+    },
+    "cssEnablePosition": {
+      "type": "bp",
+      "default": false
+    },
+    "cssShiftX": {
+      "type": "bp",
+      "default": "0px"
+    },
+    "cssShiftY": {
+      "type": "bp",
+      "default": "0px"
+    },
+    "cssPositionType": {
+      "type": "bp",
+      "default": "absolute"
+    },
+    "cssAbsoluteOrigin": {
+      "type": "bp",
+      "default": "TopLeft"
+    },
+    "cssIconZIndex": {
+      "type": "bp",
+      "default": false
+    },
+    "cssEnableImageQuality": false,
+    "cssImageQuality": "85"
+  },
+  "rz_style_transformation": {
+    "cssEnableTransformRotate": {
+      "type": "bp",
+      "default": false
+    },
+    "cssTransformRotate": {
+      "type": "bp",
+      "default": "0deg"
+    },
+    "cssEnableTransformScale": {
+      "type": "bp",
+      "default": false
+    },
+    "cssTransformScale": {
+      "type": "bp",
+      "default": "100%"
+    },
+    "cssEnable3D": {
+      "type": "bp",
+      "default": false
+    },
+    "cssRotateX": {
+      "type": "bp",
+      "default": "0deg"
+    },
+    "cssRotateY": {
+      "type": "bp",
+      "default": "0deg"
+    },
+    "cssRotateZ": {
+      "type": "bp",
+      "default": "0deg"
+    },
+    "cssTranslateX": {
+      "type": "bp",
+      "default": "0px"
+    },
+    "cssTranslateY": {
+      "type": "bp",
+      "default": "0px"
+    },
+    "cssTranslateZ": {
+      "type": "bp",
+      "default": "0px"
+    },
+    "cssPerspective": {
+      "type": "bp",
+      "default": "500px"
+    }
+  },
+  "rz_style_webfont": {
+    "webfontId": "Webfont 1",
+    "eot0": null,
+    "ttf0": null,
+    "woff0": null,
+    "fontWeight0": 400,
+    "fontStyle0": "normal",
+    "eot1": null,
+    "ttf1": null,
+    "woff1": null,
+    "fontWeight1": 400,
+    "fontStyle1": "normal",
+    "eot2": null,
+    "ttf2": null,
+    "woff2": null,
+    "fontWeight2": 400,
+    "fontStyle2": "normal",
+    "eot3": null,
+    "ttf3": null,
+    "woff3": null,
+    "fontWeight3": 400,
+    "fontStyle3": "normal",
+    "eot4": null,
+    "ttf4": null,
+    "woff4": null,
+    "fontWeight4": 400,
+    "fontStyle4": "normal"
+  },
+  "rz_style_custom_css": {
+    "cssEnableCustomCss": {
+      "type": "bp",
+      "default": true
+    },
+    "cssCustomCss": {
+      "type": "bp",
+      "default": ""
+    }
+  },
+  "rz_form_field_button": {
+    "fieldLabel": "Send"
+  },
+  "rz_page_property": {
+    "type": "pageTitle",
+    "headlineHtmlElement": "h2",
+    "headlineCharLimit": 0,
+    "enableHeadlineLink": true,
+    "textCharLimit": 0,
+    "enableTextLink": true,
+    "textLinkLabel": "more",
+    "dateFormat": "%d.%m.%Y",
+    "linkLabel": "more",
+    "imgHeight": "0%",
+    "enableImageQuality": false,
+    "imageQuality": 85,
+    "enableImageLink": false
+  },
+  "rz_style_border_radius": {
+    "cssEnableBorderRadius": {
+      "type": "bp",
+      "default": false
+    },
+    "cssTypeBorderRadius": {
+      "type": "bp",
+      "default": "all"
+    },
+    "cssBorderAllRadius": {
+      "type": "bp",
+      "default": "5px"
+    },
+    "cssBorderTopLeftRadius": {
+      "type": "bp",
+      "default": "5px"
+    },
+    "cssBorderTopRightRadius": {
+      "type": "bp",
+      "default": "5px"
+    },
+    "cssBorderBottomRightRadius": {
+      "type": "bp",
+      "default": "5px"
+    },
+    "cssBorderBottomLeftRadius": {
+      "type": "bp",
+      "default": "5px"
+    }
+  },
+  "rz_style_opacity": {
+    "cssEnableOpacity": {
+      "type": "bp",
+      "default": false
+    },
+    "cssOpacity": {
+      "type": "bp",
+      "default": "100%"
+    }
+  },
+  "rz_style_background_image": {
+    "cssEnableBackgroundImage": {
+      "type": "bp",
+      "default": false
+    },
+    "cssBackgroundImage": {
+      "type": "bp"
+    },
+    "cssBackgroundRepeat": {
+      "type": "bp",
+      "default": "no-repeat"
+    },
+    "cssBackgroundSize": {
+      "type": "bp",
+      "default": "0px"
+    },
+    "cssBackgroundSizeCover": {
+      "type": "bp",
+      "default": false
+    },
+    "cssBackgroundAttachment": {
+      "type": "bp",
+      "default": false
+    },
+    "cssEnableBackgroundPosition": {
+      "type": "bp",
+      "default": "dynamic"
+    },
+    "cssBackgroundPositionX": {
+      "type": "bp",
+      "default": "left"
+    },
+    "cssBackgroundPositionY": {
+      "type": "bp",
+      "default": "top"
+    },
+    "cssBackgroundPositionPixelX": {
+      "type": "bp",
+      "default": "0px"
+    },
+    "cssBackgroundPositionPixelY": {
+      "type": "bp",
+      "default": "0px"
+    },
+    "cssEnableImageQuality": false,
+    "cssImageQuality": "85"
+  },
+  "rz_lightbox": {},
+  "rz_box": {
+    "cssChildWidth": {
+      "type": "bp",
+      "default": "100%"
+    },
+    "delColumn": null,
+    "addColumn": null,
+    "cssHSpace": {
+      "type": "bp",
+      "default": "0px"
+    },
+    "cssVSpace": {
+      "type": "bp",
+      "default": "0px"
+    },
+    "cssVerticalAlign": {
+      "type": "bp",
+      "default": "top"
+    },
+    "cssEnableHorizontalAlign": false,
+    "cssHorizontalAlign": {
+      "type": "bp",
+      "default": "left"
+    }
+  },
+  "rz_iframe": {
+    "iframeSrc": "https://example.com/"
+  },
+  "rz_navigation": {
+    "navStart": null,
+    "enableLevel1": true,
+    "cssLevel1Align": {
+      "type": "bp",
+      "default": "left"
+    },
+    "cssLevel1Distribution": {
+      "type": "bp",
+      "default": "horizontal"
+    },
+    "cssLevel1Space": {
+      "type": "bp",
+      "default": "5px"
+    },
+    "enableLevel2": false,
+    "cssLevel2Align": {
+      "type": "bp",
+      "default": "left"
+    },
+    "cssLevel2Distribution": {
+      "type": "bp",
+      "default": "horizontal"
+    },
+    "cssLevel2Space": {
+      "type": "bp",
+      "default": "5px"
+    },
+    "enableOnlyShowActiveItemsOfLevel2": true,
+    "enableLevel3": false,
+    "cssLevel3Align": {
+      "type": "bp",
+      "default": "left"
+    },
+    "cssLevel3Distribution": {
+      "type": "bp",
+      "default": "horizontal"
+    },
+    "cssLevel3Space": {
+      "type": "bp",
+      "default": "5px"
+    },
+    "enableOnlyShowActiveItemsOfLevel3": true,
+    "enableLevel4": false,
+    "cssLevel4Align": {
+      "type": "bp",
+      "default": "left"
+    },
+    "cssLevel4Distribution": {
+      "type": "bp",
+      "default": "horizontal"
+    },
+    "cssLevel4Space": {
+      "type": "bp",
+      "default": "5px"
+    },
+    "enableOnlyShowActiveItemsOfLevel4": true,
+    "enableLevel5": false,
+    "cssLevel5Align": {
+      "type": "bp",
+      "default": "left"
+    },
+    "cssLevel5Distribution": {
+      "type": "bp",
+      "default": "horizontal"
+    },
+    "cssLevel5Space": {
+      "type": "bp",
+      "default": "5px"
+    },
+    "enableOnlyShowActiveItemsOfLevel5": true
+  },
+  "rz_style_filter": {
+    "cssEnableBlur": {
+      "type": "bp",
+      "default": false
+    },
+    "cssBlur": {
+      "type": "bp",
+      "default": "5px"
+    },
+    "cssEnableBrightness": {
+      "type": "bp",
+      "default": false
+    },
+    "cssBrightness": {
+      "type": "bp",
+      "default": "50%"
+    },
+    "cssEnableContrast": {
+      "type": "bp",
+      "default": false
+    },
+    "cssContrast": {
+      "type": "bp",
+      "default": "50%"
+    },
+    "cssEnableSaturate": {
+      "type": "bp",
+      "default": false
+    },
+    "cssSaturate": {
+      "type": "bp",
+      "default": "50%"
+    },
+    "cssEnableGrayscale": {
+      "type": "bp",
+      "default": false
+    },
+    "cssGrayscale": {
+      "type": "bp",
+      "default": "50%"
+    },
+    "cssEnableSepia": {
+      "type": "bp",
+      "default": false
+    },
+    "cssSepia": {
+      "type": "bp",
+      "default": "50%"
+    },
+    "cssEnableInvert": {
+      "type": "bp",
+      "default": false
+    },
+    "cssInvert": {
+      "type": "bp",
+      "default": "100%"
+    },
+    "cssEnableHueRotate": {
+      "type": "bp",
+      "default": false
+    },
+    "cssHueRotate": {
+      "type": "bp",
+      "default": "180deg"
+    }
+  },
+  "rz_style_position": {
+    "cssEnablePosition": {
+      "type": "bp",
+      "default": false
+    },
+    "cssShiftX": {
+      "type": "bp",
+      "default": "0%"
+    },
+    "cssShiftY": {
+      "type": "bp",
+      "default": "0px"
+    },
+    "cssPositionType": {
+      "type": "bp",
+      "default": "absolute"
+    },
+    "cssAbsoluteOrigin": {
+      "type": "bp",
+      "default": "TopLeft"
+    },
+    "cssFixedOrigin": {
+      "type": "bp",
+      "default": "TopLeft"
+    },
+    "cssZindex": {
+      "type": "bp",
+      "default": 0
+    }
+  },
+  "rz_style_box_shadow": {
+    "cssEnableBoxShadow": {
+      "type": "bp",
+      "default": false
+    },
+    "cssBoxShadowColor": {
+      "type": "bp",
+      "default": null
+    },
+    "cssBoxShadowBlur": {
+      "type": "bp",
+      "default": "5px"
+    },
+    "cssBoxShadowSpread": {
+      "type": "bp",
+      "default": "0px"
+    },
+    "cssBoxShadowOffsetX": {
+      "type": "bp",
+      "default": "0px"
+    },
+    "cssBoxShadowOffsetY": {
+      "type": "bp",
+      "default": "0px"
+    },
+    "cssBoxShadowInset": {
+      "type": "bp",
+      "default": false
+    }
+  },
+  "rz_form_field_text": {
+    "fieldLabel": "Name",
+    "type": "text",
+    "textType": "input",
+    "inputTypeErrorEmail": "Please enter a valid email address.",
+    "inputTypeErrorNumeric": "Please enter only numbers.",
+    "enablePlaceholder": false,
+    "placeholderText": "Placeholder",
+    "enableRequired": false,
+    "requiredErrorMessage": "Please fill out this field.",
+    "cssEnableStyling": {
+      "type": "bp",
+      "default": false
+    },
+    "cssEnableLabelAlign": "left"
+  },
+  "rz_style_background_gradient": {
+    "cssEnableBackgroundGradient": {
+      "type": "bp",
+      "default": false
+    },
+    "cssBackgroundGradientStartColor": {
+      "type": "bp",
+      "default": null
+    },
+    "cssBackgroundGradientEndColor": {
+      "type": "bp",
+      "default": null
+    },
+    "switchColors": null,
+    "cssGradientType": {
+      "type": "bp",
+      "default": "linear"
+    },
+    "cssLinearType": {
+      "type": "bp",
+      "default": "preset"
+    },
+    "cssBackgroundGradientDirection": {
+      "type": "bp",
+      "default": "left"
+    },
+    "cssRotationValue": {
+      "type": "bp",
+      "default": "0deg"
+    },
+    "cssRadialType": {
+      "type": "bp",
+      "default": "ellipse"
+    },
+    "cssColorStops": {
+      "type": "bp",
+      "default": false
+    },
+    "cssCustomColor1On": {
+      "type": "bp",
+      "default": false
+    },
+    "cssCustomColor1Color": {
+      "type": "bp",
+      "default": null
+    },
+    "cssCustomColor1Pos": {
+      "type": "bp",
+      "default": "15%"
+    },
+    "cssCustomColor2On": {
+      "type": "bp",
+      "default": false
+    },
+    "cssCustomColor2Color": {
+      "type": "bp",
+      "default": null
+    },
+    "cssCustomColor2Pos": {
+      "type": "bp",
+      "default": "30%"
+    },
+    "cssCustomColor3On": {
+      "type": "bp",
+      "default": false
+    },
+    "cssCustomColor3Color": {
+      "type": "bp",
+      "default": null
+    },
+    "cssCustomColor3Pos": {
+      "type": "bp",
+      "default": "40%"
+    },
+    "cssCustomColor4On": {
+      "type": "bp",
+      "default": false
+    },
+    "cssCustomColor4Color": {
+      "type": "bp",
+      "default": null
+    },
+    "cssCustomColor4Pos": {
+      "type": "bp",
+      "default": "60%"
+    },
+    "cssBackgroundSizeWidth": {
+      "type": "bp",
+      "default": "100%"
+    },
+    "cssBackgroundSizeHeight": {
+      "type": "bp",
+      "default": "100%"
+    },
+    "cssBackgroundRepeat": {
+      "type": "bp",
+      "default": "no-repeat"
+    },
+    "cssBackgroundAttachment": {
+      "type": "bp",
+      "default": false
+    },
+    "cssEnableBackgroundPosition": {
+      "type": "bp",
+      "default": "dynamic"
+    },
+    "cssBackgroundPositionX": {
+      "type": "bp",
+      "default": "left"
+    },
+    "cssBackgroundPositionY": {
+      "type": "bp",
+      "default": "top"
+    },
+    "cssBackgroundPositionPixelX": {
+      "type": "bp",
+      "default": "0px"
+    },
+    "cssBackgroundPositionPixelY": {
+      "type": "bp",
+      "default": "0px"
+    }
+  },
+  "rz_style_text_shadow": {
+    "cssEnableTextShadow": {
+      "type": "bp",
+      "default": false
+    },
+    "cssTextShadowColor": {
+      "type": "bp",
+      "default": null
+    },
+    "cssTextShadowBlur": {
+      "type": "bp",
+      "default": "5px"
+    },
+    "cssTextShadowOffsetX": {
+      "type": "bp",
+      "default": "0px"
+    },
+    "cssTextShadowOffsetY": {
+      "type": "bp",
+      "default": "0px"
+    }
+  },
+  "rz_grid": {
+    "gridSize": 12,
+    "cssGridDefinition": {
+      "type": "bp",
+      "default": 12
+    },
+    "cssHSpace": {
+      "type": "bp",
+      "default": "1%"
+    },
+    "cssVSpace": {
+      "type": "bp",
+      "default": "1%"
+    },
+    "cssMinHeight": {
+      "type": "bp",
+      "default": "0%"
+    },
+    "cssVerticalAlign": {
+      "type": "bp",
+      "default": "top"
+    },
+    "cssEnableHorizontalAlign": false,
+    "cssHorizontalAlign": {
+      "type": "bp",
+      "default": "left"
+    }
+  },
+  "rz_container": {
+    "cssVSpace": {
+      "type": "bp",
+      "default": "1%"
+    },
+    "cssMinHeight": {
+      "type": "bp",
+      "default": "2%"
+    },
+    "cssVerticalAlign": {
+      "type": "bp",
+      "default": "top"
+    },
+    "cssEnableHorizontalAlign": false,
+    "cssHorizontalAlign": {
+      "type": "bp",
+      "default": "left"
+    }
+  },
+  "rz_form": {
+    "recipientMail": "",
+    "senderMail": "",
+    "mailSubject": "",
+    "confirmationText": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\nUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "cssEnableLabelAlign": "left"
+  },
+  "rz_style_animation_scroll": {
+    "cssEnableAnimation": {
+      "type": "bp",
+      "default": "enabled"
+    },
+    "cssAnimationIn": {
+      "type": "bp",
+      "default": "fadeInLeft"
+    },
+    "cssDuration": {
+      "type": "bp",
+      "default": "1000ms"
+    },
+    "cssDelay": {
+      "type": "bp",
+      "default": "0ms"
+    },
+    "cssIteration": {
+      "type": "bp",
+      "default": "1ms"
+    },
+    "cssTrigger": {
+      "type": "bp",
+      "default": "visiblePart50"
+    },
+    "cssOnlyOnce": {
+      "type": "bp",
+      "default": false
+    },
+    "cssVisibilityHidden": {
+      "type": "bp",
+      "default": true
+    },
+    "previewAnimations": null
+  },
+  "rz_slider": {
+    "enableDirectionNav": true,
+    "enableControlNav": true,
+    "enableInfiniteLoop": false,
+    "enableKeyboard": false,
+    "startSlide": 1,
+    "sliderMode": "horizontal",
+    "sliderSpeed": "500ms",
+    "enableSmoothHeight": false,
+    "enableSlideshow": false,
+    "slideshowSpeed": "5s",
+    "enableAutoStopOnHover": true
+  },
+  "rz_container_collapsible": {
+    "cssEnableContainer": {
+      "type": "bp",
+      "default": true
+    },
+    "initialState": "expanded",
+    "handlePosition": "top",
+    "cssHorizontalHandlePosition": "left",
+    "animationDuration": "500ms",
+    "enableCloseOnLinkClick": false,
+    "handleTextExpand": "open >>",
+    "handleTextCollapse": ""
+  },
+  "rz_style_padding_margin": {
+    "cssEnablePadding": {
+      "type": "bp",
+      "default": false
+    },
+    "cssPaddingLeft": {
+      "type": "bp",
+      "default": "0px"
+    },
+    "cssPaddingRight": {
+      "type": "bp",
+      "default": "0px"
+    },
+    "cssPaddingTop": {
+      "type": "bp",
+      "default": "0px"
+    },
+    "cssPaddingBottom": {
+      "type": "bp",
+      "default": "0px"
+    },
+    "cssEnableMargin": {
+      "type": "bp",
+      "default": false
+    },
+    "cssMarginLeft": {
+      "type": "bp",
+      "default": "0px"
+    },
+    "cssMarginRight": {
+      "type": "bp",
+      "default": "0px"
+    },
+    "cssMarginTop": {
+      "type": "bp",
+      "default": "0px"
+    },
+    "cssMarginBottom": {
+      "type": "bp",
+      "default": "0px"
+    }
+  },
+  "rz_style_width_height": {
+    "cssEnableWidth": {
+      "type": "bp",
+      "default": false
+    },
+    "cssWidthType": {
+      "type": "bp",
+      "default": "fix"
+    },
+    "cssWidth": {
+      "type": "bp",
+      "default": "100%"
+    },
+    "cssEnableMinWidth": {
+      "type": "bp",
+      "default": false
+    },
+    "cssMinWidth": {
+      "type": "bp",
+      "default": "340px"
+    },
+    "cssEnableMaxWidth": {
+      "type": "bp",
+      "default": false
+    },
+    "cssMaxWidth": {
+      "type": "bp",
+      "default": "940px"
+    },
+    "cssEnableHeight": {
+      "type": "bp",
+      "default": false
+    },
+    "cssHeightType": {
+      "type": "bp",
+      "default": "fix"
+    },
+    "cssHeight": {
+      "type": "bp",
+      "default": "50px"
+    },
+    "cssOverflowY": {
+      "type": "bp",
+      "default": "hidden"
+    },
+    "cssMinHeight": {
+      "type": "bp",
+      "default": "50px"
+    }
+  },
+  "rz_selector_elements": {
+    "module": 0,
+    "selectorChooser": "",
+    "nthChildEnable": false,
+    "type": "preset",
+    "presets": "first-of-type",
+    "customPseudoClass": "nth-of-type",
+    "customType": "single",
+    "singleStartIndex": "1",
+    "multipleCount": "1",
+    "allStartIndex": "1",
+    "multipleOffsetStartIndex": "1",
+    "multipleOffsetNth": "1",
+    "additionalSelector": ""
+  },
+  "rz_link": {
+    "enableLinkText": true,
+    "linkText": "Lorem ipsum",
+    "linkType": "page",
+    "pageId": null,
+    "pageAnchor": "",
+    "externalUrl": "",
+    "downloadId": null,
+    "downloadSaveDialog": false,
+    "mailtoEmail": "",
+    "openNewWindow": false,
+    "linkTitle": "",
+    "linkTextPosition": "top"
+  },
+  "rz_headline": {
+    "text": "Lorem ipsum dolor",
+    "htmlElement": "h1"
+  },
+  "rz_ghost_container": {
+    "cssColumnCount": {
+      "type": "bp",
+      "default": 1
+    },
+    "cssHSpace": {
+      "type": "bp",
+      "default": "1%"
+    },
+    "cssVSpace": {
+      "type": "bp",
+      "default": "1%"
+    }
+  },
+  "rz_style_border": {
+    "cssEnableBorder": {
+      "type": "bp",
+      "default": false
+    },
+    "cssBorderColor": {
+      "type": "bp",
+      "default": null
+    },
+    "cssBorderStyle": {
+      "type": "bp",
+      "default": "solid"
+    },
+    "cssBorderWidth": {
+      "type": "bp",
+      "default": "1px"
+    },
+    "cssEnableBorderTop": {
+      "type": "bp",
+      "default": false
+    },
+    "cssBorderTopColor": {
+      "type": "bp",
+      "default": null
+    },
+    "cssBorderTopStyle": {
+      "type": "bp",
+      "default": "solid"
+    },
+    "cssBorderTopWidth": {
+      "type": "bp",
+      "default": "1px"
+    },
+    "cssEnableBorderRight": {
+      "type": "bp",
+      "default": false
+    },
+    "cssBorderRightColor": {
+      "type": "bp",
+      "default": null
+    },
+    "cssBorderRightStyle": {
+      "type": "bp",
+      "default": "solid"
+    },
+    "cssBorderRightWidth": {
+      "type": "bp",
+      "default": "1px"
+    },
+    "cssEnableBorderBottom": {
+      "type": "bp",
+      "default": false
+    },
+    "cssBorderBottomColor": {
+      "type": "bp",
+      "default": null
+    },
+    "cssBorderBottomStyle": {
+      "type": "bp",
+      "default": "solid"
+    },
+    "cssBorderBottomWidth": {
+      "type": "bp",
+      "default": "1px"
+    },
+    "cssEnableBorderLeft": {
+      "type": "bp",
+      "default": false
+    },
+    "cssBorderLeftColor": {
+      "type": "bp",
+      "default": null
+    },
+    "cssBorderLeftStyle": {
+      "type": "bp",
+      "default": "solid"
+    },
+    "cssBorderLeftWidth": {
+      "type": "bp",
+      "default": "1px"
+    }
+  },
+  "rz_style_transition": {
+    "cssEnableAnimation": false,
+    "cssEasing": {
+      "type": "bp",
+      "default": "ease"
+    },
+    "cssDuration": {
+      "type": "bp",
+      "default": "1000ms"
+    },
+    "cssDelay": {
+      "type": "bp",
+      "default": "0ms"
+    }
+  },
+  "rz_page_list": {
+    "teaserStartPage": null,
+    "enableRecursive": false,
+    "enableSort": false,
+    "sortBy": "field",
+    "sortByField": "pageDate",
+    "sortByFieldDirection": "desc",
+    "enableLimit": false,
+    "limit": "10",
+    "limitStart": "1",
+    "cssColumnCount": {
+      "type": "bp",
+      "default": 1
+    },
+    "cssHSpace": {
+      "type": "bp",
+      "default": "0px"
+    },
+    "cssVSpace": {
+      "type": "bp",
+      "default": "0px"
+    }
+  },
+  "rz_thumbnail_gallery": {
+    "galleryImageIds": [],
+    "cssColumnCount": {
+      "type": "bp",
+      "default": 3
+    },
+    "cssHSpace": {
+      "type": "bp",
+      "default": "0px"
+    },
+    "cssVSpace": {
+      "type": "bp",
+      "default": "0px"
+    },
+    "imgHeight": "100%",
+    "enableImageQuality": false,
+    "imageQuality": "85"
+  },
+  "rz_image": {
+    "imgsrc": null,
+    "imageAlt": "",
+    "imageTitle": "",
+    "cropData": "",
+    "imgHeight": "0%",
+    "enableImageQuality": false,
+    "imageQuality": "85"
+  },
+  "rz_style_list": {
+    "cssEnableList": {
+      "type": "bp",
+      "default": false
+    },
+    "cssListStyleType": {
+      "type": "bp",
+      "default": "disc"
+    }
+  },
+  "rz_date": {
+    "date": 1338501600,
+    "dateFormat": "%m/%d/%Y"
+  },
+  "rz_svg": {
+    "svg": null,
+    "svgAlt": "",
+    "svgTitle": ""
+  },
+  "rz_breadcrumb": {
+    "navStart": null,
+    "spacer": " > "
+  },
+  "rz_anchor_navigation": {
+    "cssAlign": {
+      "type": "bp",
+      "default": "left"
+    },
+    "cssDistribution": {
+      "type": "bp",
+      "default": "horizontal"
+    },
+    "cssSpace": {
+      "type": "bp",
+      "default": "5px"
+    },
+    "scrollSpeed": "800ms",
+    "scrollEasing": "swing"
+  },
+  "rz_shop_cart": {
+    "showCartText": "Show Cart"
+  },
+  "rz_shop_product_property": {
+    "type": "pageTitle",
+    "headlineHtmlElement": "h2",
+    "headlineCharLimit": 0,
+    "enableHeadlineLink": false,
+    "textCharLimit": 0,
+    "enableTextLink": false,
+    "textLinkLabel": "more",
+    "dateFormat": "%d.%m.%Y",
+    "linkLabel": "more",
+    "imgHeight": "0%",
+    "enableImageQuality": false,
+    "imageQuality": 85,
+    "enableImageLink": false,
+    "cartText": "Add to Cart"
+  },
+  "rz_shop_product_list": {
+    "teaserStartPage": null,
+    "enableRecursive": false,
+    "enableSort": false,
+    "sortBy": "field",
+    "sortByField": "pageDate",
+    "sortByFieldDirection": "desc",
+    "enableLimit": false,
+    "limit": "10",
+    "limitStart": "1",
+    "cssColumnCount": {
+      "type": "bp",
+      "default": 1
+    },
+    "cssHSpace": {
+      "type": "bp",
+      "default": "0px"
+    },
+    "cssVSpace": {
+      "type": "bp",
+      "default": "0px"
+    }
+  },
+  "rz_container_flow": {
+    "cssTextAlign": {
+      "type": "bp",
+      "default": "left"
+    }
+  },
+  "rz_opengraph": {
+    "ogTitle": "",
+    "ogType": "article",
+    "ogUrl": "",
+    "ogDesc": "",
+    "ogImage": null
+  }
+}

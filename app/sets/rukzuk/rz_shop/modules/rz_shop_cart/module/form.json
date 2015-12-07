@@ -1,0 +1,63 @@
+{
+    "form": [
+        {
+            "id": "0717b4df-bc41-4d84-a13a-e6eb2056367c",
+            "name": "{\"de\": \"Warenkorb\", \"en\": \"Shopping Cart\"}",
+            "icon": "",
+            "formGroupData": [
+                {
+                    "params": [
+                        {
+                            "name": "xtype",
+                            "value": "CMSopenwebsitesettings",
+                            "xtype": null
+                        },
+                        {
+                            "name": "fieldLabel",
+                            "xtype": null,
+                            "value": "&#160;"
+                        },
+                        {
+                            "name": "labelSeparator",
+                            "xtype": null,
+                            "value": ""
+                        },
+                        {
+                            "name": "labelAlign",
+                            "value": "hide",
+                            "xtype": null
+                        },
+                        {
+                            "name": "text",
+                            "value": "{\"de\": \"Shop-Einstellungen\", \"en\": \"Shop Settings\"}",
+                            "xtype": "textfield",
+                            "allowBlank": false,
+                            "emptyText": "__i18n_formElements.websiteSettingsButtonTextEmpty",
+                            "fieldLabel": "__i18n_formElements.websiteSettingsButtonTextFieldLabel"
+                        },
+                        {
+                            "name": "settingsId",
+                            "value": "rz_shop",
+                            "xtype": "textfield",
+                            "allowBlank": true,
+                            "emptyText": "__i18n_formElements.websiteSettingsIdEmpty",
+                            "fieldLabel": "__i18n_formElements.websiteSettingsIdLabel"
+                        },
+                        {
+                            "name": "value",
+                            "xtype": null
+                        }
+                    ],
+                    "descr": {
+                        "text": "__i18n_formElements.elementWebsiteSettings",
+                        "iconCls": "button",
+                        "hasValue": false
+                    }
+                }
+            ]
+        }
+    ],
+    "formValues": {
+        "showCartText": "Show Cart"
+    }
+}

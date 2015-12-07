@@ -1,0 +1,12 @@
+{
+    "name": "{\"de\":\"Navigation\",\"en\":\"Navigation\"}",
+    "description": "{\"de\":\"Für klassische Seitennavigationen, Navigationsbäume und Sitemaps.\",\"en\":\"For regular page navigation, navigation trees and sitemaps.\"}",
+    "version": "dev",
+    "icon": "sitemap_color.png",
+    "category": "{\"de\":\"Navigation\",\"en\":\"Navigation\"}",
+    "moduleType": "default",
+    "allowedChildModuleType": "extension",
+    "ghostContainerMode": "force_off",
+    "reRenderRequired": false,
+    "apiType": "APIv1"
+}

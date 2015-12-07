@@ -1,0 +1,34 @@
+{
+    "user": [
+        {
+            "id": "USER-90e78e69-3655-475c-bec8-02258e70ca0f-USER",
+            "lastname": "user 1",
+            "firstname": "without group",
+            "password": "a088be071f1d753930c671aee77fbdb6",
+            "gender": "m",
+            "email": "access_rights_1@sbcms.de",
+            "issuperuser": 0,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-29bfcef1-4703-4cdf-bb27-e52e67e461f3-USER",
+            "lastname": "user 2",
+            "firstname": "with group",
+            "password": "a088be071f1d753930c671aee77fbdb6",
+            "gender": "m",
+            "email": "access_rights_2@sbcms.de",
+            "issuperuser": 0,
+            "isdeletable": 0
+        },
+        {
+            "id": "USER-access00-test-0000-0000-000000000003-USER",
+            "lastname": "user 3",
+            "firstname": "with group no template rights",
+            "password": "a088be071f1d753930c671aee77fbdb6",
+            "gender": "m",
+            "email": "access_rights_3@sbcms.de",
+            "issuperuser": 0,
+            "isdeletable": 0
+        }
+    ]
+}

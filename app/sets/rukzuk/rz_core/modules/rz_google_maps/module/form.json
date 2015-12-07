@@ -1,0 +1,468 @@
+{
+    "form": [
+        {
+            "id": "9b68effe-95e3-4c14-9582-82b370ee7f74",
+            "name": "{\"de\":\"Eigenschaften\",\"en\":\"Properties\"}",
+            "icon": "",
+            "formGroupData": [
+                {
+                    "params": [
+                        {
+                            "name": "CMSvar",
+                            "value": "address",
+                            "allowBlank": false,
+                            "minLength": 3,
+                            "maskRe": {},
+                            "stripCharsRe": {},
+                            "xtype": "textfield",
+                            "emptyText": "__i18n_generatedFormPanel.varNameEmptyText",
+                            "fieldLabel": "__i18n_generatedFormPanel.varNameLabel"
+                        },
+                        {
+                            "name": "xtype",
+                            "value": "textarea",
+                            "xtype": null
+                        },
+                        {
+                            "name": "isMeta",
+                            "value": false,
+                            "fieldLabel": "__i18n_formElements.isGlobal",
+                            "xtype": "checkbox"
+                        },
+                        {
+                            "name": "isResponsive",
+                            "value": false,
+                            "fieldLabel": "__i18n_formElements.isResponsive",
+                            "xtype": "checkbox"
+                        },
+                        {
+                            "name": "fieldLabel",
+                            "value": "{\"de\":\"Adresse\", \"en\":\"Address\"}",
+                            "xtype": "textfield",
+                            "allowBlank": true,
+                            "emptyText": "__i18n_formElements.fieldLabelOptionalEmptyText",
+                            "fieldLabel": "__i18n_formElements.fieldLabel"
+                        },
+                        {
+                            "name": "height",
+                            "value": 100,
+                            "xtype": "numberfield",
+                            "allowBlank": false,
+                            "fieldLabel": "__i18n_formElements.heightLabel"
+                        },
+                        {
+                            "name": "value",
+                            "value": "Bahnhofstrasse 1\n78462 Konstanz",
+                            "xtype": null
+                        }
+                    ],
+                    "descr": {
+                        "text": "__i18n_formElements.elementTextArea",
+                        "iconCls": "textarea",
+                        "hasValue": true
+                    }
+                },
+                {
+                    "params": [
+                        {
+                            "name": "CMSvar",
+                            "value": "zoom",
+                            "allowBlank": false,
+                            "minLength": 3,
+                            "maskRe": {},
+                            "stripCharsRe": {},
+                            "xtype": "textfield",
+                            "emptyText": "__i18n_generatedFormPanel.varNameEmptyText",
+                            "fieldLabel": "__i18n_generatedFormPanel.varNameLabel"
+                        },
+                        {
+                            "name": "xtype",
+                            "value": "CMSnumberfieldunit",
+                            "xtype": null
+                        },
+                        {
+                            "name": "isMeta",
+                            "value": false,
+                            "fieldLabel": "__i18n_formElements.isGlobal",
+                            "xtype": "checkbox"
+                        },
+                        {
+                            "name": "isResponsive",
+                            "value": false,
+                            "fieldLabel": "__i18n_formElements.isResponsive",
+                            "xtype": "checkbox"
+                        },
+                        {
+                            "name": "fieldLabel",
+                            "value": "{\"de\":\"Zoom Level\",\"en\":\"Zoom level\"}",
+                            "xtype": "textfield",
+                            "allowBlank": false,
+                            "emptyText": "__i18n_formElements.fieldLabelEmptyText",
+                            "fieldLabel": "__i18n_formElements.fieldLabel"
+                        },
+                        {
+                            "name": "minValue",
+                            "value": 1,
+                            "xtype": "numberfield",
+                            "allowBlank": true,
+                            "allowDecimals": false,
+                            "emptyText": "__i18n_formElements.minValueEmptyText",
+                            "fieldLabel": "__i18n_formElements.minValueLabel"
+                        },
+                        {
+                            "name": "maxValue",
+                            "value": 21,
+                            "xtype": "numberfield",
+                            "allowBlank": true,
+                            "allowDecimals": false,
+                            "emptyText": "__i18n_formElements.maxValueEmptyText",
+                            "fieldLabel": "__i18n_formElements.maxValueLabel"
+                        },
+                        {
+                            "name": "increment",
+                            "value": 1,
+                            "xtype": "numberfield",
+                            "allowBlank": false,
+                            "allowDecimals": true,
+                            "emptyText": "__i18n_formElements.incrementEmptyText",
+                            "fieldLabel": "__i18n_formElements.incrementLabel"
+                        },
+                        {
+                            "name": "unitList",
+                            "value": [],
+                            "xtype": "CMSkeyvaluetextareaconfigurable",
+                            "allowBlank": true,
+                            "numOfValues": 2,
+                            "array": true,
+                            "emptyText": "__i18n_formElements.sizeUnitsEmptyText",
+                            "fieldLabel": "__i18n_formElements.sizeUnitsLabel"
+                        },
+                        {
+                            "name": "value",
+                            "value": "15",
+                            "xtype": null
+                        }
+                    ],
+                    "descr": {
+                        "text": "__i18n_formElements.elementSliderUnit",
+                        "iconCls": "slider",
+                        "hasValue": true
+                    }
+                },
+                {
+                    "params": [
+                        {
+                            "name": "CMSvar",
+                            "value": "maptype",
+                            "allowBlank": false,
+                            "minLength": 3,
+                            "maskRe": {},
+                            "stripCharsRe": {},
+                            "xtype": "textfield",
+                            "emptyText": "__i18n_generatedFormPanel.varNameEmptyText",
+                            "fieldLabel": "__i18n_generatedFormPanel.varNameLabel"
+                        },
+                        {
+                            "name": "xtype",
+                            "value": "ux-comboselect",
+                            "xtype": null
+                        },
+                        {
+                            "name": "isMeta",
+                            "value": false,
+                            "fieldLabel": "__i18n_formElements.isGlobal",
+                            "xtype": "checkbox"
+                        },
+                        {
+                            "name": "fieldLabel",
+                            "value": "{\"de\":\"Kartentyp\",\"en\":\"Map type\"}",
+                            "xtype": "textfield",
+                            "allowBlank": true,
+                            "emptyText": "__i18n_formElements.fieldLabelOptionalEmptyText",
+                            "fieldLabel": "__i18n_formElements.fieldLabel"
+                        },
+                        {
+                            "name": "isResponsive",
+                            "value": false,
+                            "fieldLabel": "__i18n_formElements.isResponsive",
+                            "xtype": "checkbox"
+                        },
+                        {
+                            "name": "emptyText",
+                            "value": "",
+                            "xtype": "textfield",
+                            "allowBlank": true,
+                            "emptyText": "__i18n_formElements.emptyTextEmptyText",
+                            "fieldLabel": "__i18n_formElements.emptyTextLabel"
+                        },
+                        {
+                            "name": "options",
+                            "value": [
+                                [
+                                    "roadmap",
+                                    "{\"de\":\"Straßenkarte\",\"en\":\"roadmap\"}",
+                                    0
+                                ],
+                                [
+                                    "satellite",
+                                    "{\"de\":\"Satellit\",\"en\":\"satellite\"}",
+                                    0
+                                ]
+                            ],
+                            "xtype": "CMSkeyvaluetextarea",
+                            "allowBlank": false,
+                            "array": true,
+                            "emptyText": "__i18n_formElements.listValuesEmptyText",
+                            "fieldLabel": "__i18n_formElements.listValuesLabel"
+                        },
+                        {
+                            "name": "forceSelection",
+                            "value": true,
+                            "xtype": "checkbox",
+                            "fieldLabel": "__i18n_formElements.comboSelectForceSelection"
+                        },
+                        {
+                            "name": "value",
+                            "value": "roadmap",
+                            "xtype": null
+                        }
+                    ],
+                    "descr": {
+                        "text": "__i18n_formElements.elementComboSelect",
+                        "iconCls": "combo",
+                        "hasValue": true
+                    }
+                },
+                {
+                    "params": [
+                        {
+                            "name": "CMSvar",
+                            "value": "cssHeight",
+                            "allowBlank": false,
+                            "minLength": 3,
+                            "maskRe": {},
+                            "stripCharsRe": {},
+                            "xtype": "textfield",
+                            "emptyText": "__i18n_generatedFormPanel.varNameEmptyText",
+                            "fieldLabel": "__i18n_generatedFormPanel.varNameLabel"
+                        },
+                        {
+                            "name": "xtype",
+                            "value": "CMSnumberfieldunit",
+                            "xtype": null
+                        },
+                        {
+                            "name": "isMeta",
+                            "value": false,
+                            "fieldLabel": "__i18n_formElements.isGlobal",
+                            "xtype": "checkbox"
+                        },
+                        {
+                            "name": "isResponsive",
+                            "value": true,
+                            "fieldLabel": "__i18n_formElements.isResponsive",
+                            "xtype": "checkbox"
+                        },
+                        {
+                            "name": "fieldLabel",
+                            "value": "{\"de\":\"Höhe in Prozent der Breite\",\"en\":\"Height in percent of width\"}",
+                            "xtype": "textfield",
+                            "allowBlank": false,
+                            "emptyText": "__i18n_formElements.fieldLabelEmptyText",
+                            "fieldLabel": "__i18n_formElements.fieldLabel"
+                        },
+                        {
+                            "name": "minValue",
+                            "value": 0,
+                            "xtype": "numberfield",
+                            "allowBlank": true,
+                            "allowDecimals": false,
+                            "emptyText": "__i18n_formElements.minValueEmptyText",
+                            "fieldLabel": "__i18n_formElements.minValueLabel"
+                        },
+                        {
+                            "name": "maxValue",
+                            "value": 100,
+                            "xtype": "numberfield",
+                            "allowBlank": true,
+                            "allowDecimals": false,
+                            "emptyText": "__i18n_formElements.maxValueEmptyText",
+                            "fieldLabel": "__i18n_formElements.maxValueLabel"
+                        },
+                        {
+                            "name": "increment",
+                            "value": 1,
+                            "xtype": "numberfield",
+                            "allowBlank": false,
+                            "allowDecimals": true,
+                            "emptyText": "__i18n_formElements.incrementEmptyText",
+                            "fieldLabel": "__i18n_formElements.incrementLabel"
+                        },
+                        {
+                            "name": "unitList",
+                            "value": [
+                                [
+                                    "%",
+                                    "%"
+                                ]
+                            ],
+                            "xtype": "CMSkeyvaluetextareaconfigurable",
+                            "allowBlank": true,
+                            "numOfValues": 2,
+                            "array": true,
+                            "emptyText": "__i18n_formElements.sizeUnitsEmptyText",
+                            "fieldLabel": "__i18n_formElements.sizeUnitsLabel"
+                        },
+                        {
+                            "name": "value",
+                            "value": {
+                                "type": "bp",
+                                "default": "60%"
+                            },
+                            "xtype": null
+                        }
+                    ],
+                    "descr": {
+                        "text": "__i18n_formElements.elementSliderUnit",
+                        "iconCls": "slider",
+                        "hasValue": true
+                    }
+                }
+            ]
+        },
+        {
+            "id": "c064250f-15ef-4064-bb0c-937c1f1d6e3f",
+            "name": "{\"de\":\"Google API Key\",\"en\":\"Google API key\"}",
+            "icon": "",
+            "formGroupData": [
+                {
+                    "params": [
+                        {
+                            "name": "CMSvar",
+                            "value": "googleMapsApiKey",
+                            "allowBlank": false,
+                            "minLength": 3,
+                            "maskRe": {},
+                            "stripCharsRe": {},
+                            "xtype": "textfield",
+                            "emptyText": "__i18n_generatedFormPanel.varNameEmptyText",
+                            "fieldLabel": "__i18n_generatedFormPanel.varNameLabel"
+                        },
+                        {
+                            "name": "xtype",
+                            "value": "textfield",
+                            "xtype": null
+                        },
+                        {
+                            "name": "isMeta",
+                            "value": false,
+                            "fieldLabel": "__i18n_formElements.isGlobal",
+                            "xtype": "checkbox"
+                        },
+                        {
+                            "name": "isResponsive",
+                            "value": false,
+                            "fieldLabel": "__i18n_formElements.isResponsive",
+                            "xtype": "checkbox"
+                        },
+                        {
+                            "name": "fieldLabel",
+                            "value": "{\"de\":\"Google API Key\",\"en\":\"Google API key\"}",
+                            "xtype": "textfield",
+                            "allowBlank": false,
+                            "emptyText": "__i18n_formElements.fieldLabelEmptyText",
+                            "fieldLabel": "__i18n_formElements.fieldLabel"
+                        },
+                        {
+                            "name": "emptyText",
+                            "value": "{\"de\":\"z.B. AIzaSyCwI3k7JC29_KzlX1S_bC8fARpocLX5bRY\", \"en\":\"f.e. AIzaSyCwI3k7JC29_KzlX1S_bC8fARpocLX5bRY\"}",
+                            "xtype": "textfield",
+                            "allowBlank": true,
+                            "emptyText": "__i18n_formElements.emptyTextEmptyText",
+                            "fieldLabel": "__i18n_formElements.emptyTextLabel"
+                        },
+                        {
+                            "name": "minLength",
+                            "value": 0,
+                            "xtype": "numberfield",
+                            "allowBlank": false,
+                            "allowDecimals": false,
+                            "emptyText": "__i18n_formElements.minLengthEmptyText",
+                            "fieldLabel": "__i18n_formElements.minLengthLabel"
+                        },
+                        {
+                            "name": "maxLength",
+                            "value": 255,
+                            "xtype": "numberfield",
+                            "allowBlank": false,
+                            "allowDecimals": false,
+                            "emptyText": "__i18n_formElements.maxLengthEmptyText",
+                            "fieldLabel": "__i18n_formElements.maxLengthLabel"
+                        },
+                        {
+                            "name": "allowBlank",
+                            "value": true,
+                            "xtype": "checkbox",
+                            "fieldLabel": "__i18n_formElements.allowBlankLabel"
+                        },
+                        {
+                            "name": "value",
+                            "value": "",
+                            "xtype": null
+                        }
+                    ],
+                    "descr": {
+                        "text": "__i18n_formElements.elementTextField",
+                        "iconCls": "textfield",
+                        "hasValue": true
+                    }
+                },
+                {
+                    "params": [
+                        {
+                            "name": "xtype",
+                            "value": "ux-multilinelabel",
+                            "xtype": null
+                        },
+                        {
+                            "name": "hideLabel",
+                            "value": true,
+                            "xtype": null
+                        },
+                        {
+                            "name": "text",
+                            "xtype": "textarea",
+                            "height": 200,
+                            "value": "{\"de\":\"Bitte gib hier deinen Google API Key ein. Falls du keinen eigenen API Key verwendest, kann es möglich sein, dass deine Karte nicht angezeigt wird. Weitere Informationen: https://developers.google.com/maps/documentation/embed/guide#api_key\", \"en\":\"Please enter your Google API key here. Otherwise it can happen that your map will not be shown. Further information: https://developers.google.com/maps/documentation/embed/guide#api_key\"}",
+                            "fieldLabel": "__i18n_formElements.commentLabel"
+                        },
+                        {
+                            "name": "autoLink",
+                            "value": true,
+                            "xtype": null
+                        },
+                        {
+                            "name": "cls",
+                            "value": "modulecomment",
+                            "xtype": null
+                        }
+                    ],
+                    "descr": {
+                        "text": "__i18n_formElements.elementComment",
+                        "iconCls": "plaintext"
+                    }
+                }
+            ]
+        }
+    ],
+    "formValues": {
+        "address": "Bahnhofstrasse 1\n78462 Konstanz",
+        "zoom": "15",
+        "maptype": "roadmap",
+        "cssHeight": {
+            "type": "bp",
+            "default": "60%"
+        },
+        "googleMapsApiKey": ""
+    }
+}

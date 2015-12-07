@@ -1,0 +1,20 @@
+{
+    "basePath":"/cms/service",
+    "swaggerVersion":"2.0",
+    "apiVersion":"0.1",
+    "resourcePath":"/website",
+    "apis":[
+        {
+            "path":"/website/getall",
+            "operations":[
+                {
+                    "method":"GET, POST",
+                    "summary":"Returns all websites",
+                    "nickname":"getAll",
+                    "type":"WebsiteGetAll",
+                    "notes":"Returns all websites of the instance."
+                }
+            ]
+        }
+    ]
+}

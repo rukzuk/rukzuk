@@ -1,0 +1,418 @@
+@import "colors";
+@import "mixins";
+
+/* scrollbar in Chrome */
+/*
+::-webkit-scrollbar-thumb {
+    border: 5px solid transparent;
+    background-color: $black-top;
+    background-clip: content-box;
+}
+
+::-webkit-scrollbar {
+    width: 16px;
+    height: 16px;
+}
+
+::-webkit-scrollbar-button {
+    background-color: transparent;
+    width: 0;
+    height: 0;
+}
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
+*/
+
+/* IE */
+textarea {
+    overflow: auto;
+}
+
+table, tbody, tr, td {
+    vertical-align: middle;
+}
+
+input, textarea {
+    -moz-box-sizing: border-box;
+}
+
+/* fix problems with actioncolumns */
+.ext-ie .x-grid3-cell-inner {
+    text-overflow: clip;
+}
+
+/* prevent superfluous scrollbars in FF */
+.ext-gecko .x-window-body .x-form-item {
+    overflow: hidden;
+}
+
+/* avoid jumping form elements */
+.x-form-radio-group:not(.x-form-invalid) {
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent;
+}
+
+.x-grid-empty,
+.x-treepanel-empty {
+    display: block;
+    text-align: center;
+    margin-top: 30%;
+    padding: 10px;
+}
+
+.x-grid-empty {
+    margin-top: 20%;
+    padding-left: 30px;
+}
+
+/* make bottom toolbar and other stuff unselectable (otherwise it lights up in Safari when double-clicked inside a window) */
+body {
+    -moz-user-select: -moz-none;
+    -webkit-user-select: none;
+}
+
+code {
+    -moz-user-select: text;
+    -webkit-user-select: text;
+}
+
+.x-grid3-focus {
+    display: none;
+}
+
+.x-panel-header-text-collapsed {
+    color: #15428B;
+    font-size: 11px;
+    padding: 3px;
+    line-height: 20px;
+}
+
+/* general layout */
+.CMSpreviewarea {
+    z-index: 1;
+}
+
+.CMSiframe {
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+}
+
+.CMSiframe.invisibleEmptySrc[src="about:blank"], .CMSiframe.invisibleEmptySrc:not([src]){
+  background: $bg-system-body;
+  opacity: 1;
+}
+
+.CMSmodulemetaeditor .CMSmodulegrid {
+    background: $bg-dark;
+    padding-top: 0;
+    margin-top: 10px;
+}
+
+.CMSmodulemetaeditor .CMSmodulegrid .x-panel-body {
+    padding-top: 0;
+}
+
+.CMSmodulemetaeditor .CMSallcheckcontainer {
+    background: transparent;
+}
+
+.CMSmodulemetaeditor .x-panel-body .x-panel-body {
+    background: transparent;
+    filter: none;
+}
+
+.CMSmodulemetaeditor .x-checkbox {
+    margin-top: 0;
+}
+
+.CMSmoduleid {
+    margin-top: 10px;
+}
+
+.CMSoverwritemoduletext {
+    background-color: opacify($bg-error, 0.33);
+    color: $text-color;
+    padding: 2px 3px;
+    margin-left: 10px;
+    border-radius: 1px;
+    display: inline-block;
+    font-size: 12px;
+    font-family: UbuntuCondensed;
+    text-transform: uppercase;
+}
+
+.CMSmoduleoverwritten > table {
+    background-color: transparentize($bg-error, 0.1);
+}
+
+.CMSmoduledeveloperinfomngpanel {
+    padding: 70px 70px 10px 70px;
+
+    &:before {
+        content: '';
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        margin-top: -50px;
+        left: calc(50% - 35px);
+        background: transparent url('../images/warnings-sprite.png') no-repeat 0 0;
+    }
+
+    label, legend {
+        font-weight: normal;
+        line-height: 145%;
+    }
+
+    .commentWebdav {
+        margin-bottom: 20px;
+        display: block;
+    }
+}
+
+.CMSmoduledeveloperinfo {
+    margin-left: 100px;
+    padding-left: 50px;
+
+    &:before {
+        content: '';
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        margin-left: -50px;
+        background: transparent url('../images/warnings-sprite.png') no-repeat 0 0;
+    }
+
+    .commentWebdav {
+        margin-bottom: 20px;
+        display: block;
+    }
+}
+
+/* BorderLayout resizer */
+.x-splitbar-v {
+    background: url("../images/gray/sizer/s-handle.gif") repeat-x scroll center top;
+}
+
+.x-splitbar-h {
+    background: url("../images/gray/sizer/e-handle.gif") repeat-y scroll left center;
+}
+
+.CMSpreviewarea .x-splitbar-v {
+    background-image: url("../images/gray/sizer/s-handle-simple.gif");
+}
+
+/* borderlayout east panel minimize button */
+.x-tool-collapse-east {
+    float: left;
+    margin-right: 5px;
+}
+
+/* border panel title*/
+.x-border-panel .x-panel-header-text {
+    display: block;
+    overflow: hidden;
+    height: 15px;
+}
+
+/* menu bar */
+.x-toolbar label.modeLabel {
+    font-weight: bold;
+    color: #666;
+}
+
+.x-toolbar .xtb-spacer {
+    width: 5px;
+}
+
+.CMSmenuheadline {
+    margin-left: 27px;
+    line-height: 16px;
+}
+
+/* Page Metadata Window */
+.CMSpagepropwin .x-fieldset-header-text {
+    font-size: 13px;
+    font-weight: normal;
+    position: relative;
+    top: -2px;
+}
+
+/* load mask over iframe */
+/* keep this in sync with windowMgr zseed */
+.CMSpreviewarea .ext-el-mask {
+    z-index: 200;
+    opacity: 0;
+    cursor: wait;
+}
+
+.CMSiframe {
+  opacity: 0;
+  &.iframeReady {
+    transition: opacity 0.1s ease-in;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInMask {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@-webkit-keyframes fadeInMask {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.CMSwait.ext-el-mask {
+    -webkit-animation: fadeInMask 0.07s ease-out forwards;
+    animation: fadeInMask 0.07s ease-out forwards;
+    background: $bg-layer-mid-dark;
+}
+
+.CMSuniteditor .ext-el-mask, .CMSinvisiblemask.ext-el-mask {
+  background: transparent;
+  cursor: wait;
+}
+
+.CMSpreviewpanel.x-panel.x-masked {
+  background: transparent !important;
+}
+
+.CMSpreviewpanel .ext-el-mask {
+    opacity: 0;
+    //cursor: wait; // if no page/template is selected the mask stays there...
+}
+
+.CMSpreviewarea .ext-el-mask-msg {
+    z-index: 201;
+}
+
+.CMSpreviewarea .ext-el-mask.CMSunitDragMask {
+    cursor: no-drop;
+}
+
+/* Module Editor */
+.x-form-text.plain,
+.ext-gecko .x-form-text.plain,
+.x-form-textarea.plain,
+.ext-gecko .x-form-textarea.plain {
+    background-color: transparent;
+    box-shadow: none;
+    background-image: none;
+    border: 0px none;
+    padding: 0px;
+}
+
+label.modulecomment {
+    font-size: 13px;
+    line-height: 16px;
+    display: block;
+    margin-bottom: 5px;
+    font-weight: normal;
+    padding-bottom: 5px;
+}
+
+.CMSformgroupeditor label {
+    -moz-user-select: none;
+    -webkit-user-select: ignore;
+}
+
+.CMSformgroupeditor .CMSfocus .x-column-layout-ct .x-column .x-column {
+    background: transparent;
+}
+
+.CMSformgroupeditor .x-column-layout-ct .x-column {
+    margin-right: 5px;
+}
+
+.CMSformgroupeditor .x-column-layout-ct-2 .x-column:nth-child(2n),
+.CMSformgroupeditor .x-column-layout-ct-3 .x-column:nth-child(3n),
+.CMSformgroupeditor .x-column-layout-ct-4 .x-column:nth-child(4n) {
+    margin-right: 0;
+    margin-left: 5px;
+}
+
+.CMSformgroupeditor .x-column-layout-ct-empty {
+    height: 20px;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAAAXNSR0IArs4c6QAAAHxJREFUKM+VkkkKACEMBMvloP7/rerNuRiQuE4gIEpTSbcGMEBjrth7fJdzdaxrJwKoQDFKYIBwIgEZwCphuJFQl9edhCRlX3disdNJVHpPrvvLeGUXlb2Mt83XvxihokqjOUcjVFQAzT+QZLwkopF4IsWRJBO6Tsx//+wHSu0yPAIb090AAAAASUVORK5CYII=");
+}
+
+/* Meta Editor */
+.x-grid-panel.noselect .x-grid3-row-selected {
+    background-color: transparent !important;
+    background-image: none;
+    border: 0px none;
+}
+
+.x-grid-panel.noselect .x-grid3-row-selected.x-grid3-row-over {
+    background-color: darken($bg-main, 10%) !important;
+}
+
+/* error messages */
+.ext-mb-text .details {
+    background: none repeat scroll 0 0 #DFE8F6;
+    border: 1px solid #99BBE8;
+    display: block;
+    margin-top: 10px;
+    padding: 10px;
+    margin-bottom: -10px;
+}
+
+/* Error Logger */
+.errorlog {
+    background-image: url("../images/icons/script_error.png");
+}
+
+/* fix the position of checkboxes in panel toolbars */
+.x-panel-bbar .x-form-check-wrap {
+    margin: 0 5px;
+    position: relative;
+    top: -2px;
+}
+
+/* SBCMS-513 hide disabled tabs in home panel */
+.CMSsitepropertypanel .x-tab-strip .x-item-disabled {
+    display: none;
+}
+
+.blankButton {
+    .x-btn-tl, .x-btn-tr, .x-btn-tc, .x-btn-ml, .x-btn-mr, .x-btn-mc, .x-btn-bl, .x-btn-br, .x-btn-bc {
+        background: none;
+    }
+    background: none;
+}
+
+/* Allow RadioFieldsets to be used as Radiobuttons */
+fieldset.hideBox {
+    border-bottom: 0px none;
+    padding-bottom: 0 !important;
+    box-shadow: none;
+    margin-bottom: 0;
+}
+
+fieldset.hideBox .x-fieldset-bwrap {
+    display: none;
+}
+
+.CMSeast {
+    border: 3px solid $border-dark;
+    border-right: none;
+}
+
+.CMScenter {
+    border-top: 3px solid $border-dark;
+    border-bottom: 3px solid $border-dark;
+}
+
+body[data-channel=dev]:after {
+  content: attr(data-branch) " (" attr(data-build) ")";
+  position: absolute;
+  top: 13px;
+  left: 65px;
+  font-size: 14px;
+  pointer-events: none;
+  opacity: 0.5;
+}

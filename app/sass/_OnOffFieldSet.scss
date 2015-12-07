@@ -1,0 +1,82 @@
+@import "colors";
+@import "mixins";
+
+.CMSonofffieldset-wrapper {
+    > .x-form-item {
+        > label.x-form-item-label {
+
+            line-height: 26px;
+            vertical-align: middle;
+
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            width: calc(100% - 100px) !important;
+            overflow: hidden;
+            height: 22px;
+
+            font-size: 15px;
+        }
+    }
+    &.CMSformfieldwrapperresponsive > .indicator {
+        top: 9px;
+    }
+}
+
+.CMSonofffieldset-wrapper.CMSformfieldwrapperresponsive {
+    &.valueInherit, &.hasUpperValue {
+        > .x-form-item > .x-form-element > .CMSonofffieldset.x-fieldset {
+            > legend > input:checked + label {
+                visibility: hidden;
+            }
+        }
+    }
+}
+
+.CMSonofffieldset.x-fieldset {
+
+    &.x-panel-collapsed {
+        padding: 0;
+    }
+
+    > legend.x-fieldset-header {
+        padding: 0;
+    }
+
+    //position: relative;
+    margin-top: 0;
+    overflow: visible;
+
+    /* on and off */
+    > legend > input[type="checkbox"] + label {
+        position: absolute;
+        top: -18px;
+        right: 0;
+        width: 80px;
+        height: 22px;
+        background: $ttbt-button-bg;
+        cursor: pointer;
+        padding: 0;
+
+        &:after {
+            content: '';
+            display: block;
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            width: 40px;
+            height: 100%;
+            /* off */
+            left: 0;
+            background: $ttbt-button-inactive-top url('../images/button-sprite.png') 0px -1569px;
+        }
+    }
+
+    /* on */
+    > legend > input:checked + label {
+        &:after {
+            left: 40px;
+            background: url('../images/button-sprite.png') 0px -1531px;
+        }
+    }
+
+}

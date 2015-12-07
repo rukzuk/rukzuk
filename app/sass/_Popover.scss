@@ -1,0 +1,79 @@
+@import 'colors';
+@import 'mixins';
+
+.CMSpopover {
+    .x-tip-header {
+        margin-bottom: 4px;
+        margin-top: 7px;
+        margin-left: 6px;
+    }
+    .x-tip-header-text {
+        font-size: 14px;
+        line-height: 140%;
+    }
+    .x-tip .x-tip-ml {
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+    .x-tip-body {
+        font-size: 12px;
+        line-height: 140%;
+
+        // used for author in popovers
+        small {
+            opacity: .7;
+            margin-top: 3px;
+            display: inline-block;
+        }
+    }
+    .x-tool-close {
+        margin-top: -7px;
+        margin-right: 1px;
+    }
+}
+
+.x-tip .x-tip-ml {
+    padding: 4px 10px;
+}
+
+.x-tip .x-tip-ml .x-tip-body {
+    font-size: 12px;
+    line-height: 145%;
+    color: $text-color-mid;
+}
+
+.CMSgettingstartedpopover {
+
+    $popover-color: white;
+
+    z-index: 20020;
+    max-width: 960px;
+    height: 570px;
+    width: 90%;
+    background-color: $popover-color;
+
+    .x-tip-header, .x-tip-tl, .x-tip-bl {
+        display: none;
+    }
+
+    .x-tip-ml, .x-tip-mr {
+        padding: 0;
+    }
+
+    .x-tip-bwrap {
+        box-sizing: border-box;
+        border: 6px solid $popover-color;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        background-color: $popover-color;
+    }
+
+    .x-tip-anchor {
+        border: 20px solid transparent;
+        border-bottom-color: $popover-color;
+    }
+
+    .CMSgettingstartedpopoveriframe {
+        width: 100%;
+        height: 100%;
+    }
+}

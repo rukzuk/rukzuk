@@ -1,0 +1,113 @@
+{
+    "assets":{
+        "css":[
+            {
+                "file":"main.css"
+            }
+        ],
+        "js":[
+            {
+                "file":"notlive\/editMode.js",
+                "mode":"edit",
+                "type":"module"
+            }
+        ]
+    },
+    "i18n":{
+        "selector.navLink":{
+            "de":"Alle Navigationslinks",
+            "en":"All navigation links"
+        },
+        "selector.navLinkActive":{
+            "de":"Aktiver Navigationslink",
+            "en":"Active navigation link"
+        },
+        "selector.navLinkCurrent":{
+            "de":"Aktueller Navigationslink",
+            "en":"Current navigation link"
+        },
+        "selector.navItem":{
+            "de":"Alle Navigationselemente",
+            "en":"All navigation elements"
+        },
+        "selector.navItemActive":{
+            "de":"Aktives Navigationselement",
+            "en":"Active navigation element"
+        },
+        "selector.navItemCurrent":{
+            "de":"Aktuelles Navigationselement",
+            "en":"Current navigation element"
+        },
+        "selector.navLevel1":{
+            "de":"Ebene 1",
+            "en":"Level 1"
+        },
+        "selector.navLevel2":{
+            "de":"Ebene 2",
+            "en":"Level 2"
+        },
+        "selector.navLevel3":{
+            "de":"Ebene 3",
+            "en":"Level 3"
+        },
+        "selector.navLevel4":{
+            "de":"Ebene 4",
+            "en":"Level 4"
+        },
+        "selector.navLevel5":{
+            "de":"Ebene 5",
+            "en":"Level 5"
+        },
+        "error.noPages":{
+            "de":"In dieser Website wurden noch keine Seiten angelegt.",
+            "en":"This website doesn’t have pages yet."
+        }
+    },
+    "selectors":[
+        {
+            "title":"__i18n_selector.navLink",
+            "selector":".navLink"
+        },
+        {
+            "title":"__i18n_selector.navLinkActive",
+            "selector":".navLink.navLinkActive"
+        },
+        {
+            "title":"__i18n_selector.navLinkCurrent",
+            "selector":".navLink.navLinkCurrent"
+        },
+        {
+            "title":"__i18n_selector.navItem",
+            "selector":".navItem",
+            "enableNthTypeOf":true
+        },
+        {
+            "title":"__i18n_selector.navItemActive",
+            "selector":".navItem.navItemActive"
+        },
+        {
+            "title":"__i18n_selector.navItemCurrent",
+            "selector":".navItem.navItemCurrent"
+        },
+        {
+            "title":"__i18n_selector.navLevel1",
+            "selector":".navLevel1"
+        },
+        {
+            "title":"__i18n_selector.navLevel2",
+            "selector":".navLevel2"
+        },
+        {
+            "title":"__i18n_selector.navLevel3",
+            "selector":".navLevel3"
+        },
+        {
+            "title":"__i18n_selector.navLevel4",
+            "selector":".navLevel4"
+        },
+        {
+            "title":"__i18n_selector.navLevel5",
+            "selector":".navLevel5"
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "name": "{\"de\":\"Filter\",\"en\":\"Filter\"}",
+    "description": "{\"de\":\"Fügt Unschärfe und Farbkorrekturen wie Helligkeit und Kontrast hinzu.\",\"en\":\"Add blur and color corrections like brightness and contrast.\"}",
+    "version": "dev",
+    "icon": "extension.png",
+    "category": "50",
+    "moduleType": "extension",
+    "allowedChildModuleType": "",
+    "reRenderRequired": false,
+    "ghostContainerMode": "",
+    "apiType": "APIv1"
+}

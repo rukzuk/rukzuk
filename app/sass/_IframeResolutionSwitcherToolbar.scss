@@ -1,0 +1,121 @@
+@import "colors";
+@import "mixins";
+
+.CMSiframeresolutionswitchertoolbar, .CMSrulertopbar {
+
+    .switch-btn-default {
+      $color-light: transparentize($breakpoint-color-default, $breakpoint-transparency-light);
+      $color-dark: transparentize($breakpoint-color-default, $breakpoint-transparency-dark);
+      background: $color-light;
+      &.x-btn-over {
+        background: $color-dark;
+      }
+      &.x-btn-pressed {
+        background: $color-dark
+      }
+    }
+
+    $i: 0;
+    @each $breakpoint-color in $breakpoint-colors {
+        $i: $i+1;
+        .switch-btn-res#{$i} {
+            $color-light: transparentize($breakpoint-color, $breakpoint-transparency-light);
+            $color-dark: transparentize($breakpoint-color, $breakpoint-transparency-dark);
+            background: $color-light;
+            &.x-btn-over {
+                background: $color-dark;
+            }
+            &.x-btn-pressed {
+                background: $color-dark
+            }
+        }
+    }
+}
+
+.resolutionMenu {
+  .switch-btn {
+    font-weight: bold;
+  }
+
+  // colors for menu items
+  $i: 0;
+  @each $breakpoint-color in $breakpoint-colors {
+    $i: $i+1;
+    .switch-btn-res#{$i} img.x-menu-item-icon {
+      $transp-bg: transparentize($breakpoint-color, $breakpoint-transparency-dark);
+      background: linear-gradient($transp-bg, $transp-bg), linear-gradient($secondary, $secondary);
+      border: 1px solid darken($text-color, 45%);
+      @include box-sizing();
+    }
+  }
+}
+
+
+.resolutionEditForms {
+  $i: 0;
+  @each $breakpoint-color in $breakpoint-colors {
+    $i: $i+1;
+    .inidcator-res#{$i} {
+      background: transparentize($breakpoint-color, $breakpoint-transparency-dark);
+    }
+  }
+}
+
+
+.CMSresolutioninfo {
+  $i: 0;
+  @each $breakpoint-color in $breakpoint-colors {
+    $i: $i+1;
+    &[data-resolution=res#{$i}] {
+      background: transparentize($breakpoint-color, $breakpoint-transparency-lighter);
+    }
+  }
+}
+
+.CMSvisualHelperButtons {
+  &.x-btn.x-btn-menu-active, &.x-btn.x-btn-pressed, &.x-btn.x-btn-icon.x-btn-menu-active, &.x-btn.x-btn-icon.x-btn-pressed {
+    @include gradient-vertical($bg-button-top, $bg-button-bottom);
+
+    &.x-btn-over {
+      @include gradient-vertical($bg-button-hover-top, $bg-button-hover-bottom);
+    }
+  }
+}
+
+.CMSrulertopbar {
+  .x-btn button span, .x-btn.x-btn-icon button span {
+    font-weight: normal;
+    font-family: 'UbuntuCondensed', sans-serif;
+    font-size: 12px;
+  }
+  .x-btn td {
+    text-align: right;
+  }
+  table.x-btn {
+    margin: 0;
+  }
+
+  .CMSbtnsmall.ruler-btn {
+    &.ruler-btn-empty {
+      button {
+        padding: 0;
+        span {
+          display: none;
+        }
+      }
+    }
+    button {
+      padding-right: 3px;
+      min-width: 0;
+      width: 100%;
+      text-align: right;
+    }
+    .x-btn-tr i, .x-btn-tl i, .x-btn-mr i, .x-btn-ml i, .x-btn-br i, .x-btn-bl i {
+      width: 0;
+    }
+  }
+}
+
+.CMSrulerpanel .CMSrulertopbar {
+  background: url(../images/ruler.svg) repeat-x;
+}

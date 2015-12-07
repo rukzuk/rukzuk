@@ -1,0 +1,12 @@
+{
+    "name": "<%= moduleId %>",
+    "description": "",
+    "version": "dev",
+    "icon": "",
+    "category": "",
+    "moduleType": "default",
+    "allowedChildModuleType": "extension",
+    "ghostContainerMode": "force_off",
+    "reRenderRequired": false,
+    "apiType": "APIv1"
+}

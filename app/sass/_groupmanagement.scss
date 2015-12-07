@@ -1,0 +1,87 @@
+@import "colors";
+@import "mixins";
+
+.CMSgrouptablist {
+    background: transparent;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+.CMSgrouptablist * {
+    background: transparent !important;
+}
+
+.CMSgrouptablist .x-panel-body {
+    overflow-y: auto;
+}
+
+.CMSgrouptablist .x-tool {
+    float: left;
+    margin-left: 0;
+    margin-right: 2px;
+    background: transparent url("../images/elbow-minus-nl.gif") no-repeat scroll -1px -1px !important;
+}
+
+.CMSgrouptablist .x-panel-collapsed .x-tool {
+    background: transparent url("../images/elbow-plus-nl.gif") no-repeat scroll -1px -1px !important;
+}
+
+.CMSgrouptablist .x-panel-header,
+.CMSgrouptablist .x-panel-body {
+    border: 0px none;
+}
+
+.CMSgrouptablist .x-panel-header {
+    cursor: pointer;
+    padding: 5px;
+}
+
+.CMSgrouptablist div,
+.CMSgrouptablist button,
+.CMSgrouptablist table,
+.CMSgrouptablist tr,
+.CMSgrouptablist td {
+    color: white;
+    font-weight: normal;
+}
+
+.CMSgrouptablist .active.x-panel {
+    background: rgba(20, 20, 20, 0.5) !important;
+}
+
+.CMSgrouptablist {
+    .x-btn {
+        height: 20px;
+
+        button {
+            height: 14px;
+            line-height: 14px;
+
+            span {
+                font-weight: normal;
+            }
+        }
+    }
+
+    .selected,
+    .x-btn.x-btn-pressed .x-btn-text span {
+        font-weight: bold;
+    }
+}
+
+.CMSgrouptablist .x-btn-mc {
+    text-align: left;
+    text-indent: 18px;
+}
+
+.CMSgrouptab {
+    background-color: rgba(20, 20, 20, 0.5) !important;
+}
+
+/* Other Privileges Tab */
+
+.CMSotherprivilegestab .x-form-item {
+    margin-left: 50px;
+    margin-top: 15px;
+}
+

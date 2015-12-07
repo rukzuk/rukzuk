@@ -1,0 +1,20 @@
+From: sbcms-testrun@seitenbau.com
+Subject: test feedback
+To: sbcms-testrun-feedback@seitenbau.com
+Date: Sat, 01 Jan 2011 00:00:00 +0100
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline
+MIME-Version: 1.0
+
+Mitteilung=0A----------------------=0Afeedback test content from unittes=
+ts=0A=0ADebug-Infos=0A----------------------=0Ahttp://sbcms-test-run=0A=
+=0AWin32=0A=0AMozilla/5.0 (Windows NT 5.1) AppleWebKit/535.1 (KHTML, lik=
+e Gecko) Chrome/13.0.782.112 Safari/535.1=0A=0A12.08.2011 09:40:22=0AScr=
+iptfehler:=0AUncaught Error: chrome.tabs is not supported in content scr=
+ipts. See the content scripts documentation for more details.=0A=0A----=
+=0A=0AZeile 282 in chrome/RendererExtensionBindings=0A=0A***** Next Erro=
+r *****=0A=0A12.08.2011 09:40:23=0AScriptfehler:=0AUncaught Error: chrom=
+e.tabs is not supported in content scripts. See the content scripts docu=
+mentation for more details.=0A=0A----=0A=0AZeile 282 in chrome/RendererE=
+xtensionBindings

@@ -1,0 +1,11 @@
+{
+    "assets":{
+        "js":[
+            {
+                "file":"notlive\/fonts.js",
+                "type":"module",
+                "mode":"edit"
+            }
+        ]
+    }
+}

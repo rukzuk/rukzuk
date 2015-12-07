@@ -1,0 +1,65 @@
+{
+    "assets":{
+        "js":[
+            {
+                "file":"jquery.scrollTo.min.js"
+            },
+            {
+                "file":"jquery.easing.1.3.js"
+            },
+            {
+                "file":"waypoints.js"
+            },
+            {
+                "file":"module.js",
+                "type":"module"
+            }
+        ],
+        "css":[
+            {
+                "file":"module.css"
+            }
+        ]
+    },
+    "i18n":{
+        "selector.links.all":{
+            "de":"Alle Sprungmarkenlinks",
+            "en":"All anchor links"
+        },
+        "selector.links.current":{
+            "de":"Aktueller Sprungmarkenlink",
+            "en":"Current anchor link"
+        },
+        "selector.anchor.all":{
+            "de":"Alle Sprungmarken",
+            "en":"All anchors"
+        },
+        "selector.anchor.current":{
+            "de":"Aktuelle Sprungmarke",
+            "en":"Current anchor"
+        },
+        "hint.noAnchor":{
+            "de":"Bitte Sprungmarken-Module einfügen",
+            "en":"Please insert anchor modules"
+        }
+    },
+    "selectors":[
+        {
+            "title":"__i18n_selector.links.all",
+            "selector":".anchorLink"
+        },
+        {
+            "title":"__i18n_selector.links.current",
+            "selector":".anchorLinkCurrent"
+        },
+        {
+            "title":"__i18n_selector.anchor.all",
+            "selector":"li.anchorItem",
+            "enableNthTypeOf":true
+        },
+        {
+            "title":"__i18n_selector.anchor.current",
+            "selector":".anchorItemCurrent"
+        }
+    ]
+}

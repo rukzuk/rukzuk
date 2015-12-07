@@ -1,0 +1,11 @@
+{
+    "name":"{\"de\":\"Basismodul fuer Testing\",\"en\":\"Root Module for testing\"}",
+    "description":"",
+    "version":"test",
+    "icon":"root.png",
+    "category":"{\"de\":\"Basismodule\",\"en\":\"Root Modules\"}",
+    "moduleType":"root",
+    "allowedChildModuleType":"*",
+    "reRenderRequired":true,
+    "apiType":"RootAPIv1"
+}

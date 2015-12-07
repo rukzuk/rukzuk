@@ -1,0 +1,301 @@
+/**
+ * Login Styles
+ * This file is part of rukzuk
+ */
+
+@import "colors";
+@import "mixins";
+
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: transparent;
+  position: relative;
+  overflow-x: hidden;
+}
+body.background {
+  background: #454444 url('../login/images/rkzk-bg.png') repeat;
+}
+
+body.animate {
+  opacity: 0;
+  transition: opacity 250ms ease-out;
+}
+body.fadeIn {
+  opacity: 1;
+}
+body, input {
+  font-family: 'Trebuchet MS', sans-serif;
+  color: #fffdf2;
+  font-size: 14px;
+}
+a, a:link, a:visited, a:hover, a:active {
+  color: #fffdf2;
+}
+
+.wrapper {
+  margin: auto;
+  max-width: 940px;
+  min-width: 200px;
+  height: 100%;
+}
+.login_logo {
+  margin: auto;
+  width: 300px;
+}
+
+.logo, .login_logo {
+  height: 56px;
+  background-size: contain;
+}
+
+.logo {
+  background-position: center bottom;
+}
+
+body.simpleMode .login_logo {
+  display: none;
+}
+
+.logo {
+  margin: auto;
+  width: 280px;
+  padding-top: 30%;
+  padding-top: 30vmin;
+  padding-right: 20px;
+}
+
+.logo, .login_logo {
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.shadowBox {
+  background: rgba(9, 8, 7, 0.33);
+  box-shadow: 0 0 20px rgba(9, 8, 7, 0.2);
+  margin-top: 27vmin;
+  padding: 6% 0 4% 0;
+  width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 255px;
+}
+body.simpleMode .shadowBox {
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+  margin: auto;
+  width: auto;
+  height: auto;
+}
+
+#form {
+  max-width: 300px;
+  margin: 0 auto;
+  padding-top: 3%;
+}
+
+/* fix sizing */
+#form input {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* text input fields */
+#form input[type="text"], #form input[type="password"] {
+  padding: 3px 10px;
+  background-color: rgba(9, 8, 7, 0.66);
+  box-shadow: inset 1px 0 5px rgba(9, 8, 7, 0.2);
+}
+
+/* general form style */
+#form input[type="text"], #form input[type="password"], #form input[type="submit"], #form input[type="button"] {
+  height: 36px;
+  border: none;
+  width: 100%;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+.loginButton {
+  cursor: pointer;
+  text-shadow: 0 1px rgb(9,8,7);
+}
+
+.loginButton[disabled] {
+  background: $bg-button-top;
+  color: darken($text-color-dark, 30%);
+  cursor: default;
+}
+
+
+/* two column */
+.twocol {
+  display: table;
+  border-collapse: collapse;
+  width: 100%;
+}
+.topspace {
+  margin-top: 20px;
+}
+
+.pwwarp {
+  display: table-cell;
+  width: 71%;
+}
+.btnwrap {
+  display: table-cell;
+  width: 28.99%;
+}
+
+/* bottom links */
+.tools {
+  font-size: 12px;
+}
+.tools .fullscreen {
+  display: table-cell;
+  width: 40%;
+}
+.tools .lostpw {
+  display: table-cell;
+  width: 60%;
+  text-align: right;
+}
+
+/* checkbox */
+input[type="checkbox"] {
+  display:none;
+}
+
+input[type="checkbox"] + label span {
+  display:inline-block;
+  width:19px;
+  height:19px;
+  margin:-1px 0 0 0;
+  vertical-align:middle;
+  background:url(../login/images/checkbox.png) left top no-repeat;
+  cursor:pointer;
+}
+
+input[type="checkbox"]:checked + label span {
+  background:url(../login/images/checkbox.png) -19px top no-repeat;
+}
+
+input[type="checkbox"] + label {
+  cursor:pointer;
+}
+
+/*input[type="checkbox"]:disabled + label, input[type="checkbox"]:disabled + label span {
+    display: none;
+}*/
+
+.messagebar {
+  min-height: 1.8em;
+  padding-bottom: 0.2em;
+}
+
+.message {
+  display: none;
+  white-space: pre-line;
+}
+
+.error {
+  color: $color-error;
+}
+
+.panel {
+  /* hide all panels by default */
+  display: none;
+}
+
+/* lostpw panel */
+.lostpwback {
+  text-align: right;
+  font-size: 12px;
+}
+
+/* not supported browser and nojs warnings */
+#oldbrowser, #nojs {
+  display: none;
+}
+.bigwarning {
+  max-width: 360px;
+  width: 360px;
+  margin: 8% auto 0 auto;
+  background: rgb(43, 41, 40);
+  background: rgba(9, 8, 7, 0.5);
+  min-height: 200px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.bigwarning-text {
+  margin: 0;
+  padding: 1em 1em 2em 1em;
+}
+
+.browser-list {
+  margin: 0 auto;
+  height: 71px;
+  width: 100%;
+  padding: 1.3em 0;
+  background: rgb(9, 8, 7);
+  background: rgba(9, 8, 7, 0.5);
+}
+
+.browser-list div {
+  margin-left: 1.9em;
+}
+
+.notamac div {
+  margin-left: 5.3em;
+}
+
+.browser-list a {
+  float: left;
+  margin: 0 2em;
+  text-align: center;
+}
+
+.warning {
+  background: url('../login/images/supported-browser-warning-sprite.png') 0 0;
+  float: left;
+  margin: 1em 1em 1em 0
+}
+.firefox {
+  background: url('../login/images/supported-browser-warning-sprite.png') 0 -50px;
+}
+.chrome {
+  background: url('../login/images/supported-browser-warning-sprite.png') 0 -100px;
+}
+.safari {
+  background: url('../login/images/supported-browser-warning-sprite.png') 0 -150px;
+}
+.safari_link {
+  display: none;
+}
+
+.bigico {
+  width: 50px;
+  height: 50px;
+  display: block;
+}
+
+/* start hidden prevents flicker */
+.logo {
+  display: none;
+}
+
+::-moz-focus-inner {
+  border: 0;
+}
+
+@import "login-animate";
+@import "login-theme";

@@ -1,0 +1,9 @@
+The icons in this folder are direct gif conversions of the fam fam fam silk icons.
+
+Please see http://www.famfamfam.com/lab/icons/silk/ for more details.
+
+
+
+The icons prefixed "Silk_" are user-created icons taken from Wikimedia
+
+http://commons.wikimedia.org/wiki/Category:Silk-like_icons

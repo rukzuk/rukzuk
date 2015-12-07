@@ -1,0 +1,28 @@
+{
+  "children":{
+    "backbone.js":{
+      "type":"file"
+    },
+    "green.gif":{
+      "type":"file"
+    },
+    "jQuery-Ui.js":{
+      "type":"file"
+    },
+    "poll-log.json":{
+      "type":"file"
+    },
+    "report.pdf":{
+      "type":"file"
+    },
+    "toc.pdf":{
+      "type":"file"
+    },
+    "twitter-api.js":{
+      "type":"file"
+    },
+    "yellow.gif":{
+      "type":"file"
+    }
+  }
+}

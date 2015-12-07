@@ -1,0 +1,17 @@
+{
+    "website": [
+        {
+            "id": "SITE-module00-cont-roll-er00-000000000001-SITE",
+            "name": "this is the name: create local copy test",
+            "description": "this is the description",
+            "navigation": "[{}]",
+            "usedsetid": "module_test",
+            "shortid": "",
+            "colorscheme": "",
+            "resolutions": "",
+            "version": 0,
+            "home": "",
+            "ismarkedfordeletion": 0
+        }
+    ]
+}

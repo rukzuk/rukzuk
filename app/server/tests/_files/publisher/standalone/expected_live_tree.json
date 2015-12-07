@@ -1,0 +1,1565 @@
+{
+    "children": {
+        "Contact": {
+            "children": {
+                "index.php": {
+                    "type": "file"
+                }
+            },
+            "type": "dir"
+        },
+        "Gallery": {
+            "children": {
+                "index.php": {
+                    "type": "file"
+                }
+            },
+            "type": "dir"
+        },
+        "Menu": {
+            "children": {
+                "index.php": {
+                    "type": "file"
+                }
+            },
+            "type": "dir"
+        },
+        "files": {
+            "children": {
+                "assets": {
+                    "children": {
+                        "modules": {
+                            "children": {
+                                "rz_ghost_container": {
+                                    "children": {
+                                        "style.css": {
+                                            "type": "file"
+                                        }
+                                    },
+                                    "type": "dir"
+                                },
+                                "rz_google_maps": {
+                                    "children": {
+                                        "style.css": {
+                                            "type": "file"
+                                        }
+                                    },
+                                    "type": "dir"
+                                },
+                                "rz_grid": {
+                                    "children": {
+                                        "style.css": {
+                                            "type": "file"
+                                        }
+                                    },
+                                    "type": "dir"
+                                },
+                                "rz_headline": {
+                                    "children": {
+                                        "style.css": {
+                                            "type": "file"
+                                        }
+                                    },
+                                    "type": "dir"
+                                },
+                                "rz_image": {
+                                    "children": {
+                                        "imageBlank.png": {
+                                            "type": "file"
+                                        },
+                                        "main.css": {
+                                            "type": "file"
+                                        }
+                                    },
+                                    "type": "dir"
+                                },
+                                "rz_lightbox": {
+                                    "children": {
+                                        "img": {
+                                            "children": {
+                                                "icons.png": {
+                                                    "type": "file"
+                                                },
+                                                "icons.svg": {
+                                                    "type": "file"
+                                                },
+                                                "loader.gif": {
+                                                    "type": "file"
+                                                }
+                                            },
+                                            "type": "dir"
+                                        },
+                                        "jquery.swipebox.js": {
+                                            "type": "file"
+                                        },
+                                        "lightboxInit.js": {
+                                            "type": "file"
+                                        },
+                                        "style.css": {
+                                            "type": "file"
+                                        },
+                                        "swipebox.css": {
+                                            "type": "file"
+                                        },
+                                        "swipebox.js": {
+                                            "type": "file"
+                                        }
+                                    },
+                                    "type": "dir"
+                                },
+                                "rz_navigation": {
+                                    "children": {
+                                        "main.css": {
+                                            "type": "file"
+                                        }
+                                    },
+                                    "type": "dir"
+                                },
+                                "rz_root": {
+                                    "children": {
+                                        "css": {
+                                            "children": {
+                                                "base.css": {
+                                                    "type": "file"
+                                                },
+                                                "reset.css": {
+                                                    "type": "file"
+                                                }
+                                            },
+                                            "type": "dir"
+                                        },
+                                        "fonts": {
+                                            "children": {
+                                                "FONT-LICENSE.txt": {
+                                                    "type": "file"
+                                                },
+                                                "sharedicons.eot": {
+                                                    "type": "file"
+                                                },
+                                                "sharedicons.svg": {
+                                                    "type": "file"
+                                                },
+                                                "sharedicons.ttf": {
+                                                    "type": "file"
+                                                },
+                                                "sharedicons.woff": {
+                                                    "type": "file"
+                                                }
+                                            },
+                                            "type": "dir"
+                                        },
+                                        "images": {
+                                            "children": {
+                                                "imageBlank.png": {
+                                                    "type": "file"
+                                                },
+                                                "imagePlaceholder.png": {
+                                                    "type": "file"
+                                                }
+                                            },
+                                            "type": "dir"
+                                        },
+                                        "js": {
+                                            "children": {
+                                                "jquery-2.1.4.js": {
+                                                    "type": "file"
+                                                },
+                                                "lazysizes.js": {
+                                                    "type": "file"
+                                                },
+                                                "ls.progressive.js": {
+                                                    "type": "file"
+                                                },
+                                                "modernizer.js": {
+                                                    "type": "file"
+                                                },
+                                                "prefixfree.stylefix.js": {
+                                                    "type": "file"
+                                                },
+                                                "prefixfree.viewport-units.js": {
+                                                    "type": "file"
+                                                },
+                                                "require-stubs.js": {
+                                                    "type": "file"
+                                                },
+                                                "require.js": {
+                                                    "type": "file"
+                                                },
+                                                "respimage.js": {
+                                                    "type": "file"
+                                                },
+                                                "wkFixTableLayout.js": {
+                                                    "type": "file"
+                                                }
+                                            },
+                                            "type": "dir"
+                                        }
+                                    },
+                                    "type": "dir"
+                                },
+                                "rz_selector_elements": {
+                                    "type": "dir"
+                                },
+                                "rz_selector_pseudo_class": {
+                                    "type": "dir"
+                                },
+                                "rz_style_animation_scroll": {
+                                    "children": {
+                                        "animate.css": {
+                                            "type": "file"
+                                        },
+                                        "animationHelper.js": {
+                                            "type": "file"
+                                        },
+                                        "animationInit.js": {
+                                            "type": "file"
+                                        },
+                                        "jquery.fracs-0.15.0.js": {
+                                            "type": "file"
+                                        },
+                                        "style.css": {
+                                            "type": "file"
+                                        }
+                                    },
+                                    "type": "dir"
+                                },
+                                "rz_style_border": {
+                                    "type": "dir"
+                                },
+                                "rz_style_font": {
+                                    "type": "dir"
+                                },
+                                "rz_style_padding_margin": {
+                                    "type": "dir"
+                                },
+                                "rz_style_width_height": {
+                                    "type": "dir"
+                                },
+                                "rz_svg": {
+                                    "children": {
+                                        "imageBlank.svg": {
+                                            "type": "file"
+                                        },
+                                        "style.css": {
+                                            "type": "file"
+                                        }
+                                    },
+                                    "type": "dir"
+                                },
+                                "rz_textfield": {
+                                    "children": {
+                                        "style.css": {
+                                            "type": "file"
+                                        }
+                                    },
+                                    "type": "dir"
+                                }
+                            },
+                            "type": "dir"
+                        }
+                    },
+                    "type": "dir"
+                },
+                "css": {
+                    "children": {
+                        "27ad87a738ca2d7403b0cb87be63e7c4.css": {
+                            "type": "file"
+                        },
+                        "724660f66d04b5a3dbc91e905d5227a4.css": {
+                            "type": "file"
+                        },
+                        "b0b44c8c16e5d7bf439bb469a19660b1.css": {
+                            "type": "file"
+                        },
+                        "d04d771222e63af391ff4bff620f3dbe.css": {
+                            "type": "file"
+                        }
+                    },
+                    "type": "dir"
+                },
+                "media": {
+                    "children": {
+                        "cdn.php": {
+                            "type": "file"
+                        },
+                        "files": {
+                            "children": {
+                                ".htaccess": {
+                                    "type": "file"
+                                },
+                                "06f225ffb0edee636c02bdef2e173cfb.svg": {
+                                    "type": "file"
+                                },
+                                "1afe456cae0ce00f14c417f40a715375.jpg": {
+                                    "type": "file"
+                                },
+                                "220ec089f4cbd4e8610589bf5fef5902.jpg": {
+                                    "type": "file"
+                                },
+                                "59168b13b19ce7167572219db574918e.jpg": {
+                                    "type": "file"
+                                },
+                                "5e0a289ee44eebe7208caf59b42f8b54.jpg": {
+                                    "type": "file"
+                                },
+                                "76e9b090693e718039d29a1038876964.jpg": {
+                                    "type": "file"
+                                },
+                                "7892817fbfd8de8b752f02f14c771aef.jpg": {
+                                    "type": "file"
+                                },
+                                "7e16b15591217225f2dda13d6e90cb89.jpg": {
+                                    "type": "file"
+                                },
+                                "a1219708a4068366a141175bb7d70720.jpg": {
+                                    "type": "file"
+                                },
+                                "cache": {
+                                    "type": "dir"
+                                },
+                                "e48ab336e5d0f315e606dcf9ad632616.jpg": {
+                                    "type": "file"
+                                }
+                            },
+                            "type": "dir"
+                        },
+                        "icons": {
+                            "children": {
+                                ".htaccess": {
+                                    "type": "file"
+                                },
+                                "icon_avi.png": {
+                                    "type": "file"
+                                },
+                                "icon_bmp.png": {
+                                    "type": "file"
+                                },
+                                "icon_css.png": {
+                                    "type": "file"
+                                },
+                                "icon_eot.png": {
+                                    "type": "file"
+                                },
+                                "icon_fallback.png": {
+                                    "type": "file"
+                                },
+                                "icon_gif.png": {
+                                    "type": "file"
+                                },
+                                "icon_jpg.png": {
+                                    "type": "file"
+                                },
+                                "icon_midi.png": {
+                                    "type": "file"
+                                },
+                                "icon_mov.png": {
+                                    "type": "file"
+                                },
+                                "icon_mp3.png": {
+                                    "type": "file"
+                                },
+                                "icon_mp4.png": {
+                                    "type": "file"
+                                },
+                                "icon_mpg.png": {
+                                    "type": "file"
+                                },
+                                "icon_otf.png": {
+                                    "type": "file"
+                                },
+                                "icon_pdf.png": {
+                                    "type": "file"
+                                },
+                                "icon_png.png": {
+                                    "type": "file"
+                                },
+                                "icon_rar.png": {
+                                    "type": "file"
+                                },
+                                "icon_ttf.png": {
+                                    "type": "file"
+                                },
+                                "icon_wav.png": {
+                                    "type": "file"
+                                },
+                                "icon_wmv.png": {
+                                    "type": "file"
+                                },
+                                "icon_woff.png": {
+                                    "type": "file"
+                                },
+                                "icon_zip.png": {
+                                    "type": "file"
+                                }
+                            },
+                            "type": "dir"
+                        }
+                    },
+                    "type": "dir"
+                },
+                "system": {
+                    "children": {
+                        ".htaccess": {
+                            "type": "file"
+                        },
+                        "data": {
+                            "children": {
+                                "album.php": {
+                                    "type": "file"
+                                },
+                                "colors.php": {
+                                    "type": "file"
+                                },
+                                "media.mod.php": {
+                                    "type": "file"
+                                },
+                                "media.php": {
+                                    "type": "file"
+                                },
+                                "modules": {
+                                    "children": {
+                                        "rz_ghost_container": {
+                                            "children": {
+                                                "custom.json": {
+                                                    "type": "file"
+                                                },
+                                                "form.json": {
+                                                    "type": "file"
+                                                },
+                                                "manifest.json": {
+                                                    "type": "file"
+                                                },
+                                                "rz_ghost_container.php": {
+                                                    "type": "file"
+                                                }
+                                            },
+                                            "type": "dir"
+                                        },
+                                        "rz_google_maps": {
+                                            "children": {
+                                                "custom.json": {
+                                                    "type": "file"
+                                                },
+                                                "form.json": {
+                                                    "type": "file"
+                                                },
+                                                "manifest.json": {
+                                                    "type": "file"
+                                                },
+                                                "rz_google_maps.php": {
+                                                    "type": "file"
+                                                }
+                                            },
+                                            "type": "dir"
+                                        },
+                                        "rz_grid": {
+                                            "children": {
+                                                "custom.json": {
+                                                    "type": "file"
+                                                },
+                                                "form.json": {
+                                                    "type": "file"
+                                                },
+                                                "manifest.json": {
+                                                    "type": "file"
+                                                },
+                                                "rz_grid.php": {
+                                                    "type": "file"
+                                                }
+                                            },
+                                            "type": "dir"
+                                        },
+                                        "rz_headline": {
+                                            "children": {
+                                                "custom.json": {
+                                                    "type": "file"
+                                                },
+                                                "form.json": {
+                                                    "type": "file"
+                                                },
+                                                "manifest.json": {
+                                                    "type": "file"
+                                                },
+                                                "rz_headline.php": {
+                                                    "type": "file"
+                                                }
+                                            },
+                                            "type": "dir"
+                                        },
+                                        "rz_image": {
+                                            "children": {
+                                                "custom.json": {
+                                                    "type": "file"
+                                                },
+                                                "form.json": {
+                                                    "type": "file"
+                                                },
+                                                "manifest.json": {
+                                                    "type": "file"
+                                                },
+                                                "rz_image.php": {
+                                                    "type": "file"
+                                                }
+                                            },
+                                            "type": "dir"
+                                        },
+                                        "rz_lightbox": {
+                                            "children": {
+                                                "custom.json": {
+                                                    "type": "file"
+                                                },
+                                                "form.json": {
+                                                    "type": "file"
+                                                },
+                                                "manifest.json": {
+                                                    "type": "file"
+                                                },
+                                                "models": {
+                                                    "children": {
+                                                        "ILightboxModuleDependency.php": {
+                                                            "type": "file"
+                                                        },
+                                                        "LightboxModuleDependency.php": {
+                                                            "type": "file"
+                                                        }
+                                                    },
+                                                    "type": "dir"
+                                                },
+                                                "rz_lightbox.php": {
+                                                    "type": "file"
+                                                }
+                                            },
+                                            "type": "dir"
+                                        },
+                                        "rz_navigation": {
+                                            "children": {
+                                                "custom.json": {
+                                                    "type": "file"
+                                                },
+                                                "form.json": {
+                                                    "type": "file"
+                                                },
+                                                "manifest.json": {
+                                                    "type": "file"
+                                                },
+                                                "rz_navigation.php": {
+                                                    "type": "file"
+                                                }
+                                            },
+                                            "type": "dir"
+                                        },
+                                        "rz_root": {
+                                            "children": {
+                                                "composer.json": {
+                                                    "type": "file"
+                                                },
+                                                "composer.lock": {
+                                                    "type": "file"
+                                                },
+                                                "custom.json": {
+                                                    "type": "file"
+                                                },
+                                                "form.json": {
+                                                    "type": "file"
+                                                },
+                                                "lib": {
+                                                    "children": {
+                                                        "CacheBuster.php": {
+                                                            "type": "file"
+                                                        },
+                                                        "ChildModuleDependency.php": {
+                                                            "type": "file"
+                                                        },
+                                                        "HtmlTagBuilder.php": {
+                                                            "type": "file"
+                                                        },
+                                                        "ICacheBuster.php": {
+                                                            "type": "file"
+                                                        },
+                                                        "IChildModuleDependency.php": {
+                                                            "type": "file"
+                                                        },
+                                                        "Mailer.php": {
+                                                            "type": "file"
+                                                        },
+                                                        "MailerException.php": {
+                                                            "type": "file"
+                                                        },
+                                                        "ResponsiveImageBuilder.php": {
+                                                            "type": "file"
+                                                        },
+                                                        "SimpleModule.php": {
+                                                            "type": "file"
+                                                        },
+                                                        "Translator.php": {
+                                                            "type": "file"
+                                                        },
+                                                        "dyncss": {
+                                                            "children": {
+                                                                "DynCSS.php": {
+                                                                    "type": "file"
+                                                                },
+                                                                "DynCSSEngine.php": {
+                                                                    "type": "file"
+                                                                },
+                                                                "js": {
+                                                                    "children": {
+                                                                        "browserEmulator.js": {
+                                                                            "type": "file"
+                                                                        },
+                                                                        "dyncssBackend.js": {
+                                                                            "type": "file"
+                                                                        }
+                                                                    },
+                                                                    "type": "dir"
+                                                                }
+                                                            },
+                                                            "type": "dir"
+                                                        }
+                                                    },
+                                                    "type": "dir"
+                                                },
+                                                "manifest.json": {
+                                                    "type": "file"
+                                                },
+                                                "rz_root.php": {
+                                                    "type": "file"
+                                                },
+                                                "vendor": {
+                                                    "children": {
+                                                        "autoload.php": {
+                                                            "type": "file"
+                                                        },
+                                                        "composer": {
+                                                            "children": {
+                                                                "ClassLoader.php": {
+                                                                    "type": "file"
+                                                                },
+                                                                "autoload_classmap.php": {
+                                                                    "type": "file"
+                                                                },
+                                                                "autoload_namespaces.php": {
+                                                                    "type": "file"
+                                                                },
+                                                                "autoload_psr4.php": {
+                                                                    "type": "file"
+                                                                },
+                                                                "autoload_real.php": {
+                                                                    "type": "file"
+                                                                },
+                                                                "installed.json": {
+                                                                    "type": "file"
+                                                                }
+                                                            },
+                                                            "type": "dir"
+                                                        },
+                                                        "nette": {
+                                                            "children": {
+                                                                "mail": {
+                                                                    "children": {
+                                                                        "composer.json": {
+                                                                            "type": "file"
+                                                                        },
+                                                                        "license.md": {
+                                                                            "type": "file"
+                                                                        },
+                                                                        "readme.md": {
+                                                                            "type": "file"
+                                                                        },
+                                                                        "src": {
+                                                                            "children": {
+                                                                                "Mail": {
+                                                                                    "children": {
+                                                                                        "IMailer.php": {
+                                                                                            "type": "file"
+                                                                                        },
+                                                                                        "Message.php": {
+                                                                                            "type": "file"
+                                                                                        },
+                                                                                        "MimePart.php": {
+                                                                                            "type": "file"
+                                                                                        },
+                                                                                        "SendmailMailer.php": {
+                                                                                            "type": "file"
+                                                                                        },
+                                                                                        "SmtpMailer.php": {
+                                                                                            "type": "file"
+                                                                                        }
+                                                                                    },
+                                                                                    "type": "dir"
+                                                                                }
+                                                                            },
+                                                                            "type": "dir"
+                                                                        }
+                                                                    },
+                                                                    "type": "dir"
+                                                                },
+                                                                "utils": {
+                                                                    "children": {
+                                                                        "composer.json": {
+                                                                            "type": "file"
+                                                                        },
+                                                                        "license.md": {
+                                                                            "type": "file"
+                                                                        },
+                                                                        "readme.md": {
+                                                                            "type": "file"
+                                                                        },
+                                                                        "src": {
+                                                                            "children": {
+                                                                                "Iterators": {
+                                                                                    "children": {
+                                                                                        "CachingIterator.php": {
+                                                                                            "type": "file"
+                                                                                        },
+                                                                                        "Filter.php": {
+                                                                                            "type": "file"
+                                                                                        },
+                                                                                        "Mapper.php": {
+                                                                                            "type": "file"
+                                                                                        },
+                                                                                        "RecursiveFilter.php": {
+                                                                                            "type": "file"
+                                                                                        }
+                                                                                    },
+                                                                                    "type": "dir"
+                                                                                },
+                                                                                "Utils": {
+                                                                                    "children": {
+                                                                                        "ArrayHash.php": {
+                                                                                            "type": "file"
+                                                                                        },
+                                                                                        "ArrayList.php": {
+                                                                                            "type": "file"
+                                                                                        },
+                                                                                        "Arrays.php": {
+                                                                                            "type": "file"
+                                                                                        },
+                                                                                        "Callback.php": {
+                                                                                            "type": "file"
+                                                                                        },
+                                                                                        "DateTime.php": {
+                                                                                            "type": "file"
+                                                                                        },
+                                                                                        "FileSystem.php": {
+                                                                                            "type": "file"
+                                                                                        },
+                                                                                        "Html.php": {
+                                                                                            "type": "file"
+                                                                                        },
+                                                                                        "IHtmlString.php": {
+                                                                                            "type": "file"
+                                                                                        },
+                                                                                        "ITranslator.php": {
+                                                                                            "type": "file"
+                                                                                        },
+                                                                                        "Image.php": {
+                                                                                            "type": "file"
+                                                                                        },
+                                                                                        "Json.php": {
+                                                                                            "type": "file"
+                                                                                        },
+                                                                                        "Object.php": {
+                                                                                            "type": "file"
+                                                                                        },
+                                                                                        "ObjectMixin.php": {
+                                                                                            "type": "file"
+                                                                                        },
+                                                                                        "Paginator.php": {
+                                                                                            "type": "file"
+                                                                                        },
+                                                                                        "Random.php": {
+                                                                                            "type": "file"
+                                                                                        },
+                                                                                        "Strings.php": {
+                                                                                            "type": "file"
+                                                                                        },
+                                                                                        "Validators.php": {
+                                                                                            "type": "file"
+                                                                                        },
+                                                                                        "exceptions.php": {
+                                                                                            "type": "file"
+                                                                                        }
+                                                                                    },
+                                                                                    "type": "dir"
+                                                                                }
+                                                                            },
+                                                                            "type": "dir"
+                                                                        }
+                                                                    },
+                                                                    "type": "dir"
+                                                                }
+                                                            },
+                                                            "type": "dir"
+                                                        }
+                                                    },
+                                                    "type": "dir"
+                                                }
+                                            },
+                                            "type": "dir"
+                                        },
+                                        "rz_selector_elements": {
+                                            "children": {
+                                                "custom.json": {
+                                                    "type": "file"
+                                                },
+                                                "form.json": {
+                                                    "type": "file"
+                                                },
+                                                "manifest.json": {
+                                                    "type": "file"
+                                                },
+                                                "rz_selector_elements.php": {
+                                                    "type": "file"
+                                                }
+                                            },
+                                            "type": "dir"
+                                        },
+                                        "rz_selector_pseudo_class": {
+                                            "children": {
+                                                "custom.json": {
+                                                    "type": "file"
+                                                },
+                                                "form.json": {
+                                                    "type": "file"
+                                                },
+                                                "manifest.json": {
+                                                    "type": "file"
+                                                },
+                                                "rz_selector_pseudo_class.php": {
+                                                    "type": "file"
+                                                }
+                                            },
+                                            "type": "dir"
+                                        },
+                                        "rz_style_animation_scroll": {
+                                            "children": {
+                                                "custom.json": {
+                                                    "type": "file"
+                                                },
+                                                "form.json": {
+                                                    "type": "file"
+                                                },
+                                                "manifest.json": {
+                                                    "type": "file"
+                                                },
+                                                "rz_style_animation_scroll.php": {
+                                                    "type": "file"
+                                                }
+                                            },
+                                            "type": "dir"
+                                        },
+                                        "rz_style_border": {
+                                            "children": {
+                                                "custom.json": {
+                                                    "type": "file"
+                                                },
+                                                "form.json": {
+                                                    "type": "file"
+                                                },
+                                                "manifest.json": {
+                                                    "type": "file"
+                                                },
+                                                "rz_style_border.php": {
+                                                    "type": "file"
+                                                }
+                                            },
+                                            "type": "dir"
+                                        },
+                                        "rz_style_font": {
+                                            "children": {
+                                                "custom.json": {
+                                                    "type": "file"
+                                                },
+                                                "form.json": {
+                                                    "type": "file"
+                                                },
+                                                "manifest.json": {
+                                                    "type": "file"
+                                                },
+                                                "rz_style_font.php": {
+                                                    "type": "file"
+                                                }
+                                            },
+                                            "type": "dir"
+                                        },
+                                        "rz_style_padding_margin": {
+                                            "children": {
+                                                "custom.json": {
+                                                    "type": "file"
+                                                },
+                                                "form.json": {
+                                                    "type": "file"
+                                                },
+                                                "manifest.json": {
+                                                    "type": "file"
+                                                },
+                                                "rz_style_padding_margin.php": {
+                                                    "type": "file"
+                                                }
+                                            },
+                                            "type": "dir"
+                                        },
+                                        "rz_style_width_height": {
+                                            "children": {
+                                                "custom.json": {
+                                                    "type": "file"
+                                                },
+                                                "form.json": {
+                                                    "type": "file"
+                                                },
+                                                "manifest.json": {
+                                                    "type": "file"
+                                                },
+                                                "rz_style_width_height.php": {
+                                                    "type": "file"
+                                                }
+                                            },
+                                            "type": "dir"
+                                        },
+                                        "rz_svg": {
+                                            "children": {
+                                                "custom.json": {
+                                                    "type": "file"
+                                                },
+                                                "form.json": {
+                                                    "type": "file"
+                                                },
+                                                "manifest.json": {
+                                                    "type": "file"
+                                                },
+                                                "rz_svg.php": {
+                                                    "type": "file"
+                                                }
+                                            },
+                                            "type": "dir"
+                                        },
+                                        "rz_textfield": {
+                                            "children": {
+                                                "custom.json": {
+                                                    "type": "file"
+                                                },
+                                                "form.json": {
+                                                    "type": "file"
+                                                },
+                                                "manifest.json": {
+                                                    "type": "file"
+                                                },
+                                                "rz_textfield.php": {
+                                                    "type": "file"
+                                                }
+                                            },
+                                            "type": "dir"
+                                        }
+                                    },
+                                    "type": "dir"
+                                },
+                                "modules.php": {
+                                    "type": "file"
+                                },
+                                "navigation.php": {
+                                    "type": "file"
+                                },
+                                "pages": {
+                                    "children": {
+                                        "PAGE-09c5dddd-ce7c-4d7a-b9e1-4909f209c09f-PAGE": {
+                                            "children": {
+                                                "attributes.php": {
+                                                    "type": "file"
+                                                },
+                                                "contentarray.php": {
+                                                    "type": "file"
+                                                },
+                                                "global.php": {
+                                                    "type": "file"
+                                                },
+                                                "meta.php": {
+                                                    "type": "file"
+                                                }
+                                            },
+                                            "type": "dir"
+                                        },
+                                        "PAGE-26918879-8c46-4d19-bf60-13b2f7ae01c9-PAGE": {
+                                            "children": {
+                                                "attributes.php": {
+                                                    "type": "file"
+                                                },
+                                                "contentarray.php": {
+                                                    "type": "file"
+                                                },
+                                                "global.php": {
+                                                    "type": "file"
+                                                },
+                                                "meta.php": {
+                                                    "type": "file"
+                                                }
+                                            },
+                                            "type": "dir"
+                                        },
+                                        "PAGE-a8e00fc9-7e5d-4ca6-a3f3-2a0f8ced47e8-PAGE": {
+                                            "children": {
+                                                "attributes.php": {
+                                                    "type": "file"
+                                                },
+                                                "contentarray.php": {
+                                                    "type": "file"
+                                                },
+                                                "global.php": {
+                                                    "type": "file"
+                                                },
+                                                "meta.php": {
+                                                    "type": "file"
+                                                }
+                                            },
+                                            "type": "dir"
+                                        },
+                                        "PAGE-b2b73b09-cef7-4571-b959-fe92eede6757-PAGE": {
+                                            "children": {
+                                                "attributes.php": {
+                                                    "type": "file"
+                                                },
+                                                "contentarray.php": {
+                                                    "type": "file"
+                                                },
+                                                "global.php": {
+                                                    "type": "file"
+                                                },
+                                                "meta.php": {
+                                                    "type": "file"
+                                                }
+                                            },
+                                            "type": "dir"
+                                        }
+                                    },
+                                    "type": "dir"
+                                },
+                                "resolutions.php": {
+                                    "type": "file"
+                                },
+                                "urls.php": {
+                                    "type": "file"
+                                },
+                                "websitesettings.php": {
+                                    "type": "file"
+                                }
+                            },
+                            "type": "dir"
+                        },
+                        "info": {
+                            "children": {
+                                "builder.json": {
+                                    "type": "file"
+                                },
+                                "creator.json": {
+                                    "type": "file"
+                                }
+                            },
+                            "type": "dir"
+                        },
+                        "server": {
+                            "children": {
+                                "bootstrap.php": {
+                                    "type": "file"
+                                },
+                                "constants.php": {
+                                    "type": "file"
+                                },
+                                "library": {
+                                    "children": {
+                                        "Render": {
+                                            "children": {
+                                                "APIs": {
+                                                    "children": {
+                                                        "APIv1": {
+                                                            "children": {
+                                                                "APIv1Factory.php": {
+                                                                    "type": "file"
+                                                                },
+                                                                "CSSAPI.php": {
+                                                                    "type": "file"
+                                                                },
+                                                                "EditableHtmlTag.php": {
+                                                                    "type": "file"
+                                                                },
+                                                                "HeadAPI.php": {
+                                                                    "type": "file"
+                                                                },
+                                                                "MediaException.php": {
+                                                                    "type": "file"
+                                                                },
+                                                                "MediaIcon.php": {
+                                                                    "type": "file"
+                                                                },
+                                                                "MediaImage.php": {
+                                                                    "type": "file"
+                                                                },
+                                                                "MediaImageInvalidException.php": {
+                                                                    "type": "file"
+                                                                },
+                                                                "MediaItem.php": {
+                                                                    "type": "file"
+                                                                },
+                                                                "MediaItemNotFoundException.php": {
+                                                                    "type": "file"
+                                                                },
+                                                                "Navigation.php": {
+                                                                    "type": "file"
+                                                                },
+                                                                "Page.php": {
+                                                                    "type": "file"
+                                                                },
+                                                                "RenderAPI.php": {
+                                                                    "type": "file"
+                                                                },
+                                                                "WebsiteSettingsNotFound.php": {
+                                                                    "type": "file"
+                                                                }
+                                                            },
+                                                            "type": "dir"
+                                                        },
+                                                        "LegacyModuleAPI.php": {
+                                                            "type": "file"
+                                                        },
+                                                        "RootAPIv1": {
+                                                            "children": {
+                                                                "RootAPIv1Factory.php": {
+                                                                    "type": "file"
+                                                                },
+                                                                "RootCssAPI.php": {
+                                                                    "type": "file"
+                                                                },
+                                                                "RootRenderAPI.php": {
+                                                                    "type": "file"
+                                                                }
+                                                            },
+                                                            "type": "dir"
+                                                        }
+                                                    },
+                                                    "type": "dir"
+                                                },
+                                                "AbstractRenderer.php": {
+                                                    "type": "file"
+                                                },
+                                                "Cache": {
+                                                    "children": {
+                                                        "FileBasedJsonCache.php": {
+                                                            "type": "file"
+                                                        },
+                                                        "ICache.php": {
+                                                            "type": "file"
+                                                        },
+                                                        "NoneCache.php": {
+                                                            "type": "file"
+                                                        }
+                                                    },
+                                                    "type": "dir"
+                                                },
+                                                "Exceptions": {
+                                                    "children": {
+                                                        "ModuleAPITypeNotFound.php": {
+                                                            "type": "file"
+                                                        },
+                                                        "ModuleNotFoundException.php": {
+                                                            "type": "file"
+                                                        },
+                                                        "NoContentException.php": {
+                                                            "type": "file"
+                                                        },
+                                                        "NodeNotFoundException.php": {
+                                                            "type": "file"
+                                                        }
+                                                    },
+                                                    "type": "dir"
+                                                },
+                                                "IconHelper": {
+                                                    "children": {
+                                                        "IIconHelper.php": {
+                                                            "type": "file"
+                                                        },
+                                                        "SimpleIconHelper.php": {
+                                                            "type": "file"
+                                                        }
+                                                    },
+                                                    "type": "dir"
+                                                },
+                                                "ImageToolFactory": {
+                                                    "children": {
+                                                        "IImageToolFactory.php": {
+                                                            "type": "file"
+                                                        },
+                                                        "ImageTool.php": {
+                                                            "type": "file"
+                                                        },
+                                                        "LiveImageToolFactory.php": {
+                                                            "type": "file"
+                                                        },
+                                                        "SimpleImageToolFactory.php": {
+                                                            "type": "file"
+                                                        }
+                                                    },
+                                                    "type": "dir"
+                                                },
+                                                "InfoStorage": {
+                                                    "children": {
+                                                        "ColorInfoStorage": {
+                                                            "children": {
+                                                                "ArrayBasedColorInfoStorage.php": {
+                                                                    "type": "file"
+                                                                },
+                                                                "Exceptions": {
+                                                                    "children": {
+                                                                        "ColorDoesNotExists.php": {
+                                                                            "type": "file"
+                                                                        },
+                                                                        "ColorValueDoesNotExists.php": {
+                                                                            "type": "file"
+                                                                        }
+                                                                    },
+                                                                    "type": "dir"
+                                                                },
+                                                                "IColorInfoStorage.php": {
+                                                                    "type": "file"
+                                                                }
+                                                            },
+                                                            "type": "dir"
+                                                        },
+                                                        "MediaInfoStorage": {
+                                                            "children": {
+                                                                "AbstractMediaInfoStorage.php": {
+                                                                    "type": "file"
+                                                                },
+                                                                "ArrayBasedMediaInfoStorage.php": {
+                                                                    "type": "file"
+                                                                },
+                                                                "IMediaInfoStorage.php": {
+                                                                    "type": "file"
+                                                                },
+                                                                "LiveArrayMediaInfoStorage.php": {
+                                                                    "type": "file"
+                                                                },
+                                                                "MediaInfoStorageItem.php": {
+                                                                    "type": "file"
+                                                                },
+                                                                "MediaInfoStorageItemDoesNotExists.php": {
+                                                                    "type": "file"
+                                                                }
+                                                            },
+                                                            "type": "dir"
+                                                        },
+                                                        "ModuleInfoStorage": {
+                                                            "children": {
+                                                                "ArrayBasedModuleInfoStorage.php": {
+                                                                    "type": "file"
+                                                                },
+                                                                "Exceptions": {
+                                                                    "children": {
+                                                                        "ModuleDoesNotExists.php": {
+                                                                            "type": "file"
+                                                                        }
+                                                                    },
+                                                                    "type": "dir"
+                                                                },
+                                                                "IModuleInfoStorage.php": {
+                                                                    "type": "file"
+                                                                }
+                                                            },
+                                                            "type": "dir"
+                                                        },
+                                                        "NavigationInfoStorage": {
+                                                            "children": {
+                                                                "AbstractNavigationInfoStorage.php": {
+                                                                    "type": "file"
+                                                                },
+                                                                "ArrayBasedNavigationInfoStorage.php": {
+                                                                    "type": "file"
+                                                                },
+                                                                "Exceptions": {
+                                                                    "children": {
+                                                                        "NavigationInfoStorageItemDoesNotExists.php": {
+                                                                            "type": "file"
+                                                                        }
+                                                                    },
+                                                                    "type": "dir"
+                                                                },
+                                                                "INavigationInfoStorage.php": {
+                                                                    "type": "file"
+                                                                },
+                                                                "LiveArrayNavigationInfoStorage.php": {
+                                                                    "type": "file"
+                                                                },
+                                                                "NavigationInfoStorageItem.php": {
+                                                                    "type": "file"
+                                                                }
+                                                            },
+                                                            "type": "dir"
+                                                        },
+                                                        "WebsiteInfoStorage": {
+                                                            "children": {
+                                                                "ArrayBasedWebsiteInfoStorage.php": {
+                                                                    "type": "file"
+                                                                },
+                                                                "Exceptions": {
+                                                                    "children": {
+                                                                        "WebsiteSettingsDoesNotExists.php": {
+                                                                            "type": "file"
+                                                                        }
+                                                                    },
+                                                                    "type": "dir"
+                                                                },
+                                                                "IWebsiteInfoStorage.php": {
+                                                                    "type": "file"
+                                                                },
+                                                                "LiveArrayWebsiteInfoStorage.php": {
+                                                                    "type": "file"
+                                                                }
+                                                            },
+                                                            "type": "dir"
+                                                        }
+                                                    },
+                                                    "type": "dir"
+                                                },
+                                                "LegacyModule.php": {
+                                                    "type": "file"
+                                                },
+                                                "LiveMediaCdn.php": {
+                                                    "type": "file"
+                                                },
+                                                "LiveMediaContext.php": {
+                                                    "type": "file"
+                                                },
+                                                "LiveRenderer.php": {
+                                                    "type": "file"
+                                                },
+                                                "MediaCDNHelper": {
+                                                    "children": {
+                                                        "Exceptions": {
+                                                            "children": {
+                                                                "MediaItemFileNotExists.php": {
+                                                                    "type": "file"
+                                                                },
+                                                                "OldMediaRequest.php": {
+                                                                    "type": "file"
+                                                                }
+                                                            },
+                                                            "type": "dir"
+                                                        },
+                                                        "MediaCache.php": {
+                                                            "type": "file"
+                                                        },
+                                                        "MediaRequest.php": {
+                                                            "type": "file"
+                                                        },
+                                                        "MediaResponse": {
+                                                            "children": {
+                                                                "DownloadResponse.php": {
+                                                                    "type": "file"
+                                                                },
+                                                                "ErrorResponse.php": {
+                                                                    "type": "file"
+                                                                },
+                                                                "IconResponse.php": {
+                                                                    "type": "file"
+                                                                },
+                                                                "ImageResponse.php": {
+                                                                    "type": "file"
+                                                                },
+                                                                "MovedResponse.php": {
+                                                                    "type": "file"
+                                                                },
+                                                                "NotFoundResponse.php": {
+                                                                    "type": "file"
+                                                                },
+                                                                "ResponseInterface.php": {
+                                                                    "type": "file"
+                                                                },
+                                                                "StreamResponse.php": {
+                                                                    "type": "file"
+                                                                }
+                                                            },
+                                                            "type": "dir"
+                                                        },
+                                                        "MediaResponseFactory.php": {
+                                                            "type": "file"
+                                                        }
+                                                    },
+                                                    "type": "dir"
+                                                },
+                                                "MediaContext.php": {
+                                                    "type": "file"
+                                                },
+                                                "MediaUrlHelper": {
+                                                    "children": {
+                                                        "CDNMediaUrlHelper.php": {
+                                                            "type": "file"
+                                                        },
+                                                        "IMediaUrlHelper.php": {
+                                                            "type": "file"
+                                                        },
+                                                        "UnknownOperation.php": {
+                                                            "type": "file"
+                                                        },
+                                                        "ValidationHelper": {
+                                                            "children": {
+                                                                "LiveValidationHelper.php": {
+                                                                    "type": "file"
+                                                                },
+                                                                "NoneValidationHelper.php": {
+                                                                    "type": "file"
+                                                                },
+                                                                "SecureFileValidationHelper.php": {
+                                                                    "type": "file"
+                                                                },
+                                                                "ValidationHelperInterface.php": {
+                                                                    "type": "file"
+                                                                }
+                                                            },
+                                                            "type": "dir"
+                                                        }
+                                                    },
+                                                    "type": "dir"
+                                                },
+                                                "ModuleInfo.php": {
+                                                    "type": "file"
+                                                },
+                                                "ModuleInterface.php": {
+                                                    "type": "file"
+                                                },
+                                                "NodeFactory.php": {
+                                                    "type": "file"
+                                                },
+                                                "NodeTree.php": {
+                                                    "type": "file"
+                                                },
+                                                "Nodes": {
+                                                    "children": {
+                                                        "AbstractRenderNode.php": {
+                                                            "type": "file"
+                                                        },
+                                                        "DynamicHTMLNode.php": {
+                                                            "type": "file"
+                                                        },
+                                                        "INode.php": {
+                                                            "type": "file"
+                                                        },
+                                                        "LegacyNode.php": {
+                                                            "type": "file"
+                                                        }
+                                                    },
+                                                    "type": "dir"
+                                                },
+                                                "PageUrlHelper": {
+                                                    "children": {
+                                                        "AbstractPageUrlHelper.php": {
+                                                            "type": "file"
+                                                        },
+                                                        "IPageUrlHelper.php": {
+                                                            "type": "file"
+                                                        },
+                                                        "NonePageUrlHelper.php": {
+                                                            "type": "file"
+                                                        },
+                                                        "PageUrlNotAvailable.php": {
+                                                            "type": "file"
+                                                        },
+                                                        "SimplePageUrlHelper.php": {
+                                                            "type": "file"
+                                                        }
+                                                    },
+                                                    "type": "dir"
+                                                },
+                                                "RenderContext.php": {
+                                                    "type": "file"
+                                                },
+                                                "RequestHelper": {
+                                                    "children": {
+                                                        "HttpRequestInterface.php": {
+                                                            "type": "file"
+                                                        },
+                                                        "SimpleHttpRequest.php": {
+                                                            "type": "file"
+                                                        }
+                                                    },
+                                                    "type": "dir"
+                                                },
+                                                "Unit.php": {
+                                                    "type": "file"
+                                                },
+                                                "UnitFactory.php": {
+                                                    "type": "file"
+                                                },
+                                                "Visitors": {
+                                                    "children": {
+                                                        "AbstractVisitor.php": {
+                                                            "type": "file"
+                                                        },
+                                                        "CssOnlyVisitor.php": {
+                                                            "type": "file"
+                                                        },
+                                                        "HeadOnlyVisitor.php": {
+                                                            "type": "file"
+                                                        },
+                                                        "HtmlVisitor.php": {
+                                                            "type": "file"
+                                                        },
+                                                        "ModuleDataVisitor.php": {
+                                                            "type": "file"
+                                                        },
+                                                        "UnitDataVisitor.php": {
+                                                            "type": "file"
+                                                        }
+                                                    },
+                                                    "type": "dir"
+                                                }
+                                            },
+                                            "type": "dir"
+                                        },
+                                        "Seitenbau": {
+                                            "children": {
+                                                "Image": {
+                                                    "children": {
+                                                        "Adapter": {
+                                                            "children": {
+                                                                "Phpgd.php": {
+                                                                    "type": "file"
+                                                                },
+                                                                "Phpimagemagick.php": {
+                                                                    "type": "file"
+                                                                }
+                                                            },
+                                                            "type": "dir"
+                                                        },
+                                                        "Base.php": {
+                                                            "type": "file"
+                                                        },
+                                                        "Image.php": {
+                                                            "type": "file"
+                                                        },
+                                                        "ImageException.php": {
+                                                            "type": "file"
+                                                        }
+                                                    },
+                                                    "type": "dir"
+                                                },
+                                                "Mimetype.php": {
+                                                    "type": "file"
+                                                }
+                                            },
+                                            "type": "dir"
+                                        }
+                                    },
+                                    "type": "dir"
+                                }
+                            },
+                            "type": "dir"
+                        }
+                    },
+                    "type": "dir"
+                }
+            },
+            "type": "dir"
+        },
+        "index.php": {
+            "type": "file"
+        }
+    }
+}

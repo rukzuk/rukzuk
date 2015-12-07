@@ -1,0 +1,72 @@
+@import "colors";
+
+.CMSformfieldwrapperresponsive {
+
+    position: relative;
+
+    &.CMSonofffieldset-wrapper {
+      > .indicator {
+        display: none
+      }
+      > div.x-form-item > label.x-form-item-label {
+        margin-left: 0;
+      }
+    }
+
+    > div.x-form-item > label.x-form-item-label {
+        margin-left: 16px;
+    }
+
+    > .indicator {
+        position: absolute;
+        display: none;
+
+        width: 13px;
+        height: 9px;
+        border-radius: 2px;
+
+        top: 3px;
+        left: 0;
+    }
+
+    > .indicator {
+        display: block;
+        cursor: pointer;
+        background: url('../images/responsive-indicator.png') no-repeat center center;
+        &:hover {
+            background-image: url('../images/delete-style.png');
+        }
+    }
+
+    &.bp-default {
+        > .indicator {
+            background-color: transparent;
+            cursor: default;
+            &:hover {
+                background-image: url('../images/responsive-indicator.png');
+            }
+        }
+    }
+
+    &.valueInherit {
+        > .indicator {
+            cursor: default;
+            &:hover {
+                background-image: url('../images/responsive-indicator.png');
+            }
+        }
+    }
+
+    // Responsive colors
+    $i: 0;
+    @each $breakpoint-color in $breakpoint-colors {
+        $i: $i+1;
+        &.bp-res#{$i} {
+            $color: transparentize($breakpoint-color, $breakpoint-transparency-dark);
+            > .indicator {
+                background-color: $color;
+            }
+        }
+    }
+
+}

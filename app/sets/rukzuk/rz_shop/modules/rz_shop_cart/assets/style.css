@@ -1,0 +1,183 @@
+/* cart styles */
+.cartOverview .cartTable {
+    width: 100%;
+}
+
+.cartOverview .cartTable, .cartOverview .cartTable td, .cartOverview .cartTable th {
+    padding: 8px;
+}
+
+.cartOverview .cartTable th {
+    text-align: left;
+    background: rgba(6, 8, 10, 0.15);
+}
+
+.cartOverview .cartTable .vatSum {
+    font-size: small;
+    padding-top: 0;
+}
+
+.cartOverview .cartTable tr.itemRow:nth-child(even) {
+    background: transparent
+}
+
+.cartOverview .cartTable tr.itemRow:nth-child(odd) {
+    background: rgba(6, 8, 10, 0.05)
+}
+
+.cartOverview .cartTable .fullSum {
+    font-weight: bold;
+}
+
+.cartOverview .cartTable .fullSum td {
+    padding-bottom: 0;
+}
+
+.cartOverview .cartTable td.action {
+    text-align: center;
+}
+
+.cartOverview .cartTable .name {
+    text-align: left;
+    width: 50%;
+}
+
+.cartOverview .cartTable .amount {
+    text-align: center;
+    width: 10%;
+}
+
+.cartOverview .cartTable .number {
+    text-align: right;
+}
+.cartOverview .cartTable .emptyCart {
+    text-align: center;
+}
+
+.cartOverview .cartTable .variant:not(:empty):before {
+    content: "\ \2013\ ";
+}
+
+.cartOverview .cartTable .rowRemoveButton {
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 100%;
+}
+
+.cartOverview .cartTable .rowRemoveButton:hover {
+    opacity: 0.8;
+}
+
+.cartButtonBar {
+    display: block;
+    text-align: right;
+}
+
+.cartButtonBar button {
+    margin-left: 15px;
+    margin-bottom: 15px;
+    padding: 8px 20px;
+    min-width: 150px;
+    cursor: pointer;
+}
+
+.checkoutForm input, .checkoutForm label, .checkoutForm textarea, .checkoutForm select {
+    display: block;
+    width: 100%;
+}
+
+.checkoutForm input, .checkoutForm select {
+    height: 1.6em;
+}
+
+.checkoutForm input[type=checkbox], .checkoutForm input[type=checkbox] + label {
+    width: auto;
+    display: inline-block;
+}
+
+.checkoutForm input[type=checkbox] + label {
+    padding-left: 0.2em;
+}
+
+.checkoutForm input {
+    margin-bottom: 1em;
+}
+
+.checkoutForm label.error {
+    margin-top: -0.9em;
+    margin-bottom: 1em;
+    color: red;
+}
+
+.checkoutForm .adrGroup {
+    float: left;
+    width: 40%;
+}
+
+.checkoutForm .adrGroup.billing {
+    margin-right: 20%;
+}
+
+.checkoutForm .group {
+    width: 100%;
+    clear: both;
+}
+
+.checkoutForm .adrGroup, .checkoutForm .group {
+    padding-top: 5em;
+}
+
+.checkoutForm .adrGroup h3, .checkoutForm .group h3 {
+    font-size: 24px;
+    padding-bottom: 1em;
+}
+
+@media all and (max-width: 767px) {
+    .checkoutForm .adrGroup {
+        float: none;
+        width: 100%;
+    }
+}
+
+.cartButtonBar {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+/* Checkbox style */
+.checkoutForm label.checkbox {
+    display: block;
+    padding-left: 26px;
+    text-indent: -26px;
+    line-height: 100%;
+}
+.checkoutForm label.checkbox > input[type=checkbox] {
+    width: 24px; /* needs to be in sync with font size */
+    height: 24px;
+    padding: 0;
+    margin:0;
+    vertical-align: bottom;
+    position: relative;
+    top: -1px;
+    *overflow: hidden;
+}
+
+.checkoutForm label.checkbox.small {
+    margin-top: 1em;
+    padding-left: 18px;
+    text-indent: -18px;
+}
+
+.checkoutForm label.checkbox.small > input[type=checkbox] {
+    width: 16px; /* needs to be in sync with font size */
+    height: 16px;
+}
+
+
+.checkoutForm input, .checkoutForm textarea, .checkoutForm select, .checkoutForm button {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}

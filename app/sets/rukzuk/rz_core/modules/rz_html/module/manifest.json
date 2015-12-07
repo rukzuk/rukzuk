@@ -1,0 +1,12 @@
+{
+    "name": "{\"de\":\"HTML-Code\",\"en\":\"HTML-Code\"}",
+    "description": "{\"de\":\"Eingabe von beliebigem HTML-Code zum Einfügen von Embed-Codes, Tracking-Codes, Meta-Tags, …\",\"en\":\"Enter custom HTML code to insert embed codes, tracking codes, meta tags, …\"}",
+    "version": "dev",
+    "icon": "html2.png",
+    "category": "{\"de\":\"Externe Inhalte\",\"en\":\"External Content\"}",
+    "moduleType": "default",
+    "allowedChildModuleType": "extension",
+    "ghostContainerMode": "force_off",
+    "reRenderRequired": false,
+    "apiType": "APIv1"
+}

@@ -1,0 +1,50 @@
+{
+    "descr": {
+        "id": "HtmlRichText",
+        "text": "__i18n_formElements.elementHtmlRichText",
+        "iconCls": "richtext",
+        "hasValue": true
+    },
+    "params": [
+        {
+            "name": "xtype",
+            "value": "CMSrichtexteditorbutton",
+            "xtype": null
+        },
+        {
+            "name": "isMeta",
+            "value": false,
+            "fieldLabel": "__i18n_formElements.isGlobal",
+            "xtype": "checkbox"
+        },
+        {
+            "name": "showText",
+            "value": false,
+            "xtype": null
+        },
+        {
+            "name": "fieldLabel",
+            "value": "__i18n_formElements.fieldLabel",
+            "xtype": "textfield",
+            "allowBlank": false,
+            "emptyText": "__i18n_formElements.fieldLabelEmptyText",
+            "fieldLabel": "__i18n_formElements.fieldLabel"
+        },
+        {
+            "name": "text",
+            "value": "Text bearbeiten",
+            "xtype": "textfield",
+            "allowBlank": false,
+            "emptyText": "__i18n_formElements.buttonEmptyText",
+            "fieldLabel": "__i18n_formElements.buttonLabel"
+        },
+        {
+            "name": "richTextEditorConfig",
+            "value": {
+                "enterKey": "paragraph",
+                "bold": true
+            },
+            "xtype": "CMSrichtexteditorconfiguration"
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "name": "{\"de\":\"Google Analytics\",\"en\":\"Google Analytics\"}",
+    "description": "{\"de\":\"Einbindung des Statistik-Dienstes von Google.\",\"en\":\"Integrate the analytics service from Google.\"}",
+    "version": "dev",
+    "icon": "google-analytics.png",
+    "category": "{\"de\":\"Externe Inhalte\",\"en\":\"External Content\"}",
+    "moduleType": "default",
+    "allowedChildModuleType": "",
+    "ghostContainerMode": "force_off",
+    "reRenderRequired": false,
+    "apiType": "APIv1"
+}

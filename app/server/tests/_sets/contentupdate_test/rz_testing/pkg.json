@@ -1,0 +1,8 @@
+{
+  "name": {
+    "en": "rz_testing.name"
+  },
+  "websiteSettings": [],
+  "pageTypes": [],
+  "modules": ["rz_testing_001", "rz_testing_002"]
+}

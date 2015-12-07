@@ -1,0 +1,13 @@
+{
+  "name": {
+    "de": "Shop Pro-Produkt",
+    "en": "Shop pro product"
+  },
+  "form": [
+    {
+      "foo": "bar",
+      "emtpyStdClass": {},
+      "emptyArray": []
+    }
+  ]
+}

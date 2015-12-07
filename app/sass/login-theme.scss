@@ -1,0 +1,18 @@
+//
+// Login Theme File
+// all theme vars need to be in _theme.scss
+//
+
+@import "theme";
+@import "mixins";
+
+.loginButton {
+  @include gradient-vertical($primary-top, $primary-bottom);
+}
+
+.loginButton:hover {
+  @include gradient-vertical($primary-dark-top, $primary-dark-bottom);
+}
+.logo, .login_logo {
+  background-image: url($logo-url);
+}

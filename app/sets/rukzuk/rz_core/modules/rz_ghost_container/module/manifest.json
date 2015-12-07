@@ -1,0 +1,12 @@
+{
+    "name": "{\"de\":\"Page-Block-Bereich\",\"en\":\"Page Block Area\"}",
+    "description": "{\"de\":\"Alle direkt unterhalb des Page-Block-Bereichs liegenden Module werden zu Page-Blocks. Page-Blocks kannst du auf einer Seite beliebig oft einfügen und sortieren. Bei neuen Seiten ist dieser Bereich zunächst leer.\",\"en\":\"All subordinate modules of the page block area are page blocks. Page blocks can be added and sorted multiple times in every page. In new pages this area is empty.\"}",
+    "version": "dev",
+    "icon": "folder.png",
+    "category": "{\"de\":\" Layout\",\"en\":\" Layout\"}",
+    "moduleType": "default",
+    "allowedChildModuleType": "*",
+    "reRenderRequired": false,
+    "ghostContainerMode": "force_on",
+    "apiType": "APIv1"
+}

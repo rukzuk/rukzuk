@@ -1,0 +1,12 @@
+{
+    "name": "{\"de\":\"Newsletter mit MailChimp\",\"en\":\"Newsletter with MailChimp\"}",
+    "description": "{\"de\":\"Newsletter-Anmeldeformular mit MailChimp einbetten\",\"en\":\"Embed email newsletter signup forms with MailChimp\"}",
+    "version": "dev",
+    "icon": "envelope.svg",
+    "category": "{\"de\":\"Externe Inhalte\",\"en\":\"External Content\"}",
+    "moduleType": "default",
+    "allowedChildModuleType": "extension",
+    "ghostContainerMode": "force_off",
+    "reRenderRequired": false,
+    "apiType": "APIv1"
+}
