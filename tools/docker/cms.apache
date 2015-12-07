@@ -1,0 +1,65 @@
+####
+#### Apache rukzuk development config (tested on 2.4, should work with 2.2)
+####
+<VirtualHost *:80>
+    ServerName localhost
+    ServerAdmin webmaster@localhost
+
+    DocumentRoot /srv/rukzuk/htdocs
+    <Directory /srv/rukzuk >
+        # no MultiViews as this causes problems
+        Options Indexes FollowSymLinks
+        AllowOverride None
+        # allow all (2.x + 2.4)
+        <ifModule mod_authz_core.c>
+            Require all granted
+        </ifModule>
+        <ifModule !mod_authz_core.c>
+            Order Allow,Deny
+            Allow from All
+        </ifModule>
+    </Directory>
+
+    ScriptAlias /cgi-bin/ /usr/lib/cgi-bin/
+    <Directory "/usr/lib/cgi-bin">
+        AllowOverride None
+        Options +ExecCGI -MultiViews +SymLinksIfOwnerMatch
+        Order allow,deny
+        Allow from all
+    </Directory>
+
+    # Possible values include: debug, info, notice, warn, error, crit,
+    # alert, emerg.
+    LogLevel warn
+
+    CustomLog ${APACHE_LOG_DIR}/cms-access.log combined
+    ErrorLog ${APACHE_LOG_DIR}/cms-error.log
+
+    # php.ini overrides
+    php_value include_path .
+    php_value open_basedir /srv/rukzuk:/opt/rukzuk:/tmp:/usr/bin/phantomjs
+    php_value max_execution_time 300
+    php_value memory_limit 256M
+    php_value post_max_size 512M
+    php_value upload_max_filesize 512M
+    php_value error_reporting -1
+    php_value display_startup_errors 1
+    php_value display_errors 1
+    php_value session.save_handler files
+    php_value session.name RZSESSION
+    php_value session.cookie_httponly 1
+    php_value session.cookie_secure 0
+    php_value session.use_strict_mode 1
+
+
+
+    # load cms config
+    AliasMatch ^(?!/cms/data/|/cms/publishing/)(.*) /srv/rukzuk/application/$1
+    IncludeOptional /srv/rukzuk/environment/config/apache/*.conf
+
+    # rukzuk APPLICATION_ENV either production, development or staging
+    SetEnv APPLICATION_ENV standalone
+
+</VirtualHost>
+
+

@@ -1,0 +1,5 @@
+#!/bin/sh
+TZ=MEZ-1MESZ
+export TZ
+. /etc/apache2/envvars
+exec /usr/sbin/apache2 -DNO_DETACH
