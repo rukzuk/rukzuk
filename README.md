@@ -22,15 +22,15 @@ Users use rukzuk to build websites by combining a flexible element called a Modu
 
 ## Who made rukzuk?
 
-The idea was born at SEITENBAU GmbH, an IT-service company and web agency with over 100 employees, based in Constance, Germany. The development of rukzuk is the product of many years of experience working with various content management systems for private companies of all sizes and public administrations.
+The idea was born at [SEITENBAU GmbH](https://seitenbau.github.io/), an IT-service company and web agency with over 100 employees, based in Constance, Germany. The development of rukzuk is the product of many years of experience working with various content management systems for private companies of all sizes and public administrations.
 
 Further information about rukzuk under [https://rukzuk.com](https://rukzuk.com)
 
 # Requirements
 
-rukzuk is tested and deveplopted under Ubuntu 14.04.1.
+rukzuk is tested and developed under Ubuntu 14.04.1.
 
-The following ubuntu packages are required:
+The following Ubuntu packages are required:
 
 * apache2 - Version 2.4
   * mod-ssl
@@ -42,7 +42,7 @@ The following ubuntu packages are required:
   * php5-gd
   * php5-intl
 
-You can use mod-php5, fcgi or php-fpm to connect apache with Php5.
+You can use mod-php5, fcgi or php-fpm to connect Apache with PHP.
 
 Needed third party packages:
 
