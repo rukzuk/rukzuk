@@ -26,6 +26,11 @@ The idea was born at [SEITENBAU GmbH](https://seitenbau.github.io/), an IT-servi
 
 Further information about rukzuk under [https://rukzuk.com](https://rukzuk.com)
 
+# Demo
+
+For a quick demo simply use [`docker pull rukzuk/rukzuk`](https://hub.docker.com/r/rukzuk/rukzuk/), check out the free trial at [https://rukzuk.com](https://rukzuk.com) or watch a video: [Getting Started](https://www.youtube.com/watch?v=CeBHMoWo_TE&list=PLybfRIhLjxOn7jP2C8VxPN1cdcu_7Prck), [Timelapse of creating a website visually in rukzuk](https://www.youtube.com/watch?v=2i38NKPDsM0). 
+
+
 # Requirements
 
 rukzuk is tested and developed under Ubuntu 14.04.1.
