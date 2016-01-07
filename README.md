@@ -31,6 +31,13 @@ Further information about rukzuk under [https://rukzuk.com](https://rukzuk.com)
 For a quick demo simply use [`docker pull rukzuk/rukzuk`](https://hub.docker.com/r/rukzuk/rukzuk/), check out the free trial at [https://rukzuk.com](https://rukzuk.com) or watch a video: [Getting Started](https://www.youtube.com/watch?v=CeBHMoWo_TE&list=PLybfRIhLjxOn7jP2C8VxPN1cdcu_7Prck), [Timelapse of creating a website visually in rukzuk](https://www.youtube.com/watch?v=2i38NKPDsM0). 
 
 
+# Components
+
+* Client application (stored in [/app](app))
+* Webservices (stored in [/app/server](app/server))
+* Modules (stored in [/app/sets/rukzuk](app/sets/rukzuk)), read more in our [module development tutorials](http://developers.rukzuk.com/)
+
+
 # Requirements
 
 rukzuk is tested and developed under Ubuntu 14.04.1.
