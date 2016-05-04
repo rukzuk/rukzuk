@@ -907,23 +907,23 @@
     "formValues": {
         "cssEnablePadding": {
             "type": "bp",
-            "default": true
+            "default": false
         },
         "cssPaddingLeft": {
             "type": "bp",
-            "default": "5px"
+            "default": "0px"
         },
         "cssPaddingRight": {
             "type": "bp",
-            "default": "5px"
+            "default": "0px"
         },
         "cssPaddingTop": {
             "type": "bp",
-            "default": "5px"
+            "default": "0px"
         },
         "cssPaddingBottom": {
             "type": "bp",
-            "default": "5px"
+            "default": "0px"
         },
         "cssEnableMargin": {
             "type": "bp",
