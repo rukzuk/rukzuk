@@ -17,5 +17,12 @@
             }			
         ]    
         
-    }
+    },
+    "i18n":{
+        "selector.cells":{
+            "de":"Zellen",
+            "en":"Cells"
+        }
+    },
+    "selectors": true
 }
