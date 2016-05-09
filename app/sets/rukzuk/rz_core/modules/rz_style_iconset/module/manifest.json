@@ -1,5 +1,5 @@
 {
-    "name": "{\"de\":\"Iconset 'Font Awesome'\",\"en\":\"Icon Set 'Font Awesome'\"}",
+    "name": "{\"de\":\"Iconset 'Font Awesome'\",\"en\":\"Iconset 'Font Awesome'\"}",
     "description": "{\"de\":\"Icon aus der Sammlung 'Font Awesome' einfügen.\",\"en\":\"Insert an icon from the set 'Font Awesome'.\"}",
     "version": "dev",
     "icon": "style-icons.png",
