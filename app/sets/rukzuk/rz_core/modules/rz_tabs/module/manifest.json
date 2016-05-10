@@ -1,0 +1,11 @@
+{
+    "name": "{\"de\":\"Tabs/Akkordeon\",\"en\":\"Tabs/Accordion\"}",
+    "description": "{\"de\":\"Zeigt die untergeordneten Module als Tabs oder Akkordeon an.\",\"en\":\"Displays the subordinate modules as tabs or accordion.\"}",
+    "version": "dev",
+    "icon": "application.png",
+    "category": "{\"de\":\"Container\",\"en\":\"Container\"}",
+    "moduleType": "default",
+    "allowedChildModuleType": "*",
+    "reRenderRequired": false,
+    "apiType": "APIv1"
+}

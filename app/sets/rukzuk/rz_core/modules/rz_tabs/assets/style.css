@@ -1,0 +1,10 @@
+.rz_tabs > input {
+    display: none;
+}
+
+.rz_tabs > label,
+.rz_tabs > div.tabsWrapper > section > label {
+    cursor: pointer;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}

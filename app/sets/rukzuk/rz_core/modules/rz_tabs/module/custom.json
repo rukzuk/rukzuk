@@ -1,0 +1,45 @@
+{
+    "assets":{
+        "css":[
+            {
+                "file":"style.css"
+            }
+        ],
+        "js":[
+            {
+                "file":"notlive\/editMode.js",
+                "mode":"edit",
+                "type":"module"
+            }
+        ]
+    },
+    "i18n":{
+        "selector.tabNavigationItem":{
+            "de":"Tab-Navigation Element",
+            "en":"Tab navigation item"
+        },
+        "selector.tabNavigationItemActive":{
+            "de":"Tab-Navigation Element aktiv",
+            "en":"Tab navigation item active"
+        },
+        "selector.tabContent":{
+            "de":"Tab-Inhalte",
+            "en":"Tab content"
+        }
+    },
+    "selectors":[
+        {
+            "title":"__i18n_selector.tabNavigationItem",
+            "selector":"label.tabLabel",
+            "enableNthTypeOf":true
+        },
+        {
+            "title":"__i18n_selector.tabNavigationItemActive",
+            "selector":"input:checked + label.tabLabel, input:nth-of-type(1):checked ~ .tabsWrapper > section:nth-of-type(1) > label, input:nth-of-type(2):checked ~ .tabsWrapper > section:nth-of-type(2) > label, input:nth-of-type(3):checked ~ .tabsWrapper > section:nth-of-type(3) > label, input:nth-of-type(4):checked ~ .tabsWrapper > section:nth-of-type(4) > label, input:nth-of-type(5):checked ~ .tabsWrapper > section:nth-of-type(5) > label, input:nth-of-type(6):checked ~ .tabsWrapper > section:nth-of-type(6) > label, input:nth-of-type(7):checked ~ .tabsWrapper > section:nth-of-type(7) > label, input:nth-of-type(8):checked ~ .tabsWrapper > section:nth-of-type(8) > label, input:nth-of-type(9):checked ~ .tabsWrapper > section:nth-of-type(9) > label, input:nth-of-type(10):checked ~ .tabsWrapper > section:nth-of-type(10) > label"
+        },
+        {
+            "title":"__i18n_selector.tabContent",
+            "selector":"section.tabContent > div"
+        }
+    ]
+}
