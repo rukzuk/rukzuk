@@ -827,19 +827,19 @@
     "formValues": {
         "cssEnablePosition": {
             "type": "bp",
-            "default": true
+            "default": false
         },
         "cssShiftX": {
             "type": "bp",
-            "default": "5%"
+            "default": "0%"
         },
         "cssShiftY": {
             "type": "bp",
-            "default": "20px"
+            "default": "0px"
         },
         "cssPositionType": {
             "type": "bp",
-            "default": "absolute"
+            "default": "relative"
         },
         "cssAbsoluteOrigin": {
             "type": "bp",
