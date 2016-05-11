@@ -58,8 +58,16 @@ class rz_thumbnail_gallery extends SimpleModule
             $heightPercent = $globalHeightPercent;
           }
           $cropHeight = ($image->getWidth() * $heightPercent) / 100;
+
+          if ($renderApi->getFormValue($unit, 'showImageTitles')) {
+            $name = $renderApi->getMediaItem($imageId)->getName();
+            $attributes = array('title' => $name);
+          } else {
+            $attributes = null;
+          }
+
           // image tag
-          $imgTag = $this->getResponsiveImage($renderApi, $unit, $moduleInfo)->getImageTag($image, array('resize' => array('width' => $image->getWidth(), 'height' => $cropHeight), 'quality' => $imageQuality));
+          $imgTag = $this->getResponsiveImage($renderApi, $unit, $moduleInfo)->getImageTag($image, array('resize' => array('width' => $image->getWidth(), 'height' => $cropHeight), 'quality' => $imageQuality), $attributes);
           echo '<li>' . $imgTag->toString() . '</li>';
         } catch (\Exception $doNothing) {
         }
