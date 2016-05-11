@@ -411,6 +411,57 @@
                         "iconCls": "slider",
                         "hasValue": true
                     }
+                },
+                {
+                    "params": [
+                        {
+                            "name": "CMSvar",
+                            "value": "showImageTitles",
+                            "allowBlank": false,
+                            "minLength": 3,
+                            "maskRe": {},
+                            "stripCharsRe": {},
+                            "xtype": "textfield",
+                            "emptyText": "__i18n_generatedFormPanel.varNameEmptyText",
+                            "fieldLabel": "__i18n_generatedFormPanel.varNameLabel"
+                        },
+                        {
+                            "name": "xtype",
+                            "value": "CMSonofftogglebutton",
+                            "xtype": null
+                        },
+                        {
+                            "name": "isResponsive",
+                            "value": false,
+                            "fieldLabel": "__i18n_formElements.isResponsive",
+                            "xtype": "checkbox"
+                        },
+                        {
+                            "name": "isMeta",
+                            "value": false,
+                            "fieldLabel": "__i18n_formElements.isGlobal",
+                            "xtype": "checkbox"
+                        },
+                        {
+                            "name": "fieldLabel",
+                            "value": "{\"de\":\"Bildname in Lightbox und bei Mouseover anzeigen\",\"en\":\"Show image name in lightbox and at mouseover\"}",
+                            "xtype": "textfield",
+                            "allowBlank": true,
+                            "emptyText": "__i18n_formElements.fieldLabelEmptyTextLeft",
+                            "fieldLabel": "__i18n_formElements.fieldLabel"
+                        },
+                        {
+                            "name": "value",
+                            "value": false,
+                            "xtype": null
+                        }
+                    ],
+                    "descr": {
+                        "id": "OnOffToggle",
+                        "text": "__i18n_formElements.elementOnOffToggle",
+                        "iconCls": "onofftoggle",
+                        "hasValue": true
+                    }
                 }
             ]
         },
@@ -721,6 +772,7 @@
             "type": "bp",
             "default": "0px"
         },
+        "showImageTitles": false,
         "imgHeight": "100%",
         "enableImageQuality": false,
         "imageQuality": "85"
