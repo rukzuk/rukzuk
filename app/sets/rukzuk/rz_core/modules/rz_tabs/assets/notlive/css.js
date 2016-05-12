@@ -1,9 +1,10 @@
 DynCSS.defineModule('rz_tabs', function (api, v) {
     var css = {};
 
-    var numberOfTabs = v['tabTitles'].split('\n').length;
+    var numberOfTabs = v.tabTitles.split('\n').length;
+    var i = 0;
 
-    switch (v['cssMode']) {
+    switch (v.cssMode) {
         case 'tabs':
             css['& > label'] = {
                 display: 'inline-block'
@@ -18,7 +19,7 @@ DynCSS.defineModule('rz_tabs', function (api, v) {
                 display: 'block'
             };
 
-            for (var i = 1; i <= numberOfTabs; i++) {
+            for (i = 1; i <= numberOfTabs; i++) {
                 css['& > input:nth-of-type(' + i + '):checked ~ .tabsWrapper > section:nth-of-type(' + i + ')'] = {
                     display: 'block'
                 };
@@ -41,7 +42,7 @@ DynCSS.defineModule('rz_tabs', function (api, v) {
                 display: 'none'
             };
 
-            for (var i = 1; i <= numberOfTabs; i++) {
+            for (i = 1; i <= numberOfTabs; i++) {
                 css['& > input:nth-of-type(' + i + '):checked ~ .tabsWrapper > section:nth-of-type(' + i + ') > div'] = {
                     display: 'block'
                 };
