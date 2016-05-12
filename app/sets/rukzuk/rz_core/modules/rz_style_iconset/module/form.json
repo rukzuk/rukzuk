@@ -123,13 +123,11 @@
                                     "value": [
                                         [
                                             "px",
-                                            "px",
-                                            "1"
+                                            "px"
                                         ],
                                         [
                                             "vw",
-                                            "vw",
-                                            ".1"
+                                            "vw"
                                         ]
                                     ],
                                     "xtype": "CMSkeyvaluetextareaconfigurable",
@@ -3659,6 +3657,46 @@
                                 "text": "__i18n_formElements.elementMultiSelectList",
                                 "iconCls": "combo",
                                 "hasValue": true
+                            }
+                        },
+                        {
+                            "params": [
+                                {
+                                    "name": "xtype",
+                                    "value": "ux-multilinelabel",
+                                    "xtype": null
+                                },
+                                {
+                                    "name": "hideLabel",
+                                    "value": true,
+                                    "xtype": null
+                                },
+                                {
+                                    "name": "text",
+                                    "xtype": "textarea",
+                                    "height": 200,
+                                    "value": "This Iconset uses \"Font Awesome\" (https://fortawesome.github.io/Font-Awesome)",
+                                    "fieldLabel": "__i18n_formElements.commentLabel"
+                                },
+                                {
+                                    "name": "autoLink",
+                                    "value": true,
+                                    "xtype": null
+                                },
+                                {
+                                    "name": "cls",
+                                    "value": "modulecomment",
+                                    "xtype": null
+                                },
+                                {
+                                    "name": "value",
+                                    "xtype": null
+                                }
+                            ],
+                            "descr": {
+                                "id": "Comment",
+                                "text": "__i18n_formElements.elementComment",
+                                "iconCls": "plaintext"
                             }
                         }
                     ]
