@@ -114,6 +114,14 @@ class rz_page_list extends SimpleModule {
                 }
 
                 $page = $navigation->getPage($pageId);
+                $pageAttributes = $page->getPageAttributes();
+                if (array_key_exists('notInPageList', $pageAttributes)) {
+                  if ($pageAttributes['notInPageList'] == 1) {
+                    continue;
+                  }
+                }
+
+
 
                 $items[] = array('pageId' => $pageId, 'pageUrl' => $page->getUrl(),
                                  'pageNavigationTitle' => $page->getNavigationTitle(),
