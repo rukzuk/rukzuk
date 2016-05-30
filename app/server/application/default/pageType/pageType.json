@@ -54,6 +54,16 @@
       "fieldLabel": "{\"de\": \"Bild\", \"en\": \"Image\"}",
       "text": "{\"de\": \"Bild wählen\", \"en\": \"Select image\"}",
       "multiSelect": false
+    },
+    {
+      "type": "OnOffToggle",
+      "CMSvar": "redirectToFirstChild",
+      "fieldLabel": "{\"de\": \"Auf die erste darunterliegende Seite weiterleiten\", \"en\": \"Redirect to first child page\"}"
+    },
+    {
+      "type": "OnOffToggle",
+      "CMSvar": "notInPageList",
+      "fieldLabel": "{\"de\": \"Diese Seite nicht in Seitenlisten anzeigen\", \"en\": \"Hide this page on page lists\"}"
     }
   ],
   "formValues": {
