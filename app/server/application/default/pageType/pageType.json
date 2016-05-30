@@ -38,7 +38,7 @@
       "type": "TextArea",
       "CMSvar": "_description",
       "fieldLabel": "{\"de\": \"Beschreibung für Teaser und Suchmaschinen\", \"en\": \"Description for Teaser and Search Engines\"}",
-      "height": 120
+      "height": 100
     },
     {
       "type": "DateField",
