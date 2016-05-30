@@ -38,7 +38,11 @@ class rz_text_image extends SimpleModule
     if ($api->getFormValue($unit, 'imgsrc') != '') {
       if ($api->getFormValue($unit, 'enableImageLink', '') && (!$api->isEditMode())) {
         $linkTitle = $api->getFormValue($unit, 'linkTitle');
-        echo '<a class="imageContainer" href="'.$this->geturl($api, $unit).'" title="'.$linkTitle.'">';
+        $target = "_self";
+        if ($api->getFormValue($unit, 'openNewWindow')) {
+          $target = "_blank";
+        }
+        echo '<a class="imageContainer" href="'.$this->geturl($api, $unit).'" title="'.$linkTitle.'" target="'.$target.'">';
       } else {
         echo '<div class="imageContainer">';
       }
