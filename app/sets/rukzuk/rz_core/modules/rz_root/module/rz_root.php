@@ -65,9 +65,16 @@ class rz_root extends SimpleModule
       $nav = $rootApi->getNavigation();
       $currentPage = $nav->getPage($nav->getCurrentPageId());
       $pageTitle = $currentPage->getTitle();
+      $pageAttributes = $currentPage->getPageAttributes();
+      $redirect = false;
+      if (array_key_exists('redirectToFirstChild', $pageAttributes)) {
+        if ($pageAttributes['redirectToFirstChild'] == 1) {
+          $redirect = true;
+        }
+      }
 
       // redirect to first child page if page title equal [redirect]
-      if ((strtolower($pageTitle) == '[weiterleiten]') || (strtolower($pageTitle) == '[redirect]')) {
+      if ((strtolower($pageTitle) == '[weiterleiten]') || (strtolower($pageTitle) == '[redirect]') || $redirect) {
 
         $childrenIds = $nav->getChildrenIds($nav->getCurrentPageId());
         if (count($childrenIds)) {
