@@ -72,7 +72,6 @@ table {
     -webkit-box-sizing: border-box;
     /* position and z-index needed for styleIcon */
     position: relative;
-    z-index: 0;
     /* needed for position:fixed on iOS (http://remysharp.com/2012/05/24/issues-with-position-fixed-scrolling-on-ios/) */
     width: 100%;
 }
