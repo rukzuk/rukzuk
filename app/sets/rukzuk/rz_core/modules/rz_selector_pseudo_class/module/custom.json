@@ -11,6 +11,10 @@
         "state.focus":{
             "de":"Fokussiert",
             "en":"Focused"
+        },
+        "state.event":{
+            "de":"Ereignis",
+            "en":"Event"
         }
     },
     "assets":{
