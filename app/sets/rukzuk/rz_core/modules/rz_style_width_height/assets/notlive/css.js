@@ -31,7 +31,9 @@ DynCSS.defineModule('rz_style_width_height', function (api, v, res) {
             result.overflowY = v.cssOverflowY;
             height = v.cssHeight;
         }
-
+        if ((v.cssOverflowY == 'auto') || (v.cssOverflowY == 'scroll')) {
+            result['-webkit-overflow-scrolling'] = 'touch';
+        }
         // Hack for rz_box
         var boxTableFixes;
         if (height.match(/px/)) {
