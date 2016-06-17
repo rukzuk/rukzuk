@@ -7,6 +7,6 @@
     "moduleType": "extension",
     "allowedChildModuleType": "extension",
     "ghostContainerMode": "force_off",
-    "reRenderRequired": false,
+    "reRenderRequired": true,
     "apiType": "APIv1"
 }
