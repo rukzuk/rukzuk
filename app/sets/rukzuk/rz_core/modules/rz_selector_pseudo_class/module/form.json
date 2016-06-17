@@ -23,6 +23,10 @@
                             "allowBlank": false,
                             "emptyText": "__i18n_formElements.fieldLabelOptionalEmptyText",
                             "fieldLabel": "__i18n_formElements.fieldLabel"
+                        },
+                        {
+                            "name": "value",
+                            "xtype": null
                         }
                     ],
                     "descr": {
@@ -148,6 +152,7 @@
                         }
                     ],
                     "descr": {
+                        "id": "HiddenField",
                         "text": "__i18n_formElements.elementHiddenField",
                         "iconCls": "hidden",
                         "hasValue": true
