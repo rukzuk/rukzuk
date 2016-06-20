@@ -1,0 +1,12 @@
+{
+    "name":"{\"de\":\"Ereignis\",\"en\":\"Event\"}",
+    "description":"",
+    "version":"dev",
+    "icon":"event_trigger.png",
+    "category": "30",
+    "moduleType":"extension",
+    "allowedChildModuleType":"extension",
+    "ghostContainerMode": "force_off",
+    "reRenderRequired":true,
+    "apiType":"APIv1"
+}

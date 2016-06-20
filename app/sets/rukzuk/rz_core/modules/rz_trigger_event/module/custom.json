@@ -1,0 +1,37 @@
+{
+    "assets":{
+        "js":[
+            {
+                "file":"jquery.fracs-0.15.0.min.js",
+                "type":"module"
+            },
+			{
+                "file":"notlive\/setModuleName.js",
+                "type":"module",
+                "mode":"edit"
+            },
+            {
+                "file":"triggerEventInit.js",
+                "type":"module"
+            }
+        ]
+    },
+    "i18n":{
+        "error.insideExtensionModule":{
+            "de":"Hinweis: Der Style „Ereignis“ funktioniert nicht innerhalb eines Selektors. Bitte den Style verschieben.",
+            "en":"Note: The style “Event” doesn't work inside selectors. Please move the style."
+        },
+        "click": {
+            "de":"Klick",
+            "en":"Click"
+        },
+        "mouseover": {
+            "de":"Mouseover",
+            "en":"Mouseover"
+        },
+        "scroll": {
+            "de":"Scroll",
+            "en":"Scroll"
+        }
+    }
+}
