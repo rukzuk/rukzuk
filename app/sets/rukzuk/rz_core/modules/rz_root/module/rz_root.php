@@ -66,15 +66,47 @@ class rz_root extends SimpleModule
       $currentPage = $nav->getPage($nav->getCurrentPageId());
       $pageTitle = $currentPage->getTitle();
       $pageAttributes = $currentPage->getPageAttributes();
-      $redirect = false;
-      if (array_key_exists('redirectToFirstChild', $pageAttributes)) {
-        if ($pageAttributes['redirectToFirstChild'] == 1) {
-          $redirect = true;
+      $redirectFirstChild = false;
+      if (array_key_exists('enableRedirect', $pageAttributes)) {
+        if ($pageAttributes['enableRedirect'] == 1) {
+          if ($pageAttributes['redirectType'] == "firstChild") {
+            $redirectFirstChild = true;
+          } else if ($pageAttributes['redirectType'] == "page") {
+            if (array_key_exists('redirectPageId', $pageAttributes)) {
+              $redirectPageId = $pageAttributes['redirectPageId'];
+              if (($redirectPageId != '') && ($redirectPageId != $nav->getCurrentPageId())) {
+                $redirectUrl = $nav->getPage($redirectPageId)->getUrl();
+                if ($redirectUrl != '') {
+                  header('Location: ' . $redirectUrl);
+                  exit();
+                }
+              }
+            }
+          } else {
+            if (array_key_exists('redirectUrl', $pageAttributes)) {
+              $redirectUrl = $pageAttributes['redirectUrl'];
+              if (preg_match("/^[http]/", $redirectUrl)) {
+                if ($rootApi->isLiveMode()) {
+                  header('Location: ' . $redirectUrl);
+                  exit();
+                } else {
+                  $i18n = new Translator($rootApi, $moduleInfo);
+                  $msg1 = $i18n->translate('error.redirectLiveOnly1');
+                  $msg2 = $i18n->translate('error.redirectLiveOnly2');
+                  echo '<html><body style="margin:0;background-color: #454444;font-family:\'Trebuchet MS\',sans-serif;font-size:20px;color: #ffffff;">';
+                  echo '<div style="display:flex;height:100vh;width:80%;padding:0 10%;justify-content:center;align-items:center;text-align:center;">'.$msg1.$redirectUrl.$msg2.'</div>';
+                  echo '</body></html>';
+                  exit();
+                }
+              }
+            }
+          }
+
         }
       }
 
       // redirect to first child page if page title equal [redirect]
-      if ((strtolower($pageTitle) == '[weiterleiten]') || (strtolower($pageTitle) == '[redirect]') || $redirect) {
+      if ((strtolower($pageTitle) == '[weiterleiten]') || (strtolower($pageTitle) == '[redirect]') || $redirectFirstChild) {
 
         $childrenIds = $nav->getChildrenIds($nav->getCurrentPageId());
         if (count($childrenIds)) {
