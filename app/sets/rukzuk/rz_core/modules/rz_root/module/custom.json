@@ -57,5 +57,15 @@
                 "file":"css\/base.css"
             }
         ]
+    },
+    "i18n":{
+        "error.redirectLiveOnly1":{
+            "de":"Hinweis: Die Weiterleitung nach ",
+            "en":"Note: Redirection to "
+        },
+        "error.redirectLiveOnly2":{
+            "de":" funktioniert nur auf der publizierten Website<br>(nicht im Editier- und Vorschaumodus)",
+            "en":" works only on the live website<br>(not in edit and preview mode) "
+        }
     }
 }
