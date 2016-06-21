@@ -56,9 +56,47 @@
       "multiSelect": false
     },
     {
-      "type": "OnOffToggle",
-      "CMSvar": "redirectToFirstChild",
-      "fieldLabel": "{\"de\": \"Auf die erste darunterliegende Seite weiterleiten\", \"en\": \"Redirect to first child page\"}"
+      "type": "OnOffFieldSet",
+      "CMSvar": "enableRedirect",
+      "fieldLabel": "{\"de\": \"Weiterleitung aktivieren\", \"en\": \"Enable redirect\"}",
+      "_items": [
+        {
+          "type": "TabbedFieldSet",
+          "CMSvar": "redirectType",
+          "_items": [{
+            "type": "TabPage",
+            "title": "{\"de\": \"erste Unterseite \", \"en\": \"first child page\"}",
+            "tabValue": "firstChild",
+            "_items": [{
+              "type": "Comment",
+              "text": "{\"de\": \"Es wird auf die erste Seite unterhalb dieser Seite weitergeleitet (sofern vorhanden)\", \"en\": \"Redirect to fist child page of thhis page (if exists)\"}"
+            }]
+          },{
+            "type": "TabPage",
+            "title": "{\"de\": \"interne Seite\", \"en\": \"internal page\"}",
+            "tabValue": "page",
+            "_items": [{
+              "type": "InternalLinkChooser",
+              "CMSvar": "redirectPageId",
+              "fieldLabel": "{\"de\": \"Interne Seite auswählen, auf die weitergeleitet werden soll\", \"en\": \"choose internal page\"}"
+            }]
+          },{
+            "type": "TabPage",
+            "title": "{\"de\": \"externe URL\", \"en\": \"external URL\"}",
+            "tabValue": "url",
+            "_items": [{
+              "type": "TextField",
+              "CMSvar": "redirectUrl",
+              "fieldLabel": "{\"de\": \"URL eingeben (bitte http:// bzw. https:// davor eingeben)\", \"en\": \"Site URL (with http:// or https://\"}",
+              "emptyText": "http://",
+              "minLength": 1,
+              "maxLength": 255,
+              "allowBlank": false
+            }]
+          }]
+        }
+      ]
+
     },
     {
       "type": "OnOffToggle",
@@ -72,6 +110,8 @@
     "_navigationTitle": "",
     "_date": null,
     "_description": "",
-    "_mediaId": null
+    "_mediaId": null,
+    "enableRedirect": false,
+    "redirectType": "firstChild"
   }
 }
