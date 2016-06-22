@@ -1,6 +1,7 @@
 define(['jquery'], function ($) {
 
     var getSelector = function(eventData) {
+        var selector;
         if (eventData.eventLimit == 'all') {
             selector = $('.listen_' + eventData.stateName);
         }
@@ -58,7 +59,7 @@ define(['jquery'], function ($) {
                     selector.addClass(eventData.stateName);
                     element.addClass(eventData.unitId);
                 }
-                if ((visiblePartOfElement < 1) && (eventMode == 'toggle')) {
+                if ((visiblePartOfElement < 1) && (eventData.eventMode == 'toggle')) {
                     selector.removeClass(eventData.stateName);
                     element.removeClass(eventData.unitId + ' top50Screen bottom50Screen');
                 }
@@ -99,12 +100,13 @@ define(['jquery'], function ($) {
     var initAllEvents = function () {
         for (var unit in window.rz_trigger_event) {
             var eventData = window.rz_trigger_event[unit];
+            var parentUnit = $('#' + eventData.parentUnitId);
             if (eventData.eventType == 'click') {
-                $('#' + eventData.parentUnitId).on('click', eventData,trigger_event_click_mouseover);
+                parentUnit.on('click', eventData,trigger_event_click_mouseover);
             }
             if (eventData.eventType == 'mouseover') {
-                $('#' + eventData.parentUnitId).on('mouseover', eventData, trigger_event_click_mouseover);
-                $('#' + eventData.parentUnitId).on('mouseout', eventData, trigger_event_click_mouseover);
+                parentUnit.on('mouseover', eventData, trigger_event_click_mouseover);
+                parentUnit.on('mouseout', eventData, trigger_event_click_mouseover);
             }
             if (eventData.eventType == 'scroll') {
                 $(window).on('scroll', eventData, trigger_event_scroll);
