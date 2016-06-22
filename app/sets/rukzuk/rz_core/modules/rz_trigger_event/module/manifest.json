@@ -1,12 +1,12 @@
 {
-    "name":"{\"de\":\"Ereignis\",\"en\":\"Event\"}",
-    "description":"{\"de\":\"Ändere Styles und Zustände nach Ereignissen wie Click, Mouseover oder Scroll\",\"en\":\"Chnage Styles and states after events like click, mouseover or scroll\"}",
-    "version":"dev",
-    "icon":"event_trigger.png",
+    "name": "{\"de\":\"Ereignis\",\"en\":\"Event\"}",
+    "description": "{\"de\":\"Ändere Styles und Zustände nach Ereignissen wie Click, Mouseover oder Scroll\",\"en\":\"Chnage Styles and states after events like click, mouseover or scroll\"}",
+    "version": "dev",
+    "icon": "event_trigger.png",
     "category": "30",
-    "moduleType":"extension",
-    "allowedChildModuleType":"extension",
+    "moduleType": "extension",
+    "allowedChildModuleType": "extension",
     "ghostContainerMode": "force_off",
-    "reRenderRequired":true,
-    "apiType":"APIv1"
+    "reRenderRequired": true,
+    "apiType": "APIv1"
 }
