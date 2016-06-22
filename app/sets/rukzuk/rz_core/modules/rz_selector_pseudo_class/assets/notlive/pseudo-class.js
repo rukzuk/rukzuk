@@ -24,6 +24,40 @@ define(['jquery', 'CMS', 'rz_root/notlive/js/cssHelper'], function ($, CMS, cssH
         CMS.setInfo(cfg.unitId, 'state', name);
     };
 
+    var updateDropDown = function (cfg) {
+        if (window.rz_trigger_event) {
+            var states = [];
+            states.push(['hover', i18n['state.hover']]);
+            states.push(['active', i18n['state.active']]);
+            states.push(['focus', i18n['state.focus']]);
+
+            var unitData = CMS.get(cfg.unitId, false);
+
+            // set event states only when parent module is a dom element
+            if ($('#' + unitData.parentUnitId).length > 0) {
+                for (var unitId in window.rz_trigger_event) {
+                    var stateName = window.rz_trigger_event[unitId].stateName;
+                    if (stateName !== '') {
+                        var displayName = {"de": stateName + " (" + i18n['state.event'].de + ")", "en": stateName + " (" + i18n['state.event'].en + ")"};
+                        states.push([stateName, displayName]);
+                    }
+                }
+                var uniq = function(items, key) {
+                    var set = {};
+                    return items.filter(function(item) {
+                        var k = key ? key.apply(item) : item;
+                        return k in set ? false : set[k] = true;
+                    });
+                };
+                var uniqueStates = [];
+                uniqueStates = uniq(states, [].join);
+                CMS.updateFormFieldConfig(cfg.unitId, 'pseudoClass', {
+                    options: uniqueStates
+                });
+            }
+        }
+    };
+
     return {
         init: function (data) {
             // i18n
@@ -34,6 +68,7 @@ define(['jquery', 'CMS', 'rz_root/notlive/js/cssHelper'], function ($, CMS, cssH
             // initial insert
             CMS.getAllUnitIds(data.moduleId).forEach(function (unitId) {
                 updateName({unitId: unitId});
+                updateDropDown({unitId: unitId});
             }, this);
 
             // formValue change
@@ -52,41 +87,6 @@ define(['jquery', 'CMS', 'rz_root/notlive/js/cssHelper'], function ($, CMS, cssH
                     // trigger refresh of css (this is required as the CMS.set() will not trigger formValueChange of the hidden field)
                     cssHelper.refreshCSS(cfg.unitId);
                 }
-            });
-            CMS.on('unitSelect', eventFilter, function (cfg) {
-                if (cfg.editable && window.rz_trigger_event) {
-                    var states = [];
-                    states.push(['hover', i18n['state.hover']]);
-                    states.push(['active', i18n['state.active']]);
-                    states.push(['focus', i18n['state.focus']]);
-
-                    var unitData = CMS.get(cfg.unitId, false);
-
-                    // set event states only when parent module is a dom element
-                    if ($('#' + unitData.parentUnitId).length > 0) {
-                        for (var unitId in window.rz_trigger_event) {
-                            var stateName = window.rz_trigger_event[unitId].stateName;
-                            if (stateName !== '') {
-                                var displayName = {"de": stateName + " (" + i18n['state.event'].de + ")", "en": stateName + " (" + i18n['state.event'].en + ")"};
-                                states.push([stateName, displayName]);
-                            }
-                        }
-                        var uniq = function(items, key) {
-                            var set = {};
-                            return items.filter(function(item) {
-                                var k = key ? key.apply(item) : item;
-                                return k in set ? false : set[k] = true;
-                            });
-                        };
-                        var uniqueStates = [];
-                        uniqueStates = uniq(states, [].join);
-                        CMS.updateFormFieldConfig(cfg.unitId, 'pseudoClass', {
-                            options: uniqueStates
-                        });
-                    }
-
-                }
-
             });
         }
     };
