@@ -15,8 +15,8 @@
                 "mode":"edit"
             },
             {
-                "file":"jquery.fracs-0.15.0.js",
-                "type":"script"
+                "file":"jquery.fracs-0.15.0.min.js",
+                "type":"module"
             },
             {
                 "file":"animationInit.js",
