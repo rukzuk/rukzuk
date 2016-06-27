@@ -24,8 +24,9 @@ class rz_trigger_event extends SimpleModule {
             if ($api->getFormValue($unit, 'enableState')) {
                 $stateName = $api->getFormValue($unit, 'stateName');
             }
+            $selector = substr($api->getFormValue($unit, 'additionalSelector'), 2);
             $code = "window.rz_trigger_event.push({ ";
-            $code .= "\"unitId\": \"" . $unit->getId() ."\", \"parentUnitId\": \"" . $parentUnit->getId() ."\", \"eventType\": \"" . $eventType ."\", \"stateName\": \"" . $stateName ."\", \"eventLimit\": \"" . $eventLimit ."\", \"eventMode\": \"" . $eventMode ."\"";
+            $code .= "\"selector\": \"" . $selector ."\", \"parentUnitId\": \"" . $parentUnit->getId() ."\", \"eventType\": \"" . $eventType ."\", \"stateName\": \"" . $stateName ."\", \"eventLimit\": \"" . $eventLimit ."\", \"eventMode\": \"" . $eventMode ."\"";
             if ($eventType == 'scroll') {
                 $code .= ",\"scrollConfig\": \"" . $api->getFormValue($unit, 'scrollConfig') ."\"";
             }
