@@ -24,13 +24,13 @@ define(['jquery'], function ($) {
 
         if (eventData.eventMode == 'toggle') {
             selector.toggleClass(eventData.stateName);
-            $('#' + eventData.parentUnitId).toggleClass(eventData.unitId);
+            $('#' + eventData.parentUnitId).toggleClass(eventData.selector);
         } else if (eventData.eventMode == 'set') {
             selector.addClass(eventData.stateName);
-            $('#' + eventData.parentUnitId).addClass(eventData.unitId);
+            $('#' + eventData.parentUnitId).addClass(eventData.selector);
         } else {
             selector.removeClass(eventData.stateName);
-            $('#' + eventData.parentUnitId).removeClass(eventData.unitId);
+            $('#' + eventData.parentUnitId).removeClass(eventData.selector);
         }
     };
 
@@ -57,40 +57,40 @@ define(['jquery'], function ($) {
                 }
                 if (element.hasClass('top50Screen') && element.hasClass('bottom50Screen')) {
                     selector.addClass(eventData.stateName);
-                    element.addClass(eventData.unitId);
+                    element.addClass(eventData.selector);
                 }
                 if ((visiblePartOfElement < 1) && (eventData.eventMode == 'toggle')) {
                     selector.removeClass(eventData.stateName);
-                    element.removeClass(eventData.unitId + ' top50Screen bottom50Screen');
+                    element.removeClass(eventData.selector + ' top50Screen bottom50Screen');
                 }
             }
         } else if (eventData.scrollConfig.match(/^in/)) {
             if ((visiblePartOfElement < 1) && (eventData.eventMode == 'toggle')) {
                 selector.removeClass(eventData.stateName);
-                element.removeClass(eventData.unitId + ' top50Screen bottom50Screen ');
+                element.removeClass(eventData.selector + ' top50Screen bottom50Screen ');
             }
             if (visiblePartOfElement >= eventData.scrollConfig.substr(2)) {
                 if (eventData.eventMode == 'reset') {
                     selector.removeClass(eventData.stateName);
-                    element.removeClass(eventData.unitId);
+                    element.removeClass(eventData.selector);
                 } else {
 
                     selector.addClass(eventData.stateName);
-                    element.addClass(eventData.unitId);
+                    element.addClass(eventData.selector);
                 }
             }
         } else {
             if ((visiblePartOfElement > 1) && (eventData.eventMode == 'toggle')) {
                 selector.removeClass(eventData.stateName);
-                element.removeClass(eventData.unitId + ' top50Screen bottom50Screen ');
+                element.removeClass(eventData.selector + ' top50Screen bottom50Screen ');
             }
             if (visiblePartOfElement <= eventData.scrollConfig.substr(3)) {
                 if (eventData.eventMode == 'reset') {
                     selector.removeClass(eventData.stateName);
-                    element.removeClass(eventData.unitId);
+                    element.removeClass(eventData.selector);
                 } else {
                     selector.addClass(eventData.stateName);
-                    element.addClass(eventData.unitId);
+                    element.addClass(eventData.selector);
                 }
             }
         }
@@ -101,6 +101,7 @@ define(['jquery'], function ($) {
         for (var unit in window.rz_trigger_event) {
             var eventData = window.rz_trigger_event[unit];
             var parentUnit = $('#' + eventData.parentUnitId);
+
             if (eventData.eventType == 'click') {
                 parentUnit.on('click', eventData,trigger_event_click_mouseover);
             }
