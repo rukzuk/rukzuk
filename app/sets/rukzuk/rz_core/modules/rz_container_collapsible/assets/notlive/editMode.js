@@ -3,7 +3,7 @@ define(['rz_root/notlive/js/baseJsModule', 'CMS', 'jquery', 'rz_container_collap
     return JsModule.extend({
         initUnit: function (collapsibleUnitId) {
             // init collapsible
-            collapsibleHelper.initCollapsible(collapsibleUnitId);
+            collapsibleHelper.initCollapsible($('#' + collapsibleUnitId));
         }
     });
 });

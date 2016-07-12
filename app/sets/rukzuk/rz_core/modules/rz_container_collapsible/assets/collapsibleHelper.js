@@ -4,20 +4,21 @@ define(['jquery'], function ($) {
 
     /**
      * initialize a collapsible
-     * @param unitId
+     * @param el
      */
-    var initCollapsible = function (unitId) {
-        $('#' + unitId + ' > ' + handleSelector + ' span').on('click', collapseHandler);
+    var initCollapsible = function (el) {
+        el.find(handleSelector).first().find('span').on('click', collapseHandler);
 
         // check if collapsible should close when clicking on a link inside the content
-        if ($('#' + unitId + ' > ' + handleSelector).data('closeonlinkclick') == 1) {
-            $('#' + unitId + ' > .collapsibleContent a').on('click', collapseHandler);
+
+        if (el.find(handleSelector).first().data('closeonlinkclick') == 1) {
+            el.find('.collapsibleContent').first().find('a').on('click', collapseHandler);
         }
     };
 
     var initAllCollapsiblesInDom = function () {
         $(moduleSelector).each(function () {
-            initCollapsible($(this).attr('id'));
+            initCollapsible($(this));
         });
     };
 
