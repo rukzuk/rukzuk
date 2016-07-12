@@ -117,6 +117,9 @@ class rz_page_list extends SimpleModule {
                 $pageAttributes = $page->getPageAttributes();
                 if (array_key_exists('notInPageList', $pageAttributes)) {
                   if ($pageAttributes['notInPageList'] == 1) {
+                    if ($enableRecursive) {
+                      $items = array_merge($items, $this->getTeaserItemsRecursive($renderApi, $pageId, $enableRecursive));
+                    }
                     continue;
                   }
                 }
