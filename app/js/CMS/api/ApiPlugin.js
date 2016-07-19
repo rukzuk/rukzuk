@@ -128,7 +128,7 @@ CMS.api.PluginInstance = Ext.extend(Ext.util.Observable, {
 
         this.visualHelpersState = {
             enabled: true,
-            toolbar: true,
+            toolbar: true
         };
         this.insertedUnitsBuffer = {};
 
@@ -292,6 +292,22 @@ CMS.api.PluginInstance = Ext.extend(Ext.util.Observable, {
     setUnitConfig: function (unitId, key, value) {
         if (this.isValidUnitId(unitId)) {
             return this.iframeWorkbenchPanel.silentlySetValue(unitId, key, value);
+        } else {
+            return false;
+        }
+    },
+
+    /**
+     * Updates the specified unit styleSets.
+     *
+     * @param {String} unitId The id of the unit
+     * @param {String} key The name of the unit property which is changed
+     * @param {Mixed} value The new value of the unit property
+     * @return {Boolean} Whether the key value pair could be successfully set
+     */
+    setStyleSets: function (unitId, styleSets) {
+        if (this.isValidUnitId(unitId)) {
+            return this.iframeWorkbenchPanel.setStyleSets(unitId, styleSets);
         } else {
             return false;
         }

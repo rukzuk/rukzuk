@@ -29,6 +29,7 @@ class MUnit implements UuidMarker, IsUnitMarker
   public $icon;
   public $inserted;
   public $htmlClass;
+  public $styleSets;
   public $templateUnitId;
   public $ghostChildren;
   public $insideGhost;

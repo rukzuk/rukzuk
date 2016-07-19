@@ -16,6 +16,7 @@ class Unit
   protected $moduleId;
   protected $name;
   protected $htmlClass = '';
+  protected $styleSets = '';
   protected $templateUnitId = null;
   protected $ghostContainer = false;
   protected $formValues = array();
@@ -36,7 +37,8 @@ class Unit
       array $formValues = array(),
       $ghostContainer = false,
       $templateUnitId = null,
-      $htmlClass = ''
+      $htmlClass = '',
+      $styleSets = ''
   ) {
     $this->id = $id;
     $this->moduleId = $moduleId;
@@ -45,6 +47,7 @@ class Unit
     $this->ghostContainer = $ghostContainer;
     $this->templateUnitId = $templateUnitId;
     $this->htmlClass = $htmlClass;
+    $this->styleSets = $styleSets;
   }
 
   /**
@@ -103,6 +106,15 @@ class Unit
     return $this->htmlClass;
   }
 
+  /**
+   * @return string
+   */
+  public function getStyleSets()
+  {
+    return $this->styleSets;
+  }
+
+
   public function toArray()
   {
     return array(
@@ -113,6 +125,7 @@ class Unit
       'ghostContainer' => $this->isGhostContainer(),
       'formValues' => $this->getFormValues(),
       'htmlClass' => $this->getHtmlClass(),
+      'styleSets' => $this->getStyleSets()
     );
   }
 }

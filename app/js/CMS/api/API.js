@@ -33,7 +33,7 @@ CMS.api.API = Ext.extend(Ext.util.Observable, /** @lends CMS.api.API.prototype *
      * @type Array
      * @private
      */
-    methods:  ['get', 'getSelected', 'set', 'setName', 'setInfo', 'refresh', 'preventRendering', 'remove', 'openInsertWindow', 'openInsertExtensionMenu', 'moveUp', 'moveDown', 'duplicate', 'select', 'deselect', 'getInsertable', 'insert', 'openFormPanel', 'openTreePanel', 'getColorById', 'applyRichTextEditorConfig', 'createPreviewTicket', 'updateFormFieldConfig', 'processInsertedUnits', 'getVisualHelpersState', 'getModule', 'i18n', 'getResolutions', 'getCurrentResolution', 'getImageUrl', 'getAllUnitIds', 'getMediaUrl'],
+    methods:  ['get', 'getSelected', 'set', 'setName', 'setInfo', 'setStyleSets', 'refresh', 'preventRendering', 'remove', 'openInsertWindow', 'openInsertExtensionMenu', 'moveUp', 'moveDown', 'duplicate', 'select', 'deselect', 'getInsertable', 'insert', 'openFormPanel', 'openTreePanel', 'getColorById', 'applyRichTextEditorConfig', 'createPreviewTicket', 'updateFormFieldConfig', 'processInsertedUnits', 'getVisualHelpersState', 'getModule', 'i18n', 'getResolutions', 'getCurrentResolution', 'getImageUrl', 'getAllUnitIds', 'getMediaUrl'],
 
     /**
      * Informs the CMS that the module developer wants
@@ -122,6 +122,19 @@ CMS.api.API = Ext.extend(Ext.util.Observable, /** @lends CMS.api.API.prototype *
      */
     setInfo: function (id, key, value) {
         return this.pluginInstance.setUnitMetaInfo(id, key, value);
+    },
+
+    /**
+     * Allows to set meta information which should visualize unit
+     * settings (replaces {@link CMS.api.API#setName})
+     *
+     * @param {String} id The id of the unit
+     * @param {String} key The name of the meta property which is changed
+     * @param {Mixed} value The new value of the meta property
+     * @return {Boolean} Whether the key value pair could be successfully set
+     */
+    setStyleSets: function (id, value) {
+        return this.pluginInstance.setStyleSets(id, value);
     },
 
     /**

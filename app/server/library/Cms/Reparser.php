@@ -161,6 +161,7 @@ class Reparser
       'visibleFormGroups',
       'icon',
       'htmlClass',
+      'styleSets'
     );
 
     $allKeys = self::getUnitValueArrayKeys($pageUnit, $templateUnit);
