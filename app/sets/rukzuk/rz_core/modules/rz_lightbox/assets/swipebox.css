@@ -2,10 +2,11 @@
     overflow: hidden !important;
 }
 
-/* to make sure no modules below the lightbox will be visible when lightbox is open */
+/* to make sure no modules below the lightbox will be visible when lightbox is open
 .zIndexLightBox {
     z-index: 100 !important;
 }
+*/
 
 /*
 #swipebox-overlay img {
