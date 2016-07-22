@@ -1,4 +1,4 @@
-FROM phusion/baseimage
+FROM phusion/baseimage:0.9.15
 
 VOLUME /srv/rukzuk/htdocs/cms
 
