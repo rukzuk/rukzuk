@@ -26,6 +26,10 @@
             "de":"Link extern",
             "en":"External link"
         },
+        "selector.linkMailto":{
+            "de":"Link E-Mail",
+            "en":"Mail link"
+        },
         "selector.lists":{
             "de":"Listen",
             "en":"Lists"
@@ -121,6 +125,11 @@
                 {
                     "title":"__i18n_selector.linkExternal",
                     "selector":".text a[href^=\"http\"]",
+                    "enableNthTypeOf":true
+                },
+                {
+                    "title":"__i18n_selector.linkMailto",
+                    "selector":".text a[href^=\"mailto\"]",
                     "enableNthTypeOf":true
                 }
             ]
