@@ -21,5 +21,6 @@
                 "mode":"edit"
             }
         ]
-    }
+    },
+    "selectors":true
 }
