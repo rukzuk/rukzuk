@@ -40,7 +40,8 @@ Ext.extend(CMS.structureEditor.UnitTreeNode, Ext.tree.TreeNode, {
         var attributes;
         // convert module to unit
         if (!CMS.data.isUnitRecord(record)) {
-            record = record.createUnit();
+            record = record.createUnit(CMS.app.UIDManager.getInstance().getId('unit'));
+
         }
         // clone unit
         attributes = SB.util.cloneObject(record.data);
