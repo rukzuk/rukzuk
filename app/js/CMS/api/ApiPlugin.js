@@ -298,22 +298,6 @@ CMS.api.PluginInstance = Ext.extend(Ext.util.Observable, {
     },
 
     /**
-     * Updates the specified unit styleSets.
-     *
-     * @param {String} unitId The id of the unit
-     * @param {String} key The name of the unit property which is changed
-     * @param {Mixed} value The new value of the unit property
-     * @return {Boolean} Whether the key value pair could be successfully set
-     */
-    setStyleSets: function (unitId, styleSets) {
-        if (this.isValidUnitId(unitId)) {
-            return this.iframeWorkbenchPanel.setStyleSets(unitId, styleSets);
-        } else {
-            return false;
-        }
-    },
-
-    /**
      * Allows to set meta information which should visualize unit
      * settings (replaces <code>CMS.setName</code>)
      * NOTICE: Since there is no "info" attribute for a unit the information
@@ -328,7 +312,7 @@ CMS.api.PluginInstance = Ext.extend(Ext.util.Observable, {
     setUnitMetaInfo: (function () {
         // helper method to apply the info value to the name or to a single
         // name translation
-        function applyValue(langKey, text, infoValue) {
+        function applyValue(langKey, text, infoValue, key) {
             if (Ext.isString(infoValue)) {
                 try {
                     infoValue = JSON.parse(infoValue);
@@ -344,7 +328,14 @@ CMS.api.PluginInstance = Ext.extend(Ext.util.Observable, {
             // remove old meta informations
             text = text.replace(/\(.*\)/g, '').trim();
             // ... and add new ones
-            text += ' (' + infoValue + ')';
+            if (infoValue != '') {
+                if (key == 'complete') {
+                    text = infoValue;
+                } else {
+                    text += ' (' + infoValue + ')';
+                }
+            }
+
             return text;
         }
 
@@ -368,11 +359,11 @@ CMS.api.PluginInstance = Ext.extend(Ext.util.Observable, {
                     // multi-language-name (e.g. {de: 'Sprungmarke', en: 'Jump-Label'})
                     // -> merge info value into name object
                     Ext.iterate(name, function (langkey, text) {
-                        name[langkey] = applyValue(langkey, text, value);
+                        name[langkey] = applyValue(langkey, text, value, key);
                     });
                     name = JSON.stringify(name);
                 } else if (Ext.isString(name)) {
-                    name = applyValue(CMS.app.lang, name, value);
+                    name = applyValue(CMS.app.lang, name, value, key);
                 }
 
                 this.iframeWorkbenchPanel.setUnitName(id, name);
