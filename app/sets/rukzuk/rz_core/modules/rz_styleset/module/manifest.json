@@ -1,0 +1,12 @@
+{
+    "name": "{\"de\":\"Styleset\",\"en\":\"Styleset\"}",
+    "description": "{\"de\":\"Die untergeordneten Styles werden zu einem Set zusammengefasst und können über den Style(!) 'Styleset' anderen Modulen zugewiesen werden.\",\"en\":\"Subordinate styles are combined to a set and can be applied to other modules with the style 'Styleset'.\"}",
+    "version": "dev",
+    "icon": "styleset.png",
+    "category": "Styling",
+    "moduleType": "default",
+    "allowedChildModuleType": "*",
+    "ghostContainerMode": "force_off",
+    "reRenderRequired": true,
+    "apiType": "APIv1"
+}
