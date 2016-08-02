@@ -23,8 +23,7 @@ class UnitFactory
         $this->getFormValues($content, $defaultFromValues),
         $this->isGhostContainer($content),
         $this->getTemplateUnitId($content),
-        $this->getHtmlClass($content),
-        $this->getStyleSets($content)
+        $this->getHtmlClass($content)
     );
   }
 
@@ -87,19 +86,6 @@ class UnitFactory
       return '';
     }
     return  $content['htmlClass'];
-  }
-
-  /**
-   * @param array $content
-   *
-   * @return string
-   */
-  protected function getStyleSets(array &$content)
-  {
-    if (!isset($content['styleSets'])) {
-      return '';
-    }
-    return  $content['styleSets'];
   }
 
 }
