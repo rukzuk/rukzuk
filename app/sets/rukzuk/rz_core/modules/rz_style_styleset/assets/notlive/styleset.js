@@ -61,7 +61,6 @@ define(['jquery', 'CMS', 'rz_root/notlive/js/cssHelper'], function ($, CMS, cssH
         var cssStyleSet = CMS.get(cfg.unitId).formValues.cssStyleSets.value;
         styleSets.forEach(function(element, index, array) {
             if (cssStyleSet.match(element[0])) {
-
                 var names = element[1].split(' > ');
                 styleSetName += names[names.length -1] + ", ";
             }
@@ -71,7 +70,6 @@ define(['jquery', 'CMS', 'rz_root/notlive/js/cssHelper'], function ($, CMS, cssH
     };
 
     var updateDropDown = function (cfg) {
-        var styleSets = getStyleSets();
         CMS.updateFormFieldConfig(cfg.unitId, 'cssStyleSets', {
             options: styleSets
         });
@@ -99,20 +97,38 @@ define(['jquery', 'CMS', 'rz_root/notlive/js/cssHelper'], function ($, CMS, cssH
 
             var eventFilter = {moduleId: data.moduleId};
 
-            // initial insert
-            CMS.getAllUnitIds(data.moduleId).forEach(function (unitId) {
-                updateDropDown({unitId: unitId});
-                updateName({unitId: unitId});
-            }, this);
+            CMS.on('formValueChange', {moduleId: 'rz_styleset'}, function (cfg) {
+                styleSets = getStyleSets();
+                CMS.getAllUnitIds(data.moduleId).forEach(function (unitId) {
+                    updateDropDown({unitId: unitId});
+                    updateName({unitId: unitId});
+                }, this);
+            });
 
-            getStyleSets();
             // formValue change
             CMS.on('formValueChange', eventFilter, function (cfg) {
+                styleSets = getStyleSets();
                 updateName({unitId: cfg.unitId});
                 setStyleSet(cfg);
             });
             CMS.on('unitSelect', eventFilter, function (cfg) {
+                styleSets = getStyleSets();
                 updateDropDown({unitId: cfg.unitId});
+            });
+
+            var removedUnitData;
+            CMS.on('beforeRemoveUnit', function (unitId) {
+                removedUnitData = CMS.get(unitId, false);
+            });
+
+            CMS.on('afterRemoveUnit', function (unitId) {
+                if (removedUnitData.moduleId == 'rz_styleset') {
+                    styleSets = getStyleSets();
+                    CMS.getAllUnitIds(data.moduleId).forEach(function (unitId) {
+                        updateDropDown({unitId: unitId});
+                        updateName({unitId: unitId});
+                    }, this);
+                }
             });
         }
     };
