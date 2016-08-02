@@ -17,6 +17,10 @@ define(['jquery', 'CMS', 'rz_root/notlive/js/cssHelper'], function ($, CMS, cssH
     return {
         init: function (data) {
 
+            var selectedUnit = CMS.getSelected();
+            if (selectedUnit.moduleId == 'rz_link') {
+                updateDropDown({unitId: selectedUnit.id});
+            }
             var eventFilter = {moduleId: data.moduleId};
             CMS.on('unitSelect', eventFilter, function (cfg) {
                 updateDropDown({unitId: cfg.unitId});
