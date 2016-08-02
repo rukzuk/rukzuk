@@ -24,11 +24,6 @@ CMS.data.unitFields = [{
     defaultValue: '',
     allowBlank: true
 }, {
-    name: 'styleSets',
-    type: 'string',
-    defaultValue: '',
-    allowBlank: true
-}, {
     name: 'ghostContainer',
     type: 'boolean',
     defaultValue: false
