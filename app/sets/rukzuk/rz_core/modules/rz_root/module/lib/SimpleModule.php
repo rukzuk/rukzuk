@@ -127,6 +127,17 @@ class SimpleModule implements ModuleInterface
 
     // add style Set classes
     $children = $renderApi->getChildren($unit);
+    $styleSetClasses = '';
+    foreach ($children as $childUnit) {
+      $styleSetClass = $renderApi->getFormValue($childUnit, 'cssStyleSets', false);
+      if ($styleSetClass) {
+        $styleSetClasses .=  str_replace(",", " ", $styleSetClass) . " ";
+      }
+    }
+    if ($styleSetClasses != '') {
+      $tag->addClass($styleSetClasses);
+    }
+
 
     // call hook
     $this->modifyWrapperTag($tag, $renderApi, $unit, $moduleInfo);
