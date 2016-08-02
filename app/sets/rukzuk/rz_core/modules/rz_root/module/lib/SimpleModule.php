@@ -124,7 +124,9 @@ class SimpleModule implements ModuleInterface
     $tag->addClass($moduleInfo->getId());
     $tag->addClass('isModule');
     $tag->addClass($unit->getHtmlClass());
-    $tag->addClass($unit->getStyleSets());
+
+    // add style Set classes
+    $children = $renderApi->getChildren($unit);
 
     // call hook
     $this->modifyWrapperTag($tag, $renderApi, $unit, $moduleInfo);
