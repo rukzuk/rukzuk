@@ -1,0 +1,17 @@
+{
+    "assets":{
+        "js":[
+            {
+                "file":"notlive\/styleset.js",
+                "type":"module",
+                "mode":"edit"
+            }
+        ]
+    },
+    "i18n":{
+        "error.insideExtensionModule":{
+            "de":"Hinweis: Der Style „Styleset“ funktioniert nicht innerhalb eines Selektors. Bitte den Style verschieben.",
+            "en":"Note: The style “Styleset” doesn't work inside selectors. Please move the style."
+        }
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "name": "{\"de\":\"Styleset\",\"en\":\"Styleset\"}",
+    "description": "{\"de\":\"Mit diesem Style können dem Modul Stylesets zugewiesen werden.\",\"en\":\"Apply Stylesets with this module.\"}",
+    "version": "dev",
+    "icon": "styleset.png",
+    "category": "30",
+    "moduleType": "extension",
+    "allowedChildModuleType": "",
+    "ghostContainerMode": "force_off",
+    "reRenderRequired": false,
+    "apiType": "APIv1"
+}
