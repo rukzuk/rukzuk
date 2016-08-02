@@ -76,6 +76,9 @@ class rz_anchor_navigation extends SimpleModule {
     foreach ($allUnitData as $unitData) {
       if (isset($unitData['anchor'])) {
         if (isset($unitData['anchor']['id']) && isset($unitData['anchor']['name'])) {
+          if (isset($unitData['anchor']['notInNavigation']) && $unitData['anchor']['notInNavigation']) {
+            continue;
+          }
           $anchors[] = $unitData['anchor'];
         }
       }
