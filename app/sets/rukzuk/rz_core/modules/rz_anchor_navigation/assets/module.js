@@ -32,7 +32,7 @@ define(['jquery'], function ($) {
                 var anchorHref = $(this).attr('href');
                 var $anchor = $(getAnchorSelectorFromHref(anchorHref));
 
-                $.scrollTo($anchor, scrollSpeed, {
+                $.scrollTo($anchor, parseInt(scrollSpeed), {
                     easing: scrollEasing,
                     axis: 'y',
                     onAfter: function () {
