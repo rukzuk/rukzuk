@@ -1,6 +1,9 @@
-FROM phusion/baseimage
+FROM phusion/baseimage:0.9.15
 
 VOLUME /srv/rukzuk/htdocs/cms
+
+# proposed breaks some php packages (e.g. php-intl)
+RUN rm -rf /etc/apt/sources.list.d/proposed.list
 
 # phusion/baseimage is not always up to date. :-(
 RUN apt-get update  && \
@@ -60,7 +63,8 @@ RUN mkdir -p ${INSTANCE_PATH}/htdocs/cms
 RUN chown -R www-data:www-data ${INSTANCE_PATH}/htdocs
 
 # Install the release/cmsrelase.tar.gz (a version from our Jenkins)
-RUN curl -L `curl -s https://api.github.com/repos/rukzuk/rukzuk/releases | grep browser_download_url | head -n 1 | cut -d '"' -f 4` | tar -xz --strip 1 -C ${CMS_PATH}/..
+RUN curl -L $(curl -s https://api.github.com/repos/rukzuk/rukzuk/releases/latest | grep browser_download_url | grep 'tgz\|tar.gz' | cut -d '"' -f 4) | tar -xz --strip 1 -C ${CMS_PATH}/..
+
 
 RUN ln -s ${CMS_PATH}/app/server/environment ${INSTANCE_PATH}/environment
 RUN ln -s ${CMS_PATH} ${INSTANCE_PATH}/application

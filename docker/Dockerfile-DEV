@@ -1,6 +1,9 @@
-FROM phusion/baseimage
+FROM phusion/baseimage:0.9.15
 
 VOLUME /srv/rukzuk/htdocs/cms
+
+# proposed breaks some php packages (e.g. php-intl)
+RUN rm -rf /etc/apt/sources.list.d/proposed.list
 
 # phusion/baseimage is not always up to date. :-(
 RUN apt-get update  && \
