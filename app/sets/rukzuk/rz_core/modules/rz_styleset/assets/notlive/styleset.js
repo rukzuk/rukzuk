@@ -2,7 +2,11 @@ define(['jquery', 'CMS', 'rz_root/notlive/js/cssHelper'], function ($, CMS, cssH
 
 
     var updateName = function (cfg) {
-        CMS.setInfo(cfg.unitId, 'complete', CMS.get(cfg.unitId).formValues.cssStyleSetName.value);
+        var name = CMS.get(cfg.unitId).formValues.cssStyleSetName.value;
+        if (name == '') {
+            name = "Styleset";
+        }
+        CMS.setInfo(cfg.unitId, 'complete', name);
     };
 
     var setCssClassName = function (unitId) {
