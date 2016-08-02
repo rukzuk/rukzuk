@@ -8,6 +8,13 @@
                 "file":"notlive\/editMode.css",
                 "mode":"edit"
             }
+        ],
+        "js":[
+            {
+                "file":"notlive\/anchorlist.js",
+                "type":"module",
+                "mode":"edit"
+            }
         ]
     },
     "i18n":{
