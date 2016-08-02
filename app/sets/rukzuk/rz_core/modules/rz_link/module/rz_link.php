@@ -44,8 +44,8 @@ class rz_link extends SimpleModule
     }
 
     // anchor
-    if ($renderApi->getFormValue($unit, 'linkType') == 'anchor') {
-      $jsCode = "$.scrollTo('".$renderApi->getFormValue($unit, 'anchorId')."', '".$renderApi->getFormValue($unit, 'scrollSpeed')."', {";
+    if (($renderApi->getFormValue($unit, 'linkType') == 'anchor') && (!$renderApi->isEditMode())) {
+      $jsCode = "$.scrollTo('".$renderApi->getFormValue($unit, 'anchorId')."', ".intval($renderApi->getFormValue($unit, 'scrollSpeed')).", {";
       $jsCode .= "easing: 'swing',axis: 'y'}); return false;";
       $tag->set('onclick', $jsCode);
     }
@@ -136,7 +136,7 @@ class rz_link extends SimpleModule
         break;
 
       case 'anchor':
-        $url = "#".$renderApi->getFormValue($unit, 'anchorId');
+        $url = $renderApi->getFormValue($unit, 'anchorId');
         break;
     }
 
