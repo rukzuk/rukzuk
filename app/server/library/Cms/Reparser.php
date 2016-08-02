@@ -160,8 +160,7 @@ class Reparser
       'ghostContainer',
       'visibleFormGroups',
       'icon',
-      'htmlClass',
-      'styleSets'
+      'htmlClass'
     );
 
     $allKeys = self::getUnitValueArrayKeys($pageUnit, $templateUnit);
