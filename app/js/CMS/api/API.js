@@ -125,19 +125,6 @@ CMS.api.API = Ext.extend(Ext.util.Observable, /** @lends CMS.api.API.prototype *
     },
 
     /**
-     * Allows to set meta information which should visualize unit
-     * settings (replaces {@link CMS.api.API#setName})
-     *
-     * @param {String} id The id of the unit
-     * @param {String} key The name of the meta property which is changed
-     * @param {Mixed} value The new value of the meta property
-     * @return {Boolean} Whether the key value pair could be successfully set
-     */
-    setStyleSets: function (id, value) {
-        return this.pluginInstance.setStyleSets(id, value);
-    },
-
-    /**
      * Re-renders the specified unit or if no unit id was
      * given the whole page.
      * @param {String} [unitId] The id of the
