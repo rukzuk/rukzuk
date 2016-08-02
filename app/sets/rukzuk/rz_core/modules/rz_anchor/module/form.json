@@ -161,6 +161,57 @@
                         "iconCls": "textfield",
                         "hasValue": true
                     }
+                },
+                {
+                    "params": [
+                        {
+                            "name": "CMSvar",
+                            "value": "notInNavigation",
+                            "allowBlank": false,
+                            "minLength": 3,
+                            "maskRe": {},
+                            "stripCharsRe": {},
+                            "xtype": "textfield",
+                            "emptyText": "__i18n_generatedFormPanel.varNameEmptyText",
+                            "fieldLabel": "__i18n_generatedFormPanel.varNameLabel"
+                        },
+                        {
+                            "name": "xtype",
+                            "value": "CMSonofftogglebutton",
+                            "xtype": null
+                        },
+                        {
+                            "name": "isResponsive",
+                            "value": false,
+                            "fieldLabel": "__i18n_formElements.isResponsive",
+                            "xtype": "checkbox"
+                        },
+                        {
+                            "name": "isMeta",
+                            "value": false,
+                            "fieldLabel": "__i18n_formElements.isGlobal",
+                            "xtype": "checkbox"
+                        },
+                        {
+                            "name": "fieldLabel",
+                            "value": "{\"de\":\"nicht in Navigation anzeigen\",\"en\":\"hide this anchor in anchor navigation\"}",
+                            "xtype": "textfield",
+                            "allowBlank": true,
+                            "emptyText": "__i18n_formElements.fieldLabelEmptyTextLeft",
+                            "fieldLabel": "__i18n_formElements.fieldLabel"
+                        },
+                        {
+                            "name": "value",
+                            "value": false,
+                            "xtype": null
+                        }
+                    ],
+                    "descr": {
+                        "id": "OnOffToggle",
+                        "text": "__i18n_formElements.elementOnOffToggle",
+                        "iconCls": "onofftoggle",
+                        "hasValue": true
+                    }
                 }
             ]
         },
@@ -258,6 +309,7 @@
     "formValues": {
         "anchorName": "Lorem ipsum",
         "anchorId": "",
+        "notInNavigation": false,
         "cssVisualHelperValign": "right"
     }
 }

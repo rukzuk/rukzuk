@@ -2,6 +2,15 @@
     "assets":{
         "js":[
             {
+                "file":"jquery.scrollTo.min.js"
+            },
+            {
+                "file":"jquery.easing.1.3.js"
+            },
+            {
+                "file":"waypoints.js"
+            },
+            {
                 "file":"notlive\/editMode.js",
                 "type":"module",
                 "mode":"edit"
