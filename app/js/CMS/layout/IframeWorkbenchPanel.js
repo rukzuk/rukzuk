@@ -1075,19 +1075,6 @@ CMS.layout.IframeWorkbenchPanel = Ext.extend(CMS.layout.WorkbenchPanel, {
     },
 
     /**
-     * Updates the specified unit's styleSets (css classes)
-     * @param {String} unitId The id of the unit
-     * @param {String} name The new styleSets of the unit
-     * @return {Boolean} Whether the name could be successfully updated
-     */
-    setStyleSets: function (unitId, styleSets) {
-        var unit = this.unitStore.getById(unitId);
-        unit.set('styleSets', styleSets);
-        this.unitStore.isDirty = true;
-
-    },
-
-    /**
      * Tells the unit editor to open the "Insert unit" window.
      * @param {CMS.data.UnitRecord} unit (Optional) The unit
      * in whose context the insert window should be opened
