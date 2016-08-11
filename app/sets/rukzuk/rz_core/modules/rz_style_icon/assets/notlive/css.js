@@ -9,8 +9,14 @@ DynCSS.defineModule('rz_style_icon', function (api, v, ctx) {
         var imgUrl = api.getImageUrl(v.cssIcon, imageSize, imageQuality);
         var cssUrl = imgUrl ? 'url("' +  imgUrl + '")' : 'none';
 
+        if (imageSize == '0px') {
+            imageSize = 'auto';
+        }
+
         var css = {
-            content: cssUrl
+            content: cssUrl,
+            display: 'block',
+            width: imageSize
         };
 
         // pos
