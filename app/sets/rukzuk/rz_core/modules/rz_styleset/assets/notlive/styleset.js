@@ -3,7 +3,7 @@ define(['jquery', 'CMS', 'rz_root/notlive/js/cssHelper'], function ($, CMS, cssH
 
     var updateName = function (cfg) {
         var name = CMS.get(cfg.unitId).formValues.cssStyleSetName.value;
-        if (name == '') {
+        if (name === '') {
             name = "Styleset";
         }
         CMS.setInfo(cfg.unitId, 'complete', name);
