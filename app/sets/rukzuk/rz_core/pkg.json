@@ -7,7 +7,7 @@
     "de": "",
     "en": ""
   },
-  "websiteSettings": [],
+  "websiteSettings": ["password_protection"],
   "pageTypes": [],
   "templateSnippets": [
     "TPLS-global00-0000-0000-0000-30col0text00-TPLS",
@@ -36,7 +36,6 @@
     "rz_anchor_navigation",
     "rz_box",
     "rz_breadcrumb",
-    "rz_cssclass",
     "rz_container",
     "rz_container_collapsible",
     "rz_date",
@@ -65,6 +64,7 @@
     "rz_selector_event",
     "rz_slider",
     "rz_slider_images",
+    "rz_styleset",
     "rz_style_animation_scroll",
     "rz_style_background_color",
     "rz_style_background_gradient",
@@ -83,6 +83,7 @@
     "rz_style_opacity",
     "rz_style_padding_margin",
     "rz_style_position",
+    "rz_style_styleset",
     "rz_style_text_shadow",
     "rz_style_transformation",
     "rz_style_transition",
