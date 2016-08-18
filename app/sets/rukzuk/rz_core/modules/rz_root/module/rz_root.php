@@ -52,6 +52,7 @@ class rz_root extends SimpleModule
     // read custom data provided by module implementations (per module and per unit)
     $moduleData = $rootApi->getAllModuleData($rootUnit);
     $unitData = $rootApi->getAllUnitData($rootUnit);
+    $nav = $rootApi->getNavigation();
 
     // http header redirect (only in live and preview mode)
     if ($rootApi->isLiveMode() || $rootApi->isPreviewMode()) {
@@ -62,7 +63,7 @@ class rz_root extends SimpleModule
           exit;
         }
       }
-      $nav = $rootApi->getNavigation();
+
       $currentPage = $nav->getPage($nav->getCurrentPageId());
       $pageTitle = $currentPage->getTitle();
       $pageAttributes = $currentPage->getPageAttributes();
@@ -123,6 +124,23 @@ class rz_root extends SimpleModule
           }
         }
       }
+    }
+
+    // protected pages
+    $password_protection = $rootApi->getWebsiteSettings('password_protection');
+    if ($password_protection['enableProtectedPage'] && $rootApi->isPage()) {
+      if ($rootApi->isLiveMode() || ($password_protection['inPreviewMode'] && $rootApi->isPreviewMode())) {
+        $currentPageId = $nav->getCurrentPageId();
+        $protectedPage = $password_protection['protectedPage'];
+        $parentPages = $nav->getNavigatorIds($currentPageId);
+        if (in_array($protectedPage, $parentPages) || ($protectedPage == '')) {
+          $validLogin = $this->authenticate($password_protection['loginPasswords']);
+          if (!$validLogin) {
+            exit;
+          }
+        }
+      }
+
     }
 
 
@@ -442,5 +460,94 @@ EOF;
         echo '</pre>';
       }
   }
+
+
+  //
+  // This file implements the authentication using
+  // HTTP digest algorithm.
+  // just include it on you php file and call authenticate();
+  // written by Jader Feijo (jader@movinpixel.com)
+  //
+
+  // function to parse the http auth header
+  public function http_digest_parse($txt)
+  {
+    $keys_arr = array();
+    $values_arr = array();
+    $cindex = 0;
+    $parts = explode(',', $txt);
+
+    foreach($parts as $p) {
+      $p = trim($p);
+      $kvpair = explode('=', $p);
+      $kvpair[1] = str_replace("\"", "", $kvpair[1]);
+      $keys_arr[$cindex] = $kvpair[0];
+      $values_arr[$cindex] = $kvpair[1];
+      $cindex++;
+    }
+
+    $ret_arr = array_combine($keys_arr, $values_arr);
+    $ret_arr['uri'] = $_SERVER['REQUEST_URI'];
+    return $ret_arr;
+  }
+
+  public function get_user_password($username, $loginAndPasswords) {
+    // return the password for the given username
+    if ($username == '') {
+      return false;
+    }
+    $loginAndPasswords = explode("\n", $loginAndPasswords);
+    foreach ($loginAndPasswords as &$loginAndPassword) {
+      $loginAndPassword = explode(":", $loginAndPassword);
+      if (($loginAndPassword[0] == $username) && ($loginAndPassword[1] != '') && ($loginAndPassword[0] != '')) {
+        return $loginAndPassword[1];
+      }
+    }
+    return false;
+  }
+
+  public function authenticate($loginAndPasswords) {
+
+    $realm = "";
+    $header1 = 'WWW-Authenticate: Digest realm="' . $realm . '",qop="auth",nonce="' . uniqid() . '",opaque="' . md5($realm). '"';
+    $header2 = 'HTTP/1.0 401 Unauthorized';
+
+    if (empty($_SERVER['PHP_AUTH_DIGEST'])) {
+      header($header1);
+      header($header2);
+    }
+
+    // analyze the PHP_AUTH_DIGEST variable
+    $data = $this->http_digest_parse($_SERVER['PHP_AUTH_DIGEST']);
+    $password = $this->get_user_password($data['username'], $loginAndPasswords);
+
+
+    if (!$password) {
+      header($header1);
+      header($header2);
+      return FALSE;
+    }
+
+    if (!$data || $password == -1) {
+      header($header1);
+      header($header2);
+      return FALSE;
+    }
+
+    // generate the valid response
+    $A1 = md5($data['username'] . ':' . $realm . ':' . $password);
+    $A2 = md5($_SERVER['REQUEST_METHOD'] . ':' . $data['uri']);
+    $valid_response = md5($A1 . ':' . $data['nonce'] . ':' . $data['nc'] . ':' . $data['cnonce'] . ':' . $data['qop'] . ':' . $A2);
+
+    if ($data['response'] != $valid_response) {
+      header($header1);
+      header($header2);
+      return FALSE;
+    }
+
+    return TRUE;
+  }
+
+
 
 }
