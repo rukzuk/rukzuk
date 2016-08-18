@@ -130,7 +130,7 @@ module.exports = function (grunt) {
                 '!rz_core/modules/rz_root/assets/js/modernizer.js',
                 '!rz_core/modules/rz_root/assets/js/prefixfree.*.js',
                 '!rz_core/modules/rz_root/assets/js/vminpoly/**/*.js',
-                '!rz_core/modules/rz_anchor_navigation/assets/waypoints.js',
+                '!rz_core/modules/rz_anchor/assets/waypoints.js',
                 '!rz_core/modules/rz_form/assets/validform/validform.js',
                 '!rz_core/modules/rz_anchor/assets/notlive/lib/urlify.js',
                 '!rz_core/modules/rz_image/assets/notlive/jquery.mousewheel.js',
