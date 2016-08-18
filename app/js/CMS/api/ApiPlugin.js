@@ -328,7 +328,7 @@ CMS.api.PluginInstance = Ext.extend(Ext.util.Observable, {
             // remove old meta informations
             text = text.replace(/\(.*\)/g, '').trim();
             // ... and add new ones
-            if (infoValue != '') {
+            if (infoValue !== '') {
                 if (key == 'complete') {
                     text = infoValue;
                 } else {
