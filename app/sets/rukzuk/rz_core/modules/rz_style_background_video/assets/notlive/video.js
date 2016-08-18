@@ -4,7 +4,7 @@ define(['jquery', 'CMS', 'rz_root/notlive/js/cssHelper'], function ($, CMS, cssH
         var unitData = CMS.get(unitId);
         var mp4 = unitData.formValues.cssMp4.value;
 
-        if (mp4 != null) {
+        if (mp4 !== null) {
             var mp4Url = CMS.getMediaUrl(unitData.formValues.cssMp4.value, false);
             var $parentUnit = $('#' + unitData.parentUnitId);
             $parentUnit.vide({
