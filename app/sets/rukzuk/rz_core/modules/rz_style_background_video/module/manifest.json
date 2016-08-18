@@ -1,0 +1,12 @@
+{
+    "name": "{\"de\":\"Hintergrund-Video\",\"en\":\"Background Video\"}",
+    "description": "{\"de\":\"Videodatei (mp4) als Hintergrund einbinden\",\"en\":\"Include a video file (mp4) as a background\"}",
+    "version": "dev",
+    "icon": "film.png",
+    "category": "20",
+    "moduleType": "extension",
+    "allowedChildModuleType": "",
+    "ghostContainerMode": "force_off",
+    "reRenderRequired": false,
+    "apiType": "APIv1"
+}

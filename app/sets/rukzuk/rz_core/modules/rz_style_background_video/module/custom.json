@@ -1,0 +1,21 @@
+{
+    "assets":{
+        "js":[
+            {
+                "file":"jquery.vide.js",
+                "type":"script"
+            },
+            {
+                "file":"notlive\/video.js",
+                "type":"module",
+                "mode":"edit"
+            }
+        ]
+    },
+    "i18n":{
+        "error.insideExtensionModule":{
+            "de":"Hinweis: Der Style „Hintergrund-Video“ funktioniert nicht innerhalb eines Selektors. Bitte den Style verschieben.",
+            "en":"Note: The style “Background Video” doesn't work inside selectors. Please move the style."
+        }
+    }
+}
