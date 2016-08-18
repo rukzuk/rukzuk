@@ -69,6 +69,7 @@
     "rz_style_background_color",
     "rz_style_background_gradient",
     "rz_style_background_image",
+    "rz_style_background_video",
     "rz_style_border",
     "rz_style_border_radius",
     "rz_style_box_shadow",
