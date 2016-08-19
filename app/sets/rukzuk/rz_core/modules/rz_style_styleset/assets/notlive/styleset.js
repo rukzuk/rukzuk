@@ -97,6 +97,12 @@ define(['jquery', 'CMS', 'rz_root/notlive/js/cssHelper'], function ($, CMS, cssH
 
             var eventFilter = {moduleId: data.moduleId};
 
+            var SelectedUnit = CMS.getSelected();
+            if (SelectedUnit.moduleId == 'rz_style_styleset') {
+                styleSets = getStyleSets();
+                updateDropDown({unitId: SelectedUnit.id});
+            }
+
             CMS.on('formValueChange', {moduleId: 'rz_styleset'}, function (cfg) {
                 styleSets = getStyleSets();
                 CMS.getAllUnitIds(data.moduleId).forEach(function (unitId) {
