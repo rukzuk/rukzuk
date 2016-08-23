@@ -15,7 +15,7 @@ DynCSS.defineModule('rz_style_icon', function (api, v, ctx) {
 
         var css = {
             content: cssUrl,
-            display: 'block',
+            display: 'inline-block',
             width: imageSize
         };
 
