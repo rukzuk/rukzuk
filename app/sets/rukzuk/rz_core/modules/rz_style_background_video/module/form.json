@@ -47,7 +47,7 @@
                         },
                         {
                             "name": "fieldLabel",
-                            "value": "{\"de\":\"Videodatei (nur mp4)\",\"en\":\"Video file (mp4 only)\"}",
+                            "value": "{\"de\":\"Videodatei (nur mp4-Dateien)\",\"en\":\"Video file (mp4 only)\"}",
                             "xtype": "textfield",
                             "allowBlank": true,
                             "emptyText": "__i18n_formElements.fieldLabelOptionalEmptyText",
@@ -55,7 +55,7 @@
                         },
                         {
                             "name": "text",
-                            "value": "Select file",
+                            "value": "{\"de\":\"aus Mediendatenbank auswählen\",\"en\":\"Select file\"}",
                             "xtype": "textfield",
                             "allowBlank": false,
                             "emptyText": "__i18n_formElements.buttonEmptyText",
@@ -89,7 +89,7 @@
                         },
                         {
                             "name": "xtype",
-                            "value": "CMSnumberfieldunit",
+                            "value": "ux-comboselect",
                             "xtype": null
                         },
                         {
@@ -99,66 +99,78 @@
                             "xtype": "checkbox"
                         },
                         {
+                            "name": "fieldLabel",
+                            "value": "{\"de\":\"Geschwindigkeit\",\"en\":\"Speed\"}",
+                            "xtype": "textfield",
+                            "allowBlank": true,
+                            "emptyText": "__i18n_formElements.fieldLabelOptionalEmptyText",
+                            "fieldLabel": "__i18n_formElements.fieldLabel"
+                        },
+                        {
                             "name": "isResponsive",
                             "value": false,
                             "fieldLabel": "__i18n_formElements.isResponsive",
                             "xtype": "checkbox"
                         },
                         {
-                            "name": "fieldLabel",
-                            "value": "{\"de\":\"Geschwindigkeit (1=normal)\",\"en\":\"Speed (1=normal)\"}",
+                            "name": "emptyText",
+                            "value": "",
                             "xtype": "textfield",
+                            "allowBlank": true,
+                            "emptyText": "__i18n_formElements.emptyTextEmptyText",
+                            "fieldLabel": "__i18n_formElements.emptyTextLabel"
+                        },
+                        {
+                            "name": "options",
+                            "value": [
+                                [
+                                    "1",
+                                    "normal",
+                                    0
+                                ],
+                                [
+                                    "2",
+                                    "{\"de\":\"doppelt\",\"en\":\"double\"}",
+                                    0
+                                ],
+                                [
+                                    "3",
+                                    "{\"de\":\"dreifach\",\"en\":\"trible\"}",
+                                    0
+                                ],
+                                [
+                                    ".5",
+                                    "{\"de\":\"halb\",\"en\":\"half\"}",
+                                    0
+                                ],
+                                [
+                                    ".25",
+                                    "{\"de\":\"viertel\",\"en\":\"quarter\"}",
+                                    0
+                                ]
+                            ],
+                            "xtype": "CMSkeyvaluetextarea",
                             "allowBlank": false,
-                            "emptyText": "__i18n_formElements.fieldLabelEmptyText",
-                            "fieldLabel": "__i18n_formElements.fieldLabel"
-                        },
-                        {
-                            "name": "minValue",
-                            "value": 0,
-                            "xtype": "numberfield",
-                            "allowBlank": true,
-                            "allowDecimals": false,
-                            "emptyText": "__i18n_formElements.minValueEmptyText",
-                            "fieldLabel": "__i18n_formElements.minValueLabel"
-                        },
-                        {
-                            "name": "maxValue",
-                            "value": 10,
-                            "xtype": "numberfield",
-                            "allowBlank": true,
-                            "allowDecimals": false,
-                            "emptyText": "__i18n_formElements.maxValueEmptyText",
-                            "fieldLabel": "__i18n_formElements.maxValueLabel"
-                        },
-                        {
-                            "name": "increment",
-                            "value": 0.1,
-                            "xtype": "numberfield",
-                            "allowBlank": false,
-                            "allowDecimals": true,
-                            "emptyText": "__i18n_formElements.incrementEmptyText",
-                            "fieldLabel": "__i18n_formElements.incrementLabel"
-                        },
-                        {
-                            "name": "unitList",
-                            "value": [],
-                            "xtype": "CMSkeyvaluetextareaconfigurable",
-                            "allowBlank": true,
-                            "numOfValues": 2,
                             "array": true,
-                            "emptyText": "__i18n_formElements.sizeUnitsEmptyText",
-                            "fieldLabel": "__i18n_formElements.sizeUnitsLabel"
+                            "emptyText": "__i18n_formElements.listValuesEmptyText",
+                            "fieldLabel": "__i18n_formElements.listValuesLabel"
+                        },
+                        {
+                            "name": "forceSelection",
+                            "value": true,
+                            "xtype": "checkbox",
+                            "fieldLabel": "__i18n_formElements.comboSelectForceSelection"
                         },
                         {
                             "name": "value",
-                            "value": "1",
+                            "value": 1,
                             "xtype": null
                         }
                     ],
                     "descr": {
-                        "id": "SliderUnit",
-                        "text": "__i18n_formElements.elementSliderUnit",
-                        "iconCls": "slider",
+                        "id": "ComboSelect",
+                        "text": "__i18n_formElements.elementComboSelect",
+                        "iconCls": "combo",
                         "hasValue": true
                     }
                 },
@@ -263,6 +275,46 @@
                         "iconCls": "onofftoggle",
                         "hasValue": true
                     }
+                },
+                {
+                    "params": [
+                        {
+                            "name": "xtype",
+                            "value": "ux-multilinelabel",
+                            "xtype": null
+                        },
+                        {
+                            "name": "hideLabel",
+                            "value": true,
+                            "xtype": null
+                        },
+                        {
+                            "name": "text",
+                            "xtype": "textarea",
+                            "height": 200,
+                            "value": "{\"de\":\"Hinweis: Hintergrundvideos werden auf den meisten Smartphones nicht abgespielt. Daher sollte immer auch ein Hintergrundbild gesetzt werden.\",\"en\":\"Background videos are normally not displayed on smartphones. We suggest to add an additional background image.\"}",
+                            "fieldLabel": "__i18n_formElements.commentLabel"
+                        },
+                        {
+                            "name": "autoLink",
+                            "value": true,
+                            "xtype": null
+                        },
+                        {
+                            "name": "cls",
+                            "value": "modulecomment",
+                            "xtype": null
+                        },
+                        {
+                            "name": "value",
+                            "xtype": null
+                        }
+                    ],
+                    "descr": {
+                        "id": "Comment",
+                        "text": "__i18n_formElements.elementComment",
+                        "iconCls": "plaintext"
+                    }
                 }
             ],
             "id": "e678da9f-b154-4e01-8357-93f1f3bc0be9"
@@ -270,7 +322,7 @@
     ],
     "formValues": {
         "cssMp4": null,
-        "cssSpeed": "1",
+        "cssSpeed": 1,
         "cssLoop": true,
         "cssMute": true
     }

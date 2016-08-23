@@ -6,8 +6,7 @@ class rz_style_background_video extends SimpleModule {
   public function htmlHeadUnit($api, $unit, $moduleInfo) {
     // enable event only if this extension unit is a direct child of default unit
     $parentUnit = $api->getParentUnit($unit);
-
-    if ($api->getModuleInfo($parentUnit)->isExtension()) {
+    if ($api->getModuleInfo($parentUnit)->isExtension() || ($api->getModuleInfo($parentUnit)->getId() == "rz_styleset")) {
       if ($api->isEditMode()) {
         $i18n = new Translator($api, $moduleInfo);
         $msg = $i18n->translate('error.insideExtensionModule');

@@ -239,7 +239,7 @@
       .addClass(settings.className)
       .css({
         position: 'absolute',
-        'z-index': -1,
+        'z-index': 0,
         top: 0,
         left: 0,
         bottom: 0,
