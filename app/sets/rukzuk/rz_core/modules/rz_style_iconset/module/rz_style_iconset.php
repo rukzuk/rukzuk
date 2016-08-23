@@ -12,7 +12,7 @@ class rz_style_iconset extends SimpleModule {
    */
   public function htmlHeadUnit($api, $unit, $moduleInfo)
   {
-	$html = '<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">';
+	$html = '<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">';
     return $html;
   }
 }
