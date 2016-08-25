@@ -201,7 +201,12 @@ class rz_navigation extends SimpleModule
     return in_array($pageId, $navigatorIds);
   }
 
-
+  /**
+   * @param string $pageId
+   * @param \Render\APIs\APIv1\Navigation $navigation
+   *
+   * @return bool
+   */
   protected function hasChildPages($pageId, $navigation) {
     if (count($navigation->getChildrenIds($pageId)) > 0) {
       return true;
