@@ -18,6 +18,10 @@
             "de":"Alle Navigationslinks",
             "en":"All navigation links"
         },
+        "selector.navLink.hasChildPages":{
+            "de":"Alle Navigationslinks mit Unterseiten",
+            "en":"All navigation links with subpages"
+        },
         "selector.navLinkActive":{
             "de":"Aktiver Navigationslink",
             "en":"Active navigation link"
@@ -29,6 +33,10 @@
         "selector.navItem":{
             "de":"Alle Navigationselemente",
             "en":"All navigation elements"
+        },
+        "selector.navItem.hasChildPages":{
+            "de":"Alle Navigationselemente mit Unterseiten",
+            "en":"All navigation elements with subpages"
         },
         "selector.navItemActive":{
             "de":"Aktives Navigationselement",
@@ -69,6 +77,10 @@
             "selector":".navLink"
         },
         {
+            "title":"__i18n_selector.navLink.hasChildPages",
+            "selector":".navLink.hasChildPages"
+        },
+        {
             "title":"__i18n_selector.navLinkActive",
             "selector":".navLink.navLinkActive"
         },
@@ -80,6 +92,10 @@
             "title":"__i18n_selector.navItem",
             "selector":".navItem",
             "enableNthTypeOf":true
+        },
+        {
+            "title":"__i18n_selector.navItem.hasChildPages",
+            "selector":".navItem.hasChildPages"
         },
         {
             "title":"__i18n_selector.navItemActive",
