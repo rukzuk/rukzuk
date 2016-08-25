@@ -148,6 +148,11 @@ class rz_navigation extends SimpleModule
       $linkTag->addClass('navLinkCurrent');
     }
 
+    if ($this->hasChildPages($pageId, $navigation)) {
+      $listTag->addClass('hasChildPages');
+      $linkTag->addClass('hasChildPages');
+    }
+
     return $listTag;
     // return $listTag->toString();
   }
@@ -194,6 +199,16 @@ class rz_navigation extends SimpleModule
   protected function isItemActive($pageId, array &$navigatorIds)
   {
     return in_array($pageId, $navigatorIds);
+  }
+
+
+  protected function hasChildPages($pageId, $navigation) {
+    if (count($navigation->getChildrenIds($pageId)) > 0) {
+      return true;
+    } else {
+      return false;
+    }
+
   }
 
   /**
