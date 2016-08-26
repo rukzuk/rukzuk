@@ -1,7 +1,7 @@
 {
     "name": {
-        "de": "Geschützter Bereich",
-        "en": "Password protected pages"
+        "de": "Passwortschutz",
+        "en": "Password protection"
     },
     "description": {
         "de": "",
@@ -14,12 +14,12 @@
     "form": [
         {
             "type": "Comment",
-            "text": "{\"de\": \"Geschützter Bereich bedeutet, dass man sich mit Login und Passwort authentifizieren muss, um die angegebene Seite (und alle darunter liegenden Seiten) anschauen zu dürfen. Der geschützte Bereich funktioniert standardmässig nur auf dem Liveserver. Hinweis: Downloads sind nicht automatisch mit geschützt. Gibt einer deiner Besucher einen Direktlink zu einer Datei weiter, können auch Unberechtigte Zugang zur Datei erhalten. Diese Funktion ist nicht für sehr vertrauliche Informationen geeignet.\", \"en\": \"Protected pages means that you must authenticate with a login and password to access the specified page (and all pages underneath). The password protection is by default enabled on the live server only. Note: Downloads are not automatically protected. If an authorized person passes on a direct link to a file, unauthorized access to the file can be obtained. This function is not suitable for very sensitive information.\"}"
+            "text": "{\"de\": \"Wenn der Passwortschutz aktiviert ist, muss man sich mit Login und Passwort authentifizieren, um die angegebene Seite (und alle darunter liegenden Seiten) anschauen zu dürfen. Wird keine Seite ausgewählt, dann ist die gesamte Website geschützt. Der Passwortschutz funktioniert standardmässig nur auf dem Liveserver. Hinweis: Downloads sind nicht automatisch mit geschützt. Gibt einer deiner Besucher einen Direktlink zu einer Datei weiter, können auch Unberechtigte Zugang zur Datei erhalten. Diese Funktion ist nicht für sehr vertrauliche Informationen geeignet.\", \"en\": \"Password protected means that you must authenticate with a login and password to access the specified page (and all pages underneath). The password protection is by default enabled on the live server only. Note: Downloads are not automatically protected. If an authorized person passes on a direct link to a file, unauthorized access to the file can be obtained. This function is not suitable for very sensitive information.\"}"
         },
         {
             "type": "OnOffFieldSet",
             "CMSvar": "enableProtectedPage",
-            "fieldLabel": "{\"de\": \"Geschützten Bereich aktivieren\", \"en\": \"Enable password protection\"}",
+            "fieldLabel": "{\"de\": \"Passwortschutz aktivieren\", \"en\": \"Enable password protection\"}",
             "_items": [
                 {
                     "type": "InternalLinkChooser",
@@ -40,7 +40,7 @@
                 {
                     "type": "OnOffToggle",
                     "CMSvar": "inPreviewMode",
-                    "fieldLabel": "{\"de\": \"Geschützten Bereich auch in der Vorschau aktivieren (zu Testzwecken)\", \"en\": \"Activate page protection in preview mode (for testing purposes)\"}"
+                    "fieldLabel": "{\"de\": \"Passwortschutz auch in der Vorschau aktivieren (zu Testzwecken)\", \"en\": \"Activate page protection in preview mode (for testing purposes)\"}"
                 }
             ]
         }
