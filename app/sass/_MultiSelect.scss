@@ -16,11 +16,15 @@
 }
 
 .ux-mselect .x-list-selected {
-    background: #bc4b00;
+  background: #bc4b00;
+}
+
+.ux-mselect .x-list-selected.x-list-over {
+  background: #bc4b00;
 }
 
 .ux-mselect .x-list-over {
-    background: $bg-thumb-titlebar-selected-hover;
+  background: #1f2123;
 }
 
 .ux-mselect-indent {
