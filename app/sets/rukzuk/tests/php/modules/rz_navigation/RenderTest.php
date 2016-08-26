@@ -177,8 +177,8 @@ class rz_navigation_RenderTest extends ModuleTestCase
     // verify
     $this->assertEquals(implode('', array(
       '<ul class="navLevel1">',
-        '<li class="navItem">',
-          '<a class="navLink" href="www.fage.org/page1.html">page1</a>',
+        '<li class="navItem hasChildPages">',
+          '<a class="navLink hasChildPages" href="www.fage.org/page1.html">page1</a>',
           '<ul class="navLevel2">',
             '<ul class="navLevel3">',
               '<li class="navItem">',
