@@ -30,8 +30,8 @@ Ext.ns('CMS.config');
             editTemplate: 5 * min, /* TODO remove when reparsing is faster */
             exportModule: 2 * min,
             exportTemplate: 2 * min,
-            exportWebsite: 10 * min,
-            importWebsite: 10 * min,
+            exportWebsite: 15 * min,
+            importWebsite: 15 * min,
             publishBuild: 10 * min
         },
         urls: {
