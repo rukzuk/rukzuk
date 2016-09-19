@@ -22,17 +22,17 @@ Ext.ns('CMS.config');
         ajaxTimeouts: { // in ms
             'default': 20 * sec,
 
-            buildWebsite: 5 * min,
+            buildWebsite: 20 * min,
             cloneWebsite: 5 * min,
             deleteAlbum: 2 * min,
             deleteMedia: 2 * min,
-            deleteWebsite: 2 * min,
+            deleteWebsite: 5 * min,
             editTemplate: 5 * min, /* TODO remove when reparsing is faster */
             exportModule: 2 * min,
             exportTemplate: 2 * min,
-            exportWebsite: 5 * min,
-            importWebsite: 2 * min,
-            publishBuild: 2 * min,
+            exportWebsite: 10 * min,
+            importWebsite: 10 * min,
+            publishBuild: 10 * min
         },
         urls: {
             // back-end services
@@ -190,7 +190,7 @@ Ext.ns('CMS.config');
         mediaCdnBaseUrl: '/app/service/cdn/get/params/',
 
         newWebsiteJson: 'exports/websites.json',
-        newWebsitePreviewImageUrlTpl: 'exports/{0}/preview.jpg',
+        newWebsitePreviewImageUrlTpl: 'exports/{0}/preview.jpg'
 
         // mocks:
         //shareInfoByWebsiteId: 'mock/shareInfoByWebsiteId.json.php',
