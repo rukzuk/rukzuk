@@ -12,7 +12,7 @@ class ResponsiveImageBuilder {
   static private $responsiveImageResolutions = array(320, 480, 768, 1024, 1280, 1440, 1600, 1920);
   static private $previewResponsiveImageResolution = 64;
   static private $maxResponsiveImageResolution = 1920;
-  static private $responsiveImageDefaultQuality = 85;
+  static private $responsiveImageDefaultQuality = 95;
 
   public function __construct($api, $unit, $moduleInfo = null)
   {
