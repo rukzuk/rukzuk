@@ -38,7 +38,7 @@
     # php.ini overrides
     php_value include_path .
     php_value open_basedir /srv/rukzuk:/opt/rukzuk:/tmp:/usr/bin/phantomjs
-    php_value max_execution_time 900
+    php_value max_execution_time 1200
     php_value memory_limit 256M
     php_value post_max_size 512M
     php_value upload_max_filesize 512M
