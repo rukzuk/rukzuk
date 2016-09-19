@@ -68,10 +68,10 @@ class ResponsiveImageBuilderTest extends ModuleTestCase
     // execute
     $tag = $responsiveImageBuilder->getImageTag($mediaItem->getImage())->toString();
     // verify
-    $this->assertContains('/resizeScale(320)/quality(85)/foo.png', $tag);
+    $this->assertContains('/resizeScale(320)/quality(95)/foo.png', $tag);
     // default
     $this->assertContains('data-cms-origsrc=', $tag);
-    $this->assertContains('src="/resizeScale(64)/quality(85)/foo.png"', $tag);
+    $this->assertContains('src="/resizeScale(64)/quality(95)/foo.png"', $tag);
   }
 
   public function testBuildImageTag_crop()
@@ -97,15 +97,15 @@ class ResponsiveImageBuilderTest extends ModuleTestCase
       )
     ))->toString();
     // verify
-    $this->assertContains('/crop(10,20,30,40)/resizeScale(320)/quality(85)/foo.png', $tag);
-    $this->assertContains('/crop(10,20,30,40)/resizeScale(480)/quality(85)/foo.png', $tag);
-    $this->assertContains('/crop(10,20,30,40)/resizeScale(768)/quality(85)/foo.png', $tag);
-    $this->assertContains('/crop(10,20,30,40)/resizeScale(1024)/quality(85)/foo.png', $tag);
-    $this->assertContains('/crop(10,20,30,40)/resizeScale(1280)/quality(85)/foo.png', $tag);
-    $this->assertContains('/crop(10,20,30,40)/resizeScale(1440)/quality(85)/foo.png', $tag);
-    $this->assertContains('/crop(10,20,30,40)/resizeScale(1600)/quality(85)/foo.png', $tag);
-    $this->assertContains('/crop(10,20,30,40)/resizeScale(1920)/quality(85)/foo.png', $tag);
-    $this->assertContains('src="/crop(10,20,30,40)/resizeScale(64)/quality(85)/foo.png"', $tag);
+    $this->assertContains('/crop(10,20,30,40)/resizeScale(320)/quality(95)/foo.png', $tag);
+    $this->assertContains('/crop(10,20,30,40)/resizeScale(480)/quality(95)/foo.png', $tag);
+    $this->assertContains('/crop(10,20,30,40)/resizeScale(768)/quality(95)/foo.png', $tag);
+    $this->assertContains('/crop(10,20,30,40)/resizeScale(1024)/quality(95)/foo.png', $tag);
+    $this->assertContains('/crop(10,20,30,40)/resizeScale(1280)/quality(95)/foo.png', $tag);
+    $this->assertContains('/crop(10,20,30,40)/resizeScale(1440)/quality(95)/foo.png', $tag);
+    $this->assertContains('/crop(10,20,30,40)/resizeScale(1600)/quality(95)/foo.png', $tag);
+    $this->assertContains('/crop(10,20,30,40)/resizeScale(1920)/quality(95)/foo.png', $tag);
+    $this->assertContains('src="/crop(10,20,30,40)/resizeScale(64)/quality(95)/foo.png"', $tag);
   }
 
   public function testBuildImageTag_resize()
@@ -129,15 +129,15 @@ class ResponsiveImageBuilderTest extends ModuleTestCase
       )
     ))->toString();
     // verify
-    $this->assertContains('/resizeCenter(10,20)/resizeScale(320)/quality(85)/foo.png', $tag);
-    $this->assertContains('/resizeCenter(10,20)/resizeScale(480)/quality(85)/foo.png', $tag);
-    $this->assertContains('/resizeCenter(10,20)/resizeScale(768)/quality(85)/foo.png', $tag);
-    $this->assertContains('/resizeCenter(10,20)/resizeScale(1024)/quality(85)/foo.png', $tag);
-    $this->assertContains('/resizeCenter(10,20)/resizeScale(1280)/quality(85)/foo.png', $tag);
-    $this->assertContains('/resizeCenter(10,20)/resizeScale(1440)/quality(85)/foo.png', $tag);
-    $this->assertContains('/resizeCenter(10,20)/resizeScale(1600)/quality(85)/foo.png', $tag);
-    $this->assertContains('/resizeCenter(10,20)/resizeScale(1920)/quality(85)/foo.png', $tag);
-    $this->assertContains('src="/resizeCenter(10,20)/resizeScale(64)/quality(85)/foo.png"', $tag);
+    $this->assertContains('/resizeCenter(10,20)/resizeScale(320)/quality(95)/foo.png', $tag);
+    $this->assertContains('/resizeCenter(10,20)/resizeScale(480)/quality(95)/foo.png', $tag);
+    $this->assertContains('/resizeCenter(10,20)/resizeScale(768)/quality(95)/foo.png', $tag);
+    $this->assertContains('/resizeCenter(10,20)/resizeScale(1024)/quality(95)/foo.png', $tag);
+    $this->assertContains('/resizeCenter(10,20)/resizeScale(1280)/quality(95)/foo.png', $tag);
+    $this->assertContains('/resizeCenter(10,20)/resizeScale(1440)/quality(95)/foo.png', $tag);
+    $this->assertContains('/resizeCenter(10,20)/resizeScale(1600)/quality(95)/foo.png', $tag);
+    $this->assertContains('/resizeCenter(10,20)/resizeScale(1920)/quality(95)/foo.png', $tag);
+    $this->assertContains('src="/resizeCenter(10,20)/resizeScale(64)/quality(95)/foo.png"', $tag);
   }
 
   public function testBuildImageTag_quality()
