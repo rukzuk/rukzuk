@@ -88,4 +88,5 @@ Needed third party packages:
 	grunt test # test the client code (mostly linters and hinters + some phpunit tests)
 	grunt phpunit:all # test the php code
 	grunt build # builds all modules
+	grunt package --channel=stable --build=`git describe --tags` # build a release package
 
