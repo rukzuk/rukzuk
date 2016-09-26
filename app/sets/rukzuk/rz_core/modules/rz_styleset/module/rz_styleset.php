@@ -18,12 +18,12 @@ class rz_styleset extends SimpleModule {
       return array();
     }
 
-    if ($api->isEditMode()) {
-      $selector = str_replace("MUNIT", "STS", $unit->getId());
+    $selector = $api->getFormValue($unit, 'cssStyleSet');
+    if ($selector != '') {
+      $result['selector'] = array('.' . $selector);
     } else {
-      $selector = $api->getFormValue($unit, 'cssStyleSet');
+      echo "hier";
     }
-    $result['selector'] = array('.' . $selector);
 
     return $result;
   }
