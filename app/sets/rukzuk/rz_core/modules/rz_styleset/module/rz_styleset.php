@@ -21,8 +21,6 @@ class rz_styleset extends SimpleModule {
     $selector = $api->getFormValue($unit, 'cssStyleSet');
     if ($selector != '') {
       $result['selector'] = array('.' . $selector);
-    } else {
-      echo "hier";
     }
 
     return $result;
