@@ -433,7 +433,7 @@ EOF;
       forEach ($paths as $key => $path) {
         $reqCfg .= "'$key': '$path',";
       }
-      $reqCfg .= '}});';
+      $reqCfg .= '}, waitSeconds: 60});';
       $loadCode =  $reqCfg . $loadCode;
     }
 
