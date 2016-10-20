@@ -97,7 +97,6 @@ li.slide {
   cursor: pointer !important;
   top: 50%;
   position: absolute;
-  z-index: 9999;
   margin-top: -34px;
   padding: 10px;
 }
