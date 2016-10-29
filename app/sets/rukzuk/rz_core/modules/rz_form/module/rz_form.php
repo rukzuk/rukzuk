@@ -119,7 +119,7 @@ class rz_form extends SimpleModule
     ) {
       $this->formSubmit->setFieldLabelsToFormValueSet($renderApi);
       try {
-        $this->sentEmail($renderApi, $unit, $postRequest);
+        $this->sendEmail($renderApi, $unit, $postRequest);
         return true;
       } catch (\Exception $e) {
         throw $e;
@@ -172,7 +172,7 @@ class rz_form extends SimpleModule
    * @param Unit      $unit
    * @param array     $postRequest <FormValueSetSet>
    */
-  private function sentEmail($renderApi, $unit, $postRequest)
+  private function sendEmail($renderApi, $unit, $postRequest)
   {
     $mailer = new Mailer($renderApi);
     $mailer->setFrom($renderApi->getFormValue($unit, 'senderMail'));
