@@ -30,6 +30,14 @@ li.slide {
     list-style: none;
 }
 
+.rz_slider_images > ul > li.slide {
+    display: none;
+}
+
+.rz_slider_images > ul > li.slide:first-child {
+    display: block;
+}
+
 .bx-wrapper .bx-pager,
 .bx-wrapper .bx-controls-auto {
     /* required if the user wants to move the control bar via position absolute */
