@@ -317,7 +317,7 @@
                     "params": [
                         {
                             "name": "CMSvar",
-                            "value": "confirmationText",
+                            "value": "confirmationType",
                             "allowBlank": false,
                             "minLength": 3,
                             "maskRe": {},
@@ -328,8 +328,14 @@
                         },
                         {
                             "name": "xtype",
-                            "value": "textarea",
+                            "value": "CMStabbedfieldset",
                             "xtype": null
+                        },
+                        {
+                            "name": "isResponsive",
+                            "value": false,
+                            "fieldLabel": "__i18n_formElements.isResponsive",
+                            "xtype": "checkbox"
                         },
                         {
                             "name": "isMeta",
@@ -339,57 +345,228 @@
                         },
                         {
                             "name": "fieldLabel",
-                            "value": "{\"de\":\"Text nach Absenden des Formulars\",\"en\":\"Text after form submit\"}",
+                            "value": "{\"de\":\"Nach dem Absenden\", \"en\": \"After submit\"}",
                             "xtype": "textfield",
                             "allowBlank": true,
                             "emptyText": "__i18n_formElements.fieldLabelOptionalEmptyText",
                             "fieldLabel": "__i18n_formElements.fieldLabel"
                         },
                         {
-                            "name": "labelAlign",
-                            "value": "top",
-                            "xtype": "combo",
-                            "fieldLabel": "__i18n_formTabEditor.labelAlignLabel",
-                            "editable": false,
-                            "lazyRender": true,
-                            "triggerAction": "all",
-                            "store": [
-                                [
-                                    "left",
-                                    "__i18n_formTabEditor.labelAlignLeft"
-                                ],
-                                [
-                                    "top",
-                                    "__i18n_formTabEditor.labelAlignTop"
-                                ],
-                                [
-                                    "right",
-                                    "__i18n_formTabEditor.labelAlignRight"
-                                ],
-                                [
-                                    "hide",
-                                    "__i18n_formTabEditor.labelAlignHide"
-                                ]
-                            ]
-                        },
-                        {
-                            "name": "height",
-                            "value": 200,
-                            "xtype": "numberfield",
-                            "allowBlank": false,
-                            "fieldLabel": "__i18n_formElements.heightLabel"
-                        },
-                        {
                             "name": "value",
-                            "value": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\nUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                            "xtype": null
+                            "xtype": null,
+                            "value": "text"
                         }
                     ],
                     "descr": {
-                        "text": "__i18n_formElements.elementTextArea",
-                        "iconCls": "textarea",
-                        "hasValue": true
-                    }
+                        "id": "TabbedFieldSet",
+                        "text": "__i18n_formElements.elementTabbedFieldSet",
+                        "iconCls": "tabbedfieldset",
+                        "hasValue": true,
+                        "allowChildNodes": true
+                    },
+                    "items": [
+                        {
+                            "params": [
+                                {
+                                    "name": "xtype",
+                                    "value": "CMStabpage",
+                                    "xtype": null
+                                },
+                                {
+                                    "name": "tabValue",
+                                    "xtype": "textfield",
+                                    "allowBlank": false,
+                                    "emptyText": "__i18n_formElements.groupValueEmptyText",
+                                    "fieldLabel": "__i18n_formElements.groupValueFieldLabel",
+                                    "value": "text"
+                                },
+                                {
+                                    "name": "title",
+                                    "value": "{\"de\": \"Text anzeigen\", \"en\": \"Show Text\"}",
+                                    "xtype": "textfield",
+                                    "allowBlank": false,
+                                    "emptyText": "__i18n_formElements.title",
+                                    "fieldLabel": "__i18n_formElements.title"
+                                },
+                                {
+                                    "name": "value",
+                                    "xtype": null,
+                                    "value": "text"
+                                }
+                            ],
+                            "descr": {
+                                "id": "TabPage",
+                                "text": "__i18n_formElements.elementTabPage",
+                                "iconCls": "tabpage",
+                                "hasValue": false,
+                                "allowChildNodes": true
+                            },
+                            "items": [
+                                {
+                                    "params": [
+                                        {
+                                            "name": "CMSvar",
+                                            "value": "confirmationText",
+                                            "allowBlank": false,
+                                            "minLength": 3,
+                                            "maskRe": {},
+                                            "stripCharsRe": {},
+                                            "xtype": "textfield",
+                                            "emptyText": "__i18n_generatedFormPanel.varNameEmptyText",
+                                            "fieldLabel": "__i18n_generatedFormPanel.varNameLabel"
+                                        },
+                                        {
+                                            "name": "xtype",
+                                            "value": "textarea",
+                                            "xtype": null
+                                        },
+                                        {
+                                            "name": "isMeta",
+                                            "value": false,
+                                            "fieldLabel": "__i18n_formElements.isGlobal",
+                                            "xtype": "checkbox"
+                                        },
+                                        {
+                                            "name": "fieldLabel",
+                                            "value": "{\"de\":\"Text nach Absenden des Formulars\",\"en\":\"Text after form submit\"}",
+                                            "xtype": "textfield",
+                                            "allowBlank": true,
+                                            "emptyText": "__i18n_formElements.fieldLabelOptionalEmptyText",
+                                            "fieldLabel": "__i18n_formElements.fieldLabel"
+                                        },
+                                        {
+                                            "name": "labelAlign",
+                                            "value": "top",
+                                            "xtype": "combo",
+                                            "fieldLabel": "__i18n_formTabEditor.labelAlignLabel",
+                                            "editable": false,
+                                            "lazyRender": true,
+                                            "triggerAction": "all",
+                                            "store": [
+                                                [
+                                                    "left",
+                                                    "__i18n_formTabEditor.labelAlignLeft"
+                                                ],
+                                                [
+                                                    "top",
+                                                    "__i18n_formTabEditor.labelAlignTop"
+                                                ],
+                                                [
+                                                    "right",
+                                                    "__i18n_formTabEditor.labelAlignRight"
+                                                ],
+                                                [
+                                                    "hide",
+                                                    "__i18n_formTabEditor.labelAlignHide"
+                                                ]
+                                            ]
+                                        },
+                                        {
+                                            "name": "height",
+                                            "value": 200,
+                                            "xtype": "numberfield",
+                                            "allowBlank": false,
+                                            "fieldLabel": "__i18n_formElements.heightLabel"
+                                        },
+                                        {
+                                            "name": "value",
+                                            "value": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\nUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                                            "xtype": null
+                                        }
+                                    ],
+                                    "descr": {
+                                        "text": "__i18n_formElements.elementTextArea",
+                                        "iconCls": "textarea",
+                                        "hasValue": true
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "params": [
+                                {
+                                    "name": "xtype",
+                                    "value": "CMStabpage",
+                                    "xtype": null
+                                },
+                                {
+                                    "name": "tabValue",
+                                    "xtype": "textfield",
+                                    "allowBlank": false,
+                                    "emptyText": "__i18n_formElements.groupValueEmptyText",
+                                    "fieldLabel": "__i18n_formElements.groupValueFieldLabel",
+                                    "value": "redirect"
+                                },
+                                {
+                                    "name": "title",
+                                    "value": "{\"de\":\"Seite anzeigen\", \"en\": \"Redirect to Page\"}",
+                                    "xtype": "textfield",
+                                    "allowBlank": false,
+                                    "emptyText": "__i18n_formElements.title",
+                                    "fieldLabel": "__i18n_formElements.title"
+                                },
+                                {
+                                    "name": "value",
+                                    "xtype": null,
+                                    "value": "redirect"
+                                }
+                            ],
+                            "descr": {
+                                "id": "TabPage",
+                                "text": "__i18n_formElements.elementTabPage",
+                                "iconCls": "tabpage",
+                                "hasValue": false,
+                                "allowChildNodes": true
+                            },
+                            "items": [
+                                {
+                                    "params": [
+                                        {
+                                            "name": "CMSvar",
+                                            "value": "confirmationPageId",
+                                            "allowBlank": false,
+                                            "minLength": 3,
+                                            "maskRe": {},
+                                            "stripCharsRe": {},
+                                            "xtype": "textfield",
+                                            "emptyText": "__i18n_generatedFormPanel.varNameEmptyText",
+                                            "fieldLabel": "__i18n_generatedFormPanel.varNameLabel"
+                                        },
+                                        {
+                                            "name": "xtype",
+                                            "value": "CMSinternallinkchooser",
+                                            "xtype": null
+                                        },
+                                        {
+                                            "name": "isMeta",
+                                            "value": false,
+                                            "fieldLabel": "__i18n_formElements.isGlobal",
+                                            "xtype": "checkbox"
+                                        },
+                                        {
+                                            "name": "fieldLabel",
+                                            "value": "{\"de\": \"Zielseite\", \"en\": \"Redirect target\"}",
+                                            "xtype": "textfield",
+                                            "allowBlank": true,
+                                            "emptyText": "__i18n_formElements.fieldLabelOptionalEmptyText",
+                                            "fieldLabel": "__i18n_formElements.fieldLabel"
+                                        },
+                                        {
+                                            "name": "value",
+                                            "value": null,
+                                            "xtype": null
+                                        }
+                                    ],
+                                    "descr": {
+                                        "id": "InternalLinkChooser",
+                                        "text": "__i18n_formElements.elementInternalLinkChooser",
+                                        "iconCls": "anchor",
+                                        "hasValue": true
+                                    }
+                                }
+                            ]
+                        }
+                    ]
                 }
             ],
             "id": "5c67b404-28ac-43fc-982d-09017e9b572e"
@@ -522,6 +699,8 @@
         "senderMail": "",
         "mailSubject": "New Message via Website",
         "confirmationText": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\nUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "confirmationType": "text",
+        "confirmationPageId": null,
         "cssEnableLabelAlign": "left"
     }
 }
