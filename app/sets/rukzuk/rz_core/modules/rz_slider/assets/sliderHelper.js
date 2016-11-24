@@ -39,7 +39,7 @@ define(['jquery'], function ($) {
 
     var initAllSlidersInDom = function () {
         $(window).on('load', function () {
-            $('.rz_slider_images').each(function () {
+            $('.rz_slider').each(function () {
                 initSlider($(this).attr('id'));
             });
         });
