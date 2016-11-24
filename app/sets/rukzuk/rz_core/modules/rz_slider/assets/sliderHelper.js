@@ -33,20 +33,15 @@ define(['jquery'], function ($) {
 
         slider[unitId] = $slider.bxSlider(sliderConfig);
 
-        // redraw slider after loading all images etc.; fixes issues on iOS/OS X
-        $(window).on('load', function () {
-            window.setTimeout(function () {
-                slider[unitId].redrawSlider();
-            }, 50);
-        });
-
         // HACK since layout of rz_box can be wrong in webkit after slider init
         window.webkitFixTableLayout();
     };
 
     var initAllSlidersInDom = function () {
-        $('.rz_slider').each(function () {
-            initSlider($(this).attr('id'));
+        $(window).on('load', function () {
+            $('.rz_slider_images').each(function () {
+                initSlider($(this).attr('id'));
+            });
         });
     };
 
