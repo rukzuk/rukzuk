@@ -26,7 +26,16 @@
 ===================================*/
 
 li.slide {
-  max-width: 100%;
+    max-width: 100%;
+    list-style: none;
+}
+
+.rz_slider_images > ul > li.slide {
+    display: none;
+}
+
+.rz_slider_images > ul > li.slide:first-child {
+    display: block;
 }
 
 .bx-wrapper .bx-pager,
