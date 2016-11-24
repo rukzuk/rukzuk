@@ -30,11 +30,11 @@ li.slide {
     list-style: none;
 }
 
-.rz_slider_images > ul > li.slide {
+.rz_slider > ul > li.slide {
     display: none;
 }
 
-.rz_slider_images > ul > li.slide:first-child {
+.rz_slider > ul > li.slide:first-child {
     display: block;
 }
 
