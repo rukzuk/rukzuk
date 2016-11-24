@@ -50,19 +50,45 @@ class rz_form extends SimpleModule
   private $http = null;
 
   /**
-   * @param RenderAPI  $renderApi
-   * @param Unit       $unit
-   * @param ModuleInfo $moduleInfo
+   * After submit redirect support (actual redirect is done in rz_root)
+   * @param $api
+   * @param $unit
+   * @param $moduleInfo
+   * @return array
    */
-  public function renderContent($renderApi, $unit, $moduleInfo)
+  protected function httpRedirect($api, $unit, $moduleInfo)
   {
+    $isRedirect = ($api->getFormValue($unit, 'confirmationType') == 'redirect');
+    list($form, $honeyPotComponent) = $this->setupForm($unit);
 
-    $formSend = false;
+    if ($isRedirect) {
+      try {
+        $formSend = $this->checkFormAndSendMail($api, $unit, $honeyPotComponent);
+        if ($formSend) {
+          $nav = $api->getNavigation();
+          $internalUrl = $nav->getPage($api->getFormValue($unit, 'confirmationPageId'))->getUrl();
+          return array('url' => $internalUrl);
+        }
+      } catch (\Exception $e) {
+        // do nothing - we don't know what to do if send fails
+        // renderContent will try to send the mail again - if it fails again it will show the error.
+      }
+      return array();
+    }
+  }
+
+  /**
+   * Setup the form objects
+   * @param $unit
+   * @return array
+   */
+  private function setupForm($unit)
+  {
     $this->http = new \Request();
     $form = new \Form();
     $honeyPotComponent = new \HoneyPotComponent();
     $this->formSubmit = new \FormSubmit();
-    $postRequest = $this->formSubmit->getPostValues();
+
     $elementProperties = $form->getElementProperties();
 
     $elementProperties->setId("form" . str_replace("-", "", $unit->getId()));
@@ -71,6 +97,20 @@ class rz_form extends SimpleModule
     $elementProperties->addAttribute('enctype', 'multipart/form-data');
     $form->add($honeyPotComponent->getHoneyPot());
     $form->add($honeyPotComponent->getFormUnitIdentifier($unit->getId()));
+    return array($form, $honeyPotComponent);
+  }
+
+  /**
+   * Check for a valid form and send email
+   * @param $renderApi
+   * @param $unit
+   * @param $honeyPotComponent
+   * @return bool
+   * @throws \Exception
+   */
+  private function checkFormAndSendMail($renderApi, $unit, $honeyPotComponent)
+  {
+    $postRequest = $this->formSubmit->getPostValues();
 
     if ($this->formSubmit->isValid($renderApi, $unit)
       && count($postRequest) > 0
@@ -79,26 +119,49 @@ class rz_form extends SimpleModule
     ) {
       $this->formSubmit->setFieldLabelsToFormValueSet($renderApi);
       try {
-        $this->sentEmail($renderApi, $unit, $postRequest);
-        $formSend = true;
+        $this->sendEmail($renderApi, $unit, $postRequest);
+        return true;
       } catch (\Exception $e) {
-        $errorText = new \Span();
-        $errorText->setContent("Unable to send email:<br />".$e->getMessage());
-        $errorContainer = new \Container();
-        $errorContainer->add($errorText);
-        $errorContainer->getElementProperties()->addClass('vf__main_error');
-        $form->add($errorContainer);
+        throw $e;
       }
+    }
+    return false;
+  }
+
+
+  /**
+   * @param RenderAPI  $renderApi
+   * @param Unit       $unit
+   * @param ModuleInfo $moduleInfo
+   */
+
+  public function renderContent($renderApi, $unit, $moduleInfo)
+  {
+    $isNotRedirect = ($renderApi->getFormValue($unit, 'confirmationType') != 'redirect');
+    list($form, $honeyPotComponent) = $this->setupForm($unit);
+
+    $formSend = false;
+    try {
+      $formSend = $this->checkFormAndSendMail($renderApi, $unit, $honeyPotComponent);
+    } catch (\Exception $e) {
+      $errorText = new \Span();
+      $errorText->setContent("Unable to send email:<br />" . $e->getMessage());
+      $errorContainer = new \Container();
+      $errorContainer->add($errorText);
+      $errorContainer->getElementProperties()->addClass('vf__main_error');
+      $form->add($errorContainer);
     }
 
     if ($formSend) {
-      $confirmationText = new \Span();
-      $confirmationText->setContent(preg_replace('/\n/', '<br>', $renderApi->getFormValue($unit, 'confirmationText')));
-      $confirmationContainer = new \Container();
-      $confirmationContainer->add($confirmationText);
-      $confirmationContainer->getElementProperties()->addClass('confirmationText');
-      $form->add($confirmationContainer);
-      echo $form->renderElement();
+      if ($isNotRedirect) {
+        $confirmationText = new \Span();
+        $confirmationText->setContent(preg_replace('/\n/', '<br>', $renderApi->getFormValue($unit, 'confirmationText')));
+        $confirmationContainer = new \Container();
+        $confirmationContainer->add($confirmationText);
+        $confirmationContainer->getElementProperties()->addClass('confirmationText');
+        $form->add($confirmationContainer);
+        echo $form->renderElement();
+      }
     } else {
       echo $form->renderElementProgressive($renderApi, $unit);
     }
@@ -109,7 +172,7 @@ class rz_form extends SimpleModule
    * @param Unit      $unit
    * @param array     $postRequest <FormValueSetSet>
    */
-  private function sentEmail($renderApi, $unit, $postRequest)
+  private function sendEmail($renderApi, $unit, $postRequest)
   {
     $mailer = new Mailer($renderApi);
     $mailer->setFrom($renderApi->getFormValue($unit, 'senderMail'));
