@@ -5,3 +5,6 @@
 .rz_lightbox {
     z-index: initial;
 }
+.zIndexLightBox {
+    z-index: 99;
+}
