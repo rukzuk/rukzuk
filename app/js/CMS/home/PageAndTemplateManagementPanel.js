@@ -38,19 +38,21 @@ CMS.home.PageAndTemplateManagementPanel = Ext.extend(CMS.home.ManagementPanel, {
     /** @private */
     initComponent: function () {
         Ext.apply(this, {
-            layout: 'hbox',
+            layout: 'border',
             layoutConfig: {
                 align: 'stretch',
                 pack: 'start'
             },
             items: [{
-                width: 320,
+                width: 340,
                 cls: 'CMSsidebar',
                 layout: 'vbox',
                 layoutConfig: {
                     align: 'stretch',
                     pack: 'start'
                 },
+                region: 'west',
+                split: true,
                 items: [{
                     /**
                      * A reference to template selection panel
@@ -105,6 +107,7 @@ CMS.home.PageAndTemplateManagementPanel = Ext.extend(CMS.home.ManagementPanel, {
                 ref: 'previewPanel',
                 cls: 'CMSpreviewpanel',
                 flex: 1,
+                region: 'center',
                 listeners: {
                     locationchanged: this.previewLocationChangedHandler,
                     CMSview: this.handleView,
