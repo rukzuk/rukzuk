@@ -377,6 +377,100 @@
                                         "iconCls": "textfield",
                                         "hasValue": true
                                     }
+                                },
+                                {
+                                    "params": [
+                                        {
+                                            "name": "CMSvar",
+                                            "value": "isSenderEmail",
+                                            "allowBlank": false,
+                                            "minLength": 3,
+                                            "maskRe": {},
+                                            "stripCharsRe": {},
+                                            "xtype": "textfield",
+                                            "emptyText": "__i18n_generatedFormPanel.varNameEmptyText",
+                                            "fieldLabel": "__i18n_generatedFormPanel.varNameLabel"
+                                        },
+                                        {
+                                            "name": "xtype",
+                                            "value": "CMSonofffieldset",
+                                            "xtype": null
+                                        },
+                                        {
+                                            "name": "isResponsive",
+                                            "value": false,
+                                            "fieldLabel": "__i18n_formElements.isResponsive",
+                                            "xtype": "checkbox"
+                                        },
+                                        {
+                                            "name": "isMeta",
+                                            "value": false,
+                                            "fieldLabel": "__i18n_formElements.isGlobal",
+                                            "xtype": "checkbox"
+                                        },
+                                        {
+                                            "name": "fieldLabel",
+                                            "value": "{\"de\":\"als E-Mail-Absender verwenden\",\"en\":\"use as sender email address\"}",
+                                            "xtype": "textfield",
+                                            "allowBlank": true,
+                                            "emptyText": "__i18n_formElements.fieldLabelOptionalEmptyText",
+                                            "fieldLabel": "__i18n_formElements.fieldLabel"
+                                        },
+                                        {
+                                            "name": "value",
+                                            "value": false,
+                                            "xtype": null
+                                        }
+                                    ],
+                                    "descr": {
+                                        "id": "OnOffFieldSet",
+                                        "text": "__i18n_formElements.elementOnOffFieldSet",
+                                        "iconCls": "onofffieldset",
+                                        "allowChildNodes": true,
+                                        "hasValue": true
+                                    },
+                                    "items": [
+                                        {
+                                            "params": [
+                                                {
+                                                    "name": "xtype",
+                                                    "value": "ux-multilinelabel",
+                                                    "xtype": null
+                                                },
+                                                {
+                                                    "name": "hideLabel",
+                                                    "value": true,
+                                                    "xtype": null
+                                                },
+                                                {
+                                                    "name": "text",
+                                                    "xtype": "textarea",
+                                                    "height": 200,
+                                                    "value": "{\"de\":\"Die in diesem Feld eingegebene E-Mail Adresse wird als Absender des Formulars verwendet.\",\"en\":\"The value typed in this field will be uses as email sender address of the form.\"}",
+                                                    "fieldLabel": "__i18n_formElements.commentLabel"
+                                                },
+                                                {
+                                                    "name": "autoLink",
+                                                    "value": true,
+                                                    "xtype": null
+                                                },
+                                                {
+                                                    "name": "cls",
+                                                    "value": "modulecomment",
+                                                    "xtype": null
+                                                },
+                                                {
+                                                    "name": "value",
+                                                    "xtype": null
+                                                }
+                                            ],
+                                            "descr": {
+                                                "id": "Comment",
+                                                "text": "__i18n_formElements.elementComment",
+                                                "iconCls": "plaintext"
+                                            }
+                                        }
+                                    ]
                                 }
                             ]
                         },
@@ -982,6 +1076,7 @@
         "type": "text",
         "textType": "input",
         "inputTypeErrorEmail": "Please enter a valid email address.",
+        "isSenderEmail": false,
         "inputTypeErrorNumeric": "Please enter only numbers.",
         "enablePlaceholder": false,
         "placeholderText": "Placeholder",
