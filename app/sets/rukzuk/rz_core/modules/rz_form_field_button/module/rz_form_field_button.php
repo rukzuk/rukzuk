@@ -36,7 +36,7 @@ class rz_form_field_button extends SimpleModule{
 		$elementProperties = $formField->getElementProperties();
 		$elementProperties->setId( $buttonId );
 		$elementProperties->addClass( "submitButton" );
-		$elementProperties->addAttribute( "name", $buttonId );
+		//$elementProperties->addAttribute( "name", $buttonId );
 		$elementProperties->addAttribute( "value", $buttonLabel );
 
 		$wrapper = new \Container();
