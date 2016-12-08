@@ -334,7 +334,7 @@ CMS.layout.IframeWorkbenchPanel = Ext.extend(CMS.layout.WorkbenchPanel, {
                 ref: '../../../unitEditorEastWrapper',
                 cls: 'CMSuniteditoreastwrapper',
                 layout: 'fit',
-                width: 320,
+                width: 340,
                 hidden: true,
                 region: 'east',
                 items: [
