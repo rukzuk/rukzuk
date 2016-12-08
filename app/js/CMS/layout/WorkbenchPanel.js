@@ -37,13 +37,13 @@ CMS.layout.WorkbenchPanel = Ext.extend(Ext.Panel, {
      * @property sideBarOneColumn
      * @type int
      */
-    sideBarOneColumn: 320,
+    sideBarOneColumn: 340,
 
     /**
      * @property sideBarTwoColumn
      * @type int
      */
-    sideBarTwoColumn: 640,
+    sideBarTwoColumn: 680,
 
 
     /**
@@ -74,6 +74,7 @@ CMS.layout.WorkbenchPanel = Ext.extend(Ext.Panel, {
                 width: this.getSideBarWithForCurrentMode(),
                 height: '100%',
                 layout: 'fit',
+                split: true,
                 cls: 'CMSsidebar',
                 items: [{
                     layout: 'vbox',
