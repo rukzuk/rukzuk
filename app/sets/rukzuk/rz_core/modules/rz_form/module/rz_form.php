@@ -174,8 +174,18 @@ class rz_form extends SimpleModule
    */
   private function sendEmail($renderApi, $unit, $postRequest)
   {
+    $senderEmail = $renderApi->getFormValue($unit, 'recipientMail');
+    $senderEmailUnitId = $this->findSenderEmailUnitId($renderApi, $unit);
+
+    foreach ($postRequest as $formValueSet) {
+      if ($senderEmailUnitId == $formValueSet->getKey()) {
+        $senderEmail = $formValueSet->getValue();
+      }
+    }
+
+
     $mailer = new Mailer($renderApi);
-    $mailer->setFrom($renderApi->getFormValue($unit, 'senderMail'));
+    $mailer->setFrom($senderEmail);
     $mailer->addTo($renderApi->getFormValue($unit, 'recipientMail'));
     $mailer->setSubject($renderApi->getFormValue($unit, 'mailSubject'));
     $mailer->setHtmlBody($this->getMailBody($postRequest));
@@ -275,6 +285,27 @@ class rz_form extends SimpleModule
         $this->formUnits[] = $child;
       } else if ($child) {
         $this->collectUnitFormFields($renderApi, $child);
+      }
+    }
+  }
+
+  /**
+   * look for text field marked as email sender address.
+   *
+   * @param      $renderApi
+   * @param Unit $unit
+   */
+  private function findSenderEmailUnitId($renderApi, Unit $unit)
+  {
+
+    foreach ($renderApi->getChildren($unit) as $child) {
+      /*@var $child Unit */
+      if (strstr($child->getModuleId(), self::MODULE_ID_RZ_FORM_FIELD)) {
+        if ($renderApi->getFormValue($child, 'isSenderEmail')) {
+          return $child->getId();
+        }
+      } else if ($child) {
+        $this->findSenderEmailUnitId($renderApi, $child);
       }
     }
   }
