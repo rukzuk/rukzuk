@@ -22,6 +22,8 @@ define(['jquery'], function ($) {
         sliderConfig.onSlideAfter = function ($slideElement, oldIndex, newIndex) {
             $slideElement.siblings('.slide').removeClass('slideActive');
             $slideElement.addClass('slideActive');
+            $slideElement.find('.isModule').addClass('visiblePart10 visiblePart25 visiblePart50 visiblePart75 visiblePart100 top50Screen bottom50Screen animationRunning');
+            $slideElement.siblings('.slide').find('.isModule').removeClass('visiblePart10 visiblePart25 visiblePart50 visiblePart75 visiblePart100 top50Screen bottom50Screen animationRunning');
         };
 
         var $slider = $unit.children('.slides').first();
