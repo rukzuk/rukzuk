@@ -32,6 +32,8 @@ use Cms\Render\InfoStorage\NavigationInfoStorage\ServiceBasedNavigationInfoStora
 use Render\RenderContext as RenderContext;
 use Render\NodeTree;
 use Render\NodeFactory;
+use Render\InfoStorage\ContentInfoStorage\IContentInfoStorage;
+use Cms\Render\InfoStorage\ContentInfoStorage\ServiceBasedContentInfoStorage;
 use \Cms\Request\Base as CmsRequestBase;
 use Seitenbau\FileSystem as FS;
 use Orm\Data\Media as DataMedia;
@@ -150,6 +152,7 @@ class Render extends PlainServiceBase
   ) {
     $websiteService = $this->getService('Website');
     $moduleService = $this->getService('Modul');
+    $templateService = $this->getService('Template');
     $websiteSettingsService = $this->getService('WebsiteSettings');
 
     $websiteInfoStorage = new ServiceBasedWebsiteInfoStorage(
@@ -160,6 +163,10 @@ class Render extends PlainServiceBase
     $moduleInfoStorage = new ServiceBasedModuleInfoStorage(
         $websiteId,
         $moduleService
+    );
+    $contentInfoStorage = new ServiceBasedContentInfoStorage(
+      $websiteId,
+      $templateService
     );
     $colorInfoStorage = $this->getColorInfoStorage($websiteService, $websiteId);
     $resolutions = $this->getResolutions($websiteService, $websiteId);
@@ -188,24 +195,26 @@ class Render extends PlainServiceBase
     // Legacy Support (NOTE: this init NEEDS to be AFTER the init of all info storage and the new render context)
     LegacyRenderContext::init($renderContext, $websiteId, $pageOrTemplateId);
 
-    $this->startNewRenderer($content, $moduleInfoStorage, $codeType, $renderContext);
+    $this->startNewRenderer($content, $moduleInfoStorage, $contentInfoStorage, $codeType, $renderContext);
   }
 
   /**
    * Renders the given content array with the new visitor based renderer.
    *
-   * @param array                                                    $content
-   * @param \Render\InfoStorage\ModuleInfoStorage\IModuleInfoStorage $infoStorage
-   * @param                                                          $codeType
-   * @param \Render\RenderContext                                    $renderContext
+   * @param array                                                       $content
+   * @param \Render\InfoStorage\ModuleInfoStorage\IModuleInfoStorage    $moduleInfoStorage
+   * @param \Render\InfoStorage\ContentInfoStorage\IContentInfoStorage  $contentInfoStorage
+   * @param                                                             $codeType
+   * @param \Render\RenderContext                                       $renderContext
    */
   protected function startNewRenderer(
       array &$content,
-      IModuleInfoStorage $infoStorage,
+      IModuleInfoStorage $moduleInfoStorage,
+      IContentInfoStorage $contentInfoStorage,
       $codeType,
       RenderContext $renderContext
   ) {
-    $nodeTree = $this->createNodeTree($content, $infoStorage);
+    $nodeTree = $this->createNodeTree($content, $moduleInfoStorage, $contentInfoStorage);
     $renderer = new CmsRenderer($renderContext, $nodeTree);
     switch ($codeType) {
       case RenderObject::CODE_TYPE_CSS:
@@ -369,13 +378,15 @@ class Render extends PlainServiceBase
 
   /**
    * @param $content
-   * @param $infoStorage
+   * @param \Render\InfoStorage\ModuleInfoStorage\IModuleInfoStorage    $moduleInfoStorage
+   * @param \Render\InfoStorage\ContentInfoStorage\IContentInfoStorage  $contentInfoStorage
    *
    * @return NodeTree
    */
-  protected function createNodeTree(array &$content, IModuleInfoStorage $infoStorage)
+  protected function createNodeTree(array &$content, IModuleInfoStorage $moduleInfoStorage,
+                                    IContentInfoStorage $contentInfoStorage)
   {
-    $nodeFactory = new NodeFactory($infoStorage);
+    $nodeFactory = new NodeFactory($moduleInfoStorage, $contentInfoStorage);
     return new NodeTree($content, $nodeFactory);
   }
 

@@ -7,6 +7,8 @@ use Render\Exceptions\ModuleAPITypeNotFound;
 use Render\Exceptions\ModuleNotFoundException;
 use Render\Exceptions\NoContentException;
 use Render\InfoStorage\ModuleInfoStorage\IModuleInfoStorage;
+use Render\InfoStorage\ContentInfoStorage\IContentInfoStorage;
+use Render\InfoStorage\ContentInfoStorage\Exceptions\TemplateDoesNotExists;
 use Render\Nodes\DynamicHTMLNode;
 use \Render\Nodes\INode;
 use \Render\Nodes\FullDynamicNode;
@@ -19,11 +21,15 @@ use \Render\Nodes\LegacyNode;
  */
 class NodeFactory
 {
-
   /**
    * @var IModuleInfoStorage
    */
   private $moduleInfoStorage;
+
+  /**
+   * @var IContentInfoStorage
+   */
+  private $contentInfoStorage;
 
   /**
    * @var UnitFactory
@@ -35,12 +41,13 @@ class NodeFactory
   /**
    * Creates a new NodeFactory object
    *
-   * @param IModuleInfoStorage $moduleInfoStorage InfoStorage used to load
-   *                                              the modules
+   * @param IModuleInfoStorage  $moduleInfoStorage  InfoStorage used to load the modules
+   * @param IContentInfoStorage $contentInfoStorage InfoStorage used to load template or page contents
    */
-  public function __construct(IModuleInfoStorage $moduleInfoStorage)
+  public function __construct(IModuleInfoStorage $moduleInfoStorage, IContentInfoStorage $contentInfoStorage)
   {
     $this->moduleInfoStorage = $moduleInfoStorage;
+    $this->contentInfoStorage = $contentInfoStorage;
     $this->unitFactory = new UnitFactory();
   }
 
@@ -80,6 +87,17 @@ class NodeFactory
         ));
       }
     }
+    if ($this->isContentInclude($content)) {
+      foreach ($this->getContentInclude($content) as $childContent) {
+        $node->addChild($this->createNodeWithSubNodes(
+          $childContent,
+          $unitMap,
+          $usedModuleIds,
+          $tree,
+          $unitId
+        ));
+      }
+    }
 
     $unitMap[$unitId] = $node;
     return $node;
@@ -94,6 +112,14 @@ class NodeFactory
   }
 
   /**
+   * @return IContentInfoStorage
+   */
+  protected function getContentInfoStorage()
+  {
+    return $this->contentInfoStorage;
+  }
+
+  /**
    * @param array $content
    *
    * @return bool
@@ -101,6 +127,42 @@ class NodeFactory
   protected function hasChildren(array &$content)
   {
     return isset($content['children']) && is_array($content['children']);
+  }
+
+  /**
+   * @param array $content
+   *
+   * @return bool
+   */
+  protected function isContentInclude(array &$content)
+  {
+    if (!isset($content['formValues']) || !is_array($content['formValues'])) {
+      return false;
+    }
+    if (!isset($content['formValues']['includeTemplate']) || !is_string($content['formValues']['includeTemplate'])) {
+      return false;
+    }
+    return true;
+  }
+
+  /**
+   * @param array $content
+   *
+   * @return array
+   */
+  private function getContentInclude(array &$content)
+  {
+    $templateId = $content['formValues']['includeTemplate'];
+    try {
+      $templateContent = $this->getContentInfoStorage()->getTemplateContent($templateId);
+    } catch (TemplateDoesNotExists $doNothing) {
+      return array();
+    }
+    if (isset($templateContent['children']) && is_array($templateContent['children']))
+    {
+      return $templateContent['children'];
+    }
+    return array();
   }
 
   /**
@@ -247,19 +309,19 @@ class NodeFactory
     return new ModuleInfo($this->getModuleInfoStorage(), $moduleId);
   }
 
-    /**
-     * @param $moduleId
-     * @throws Exceptions\ModuleNotFoundException
-     */
-    protected function _loadModule($moduleId)
-    {
-        $moduleMainClassFilePath = $this->getModuleInfoStorage()->getModuleMainClassFilePath($moduleId);
+  /**
+   * @param $moduleId
+   * @throws Exceptions\ModuleNotFoundException
+   */
+  protected function _loadModule($moduleId)
+  {
+    $moduleMainClassFilePath = $this->getModuleInfoStorage()->getModuleMainClassFilePath($moduleId);
     if (!file_exists($moduleMainClassFilePath)) {
         throw new ModuleNotFoundException('No main class file for module ' . $moduleId . ' found');
     }
-        /** @noinspection PhpIncludeInspection */
-        require_once( $moduleMainClassFilePath );
-        $moduleMainClassName = $this->getModuleInfoStorage()->getModuleClassName($moduleId);
-        return new $moduleMainClassName();
-    }
+    /** @noinspection PhpIncludeInspection */
+    require_once( $moduleMainClassFilePath );
+    $moduleMainClassName = $this->getModuleInfoStorage()->getModuleClassName($moduleId);
+    return new $moduleMainClassName();
+  }
 }
