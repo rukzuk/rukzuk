@@ -1,3 +1,4 @@
 {
-    "selectors":false
+    "selectors":false,
+    "contentInclude":true
 }
