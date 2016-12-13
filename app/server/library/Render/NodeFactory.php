@@ -9,10 +9,10 @@ use Render\Exceptions\NoContentException;
 use Render\InfoStorage\ModuleInfoStorage\IModuleInfoStorage;
 use Render\InfoStorage\ContentInfoStorage\IContentInfoStorage;
 use Render\InfoStorage\ContentInfoStorage\Exceptions\TemplateDoesNotExists;
+use Render\Nodes\INode;
 use Render\Nodes\DynamicHTMLNode;
-use \Render\Nodes\INode;
-use \Render\Nodes\FullDynamicNode;
-use \Render\Nodes\LegacyNode;
+use Render\Nodes\LegacyNode;
+use Render\Nodes\ContentIncludeNode;
 
 /**
  * Class NodeFactory creates the node tree structure for the given content
@@ -87,8 +87,8 @@ class NodeFactory
         ));
       }
     }
-    if ($this->isContentInclude($content)) {
-      foreach ($this->getContentInclude($content) as $childContent) {
+    if ($this->isContentIncludeNode($node)) {
+      foreach ($this->getContentInclude($node, $content) as $childContent) {
         $node->addChild($this->createNodeWithSubNodes(
           $childContent,
           $unitMap,
@@ -130,31 +130,25 @@ class NodeFactory
   }
 
   /**
-   * @param array $content
+   * @param INode $node
    *
    * @return bool
    */
-  protected function isContentInclude(array &$content)
+  protected function isContentIncludeNode(INode $node)
   {
-    if (!isset($content['formValues']) || !is_array($content['formValues'])) {
-      return false;
-    }
-    if (!isset($content['formValues']['includeTemplate']) || !is_string($content['formValues']['includeTemplate'])) {
-      return false;
-    }
-    return true;
+    return ($node instanceof ContentIncludeNode);
   }
 
   /**
-   * @param array $content
+   * @param ContentIncludeNode  $node
+   * @param array               $content
    *
    * @return array
    */
-  private function getContentInclude(array &$content)
+  private function getContentInclude(ContentIncludeNode $node, array &$content)
   {
-    $templateId = $content['formValues']['includeTemplate'];
     try {
-      $templateContent = $this->getContentInfoStorage()->getTemplateContent($templateId);
+      $templateContent = $this->getContentInfoStorage()->getTemplateContent($node->getIncludeTemplateId());
     } catch (TemplateDoesNotExists $doNothing) {
       return array();
     }
@@ -193,18 +187,43 @@ class NodeFactory
     if (is_null($moduleApiType)) {
       return $this->createLegacyNode($tree, $parentId, $unit, $moduleInfo);
     }
-    if ($moduleApiType === 'APIv1' || $moduleApiType === 'RootAPIv1') {
-      return $this->createDynamicHTMLNode(
-          $tree,
-          $parentId,
-          $unit,
-          $moduleInfo,
-          $moduleId,
-          $moduleApiType
+
+    if ($moduleApiType !== 'APIv1' && $moduleApiType !== 'RootAPIv1') {
+      throw new ModuleAPITypeNotFound('Unknown module api type: ' . $moduleApiType);
+    }
+
+    $customerData = $this->getModuleInfo($moduleId)->getCustomData();
+    if (is_array($customerData) && isset($customerData['contentInclude']) && $customerData['contentInclude'] === true) {
+      return $this->createContentIncludeNode(
+        $tree,
+        $parentId,
+        $unit,
+        $moduleInfo,
+        $moduleId,
+        $moduleApiType
       );
     }
 
-    throw new ModuleAPITypeNotFound('Unknown module api type: ' . $moduleApiType);
+    return $this->createDynamicHTMLNode(
+        $tree,
+        $parentId,
+        $unit,
+        $moduleInfo,
+        $moduleId,
+        $moduleApiType
+    );
+  }
+
+  /**
+   * Returns the module type of the module as a string.
+   *
+   * @param string $moduleId
+   *
+   * @return string
+   */
+  protected function getModuleType($moduleId)
+  {
+    return $this->getModuleInfoStorage()->getModuleType($moduleId);
   }
 
   /**
@@ -277,6 +296,35 @@ class NodeFactory
         $tree,
         $module,
         $moduleApiType
+    );
+  }
+
+  /**
+   * @param NodeTree   $tree
+   * @param string     $parentId
+   * @param Unit       $unit
+   * @param ModuleInfo $moduleInfo
+   * @param string     $moduleId
+   * @param string     $moduleApiType
+   *
+   * @return DynamicHTMLNode
+   */
+  protected function createContentIncludeNode(
+    NodeTree &$tree,
+    $parentId,
+    Unit $unit,
+    ModuleInfo $moduleInfo,
+    $moduleId,
+    $moduleApiType
+  ) {
+    $module = $this->loadModule($moduleId);
+    return new ContentIncludeNode(
+      $unit,
+      $moduleInfo,
+      $parentId,
+      $tree,
+      $module,
+      $moduleApiType
     );
   }
 
