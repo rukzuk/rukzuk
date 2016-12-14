@@ -19,71 +19,27 @@
                         },
                         {
                             "name": "xtype",
-                            "value": "textfield",
+                            "value": "CMStemplatechooser",
                             "xtype": null
                         },
                         {
-                            "name": "isMeta",
-                            "value": false,
-                            "fieldLabel": "__i18n_formElements.isGlobal",
-                            "xtype": "checkbox"
-                        },
-                        {
-                            "name": "isResponsive",
-                            "value": false,
-                            "fieldLabel": "__i18n_formElements.isResponsive",
-                            "xtype": "checkbox"
-                        },
-                        {
                             "name": "fieldLabel",
-                            "value": "Template ID",
+                            "value": "Layout",
                             "xtype": "textfield",
-                            "allowBlank": false,
-                            "emptyText": "__i18n_formElements.fieldLabelEmptyText",
+                            "allowBlank": true,
+                            "emptyText": "__i18n_formElements.fieldLabelOptionalEmptyText",
                             "fieldLabel": "__i18n_formElements.fieldLabel"
                         },
                         {
-                            "name": "emptyText",
-                            "value": "",
-                            "xtype": "textfield",
-                            "allowBlank": true,
-                            "emptyText": "__i18n_formElements.emptyTextEmptyText",
-                            "fieldLabel": "__i18n_formElements.emptyTextLabel"
-                        },
-                        {
-                            "name": "minLength",
-                            "value": 0,
-                            "xtype": "numberfield",
-                            "allowBlank": false,
-                            "allowDecimals": false,
-                            "emptyText": "__i18n_formElements.minLengthEmptyText",
-                            "fieldLabel": "__i18n_formElements.minLengthLabel"
-                        },
-                        {
-                            "name": "maxLength",
-                            "value": 255,
-                            "xtype": "numberfield",
-                            "allowBlank": false,
-                            "allowDecimals": false,
-                            "emptyText": "__i18n_formElements.maxLengthEmptyText",
-                            "fieldLabel": "__i18n_formElements.maxLengthLabel"
-                        },
-                        {
-                            "name": "allowBlank",
-                            "value": true,
-                            "xtype": "checkbox",
-                            "fieldLabel": "__i18n_formElements.allowBlankLabel"
-                        },
-                        {
                             "name": "value",
-                            "value": "",
+                            "value": null,
                             "xtype": null
                         }
                     ],
                     "descr": {
-                        "id": "TextField",
-                        "text": "__i18n_formElements.elementTextField",
-                        "iconCls": "textfield",
+                        "id": "TemplateChooser",
+                        "text": "__i18n_formElements.elementTemplateChooser",
+                        "iconCls": "anchor",
                         "hasValue": true
                     }
                 }
@@ -92,6 +48,6 @@
         }
     ],
     "formValues": {
-        "includeTemplate": ""
+        "includeTemplateId": null
     }
 }
