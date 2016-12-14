@@ -1072,8 +1072,10 @@ class DynamicCreatorTest extends TransactionTestCase
     $pageTypeBusiness = new \Cms\Business\PageType('PageType');
     $mediaBusiness = new \Cms\Business\Media('Media');
     $ticketBusiness = new \Cms\Business\Ticket('Ticket');
+    $templateBusiness = new \Cms\Business\Template('Template');
     return new CreatorContext($websiteBusiness, $websiteSettingsBusiness,
-      $moduleBusiness, $pageBusiness, $pageTypeBusiness, $mediaBusiness, $ticketBusiness);
+      $moduleBusiness, $pageBusiness, $pageTypeBusiness, $mediaBusiness,
+      $ticketBusiness, $templateBusiness);
   }
 
   /**

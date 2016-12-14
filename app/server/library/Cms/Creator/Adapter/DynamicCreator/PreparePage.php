@@ -250,9 +250,10 @@ class PreparePage
    */
   protected function createNodeTree($websiteId, $pageId)
   {
-    $infoStorage = $this->getCreatorContext()->getModuleInfoStorage($websiteId);
+    $moduleInfoStorage = $this->getCreatorContext()->getModuleInfoStorage($websiteId);
+    $contentInfoStorage = $this->getCreatorContext()->getContentInfoStorage($websiteId);
     $content = $this->getCreatorContext()->getPageContent($websiteId, $pageId);
-    $nodeFactory = new NodeFactory($infoStorage);
+    $nodeFactory = new NodeFactory($moduleInfoStorage, $contentInfoStorage);
     return new NodeTree($content, $nodeFactory);
   }
 

@@ -5,6 +5,7 @@ namespace Render;
 
 
 use Render\InfoStorage\ModuleInfoStorage\ArrayBasedModuleInfoStorage;
+use Render\InfoStorage\ContentInfoStorage\ArrayBasedContentInfoStorage;
 use Render\Nodes\LegacyNode;
 
 
@@ -67,7 +68,9 @@ class NodeTreeTest extends \PHPUnit_Framework_TestCase
   {
     $moduleInfos = array();
     $moduleInfoStorage = new ArrayBasedModuleInfoStorage($moduleInfos);
-    $nodeFactory = new NodeFactory($moduleInfoStorage);
+    $templateInfos = array();
+    $contentInfoStorage = new ArrayBasedContentInfoStorage($templateInfos);
+    $nodeFactory = new NodeFactory($moduleInfoStorage, $contentInfoStorage);
     $arr = array();
     $nodeTree = new NodeTree($arr, $nodeFactory);
   }
@@ -86,6 +89,9 @@ class NodeTreeTest extends \PHPUnit_Framework_TestCase
     // Prepare module info storage
     $moduleInfos = $this->getModuleInfo();
     $moduleInfoStorage = new ArrayBasedModuleInfoStorage($moduleInfos);
+    // Prepare content info storage
+    $templateInfos = array();
+    $contentInfoStorage = new ArrayBasedContentInfoStorage($templateInfos);
     // Prepare Content
     $content = array();
     $content['id'] = 'UNIT-78667474-aa5c-498c-bcc0-046277bd153b-UNIT';
@@ -94,7 +100,7 @@ class NodeTreeTest extends \PHPUnit_Framework_TestCase
     //
     // ACT
     //
-    $nodeFactory = new Test1NodeFactory($moduleInfoStorage);
+    $nodeFactory = new Test1NodeFactory($moduleInfoStorage, $contentInfoStorage);
     $nodeTree = new NodeTree($content, $nodeFactory);
     //
     // ASSERT
@@ -126,6 +132,9 @@ class NodeTreeTest extends \PHPUnit_Framework_TestCase
     // Prepare module info storage
     $moduleInfos = $this->getModuleInfo();
     $moduleInfoStorage = new ArrayBasedModuleInfoStorage($moduleInfos);
+    // Prepare content info storage
+    $templateInfos = array();
+    $contentInfoStorage = new ArrayBasedContentInfoStorage($templateInfos);
     // Children Level 2
     $l2 = array();
     $l2['id'] = 'UNIT-d4f8dd99-c7b7-48a4-825c-856976138a08-UNIT';
@@ -152,7 +161,7 @@ class NodeTreeTest extends \PHPUnit_Framework_TestCase
     //
     // ACT
     //
-    $nodeFactory = new Test1NodeFactory($moduleInfoStorage);
+    $nodeFactory = new Test1NodeFactory($moduleInfoStorage, $contentInfoStorage);
     $nodeTree = new NodeTree($content, $nodeFactory);
     //
     // ASSERT
@@ -227,12 +236,15 @@ class NodeTreeTest extends \PHPUnit_Framework_TestCase
     // Prepare module info storage
     $moduleInfo = $this->getModuleInfo();
     $moduleInfoStorage = new ArrayBasedModuleInfoStorage($moduleInfo);
+    // Prepare content info storage
+    $templateInfos = array();
+    $contentInfoStorage = new ArrayBasedContentInfoStorage($templateInfos);
     $content = $this->getContent();
 
     //
     // ACT
     //
-    $nodeFactory = new Test1NodeFactory($moduleInfoStorage);
+    $nodeFactory = new Test1NodeFactory($moduleInfoStorage, $contentInfoStorage);
     $nodeTree = new NodeTree($content, $nodeFactory);
 
     //
@@ -256,12 +268,15 @@ class NodeTreeTest extends \PHPUnit_Framework_TestCase
     // Prepare module info storage
     $moduleInfo = $this->getModuleInfo();
     $moduleInfoStorage = new ArrayBasedModuleInfoStorage($moduleInfo);
+    // Prepare content info storage
+    $templateInfos = array();
+    $contentInfoStorage = new ArrayBasedContentInfoStorage($templateInfos);
     $content = $this->getContent();
 
     //
     // ACT
     //
-    $nodeFactory = new Test1NodeFactory($moduleInfoStorage);
+    $nodeFactory = new Test1NodeFactory($moduleInfoStorage, $contentInfoStorage);
     $nodeTree = new NodeTree($content, $nodeFactory);
 
     //
@@ -292,12 +307,15 @@ class NodeTreeTest extends \PHPUnit_Framework_TestCase
     // Prepare module info storage
     $moduleInfo = $this->getModuleInfo();
     $moduleInfoStorage = new ArrayBasedModuleInfoStorage($moduleInfo);
+    // Prepare content info storage
+    $templateInfos = array();
+    $contentInfoStorage = new ArrayBasedContentInfoStorage($templateInfos);
     $content = $this->getContent();
 
     //
     // ACT
     //
-    $nodeFactory = new Test1NodeFactory($moduleInfoStorage);
+    $nodeFactory = new Test1NodeFactory($moduleInfoStorage, $contentInfoStorage);
     $nodeTree = new NodeTree($content, $nodeFactory);
 
     //

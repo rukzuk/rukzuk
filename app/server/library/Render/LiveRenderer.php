@@ -9,6 +9,8 @@ use Render\InfoStorage\ModuleInfoStorage\ArrayBasedModuleInfoStorage;
 use Render\InfoStorage\ModuleInfoStorage\IModuleInfoStorage;
 use Render\InfoStorage\NavigationInfoStorage\ArrayBasedNavigationInfoStorage;
 use Render\InfoStorage\NavigationInfoStorage\LiveArrayNavigationInfoStorage;
+use Render\InfoStorage\ContentInfoStorage\IContentInfoStorage;
+use Render\InfoStorage\ContentInfoStorage\ArrayBasedContentInfoStorage;
 use Render\PageUrlHelper\SimplePageUrlHelper;
 use Render\NodeTree;
 
@@ -51,7 +53,8 @@ class LiveRenderer extends AbstractRenderer
     $this->pageMeta = include(PAGES_DATA_PATH . DIRECTORY_SEPARATOR . $this->pageId . DIRECTORY_SEPARATOR . 'meta.php');
 
     // Node Tree
-    $this->nodeTree = $this->createNodeTree($this->getRenderContext()->getModuleInfoStorage());
+    $contentInfoStorage = $this->createContentInfoStorage();
+    $this->nodeTree = $this->createNodeTree($this->getRenderContext()->getModuleInfoStorage(), $contentInfoStorage);
 
     // Legacy
     if (isset($this->pageMeta['legacy']) && $this->pageMeta['legacy'] === true) {
@@ -163,14 +166,24 @@ class LiveRenderer extends AbstractRenderer
 
   /**
    * @param IModuleInfoStorage $moduleInfoStorage
+   * @param IContentInfoStorage $contentInfoStorage
    * @return NodeTree
    */
-  protected function createNodeTree(IModuleInfoStorage $moduleInfoStorage)
+  protected function createNodeTree(IModuleInfoStorage $moduleInfoStorage, IContentInfoStorage $contentInfoStorage)
   {
     /** @noinspection PhpIncludeInspection */
     $content = include(PAGES_DATA_PATH . DIRECTORY_SEPARATOR . $this->pageId . DIRECTORY_SEPARATOR . 'contentarray.php');
-    $nodeFactory = new NodeFactory($moduleInfoStorage);
+    $nodeFactory = new NodeFactory($moduleInfoStorage, $contentInfoStorage);
     return new NodeTree($content, $nodeFactory);
+  }
+
+  /**
+   * @return IContentInfoStorage
+   */
+  protected function createContentInfoStorage()
+  {
+    $templateArray = array();
+    return new ArrayBasedContentInfoStorage($templateArray);
   }
 
   protected function initLegacy()

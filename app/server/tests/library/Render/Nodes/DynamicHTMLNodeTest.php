@@ -3,6 +3,7 @@
 
 namespace Render\Nodes;
 
+use Render\InfoStorage\ContentInfoStorage\ArrayBasedContentInfoStorage;
 use Test\Render\AbstractRenderTestCase;
 use Render\InfoStorage\ModuleInfoStorage\ArrayBasedModuleInfoStorage;
 use Render\NodeTree;
@@ -200,8 +201,10 @@ EOF;
         )
       )
     );
-    $infoStorage = new ArrayBasedModuleInfoStorage($moduleData);
-    $nodeFactory = new SimpleTestNodeFactory($infoStorage);
+    $templateData = array();
+    $moduleInfoStorage = new ArrayBasedModuleInfoStorage($moduleData);
+    $contentInfoStorage = new ArrayBasedContentInfoStorage($templateData);
+    $nodeFactory = new SimpleTestNodeFactory($moduleInfoStorage, $contentInfoStorage);
     return new NodeTree($content, $nodeFactory);
   }
 
