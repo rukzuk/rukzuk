@@ -1,0 +1,23 @@
+{
+    "descr": {
+        "id": "TemplateChooser",
+        "text": "__i18n_formElements.elementTemplateChooser",
+        "iconCls": "anchor",
+        "hasValue": true
+    },
+    "params": [
+        {
+            "name": "xtype",
+            "value": "CMStemplatechooser",
+            "xtype": null
+        },
+        {
+            "name": "fieldLabel",
+            "value": "__i18n_formElements.layoutValue",
+            "xtype": "textfield",
+            "allowBlank": true,
+            "emptyText": "__i18n_formElements.fieldLabelOptionalEmptyText",
+            "fieldLabel": "__i18n_formElements.fieldLabel"
+        }
+    ]
+}
