@@ -29,6 +29,7 @@ packaging/
 artifacts/
 /reports/
 /tools/docker/volume/
+/docker/volume/
 
 /app/exports
 /app/js/CMS/config/formElements.js
