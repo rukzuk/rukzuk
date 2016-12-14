@@ -55,15 +55,15 @@ class ServiceBasedContentInfoStorage implements IContentInfoStorage
   }
 
   /**
-   * @param string $template
+   * @param string $templateId
    *
    * @return \Cms\Data\Template
    * @throws TemplateDoesNotExists
    */
-  protected function getTemplateById($template)
+  protected function getTemplateById($templateId)
   {
     try {
-      return $this->getTemplateService()->getById($template, $this->getWebsiteId());
+      return $this->getTemplateService()->getById($templateId, $this->getWebsiteId());
     } catch (\Exception $e) {
       throw new TemplateDoesNotExists();
     }

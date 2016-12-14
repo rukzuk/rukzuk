@@ -34,22 +34,6 @@ class Test1NodeFactory extends NodeFactory
     $this->createNodeObjectCalls[] = array($content, $tree, $parentId, "return" => $node);
     return $node;
   }
-
-  /**
-   * @param NodeTree       $tree
-   * @param string         $parentId
-   * @param Unit           $unit
-   * @param ModuleInfo      $moduleInfo
-   *
-   * @return LegacyNode
-   */
-  protected function createLegacyNode(NodeTree $tree, $parentId,
-                                      Unit $unit, ModuleInfo $moduleInfo)
-  {
-    $module = new LegacyModule();
-    $manifest =  array();
-    return new LegacyNode($unit, $moduleInfo, $module, $parentId, $tree);
-  }
 }
 
 
