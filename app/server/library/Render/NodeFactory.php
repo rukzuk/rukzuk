@@ -3,12 +3,12 @@
 
 namespace Render;
 
+use Render\Exceptions\ContentIncludeRecursionException;
 use Render\Exceptions\ModuleAPITypeNotFound;
 use Render\Exceptions\ModuleNotFoundException;
 use Render\Exceptions\NoContentException;
 use Render\InfoStorage\ModuleInfoStorage\IModuleInfoStorage;
 use Render\InfoStorage\ContentInfoStorage\IContentInfoStorage;
-use Render\InfoStorage\ContentInfoStorage\Exceptions\TemplateDoesNotExists;
 use Render\Nodes\INode;
 use Render\Nodes\DynamicHTMLNode;
 use Render\Nodes\LegacyNode;
@@ -22,43 +22,40 @@ use Render\Nodes\ContentIncludeNode;
 class NodeFactory
 {
   /**
-   * @var IModuleInfoStorage
+   * @var NodeContext
    */
-  private $moduleInfoStorage;
-
-  /**
-   * @var IContentInfoStorage
-   */
-  private $contentInfoStorage;
+  private $nodeContext;
 
   /**
    * @var UnitFactory
    */
   private $unitFactory;
 
+  /**
+   * @var array
+   */
   private $dynamicModuleObjectCache = array();
 
   /**
    * Creates a new NodeFactory object
    *
-   * @param IModuleInfoStorage  $moduleInfoStorage  InfoStorage used to load the modules
-   * @param IContentInfoStorage $contentInfoStorage InfoStorage used to load template or page contents
+   * @param NodeContext         $nodeContext
    */
-  public function __construct(IModuleInfoStorage $moduleInfoStorage, IContentInfoStorage $contentInfoStorage)
+  public function __construct(NodeContext $nodeContext)
   {
-    $this->moduleInfoStorage = $moduleInfoStorage;
-    $this->contentInfoStorage = $contentInfoStorage;
+    $this->nodeContext = $nodeContext;
     $this->unitFactory = new UnitFactory();
   }
 
   /**
-   * @param array    $content
-   * @param array    $unitMap -- Reference to an flat array map with all unit nodes
-   * @param array    $usedModuleIds -- Reference to an array with all used module ids
+   * @param array $content
+   * @param array $unitMap -- Reference to an flat array map with all unit nodes
+   * @param array $usedModuleIds -- Reference to an array with all used module ids
    * @param NodeTree $tree
-   * @param string   $parentId
+   * @param string $parentId
+   * @param array $contentIncludeIds
    *
-   * @throws NoContentException
+   * @throws Exceptions\NoContentException
    * @return INode
    */
   public function createNodeWithSubNodes(
@@ -66,10 +63,16 @@ class NodeFactory
       array &$unitMap,
       array &$usedModuleIds,
       NodeTree &$tree,
-      $parentId = null
+      $parentId = null,
+      $contentIncludeIds = null
   ) {
     if (empty($content)) {
       throw new NoContentException('Empty unit (content) detected');
+    }
+
+    if (is_null($contentIncludeIds))
+    {
+      $contentIncludeIds = $this->getBaseContentIncludeIds();
     }
 
     $node = $this->createNodeObject($content, $tree, $usedModuleIds, $parentId);
@@ -83,18 +86,21 @@ class NodeFactory
             $unitMap,
             $usedModuleIds,
             $tree,
-            $unitId
+            $unitId,
+            $contentIncludeIds
         ));
       }
     }
     if ($this->isContentIncludeNode($node)) {
-      foreach ($this->getContentInclude($node, $content) as $childContent) {
+      $contentIncludeIds = $this->validateAndAddContentIncludeIds($contentIncludeIds, $node);
+      foreach ($this->getContentInclude($node) as $childContent) {
         $node->addChild($this->createNodeWithSubNodes(
           $childContent,
           $unitMap,
           $usedModuleIds,
           $tree,
-          $unitId
+          $unitId,
+          $contentIncludeIds
         ));
       }
     }
@@ -104,11 +110,19 @@ class NodeFactory
   }
 
   /**
+   * @return NodeContext
+   */
+  protected function getNodeContext()
+  {
+    return $this->nodeContext;
+  }
+
+  /**
    * @return IModuleInfoStorage
    */
   protected function getModuleInfoStorage()
   {
-    return $this->moduleInfoStorage;
+    return $this->getNodeContext()->getModuleInfoStorage();
   }
 
   /**
@@ -116,7 +130,7 @@ class NodeFactory
    */
   protected function getContentInfoStorage()
   {
-    return $this->contentInfoStorage;
+    return $this->getNodeContext()->getContentInfoStorage();
   }
 
   /**
@@ -140,23 +154,44 @@ class NodeFactory
   }
 
   /**
-   * @param ContentIncludeNode  $node
-   * @param array               $content
-   *
+   * @param ContentIncludeNode $node
    * @return array
    */
-  private function getContentInclude(ContentIncludeNode $node, array &$content)
+  protected function getContentInclude(ContentIncludeNode $node)
   {
-    try {
-      $templateContent = $this->getContentInfoStorage()->getTemplateContent($node->getIncludeTemplateId());
-    } catch (TemplateDoesNotExists $doNothing) {
-      return array();
+    return $node->getContentInclude($this->getContentInfoStorage());
+  }
+
+  /**
+   * @return array
+   */
+  protected function getBaseContentIncludeIds()
+  {
+    $baseContentIncludeIds = array();
+    if ($this->getNodeContext()->getTemplateId()) {
+      $baseContentIncludeIds[] = $this->getNodeContext()->getTemplateId();
     }
-    if (isset($templateContent['children']) && is_array($templateContent['children']))
+    if ($this->getNodeContext()->getPageId()) {
+      $baseContentIncludeIds[] = $this->getNodeContext()->getPageId();
+    }
+    return $baseContentIncludeIds;
+  }
+
+  /**
+   * @param array $contentIncludeIds
+   * @param ContentIncludeNode $node
+   * @return array
+   * @throws ContentIncludeRecursionException
+   */
+  protected function validateAndAddContentIncludeIds(array $contentIncludeIds, ContentIncludeNode $node)
+  {
+    $idToInclude = $node->getContentIncludeIds();
+    $intersection = array_intersect($contentIncludeIds, $idToInclude);
+    if (!empty($intersection))
     {
-      return $templateContent['children'];
+      throw new ContentIncludeRecursionException("Recursion found at including ".implode(', ', $intersection));
     }
-    return array();
+    return array_merge($contentIncludeIds, $idToInclude);
   }
 
   /**

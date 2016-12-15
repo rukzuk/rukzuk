@@ -5,6 +5,7 @@ namespace Render\Visitors;
 
 
 use Render\InfoStorage\ContentInfoStorage\ArrayBasedContentInfoStorage;
+use Render\NodeContext;
 use Test\Render\AbstractRenderTestCase;
 use Render\InfoStorage\ModuleInfoStorage\ArrayBasedModuleInfoStorage;
 use Render\NodeTree;
@@ -108,7 +109,8 @@ EOF;
     $templateData = array();
     $moduleInfoStorage = new ArrayBasedModuleInfoStorage($moduleData);
     $contentInfoStorage = new ArrayBasedContentInfoStorage($templateData);
-    $nodeFactory = new SimpleTestNodeFactory($moduleInfoStorage, $contentInfoStorage);
+    $nodeContext = new NodeContext($moduleInfoStorage, $contentInfoStorage, null, null);
+    $nodeFactory = new SimpleTestNodeFactory($nodeContext);
     return new NodeTree($content, $nodeFactory);
   }
 

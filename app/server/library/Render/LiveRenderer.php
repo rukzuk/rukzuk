@@ -53,8 +53,7 @@ class LiveRenderer extends AbstractRenderer
     $this->pageMeta = include(PAGES_DATA_PATH . DIRECTORY_SEPARATOR . $this->pageId . DIRECTORY_SEPARATOR . 'meta.php');
 
     // Node Tree
-    $contentInfoStorage = $this->createContentInfoStorage();
-    $this->nodeTree = $this->createNodeTree($this->getRenderContext()->getModuleInfoStorage(), $contentInfoStorage);
+    $this->nodeTree = $this->createNodeTree();
 
     // Legacy
     if (isset($this->pageMeta['legacy']) && $this->pageMeta['legacy'] === true) {
@@ -165,16 +164,23 @@ class LiveRenderer extends AbstractRenderer
   }
 
   /**
-   * @param IModuleInfoStorage $moduleInfoStorage
-   * @param IContentInfoStorage $contentInfoStorage
    * @return NodeTree
    */
-  protected function createNodeTree(IModuleInfoStorage $moduleInfoStorage, IContentInfoStorage $contentInfoStorage)
+  protected function createNodeTree()
   {
     /** @noinspection PhpIncludeInspection */
     $content = include(PAGES_DATA_PATH . DIRECTORY_SEPARATOR . $this->pageId . DIRECTORY_SEPARATOR . 'contentarray.php');
-    $nodeFactory = new NodeFactory($moduleInfoStorage, $contentInfoStorage);
+    $nodeFactory = new NodeFactory($this->createNodeContext());
     return new NodeTree($content, $nodeFactory);
+  }
+
+  /**
+   * @return NodeContext
+   */
+  protected function createNodeContext()
+  {
+    return new NodeContext($this->getRenderContext()->getModuleInfoStorage(),
+      $this->createContentInfoStorage(), $this->pageId, null);
   }
 
   /**
