@@ -6,6 +6,7 @@ machine:
 
 dependencies:
   override:
+    - npm cache clean
     - npm i -g grunt-cli 
     - npm install
     - $(cd app/server; composer install)
