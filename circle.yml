@@ -25,7 +25,7 @@ deployment:
     commands:
       - grunt package --channel=stable
       - mv artifacts/SNAPSHOT.tgz $CIRCLE_ARTIFACTS
-      - go get -u github.com/tcnksm/ghr      
+      - go get github.com/aktau/github-release    
       - ghr -t $GITHUB_TOKEN -u $CIRCLE_PROJECT_USERNAME -r $CIRCLE_PROJECT_REPONAME dev.release || true
 
 test:
