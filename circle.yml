@@ -1,0 +1,25 @@
+machine:
+  php:
+    version: 5.6.22
+  node:
+    version: 0.10.37
+
+dependencies:
+  override:
+    - npm i -g grunt-cli 
+    - npm install
+    - $(cd app/server; composer install)
+    - $(cd app/server/library; composer install)
+
+deployment:
+  release:
+    branch: master
+    commands:
+      - grunt package --channel=stable --build=$(git describe --tags)
+      - mv artifacts/$(git describe --tags).tgz $CIRCLE_ARTIFACTS
+
+test:
+  override:
+    - grunt test # client tests (js)
+    #- $(cd app/sets/rukzuk; grunt test) # modul tests
+    #- grunt phpunit:all # backend tests
