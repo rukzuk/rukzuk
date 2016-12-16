@@ -30,4 +30,4 @@ test:
   override:
     - grunt test # client tests (js)
     #- $(cd app/sets/rukzuk; grunt test) # modul tests
-    # - grunt phpunit:all # backend tests
+    - grunt phpunit:all # backend tests
