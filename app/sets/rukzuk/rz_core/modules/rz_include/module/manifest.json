@@ -8,5 +8,8 @@
     "allowedChildModuleType": "extension",
     "ghostContainerMode": "force_off",
     "reRenderRequired": true,
-    "apiType": "APIv1"
+    "apiType": "APIv1",
+    "config": {
+        "contentInclude": true
+    }
 }
