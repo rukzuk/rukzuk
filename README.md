@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/rukzuk/rukzuk.svg?style=svg)](https://circleci.com/gh/rukzuk/rukzuk)
+
 # What is rukzuk?
 
 rukzuk combines a web design Software and a Content Management System. Until now the old web design process required a layout to be created by a designer using a graphic program like Adobe Photoshop or InDesign. The design was then translated into HTML/CSS before being integrated into a content management system — all of which required a developer. rukzuk sums up the entire process in one tool, which saves time, money, and avoids duplicate work.
