@@ -23,10 +23,10 @@ deployment:
   snapshot:
     branch: /.*/
     commands:
-      - grunt package --channel=stable
+      - grunt package --channel=dev
       - mv artifacts/SNAPSHOT.tgz $CIRCLE_ARTIFACTS
       - go get github.com/aktau/github-release
-      - github-release upload --user rukzuk --repo rukzuk --tag $(git describe --tags) --name SNAPSHOT.tgz --file $CIRCLE_ARTIFACTS/SNAPSHOT.tgz
+      - github-release upload --user rukzuk --repo rukzuk --tag dev.release --name SNAPSHOT.tgz --file $CIRCLE_ARTIFACTS/SNAPSHOT.tgz
 
 test:
   override:
