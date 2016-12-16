@@ -13,10 +13,16 @@ dependencies:
 
 deployment:
   release:
-    branch: master
+    tag: /0\.20[0-9]{6}\.[0-9]+\.stable/
     commands:
       - grunt package --channel=stable --build=$(git describe --tags)
-      - mv artifacts/*.tgz $CIRCLE_ARTIFACTS
+      - mv artifacts/$(git describe --tags).tgz $CIRCLE_ARTIFACTS
+
+  snapshot:
+    branch: /.*/
+    commands:
+      - grunt package --channel=stable
+      - mv artifacts/SNAPSHOT.tgz $CIRCLE_ARTIFACTS
 
 test:
   override:
