@@ -572,6 +572,7 @@
         "formElements.elementTabbedFieldSet": "Tab-Fieldset",
         "formElements.elementTabPage": "Tab-Fieldset: Tab",
         "formElements.elementOnOffToggle": "An/Aus-Button",
+        "formElements.showCurrentTemplate": "Aktuelles Layout in das Dropdown-Menü aufnehmen",
         "formElements.emptyTextEmptyText": "(leer)",
         "formElements.emptyTextLabel": "Platzhaltertext",
         "formElements.enableToggleLabel": "Zustand speichern",

@@ -6,6 +6,14 @@ Ext.ns('CMS.form');
  * A form element for selecting a template of the current website
  */
 CMS.form.TemplateChooser = Ext.extend(CMS.form.Chooser, {
+
+    /**
+     * @cfg {Boolean} showCurrentTemplate
+     * <tt>true</tt> to make this component show the current template
+     * Defaults to <tt>false</tt>
+     */
+    showCurrentTemplate: false,
+
     initComponent: function () {
         try {
             this.originalStore = CMS.data.StoreManager.get('template', this.websiteId);
@@ -28,13 +36,31 @@ CMS.form.TemplateChooser = Ext.extend(CMS.form.Chooser, {
      */
     datachangedHandler: function () {
         var records = this.originalStore.getRange();
+        var currentTemplateId = this.getCurrentTemplateId();
+        var showCurrentTemplate = this.showCurrentTemplate;
 
         var data = [];
         Ext.each(records, function (record) {
-            data.push([record.get('id'), CMS.translateInput(record.get('name'))]);
+            if (showCurrentTemplate == true || record.get('id') != currentTemplateId) {
+                data.push([record.get('id'), CMS.translateInput(record.get('name'))]);
+            }
         });
 
         this.syncComboBoxStore(data);
+    },
+
+    /**
+     * @private
+     * Returns the current template id
+     */
+    getCurrentTemplateId: function () {
+        var iframeWorkbenchPanel = this.findParentByType('CMSiframeworkbenchpanel');
+        if (iframeWorkbenchPanel) {
+            if (iframeWorkbenchPanel.mode == 'template' || iframeWorkbenchPanel.mode == 'page') {
+                return iframeWorkbenchPanel.getTemplateId();
+            }
+        }
+        return null;
     }
 });
 

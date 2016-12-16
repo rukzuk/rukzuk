@@ -572,6 +572,7 @@
         "formElements.elementUnitChooser": "Unit selection",
         "formElements.elementTabbedFieldSet": "Tabbed fieldset",
         "formElements.elementTabPage": "Tabbed fieldset: Tab",
+        "formElements.showCurrentTemplate": "Add current layout to drop down menu",
         "formElements.emptyTextEmptyText": "(empty)",
         "formElements.emptyTextLabel": "Placeholder text",
         "formElements.enableToggleLabel": "Save state",

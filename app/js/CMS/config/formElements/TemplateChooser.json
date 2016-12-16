@@ -18,6 +18,12 @@
             "allowBlank": true,
             "emptyText": "__i18n_formElements.fieldLabelOptionalEmptyText",
             "fieldLabel": "__i18n_formElements.fieldLabel"
+        },
+        {
+            "name": "showCurrentTemplate",
+            "value": false,
+            "fieldLabel": "__i18n_formElements.showCurrentTemplate",
+            "xtype": "checkbox"
         }
     ]
 }
