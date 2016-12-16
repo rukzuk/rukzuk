@@ -17,6 +17,7 @@ define(['jquery'], function ($) {
      * @param unitId
      */
     var initSlider = function (unitId) {
+        console.log(unitId);
         var $unit = $('#' + unitId);
         var sliderConfig = getSliderConfig($unit);
         sliderConfig.onSlideAfter = function ($slideElement, oldIndex, newIndex) {
@@ -40,16 +41,25 @@ define(['jquery'], function ($) {
     };
 
     var initAllSlidersInDom = function () {
-        $(window).on('load', function () {
-            $('.rz_slider').each(function () {
-                initSlider($(this).attr('id'));
-            });
+        $('.rz_slider').each(function () {
+            initSlider($(this).attr('id'));
         });
     };
+
+    var initAllSlidersInDomInLayoutInclude = function () {
+        $('.rz_slider').each(function () {
+            if($(this).parents('.rz_include').length > 0) {
+                initSlider($(this).attr('id'));
+            }
+
+        });
+    };
+
 
     return {
         initSlider: initSlider,
         initAllSlidersInDom: initAllSlidersInDom,
+        initAllSlidersInDomInLayoutInclude: initAllSlidersInDomInLayoutInclude,
         getSliders: function () {
             return slider;
         }
