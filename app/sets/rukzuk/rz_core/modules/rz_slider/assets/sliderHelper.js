@@ -17,7 +17,6 @@ define(['jquery'], function ($) {
      * @param unitId
      */
     var initSlider = function (unitId) {
-        console.log(unitId);
         var $unit = $('#' + unitId);
         var sliderConfig = getSliderConfig($unit);
         sliderConfig.onSlideAfter = function ($slideElement, oldIndex, newIndex) {
