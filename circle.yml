@@ -18,7 +18,7 @@ deployment:
       - grunt package --channel=stable --build=$(git describe --tags)
       - mv artifacts/$(git describe --tags).tgz $CIRCLE_ARTIFACTS
       - go get github.com/aktau/github-release
-      - github-release upload --user rukzuk --repo rukzuk --tag $(git describe --tags) --name $(git describe --tags).tgz --file $CIRCLE_ARTIFACTS/$(git describe --tags).tgz
+      - github-release upload --user rukzuk --repo rukzuk --tag $CIRCLE_TAG --name $CIRCLE_TAG.tgz --file $CIRCLE_ARTIFACTS/$CIRCLE_TAG.tgz
 
   snapshot:
     branch: /.*/
@@ -30,4 +30,4 @@ test:
   override:
     - grunt test # client tests (js)
     #- $(cd app/sets/rukzuk; grunt test) # modul tests
-    - grunt phpunit:all # backend tests
+    # - grunt phpunit:all # backend tests
