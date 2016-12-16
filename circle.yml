@@ -16,9 +16,9 @@ deployment:
     tag: /0\.20[0-9]{6}\.[0-9]+\.stable/
     commands:
       - grunt package --channel=stable --build=$(git describe --tags)
-      - mv artifacts/$(git describe --tags).tgz $CIRCLE_ARTIFACTS
+      - cp artifacts/$CIRCLE_TAG.tgz $CIRCLE_ARTIFACTS
       - go get github.com/aktau/github-release
-      - github-release upload --user rukzuk --repo rukzuk --tag $CIRCLE_TAG --name $CIRCLE_TAG.tgz --file $CIRCLE_ARTIFACTS/$CIRCLE_TAG.tgz
+      - github-release upload --user rukzuk --repo rukzuk --tag $CIRCLE_TAG --name $CIRCLE_TAG.tgz --file artifacts/$CIRCLE_TAG.tgz
 
   snapshot:
     branch: /.*/
