@@ -26,7 +26,7 @@ deployment:
       - grunt package --channel=stable
       - mv artifacts/SNAPSHOT.tgz $CIRCLE_ARTIFACTS
       - go get github.com/aktau/github-release    
-      - ghr -t $GITHUB_TOKEN -u $CIRCLE_PROJECT_USERNAME -r $CIRCLE_PROJECT_REPONAME dev.release || true
+      - github-release upload --user rukzuk --repo rukzuk --tag $(git describe --tags) --name SNAPSHOT.tgz --file artifacts/SNAPSHOT.tgz
 
 test:
   override:
