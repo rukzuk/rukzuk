@@ -19,6 +19,7 @@ deployment:
       - cp artifacts/$CIRCLE_TAG.tgz $CIRCLE_ARTIFACTS
       - go get github.com/aktau/github-release
       - github-release upload --user rukzuk --repo rukzuk --tag $CIRCLE_TAG --name $CIRCLE_TAG.tgz --file artifacts/$CIRCLE_TAG.tgz
+      - ./notify-docker-hub.sh
 
   snapshot:
     branch: /.*/
