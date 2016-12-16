@@ -18,7 +18,7 @@ deployment:
       - grunt package --channel=stable --build=$(git describe --tags)
       - mv artifacts/$(git describe --tags).tgz $CIRCLE_ARTIFACTS
       - go get github.com/aktau/github-release
-      - github-release upload --user rukzuk --repo rukzuk --tag $(git describe --tags) --name $(git describe --tags).tgz --file $CIRCLE_ARTIFACTS/SNAPSHOT.tgz
+      - github-release upload --user rukzuk --repo rukzuk --tag $(git describe --tags) --name $(git describe --tags).tgz --file $CIRCLE_ARTIFACTS/$(git describe --tags).tgz
 
   snapshot:
     branch: /.*/
