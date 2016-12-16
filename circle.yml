@@ -17,15 +17,16 @@ deployment:
     commands:
       - grunt package --channel=stable --build=$(git describe --tags)
       - mv artifacts/$(git describe --tags).tgz $CIRCLE_ARTIFACTS
-      - go get -u github.com/tcnksm/ghr      
-      - ghr -t $GITHUB_TOKEN -u $CIRCLE_PROJECT_USERNAME -r $CIRCLE_PROJECT_REPONAME $(git describe --tags) || true
+      - go get github.com/aktau/github-release
+      - github-release upload --user rukzuk --repo rukzuk --tag $(git describe --tags) --name $(git describe --tags).tgz --file $CIRCLE_ARTIFACTS/SNAPSHOT.tgz
 
   snapshot:
     branch: /.*/
     commands:
       - grunt package --channel=stable
       - mv artifacts/SNAPSHOT.tgz $CIRCLE_ARTIFACTS
-      - curl -# -XPOST -H "Authorization:token $GITHUB_TOKEN" -H "Content-Type:application/octet-stream" --data-binary $CIRCLE_ARTIFACTS/SNAPSHOT.tgz https://uploads.github.com/repos/rukzuk/rukzuk/releases/dev.release/assets?name=SNAPSHOT.tgz
+      - go get github.com/aktau/github-release
+      - github-release upload --user rukzuk --repo rukzuk --tag $(git describe --tags) --name SNAPSHOT.tgz --file $CIRCLE_ARTIFACTS/SNAPSHOT.tgz
 
 test:
   override:
