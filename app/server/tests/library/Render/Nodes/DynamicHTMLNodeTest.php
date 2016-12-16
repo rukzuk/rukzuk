@@ -198,7 +198,8 @@ EOF;
         'mainClassFilePath' => '',
         'mainClassName' => '',
         'manifest' => array(
-          'apiType' => 'APIv1'
+          'apiType' => 'APIv1',
+          'config' => array()
         )
       )
     );

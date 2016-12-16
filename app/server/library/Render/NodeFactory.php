@@ -227,8 +227,8 @@ class NodeFactory
       throw new ModuleAPITypeNotFound('Unknown module api type: ' . $moduleApiType);
     }
 
-    $customerData = $this->getModuleInfo($moduleId)->getCustomData();
-    if (is_array($customerData) && isset($customerData['contentInclude']) && $customerData['contentInclude'] === true) {
+    $moduleConfig = $this->getModuleConfig($moduleId);
+    if (isset($moduleConfig['contentInclude']) && $moduleConfig['contentInclude'] === true) {
       return $this->createContentIncludeNode(
         $tree,
         $parentId,
@@ -271,6 +271,18 @@ class NodeFactory
   protected function getModuleApiType($moduleId)
   {
     return $this->getModuleInfoStorage()->getModuleApiType($moduleId);
+  }
+
+  /**
+   * Returns the config of the module
+   *
+   * @param string $moduleId
+   *
+   * @return array
+   */
+  protected function getModuleConfig($moduleId)
+  {
+    return $this->getModuleInfoStorage()->getModuleConfig($moduleId);
   }
 
   /**
@@ -335,14 +347,14 @@ class NodeFactory
   }
 
   /**
-   * @param NodeTree   $tree
-   * @param string     $parentId
-   * @param Unit       $unit
+   * @param NodeTree $tree
+   * @param string $parentId
+   * @param Unit $unit
    * @param ModuleInfo $moduleInfo
-   * @param string     $moduleId
-   * @param string     $moduleApiType
+   * @param string $moduleId
+   * @param string $moduleApiType
    *
-   * @return DynamicHTMLNode
+   * @return ContentIncludeNode
    */
   protected function createContentIncludeNode(
     NodeTree &$tree,

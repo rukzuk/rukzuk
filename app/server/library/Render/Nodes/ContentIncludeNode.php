@@ -55,7 +55,7 @@ class ContentIncludeNode extends DynamicHTMLNode
   {
     $formValues = $this->getUnit()->getFormValues();
     if ($this->hasIncludeTemplateId()) {
-      return $formValues['includeTemplateId'];
+      return $formValues[$this->getTemplateIdVariableName()];
     } else {
       return '';
     }
@@ -66,10 +66,18 @@ class ContentIncludeNode extends DynamicHTMLNode
    */
   protected function hasIncludeTemplateId()
   {
+    $variableName = $this->getTemplateIdVariableName();
     $formValues = $this->getUnit()->getFormValues();
-    return (isset($formValues['includeTemplateId'])
-      && is_string($formValues['includeTemplateId'])
-      && !empty($formValues['includeTemplateId']));
+    return (isset($formValues[$variableName])
+      && is_string($formValues[$variableName])
+      && !empty($formValues[$variableName]));
   }
 
+  /**
+   * @return string
+   */
+  protected function getTemplateIdVariableName()
+  {
+    return 'includeTemplateId';
+  }
 }

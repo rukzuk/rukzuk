@@ -88,21 +88,24 @@ EOF;
         'mainClassFilePath' => '',
         'mainClassName' => '',
         'manifest' => array(
-          'apiType' => 'APIv1'
+          'apiType' => 'APIv1',
+          'config' => array()
         )
       ),
       'rz_date' => array(
         'mainClassFilePath' => '',
         'mainClassName' => '',
         'manifest' => array(
-          'apiType' => 'APIv1'
+          'apiType' => 'APIv1',
+          'config' => array()
         )
       ),
       'MODUL-240ef8ca-0d1d-4781-9d38-ea24caa5c475-MODUL' => array(
         'mainClassFilePath' => '',
         'mainClassName' => '',
         'manifest' => array(
-          'apiType' => null
+          'apiType' => null,
+          'config' => array()
         )
       )
     );
