@@ -16,7 +16,7 @@ deployment:
     branch: master
     commands:
       - grunt package --channel=stable --build=$(git describe --tags)
-      - mv artifacts/$(git describe --tags).tgz $CIRCLE_ARTIFACTS
+      - mv artifacts/*.tgz $CIRCLE_ARTIFACTS
 
 test:
   override:
