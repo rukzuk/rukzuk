@@ -873,6 +873,9 @@ class Import extends DaoServiceBase
     if (isset($moduleJsonValues['sessionRequired'])) {
       $newModule->setSessionRequired($moduleJsonValues['sessionRequired']);
     }
+    if (isset($moduleJsonValues['config'])) {
+      $newModule->setConfig($moduleJsonValues['config']);
+    }
     $createdModule = $this->createOrOverwriteModule($moduleService, $websiteId, $newModule);
     $this->saveModuleLegacyCode($moduleService, $createdModule, array(
       'css' => $moduleJsonValues['css'],

@@ -41,7 +41,7 @@ CMS.form.TemplateChooser = Ext.extend(CMS.form.Chooser, {
 
         var data = [];
         Ext.each(records, function (record) {
-            if (showCurrentTemplate == true || record.get('id') != currentTemplateId) {
+            if (showCurrentTemplate === true || record.get('id') != currentTemplateId) {
                 data.push([record.get('id'), CMS.translateInput(record.get('name'))]);
             }
         });

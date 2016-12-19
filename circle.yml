@@ -1,0 +1,34 @@
+machine:
+  php:
+    version: 5.6.22
+  node:
+    version: 0.10.37
+
+dependencies:
+  override:
+    - npm i -g grunt-cli 
+    - npm install
+    - $(cd app/server; composer install)
+    - $(cd app/server/library; composer install)
+
+deployment:
+  release:
+    tag: /0\.20[0-9]{6}\.[0-9]+\.stable/
+    commands:
+      - grunt package --channel=stable --build=$CIRCLE_TAG
+      - cp artifacts/$CIRCLE_TAG.tgz $CIRCLE_ARTIFACTS
+      - go get github.com/aktau/github-release
+      - github-release upload --user rukzuk --repo rukzuk --tag $CIRCLE_TAG --name $CIRCLE_TAG.tgz --file artifacts/$CIRCLE_TAG.tgz
+      #- bash ./notify-docker-hub.sh
+
+  snapshot:
+    branch: /.*/
+    commands:
+      - grunt package --channel=dev
+      - mv artifacts/SNAPSHOT.tgz $CIRCLE_ARTIFACTS
+
+test:
+  override:
+    - grunt test # client tests (js)
+    #- $(cd app/sets/rukzuk; grunt test) # modul tests
+    - grunt phpunit:all # backend tests

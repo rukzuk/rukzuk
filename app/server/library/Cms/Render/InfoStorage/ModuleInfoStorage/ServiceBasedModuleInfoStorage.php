@@ -4,6 +4,7 @@
 namespace Cms\Render\InfoStorage\ModuleInfoStorage;
 
 use \Cms\Service\Modul as ModuleService;
+use MyProject\Proxies\__CG__\stdClass;
 use Render\InfoStorage\ModuleInfoStorage\Exceptions\ModuleDoesNotExists;
 use Render\InfoStorage\ModuleInfoStorage\Exceptions;
 use Render\InfoStorage\ModuleInfoStorage\IModuleInfoStorage;
@@ -33,6 +34,8 @@ class ServiceBasedModuleInfoStorage implements IModuleInfoStorage
       'mainClassFilePath' => array(),
       'manifest' => array(),
       'dataPath' => array(),
+      'defaultFormValues' => array(),
+      'customData' => array()
     );
   }
 
@@ -83,7 +86,7 @@ class ServiceBasedModuleInfoStorage implements IModuleInfoStorage
   {
     if (!isset($this->cache['manifest'][$moduleId])) {
       $module = $this->getModuleById($moduleId);
-      $this->cache['manifest'][$moduleId] = $module->getManifest();
+      $this->cache['manifest'][$moduleId] = json_decode(json_encode($module->getManifest()), true);
     }
     return $this->cache['manifest'][$moduleId];
   }
@@ -231,5 +234,21 @@ class ServiceBasedModuleInfoStorage implements IModuleInfoStorage
     } catch (\Exception $e) {
       throw new ModuleDoesNotExists();
     }
+  }
+
+  /**
+   * Returns the config data of the specified module
+   *
+   * @param string $moduleId of the module
+   *
+   * @return array
+   */
+  public function getModuleConfig($moduleId)
+  {
+    $manifest = $this->getModuleManifest($moduleId);
+    if (isset($manifest['config'])) {
+      return $manifest['config'];
+    }
+    return array();
   }
 }

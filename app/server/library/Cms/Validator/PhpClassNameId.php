@@ -41,14 +41,14 @@ class PhpClassNameId extends \Zend_Validate_StringLength
     }
     $this->_setValue($value);
 
-    if (!parent::isValid($value)) {
-      return false;
-    }
-
     // php class name in lowercase without [\x7f-\xff] characters and [_] characters at start
     // (php class name regexp from php.net: /^[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*$/)
     if (!preg_match('/^[a-z][a-z0-9_]*$/', $value)) {
       $this->_error(self::INVALID);
+      return false;
+    }
+
+    if (!parent::isValid($value)) {
       return false;
     }
 
