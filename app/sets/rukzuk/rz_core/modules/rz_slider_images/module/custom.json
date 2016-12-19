@@ -15,6 +15,11 @@
                 "mode":"edit"
             },
             {
+                "file":"notlive\/sliderInitInclude.js",
+                "type":"module",
+                "mode":"edit"
+            },
+            {
                 "file":"sliderInit.js",
                 "type":"module",
                 "mode":"live"
