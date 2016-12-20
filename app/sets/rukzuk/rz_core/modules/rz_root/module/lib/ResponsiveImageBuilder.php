@@ -10,7 +10,7 @@ class ResponsiveImageBuilder {
   private $moduleInfo;
 
   static private $responsiveImageResolutions = array(320, 480, 768, 1024, 1280, 1440, 1600, 1920);
-  static private $previewResponsiveImageResolution = 64;
+  static private $previewResponsiveImageResolution = 200;
   static private $maxResponsiveImageResolution = 1920;
   static private $responsiveImageDefaultQuality = 95;
 
@@ -204,7 +204,10 @@ class ResponsiveImageBuilder {
       // set default image (smallest resolution LQIP for fast responses)
       $image->resetOperations();
       $preloadSrc = $this->getResponsiveImageUrl($image, $imageCfg, ResponsiveImageBuilder::$previewResponsiveImageResolution);
-      $imgTag->set('src', $preloadSrc);
+      // set default image only for screenshoter
+      if (preg_match("/phantomjs/i", $_SERVER['HTTP_USER_AGENT'])) {
+        $imgTag->set('src', $preloadSrc);
+      }
       // set fill height value
       $imgHeight = $this->api->getFormValue($this->unit, 'imgHeight', '0%');
       // use original aspect ratio as height if 0%
