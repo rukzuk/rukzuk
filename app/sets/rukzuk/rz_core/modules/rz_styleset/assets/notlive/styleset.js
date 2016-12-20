@@ -10,7 +10,9 @@ define(['jquery', 'CMS', 'rz_root/notlive/js/cssHelper'], function ($, CMS, cssH
     };
 
     var setCssClassName = function (unitId) {
-        CMS.set(unitId, 'cssStyleSet', unitId.replace(/MUNIT/g, 'STS'));
+        if (CMS.get(unitId).formValues.cssStyleSet.value == '') {
+            CMS.set(unitId, 'cssStyleSet', unitId.replace(/MUNIT/g, 'STS'));
+        }
     };
 
     return {
@@ -29,6 +31,7 @@ define(['jquery', 'CMS', 'rz_root/notlive/js/cssHelper'], function ($, CMS, cssH
 
                 if (cfg.key === 'cssStyleSetName') {
                     updateName(cfg);
+                    CMS.refresh(cfg.unitId);
                 }
 
             });

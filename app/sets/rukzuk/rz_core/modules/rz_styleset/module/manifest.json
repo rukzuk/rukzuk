@@ -7,6 +7,6 @@
     "moduleType": "default",
     "allowedChildModuleType": "*",
     "ghostContainerMode": "force_off",
-    "reRenderRequired": true,
+    "reRenderRequired": false,
     "apiType": "APIv1"
 }
