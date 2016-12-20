@@ -3,57 +3,20 @@ define(['jquery', 'CMS', 'rz_root/notlive/js/cssHelper'], function ($, CMS, cssH
     var styleSets = [];
 
     var getStyleSets = function() {
-        var allCssClassModules = [];
         styleSets = [];
-        CMS.getAllUnitIds('rz_styleset').forEach(function (unitId) {
-            var unitData = CMS.get(unitId);
-            if (unitData.parentModuleId != 'rz_styleset') {
-                delete unitData.parentUnitId;
-            }
-            delete unitData.children;
-            if (unitData.formValues.cssStyleSetName.value !== '') {
-                allCssClassModules.push(unitData);
-            }
-
-        });
-        allCssClassModules.forEach(function (node) {
-            var breadcrumb  = findParents(allCssClassModules, node.id, true);
+        $('.rz_styleset').each(function() {
+            styleSet = $(this).attr('data-styleset');
+            styleSetName = $(this).attr('data-stylesetname');
+            $(this).parents('.rz_styleset').each(function() {
+                if ($(this).attr('data-stylesetname') != '') {
+                    styleSetName = $(this).attr('data-stylesetname') + " > " + styleSetName;
+                }
+            });
             var option = [];
-            option.push(node.id.replace(/MUNIT/g, 'STS'), breadcrumb.reverse().join(' > '));
+            option.push(styleSet, styleSetName);
             styleSets.push(option);
         });
-        styleSets.sort(sortBreadcrumbs);
         return styleSets;
-    };
-
-
-    var breadcrumbs = [];
-
-    var findParents = function findParents(data, parentId, reset) {
-        // reset path on every new lookup
-        if (reset === true) {
-            breadcrumbs = [];
-        }
-        data.forEach(function (node) {
-            if (parentId == node.id) {
-                var styleSetName = node.formValues.cssStyleSetName.value;
-                if (styleSetName !== '') {
-                    breadcrumbs.push(styleSetName);
-                }
-                // if a parent exists recursively call this function until no more parent is found
-                if (node.parentUnitId) {
-                    findParents(data, node.parentUnitId, false);
-                }
-            }
-        });
-        // because the function goes the path from in to out, the array needs to be reversed
-        return breadcrumbs;
-    };
-
-    var sortBreadcrumbs = function(a,b) {
-        a = a[1];
-        b = b[1];
-        return a == b ? 0 : (a < b ? -1 : 1);
     };
 
     var updateName = function (cfg) {
@@ -103,7 +66,7 @@ define(['jquery', 'CMS', 'rz_root/notlive/js/cssHelper'], function ($, CMS, cssH
                 updateDropDown({unitId: SelectedUnit.id});
             }
 
-            CMS.on('formValueChange', {moduleId: 'rz_styleset'}, function (cfg) {
+            CMS.on('afterRenderUnit', {moduleId: 'rz_styleset'}, function (cfg) {
                 styleSets = getStyleSets();
                 CMS.getAllUnitIds(data.moduleId).forEach(function (unitId) {
                     updateDropDown({unitId: unitId});
