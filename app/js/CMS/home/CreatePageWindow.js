@@ -49,12 +49,13 @@ CMS.home.CreatePageWindow = Ext.extend(CMS.MainWindow, {
         this.parentNode = this.node && this.node.parentNode;
 
         var items = [{
-            xtype: 'CMStemplatethumbnailview',
+            xtype: 'CMSfilteredtemplateselection',
             ref: 'templateChooser',
             region: 'west',
             websiteId: this.websiteId,
             title: CMS.i18n(null, 'createPageWindow.chooseLayoutHeaderTitle'),
             startWithDummyTpl: false,
+            showInsertTemplates: false,
             width: 317,
             listeners: {
                 select: this.templateSelected,

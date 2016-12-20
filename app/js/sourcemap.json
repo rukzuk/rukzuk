@@ -386,6 +386,7 @@
             "app/js/CMS/home/PublishingMarketingWindow.js",
             "app/js/CMS/home/TemplateThumbnailView.js",
             "app/js/CMS/home/TemplateSelection.js",
+            "app/js/CMS/home/FilteredTemplateSelection.js",
             "app/js/CMS/home/WebsiteSelection.js",
             "app/js/CMS/home/WebsiteQuotaReachedMarketingWindow.js",
             "app/js/CMS/home/ExportQuotaMarketingWindow.js",
