@@ -10,7 +10,7 @@ dependencies:
     - npm install
     - $(cd app/server; composer install)
     - $(cd app/server/library; composer install)
-    - $(cd app/sets/rukzuk; npm install --verbose)
+    - $(cd app/sets/rukzuk; npm install)
 
 deployment:
   release:
