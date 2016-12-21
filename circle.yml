@@ -10,11 +10,13 @@ dependencies:
     - npm install
     - $(cd app/server; composer install)
     - $(cd app/server/library; composer install)
+    - $(cd app/sets/rukzuk; npm install)
 
 deployment:
   release:
     tag: /0\.20[0-9]{6}\.[0-9]+\.stable/
     commands:
+      - $(cd app/sets/rukzuk; grunt build --channel=stable --build=$CIRCLE_TAG)
       - grunt package --channel=stable --build=$CIRCLE_TAG
       - cp artifacts/$CIRCLE_TAG.tgz $CIRCLE_ARTIFACTS
       - go get github.com/aktau/github-release
@@ -24,6 +26,7 @@ deployment:
   snapshot:
     branch: /.*/
     commands:
+      - $(cd app/sets/rukzuk; grunt build --channel=dev)
       - grunt package --channel=dev
       - mv artifacts/SNAPSHOT.tgz $CIRCLE_ARTIFACTS
 
