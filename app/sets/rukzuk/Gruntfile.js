@@ -153,6 +153,25 @@ module.exports = function (grunt) {
                 ]
             }
         },
+        jasmine: {
+            test: {
+                //src: 'src/**/*.js',
+                src: 'rz_core/modules/rz_root/assets/notlive/cssHelper.js',
+                options: {
+                    keepRunner: true,
+                    specs: 'tests/js/specs/**/*.js',
+                    helpers: [
+                        'tests/js/helper/*.js',
+                        'tests/js/mocks/*.js',
+                    ],
+                    // host: 'http://127.0.0.1:8000/',
+                    template: require('grunt-template-jasmine-requirejs'),
+                    templateOptions: {
+                        requireConfigFile: 'tests/js/require-main.js'
+                    }
+                }
+            }
+        },
 
         /* replace version string in the manifest.json/package.json*/
         'json-replace': {
@@ -293,7 +312,7 @@ module.exports = function (grunt) {
                     tasks: ['min', 'cssmin', 'exportLanguageFileToTarget', 'copy', 'default', 'availabletasks', 'saveRevision', 'uglify', 'version-release', 'version-snapshot', 'json-replace'],
                     groups: {
                         'Build tasks': ['build'],
-                        'Development tasks': ['test', 'watch', 'jshint', 'phpunit', 'jsonlint', 'phpcs', 'phplint', 'formatModuleData', 'checkFormatModuleData'],
+                        'Development tasks': ['test', 'watch', 'jshint', 'jasmine', 'phpunit', 'jsonlint', 'phpcs', 'phplint', 'formatModuleData', 'checkFormatModuleData'],
                         'i18n import/export': ['exportLanguageFile', 'importLanguageFile', 'convertManifestLang'],
                         'Legacy converters': ['convertLegacyResponsiveModuleData', 'renameModuleFiles'],
                         'Scaffolding': ['create']
@@ -312,6 +331,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-json-replace');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-jasmine');
     grunt.loadNpmTasks('grunt-available-tasks');
 
     // load local i18n tasks
@@ -329,7 +349,7 @@ module.exports = function (grunt) {
     // TASKS
     grunt.registerTask('min', ['uglify', 'cssmin']);
     grunt.registerTask('exportLanguageFile', ['exportLanguageFileToTarget']);
-    grunt.registerTask('test', ['jsonlint', 'checkFormatModuleData', 'jshint', 'phplint', 'phpunit']);
+    grunt.registerTask('test', ['jsonlint', 'checkFormatModuleData', 'jshint', 'phplint', 'phpunit', 'jasmine']);
 
     // build
     grunt.registerTask('build', 'Create minified version of all modules in "' + buildDir + '", add version to manifest.json', ['copy', 'min', 'json-replace:manifest']);

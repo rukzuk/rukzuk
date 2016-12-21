@@ -8,12 +8,8 @@ dependencies:
   override:
     - npm i -g grunt-cli 
     - npm install
-    - composer install:
-        pwd:
-          app/server
-    - composer install:
-        pwd:
-          app/server/library
+    - grunt composer:dev:install
+    - grunt composer:production:install
     - npm install:
         pwd:
           app/sets/rukzuk
@@ -44,4 +40,12 @@ test:
   override:
     - grunt test # client tests (js)
     #- $(cd app/sets/rukzuk; grunt test) # modul tests
-    - grunt phpunit:all # backend tests
+    - grunt phpunit:all: # backend tests
+        environment:
+          CMS_TEST_DB_ADAPTER: "pdo_sqlite"
+          CMS_TEST_DB_HOST: ""
+          CMS_TEST_DB_DBNAME: ":memory:"
+          CMS_TEST_DB_USER: ""
+          CMS_TEST_DB_PW: ""
+          CMS_TEST_DB_PORT: ""
+
