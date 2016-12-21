@@ -6,7 +6,7 @@ machine:
 
 dependencies:
   override:
-    - pecl install v8js-0.6.4
+    - printf "\n" | pecl install v8js-0.6.4
     - npm i -g grunt-cli
     - npm install
     - grunt composer:dev:install
