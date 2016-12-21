@@ -8,9 +8,15 @@ dependencies:
   override:
     - npm i -g grunt-cli 
     - npm install
-    - $(cd app/server; composer install)
-    - $(cd app/server/library; composer install)
-    - $(cd app/sets/rukzuk; npm install)
+    - composer install:
+        pwd:
+          app/server
+    - composer install:
+        pwd:
+          app/server/library
+    - npm install:
+        pwd:
+          app/sets/rukzuk
 
 deployment:
   release:
