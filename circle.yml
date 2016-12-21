@@ -6,7 +6,8 @@ machine:
 
 dependencies:
   override:
-    - npm i -g grunt-cli 
+    - pecl install v8js
+    - npm i -g grunt-cli
     - npm install
     - grunt composer:dev:install
     - grunt composer:production:install
@@ -39,7 +40,9 @@ deployment:
 test:
   override:
     - grunt test # client tests (js)
-    #- $(cd app/sets/rukzuk; grunt test) # modul tests
+    - grunt test: # modul tests
+        pwd:
+          app/sets/rukzuk
     - grunt phpunit:all: # backend tests
         environment:
           CMS_TEST_DB_ADAPTER: "pdo_sqlite"
