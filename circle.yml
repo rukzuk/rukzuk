@@ -6,10 +6,9 @@ machine:
 
 dependencies:
   pre:
-    - sudo apt-get update; sudo apt-get install libv8-3.14.5
+    - sudo apt-get update; sudo apt-get install libv8-dev
     - printf "\n" | pecl install v8js-0.6.4
   override:
-    - printf "\n" | pecl install v8js-0.6.4
     - npm i -g grunt-cli
     - npm install
     - grunt composer:dev:install
