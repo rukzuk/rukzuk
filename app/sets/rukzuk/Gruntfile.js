@@ -304,7 +304,17 @@ module.exports = function (grunt) {
             }
 
         },
-
+        phpunit: {
+            all: {
+                dir: 'tests/php/'
+            },
+            options: {
+                bin: 'tests/php/phpunit.phar',
+                configuration: 'tests/php/phpunit.xml',
+                colors: true,
+                followOutput: true
+            }
+        },
         availabletasks: {
             tasks: {
                 options: {
@@ -332,6 +342,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-jasmine');
+    grunt.loadNpmTasks('grunt-phpunit');
     grunt.loadNpmTasks('grunt-available-tasks');
 
     // load local i18n tasks
@@ -353,24 +364,5 @@ module.exports = function (grunt) {
 
     // build
     grunt.registerTask('build', 'Create minified version of all modules in "' + buildDir + '", add version to manifest.json', ['copy', 'min', 'json-replace:manifest']);
-
-    // phpunit
-    grunt.registerTask('phpunit', function () {
-        var exec = require('child_process').exec;
-        var done = this.async();
-
-        exec('php tests/php/phpunit.phar -c tests/php/phpunit.xml tests/php/', function (error, stout) {
-            console.log(stout);
-
-            if (!error) {
-                grunt.log.ok();
-            } else {
-                console.log(error.message);
-                grunt.fail.fatal('Errors in test');
-            }
-            done();
-        });
-
-    });
 
 };
