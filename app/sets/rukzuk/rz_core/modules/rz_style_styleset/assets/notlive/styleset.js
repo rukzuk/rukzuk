@@ -5,10 +5,10 @@ define(['jquery', 'CMS', 'rz_root/notlive/js/cssHelper'], function ($, CMS, cssH
     var getStyleSets = function() {
         styleSets = [];
         $('.rz_styleset').each(function() {
-            styleSet = $(this).attr('data-styleset');
-            styleSetName = $(this).attr('data-stylesetname');
+            var styleSet = $(this).attr('data-styleset');
+            var styleSetName = $(this).attr('data-stylesetname');
             $(this).parents('.rz_styleset').each(function() {
-                if ($(this).attr('data-stylesetname') != '') {
+                if ($(this).attr('data-stylesetname') !== '') {
                     styleSetName = $(this).attr('data-stylesetname') + " > " + styleSetName;
                 }
             });
