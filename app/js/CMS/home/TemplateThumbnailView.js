@@ -21,7 +21,7 @@ CMS.home.TemplateThumbnailView = Ext.extend(CMS.ThumbnailView, {
     /** @protected */
     initComponent: function () {
         this.emptyText = '<div class="CMSemptytext">' + CMS.i18n(null, 'templateSelection.emptyText') + '</div>';
-        this.store = CMS.data.StoreManager.get('template', this.websiteId);
+        this.store = this.getTemplateStore(this.websiteId);
         this.pageTypeStore = CMS.data.StoreManager.get('pageType', this.websiteId);
 
         // a dummy template without images to avoid requesting screenshot if not visible
@@ -98,10 +98,10 @@ CMS.home.TemplateThumbnailView = Ext.extend(CMS.ThumbnailView, {
     setSite: function (record) {
         if (record && record.id) {
             this.websiteId = record.id;
-            this.store = CMS.data.StoreManager.get('template', this.websiteId);
+            this.store = this.getTemplateStore(this.websiteId);
         } else {
             this.website = null;
-            this.store = CMS.data.StoreManager.get('template', -1, {
+            this.store = this.getTemplateStore(-1, {
                 disableLoad: true
             });
         }
@@ -129,6 +129,16 @@ CMS.home.TemplateThumbnailView = Ext.extend(CMS.ThumbnailView, {
         if (firstTemplate) {
             this.selectItem(firstTemplate.id, true);
         }
+    },
+
+    /**
+     * Returns the template store
+     * @param {String} websiteId A string identifying the desired website
+     * @param {Object} [options]
+     * @private
+     */
+    getTemplateStore: function (websiteId, options) {
+        return CMS.data.StoreManager.get('template', websiteId, options);
     },
 
 });

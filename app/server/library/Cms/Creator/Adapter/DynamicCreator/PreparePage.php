@@ -12,6 +12,7 @@ use Render\Exceptions\NoContentException;
 use Render\MediaContext;
 use Render\MediaUrlHelper\CDNMediaUrlHelper;
 use Render\MediaUrlHelper\ValidationHelper\NoneValidationHelper;
+use Render\NodeContext;
 use Render\Nodes\INode;
 use Render\RenderContext;
 use Render\Visitors\CssOnlyVisitor;
@@ -250,10 +251,22 @@ class PreparePage
    */
   protected function createNodeTree($websiteId, $pageId)
   {
-    $infoStorage = $this->getCreatorContext()->getModuleInfoStorage($websiteId);
+    $nodeContext = $this->createNodeContext($websiteId, $pageId);
     $content = $this->getCreatorContext()->getPageContent($websiteId, $pageId);
-    $nodeFactory = new NodeFactory($infoStorage);
+    $nodeFactory = new NodeFactory($nodeContext);
     return new NodeTree($content, $nodeFactory);
+  }
+
+  /**
+   * @param $websiteId
+   * @param $pageId
+   * @return NodeContext
+   */
+  protected function createNodeContext($websiteId, $pageId)
+  {
+    $moduleInfoStorage = $this->getCreatorContext()->getModuleInfoStorage($websiteId);
+    $contentInfoStorage = $this->getCreatorContext()->getContentInfoStorage($websiteId);
+    return new NodeContext($moduleInfoStorage, $contentInfoStorage, $pageId, null);
   }
 
   /**

@@ -73,4 +73,13 @@ interface IModuleInfoStorage
    * @return mixed
    */
   public function getModuleCustomData($moduleId);
+
+  /**
+   * Returns the config data of the specified module
+   *
+   * @param string $moduleId of the module
+   *
+   * @return array
+   */
+  public function getModuleConfig($moduleId);
 }

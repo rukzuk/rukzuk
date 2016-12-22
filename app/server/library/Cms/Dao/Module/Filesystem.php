@@ -434,6 +434,9 @@ class Filesystem extends BaseFilesystemDao implements ModuleDaoInterface
     if (property_exists($moduleManifest, 'sessionRequired')) {
       $module->setSessionRequired($moduleManifest->{'sessionRequired'});
     }
+    if (property_exists($moduleManifest, 'config')) {
+      $module->setConfig($moduleManifest->{'config'});
+    }
 
     return $module;
   }
@@ -545,6 +548,7 @@ class Filesystem extends BaseFilesystemDao implements ModuleDaoInterface
     $moduleManifest->ghostContainerMode = $module->getGhostContainerMode();
     $moduleManifest->apiType = $module->getApiType();
     $moduleManifest->sessionRequired = $module->getSessionRequired();
+    $moduleManifest->config = $module->getConfig();
     $this->storeJsonFile($moduleDataDirectory, $fileName, $moduleManifest);
   }
 

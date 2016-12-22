@@ -3,6 +3,8 @@
 
 namespace Render\Nodes;
 
+use Render\InfoStorage\ContentInfoStorage\ArrayBasedContentInfoStorage;
+use Render\NodeContext;
 use Test\Render\AbstractRenderTestCase;
 use Render\InfoStorage\ModuleInfoStorage\ArrayBasedModuleInfoStorage;
 use Render\NodeTree;
@@ -196,12 +198,16 @@ EOF;
         'mainClassFilePath' => '',
         'mainClassName' => '',
         'manifest' => array(
-          'apiType' => 'APIv1'
+          'apiType' => 'APIv1',
+          'config' => array()
         )
       )
     );
-    $infoStorage = new ArrayBasedModuleInfoStorage($moduleData);
-    $nodeFactory = new SimpleTestNodeFactory($infoStorage);
+    $templateData = array();
+    $moduleInfoStorage = new ArrayBasedModuleInfoStorage($moduleData);
+    $contentInfoStorage = new ArrayBasedContentInfoStorage($templateData);
+    $nodeContext = new NodeContext($moduleInfoStorage, $contentInfoStorage, null, null);
+    $nodeFactory = new SimpleTestNodeFactory($nodeContext);
     return new NodeTree($content, $nodeFactory);
   }
 

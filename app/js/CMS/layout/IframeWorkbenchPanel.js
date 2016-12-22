@@ -1319,6 +1319,14 @@ CMS.layout.IframeWorkbenchPanel = Ext.extend(CMS.layout.WorkbenchPanel, {
 
     unitEndDragHandler: function () {
         this.previewarea.getEl().unmask();
+    },
+
+    /**
+     * Returns the template id of this workbench
+     * @returns {string}
+     */
+    getTemplateId: function () {
+        return null;
     }
 
 });

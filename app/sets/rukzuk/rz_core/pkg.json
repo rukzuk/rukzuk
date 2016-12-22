@@ -97,6 +97,7 @@
     "rz_text_image",
     "rz_thumbnail_gallery",
     "rz_trigger_event",
-    "rz_video"
+    "rz_video",
+    "rz_include"
   ]
 }

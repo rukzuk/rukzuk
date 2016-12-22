@@ -3,6 +3,7 @@
 
 namespace Cms\Creator;
 
+use Cms\Render\InfoStorage\ContentInfoStorage\ServiceBasedContentInfoStorage;
 use Cms\Render\InfoStorage\NavigationInfoStorage\NavigationInfoStorageConverter;
 use Cms\Render\InfoStorage\NavigationInfoStorage\ServiceBasedNavigationInfoStorage;
 use Render\ImageToolFactory\SimpleImageToolFactory;
@@ -20,10 +21,12 @@ use Cms\Business\Page as PageBusiness;
 use Cms\Business\PageType as PageTypeBusiness;
 use Cms\Business\Media as MediaBusiness;
 use Cms\Business\Ticket as TicketBusiness;
+use Cms\Business\Template as TemplateBusiness;
 use Render\IconHelper\SimpleIconHelper;
 use Render\InfoStorage\WebsiteInfoStorage\IWebsiteInfoStorage;
 use Render\InfoStorage\ModuleInfoStorage\IModuleInfoStorage;
 use Render\InfoStorage\MediaInfoStorage\IMediaInfoStorage;
+use Render\InfoStorage\ContentInfoStorage\IContentInfoStorage;
 use Cms\Render\InfoStorage\WebsiteInfoStorage\ServiceBasedWebsiteInfoStorage;
 use Cms\Render\InfoStorage\ModuleInfoStorage\ServiceBasedModuleInfoStorage;
 use Cms\Render\InfoStorage\MediaInfoStorage\ServiceBasedMediaInfoStorage;
@@ -60,6 +63,10 @@ class CreatorContext
    * @var \Cms\Business\Ticket
    */
   private $ticketBusiness;
+  /**
+   * @var \Cms\Business\Template
+   */
+  private $templateBusiness;
 
   /**
    * @var IWebsiteInfoStorage[]
@@ -70,6 +77,11 @@ class CreatorContext
    * @var IModuleInfoStorage[]
    */
   private $moduleInfoStorages = array();
+
+  /**
+   * @var IContentInfoStorage[]
+   */
+  private $contentInfoStorages = array();
 
   /**
    * @var IMediaInfoStorage[]
@@ -84,6 +96,7 @@ class CreatorContext
    * @param \Cms\Business\PageType        $pageTypeBusiness
    * @param \Cms\Business\Media           $mediaBusiness
    * @param \Cms\Business\Ticket          $ticketBusiness
+   * @param \Cms\Business\Template        $templateBusiness
    */
   public function __construct(
       WebsiteBusiness $websiteBusiness,
@@ -92,7 +105,8 @@ class CreatorContext
       PageBusiness $pageBusiness,
       PageTypeBusiness $pageTypeBusiness,
       MediaBusiness $mediaBusiness,
-      TicketBusiness $ticketBusiness
+      TicketBusiness $ticketBusiness,
+      TemplateBusiness $templateBusiness
   ) {
     $this->websiteBusiness = $websiteBusiness;
     $this->websiteSettingsBusiness = $websiteSettingsBusiness;
@@ -101,6 +115,7 @@ class CreatorContext
     $this->pageTypeBusiness = $pageTypeBusiness;
     $this->mediaBusiness = $mediaBusiness;
     $this->ticketBusiness = $ticketBusiness;
+    $this->templateBusiness = $templateBusiness;
   }
 
   /**
@@ -144,6 +159,32 @@ class CreatorContext
       );
     }
     return $this->moduleInfoStorages[$websiteId];
+  }
+
+  /**
+   * @param string $websiteId
+   *
+   * @return IContentInfoStorage
+   */
+  protected function createContentInfoStorage($websiteId)
+  {
+    return new ServiceBasedContentInfoStorage(
+      $websiteId,
+      $this->templateBusiness->getService()
+    );
+  }
+
+  /**
+   * @param string $websiteId
+   *
+   * @return IContentInfoStorage
+   */
+  public function getContentInfoStorage($websiteId)
+  {
+    if (!isset($this->contentInfoStorages[$websiteId])) {
+      $this->contentInfoStorages[$websiteId] = $this->createContentInfoStorage($websiteId);
+    }
+    return $this->contentInfoStorages[$websiteId];
   }
 
   /**

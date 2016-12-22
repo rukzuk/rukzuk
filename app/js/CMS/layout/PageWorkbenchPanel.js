@@ -172,6 +172,14 @@ CMS.layout.PageWorkbenchPanel = Ext.extend(CMS.layout.IframeWorkbenchPanel, {
         }
 
     },
+
+    /**
+     * Returns the template id of the page loaded at this workbench
+     * @returns {string}
+     */
+    getTemplateId: function () {
+        return this.templateId;
+    }
 });
 
 Ext.reg('CMSpageworkbenchpanel', CMS.layout.PageWorkbenchPanel);

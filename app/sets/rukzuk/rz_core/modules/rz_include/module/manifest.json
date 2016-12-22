@@ -1,0 +1,15 @@
+{
+    "name": "{\"de\":\"Include\",\"en\":\"Include\"}",
+    "description": "{\"de\":\"Template ab dieser Stelle ausgeben.\",\"en\":\"Render a given Template.\"}",
+    "version": "dev",
+    "icon": "multi-shape.png",
+    "category": "{\"de\":\" Inhalt\",\"en\":\" Content\"}",
+    "moduleType": "default",
+    "allowedChildModuleType": "extension",
+    "ghostContainerMode": "force_off",
+    "reRenderRequired": true,
+    "apiType": "APIv1",
+    "config": {
+        "contentInclude": true
+    }
+}

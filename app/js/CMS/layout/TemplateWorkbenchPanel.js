@@ -206,8 +206,15 @@ CMS.layout.TemplateWorkbenchPanel = Ext.extend(CMS.layout.IframeWorkbenchPanel, 
         this.fireEvent('CMSinsertunit', cfg);
         //Reset dirty state - prevents onBeforeUnload warning
         this.unitStore.isDirty = false;
-    }
+    },
 
+    /**
+     * Returns the template id of this workbench
+     * @returns {string}
+     */
+    getTemplateId: function () {
+        return this.record.id;
+    }
 });
 
 Ext.reg('CMStemplateworkbenchpanel', CMS.layout.TemplateWorkbenchPanel);
