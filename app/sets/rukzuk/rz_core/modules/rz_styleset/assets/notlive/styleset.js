@@ -10,7 +10,7 @@ define(['jquery', 'CMS', 'rz_root/notlive/js/cssHelper'], function ($, CMS, cssH
     };
 
     var setCssClassName = function (unitId) {
-        if (CMS.get(unitId).formValues.cssStyleSet.value == '') {
+        if (CMS.get(unitId).formValues.cssStyleSet.value === '') {
             CMS.set(unitId, 'cssStyleSet', unitId.replace(/MUNIT/g, 'STS'));
         }
     };
