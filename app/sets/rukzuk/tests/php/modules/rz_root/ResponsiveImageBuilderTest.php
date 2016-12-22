@@ -52,9 +52,15 @@ class ResponsiveImageBuilderTest extends ModuleTestCase
     $this->assertContains('<img alt="&lt;alt tag&gt;" class="imgSize blankImgPlaceholder" src="root/assets/images/imageBlank.png">', $tag);
   }
 
-  public function testBuildImageTag()
+  /**
+   * @dataProvider provider_UserAgentNoneAndPhantomJs
+   */
+  public function testBuildImageTag($isPhantomJs)
   {
     // prepare
+    if ($isPhantomJs) {
+      $this->setHttpUserAgentOfPhantomJs();
+    }
     $api = $this->createApiMock();
     $unit = $this->createUnit();
     $responsiveImageBuilder = new ResponsiveImageBuilder($api, $unit);
@@ -71,12 +77,22 @@ class ResponsiveImageBuilderTest extends ModuleTestCase
     $this->assertContains('/resizeScale(320)/quality(95)/foo.png', $tag);
     // default
     $this->assertContains('data-cms-origsrc=', $tag);
-    $this->assertContains('src="/resizeScale(64)/quality(95)/foo.png"', $tag);
+    if ($isPhantomJs) {
+      $this->assertContains('src="/resizeScale(200)/quality(95)/foo.png"', $tag);
+    } else {
+      $this->assertNotContains(' src="', $tag);
+    }
   }
 
-  public function testBuildImageTag_crop()
+  /**
+   * @dataProvider provider_UserAgentNoneAndPhantomJs
+   */
+  public function testBuildImageTag_crop($isPhantomJs)
   {
     // prepare
+    if ($isPhantomJs) {
+      $this->setHttpUserAgentOfPhantomJs();
+    }
     $api = $this->createApiMock();
     $unit = $this->createUnit();
     $responsiveImageBuilder = new ResponsiveImageBuilder($api, $unit);
@@ -105,12 +121,22 @@ class ResponsiveImageBuilderTest extends ModuleTestCase
     $this->assertContains('/crop(10,20,30,40)/resizeScale(1440)/quality(95)/foo.png', $tag);
     $this->assertContains('/crop(10,20,30,40)/resizeScale(1600)/quality(95)/foo.png', $tag);
     $this->assertContains('/crop(10,20,30,40)/resizeScale(1920)/quality(95)/foo.png', $tag);
-    $this->assertContains('src="/crop(10,20,30,40)/resizeScale(64)/quality(95)/foo.png"', $tag);
+    if ($isPhantomJs) {
+      $this->assertContains('src="/crop(10,20,30,40)/resizeScale(200)/quality(95)/foo.png"', $tag);
+    } else {
+      $this->assertNotContains(' src="', $tag);
+    }
   }
 
-  public function testBuildImageTag_resize()
+  /**
+   * @dataProvider provider_UserAgentNoneAndPhantomJs
+   */
+  public function testBuildImageTag_resize($isPhantomJs)
   {
     // prepare
+    if ($isPhantomJs) {
+      $this->setHttpUserAgentOfPhantomJs();
+    }
     $api = $this->createApiMock();
     $unit = $this->createUnit();
     $responsiveImageBuilder = new ResponsiveImageBuilder($api, $unit);
@@ -137,12 +163,22 @@ class ResponsiveImageBuilderTest extends ModuleTestCase
     $this->assertContains('/resizeCenter(10,20)/resizeScale(1440)/quality(95)/foo.png', $tag);
     $this->assertContains('/resizeCenter(10,20)/resizeScale(1600)/quality(95)/foo.png', $tag);
     $this->assertContains('/resizeCenter(10,20)/resizeScale(1920)/quality(95)/foo.png', $tag);
-    $this->assertContains('src="/resizeCenter(10,20)/resizeScale(64)/quality(95)/foo.png"', $tag);
+    if ($isPhantomJs) {
+      $this->assertContains('src="/resizeCenter(10,20)/resizeScale(200)/quality(95)/foo.png"', $tag);
+    } else {
+      $this->assertNotContains(' src="', $tag);
+    }
   }
 
-  public function testBuildImageTag_quality()
+  /**
+   * @dataProvider provider_UserAgentNoneAndPhantomJs
+   */
+  public function testBuildImageTag_quality($isPhantomJs)
   {
     // prepare
+    if ($isPhantomJs) {
+      $this->setHttpUserAgentOfPhantomJs();
+    }
     $api = $this->createApiMock();
     $unit = $this->createUnit();
     $responsiveImageBuilder = new ResponsiveImageBuilder($api, $unit);
@@ -166,7 +202,11 @@ class ResponsiveImageBuilderTest extends ModuleTestCase
     $this->assertContains('/resizeScale(1440)/quality(42)/foo.png', $tag);
     $this->assertContains('/resizeScale(1600)/quality(42)/foo.png', $tag);
     $this->assertContains('/resizeScale(1920)/quality(42)/foo.png', $tag);
-    $this->assertContains('src="/resizeScale(64)/quality(42)/foo.png"', $tag);
+    if ($isPhantomJs) {
+      $this->assertContains('src="/resizeScale(200)/quality(42)/foo.png"', $tag);
+    } else {
+      $this->assertNotContains(' src="', $tag);
+    }
   }
 
   //
@@ -193,5 +233,13 @@ class ResponsiveImageBuilderTest extends ModuleTestCase
         'assetUrl' => 'root/assets'
       ))
     ));
+  }
+
+  public function provider_UserAgentNoneAndPhantomJs()
+  {
+    return array(
+      array(false),
+      array(true)
+    );
   }
 }

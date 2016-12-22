@@ -13,6 +13,38 @@ class ModuleTestCase extends \PHPUnit_Framework_TestCase
   protected $manifest = array();
   protected $customData = array();
 
+  protected $backupServerVars = array();
+  protected $changesServerVars = array();
+
+  protected $httpUserAgentOfPhantomJs = 'This Is The User Agent Of PhantomJS/1.9.8 (development) For Testing';
+
+  /**
+   * Backup the _SERVER variables
+   */
+  public function setUp()
+  {
+    parent::setUp();
+
+    $this->backupServerVars = $_SERVER;
+  }
+
+  /**
+   * Restore the changed _SERVER variables
+   */
+  public function tearDown()
+  {
+    foreach ($this->changesServerVars as $varName)
+    {
+      if (array_key_exists($varName, $this->backupServerVars)) {
+        $_SERVER[$varName] = $this->backupServerVars[$varName];
+      } else {
+        unset($_SERVER[$varName]);
+      }
+    }
+
+    parent::tearDown();
+  }
+
   /**
    * Creates an instance of the module class
    * @param array $conf The configuration values for the module instance
@@ -229,5 +261,14 @@ class ModuleTestCase extends \PHPUnit_Framework_TestCase
     $property = $class->getProperty($propertyName);
     $property->setAccessible(true);
     $property->setValue($obj, $value);
+  }
+
+  /**
+   * Set the http user agent string into the _SERVER variables
+   */
+  protected function setHttpUserAgentOfPhantomJs()
+  {
+    $this->changesServerVars[] = 'HTTP_USER_AGENT';
+    $_SERVER['HTTP_USER_AGENT'] = $this->httpUserAgentOfPhantomJs;
   }
 }

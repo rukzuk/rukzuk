@@ -203,9 +203,9 @@ class ResponsiveImageBuilder {
 
       // set default image (smallest resolution LQIP for fast responses)
       $image->resetOperations();
-      $preloadSrc = $this->getResponsiveImageUrl($image, $imageCfg, ResponsiveImageBuilder::$previewResponsiveImageResolution);
       // set default image only for screenshoter
-      if (preg_match("/phantomjs/i", $_SERVER['HTTP_USER_AGENT'])) {
+      if (isset($_SERVER['HTTP_USER_AGENT']) && preg_match("/phantomjs/i", $_SERVER['HTTP_USER_AGENT'])) {
+        $preloadSrc = $this->getResponsiveImageUrl($image, $imageCfg, ResponsiveImageBuilder::$previewResponsiveImageResolution);
         $imgTag->set('src', $preloadSrc);
       }
       // set fill height value

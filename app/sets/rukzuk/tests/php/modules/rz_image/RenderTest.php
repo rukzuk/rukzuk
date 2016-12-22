@@ -39,9 +39,15 @@ class rz_image_RenderTest extends ModuleTestCase
   protected $moduleNS = '';
   protected $moduleClass = 'rz_image_RenderTest_rz_image';
 
-  public function testRender_noImage()
+  /**
+   * @dataProvider provider_UserAgentNoneAndPhantomJs
+   */
+  public function testRender_noImage($isPhantomJs)
   {
     // prepare
+    if ($isPhantomJs) {
+      $this->setHttpUserAgentOfPhantomJs();
+    }
     $api = $this->createApiMock();
     $unit = $this->createUnit(array(
       'formValues' => array(
@@ -66,9 +72,15 @@ class rz_image_RenderTest extends ModuleTestCase
     $this->assertContains('blankImgPlaceholder', $imgTag->get('class'));
   }
 
-  public function testRender_withImage()
+  /**
+   * @dataProvider provider_UserAgentNoneAndPhantomJs
+   */
+  public function testRender_withImage($isPhantomJs)
   {
     // prepare
+    if ($isPhantomJs) {
+      $this->setHttpUserAgentOfPhantomJs();
+    }
     $api = $this->createApiMock();
     $unit = $this->createUnit(array(
       'formValues' => array(
@@ -90,7 +102,11 @@ class rz_image_RenderTest extends ModuleTestCase
     $this->assertEquals('div', $tag->getTagName());
     $this->assertEquals('image alt text', $imgTag->get('alt'));
     $this->assertEquals('image title', $imgTag->get('title'));
-    $this->assertContains('test-image', $imgTag->get('src'));
+    if ($isPhantomJs) {
+      $this->assertContains('test-image', $imgTag->get('src'));
+    } else {
+      $this->assertEmpty($imgTag->get('src'));
+    }
   }
 
   public function testRender_withImageAndCropping()
@@ -150,4 +166,11 @@ class rz_image_RenderTest extends ModuleTestCase
     ));
   }
 
+  public function provider_UserAgentNoneAndPhantomJs()
+  {
+    return array(
+      array(false),
+      array(true)
+    );
+  }
 }
