@@ -1,0 +1,132 @@
+FROM phusion/baseimage:0.9.19
+
+VOLUME /srv/rukzuk/htdocs/cms
+
+# proposed breaks some php packages (e.g. php-intl)
+#RUN rm -rf /etc/apt/sources.list.d/proposed.list
+
+# phusion/baseimage is not always up to date. :-(
+RUN apt-get update && apt-get upgrade -y -o Dpkg::Options::="--force-confold"
+
+# Set Timezone
+RUN echo "Europe/Berlin" > /etc/timezone
+RUN dpkg-reconfigure --frontend noninteractive tzdata
+
+# Make Debian/Ubunut and Docker friends
+ENV DEBIAN_FRONTEND noninteractive
+
+# install phantomjs 2.1.1
+ENV QT_QPA_PLATFORM offscreen
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends phantomjs
+
+# Install Apache httpd
+RUN apt-get install -y --no-install-recommends \
+        sqlite3 \
+        apache2 \
+        libapache2-mod-php7.0 \
+        libv8-3.14.5 \
+        msmtp \
+        msmtp-mta \
+        php7.0 \
+        php7.0-sqlite \
+        php7.0-cli \
+        php7.0-curl \
+        php7.0-gd \
+        php7.0-intl \
+        php7.0-mcrypt \
+        php7.0-zip \
+        php7.0-mbstring \
+        php7.0-xml
+
+# Activate Apache mods
+RUN a2enmod ssl && \
+    a2enmod rewrite
+
+# Activate PHP mods
+RUN phpenmod mcrypt
+
+# Install v8js
+ENV NO_INTERACTION 1
+ENV REPORT_EXIT_STATUS 0
+RUN add-apt-repository -y ppa:pinepain/libv8-5.2 && \
+    apt-get update && \
+    apt-get install -y --no-install-recommends libv8-5.2
+RUN apt-get install -y --no-install-recommends build-essential git php7.0-dev
+RUN git clone https://github.com/phpv8/v8js.git /tmp/v8js
+RUN cd /tmp/v8js && phpize && ./configure --with-v8js=/opt/v8
+RUN cd /tmp/v8js && make all test install
+RUN echo extension=v8js.so > /etc/php/7.0/cli/conf.d/99-v8js.ini && \
+    echo extension=v8js.so > /etc/php/7.0/apache2/conf.d/99-v8js.ini
+RUN rm -fR /tmp/v8js
+RUN apt-get remove --purge -y build-essential git php7.0-dev
+RUN apt-get autoremove -y
+
+
+# Activate apache2 in runit
+RUN mkdir -p /etc/service/apache2
+COPY apache2.runit /etc/service/apache2/run
+RUN chmod +x /etc/service/apache2/run
+
+# Create folder
+ENV CMS_PATH /opt/rukzuk/htdocs
+ENV INSTANCE_PATH /srv/rukzuk
+RUN mkdir -p ${CMS_PATH}
+RUN mkdir -p ${INSTANCE_PATH}/htdocs/cms
+RUN chown -R www-data:www-data ${INSTANCE_PATH}/htdocs
+
+# Install the release/cmsrelase.tar.gz (a version from our Jenkins)
+COPY release/ /tmp/rukzuk_release/
+RUN if [ -e /tmp/rukzuk_release/cmsrelease.tar.gz ]; then tar -xf /tmp/rukzuk_release/cmsrelease.tar.gz -C ${CMS_PATH}/.. --strip 1; fi
+RUN if [ -e /tmp/rukzuk_release/ ]; then rm -Rf /tmp/rukzuk_release/; fi
+
+RUN ln -s ${CMS_PATH}/app/server/environment ${INSTANCE_PATH}/environment
+RUN ln -s ${CMS_PATH} ${INSTANCE_PATH}/application
+
+# Initial
+ENV APPLICATION_ENV standalone
+ENV CMS_SQLITE_DB ${INSTANCE_PATH}/htdocs/cms/db.sqlite3
+COPY config.php ${INSTANCE_PATH}/config.php
+COPY cms.apache /etc/apache2/sites-available/000-default.conf
+RUN mkdir -p /etc/my_init.d
+COPY init-php7.sh /etc/my_init.d/rukzuk_init.sh
+RUN chmod +x /etc/my_init.d/rukzuk_init.sh
+COPY msmtprc.tpl /etc/msmtprc.tpl
+
+
+EXPOSE 80
+
+
+# >>DEVVM>> do not remove this marker (used at jenkins)
+
+#
+# Stuff for development
+#
+
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends php7.0-dev
+
+
+#
+# Stuff for vagrant below
+#
+
+# Create user
+ENV USERNAME vagrant
+RUN useradd --create-home -s /bin/bash $USERNAME
+RUN gpasswd -a vagrant www-data
+
+# Install sudo
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends sudo
+
+# Configure user - SSH access
+RUN rm -f /etc/service/sshd/down
+RUN mkdir -p /home/$USERNAME/.ssh && \
+    echo "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA6NF8iallvQVp22WDkTkyrtvp9eWW6A8YVr+kz4TjGYe7gHzIw+niNltGEFHzD8+v1I2YJ6oXevct1YeS0o9HZyN1Q9qgCgzUFtdOKLv6IedplqoPkcmF0aYet2PkEDo3MlTBckFXPITAMzF8dJSIFo9D8HfdOV0IAdx4O7PtixWKn5y2hMNG0zQPyUecp4pzC6kivAIhyfHilFR61RGL+GPXQ2MWZWFYbAGjyiYJnAmCP3NOTd0jMZEnDkbUvxhMmBYSdETk1rRgm+R4LOzFUGaHqHDLKLX+FIPKcF96hrucXzcWyLbIbEgE98OHlnVYCzRdK8jlqm8tehUc9c9WhQ== $USERNAME insecure public key" > /home/$USERNAME/.ssh/authorized_keys && \
+    chmod 700 /home/$USERNAME/.ssh && \
+    echo -n "$USERNAME:$USERNAME" | chpasswd && \
+    touch /home/$USERNAME/.hushlogin && \
+    chown -R $USERNAME:$USERNAME /home/$USERNAME/ && \
+    mkdir -p /etc/sudoers.d && echo "$USERNAME ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/$USERNAME && chmod 0440 /etc/sudoers.d/$USERNAME
+
