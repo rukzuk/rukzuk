@@ -78,6 +78,7 @@ class Creator extends Base\Service
     $pageTypeBusiness = $this->getBusiness('PageType');
     $mediaBusiness = $this->getBusiness('Media');
     $ticketBusiness = $this->getBusiness('Ticket');
+    $templateBusiness = $this->getBusiness('Template');
     return new CreatorContext(
         $websiteBusiness,
         $websiteSettingsBusiness,
@@ -85,7 +86,8 @@ class Creator extends Base\Service
         $pageBusiness,
         $pageTypeBusiness,
         $mediaBusiness,
-        $ticketBusiness
+        $ticketBusiness,
+        $templateBusiness
     );
   }
 

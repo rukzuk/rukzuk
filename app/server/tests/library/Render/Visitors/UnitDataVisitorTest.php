@@ -4,6 +4,8 @@
 namespace Render\Visitors;
 
 
+use Render\InfoStorage\ContentInfoStorage\ArrayBasedContentInfoStorage;
+use Render\NodeContext;
 use Test\Render\AbstractRenderTestCase;
 use Render\InfoStorage\ModuleInfoStorage\ArrayBasedModuleInfoStorage;
 use Render\NodeTree;
@@ -86,26 +88,32 @@ EOF;
         'mainClassFilePath' => '',
         'mainClassName' => '',
         'manifest' => array(
-          'apiType' => 'APIv1'
+          'apiType' => 'APIv1',
+          'config' => array()
         )
       ),
       'rz_date' => array(
         'mainClassFilePath' => '',
         'mainClassName' => '',
         'manifest' => array(
-          'apiType' => 'APIv1'
+          'apiType' => 'APIv1',
+          'config' => array()
         )
       ),
       'MODUL-240ef8ca-0d1d-4781-9d38-ea24caa5c475-MODUL' => array(
         'mainClassFilePath' => '',
         'mainClassName' => '',
         'manifest' => array(
-          'apiType' => null
+          'apiType' => null,
+          'config' => array()
         )
       )
     );
-    $infoStorage = new ArrayBasedModuleInfoStorage($moduleData);
-    $nodeFactory = new SimpleTestNodeFactory($infoStorage);
+    $templateData = array();
+    $moduleInfoStorage = new ArrayBasedModuleInfoStorage($moduleData);
+    $contentInfoStorage = new ArrayBasedContentInfoStorage($templateData);
+    $nodeContext = new NodeContext($moduleInfoStorage, $contentInfoStorage, null, null);
+    $nodeFactory = new SimpleTestNodeFactory($nodeContext);
     return new NodeTree($content, $nodeFactory);
   }
 

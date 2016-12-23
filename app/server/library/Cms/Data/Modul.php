@@ -118,6 +118,11 @@ class Modul
   private $ghostContainerMode = null;
 
   /**
+   * @var \stdClass $config
+   */
+  private $config = null;
+
+  /**
    * Set id
    *
    * @param $id
@@ -307,6 +312,36 @@ class Modul
   public function getFormvalues()
   {
     return $this->formvalues;
+  }
+
+  /**
+   * Set config
+   *
+   * @param \stdClass $config
+   *
+   * @return $this
+   */
+  public function setConfig($config)
+  {
+    if (isset($config) && ($config instanceof \stdClass)) {
+      $this->config = $config;
+    } else {
+      $this->config = new \stdClass();
+    }
+    return $this;
+  }
+
+  /**
+   * Get config
+   *
+   * @return \stdClass $config
+   */
+  public function getConfig()
+  {
+    if ($this->config instanceof \stdClass) {
+      return $this->config;
+    }
+    return new \stdClass();
   }
 
   /**
@@ -597,6 +632,7 @@ class Modul
       'apiType' => $this->getApiType(),
       'ghostContainerMode' => $this->getGhostContainerMode(),
       'sessionRequired' => $this->getSessionRequired(),
+      'config' => $this->getConfig()
     );
   }
   /**
@@ -623,6 +659,7 @@ class Modul
       'ghostContainerMode' => $this->getGhostContainerMode(),
       'apiType' => $this->getApiType(),
       'sessionRequired' => $this->getSessionRequired(),
+      'config' => $this->getConfig()
     );
   }
   public function decode($fieldName)

@@ -10,7 +10,7 @@ class rz_style_iconset extends SimpleModule {
    * @param \Render\ModuleInfo $moduleInfo
    * @return string
    */
-  public function htmlHead($api, $unit, $moduleInfo)
+  public function htmlHead($api, $moduleInfo)
   {
 	$html = '<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">';
     return $html;

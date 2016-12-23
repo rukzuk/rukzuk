@@ -1,0 +1,15 @@
+{
+    "name": "{\"de\":\"Layoutinclude\",\"en\":\"Layout Include\"}",
+    "description": "{\"de\":\"Anderes Layout an dieser Stelle einbinden\",\"en\":\"Include a given layout\"}",
+    "version": "dev",
+    "icon": "include.png",
+    "category": "{\"de\":\" Layout\",\"en\":\" Layout\"}",
+    "moduleType": "default",
+    "allowedChildModuleType": "extension",
+    "ghostContainerMode": "force_off",
+    "reRenderRequired": true,
+    "apiType": "APIv1",
+    "config": {
+        "contentInclude": true
+    }
+}

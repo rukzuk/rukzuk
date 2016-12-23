@@ -3,14 +3,16 @@
 
 namespace Render;
 
+use Render\Exceptions\ContentIncludeRecursionException;
 use Render\Exceptions\ModuleAPITypeNotFound;
 use Render\Exceptions\ModuleNotFoundException;
 use Render\Exceptions\NoContentException;
 use Render\InfoStorage\ModuleInfoStorage\IModuleInfoStorage;
+use Render\InfoStorage\ContentInfoStorage\IContentInfoStorage;
+use Render\Nodes\INode;
 use Render\Nodes\DynamicHTMLNode;
-use \Render\Nodes\INode;
-use \Render\Nodes\FullDynamicNode;
-use \Render\Nodes\LegacyNode;
+use Render\Nodes\LegacyNode;
+use Render\Nodes\ContentIncludeNode;
 
 /**
  * Class NodeFactory creates the node tree structure for the given content
@@ -19,39 +21,41 @@ use \Render\Nodes\LegacyNode;
  */
 class NodeFactory
 {
-
   /**
-   * @var IModuleInfoStorage
+   * @var NodeContext
    */
-  private $moduleInfoStorage;
+  private $nodeContext;
 
   /**
    * @var UnitFactory
    */
   private $unitFactory;
 
+  /**
+   * @var array
+   */
   private $dynamicModuleObjectCache = array();
 
   /**
    * Creates a new NodeFactory object
    *
-   * @param IModuleInfoStorage $moduleInfoStorage InfoStorage used to load
-   *                                              the modules
+   * @param NodeContext         $nodeContext
    */
-  public function __construct(IModuleInfoStorage $moduleInfoStorage)
+  public function __construct(NodeContext $nodeContext)
   {
-    $this->moduleInfoStorage = $moduleInfoStorage;
+    $this->nodeContext = $nodeContext;
     $this->unitFactory = new UnitFactory();
   }
 
   /**
-   * @param array    $content
-   * @param array    $unitMap -- Reference to an flat array map with all unit nodes
-   * @param array    $usedModuleIds -- Reference to an array with all used module ids
+   * @param array $content
+   * @param array $unitMap -- Reference to an flat array map with all unit nodes
+   * @param array $usedModuleIds -- Reference to an array with all used module ids
    * @param NodeTree $tree
-   * @param string   $parentId
+   * @param string $parentId
+   * @param array $contentIncludeIds
    *
-   * @throws NoContentException
+   * @throws Exceptions\NoContentException
    * @return INode
    */
   public function createNodeWithSubNodes(
@@ -59,10 +63,16 @@ class NodeFactory
       array &$unitMap,
       array &$usedModuleIds,
       NodeTree &$tree,
-      $parentId = null
+      $parentId = null,
+      $contentIncludeIds = null
   ) {
     if (empty($content)) {
       throw new NoContentException('Empty unit (content) detected');
+    }
+
+    if (is_null($contentIncludeIds))
+    {
+      $contentIncludeIds = $this->getBaseContentIncludeIds();
     }
 
     $node = $this->createNodeObject($content, $tree, $usedModuleIds, $parentId);
@@ -76,7 +86,21 @@ class NodeFactory
             $unitMap,
             $usedModuleIds,
             $tree,
-            $unitId
+            $unitId,
+            $contentIncludeIds
+        ));
+      }
+    }
+    if ($this->isContentIncludeNode($node)) {
+      $contentIncludeIds = $this->validateAndAddContentIncludeIds($contentIncludeIds, $node);
+      foreach ($this->getContentInclude($node) as $childContent) {
+        $node->addChild($this->createNodeWithSubNodes(
+          $childContent,
+          $unitMap,
+          $usedModuleIds,
+          $tree,
+          $unitId,
+          $contentIncludeIds
         ));
       }
     }
@@ -86,11 +110,27 @@ class NodeFactory
   }
 
   /**
+   * @return NodeContext
+   */
+  protected function getNodeContext()
+  {
+    return $this->nodeContext;
+  }
+
+  /**
    * @return IModuleInfoStorage
    */
   protected function getModuleInfoStorage()
   {
-    return $this->moduleInfoStorage;
+    return $this->getNodeContext()->getModuleInfoStorage();
+  }
+
+  /**
+   * @return IContentInfoStorage
+   */
+  protected function getContentInfoStorage()
+  {
+    return $this->getNodeContext()->getContentInfoStorage();
   }
 
   /**
@@ -101,6 +141,57 @@ class NodeFactory
   protected function hasChildren(array &$content)
   {
     return isset($content['children']) && is_array($content['children']);
+  }
+
+  /**
+   * @param INode $node
+   *
+   * @return bool
+   */
+  protected function isContentIncludeNode(INode $node)
+  {
+    return ($node instanceof ContentIncludeNode);
+  }
+
+  /**
+   * @param ContentIncludeNode $node
+   * @return array
+   */
+  protected function getContentInclude(ContentIncludeNode $node)
+  {
+    return $node->getContentInclude($this->getContentInfoStorage());
+  }
+
+  /**
+   * @return array
+   */
+  protected function getBaseContentIncludeIds()
+  {
+    $baseContentIncludeIds = array();
+    if ($this->getNodeContext()->getTemplateId()) {
+      $baseContentIncludeIds[] = $this->getNodeContext()->getTemplateId();
+    }
+    if ($this->getNodeContext()->getPageId()) {
+      $baseContentIncludeIds[] = $this->getNodeContext()->getPageId();
+    }
+    return $baseContentIncludeIds;
+  }
+
+  /**
+   * @param array $contentIncludeIds
+   * @param ContentIncludeNode $node
+   * @return array
+   * @throws ContentIncludeRecursionException
+   */
+  protected function validateAndAddContentIncludeIds(array $contentIncludeIds, ContentIncludeNode $node)
+  {
+    $idToInclude = $node->getContentIncludeIds();
+    $intersection = array_intersect($contentIncludeIds, $idToInclude);
+    if (!empty($intersection))
+    {
+      throw new ContentIncludeRecursionException("Recursion found at including ".implode(', ', $intersection));
+    }
+    return array_merge($contentIncludeIds, $idToInclude);
   }
 
   /**
@@ -131,18 +222,43 @@ class NodeFactory
     if (is_null($moduleApiType)) {
       return $this->createLegacyNode($tree, $parentId, $unit, $moduleInfo);
     }
-    if ($moduleApiType === 'APIv1' || $moduleApiType === 'RootAPIv1') {
-      return $this->createDynamicHTMLNode(
-          $tree,
-          $parentId,
-          $unit,
-          $moduleInfo,
-          $moduleId,
-          $moduleApiType
+
+    if ($moduleApiType !== 'APIv1' && $moduleApiType !== 'RootAPIv1') {
+      throw new ModuleAPITypeNotFound('Unknown module api type: ' . $moduleApiType);
+    }
+
+    $moduleConfig = $this->getModuleConfig($moduleId);
+    if (isset($moduleConfig['contentInclude']) && $moduleConfig['contentInclude'] === true) {
+      return $this->createContentIncludeNode(
+        $tree,
+        $parentId,
+        $unit,
+        $moduleInfo,
+        $moduleId,
+        $moduleApiType
       );
     }
 
-    throw new ModuleAPITypeNotFound('Unknown module api type: ' . $moduleApiType);
+    return $this->createDynamicHTMLNode(
+        $tree,
+        $parentId,
+        $unit,
+        $moduleInfo,
+        $moduleId,
+        $moduleApiType
+    );
+  }
+
+  /**
+   * Returns the module type of the module as a string.
+   *
+   * @param string $moduleId
+   *
+   * @return string
+   */
+  protected function getModuleType($moduleId)
+  {
+    return $this->getModuleInfoStorage()->getModuleType($moduleId);
   }
 
   /**
@@ -155,6 +271,18 @@ class NodeFactory
   protected function getModuleApiType($moduleId)
   {
     return $this->getModuleInfoStorage()->getModuleApiType($moduleId);
+  }
+
+  /**
+   * Returns the config of the module
+   *
+   * @param string $moduleId
+   *
+   * @return array
+   */
+  protected function getModuleConfig($moduleId)
+  {
+    return $this->getModuleInfoStorage()->getModuleConfig($moduleId);
   }
 
   /**
@@ -219,6 +347,35 @@ class NodeFactory
   }
 
   /**
+   * @param NodeTree $tree
+   * @param string $parentId
+   * @param Unit $unit
+   * @param ModuleInfo $moduleInfo
+   * @param string $moduleId
+   * @param string $moduleApiType
+   *
+   * @return ContentIncludeNode
+   */
+  protected function createContentIncludeNode(
+    NodeTree &$tree,
+    $parentId,
+    Unit $unit,
+    ModuleInfo $moduleInfo,
+    $moduleId,
+    $moduleApiType
+  ) {
+    $module = $this->loadModule($moduleId);
+    return new ContentIncludeNode(
+      $unit,
+      $moduleInfo,
+      $parentId,
+      $tree,
+      $module,
+      $moduleApiType
+    );
+  }
+
+  /**
    * @param array $content
    * @param array $defaultFromValues
    *
@@ -247,19 +404,19 @@ class NodeFactory
     return new ModuleInfo($this->getModuleInfoStorage(), $moduleId);
   }
 
-    /**
-     * @param $moduleId
-     * @throws Exceptions\ModuleNotFoundException
-     */
-    protected function _loadModule($moduleId)
-    {
-        $moduleMainClassFilePath = $this->getModuleInfoStorage()->getModuleMainClassFilePath($moduleId);
+  /**
+   * @param $moduleId
+   * @throws Exceptions\ModuleNotFoundException
+   */
+  protected function _loadModule($moduleId)
+  {
+    $moduleMainClassFilePath = $this->getModuleInfoStorage()->getModuleMainClassFilePath($moduleId);
     if (!file_exists($moduleMainClassFilePath)) {
         throw new ModuleNotFoundException('No main class file for module ' . $moduleId . ' found');
     }
-        /** @noinspection PhpIncludeInspection */
-        require_once( $moduleMainClassFilePath );
-        $moduleMainClassName = $this->getModuleInfoStorage()->getModuleClassName($moduleId);
-        return new $moduleMainClassName();
-    }
+    /** @noinspection PhpIncludeInspection */
+    require_once( $moduleMainClassFilePath );
+    $moduleMainClassName = $this->getModuleInfoStorage()->getModuleClassName($moduleId);
+    return new $moduleMainClassName();
+  }
 }

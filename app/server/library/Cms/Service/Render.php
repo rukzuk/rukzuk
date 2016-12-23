@@ -22,6 +22,7 @@ use Render\MediaContext;
 use Cms\Render\CmsRenderer;
 use Cms\Render\PageUrlHelper\CmsPageUrlHelper;
 use Render\MediaUrlHelper\ValidationHelper\SecureFileValidationHelper;
+use Render\NodeContext;
 use Render\PageUrlHelper\IPageUrlHelper;
 use Seitenbau\Registry;
 
@@ -32,6 +33,8 @@ use Cms\Render\InfoStorage\NavigationInfoStorage\ServiceBasedNavigationInfoStora
 use Render\RenderContext as RenderContext;
 use Render\NodeTree;
 use Render\NodeFactory;
+use Render\InfoStorage\ContentInfoStorage\IContentInfoStorage;
+use Cms\Render\InfoStorage\ContentInfoStorage\ServiceBasedContentInfoStorage;
 use \Cms\Request\Base as CmsRequestBase;
 use Seitenbau\FileSystem as FS;
 use Orm\Data\Media as DataMedia;
@@ -150,6 +153,7 @@ class Render extends PlainServiceBase
   ) {
     $websiteService = $this->getService('Website');
     $moduleService = $this->getService('Modul');
+    $templateService = $this->getService('Template');
     $websiteSettingsService = $this->getService('WebsiteSettings');
 
     $websiteInfoStorage = new ServiceBasedWebsiteInfoStorage(
@@ -160,6 +164,10 @@ class Render extends PlainServiceBase
     $moduleInfoStorage = new ServiceBasedModuleInfoStorage(
         $websiteId,
         $moduleService
+    );
+    $contentInfoStorage = new ServiceBasedContentInfoStorage(
+      $websiteId,
+      $templateService
     );
     $colorInfoStorage = $this->getColorInfoStorage($websiteService, $websiteId);
     $resolutions = $this->getResolutions($websiteService, $websiteId);
@@ -184,28 +192,29 @@ class Render extends PlainServiceBase
         $colorInfoStorage,
         $cacheImpl
     );
+    $nodeContext = $this->createNodeContext($moduleInfoStorage, $contentInfoStorage, $pageOrTemplateId, $isTemplate);
 
     // Legacy Support (NOTE: this init NEEDS to be AFTER the init of all info storage and the new render context)
     LegacyRenderContext::init($renderContext, $websiteId, $pageOrTemplateId);
 
-    $this->startNewRenderer($content, $moduleInfoStorage, $codeType, $renderContext);
+    $this->startNewRenderer($content, $codeType, $nodeContext, $renderContext);
   }
 
   /**
    * Renders the given content array with the new visitor based renderer.
    *
-   * @param array                                                    $content
-   * @param \Render\InfoStorage\ModuleInfoStorage\IModuleInfoStorage $infoStorage
-   * @param                                                          $codeType
-   * @param \Render\RenderContext                                    $renderContext
+   * @param array $content
+   * @param $codeType
+   * @param \Render\NodeContext $nodeContext
+   * @param \Render\RenderContext $renderContext
    */
   protected function startNewRenderer(
       array &$content,
-      IModuleInfoStorage $infoStorage,
       $codeType,
+      NodeContext $nodeContext,
       RenderContext $renderContext
   ) {
-    $nodeTree = $this->createNodeTree($content, $infoStorage);
+    $nodeTree = $this->createNodeTree($content, $nodeContext);
     $renderer = new CmsRenderer($renderContext, $nodeTree);
     switch ($codeType) {
       case RenderObject::CODE_TYPE_CSS:
@@ -368,14 +377,14 @@ class Render extends PlainServiceBase
   }
 
   /**
-   * @param $content
-   * @param $infoStorage
+   * @param array $content
+   * @param NodeContext $nodeContext
    *
    * @return NodeTree
    */
-  protected function createNodeTree(array &$content, IModuleInfoStorage $infoStorage)
+  protected function createNodeTree(array &$content, NodeContext $nodeContext)
   {
-    $nodeFactory = new NodeFactory($infoStorage);
+    $nodeFactory = new NodeFactory($nodeContext);
     return new NodeTree($content, $nodeFactory);
   }
 
@@ -518,5 +527,21 @@ class Render extends PlainServiceBase
     } else {
       return array();
     }
+  }
+
+  /**
+   * @param $moduleInfoStorage
+   * @param $contentInfoStorage
+   * @param $pageOrTemplateId
+   * @param $isTemplate
+   * @return NodeContext
+   */
+  protected function createNodeContext($moduleInfoStorage, $contentInfoStorage, $pageOrTemplateId, $isTemplate)
+  {
+    if ($isTemplate)
+    {
+      return new NodeContext($moduleInfoStorage, $contentInfoStorage, null, $pageOrTemplateId);
+    }
+    return new NodeContext($moduleInfoStorage, $contentInfoStorage, $pageOrTemplateId, null);
   }
 }

@@ -410,6 +410,7 @@ class DynamicCreatorTest extends TransactionTestCase
         'manifest' => array(
           'moduleType' => 'root',
           'apiType' => 'RootAPIv1',
+          'config' => array(),
         )
       ),
       'rz_tests_creator_default_module' => array(
@@ -423,6 +424,7 @@ class DynamicCreatorTest extends TransactionTestCase
         'manifest' => array(
           'moduleType' => 'default',
           'apiType' => 'APIv1',
+          'config' => array(),
         )
       ),
       'rz_tests_creator_extension_module' => array(
@@ -436,6 +438,7 @@ class DynamicCreatorTest extends TransactionTestCase
         'manifest' => array(
           'moduleType' => 'extension',
           'apiType' => 'APIv1',
+          'config' => array(),
         )
       ),
       'rz_tests_global_package_module' => array(
@@ -449,6 +452,7 @@ class DynamicCreatorTest extends TransactionTestCase
         'manifest' => array(
           'moduleType' => 'default',
           'apiType' => 'APIv1',
+          'config' => array(),
         )
       ),
       'rz_tests_local_package_module' => array(
@@ -462,6 +466,7 @@ class DynamicCreatorTest extends TransactionTestCase
         'manifest' => array(
           'moduleType' => 'default',
           'apiType' => 'APIv1',
+          'config' => array(),
         )
       ),
     );
@@ -857,6 +862,8 @@ class DynamicCreatorTest extends TransactionTestCase
         $moduleInfoStorage->getModuleDefaultFromValues($moduleId));
       $this->assertEquals($expactedModuleValues['customData'],
         $moduleInfoStorage->getModuleCustomData($moduleId));
+      $this->assertEquals($expactedModuleValues['manifest']['config'],
+        $moduleInfoStorage->getModuleConfig($moduleId));
 
       $actualManifest = $moduleInfoStorage->getModuleManifest($moduleId);
       foreach ($expactedModuleValues['manifest'] as $key => $expactedValue) {
@@ -1072,8 +1079,10 @@ class DynamicCreatorTest extends TransactionTestCase
     $pageTypeBusiness = new \Cms\Business\PageType('PageType');
     $mediaBusiness = new \Cms\Business\Media('Media');
     $ticketBusiness = new \Cms\Business\Ticket('Ticket');
+    $templateBusiness = new \Cms\Business\Template('Template');
     return new CreatorContext($websiteBusiness, $websiteSettingsBusiness,
-      $moduleBusiness, $pageBusiness, $pageTypeBusiness, $mediaBusiness, $ticketBusiness);
+      $moduleBusiness, $pageBusiness, $pageTypeBusiness, $mediaBusiness,
+      $ticketBusiness, $templateBusiness);
   }
 
   /**

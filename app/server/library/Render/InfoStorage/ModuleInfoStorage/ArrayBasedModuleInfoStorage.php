@@ -165,4 +165,17 @@ class ArrayBasedModuleInfoStorage implements IModuleInfoStorage
     }
     return $this->moduleData[$moduleId];
   }
+
+  /**
+   * Returns the config data of the specified module
+   *
+   * @param string $moduleId of the module
+   *
+   * @return array
+   */
+  public function getModuleConfig($moduleId)
+  {
+    $manifest = $this->getModuleManifest($moduleId);
+    return $manifest['config'];
+  }
 }
