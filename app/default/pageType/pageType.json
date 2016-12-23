@@ -110,7 +110,8 @@
       "emptyText": "",
       "minLength": 1,
       "maxLength": 255,
-      "allowBlank": true
+      "allowBlank": true,
+      "remove": true
     },
     {
       "type": "TextField",
@@ -119,7 +120,8 @@
       "emptyText": "",
       "minLength": 1,
       "maxLength": 255,
-      "allowBlank": true
+      "allowBlank": true,
+      "remove": true
     }
   ],
   "formValues": {

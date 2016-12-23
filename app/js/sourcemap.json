@@ -7,6 +7,7 @@
             "app/js/Ext/ext-3.2.1/src/ext-core/src/core/Template.js",
             "app/js/Ext/ext-3.2.1/src/core/Template-more.js",
             "app/js/Ext/ext-3.2.1/src/ext-core/src/core/DomQuery.js",
+            "app/js/Ext/ext-3.2.1/src/ext-core/src/core/Loader.js",
             "app/js/Ext/ext-3.2.1/src/ext-core/src/util/DelayedTask.js",
             "app/js/Ext/ext-3.2.1/src/ext-core/src/util/Observable.js",
             "app/js/Ext/ext-3.2.1/src/util/Observable-more.js",
@@ -262,6 +263,7 @@
             "app/js/CMS/data/JsonStore.js",
             "app/js/CMS/data/ArrayField.js",
             "app/js/CMS/data/JsonField.js",
+            "app/js/CMS/data/RemoteJsField.js",
             "app/js/CMS/data/ModuleStore.js",
             "app/js/CMS/data/TemplateSnippetStore.js",
             "app/js/CMS/data/UserGroupStore.js",
@@ -479,8 +481,7 @@
             "app/js/CMS/pageTypeApi/API.js",
             "app/js/CMS/i18n.js",
             "app/js/CMS/i18nExtOverrides.js",
-            "app/js/init.js",
-            "app/js/defaultPageType.js"
+            "app/js/init.js"
         ],
         "dest": "app/js/cms-all.js"
     },
