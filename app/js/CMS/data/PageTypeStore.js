@@ -39,6 +39,24 @@ CMS.data.isPageTypeRecord = function (record) {
     return record && (record.constructor == CMS.data.PageTypeRecord);
 };
 
+Ext.apply(CMS.data.PageTypeRecord.prototype, {
+    /**
+     * Gets the buildFormPanel callback
+     */
+    getBuildFormPanelCallback: function() {
+        return this.getCallback('buildFormPanel');
+    },
+
+    getCallback: function(name) {
+        var id = this.get('id');
+        // run page type callback
+        if (CMS.pageType && CMS.pageType.Type && CMS.pageType.Type[id] && CMS.pageType.Type[id][name] && typeof(CMS.pageType.Type[id][name]) === 'function') {
+            return CMS.pageType.Type[id][name];
+        }
+        return function() {};
+    }
+
+});
 
 /**
  * @class CMS.data.PageTypeStore

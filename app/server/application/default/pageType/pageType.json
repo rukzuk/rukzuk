@@ -102,6 +102,24 @@
       "type": "OnOffToggle",
       "CMSvar": "notInPageList",
       "fieldLabel": "{\"de\": \"Diese Seite nicht in Seitenlisten anzeigen\", \"en\": \"Hide this page on page lists\"}"
+    },
+    {
+      "type": "TextField",
+      "CMSvar": "customTextfield1",
+      "fieldLabel": "customTextfield1",
+      "emptyText": "",
+      "minLength": 1,
+      "maxLength": 255,
+      "allowBlank": true
+    },
+    {
+      "type": "TextField",
+      "CMSvar": "customTextfield2",
+      "fieldLabel": "customTextfield2",
+      "emptyText": "",
+      "minLength": 1,
+      "maxLength": 255,
+      "allowBlank": true
     }
   ],
   "formValues": {

@@ -476,9 +476,11 @@
             "app/js/CMS/api/ApiUnitHelper.js",
             "app/js/CMS/api/ApiPlugin.js",
             "app/js/CMS/api/API.js",
+            "app/js/CMS/pageTypeApi/API.js",
             "app/js/CMS/i18n.js",
             "app/js/CMS/i18nExtOverrides.js",
-            "app/js/init.js"
+            "app/js/init.js",
+            "app/js/defaultPageType.js"
         ],
         "dest": "app/js/cms-all.js"
     },
