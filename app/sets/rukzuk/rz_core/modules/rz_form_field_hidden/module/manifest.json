@@ -1,0 +1,12 @@
+{
+    "name": "{\"de\":\"Verstecktes Feld\",\"en\":\"Hidden Field\"}",
+    "description": "{\"de\":\"Bietet die Möglichkeit, Seiteneigenschaften oder Text als verstecktes Feld in ein Formular einzufügen.\",\"en\":\"Offers the possibility to include page properties or text as a hidden field into a form. For the use inside the form module.\"}",
+    "version": "dev",
+    "icon": "form-element.png",
+    "category": "{\"de\":\"Formular\",\"en\":\"Form\"}",
+    "moduleType": "default",
+    "allowedChildModuleType": "extension",
+    "ghostContainerMode": "force_off",
+    "reRenderRequired": false,
+    "apiType": "APIv1"
+}
