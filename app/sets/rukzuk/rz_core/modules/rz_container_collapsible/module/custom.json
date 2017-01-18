@@ -12,6 +12,11 @@
                 "mode":"edit"
             },
             {
+                "file":"notlive\/collapsibleInitInclude.js",
+                "type":"module",
+                "mode":"edit"
+            },
+            {
                 "file":"notlive\/css.js",
                 "type":"module",
                 "mode":"edit"
