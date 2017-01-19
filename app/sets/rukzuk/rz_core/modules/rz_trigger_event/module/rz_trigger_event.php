@@ -13,12 +13,19 @@ class rz_trigger_event extends SimpleModule {
     }
 
     public function htmlHeadUnit($api, $unit, $moduleInfo) {
+
+        if ($api->isEditMode() && $api->getFormValue($unit, 'displayInEditmode')) {
+          return;
+        }
+
         // enable event only if this extension unit is a direct child of default unit
         $parentUnit = $api->getParentUnit($unit);
         if (!$api->getModuleInfo($parentUnit)->isExtension()) {
             $eventType = $api->getFormValue($unit, 'eventType');
             $eventLimit = $api->getFormValue($unit, 'eventLimit');
             $eventMode = $api->getFormValue($unit, 'eventMode');
+
+
 
             $stateName = '';
             if ($api->getFormValue($unit, 'enableState')) {
