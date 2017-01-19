@@ -119,7 +119,7 @@
                         },
                         {
                             "name": "fieldLabel",
-                            "value": "{\"de\":\"Feld-Typ\",\"en\":\"Field type\"}",
+                            "value": "{\"de\":\"Inhalt\",\"en\":\"Content\"}",
                             "xtype": "textfield",
                             "allowBlank": true,
                             "emptyText": "__i18n_formElements.fieldLabelOptionalEmptyText",
