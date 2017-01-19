@@ -652,6 +652,57 @@
                     "params": [
                         {
                             "name": "CMSvar",
+                            "value": "displayInEditmode",
+                            "allowBlank": false,
+                            "minLength": 3,
+                            "maskRe": {},
+                            "stripCharsRe": {},
+                            "xtype": "textfield",
+                            "emptyText": "__i18n_generatedFormPanel.varNameEmptyText",
+                            "fieldLabel": "__i18n_generatedFormPanel.varNameLabel"
+                        },
+                        {
+                            "name": "xtype",
+                            "value": "CMSonofftogglebutton",
+                            "xtype": null
+                        },
+                        {
+                            "name": "isResponsive",
+                            "value": false,
+                            "fieldLabel": "__i18n_formElements.isResponsive",
+                            "xtype": "checkbox"
+                        },
+                        {
+                            "name": "isMeta",
+                            "value": false,
+                            "fieldLabel": "__i18n_formElements.isGlobal",
+                            "xtype": "checkbox"
+                        },
+                        {
+                            "name": "fieldLabel",
+                            "value": "{\"de\":\"Ereignis im Editiermodus nicht ausführen\",\"en\":\"disable event in edit mode\"}",
+                            "xtype": "textfield",
+                            "allowBlank": true,
+                            "emptyText": "__i18n_formElements.fieldLabelEmptyTextLeft",
+                            "fieldLabel": "__i18n_formElements.fieldLabel"
+                        },
+                        {
+                            "name": "value",
+                            "value": null,
+                            "xtype": null
+                        }
+                    ],
+                    "descr": {
+                        "id": "OnOffToggle",
+                        "text": "__i18n_formElements.elementOnOffToggle",
+                        "iconCls": "onofftoggle",
+                        "hasValue": true
+                    }
+                },
+                {
+                    "params": [
+                        {
+                            "name": "CMSvar",
                             "value": "additionalSelector",
                             "allowBlank": false,
                             "minLength": 3,
@@ -704,6 +755,7 @@
         "enableState": false,
         "stateName": "",
         "eventLimit": "all",
+        "displayInEditmode": null,
         "additionalSelector": "&.null"
     }
 }
