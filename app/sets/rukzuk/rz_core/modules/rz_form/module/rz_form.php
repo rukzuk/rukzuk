@@ -224,8 +224,11 @@ class rz_form extends SimpleModule
     foreach ($postRequest as $formValueSet) {
       /*@var $formValueSet FormValueSetSet */
       if (!in_array($formValueSet->getKey(), $ignoreKeys)) {
-        //$message .= preg_replace('/\\n/', "<br>", (string)$formValueSet);
-        $message .= $formValueSet->getName().": ".preg_replace('/\\n/', "<br>", $formValueSet->getValue())."<br>";
+        $value = $formValueSet->getValue();
+        if (is_array($value)) {
+          $value = join(", ", $value);
+        }
+        $message .= $formValueSet->getName().": ".preg_replace('/\\n/', "<br>", $value)."<br>";
       }
     }
     $message .= '</body></html>';
@@ -246,7 +249,11 @@ class rz_form extends SimpleModule
       /*@var $formValueSet FormValueSetSet */
       if (!in_array($formValueSet->getKey(), $ignoreKeys)) {
         $pattern = '/{{'.$formValueSet->getName().'}}/';
-        $autoresponderText = preg_replace($pattern, $formValueSet->getValue(), $autoresponderText);
+        $value = $formValueSet->getValue();
+        if (is_array($value)) {
+          $value = join(", ", $value);
+        }
+        $autoresponderText = preg_replace($pattern, $value, $autoresponderText);
       }
     }
 
