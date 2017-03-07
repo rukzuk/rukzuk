@@ -202,7 +202,12 @@ class rz_form extends SimpleModule
     }
     $mailer = new Mailer($renderApi);
     $mailer->setFrom($senderEmail);
-    $mailer->addTo($renderApi->getFormValue($unit, 'recipientMail'));
+
+    $recipientMail = explode(",", $renderApi->getFormValue($unit, 'recipientMail'));
+    foreach ($recipientMail as $email) {
+      $mailer->addTo(trim($email));
+    }
+
     $mailer->setSubject($renderApi->getFormValue($unit, 'mailSubject'));
     $mailer->setHtmlBody($this->getMailBody($postRequest));
     $mailer->send();
