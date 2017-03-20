@@ -431,7 +431,7 @@ return array(
     ),
     'dynamic' => array(
       'pageCreator' => array(
-        'timeout' => 60,
+        'timeout' => 120,
       )
     )
   ),
