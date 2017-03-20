@@ -424,14 +424,14 @@ return array(
     'defaultCreator' => 'dynamic',
     'directory' => VARDIR . '/creator',
     'accessticket' => array(
-      'ticketLifetime' => 30,
-      'sessionLifetime' => 30,
+      'ticketLifetime' => 60,
+      'sessionLifetime' => 60,
       'remainingCalls' => 1,
       'authentication' => 1,
     ),
     'dynamic' => array(
       'pageCreator' => array(
-        'timeout' => 30,
+        'timeout' => 60,
       )
     )
   ),
@@ -466,17 +466,17 @@ return array(
       'endpoint' => array(
         'publish' => array(
           'url' => '/publisher/add/',
-          'timeout' => 30,
+          'timeout' => 60,
           'maxRedirects' => 2,
         ),
         'status' => array(
           'url' => '/publisher/status/',
-          'timeout' => 10,
+          'timeout' => 20,
           'maxRedirects' => 2,
         ),
         'delete' => array(
           'url' => '/publisher/delete/',
-          'timeout' => 10,
+          'timeout' => 20,
           'maxRedirects' => 2,
         ),
       ),
@@ -499,7 +499,7 @@ return array(
     ),
     'mail' => array(
       'subject' => '[SBCMS] Feedback:',
-      'adress' => 'cmsfeedback@seitenbau.com',
+      'adress' => 'help@rukzuk.com',
     ),
   ),
   'optin' => array(
