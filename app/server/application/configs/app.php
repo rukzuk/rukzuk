@@ -432,6 +432,7 @@ return array(
     'dynamic' => array(
       'pageCreator' => array(
         'timeout' => 120,
+        'maxRetryLimit' => 3,
       )
     )
   ),

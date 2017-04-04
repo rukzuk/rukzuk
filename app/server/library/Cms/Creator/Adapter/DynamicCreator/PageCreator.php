@@ -3,6 +3,7 @@
 
 namespace Cms\Creator\Adapter\DynamicCreator;
 
+use Cms\Creator\Adapter\DynamicCreator\Exceptions\PreparePageException;
 use Cms\Creator\CreatorConfig;
 use Cms\Creator\CreatorContext;
 use Cms\Creator\CreatorJobConfig;
@@ -57,7 +58,7 @@ class PageCreator
    */
   public function createPage($pageId)
   {
-    $preparePageResult = $this->doPreparePage($pageId);
+    $preparePageResult = $this->doPreparePageWithRetry($pageId);
     $this->addPageToStorage($preparePageResult);
     $storage = $this->getCreatorStorage();
     $storage->addModule($preparePageResult->getUsedModuleIds());
@@ -144,7 +145,28 @@ class PageCreator
   /**
    * @param $pageId
    *
-   * @throws \Exception
+   * @throws PreparePageException
+   * @return PreparePageResult
+   */
+  protected function doPreparePageWithRetry($pageId)
+  {
+    $preparePageConfig = $this->getPreparePageConfig();
+    $maxRetryLimit = (isset($preparePageConfig['maxRetryLimit']) ? $preparePageConfig['maxRetryLimit'] : 3);
+    $retryCount = 0;
+    do
+    {
+      try {
+        return $this->doPreparePage($pageId);
+      } catch (PreparePageException $doNothing) {}
+    } while (++$retryCount <= $maxRetryLimit);
+
+    throw new PreparePageException(__METHOD__ . ' max retries ('.$maxRetryLimit.') exceeded! Failed to prepare page ' . $pageId);
+  }
+
+  /**
+   * @param $pageId
+   *
+   * @throws PreparePageException
    * @return PreparePageResult
    */
   protected function doPreparePage($pageId)
@@ -187,7 +209,7 @@ class PageCreator
     $http = $this->getHttpClient();
 
     $timeStart = microtime(true);
-    $http->callUrl('', $req, $responseHeader, $responseBody, $http::METHOD_GET);
+    $responseCode = $http->callUrl('', $req, $responseHeader, $responseBody, $http::METHOD_GET);
     $timeEnd = microtime(true);
 
     $respObj = json_decode($responseBody, true);
@@ -201,17 +223,18 @@ class PageCreator
           __CLASS__,
           __METHOD__,
           sprintf(
-              'Failed to prepare Page "%s" website "%s" error: "%s" body: "%s"',
+              'Failed to prepare Page "%s" website "%s" error: "%s" responseCode: "%s" body: "%s"',
               $pageId,
               $websiteId,
               $http->getLastError(),
+              $responseCode,
               $responseBody
           ),
           \Zend_Log::ERR
       );
 
       // throw simple exception
-      throw new \Exception(__METHOD__ . ' failed to prepare page ' . $pageId);
+      throw new PreparePageException(__METHOD__ . ' failed to prepare page ' . $pageId);
     }
 
     Registry::getLogger()->log(
