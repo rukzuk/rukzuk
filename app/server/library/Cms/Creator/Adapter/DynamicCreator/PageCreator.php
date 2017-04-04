@@ -151,6 +151,13 @@ class PageCreator
   {
     $websiteId = $this->getWebsiteId();
 
+    Registry::getLogger()->log(
+      __CLASS__,
+      __METHOD__,
+      sprintf('Call prepare page with page id "%s" and website id "%s"', $pageId, $websiteId),
+      \Zend_Log::NOTICE
+    );
+
     $params = array(
       'creatorname' => 'dynamic',
       'websiteid' => $websiteId,
@@ -178,7 +185,10 @@ class PageCreator
     $responseBody = '';
     $responseHeader = array();
     $http = $this->getHttpClient();
+
+    $timeStart = microtime(true);
     $http->callUrl('', $req, $responseHeader, $responseBody, $http::METHOD_GET);
+    $timeEnd = microtime(true);
 
     $respObj = json_decode($responseBody, true);
 
@@ -199,9 +209,18 @@ class PageCreator
           ),
           \Zend_Log::ERR
       );
+
       // throw simple exception
       throw new \Exception(__METHOD__ . ' failed to prepare page ' . $pageId);
     }
+
+    Registry::getLogger()->log(
+      __CLASS__,
+      __METHOD__,
+      sprintf('Call prepare page with page id "%s" and website id "%s" takes %d ms',
+        $pageId, $websiteId, ($timeEnd - $timeStart) * 1000),
+      \Zend_Log::NOTICE
+    );
 
     return new PreparePageResult($respObj['data']);
   }
