@@ -18,7 +18,7 @@ class rz_page_property extends SimpleModule
   private function isInsideTeaserList($renderApi, $unit)
   {
     $teaserListUnit = $renderApi->getParentUnit($unit);
-    while (isset($teaserListUnit) && $renderApi->getModuleInfo($teaserListUnit)->getId() !== 'rz_page_list') {
+    while (isset($teaserListUnit) && ($renderApi->getModuleInfo($teaserListUnit)->getId() !== 'rz_page_list') && ($renderApi->getModuleInfo($teaserListUnit)->getId() !== 'rz_page_link')) {
       $teaserListUnit = $renderApi->getParentUnit($teaserListUnit);
     }
 

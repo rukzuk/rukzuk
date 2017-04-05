@@ -3,6 +3,7 @@
 
 namespace Cms\Creator\Adapter\DynamicCreator;
 
+use Cms\Creator\Adapter\DynamicCreator\Exceptions\PreparePageException;
 use Cms\Creator\CreatorConfig;
 use Cms\Creator\CreatorContext;
 use Cms\Creator\CreatorJobConfig;
@@ -57,7 +58,7 @@ class PageCreator
    */
   public function createPage($pageId)
   {
-    $preparePageResult = $this->doPreparePage($pageId);
+    $preparePageResult = $this->doPreparePageWithRetry($pageId);
     $this->addPageToStorage($preparePageResult);
     $storage = $this->getCreatorStorage();
     $storage->addModule($preparePageResult->getUsedModuleIds());
@@ -72,23 +73,39 @@ class PageCreator
   protected function addPageToStorage(PreparePageResult $preparePageResult)
   {
     $storage = $this->getCreatorStorage();
+    if (!$preparePageResult->getFilesCreated()) {
+      $this->createPageFiles($storage, $preparePageResult);
+    }
     if ($preparePageResult->getLegacySupport()) {
-      $storage->addLegacyPage(
-          $preparePageResult->getPageId(),
-          $preparePageResult->getPageMeta(),
-          $preparePageResult->getPageGlobal(),
-          $preparePageResult->getPageAttributes(),
-          $preparePageResult->getPageContent(),
-          $preparePageResult->getCssCacheValue()
+      $storage->addLegacyPage($preparePageResult->getPageId());
+    } else {
+      $storage->addPage($preparePageResult->getPageId());
+    }
+  }
+
+  /**
+   * @param CreatorStorage $storage
+   * @param PreparePageResult $preparePageResult
+   */
+  protected function createPageFiles(CreatorStorage $storage, PreparePageResult $preparePageResult)
+  {
+    if ($preparePageResult->getLegacySupport()) {
+      $storage->createLegacyPage(
+        $preparePageResult->getPageId(),
+        $preparePageResult->getPageMeta(),
+        $preparePageResult->getPageGlobal(),
+        $preparePageResult->getPageAttributes(),
+        $preparePageResult->getPageContent(),
+        $preparePageResult->getCssCacheValue()
       );
     } else {
-      $storage->addPage(
-          $preparePageResult->getPageId(),
-          $preparePageResult->getPageMeta(),
-          $preparePageResult->getPageGlobal(),
-          $preparePageResult->getPageAttributes(),
-          $preparePageResult->getPageContent(),
-          $preparePageResult->getCssCacheValue()
+      $storage->createPage(
+        $preparePageResult->getPageId(),
+        $preparePageResult->getPageMeta(),
+        $preparePageResult->getPageGlobal(),
+        $preparePageResult->getPageAttributes(),
+        $preparePageResult->getPageContent(),
+        $preparePageResult->getCssCacheValue()
       );
     }
   }
@@ -144,12 +161,40 @@ class PageCreator
   /**
    * @param $pageId
    *
-   * @throws \Exception
+   * @throws PreparePageException
+   * @return PreparePageResult
+   */
+  protected function doPreparePageWithRetry($pageId)
+  {
+    $preparePageConfig = $this->getPreparePageConfig();
+    $maxRetryLimit = (isset($preparePageConfig['maxRetryLimit']) ? $preparePageConfig['maxRetryLimit'] : 3);
+    $retryCount = 0;
+    do
+    {
+      try {
+        return $this->doPreparePage($pageId);
+      } catch (PreparePageException $doNothing) {}
+    } while (++$retryCount <= $maxRetryLimit);
+
+    throw new PreparePageException(__METHOD__ . ' max retries ('.$maxRetryLimit.') exceeded! Failed to prepare page ' . $pageId);
+  }
+
+  /**
+   * @param $pageId
+   *
+   * @throws PreparePageException
    * @return PreparePageResult
    */
   protected function doPreparePage($pageId)
   {
     $websiteId = $this->getWebsiteId();
+
+    Registry::getLogger()->log(
+      __CLASS__,
+      __METHOD__,
+      sprintf('Call prepare page with page id "%s" and website id "%s"', $pageId, $websiteId),
+      \Zend_Log::NOTICE
+    );
 
     $params = array(
       'creatorname' => 'dynamic',
@@ -158,6 +203,7 @@ class PageCreator
       'info' => array(
         'id' => $pageId,
         'structure' => $this->getSiteStructure()->toArray(),
+        'directory' => $this->getCreatorStorage()->getWorkingDirectoryName(),
       )
     );
 
@@ -178,7 +224,10 @@ class PageCreator
     $responseBody = '';
     $responseHeader = array();
     $http = $this->getHttpClient();
-    $http->callUrl('', $req, $responseHeader, $responseBody, $http::METHOD_GET);
+
+    $timeStart = microtime(true);
+    $responseCode = $http->callUrl('', $req, $responseHeader, $responseBody, $http::METHOD_GET);
+    $timeEnd = microtime(true);
 
     $respObj = json_decode($responseBody, true);
 
@@ -191,17 +240,27 @@ class PageCreator
           __CLASS__,
           __METHOD__,
           sprintf(
-              'Failed to prepare Page "%s" website "%s" error: "%s" body: "%s"',
+              'Failed to prepare Page "%s" website "%s" error: "%s" responseCode: "%s" body: "%s"',
               $pageId,
               $websiteId,
               $http->getLastError(),
+              $responseCode,
               $responseBody
           ),
           \Zend_Log::ERR
       );
+
       // throw simple exception
-      throw new \Exception(__METHOD__ . ' failed to prepare page ' . $pageId);
+      throw new PreparePageException(__METHOD__ . ' failed to prepare page ' . $pageId);
     }
+
+    Registry::getLogger()->log(
+      __CLASS__,
+      __METHOD__,
+      sprintf('Prepare page for page id "%s" and website id "%s" takes %d ms',
+        $pageId, $websiteId, ($timeEnd - $timeStart) * 1000),
+      \Zend_Log::NOTICE
+    );
 
     return new PreparePageResult($respObj['data']);
   }

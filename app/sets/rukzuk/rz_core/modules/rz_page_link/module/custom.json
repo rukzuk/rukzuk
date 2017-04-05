@@ -1,0 +1,20 @@
+{
+    "assets":{
+    },
+    "i18n":{
+        "selector.teaserItem":{
+            "de":"Teaser-Element",
+            "en":"Teaser item"
+        },
+        "error.pleaseInsertModules":{
+            "de":"Bitte f\u00fcge nun Seiteneigenschaft-Module oder andere Module ein.",
+            "en":"Please insert Page Property modules or other modules."
+        }
+    },
+    "selectors":[
+        {
+            "title":"__i18n_selector.teaserItem",
+            "selector":".teaserItem"
+        }
+    ]
+}

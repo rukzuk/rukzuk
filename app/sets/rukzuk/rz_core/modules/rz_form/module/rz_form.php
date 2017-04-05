@@ -34,6 +34,7 @@ class rz_form extends SimpleModule
   const MODULE_ID_RZ_FORM_FIELD_TEXT = 'rz_form_field_text';
   const MODULE_ID_RZ_FORM_FIELD_SELECT = 'rz_form_field_select';
   const MODULE_ID_RZ_FORM_FIELD_BUTTON = 'rz_form_field_button';
+  const MODULE_ID_RZ_FORM_FIELD_HIDDEN = 'rz_form_field_hidden';
 
   /**
    * @var \FormSubmit
@@ -174,23 +175,46 @@ class rz_form extends SimpleModule
    */
   private function sendEmail($renderApi, $unit, $postRequest)
   {
-    $senderEmail = $renderApi->getFormValue($unit, 'recipientMail');
+    $senderEmail = $renderApi->getFormValue($unit, 'senderMail');
     $senderEmailUnitId = $this->findSenderEmailUnitId($renderApi, $unit);
 
+    $realSenderEmail = '';
     foreach ($postRequest as $formValueSet) {
       if ($senderEmailUnitId == $formValueSet->getKey()) {
-        $senderEmail = $formValueSet->getValue();
+        $realSenderEmail = $formValueSet->getValue();
       }
     }
 
-
+    if ($renderApi->getFormValue($unit, 'enableAutoresponder') && ($realSenderEmail !== '')) {
+      $autoresponderText = $renderApi->getFormValue($unit, 'autoresponderText');
+      $autoresponderText = '<html><head><title></title></head><body>'.preg_replace('/\\n/', "<br>", $this->getAutoresponderText($postRequest, $autoresponderText)).'</body></html>';
+      $autoresponderSubject = $renderApi->getFormValue($unit, 'autoresponderSubject');
+      $autoresponderSubject = $this->getAutoresponderText($postRequest, $autoresponderSubject);
+      $mailer = new Mailer($renderApi);
+      $mailer->setFrom($senderEmail);
+      $mailer->addTo($realSenderEmail);
+      $mailer->setSubject($autoresponderSubject);
+      $mailer->setHtmlBody($autoresponderText);
+      $mailer->send();
+    }
+    if ($realSenderEmail !== '') {
+      $senderEmail = $realSenderEmail;
+    }
     $mailer = new Mailer($renderApi);
     $mailer->setFrom($senderEmail);
-    $mailer->addTo($renderApi->getFormValue($unit, 'recipientMail'));
+
+    $recipientMail = explode(",", $renderApi->getFormValue($unit, 'recipientMail'));
+    foreach ($recipientMail as $email) {
+      $mailer->addTo(trim($email));
+    }
+
     $mailer->setSubject($renderApi->getFormValue($unit, 'mailSubject'));
     $mailer->setHtmlBody($this->getMailBody($postRequest));
     $mailer->send();
+
   }
+
+
 
   /**
    * @param array $postRequest <FormValueSetSet>
@@ -205,12 +229,40 @@ class rz_form extends SimpleModule
     foreach ($postRequest as $formValueSet) {
       /*@var $formValueSet FormValueSetSet */
       if (!in_array($formValueSet->getKey(), $ignoreKeys)) {
-        $message .= (string)$formValueSet;
+        $value = $formValueSet->getValue();
+        if (is_array($value)) {
+          $value = join(", ", $value);
+        }
+        $message .= $formValueSet->getName().": ".preg_replace('/\\n/', "<br>", $value)."<br>";
       }
     }
     $message .= '</body></html>';
 
     return $message;
+  }
+
+  /**
+   * @param array $postRequest <FormValueSetSet>
+   *
+   * @return string
+   */
+  private function getAutoresponderText($postRequest, $autoresponderText)
+  {
+
+    $ignoreKeys = array('formUnitIdentifier', \HoneyPotComponent::HONEY_POT_NAME);
+    foreach ($postRequest as $formValueSet) {
+      /*@var $formValueSet FormValueSetSet */
+      if (!in_array($formValueSet->getKey(), $ignoreKeys)) {
+        $pattern = '/{{'.$formValueSet->getName().'}}/';
+        $value = $formValueSet->getValue();
+        if (is_array($value)) {
+          $value = join(", ", $value);
+        }
+        $autoresponderText = preg_replace($pattern, $value, $autoresponderText);
+      }
+    }
+
+    return $autoresponderText;
   }
 
   /**
@@ -297,7 +349,6 @@ class rz_form extends SimpleModule
    */
   private function findSenderEmailUnitId($renderApi, Unit $unit)
   {
-
     foreach ($renderApi->getChildren($unit) as $child) {
       /*@var $child Unit */
       if (strstr($child->getModuleId(), self::MODULE_ID_RZ_FORM_FIELD)) {
@@ -305,9 +356,13 @@ class rz_form extends SimpleModule
           return $child->getId();
         }
       } else if ($child) {
-        $this->findSenderEmailUnitId($renderApi, $child);
+        $unitId = $this->findSenderEmailUnitId($renderApi, $child);
+        if ($unitId) {
+          return $unitId;
+        }
       }
     }
+    return null;
   }
 
-} 
+}

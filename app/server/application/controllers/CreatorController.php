@@ -2,6 +2,7 @@
 
 
 use Cms\Controller\Action;
+use Seitenbau\Registry as Registry;
 
 class CreatorController extends Action
 {
@@ -18,6 +19,14 @@ class CreatorController extends Action
     $this->getBusiness()->checkUserRights('prepare', array(
       'websiteId' => $validatedRequest->getWebsiteId()
     ));
+
+    Registry::getLogger()->log(
+      __CLASS__,
+      __METHOD__,
+      sprintf('Prepare action for website id "%s"', $validatedRequest->getWebsiteId()),
+      \Zend_Log::NOTICE
+    );
+
     $data = $this->getBusiness()->prepare(
         $validatedRequest->getCreatorName(),
         $validatedRequest->getWebsiteId(),

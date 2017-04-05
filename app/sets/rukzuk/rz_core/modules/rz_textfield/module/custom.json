@@ -30,6 +30,10 @@
             "de":"Link E-Mail",
             "en":"Mail link"
         },
+        "selector.linkDownload":{
+            "de":"Link Download",
+            "en":"Download link"
+        },
         "selector.lists":{
             "de":"Listen",
             "en":"Lists"
@@ -130,6 +134,11 @@
                 {
                     "title":"__i18n_selector.linkMailto",
                     "selector":".text a[href^=\"mailto\"]",
+                    "enableNthTypeOf":true
+                },
+                {
+                    "title":"__i18n_selector.linkDownload",
+                    "selector":".text a[href*=\"cdn.php\"], .text a[href*=\"/app/service/cdn/\"]",
                     "enableNthTypeOf":true
                 }
             ]

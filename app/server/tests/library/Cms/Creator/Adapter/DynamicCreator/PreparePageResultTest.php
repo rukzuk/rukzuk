@@ -34,6 +34,7 @@ class PreparePageResultTest extends \PHPUnit_Framework_TestCase
       'mediaUrlCalls' => array('mediaUrlCall'),
       'htmlCache' => 'htmlCode',
       'pageAttributes' => array('pageAttributes'),
+      'filesCreated' => false,
     );
 
     $ppr = new PreparePageResult($input);
@@ -70,6 +71,7 @@ class PreparePageResultTest extends \PHPUnit_Framework_TestCase
       'htmlCache' => 'htmlCode',
       'pageAttributes' => array('pageAttributes'),
       'fail' => 'someContent',
+      'filesCreated' => false,
     );
 
     $ppr = new PreparePageResult($input);
@@ -105,6 +107,7 @@ class PreparePageResultTest extends \PHPUnit_Framework_TestCase
       'mediaUrlCalls' => array('mediaUrlCall'),
       'htmlCache' => 'htmlCode',
       'pageAttributes' => array('pageAttributes'),
+      'filesCreated' => false,
     );
 
     $ppr = new PreparePageResult($input);

@@ -30,10 +30,6 @@ class CreatorStorage extends AbstractCreatorStorage
    * @var array
    */
   private $usedAlbum = array();
-  /**
-   * @var array
-   */
-  private $pages = array();
 
   /**
    * @var array
@@ -189,29 +185,37 @@ class CreatorStorage extends AbstractCreatorStorage
 
   /**
    * @param string $pageId
+   */
+  public function addPage($pageId) {
+    $this->addPageUrl($pageId);
+  }
+
+  /**
+   * @param string $pageId
+   */
+  public function addLegacyPage($pageId) {
+    $this->activateLegacySupport();
+    $this->addPageUrl($pageId);
+  }
+
+  /**
+   * @param string $pageId
    * @param array  $pageMeta
    * @param array  $pageGlobal
    * @param array  $pageAttributes
    * @param array  $pageContent
    * @param string $cssCacheValue
    */
-  public function addPage(
-      $pageId,
-      array $pageMeta,
-      array $pageGlobal,
-      array $pageAttributes,
-      array $pageContent,
-      $cssCacheValue
+  public function createPage(
+    $pageId,
+    array $pageMeta,
+    array $pageGlobal,
+    array $pageAttributes,
+    array $pageContent,
+    $cssCacheValue
   ) {
     $pageMeta['legacy'] = false;
-    $this->createPage(
-        $pageId,
-        $pageMeta,
-        $pageGlobal,
-        $pageAttributes,
-        $pageContent,
-        $cssCacheValue
-    );
+    $this->createPageFiles($pageId, $pageMeta, $pageGlobal, $pageAttributes, $pageContent, $cssCacheValue);
   }
 
   /**
@@ -222,34 +226,16 @@ class CreatorStorage extends AbstractCreatorStorage
    * @param array  $pageContent
    * @param string $cssCacheValue
    */
-  public function addLegacyPage(
-      $pageId,
-      array $pageMeta,
-      array $pageGlobal,
-      array $pageAttributes,
-      array $pageContent,
-      $cssCacheValue
+  public function createLegacyPage(
+    $pageId,
+    array $pageMeta,
+    array $pageGlobal,
+    array $pageAttributes,
+    array $pageContent,
+    $cssCacheValue
   ) {
-    $this->activateLegacySupport();
     $pageMeta['legacy'] = true;
-    $this->createPage(
-        $pageId,
-        $pageMeta,
-        $pageGlobal,
-        $pageAttributes,
-        $pageContent,
-        $cssCacheValue
-    );
-  }
-
-  /**
-   * @param $pageId
-   */
-  protected function addPageUrl($pageId)
-  {
-    if (!isset($this->pageUrls[$pageId])) {
-      $this->pageUrls[$pageId] = $this->getPageUrl($pageId, false);
-    }
+    $this->createPageFiles($pageId, $pageMeta, $pageGlobal, $pageAttributes, $pageContent, $cssCacheValue);
   }
 
   /**
@@ -260,18 +246,14 @@ class CreatorStorage extends AbstractCreatorStorage
    * @param array  $pageContent
    * @param string $cssCacheValue
    */
-  protected function createPage(
-      $pageId,
-      array $pageMeta,
-      array $pageGlobal,
-      array $pageAttributes,
-      array $pageContent,
-      $cssCacheValue
+  protected function createPageFiles(
+    $pageId,
+    array $pageMeta,
+    array $pageGlobal,
+    array $pageAttributes,
+    array $pageContent,
+    $cssCacheValue
   ) {
-    if (isset($this->pages[$pageId])) {
-      return;
-    }
-
     $cssFileName = $this->getPageCssFileName($pageId);
     $pageMeta['css'] = array(
       'file'  => $cssFileName,
@@ -285,11 +267,17 @@ class CreatorStorage extends AbstractCreatorStorage
     $this->createPageAttributesFile($pageId, $pageAttributes, $pageDataDirectory);
     $this->createPageContentArrayFile($pageId, $pageContent, $pageDataDirectory);
     $this->createPageStructureFile($pageId);
-    $this->addPageUrl($pageId);
     $this->createPageCssCacheFile($cssFileName, $cssCacheValue);
-    $this->pages[$pageId] = array(
-      'legacy' => $pageMeta['legacy'],
-    );
+  }
+
+  /**
+   * @param $pageId
+   */
+  protected function addPageUrl($pageId)
+  {
+    if (!isset($this->pageUrls[$pageId])) {
+      $this->pageUrls[$pageId] = $this->getPageUrl($pageId, false);
+    }
   }
 
   /**

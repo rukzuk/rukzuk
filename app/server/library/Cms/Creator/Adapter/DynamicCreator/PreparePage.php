@@ -4,6 +4,7 @@
 namespace Cms\Creator\Adapter\DynamicCreator;
 
 use Cms\Creator\CreatorContext;
+use Cms\Creator\CreatorConfig;
 use Cms\Exception as CmsException;
 use Orm\Data\Media as DataMedia;
 use Orm\Data\Album as DataAlbum;
@@ -22,6 +23,7 @@ use Seitenbau\Logger;
 use Render\NodeFactory;
 use Render\NodeTree;
 use Dual\Render\RenderContext as LegacyRenderContext;
+use Seitenbau\Registry;
 
 /**
  * Class PreparePage
@@ -33,6 +35,11 @@ class PreparePage
    * @var \Cms\Creator\CreatorContext
    */
   private $creatorContext;
+
+  /**
+   * @var \Cms\Creator\Adapter\DynamicCreator\CreatorStorage
+   */
+  private $creatorStorage;
 
   /**
    * @var SiteStructure
@@ -66,17 +73,19 @@ class PreparePage
 
   /**
    * @param CreatorContext $creatorContext
-   * @param string         $websiteId
-   * @param array          $info
+   * @param string $websiteId
+   * @param array $info
+   * @param callable $createStorageCallback
    */
   public function __construct(
       CreatorContext $creatorContext,
       $websiteId,
-      array $info
+      array $info,
+      $createStorageCallback
   ) {
     $this->creatorContext = $creatorContext;
     $this->websiteId = $websiteId;
-    $this->validateAndInitInfo($info);
+    $this->validateAndInitInfo($info, $createStorageCallback);
   }
 
   /**
@@ -85,6 +94,7 @@ class PreparePage
   public function prepare()
   {
     $this->initPreparePageResult();
+
     try {
       $rootNode = $this->createRootNode();
     } catch (NoContentException $ignore) {
@@ -104,6 +114,9 @@ class PreparePage
 
     // remember media url calls
     $this->result->setMediaUrlCalls($this->mediaUrlCalls);
+
+    // create page files
+    $this->createPageFiles();
 
     return $this->result;
   }
@@ -397,6 +410,14 @@ class PreparePage
   }
 
   /**
+   * @return \Cms\Creator\CreatorConfig
+   */
+  protected function getCreatorConfig()
+  {
+    return $this->creatorConfig;
+  }
+
+  /**
    * @return SiteStructure
    */
   protected function getStructure()
@@ -406,10 +427,11 @@ class PreparePage
 
   /**
    * @param array $info
+   * @param callable $createStorageCallback
    *
    * @throws \Exception
    */
-  protected function validateAndInitInfo($info)
+  protected function validateAndInitInfo($info, $createStorageCallback)
   {
     if (!isset($info['id']) || empty($info['id'])) {
       throw new \Exception('no page id given');
@@ -421,6 +443,21 @@ class PreparePage
     }
     $this->structure = new SiteStructure($this->getCreatorContext());
     $this->structure->initFromArray($info['structure']);
+
+    $this->creatorStorage = null;
+    if (is_callable($createStorageCallback))
+    {
+      if (isset($info['directory']) && is_string($info['directory']) && !empty($info['directory'])) {
+        try
+        {
+          $this->creatorStorage = call_user_func($createStorageCallback,
+            $this->getWebsiteId(), $this->getStructure(), $info['directory']);
+        } catch(\Exception $logOnly) {
+          // Log failure
+          Registry::getLogger()->logException(__CLASS__, __METHOD__, $logOnly, \Zend_Log::NOTICE);
+        }
+      }
+    }
   }
 
   /**
@@ -445,6 +482,45 @@ class PreparePage
     $this->result->addUsedAlbumIds($mediaHelperResult->getAlbumsIds());
   }
 
+  protected function createPageFiles()
+  {
+    $storage = $this->getCreatorStorage();
+    if (!($storage instanceof CreatorStorage)) {
+      $this->result->setFilesCreated(false);
+      return;
+    }
+
+    if ($this->result->getLegacySupport()) {
+      $storage->createLegacyPage(
+        $this->result->getPageId(),
+        $this->result->getPageMeta(),
+        $this->result->getPageGlobal(),
+        $this->result->getPageAttributes(),
+        $this->result->getPageContent(),
+        $this->result->getCssCacheValue()
+      );
+    } else {
+      $storage->createPage(
+        $this->result->getPageId(),
+        $this->result->getPageMeta(),
+        $this->result->getPageGlobal(),
+        $this->result->getPageAttributes(),
+        $this->result->getPageContent(),
+        $this->result->getCssCacheValue()
+      );
+    }
+
+    $this->result->setFilesCreated(true);
+
+    // remove data from result
+    $this->result->resetPageMeta();
+    $this->result->resetPageGlobal();
+    $this->result->resetPageAttributes();
+    $this->result->resetPageContent();
+    $this->result->resetCssCacheValue();
+    $this->result->resetHtmlCacheValue();
+  }
+
   protected function getPageId()
   {
     return $this->pageId;
@@ -459,5 +535,13 @@ class PreparePage
       $this->mediaHelper = new MediaHelper();
     }
     return $this->mediaHelper;
+  }
+
+  /**
+   * @return \Cms\Creator\Adapter\DynamicCreator\CreatorStorage
+   */
+  protected function getCreatorStorage()
+  {
+    return $this->creatorStorage;
   }
 }

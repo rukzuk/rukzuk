@@ -71,6 +71,11 @@ class PreparePageResult
   private $htmlCacheValue = '';
 
   /**
+   * @var bool
+   */
+  private $filesCreated = false;
+
+  /**
    * @param array $mediaUrlCalls
    */
   public function setMediaUrlCalls($mediaUrlCalls)
@@ -100,6 +105,11 @@ class PreparePageResult
   public function setCssCacheValue($cssCacheValue)
   {
     $this->cssCacheValue = $cssCacheValue;
+  }
+
+  public function resetCssCacheValue()
+  {
+    $this->cssCacheValue = '';
   }
 
   /**
@@ -134,6 +144,11 @@ class PreparePageResult
     $this->pageContent = $pageContent;
   }
 
+  public function resetPageContent()
+  {
+    $this->pageContent = array();
+  }
+
   /**
    * @return array
    */
@@ -150,6 +165,11 @@ class PreparePageResult
     $this->pageGlobal = $pageGlobal;
   }
 
+  public function resetPageGlobal()
+  {
+    $this->pageGlobal = array();
+  }
+
   /**
    * @return array
    */
@@ -164,6 +184,11 @@ class PreparePageResult
   public function setPageAttributes($pageAttributes)
   {
     $this->pageAttributes = $pageAttributes;
+  }
+
+  public function resetPageAttributes()
+  {
+    $this->pageAttributes = array();
   }
 
   /**
@@ -196,6 +221,11 @@ class PreparePageResult
   public function setPageMeta($pageMeta)
   {
     $this->pageMeta = $pageMeta;
+  }
+
+  public function resetPageMeta()
+  {
+    $this->pageMeta = array();
   }
 
   /**
@@ -301,12 +331,33 @@ class PreparePageResult
     $this->htmlCacheValue = $htmlCacheValue;
   }
 
+  public function resetHtmlCacheValue()
+  {
+    $this->htmlCacheValue = '';
+  }
+
   /**
    * @return string
    */
   public function getHtmlCacheValue()
   {
     return $this->htmlCacheValue;
+  }
+
+  /**
+   * @param boolean $filesCreated
+   */
+  public function setFilesCreated($filesCreated)
+  {
+    $this->filesCreated = $filesCreated;
+  }
+
+  /**
+   * @return boolean
+   */
+  public function getFilesCreated()
+  {
+    return $this->filesCreated;
   }
 
   /**
@@ -329,6 +380,7 @@ class PreparePageResult
       'cssCache' => $this->getCssCacheValue(),
       'mediaUrlCalls' => $this->getMediaUrlCalls(),
       'htmlCache' => $this->getHtmlCacheValue(),
+      'filesCreated' => $this->getFilesCreated(),
     );
   }
 
@@ -391,5 +443,8 @@ class PreparePageResult
       $this->setHtmlCacheValue($array['htmlCache']);
     }
 
+    if (isset($array['filesCreated'])) {
+      $this->setFilesCreated($array['filesCreated']);
+    }
   }
 }

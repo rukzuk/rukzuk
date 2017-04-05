@@ -15,6 +15,28 @@ define(['jquery', 'CMS', 'rz_root/notlive/js/cssHelper'], function ($, CMS, cssH
             title: i18n['selector.allFirstLevelChildModules'],
             // includes selector for modules with wrappers, e.g. rz_box and rz_grid
             selector: ' > .isModule, > :not(.isModule) > .isModule, > :not(.isModule) > :not(.isModule) > .isModule'
+        }, {
+            title: i18n['selector.headlines'],
+            selector: ' h1, h2, h3, h4, h5, h6',
+            items: [{
+                title: i18n['selector.headline1'],
+                selector: ' h1'
+            },{
+                title: i18n['selector.headline2'],
+                selector: ' h2'
+            },{
+                title: i18n['selector.headline3'],
+                selector: ' h3'
+            },{
+                title: i18n['selector.headline4'],
+                selector: ' h4'
+            },{
+                title: i18n['selector.headline5'],
+                selector: ' h5'
+            },{
+                title: i18n['selector.headline6'],
+                selector: ' h6'
+            }]
         }];
 
         return globalSel;

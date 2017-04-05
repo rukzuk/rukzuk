@@ -1,0 +1,12 @@
+{
+    "name": "{\"de\":\"Einzelseite\",\"en\":\"Single Page\"}",
+    "description": "{\"de\":\"Eignet sich zum Verlinken einer einzelnen Seite. In Kombination mit Seiteneigenschaft-Modulen ermöglicht es die Darstellung von Seiteneigenschaften wie Titel, Beschreibung, Datum und Bild.\",\"en\":\"Good for creating a link to a single page. In combination with Page Property modules, the page properties such as title, description, date and image with the corresponding link can be displayed.\"}",
+    "version": "dev",
+    "icon": "page.png",
+    "category": "{\"de\":\"Teaser, Blog, Veranstaltungen\",\"en\":\"Teaser, Blog, Events\"}",
+    "moduleType": "default",
+    "allowedChildModuleType": "*",
+    "ghostContainerMode": "force_off",
+    "reRenderRequired": false,
+    "apiType": "APIv1"
+}

@@ -22,6 +22,14 @@ define(['jquery'], function ($) {
         });
     };
 
+    var initAllCollapsiblesInLayoutInclude = function () {
+        $(moduleSelector).each(function () {
+            if($(this).parents('.rz_include').length > 0) {
+                initCollapsible($(this));
+            }
+        });
+    };
+
     var collapseHandler = function () {
         var $collapsible = $(this).parents(moduleSelector).first();
         changeState($collapsible);
@@ -46,6 +54,7 @@ define(['jquery'], function ($) {
 
     return {
         initCollapsible: initCollapsible,
-        initAllCollapsiblesInDom: initAllCollapsiblesInDom
+        initAllCollapsiblesInDom: initAllCollapsiblesInDom,
+        initAllCollapsiblesInLayoutInclude: initAllCollapsiblesInLayoutInclude
     };
 });

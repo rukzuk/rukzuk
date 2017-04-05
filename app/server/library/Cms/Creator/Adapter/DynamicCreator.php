@@ -44,7 +44,7 @@ class DynamicCreator extends AbstractCreator
   {
     $websiteId = $jobConfig->getWebsiteId();
     $structure = $this->createInitializedSiteStructure($websiteId);
-    $storage = $this->createStorage($websiteId, $structure);
+    $storage = $this->createStorage($websiteId, $structure, null);
     $pageCreator = $this->createPageCreator($storage, $jobConfig, $structure);
     $pageIds = $this->getPageIds($websiteId);
     foreach ($pageIds as $pageId) {
@@ -82,11 +82,12 @@ class DynamicCreator extends AbstractCreator
 
   /**
    * @param string $websiteId
-   * @param SiteStructure  $structure
+   * @param SiteStructure $structure
+   * @param string $workingDirectoryName
    *
    * @return CreatorStorage
    */
-  protected function createStorage($websiteId, SiteStructure $structure)
+  public function createStorage($websiteId, SiteStructure $structure, $workingDirectoryName)
   {
     return new CreatorStorage(
         $this->getCreatorContext(),
@@ -94,7 +95,8 @@ class DynamicCreator extends AbstractCreator
         $this->getCreatorConfig()->getWorkingDirectory(),
         $websiteId,
         self::CRATOR_NAME,
-        self::CRATOR_VERSION
+        self::CRATOR_VERSION,
+        $workingDirectoryName
     );
   }
 
@@ -152,10 +154,14 @@ class DynamicCreator extends AbstractCreator
       CreatorJobConfig $jobConfig,
       array $info
   ) {
+    $that = $this;
     return new PreparePage(
-        $this->getCreatorContext(),
-        $jobConfig->getWebsiteId(),
-        $info
+      $this->getCreatorContext(),
+      $jobConfig->getWebsiteId(),
+      $info,
+      function ($websiteId, SiteStructure $structure, $workingDirectoryName) use (&$that) {
+        return $that->createStorage($websiteId, $structure, $workingDirectoryName);
+      }
     );
   }
 

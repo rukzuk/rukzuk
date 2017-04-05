@@ -24,7 +24,7 @@
                         },
                         {
                             "name": "fieldLabel",
-                            "value": "__i18n_formElements.layoutValue",
+                            "value": "{\"de\":\"Layout auswählen\",\"en\":\"choose layout\"}",
                             "xtype": "textfield",
                             "allowBlank": true,
                             "emptyText": "__i18n_formElements.fieldLabelOptionalEmptyText",
@@ -47,6 +47,46 @@
                         "text": "__i18n_formElements.elementTemplateChooser",
                         "iconCls": "anchor",
                         "hasValue": true
+                    }
+                },
+                {
+                    "params": [
+                        {
+                            "name": "xtype",
+                            "value": "ux-multilinelabel",
+                            "xtype": null
+                        },
+                        {
+                            "name": "hideLabel",
+                            "value": true,
+                            "xtype": null
+                        },
+                        {
+                            "name": "text",
+                            "xtype": "textarea",
+                            "height": 200,
+                            "value": "{\"de\":\"Mit diesem Modul kann ein anderes Layout an dieser Stelle eingebunden werden. Diese Funktion ist geeignet, um beispielsweise die Navigation oder eine Fusszeile in mehrere Layouts zu integrieren.\\n\\n Dabei ist folgendes zu beachten:\\n- das eingebundene Layout ist hier oder auf Seiten nicht bearbeitbar\\n- ein anderes Layout darf nur einmal in dieses Layout eingefügt werden\\n- das Basismodul des eingebundenen Layouts sowie dessen Styles werden nicht übernommen\\n\\nTipp: Layouts, deren Bezeichnung mit einem '_' (Underscore) beginnt, stehen nicht zur Auswahl beim Erstellen einer Seite. Damit lässt sich verhindern, dass mit einem nur zur Einbindung gedachten Layout Seiten erzeugt werden.\",\"en\":\"With this module another layout can be integrated. This function is suitable to integrate f.e. a navigation or a footer into several layouts.\\n\\n Please note the following:\\n- the integrated layout is not editable here or on pages\\n- another layout may only be inserted once in this layout\\n- the base module of the integrated layout and its styles are not taken\\n\\nTip: Layouts that begin with a '_' (Underscore), can not be selected when creating a page. This is to prevent that layouts only made for integration can be used to create pages.\"}",
+                            "fieldLabel": "__i18n_formElements.commentLabel"
+                        },
+                        {
+                            "name": "autoLink",
+                            "value": true,
+                            "xtype": null
+                        },
+                        {
+                            "name": "cls",
+                            "value": "modulecomment",
+                            "xtype": null
+                        },
+                        {
+                            "name": "value",
+                            "xtype": null
+                        }
+                    ],
+                    "descr": {
+                        "id": "Comment",
+                        "text": "__i18n_formElements.elementComment",
+                        "iconCls": "plaintext"
                     }
                 }
             ],

@@ -15,6 +15,38 @@
         "selector.allXModules":{
             "de":"Alle \u201e{moduleName}\u201c-Module",
             "en":"All \u201c{moduleName}\u201d modules"
+        },
+        "selector.headlines":{
+            "de":"Alle \u00dcberschriften (unabhängig vom Modul)",
+            "en":"All Headings (no matter which module)"
+        },
+        "selector.headline1":{
+            "de":"\u00dcberschrift 1",
+            "en":"Heading 1"
+        },
+        "selector.headline2":{
+            "de":"\u00dcberschrift 2",
+            "en":"Heading 2"
+        },
+        "selector.headline3":{
+            "de":"\u00dcberschrift 3",
+            "en":"Heading 3"
+        },
+        "selector.headline4":{
+            "de":"\u00dcberschrift 4",
+            "en":"Heading 4"
+        },
+        "selector.headline5":{
+            "de":"\u00dcberschrift 5",
+            "en":"Heading 5"
+        },
+        "selector.headline6":{
+            "de":"\u00dcberschrift 6",
+            "en":"Heading 6"
+        },
+        "selector.headline6Text":{
+            "de":"\u00dcberschrift 6: nur Text",
+            "en":"Heading 6: only text"
         }
     },
     "assets":{
