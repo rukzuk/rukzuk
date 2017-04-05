@@ -33,6 +33,10 @@ abstract class AbstractCreatorStorage implements CreatorStorageInterface
   /**
    * @var string
    */
+  private $workingDirectoryName;
+  /**
+   * @var string
+   */
   private $workingDirectory;
   /**
    * @var string
@@ -69,11 +73,12 @@ abstract class AbstractCreatorStorage implements CreatorStorageInterface
 
   /**
    * @param CreatorContext $creatorContext
-   * @param SiteStructure  $structure
-   * @param string         $workingBaseDirectory
-   * @param string         $websiteId
-   * @param string         $creatorName
-   * @param string         $creatorVersion
+   * @param SiteStructure $structure
+   * @param string $workingBaseDirectory
+   * @param string $websiteId
+   * @param string $creatorName
+   * @param string $creatorVersion
+   * @param string $workingDirectoryName
    */
   public function __construct(
       CreatorContext $creatorContext,
@@ -81,7 +86,8 @@ abstract class AbstractCreatorStorage implements CreatorStorageInterface
       $workingBaseDirectory,
       $websiteId,
       $creatorName,
-      $creatorVersion
+      $creatorVersion,
+      $workingDirectoryName = null
   ) {
     $this->creatorContext = $creatorContext;
     $this->workingBaseDirectory = $workingBaseDirectory;
@@ -90,7 +96,7 @@ abstract class AbstractCreatorStorage implements CreatorStorageInterface
     $this->creatorFilesDirectory = FS::joinPath(__DIR__, 'Files');
     $this->creatorName = $creatorName;
     $this->creatorVersion = $creatorVersion;
-    $this->init();
+    $this->init($workingDirectoryName);
   }
 
   /**
@@ -101,12 +107,16 @@ abstract class AbstractCreatorStorage implements CreatorStorageInterface
   /**
    * initializing storage
    */
-  protected function init()
+  protected function init($workingDirectoryName)
   {
-    $this->initWorkingDirectory();
-    $this->initSystemDirectory();
-    $this->initMediaDirectory();
-    $this->initOtherDirectory();
+    if (is_null($workingDirectoryName)) {
+      $this->initNewWorkingDirectory();
+      $this->initSystemDirectory();
+      $this->initMediaDirectory();
+      $this->initOtherDirectory();
+    } else {
+      $this->initExistingWorkingDirectory($workingDirectoryName);
+    }
     $this->loadTemplates();
   }
 
@@ -133,6 +143,14 @@ abstract class AbstractCreatorStorage implements CreatorStorageInterface
       ->setWebsiteSubDirectory($this->getWebsiteSubDirectory())
       ->setInfoFilesSubDirectory($this->getInfoFilesSubDirectory());
     return $creatorData;
+  }
+
+  /**
+   * @return string
+   */
+  public function getWorkingDirectoryName()
+  {
+    return $this->workingDirectoryName;
   }
 
   /**
@@ -179,18 +197,19 @@ abstract class AbstractCreatorStorage implements CreatorStorageInterface
   }
 
   /**
-   * initialize and creates the working directory
+   * initialize and create a new working directory
    *
-   * @throws \Exception
+   * @return string
+   * @throws \Exception if working directory exists
    */
-  protected function initWorkingDirectory()
+  protected function initNewWorkingDirectory()
   {
     $tmpDirName = sprintf(
-        '%s.%s.C%d_%d',
-        $this->getWebsiteId(),
-        $this->getStorageName(),
-        time(),
-        rand(100000, 999999)
+      '%s.%s.C%d_%d',
+      $this->getWebsiteId(),
+      $this->getStorageName(),
+      time(),
+      rand(100000, 999999)
     );
     $workingDirectory = FS::joinPath($this->workingBaseDirectory, $tmpDirName);
     if (file_exists($workingDirectory)) {
@@ -198,6 +217,37 @@ abstract class AbstractCreatorStorage implements CreatorStorageInterface
     }
     FS::createDirIfNotExists($workingDirectory);
 
+    $this->initWorkingDirectory($tmpDirName, $workingDirectory);
+  }
+
+  /**
+   * initialize a existing working directory
+   *
+   * @param $workingDirectoryName
+   * @return string
+   * @throws \Exception
+   */
+  protected function initExistingWorkingDirectory($workingDirectoryName)
+  {
+    $workingDirectory = FS::joinPath($this->workingBaseDirectory, $workingDirectoryName);
+    if (!file_exists($workingDirectory)) {
+      throw new \Exception('working directory not exists ' . $workingDirectory);
+    }
+
+    $this->initWorkingDirectory($workingDirectoryName, $workingDirectory);
+  }
+
+  /**
+   * initialize the working directory
+   *
+   * @param string $workingDirectoryName
+   * @param string $workingDirectory
+   *
+   * @throws \Exception
+   */
+  protected function initWorkingDirectory($workingDirectoryName, $workingDirectory)
+  {
+    $this->workingDirectoryName = $workingDirectoryName;
     $this->workingDirectory = $workingDirectory;
     $this->websiteDirectory = FS::joinPath(
         $this->workingDirectory,
