@@ -37,7 +37,7 @@ class PageCreatorTestClass extends PageCreator
       'structure' => $this->getSiteStructure()->toArray(),
     );
     $prepare = new PreparePage($this->getCreatorContext(),
-      $this->getWebsiteId(), $info);
+      $this->getWebsiteId(), $info, null);
     return $prepare->prepare();
   }
 }
