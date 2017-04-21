@@ -55,4 +55,3 @@ test:
           CMS_TEST_DB_USER: ""
           CMS_TEST_DB_PW: ""
           CMS_TEST_DB_PORT: ""
-
