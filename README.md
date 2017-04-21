@@ -91,4 +91,3 @@ Needed third party packages:
 	grunt phpunit:all # test the php code
 	grunt build # builds all modules
 	grunt package --channel=stable --build=`git describe --tags` # build a release package
-
