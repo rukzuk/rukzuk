@@ -7,10 +7,17 @@ define(['jquery'], function ($) {
     }
 
     function initScrollToHandler(unitId, scrollSpeed, scrollEasing, updateLocationHash) {
+		anchorListHtml = '';
+		$('body').find('.anchor').each(function(){
+			anchorListHtml += '<li class="anchorItem"><a class="anchorLink" href="#' + $(this).attr('id') + '">' + $(this).attr('data-anchorname') + '</a></li>';
+		});
+		$('#' + unitId + ' .anchorList').html(anchorListHtml);
+		
         $('#' + unitId + ' .anchorLink').each(function () {
             var $anchorLink = $(this);
             var anchorSel = getAnchorSelectorFromHref($anchorLink.attr('href'));
-
+			var offSet = parseInt($('#' + unitId).css('content').substr(1));
+			
             // mark current anchor when scrolling
             $(anchorSel).parent().waypoint(function (direction) {
                 $('body').find('.anchorItemCurrent').removeClass('anchorItemCurrent');
@@ -25,19 +32,22 @@ define(['jquery'], function ($) {
                 var anchorLinkCurrent = $('body').find('a[href="#' + anchorId + '"].anchorLink');
                 anchorLinkCurrent.addClass('anchorLinkCurrent');
                 anchorLinkCurrent.parent().addClass('anchorItemCurrent');
-            }, { offset: '25%' });
+            }, { offset: (offSet + 1) + 'px' });
 
+			
+			
             // scroll to anchor on click
             $anchorLink.click(function () {
                 var anchorHref = $(this).attr('href');
                 var $anchor = $(getAnchorSelectorFromHref(anchorHref));
 
-                $.scrollTo($anchor, parseInt(scrollSpeed), {
+                $.scrollTo($anchor, scrollSpeed, {
                     easing: scrollEasing,
                     axis: 'y',
+                    offset: (offSet * -1),
                     onAfter: function () {
                         if (updateLocationHash) {
-                            window.location.hash = anchorHref;
+                            //window.location.hash = anchorHref;
                         }
                     }
                 });
