@@ -53,6 +53,7 @@ class rz_root extends SimpleModule
     $moduleData = $rootApi->getAllModuleData($rootUnit);
     $unitData = $rootApi->getAllUnitData($rootUnit);
     $nav = $rootApi->getNavigation();
+    $currentPage = $nav->getPage($nav->getCurrentPageId());
 
     // http header redirect (only in live and preview mode)
     if ($rootApi->isLiveMode() || $rootApi->isPreviewMode()) {
@@ -64,7 +65,6 @@ class rz_root extends SimpleModule
         }
       }
 
-      $currentPage = $nav->getPage($nav->getCurrentPageId());
       $pageTitle = $currentPage->getTitle();
       $pageAttributes = $currentPage->getPageAttributes();
       $redirectFirstChild = false;
@@ -172,6 +172,17 @@ class rz_root extends SimpleModule
 
     // title tag and meta description
     $this->insertTitleAndDescription($rootApi, $rootUnit);
+
+    //open graph image
+    try {
+      $pageImage = $rootApi->getMediaItem($currentPage->getMediaId())->getImage();
+      $pageImage->resizeScale(1200, 627);
+      $pageImageUrl = $pageImage->getUrl();
+      $url = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]";
+      echo '<meta property="og:image" content="'.$url.$pageImageUrl.'">';
+    } catch(\Exception $e) {
+
+    }
 
     // JS API
     echo $rootApi->isEditMode() ? '<script src="' . $rootApi->getJsApiUrl() . '"></script>' : '';
@@ -328,11 +339,13 @@ EOF;
     $pageTitle = $currentPage->getTitle();
     $title = $rootApi->getFormValue($rootUnit, 'titlePrefix', '') . $pageTitle . $rootApi->getFormValue($rootUnit, 'titleSuffix', '');
     echo HtmlTagBuilder::title($title);
+    echo HtmlTagBuilder::meta()->set(array('property' => 'og:title', 'content' => $pageTitle));
 
     // description
     $description = $currentPage->getDescription();
     if ($description != '') {
       echo HtmlTagBuilder::meta()->set(array('name' => 'description', 'content' => $description));
+      echo HtmlTagBuilder::meta()->set(array('property' => 'og:description', 'content' => $description));
     }
   }
 
