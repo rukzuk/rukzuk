@@ -51,7 +51,7 @@
       "CMSvar": "_mediaId",
       "filterType":"image",
       "showText": true,
-      "fieldLabel": "{\"de\": \"Bild (wird auf Seitenlisten und beim Teilen dieser Seite auf Facebook, Twitter etc. angezeigt)\", \"en\": \"Image (will be displayed on page lists and on facebook, twitter etc. when sharing this page\"}",
+      "fieldLabel": "{\"de\": \"Bild (wird angezeigt, wenn die Seite auf Facebook, Twitter etc. geteilt wird)\", \"en\": \"Image (will be displayed on facebook, twitter etc. when sharing this page\"}",
       "text": "{\"de\": \"Bild wählen\", \"en\": \"Select image\"}",
       "multiSelect": false
     },
