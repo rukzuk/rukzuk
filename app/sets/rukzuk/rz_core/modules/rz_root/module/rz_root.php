@@ -174,14 +174,13 @@ class rz_root extends SimpleModule
     $this->insertTitleAndDescription($rootApi, $rootUnit);
 
     //open graph image
-    try {
-      $pageImage = $rootApi->getMediaItem($currentPage->getMediaId())->getImage();
+    $pageImageId = $currentPage->getMediaId();
+    if ($pageImageId != '') {
+      $pageImage = $rootApi->getMediaItem($pageImageId)->getImage();
       $pageImage->resizeScale(1200, 627);
       $pageImageUrl = $pageImage->getUrl();
       $url = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]";
       echo '<meta property="og:image" content="'.$url.$pageImageUrl.'">';
-    } catch(\Exception $e) {
-
     }
 
     // JS API
