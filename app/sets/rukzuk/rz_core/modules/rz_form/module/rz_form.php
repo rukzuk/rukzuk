@@ -261,7 +261,10 @@ class rz_form extends SimpleModule
         $autoresponderText = preg_replace($pattern, $value, $autoresponderText);
       }
     }
-
+    $pattern = '/{{(.*?)}}\n/';
+    $autoresponderText = preg_replace($pattern, '', $autoresponderText);
+    $pattern = '/{{(.*?)}}/';
+    $autoresponderText = preg_replace($pattern, '', $autoresponderText);
     return $autoresponderText;
   }
 
