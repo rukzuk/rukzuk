@@ -8,7 +8,7 @@ define(['jquery'], function ($) {
 
     function initScrollToHandler(unitId, scrollSpeed, scrollEasing, updateLocationHash) {
 		var anchorListHtml = '';
-		$('body').find('.anchor').each(function(){
+		$('body').find('.anchor.active').each(function(){
 			anchorListHtml += '<li class="anchorItem"><a class="anchorLink" href="#' + $(this).attr('id') + '">' + $(this).attr('data-anchorname') + '</a></li>';
 		});
 		$('#' + unitId + ' .anchorList').html(anchorListHtml);
