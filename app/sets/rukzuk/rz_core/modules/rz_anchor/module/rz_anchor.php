@@ -39,7 +39,7 @@ class rz_anchor extends SimpleModule
   {
     $anchor = $this->getAnchor($api, $unit);
 
-    echo '<div id="' . $anchor['id'] . '" class="'.$anchor['class'].'" data-anchorname="'.$anchor['name'].'">';
+    echo '<div id="' . $anchor['id'] . '" class="anchor'.$anchor['class'].'" data-anchorname="'.$anchor['name'].'">';
     if ($api->isEditMode()) {
       echo '<div>#' . $anchor['id'] . '</div>';
     }
@@ -64,7 +64,7 @@ class rz_anchor extends SimpleModule
     return array(
       'name'  => $anchorName,
       'id'    => empty($anchorId) ? base64_encode($anchorName) : $anchorId,
-      'class' => $api->getFormValue($unit, 'notInNavigation', '') ? '': 'anchor'
+      'class' => $api->getFormValue($unit, 'notInNavigation', '') ? '': ' active'
     );
   }
 }
