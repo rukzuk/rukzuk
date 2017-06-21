@@ -16,7 +16,7 @@ define(['jquery'], function ($) {
         $('#' + unitId + ' .anchorLink').each(function () {
             var $anchorLink = $(this);
             var anchorSel = getAnchorSelectorFromHref($anchorLink.attr('href'));
-			var offSet = parseInt($('#' + unitId).css('content').substr(1));
+			var offSet = parseInt($('#' + unitId + '> ul').css('content').substr(1));
 			
             // mark current anchor when scrolling
             $(anchorSel).parent().waypoint(function (direction) {
