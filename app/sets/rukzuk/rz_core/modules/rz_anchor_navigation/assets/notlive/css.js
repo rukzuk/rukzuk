@@ -27,13 +27,11 @@ DynCSS.defineModule('rz_anchor_navigation', function (api, v, context) {
         };
     }
 
-	var offSet = {
-        content: "'" + parseInt(v.offSet) + "'"
-    };
+    listCss.content = "'" + parseInt(v.offSet) + "'";
+
 
     return {
         '> ul': listCss,
-        '> ul > li': listItemCss,
-        '&': offSet
+        '> ul > li': listItemCss
     };
 });
