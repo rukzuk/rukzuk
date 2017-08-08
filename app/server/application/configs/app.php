@@ -128,7 +128,7 @@ return array(
     ),
     'media' => array(
       'maxFileSize' => 52428800,
-      'maxSizePerWebsite' => 3221225472,
+      'maxSizePerWebsite' => 7516192768,
     ),
     'expired' => false,
   ),
