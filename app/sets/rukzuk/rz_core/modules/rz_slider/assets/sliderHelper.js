@@ -36,7 +36,9 @@ define(['jquery'], function ($) {
         slider[unitId] = $slider.bxSlider(sliderConfig);
 
         // HACK since layout of rz_box can be wrong in webkit after slider init
-        window.webkitFixTableLayout();
+        if (window.webkitFixTableLayout) {
+            window.webkitFixTableLayout();
+        }
     };
 
     var initAllSlidersInDom = function () {
