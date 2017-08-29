@@ -238,12 +238,13 @@ class PayPalExpressGatewayTest extends AbstractModuleTestCase
     // ARRANGE
     $translatorMock = $this->getTranslatorMock();
     $checkoutMock = $this->getCheckoutMock();
+    $shippingScalePriceData = [];
     $settingsMock = $this->getShopSettingsMock(null, null, array(
       'getLocalCode' => array($this->once(), $expectedLocalCode),
       'getShopCurrencyCode' => array($this->once(), $expectedCurrencyCode),
     ));
     $cart = $this->createCart($expectedCardItems, null, null,
-      $expectedShippingCosts, $expectedTax);
+      $expectedShippingCosts, $expectedTax, $shippingScalePriceData);
 
     $omnipayResponse = $this->getOmnipayExpressAuthorizeResponseMock();
     $omnipayRequest = $this->getOmnipayExpressAuthorizeRequestMock(array(
