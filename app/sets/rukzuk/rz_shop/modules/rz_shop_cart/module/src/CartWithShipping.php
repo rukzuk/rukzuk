@@ -28,10 +28,10 @@ class CartWithShipping extends Cart
    * @param float  $shippingCosts
    * @param float  $shippingTax
    */
-  public function __construct($id, Store $store, $shippingCosts, $shippingTax)
+  public function __construct($id, Store $store, $shippingCosts, $shippingTax, $shippingScalePriceData)
   {
     $this->shippingCosts = $shippingCosts;
-    $this->shippingTax = $shippingTax;
+    $this->shippingScalePriceData = $shippingScalePriceData;
     parent::__construct($id, $store);
   }
 
@@ -52,7 +52,9 @@ class CartWithShipping extends Cart
    */
   public function taxWithShipping()
   {
-    return $this->tax() + $this->shippingTax;
+    $vat = (100 / (($this->total() - $this->tax())/$this->tax())) / 100;
+    $shippingTax = $this->shipping() - $this->shipping() / (1+$vat);
+    return $this->tax() + $shippingTax;
   }
 
   /**
@@ -62,7 +64,20 @@ class CartWithShipping extends Cart
    */
   public function shipping()
   {
-    return $this->shippingCosts;
+    $shippingCosts = $this->shippingCosts;
+
+    if ($this->shippingScalePriceData['shippingCostScalePrice']) {
+      if ($this->total() > $this->shippingScalePriceData['shippingCostScalePrice_from']) {
+        $shippingCosts = $this->shippingScalePriceData['shippingCostScalePrice_value'];
+      }
+    }
+
+    if ($this->shippingScalePriceData['shippingCostFree']) {
+      if ($this->total() > $this->shippingScalePriceData['shippingCostFree_value']) {
+        $shippingCosts = 0;
+      }
+    }
+    return $shippingCosts;
   }
 
   /**
