@@ -289,6 +289,134 @@
                                     "params": [
                                         {
                                             "name": "CMSvar",
+                                            "value": "cssPseudoElement",
+                                            "allowBlank": false,
+                                            "minLength": 3,
+                                            "maskRe": {},
+                                            "stripCharsRe": {},
+                                            "xtype": "textfield",
+                                            "emptyText": "__i18n_generatedFormPanel.varNameEmptyText",
+                                            "fieldLabel": "__i18n_generatedFormPanel.varNameLabel"
+                                        },
+                                        {
+                                            "name": "xtype",
+                                            "value": "CMStabbedfieldset",
+                                            "xtype": null
+                                        },
+                                        {
+                                            "name": "isResponsive",
+                                            "value": false,
+                                            "fieldLabel": "__i18n_formElements.isResponsive",
+                                            "xtype": "checkbox"
+                                        },
+                                        {
+                                            "name": "isMeta",
+                                            "value": false,
+                                            "fieldLabel": "__i18n_formElements.isGlobal",
+                                            "xtype": "checkbox"
+                                        },
+                                        {
+                                            "name": "fieldLabel",
+                                            "value": "",
+                                            "xtype": "textfield",
+                                            "allowBlank": true,
+                                            "emptyText": "__i18n_formElements.fieldLabelOptionalEmptyText",
+                                            "fieldLabel": "__i18n_formElements.fieldLabel"
+                                        },
+                                        {
+                                            "name": "value",
+                                            "value": "after",
+                                            "xtype": null
+                                        }
+                                    ],
+                                    "descr": {
+                                        "id": "TabbedFieldSet",
+                                        "text": "__i18n_formElements.elementTabbedFieldSet",
+                                        "iconCls": "tabbedfieldset",
+                                        "hasValue": true,
+                                        "allowChildNodes": true
+                                    },
+                                    "items": [
+                                        {
+                                            "params": [
+                                                {
+                                                    "name": "xtype",
+                                                    "value": "CMStabpage",
+                                                    "xtype": null
+                                                },
+                                                {
+                                                    "name": "tabValue",
+                                                    "xtype": "textfield",
+                                                    "allowBlank": false,
+                                                    "emptyText": "__i18n_formElements.groupValueEmptyText",
+                                                    "fieldLabel": "__i18n_formElements.groupValueFieldLabel",
+                                                    "value": "before"
+                                                },
+                                                {
+                                                    "name": "title",
+                                                    "value": "{\"de\":\"links vor Inhalt\",\"en\":\"before content\"}",
+                                                    "xtype": "textfield",
+                                                    "allowBlank": false,
+                                                    "emptyText": "__i18n_formElements.title",
+                                                    "fieldLabel": "__i18n_formElements.title"
+                                                },
+                                                {
+                                                    "name": "value",
+                                                    "xtype": null,
+                                                    "value": "before"
+                                                }
+                                            ],
+                                            "descr": {
+                                                "id": "TabPage",
+                                                "text": "__i18n_formElements.elementTabPage",
+                                                "iconCls": "tabpage",
+                                                "hasValue": false,
+                                                "allowChildNodes": true
+                                            }
+                                        },
+                                        {
+                                            "params": [
+                                                {
+                                                    "name": "xtype",
+                                                    "value": "CMStabpage",
+                                                    "xtype": null
+                                                },
+                                                {
+                                                    "name": "tabValue",
+                                                    "xtype": "textfield",
+                                                    "allowBlank": false,
+                                                    "emptyText": "__i18n_formElements.groupValueEmptyText",
+                                                    "fieldLabel": "__i18n_formElements.groupValueFieldLabel",
+                                                    "value": "after"
+                                                },
+                                                {
+                                                    "name": "title",
+                                                    "value": "{\"de\":\"rechts nach Inhalt\",\"en\":\"after content\"}",
+                                                    "xtype": "textfield",
+                                                    "allowBlank": false,
+                                                    "emptyText": "__i18n_formElements.title",
+                                                    "fieldLabel": "__i18n_formElements.title"
+                                                },
+                                                {
+                                                    "name": "value",
+                                                    "xtype": null,
+                                                    "value": "after"
+                                                }
+                                            ],
+                                            "descr": {
+                                                "id": "TabPage",
+                                                "text": "__i18n_formElements.elementTabPage",
+                                                "iconCls": "tabpage",
+                                                "hasValue": false,
+                                                "allowChildNodes": true
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "params": [
+                                        {
+                                            "name": "CMSvar",
                                             "value": "cssShiftX",
                                             "allowBlank": false,
                                             "minLength": 3,
@@ -1018,6 +1146,7 @@
             "type": "bp",
             "default": false
         },
+        "cssPseudoElement": "after",
         "cssShiftX": {
             "type": "bp",
             "default": "0px"

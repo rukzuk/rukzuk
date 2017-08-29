@@ -21,7 +21,6 @@ DynCSS.defineModule('rz_style_iconset', function (api, v) {
 			fontSize: iconSize,
 			color: color,
 			transform: rotate
-			
         };
 
 		if (v.cssEnableTextShadow) {
@@ -60,8 +59,9 @@ DynCSS.defineModule('rz_style_iconset', function (api, v) {
                 css.zIndex = '-1';
             }
         }
-        return {
-            '&:after': css
-        };
+
+        var cssWrapper = {};
+        cssWrapper['&:' + v.cssPseudoElement] = css;
+        return cssWrapper;
     }
 });
