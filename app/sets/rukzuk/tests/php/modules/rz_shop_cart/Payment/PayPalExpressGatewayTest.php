@@ -238,7 +238,7 @@ class PayPalExpressGatewayTest extends AbstractModuleTestCase
     // ARRANGE
     $translatorMock = $this->getTranslatorMock();
     $checkoutMock = $this->getCheckoutMock();
-    $shippingScalePriceData = [];
+    $shippingScalePriceData = array('shippingCostScalePrice' => false, 'shippingCostFree' => false);
     $settingsMock = $this->getShopSettingsMock(null, null, array(
       'getLocalCode' => array($this->once(), $expectedLocalCode),
       'getShopCurrencyCode' => array($this->once(), $expectedCurrencyCode),
