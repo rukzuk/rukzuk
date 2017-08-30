@@ -23,6 +23,11 @@ class CartWithShipping extends Cart
   private $shippingTax;
 
   /**
+   * @var float
+   */
+  private $shippingScalePriceData;
+
+  /**
    * @param string $id
    * @param Store  $store
    * @param float  $shippingCosts
