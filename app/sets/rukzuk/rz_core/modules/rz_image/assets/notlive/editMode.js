@@ -64,7 +64,7 @@ define(['jquery', 'CMS', 'rz_root/notlive/js/baseJsModule', 'rz_image/notlive/jq
                 cropYRatio: cropYRatio,
                 // zoom ratio for x and y
                 cropWidthRatio: cropWidthRatio,
-                cropHeightRatio: cropHeightRatio,
+                cropHeightRatio: cropHeightRatio
             };
 
             CMS.set(unitId, 'cropData', JSON.stringify(cropZoomData));
