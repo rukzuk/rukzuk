@@ -10,7 +10,7 @@ class ResponsiveImageBuilder {
   private $moduleInfo;
 
   static private $responsiveImageResolutions = array(320, 480, 768, 1024, 1280, 1440, 1600, 1920);
-  static private $previewResponsiveImageResolution = 200;
+  static private $previewResponsiveImageResolution = 400;
   static private $maxResponsiveImageResolution = 1920;
   static private $responsiveImageDefaultQuality = 95;
 
@@ -205,7 +205,7 @@ class ResponsiveImageBuilder {
       $image->resetOperations();
       // set default image only for screenshoter
       $preloadSrc = $this->getResponsiveImageUrl($image, $imageCfg, ResponsiveImageBuilder::$previewResponsiveImageResolution);
-      if (isset($_SERVER['HTTP_USER_AGENT']) && preg_match("/phantomjs/i", $_SERVER['HTTP_USER_AGENT'])) {
+      if (isset($_SERVER['HTTP_USER_AGENT']) && (preg_match("/phantomjs/i", $_SERVER['HTTP_USER_AGENT']) || (preg_match("/googlebot/i", $_SERVER['HTTP_USER_AGENT'])))) {
         $imgTag->set('src', $preloadSrc);
       }
       // set fill height value
