@@ -78,7 +78,7 @@ class ResponsiveImageBuilderTest extends ModuleTestCase
     // default
     $this->assertContains('data-cms-origsrc=', $tag);
     if ($isPhantomJs) {
-      $this->assertContains('src="/resizeScale(400)/quality(95)/foo.png"', $tag);
+      $this->assertContains('src="/resizeScale(300)/quality(95)/foo.png"', $tag);
     } else {
       $this->assertNotContains(' src="', $tag);
     }
@@ -122,7 +122,7 @@ class ResponsiveImageBuilderTest extends ModuleTestCase
     $this->assertContains('/crop(10,20,30,40)/resizeScale(1600)/quality(95)/foo.png', $tag);
     $this->assertContains('/crop(10,20,30,40)/resizeScale(1920)/quality(95)/foo.png', $tag);
     if ($isPhantomJs) {
-      $this->assertContains('src="/crop(10,20,30,40)/resizeScale(400)/quality(95)/foo.png"', $tag);
+      $this->assertContains('src="/crop(10,20,30,40)/resizeScale(300)/quality(95)/foo.png"', $tag);
     } else {
       $this->assertNotContains(' src="', $tag);
     }
@@ -164,7 +164,7 @@ class ResponsiveImageBuilderTest extends ModuleTestCase
     $this->assertContains('/resizeCenter(10,20)/resizeScale(1600)/quality(95)/foo.png', $tag);
     $this->assertContains('/resizeCenter(10,20)/resizeScale(1920)/quality(95)/foo.png', $tag);
     if ($isPhantomJs) {
-      $this->assertContains('src="/resizeCenter(10,20)/resizeScale(400)/quality(95)/foo.png"', $tag);
+      $this->assertContains('src="/resizeCenter(10,20)/resizeScale(300)/quality(95)/foo.png"', $tag);
     } else {
       $this->assertNotContains(' src="', $tag);
     }
@@ -203,7 +203,7 @@ class ResponsiveImageBuilderTest extends ModuleTestCase
     $this->assertContains('/resizeScale(1600)/quality(42)/foo.png', $tag);
     $this->assertContains('/resizeScale(1920)/quality(42)/foo.png', $tag);
     if ($isPhantomJs) {
-      $this->assertContains('src="/resizeScale(400)/quality(42)/foo.png"', $tag);
+      $this->assertContains('src="/resizeScale(300)/quality(42)/foo.png"', $tag);
     } else {
       $this->assertNotContains(' src="', $tag);
     }
