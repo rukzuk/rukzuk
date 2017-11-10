@@ -93,7 +93,7 @@ DynCSS.defineModule('rz_thumbnail_gallery', function (api, v, context) {
         if (numberOfCols == 1) {
             result['& > ul > li'] = {
                 flexGrow: '1 !important'
-            }
+            };
         }
     }
 
