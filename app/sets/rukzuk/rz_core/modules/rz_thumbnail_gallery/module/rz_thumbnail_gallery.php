@@ -52,6 +52,7 @@ class rz_thumbnail_gallery extends SimpleModule
         try {
           // image
           $image = $renderApi->getMediaItem($imageId)->getImage();
+          $imageRatio = $image->getWidth() / $image->getHeight();
           if ($globalHeightPercent == 0) {
             $heightPercent = $image->getHeight() / $image->getWidth() * 100;
           } else {
@@ -68,7 +69,7 @@ class rz_thumbnail_gallery extends SimpleModule
 
           // image tag
           $imgTag = $this->getResponsiveImage($renderApi, $unit, $moduleInfo)->getImageTag($image, array('resize' => array('width' => $image->getWidth(), 'height' => $cropHeight), 'quality' => $imageQuality), $attributes);
-          echo '<li>' . $imgTag->toString() . '</li>';
+          echo '<li style="flex-grow: '.$imageRatio.'">' . $imgTag->toString() . '</li><div></div>';
         } catch (\Exception $doNothing) {
         }
       }
