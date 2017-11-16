@@ -2,7 +2,7 @@
     "form": [
         {
             "id": "59ec68b2-f4b4-41a1-98ee-dc4c9f313b77",
-            "name": "{\"de\":\"Eigenschaften\",\"en\":\"Properties\"}",
+            "name": "{\"de\":\"Bilder\",\"en\":\"Images\"}",
             "icon": "",
             "formGroupData": [
                 {
@@ -175,46 +175,6 @@
                         "text": "__i18n_formElements.elementComboSelect",
                         "iconCls": "combo",
                         "hasValue": true
-                    }
-                },
-                {
-                    "params": [
-                        {
-                            "name": "xtype",
-                            "value": "ux-multilinelabel",
-                            "xtype": null
-                        },
-                        {
-                            "name": "hideLabel",
-                            "value": true,
-                            "xtype": null
-                        },
-                        {
-                            "name": "text",
-                            "xtype": "textarea",
-                            "height": 200,
-                            "value": "{\"de\":\"Beim Galerietyp \\\"Bilder in gleicher Höhe\\\" oder \\\"Bilder in Spalten\\\" bitte die Bildhöhe auf \\\"0\\\" (also Originalformat) setzen\", \"en\": \"Please set the image height to \\\"0\\\" when choosing the gallery type \\\"Images with same height\\\" or \\\"Images in columns\\\"\"}",
-                            "fieldLabel": "__i18n_formElements.commentLabel"
-                        },
-                        {
-                            "name": "autoLink",
-                            "value": true,
-                            "xtype": null
-                        },
-                        {
-                            "name": "cls",
-                            "value": "modulecomment",
-                            "xtype": null
-                        },
-                        {
-                            "name": "value",
-                            "xtype": null
-                        }
-                    ],
-                    "descr": {
-                        "id": "Comment",
-                        "text": "__i18n_formElements.elementComment",
-                        "iconCls": "plaintext"
                     }
                 },
                 {

@@ -4,6 +4,8 @@ DynCSS.defineModule('rz_thumbnail_gallery', function (api, v, context) {
     var numberOfCols = v.cssColumnCount;
     var hSpace = parseFloat(v.cssHSpace);
     var hSpaceMeasure;
+    var i;
+
     if (v.cssHSpace.match(/px/)) {
         hSpaceMeasure = 'px';
     } else {
@@ -16,12 +18,15 @@ DynCSS.defineModule('rz_thumbnail_gallery', function (api, v, context) {
             flexBasis: 'calc(' + (100/numberOfCols) +'% - ' + (hSpace * ((numberOfCols-1)/numberOfCols) + hSpaceMeasure) + ')',
             marginBottom: 0
         };
-        result['& > ul > div:nth-of-type(1n)'] = {
-            flexBasis: (hSpace * ((numberOfCols-1)/numberOfCols) + hSpaceMeasure),
-            paddingTop: 0,
-            display: 'block',
-            flexGrow: 1
-        };
+
+        for (i=0; i < numberOfCols; i++) {
+            result['& > ul > div:nth-of-type(' + i + 'n+' + i + ')'] = {
+                flexBasis: (hSpace * ((numberOfCols-1)/numberOfCols) + hSpaceMeasure),
+                paddingTop: 0,
+                display: 'block',
+                flexGrow: 0
+            };
+        }
 
         result['& > ul > div:nth-of-type(' + numberOfCols + 'n+' + numberOfCols + ')'] = {
             flexBasis: '100%',
@@ -64,11 +69,14 @@ DynCSS.defineModule('rz_thumbnail_gallery', function (api, v, context) {
         };
 
     } else {
-        result['& > ul > div:nth-of-type(1n)'] = {
-            flexBasis: v.cssHSpace,
-            paddingTop: 0,
-            display: 'block'
-        };
+
+        for (i=0; i < numberOfCols; i++) {
+            result['& > ul > div:nth-of-type(' + i + 'n+' + i + ')'] = {
+                flexBasis: v.cssHSpace,
+                paddingTop: 0,
+                display: 'block'
+            };
+        }
 
         result['& > ul > div:nth-of-type(' + numberOfCols + 'n+' + numberOfCols + ')'] = {
             flexBasis: '100%',
@@ -96,7 +104,6 @@ DynCSS.defineModule('rz_thumbnail_gallery', function (api, v, context) {
             };
         }
     }
-
 
     return result;
 });
