@@ -253,7 +253,8 @@ class rz_form extends SimpleModule
     foreach ($postRequest as $formValueSet) {
       /*@var $formValueSet FormValueSetSet */
       if (!in_array($formValueSet->getKey(), $ignoreKeys)) {
-        $pattern = '/{{'.$formValueSet->getName().'}}/';
+        $key = preg_quote($formValueSet->getName(), "/");
+        $pattern = '/{{'.$key.'}}/';
         $value = $formValueSet->getValue();
         if (is_array($value)) {
           $value = join(", ", $value);
