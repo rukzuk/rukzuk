@@ -55,7 +55,7 @@
             "en":"Previous button"
         },
         "selector.caption":{
-            "de":"\u00dcberschrift",
+            "de":"Bildname",
             "en":"Caption"
         },
         "selector.loader":{
