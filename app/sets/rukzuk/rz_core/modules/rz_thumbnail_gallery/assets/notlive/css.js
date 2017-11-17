@@ -22,7 +22,7 @@ DynCSS.defineModule('rz_thumbnail_gallery', function (api, v, context) {
 
         for (i=0; i < numberOfImages; i++) {
 
-            if (i % numberOfCols == 0) {
+            if (i % numberOfCols === 0) {
                 result['& > ul > div:nth-of-type(' + i + ')'] = {
                     flexBasis: '100%',
                     paddingTop: v.cssVSpace
@@ -77,7 +77,7 @@ DynCSS.defineModule('rz_thumbnail_gallery', function (api, v, context) {
 
         for (i=0; i < numberOfImages; i++) {
 
-            if (i % numberOfCols == 0) {
+            if (i % numberOfCols === 0) {
                 result['& > ul > div:nth-of-type(' + i + ')'] = {
                     flexBasis: '100%',
                     paddingTop: v.cssVSpace
