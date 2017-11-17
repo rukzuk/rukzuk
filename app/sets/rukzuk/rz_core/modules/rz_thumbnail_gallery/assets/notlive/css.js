@@ -5,6 +5,7 @@ DynCSS.defineModule('rz_thumbnail_gallery', function (api, v, context) {
     var hSpace = parseFloat(v.cssHSpace);
     var hSpaceMeasure;
     var i;
+    var numberOfImages = v.galleryImageIds.length;
 
     if (v.cssHSpace.match(/px/)) {
         hSpaceMeasure = 'px';
@@ -19,19 +20,23 @@ DynCSS.defineModule('rz_thumbnail_gallery', function (api, v, context) {
             marginBottom: 0
         };
 
-        for (i=0; i < numberOfCols; i++) {
-            result['& > ul > div:nth-of-type(' + i + 'n+' + i + ')'] = {
-                flexBasis: (hSpace * ((numberOfCols-1)/numberOfCols) + hSpaceMeasure),
-                paddingTop: 0,
-                display: 'block',
-                flexGrow: 0
-            };
-        }
+        for (i=0; i < numberOfImages; i++) {
 
-        result['& > ul > div:nth-of-type(' + numberOfCols + 'n+' + numberOfCols + ')'] = {
-            flexBasis: '100%',
-            paddingTop: v.cssVSpace
-        };
+            if (i % numberOfCols == 0) {
+                result['& > ul > div:nth-of-type(' + i + ')'] = {
+                    flexBasis: '100%',
+                    paddingTop: v.cssVSpace
+                };
+            } else {
+                result['& > ul > div:nth-of-type(' + i + ')'] = {
+                    flexBasis: v.cssHSpace,
+                    paddingTop: 0,
+                    display: 'block',
+                    flexGrow: 0
+                };
+            }
+
+        }
 
         result['& > ul > div:last-of-type'] = {
             flexGrow: '0'
@@ -70,25 +75,29 @@ DynCSS.defineModule('rz_thumbnail_gallery', function (api, v, context) {
 
     } else {
 
-        for (i=0; i < numberOfCols; i++) {
-            result['& > ul > div:nth-of-type(' + i + 'n+' + i + ')'] = {
-                flexBasis: v.cssHSpace,
-                paddingTop: 0,
-                display: 'block'
-            };
-        }
+        for (i=0; i < numberOfImages; i++) {
 
-        result['& > ul > div:nth-of-type(' + numberOfCols + 'n+' + numberOfCols + ')'] = {
-            flexBasis: '100%',
-            paddingTop: v.cssVSpace
-        };
+            if (i % numberOfCols == 0) {
+                result['& > ul > div:nth-of-type(' + i + ')'] = {
+                    flexBasis: '100%',
+                    paddingTop: v.cssVSpace
+                };
+            } else {
+                result['& > ul > div:nth-of-type(' + i + ')'] = {
+                    flexBasis: v.cssHSpace,
+                    paddingTop: 0,
+                    display: 'block'
+                };
+            }
+
+        }
 
         result['& > ul > li'] = {
             marginBottom: 0,
             marginRight: 0
         };
 
-        if (v.galleryImageIds.length % numberOfCols == 1) {
+        if (numberOfImages % numberOfCols == 1) {
             result['& > ul > div:last-of-type'] = {
                 flexGrow: (numberOfCols-1)
             };
