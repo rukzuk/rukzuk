@@ -69,7 +69,7 @@ class rz_thumbnail_gallery extends SimpleModule
 
           // image tag
           $imgTag = $this->getResponsiveImage($renderApi, $unit, $moduleInfo)->getImageTag($image, array('resize' => array('width' => $image->getWidth(), 'height' => $cropHeight), 'quality' => $imageQuality), $attributes);
-          echo '<li style="flex-grow: '.$imageRatio.'">' . $imgTag->toString() . '</li><div></div>';
+          echo '<li style="flex-grow: '.number_format($imageRatio, 4, '.', '').'">' . $imgTag->toString() . '</li><div></div>';
         } catch (\Exception $doNothing) {
         }
       }
