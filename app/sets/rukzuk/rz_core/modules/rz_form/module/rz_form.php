@@ -187,9 +187,9 @@ class rz_form extends SimpleModule
 
     if ($renderApi->getFormValue($unit, 'enableAutoresponder') && ($realSenderEmail !== '')) {
       $autoresponderText = $renderApi->getFormValue($unit, 'autoresponderText');
-      $autoresponderText = '<html><head><title></title></head><body>'.preg_replace('/\\n/', "<br>", $this->getAutoresponderText($postRequest, $autoresponderText)).'</body></html>';
+      $autoresponderText = '<html><head><title></title></head><body>'.preg_replace('/\\n/', "<br>", $this->parseTextForPlaceholders($postRequest, $autoresponderText)).'</body></html>';
       $autoresponderSubject = $renderApi->getFormValue($unit, 'autoresponderSubject');
-      $autoresponderSubject = $this->getAutoresponderText($postRequest, $autoresponderSubject);
+      $autoresponderSubject = $this->parseTextForPlaceholders($postRequest, $autoresponderSubject);
       $mailer = new Mailer($renderApi);
       $mailer->setFrom($senderEmail);
       $mailer->addTo($realSenderEmail);
@@ -207,8 +207,8 @@ class rz_form extends SimpleModule
     foreach ($recipientMail as $email) {
       $mailer->addTo(trim($email));
     }
-
-    $mailer->setSubject($renderApi->getFormValue($unit, 'mailSubject'));
+    $subject = $this->parseTextForPlaceholders($postRequest, $renderApi->getFormValue($unit, 'mailSubject'));
+    $mailer->setSubject($subject);
     $mailer->setHtmlBody($this->getMailBody($postRequest));
     $mailer->send();
 
@@ -246,7 +246,7 @@ class rz_form extends SimpleModule
    *
    * @return string
    */
-  private function getAutoresponderText($postRequest, $autoresponderText)
+  private function parseTextForPlaceholders($postRequest, $text)
   {
 
     $ignoreKeys = array('formUnitIdentifier', \HoneyPotComponent::HONEY_POT_NAME);
@@ -259,14 +259,14 @@ class rz_form extends SimpleModule
         if (is_array($value)) {
           $value = join(", ", $value);
         }
-        $autoresponderText = preg_replace($pattern, $value, $autoresponderText);
+        $text = preg_replace($pattern, $value, $text);
       }
     }
     $pattern = '/{{(.*?)}}\n/';
-    $autoresponderText = preg_replace($pattern, '', $autoresponderText);
+    $text = preg_replace($pattern, '', $text);
     $pattern = '/{{(.*?)}}/';
-    $autoresponderText = preg_replace($pattern, '', $autoresponderText);
-    return $autoresponderText;
+    $text = preg_replace($pattern, '', $text);
+    return $text;
   }
 
   /**
