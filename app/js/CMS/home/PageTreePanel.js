@@ -75,6 +75,11 @@ CMS.home.PageTreePanel = Ext.extend(CMS.TreePanel, {
             this.reload(false, false, null, this, true);
         }, this);
 
+        // collapse page tree after rendering for better overview
+        this.on('afterrender', function () {
+            this.collapseAll();
+        });
+
         // prevent collapsing
         this.eventModel.onNodeDblClick = function (e, node) {
             if (node.ui.fireEvent('beforedblclick', node, e) !== false) {
@@ -727,6 +732,7 @@ CMS.home.PageTreePanel = Ext.extend(CMS.TreePanel, {
         } else {
             this.lastPageId = node.id;
         }
+        node.ensureVisible();
     },
 
     /**
@@ -748,7 +754,7 @@ CMS.home.PageTreePanel = Ext.extend(CMS.TreePanel, {
             this.pagePropertyWin.destroy();
             this.pagePropertyWin = null;
         }
-    },
+    }
 });
 
 Ext.reg('CMSpagetreepanel', CMS.home.PageTreePanel);
