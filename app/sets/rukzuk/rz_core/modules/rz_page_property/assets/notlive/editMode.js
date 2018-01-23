@@ -5,7 +5,8 @@ define(['jquery', 'CMS', 'rz_root/notlive/js/baseJsModule'], function ($, CMS, J
         description: 'selector.text',
         date: 'selector.date',
         link: 'selector.link',
-        image: 'selector.image'
+        image: 'selector.image',
+        additionalFields: 'selector.additionalFields'
     };
 
     return JsModule.extend({
