@@ -47,6 +47,7 @@ CMS.home.PageAndTemplateManagementPanel = Ext.extend(CMS.home.ManagementPanel, {
                 width: 340,
                 cls: 'CMSsidebar',
                 layout: 'vbox',
+                ref: 'leftPanel',
                 layoutConfig: {
                     align: 'stretch',
                     pack: 'start'
@@ -143,6 +144,7 @@ CMS.home.PageAndTemplateManagementPanel = Ext.extend(CMS.home.ManagementPanel, {
             });
         } else {
             this.pageTreePanel.selectFirstPage();
+            this.leftPanel.doLayout();
         }
     },
 

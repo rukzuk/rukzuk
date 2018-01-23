@@ -46,7 +46,7 @@ class DynCSS {
       if (isset($data['dyncss']['formValues'])) {
         $formValues[$uid] = $data['dyncss']['formValues'];
       }
-      if ($data['dyncss']['plugin']) {
+      if (isset($data['dyncss']['plugin']) && $data['dyncss']['plugin']) {
         $pluginName = $data['dyncss']['plugin']['name'];
         $dynCSSPlugins[$pluginName] = $data['dyncss']['plugin'];
       }
@@ -54,7 +54,7 @@ class DynCSS {
 
     // create css for each non-extension unit
     foreach ($unitData as $unitId => $singleUnitData) {
-      if ($singleUnitData['dyncss']['isExtension']) {
+      if (isset($singleUnitData['dyncss']['isExtension']) && $singleUnitData['dyncss']['isExtension']) {
         continue;
       }
 
@@ -117,7 +117,7 @@ class DynCSS {
     // children (only extension modules, but at any nesting level)
     foreach ($api->getChildren($api->getUnitById($unitId)) as $child) {
       $childId = $child->getId();
-      if ($unitData[$childId]['dyncss']['isExtension']) {
+      if (isset($unitData[$childId]['dyncss']['isExtension']) && $unitData[$childId]['dyncss']['isExtension']) {
         $tree[$unitId]['children'][] = $this->buildUnitTree($api, $unitData, $childId);
       }
     }

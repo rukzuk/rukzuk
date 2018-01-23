@@ -68,8 +68,9 @@ define([
 
         /** @protected */
         initUnit: function (gridUnitId) {
-            var selectedUnit = CMS.getSelected(false);
-            if (selectedUnit && selectedUnit.id === gridUnitId) {
+
+            var selectedUnit = CMS.getSelectedUnitId();
+            if (selectedUnit === gridUnitId) {
                 enableResizeHeight(gridUnitId);
             }
         },

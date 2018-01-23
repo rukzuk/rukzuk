@@ -15,6 +15,11 @@
         "tosPage": null,
         "thanksText": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "shippingCosts": 5,
+        "shippingCostScalePrice_from": 50,
+        "shippingCostScalePrice_value": 4,
+        "shippingCostScalePrice": false,
+        "shippingCostFree": false,
+        "shippingCostFree_value": 100,
         "paymentInvoice": true,
         "paymentInvoiceDesc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "paymentBanktransfer": false,
@@ -181,6 +186,44 @@
             "minValue": 0,
             "maxValue": 99999,
             "increment": 0.1
+        },
+        {
+            "type": "OnOffFieldSet",
+            "CMSvar": "shippingCostScalePrice",
+            "fieldLabel": "{\"de\": \"Versandkostenstaffelung\", \"en\": \"Shipping Costs Graduation\"}",
+            "_items": [
+                {
+                    "type": "SliderUnit",
+                    "CMSvar": "shippingCostScalePrice_from",
+                    "fieldLabel": "{\"de\": \"Ab einem Warenwert (brutto) von...\", \"en\":\"For orders (gross) above...\"}",
+                    "minValue": 0,
+                    "maxValue": 99999,
+                    "increment": 0.1
+                },
+                {
+                    "type": "SliderUnit",
+                    "CMSvar": "shippingCostScalePrice_value",
+                    "fieldLabel": "{\"de\": \"...betragen die Versandkosten (brutto)\", \"en\":\"...Shipping Costs (gross) are\"}",
+                    "minValue": 0,
+                    "maxValue": 99999,
+                    "increment": 0.1
+                }
+            ]
+        },
+        {
+            "type": "OnOffFieldSet",
+            "CMSvar": "shippingCostFree",
+            "fieldLabel": "{\"de\": \"Versandkostenfrei\", \"en\": \"Free of Shipping Costs\"}",
+            "_items": [
+                {
+                    "type": "SliderUnit",
+                    "CMSvar": "shippingCostFree_value",
+                    "fieldLabel": "{\"de\": \"Versandkostenfrei ab einem Warenwert (brutto) von\", \"en\":\"Free of Shipping Costs for Orders (gross) above\"}",
+                    "minValue": 0,
+                    "maxValue": 99999,
+                    "increment": 0.1
+                }
+            ]
         },
         {
             "type": "TextArea",

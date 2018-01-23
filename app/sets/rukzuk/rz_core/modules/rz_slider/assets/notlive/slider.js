@@ -123,7 +123,7 @@ define(['rz_root/notlive/js/baseJsModule', 'CMS', 'jquery', 'rz_slider/sliderHel
             collectAllChildren(sliderUnitId, sliderUnitId);
 
             // slide to unit after reload
-            var selectedUnitId = CMS.getSelected().id;
+            var selectedUnitId = CMS.getSelectedUnitId();
             slideToUnit.apply(this, getSlideForUnitInSlider(selectedUnitId, sliderUnitId));
         }
     });

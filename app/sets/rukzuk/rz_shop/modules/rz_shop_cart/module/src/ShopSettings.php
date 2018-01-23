@@ -123,6 +123,22 @@ class ShopSettings
   }
 
   /**
+   * Get Shipping Costs (including tax)
+   *
+   * @return float
+   */
+  public function getShippingScalePriceData()
+  {
+    $shippingScalePriceData = [];
+    $shippingScalePriceData['shippingCostScalePrice_from'] = floatval($this->getShopSetting('shippingCostScalePrice_from', 0.0));
+    $shippingScalePriceData['shippingCostScalePrice_value'] = floatval($this->getShopSetting('shippingCostScalePrice_value', 0.0));
+    $shippingScalePriceData['shippingCostFree_value'] = floatval($this->getShopSetting('shippingCostFree_value', 0.0));
+    $shippingScalePriceData['shippingCostFree'] = $this->getShopSetting('shippingCostFree', false);
+    $shippingScalePriceData['shippingCostScalePrice'] = $this->getShopSetting('shippingCostScalePrice', false);
+    return $shippingScalePriceData;
+  }
+
+  /**
    * Shipping Tax
    *
    * @return float

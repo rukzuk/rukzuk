@@ -17,8 +17,16 @@ class rz_style_background_video extends SimpleModule {
       $mp4 = $api->getFormValue($unit, 'cssMp4');
       if ($mp4 != '') {
         $mp4Url = $api->getMediaItem($api->getFormValue($unit, 'cssMp4'))->getUrl();
-        $mute = $api->getFormValue($unit, 'cssMute');
-        $loop = $api->getFormValue($unit, 'cssLoop');
+        if ($api->getFormValue($unit, 'cssMute')) {
+          $mute = "true";
+        } else {
+          $mute = "false";
+        }
+        if ($api->getFormValue($unit, 'cssLoop')) {
+          $loop = "true";
+        } else {
+          $loop = "false";
+        }
         $playbackRate = $api->getFormValue($unit, 'cssSpeed');
         $code = "$(function() { $('#".$parentUnitId."').vide({mp4:'".$mp4Url."'},{playbackRate:".$playbackRate.",muted:".$mute.",loop:".$loop."}); });";
       }

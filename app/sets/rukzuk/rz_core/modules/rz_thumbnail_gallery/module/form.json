@@ -2,7 +2,7 @@
     "form": [
         {
             "id": "59ec68b2-f4b4-41a1-98ee-dc4c9f313b77",
-            "name": "{\"de\":\"Eigenschaften\",\"en\":\"Properties\"}",
+            "name": "{\"de\":\"Bilder\",\"en\":\"Images\"}",
             "icon": "",
             "formGroupData": [
                 {
@@ -48,7 +48,7 @@
                         },
                         {
                             "name": "fieldLabel",
-                            "value": "",
+                            "value": "{\"de\":\"Bilder auswählen\",\"en\":\"Select images\"}",
                             "xtype": "textfield",
                             "allowBlank": true,
                             "emptyText": "__i18n_formElements.fieldLabelOptionalEmptyText",
@@ -56,7 +56,7 @@
                         },
                         {
                             "name": "text",
-                            "value": "{\"de\":\"Bild auswählen\",\"en\":\"Select image\"}",
+                            "value": "{\"de\":\"Bilder auswählen\",\"en\":\"Select images\"}",
                             "xtype": "textfield",
                             "allowBlank": false,
                             "emptyText": "__i18n_formElements.buttonEmptyText",
@@ -91,6 +91,96 @@
                     "params": [
                         {
                             "name": "CMSvar",
+                            "value": "cssType",
+                            "allowBlank": false,
+                            "minLength": 3,
+                            "maskRe": {},
+                            "stripCharsRe": {},
+                            "xtype": "textfield",
+                            "emptyText": "__i18n_generatedFormPanel.varNameEmptyText",
+                            "fieldLabel": "__i18n_generatedFormPanel.varNameLabel"
+                        },
+                        {
+                            "name": "xtype",
+                            "value": "ux-comboselect",
+                            "xtype": null
+                        },
+                        {
+                            "name": "isMeta",
+                            "value": false,
+                            "fieldLabel": "__i18n_formElements.isGlobal",
+                            "xtype": "checkbox"
+                        },
+                        {
+                            "name": "fieldLabel",
+                            "value": "{\"de\":\"Art der Galerie\",\"en\":\"Type of gallery\"}",
+                            "xtype": "textfield",
+                            "allowBlank": true,
+                            "emptyText": "__i18n_formElements.fieldLabelOptionalEmptyText",
+                            "fieldLabel": "__i18n_formElements.fieldLabel"
+                        },
+                        {
+                            "name": "isResponsive",
+                            "value": false,
+                            "fieldLabel": "__i18n_formElements.isResponsive",
+                            "xtype": "checkbox"
+                        },
+                        {
+                            "name": "emptyText",
+                            "value": "",
+                            "xtype": "textfield",
+                            "allowBlank": true,
+                            "emptyText": "__i18n_formElements.emptyTextEmptyText",
+                            "fieldLabel": "__i18n_formElements.emptyTextLabel"
+                        },
+                        {
+                            "name": "options",
+                            "value": [
+                                [
+                                    "standard",
+                                    "{\"de\":\"Standard\",\"en\":\"Standard\"}",
+                                    0
+                                ],
+                                [
+                                    "sameheigt",
+                                    "{\"de\":\"Bilder in gleicher Höhe\",\"en\":\"Images with same height\"} ",
+                                    0
+                                ],
+                                [
+                                    "columns",
+                                    "{\"de\":\"Bilder in Spalten (Pinterest-Stil)\",\"en\":\"Images in columns (Pinterest-Style)\"}",
+                                    0
+                                ]
+                            ],
+                            "xtype": "CMSkeyvaluetextarea",
+                            "allowBlank": false,
+                            "array": true,
+                            "emptyText": "__i18n_formElements.listValuesEmptyText",
+                            "fieldLabel": "__i18n_formElements.listValuesLabel"
+                        },
+                        {
+                            "name": "forceSelection",
+                            "value": true,
+                            "xtype": "checkbox",
+                            "fieldLabel": "__i18n_formElements.comboSelectForceSelection"
+                        },
+                        {
+                            "name": "value",
+                            "value": "standard",
+                            "xtype": null
+                        }
+                    ],
+                    "descr": {
+                        "id": "ComboSelect",
+                        "text": "__i18n_formElements.elementComboSelect",
+                        "iconCls": "combo",
+                        "hasValue": true
+                    }
+                },
+                {
+                    "params": [
+                        {
+                            "name": "CMSvar",
                             "value": "cssColumnCount",
                             "allowBlank": false,
                             "minLength": 3,
@@ -113,7 +203,7 @@
                         },
                         {
                             "name": "fieldLabel",
-                            "value": "{\"de\":\"Spalten\",\"en\":\"Columns\"}",
+                            "value": "{\"de\":\"Bilder pro Reihe\",\"en\":\"Columns\"}",
                             "xtype": "textfield",
                             "allowBlank": true,
                             "emptyText": "__i18n_formElements.fieldLabelOptionalEmptyText",
@@ -489,6 +579,10 @@
                             "allowBlank": false,
                             "emptyText": "__i18n_formElements.fieldLabelOptionalEmptyText",
                             "fieldLabel": "__i18n_formElements.fieldLabel"
+                        },
+                        {
+                            "name": "value",
+                            "xtype": null
                         }
                     ],
                     "descr": {
@@ -760,6 +854,7 @@
     ],
     "formValues": {
         "galleryImageIds": [],
+        "cssType": "standard",
         "cssColumnCount": {
             "type": "bp",
             "default": 3

@@ -6,4 +6,5 @@ interface InputType{
 	const STRING  = "text";
 	const EMAIL   = "email";
 	const NUMERIC = "number";
+  const HIDDEN = "hidden";
 }

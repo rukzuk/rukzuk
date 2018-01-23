@@ -33,7 +33,7 @@ CMS.api.API = Ext.extend(Ext.util.Observable, /** @lends CMS.api.API.prototype *
      * @type Array
      * @private
      */
-    methods:  ['get', 'getSelected', 'set', 'setName', 'setInfo', 'setStyleSets', 'refresh', 'preventRendering', 'remove', 'openInsertWindow', 'openInsertExtensionMenu', 'moveUp', 'moveDown', 'duplicate', 'select', 'deselect', 'getInsertable', 'insert', 'openFormPanel', 'openTreePanel', 'getColorById', 'applyRichTextEditorConfig', 'createPreviewTicket', 'updateFormFieldConfig', 'processInsertedUnits', 'getVisualHelpersState', 'getModule', 'i18n', 'getResolutions', 'getCurrentResolution', 'getImageUrl', 'getAllUnitIds', 'getMediaUrl'],
+    methods:  ['get', 'getSelected', 'getSelectedUnitId', 'set', 'setName', 'setInfo', 'setStyleSets', 'refresh', 'preventRendering', 'remove', 'openInsertWindow', 'openInsertExtensionMenu', 'moveUp', 'moveDown', 'duplicate', 'select', 'deselect', 'getInsertable', 'insert', 'openFormPanel', 'openTreePanel', 'getColorById', 'applyRichTextEditorConfig', 'createPreviewTicket', 'updateFormFieldConfig', 'processInsertedUnits', 'getVisualHelpersState', 'getModule', 'i18n', 'getResolutions', 'getCurrentResolution', 'getImageUrl', 'getAllUnitIds', 'getMediaUrl'],
 
     /**
      * Informs the CMS that the module developer wants
@@ -70,6 +70,14 @@ CMS.api.API = Ext.extend(Ext.util.Observable, /** @lends CMS.api.API.prototype *
     /**
      * Gets the configuration of the currently selected unit.
      * @param {Boolean} [includeFormValues] include the formValues; default = true
+     * @return {String} The id of the unit
+     */
+    getSelectedUnitId: function (includeFormValues) {
+        return this.pluginInstance.getSelectedUnitId();
+    },
+
+    /**
+     * Gets the id  of the currently selected unit.
      * @return {Object} The configuration of the unit
      */
     getSelected: function (includeFormValues) {

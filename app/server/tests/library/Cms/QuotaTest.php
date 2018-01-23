@@ -24,7 +24,7 @@ class QuotaTest extends AbstractTestCase
     $expectedQuota = array(
       'media' => array(
         'maxFileSize' => (1024 * 1024 * 50), // 50MB
-        'maxSizePerWebsite' => (1024 * 1024 * 1024 * 3), // 3GB
+        'maxSizePerWebsite' => (1024 * 1024 * 1024 * 7), // 7GB
       ),
       'website' => array(
         'maxCount' => 99999999,

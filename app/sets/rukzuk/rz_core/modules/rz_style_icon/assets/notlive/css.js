@@ -52,8 +52,8 @@ DynCSS.defineModule('rz_style_icon', function (api, v, ctx) {
             }
         }
 
-        return {
-            '&:after': css
-        };
+        var cssWrapper = {};
+        cssWrapper['&:' + v.cssPseudoElement] = css;
+        return cssWrapper;
     }
 });

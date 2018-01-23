@@ -1,71 +1,118 @@
 DynCSS.defineModule('rz_thumbnail_gallery', function (api, v, context) {
+
+    var result = {};
+    var numberOfCols = v.cssColumnCount;
     var hSpace = parseFloat(v.cssHSpace);
     var hSpaceMeasure;
+    var i;
+    var numberOfImages = v.galleryImageIds.length;
+
     if (v.cssHSpace.match(/px/)) {
         hSpaceMeasure = 'px';
     } else {
         hSpaceMeasure = '%';
     }
 
-    var numberOfCols = v.cssColumnCount;
+    if (v.cssType == 'standard') {
+        result['& > ul > li'] = {
+            flexGrow: '0 !important',
+            flexBasis: 'calc(' + (100/numberOfCols) +'% - ' + (hSpace * ((numberOfCols-1)/numberOfCols) + hSpaceMeasure) + ')',
+            marginBottom: 0
+        };
 
-    // calculate width of one column
-    var oneColWidth;
-    if (hSpaceMeasure == 'px') {
-        oneColWidth = (100 / numberOfCols);
-    } else {
-        if ((hSpace * numberOfCols) > 100) {
-            hSpace = 100 / numberOfCols;
-        }
+        for (i=0; i < numberOfImages; i++) {
 
-        oneColWidth = (100 / numberOfCols) - (hSpace * (numberOfCols - 1) / numberOfCols);
-    }
-
-    var result = {};
-
-    // width for all columns
-    result['& > ul > li'] = {
-        width: oneColWidth + '%'
-    };
-
-    var cssProperties;
-    var paddingLeft = 0;
-    var paddingRight = 0;
-    var marginLeftPercent = 0;
-
-    // spacing for each column
-    for (var i = 0; i < numberOfCols; i++) {
-        if (hSpaceMeasure == 'px') {
-            paddingLeft = i * (hSpace / numberOfCols);
-            paddingRight = (numberOfCols - (i + 1)) * (hSpace / numberOfCols);
-
-            cssProperties = {
-                paddingLeft: paddingLeft + 'px',
-                paddingRight: paddingRight + 'px',
-                marginLeft: 0
-            };
-        } else {
-            if (i > 0) {
-                marginLeftPercent = hSpace;
+            if (i % numberOfCols === 0) {
+                result['& > ul > div:nth-of-type(' + i + ')'] = {
+                    flexBasis: '100%',
+                    paddingTop: v.cssVSpace
+                };
+            } else {
+                result['& > ul > div:nth-of-type(' + i + ')'] = {
+                    flexBasis: v.cssHSpace,
+                    paddingTop: 0,
+                    display: 'block',
+                    flexGrow: 0
+                };
             }
 
-            cssProperties = {
-                padding: 0,
-                marginLeft: marginLeftPercent + '%'
+        }
+
+        result['& > ul > div:last-of-type'] = {
+            flexGrow: '0'
+        };
+
+
+    } else if (v.cssType == 'columns') {
+        if (v.cssHSpace.match(/px/)) {
+            result['& > ul > li'] = {
+                marginBottom: v.cssVSpace,
+                marginRight: 0
+            };
+            result['& > ul'] = {
+                display: 'block',
+                columnCount: numberOfCols,
+                columnGap: v.cssHSpace,
+                marginRight: 0
+            };
+        } else {
+            result['& > ul > li'] = {
+                marginRight: v.cssHSpace,
+                marginBottom: v.cssVSpace
+            };
+            result['& > ul'] = {
+                display: 'block',
+                columnCount: numberOfCols,
+                columnGap: 0,
+                marginRight: '-' + (hSpace/numberOfCols) + '%'
+
             };
         }
 
-        // set margin-top for vertical space
-        cssProperties.marginTop = v.cssVSpace;
+        result['& > ul > div'] = {
+            display: 'none'
+        };
 
-        var selector = '& > ul > li:nth-of-type(' + numberOfCols + 'n+' + (i + 1) + ')';
-        result[selector] = cssProperties;
+    } else {
+
+        for (i=0; i < numberOfImages; i++) {
+
+            if (i % numberOfCols === 0) {
+                result['& > ul > div:nth-of-type(' + i + ')'] = {
+                    flexBasis: '100%',
+                    paddingTop: v.cssVSpace
+                };
+            } else {
+                result['& > ul > div:nth-of-type(' + i + ')'] = {
+                    flexBasis: v.cssHSpace,
+                    paddingTop: 0,
+                    display: 'block'
+                };
+            }
+
+        }
+
+        result['& > ul > li'] = {
+            marginBottom: 0,
+            marginRight: 0
+        };
+
+        if (numberOfImages % numberOfCols == 1) {
+            result['& > ul > div:last-of-type'] = {
+                flexGrow: (numberOfCols-1)
+            };
+        } else {
+            result['& > ul > div:last-of-type'] = {
+                flexGrow: 0
+            };
+        }
+
+        if (numberOfCols == 1) {
+            result['& > ul > li'] = {
+                flexGrow: '1 !important'
+            };
+        }
     }
-
-    // remove margin-top for first row
-    result['& > ul > li:nth-of-type(-n+' + numberOfCols + ')'] = {
-        marginTop: 0
-    };
 
     return result;
 });
