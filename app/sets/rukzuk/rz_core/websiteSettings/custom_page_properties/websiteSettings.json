@@ -1,0 +1,51 @@
+{
+    "name": {
+        "de": "Benutzerspezifische Seiteneigenschaften",
+        "en": "Custom page properties"
+    },
+    "description": {
+        "de": "",
+        "en": ""
+    },
+    "version": "dev",
+    "formValues": {
+        "customTextfield1Enabled": false,
+        "customTextfield2Enabled": false
+    },
+    "form": [
+        {
+            "type": "OnOffFieldSet",
+            "CMSvar": "customTextfield1Enabled",
+            "fieldLabel": "{\"de\": \"Benutzerspezifisches Textfeld 1\", \"en\": \"Custom textfield 1\"}",
+            "_items": [
+                {
+                    "type": "TextField",
+                    "CMSvar": "customTextfield1Label",
+                    "fieldLabel": "{\"de\": \"Label\", \"en\": \"Label\"}"
+                },
+                {
+                    "type": "TextField",
+                    "CMSvar": "customTextfield1Default",
+                    "fieldLabel": "{\"de\": \"Default\", \"en\": \"Default\"}"
+                }
+            ]
+        },
+        {
+            "type": "OnOffFieldSet",
+            "CMSvar": "customTextfield2Enabled",
+            "fieldLabel": "{\"de\": \"Benutzerspezifisches Textfeld 2\", \"en\": \"Custom textfield 2\"}",
+            "_items": [
+                {
+                    "type": "TextField",
+                    "CMSvar": "customTextfield2Label",
+                    "fieldLabel": "{\"de\": \"Label\", \"en\": \"Label\"}"
+                },
+                {
+                    "type": "TextField",
+                    "CMSvar": "customTextfield2Default",
+                    "fieldLabel": "{\"de\": \"Default\", \"en\": \"Default\"}"
+                }
+            ]
+        }
+    ]
+}

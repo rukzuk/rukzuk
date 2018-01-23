@@ -54,13 +54,17 @@ CMS.home.PagePropertyForm = Ext.extend(Ext.Panel, {
      * @param {Object} data The form data to set
      */
     setPageMetaData: function (data) {
-        // load pagetype store first
-        CMS.data.StoreManager.get('pageType', this.websiteId, {
-            callback: function (store) {
+        // load pagetype and website settings store first
+        var multiStoreLoader = new CMS.data.MultiStoreLoader({
+            storeTypes: ['pageType', 'websiteSettings'],
+            websiteId: this.websiteId,
+            scope: this,
+            callback: function () {
+                var store = CMS.data.StoreManager.get('pageType', this.websiteId);
                 this.buildFormPanel(data, store);
-            },
-            scope: this
+            }
         });
+        multiStoreLoader.load(true);
     },
 
     /**
@@ -85,6 +89,10 @@ CMS.home.PagePropertyForm = Ext.extend(Ext.Panel, {
 
         // create fake record with formValues
         var fakeRecord = new CMS.data.PageTypeRecord(Ext.apply({}, {formValues: this.pageAttributes}, pageTypeRecord.data));
+
+        // run page type callback
+        var pageTypeApi = new CMS.pageType.api.API(this.websiteId);
+        pageTypeRecord.getBuildFormPanelCallback()(pageTypeApi, fakeRecord, this.pageAttributes);
 
         // fake validation
         this.fireEvent('clientvalidation', {}, this.isValid());
