@@ -34,7 +34,7 @@ Ext.ns('CMS.pageType.Type');
             }
             if (field.type == 'ComboSelect') {
                 var text = api.getWebsiteSettings(websiteSettingsId, name + 'Default');
-                if (text == '') {
+                if (text === '') {
                     field.remove = true;
                 } else {
                     var result = [];
