@@ -38,6 +38,34 @@
             "de":"Link",
             "en":"Link"
         },
+        "selector.additionalFields":{
+            "de":"Zusatzfeld",
+            "en":"Additional Field"
+        },
+        "selector.customTextfield1":{
+            "de":"Zusatzfeld einzeiliges Textfeld 1",
+            "en":"Additional Field Textfield 1"
+        },
+        "selector.customTextfield2":{
+            "de":"Zusatzfeld einzeiliges Textfeld 2",
+            "en":"Additional Field Textfield 2"
+        },
+        "selector.customTextfield3":{
+            "de":"Zusatzfeld mehrzeiliges Textfeld",
+            "en":"Additional Field Textarea"
+        },
+        "selector.customTextfield4":{
+            "de":"Zusatzfeld Auswahlmenü",
+            "en":"Additional Field Drop Down Menu"
+        },
+        "selector.customTextfield5":{
+            "de":"Zusatzfeld Editor",
+            "en":"Additional Field Editor"
+        },
+        "selector.customTextfield5Link":{
+            "de":"Link",
+            "en":"Link"
+        },
         "placeholder.pageTitle":{
             "de":"Platzhalter - Seitentitel",
             "en":"Placeholder - Page Title"
@@ -45,6 +73,10 @@
         "placeholder.pageDescription":{
             "de":"Platzhalter - Beschreibung",
             "en":"Placeholder - Description"
+        },
+        "placeholder.additionalFields":{
+            "de":"Platzhalter - Zusatzfeld",
+            "en":"Placeholder - Additional Field"
         }
     },
     "selectors":[
@@ -71,6 +103,30 @@
         {
             "title":"__i18n_selector.link",
             "selector":".teaserLink"
+        },
+        {
+            "title":"__i18n_selector.customTextfield1",
+            "selector":".customTextfield1"
+        },
+        {
+            "title":"__i18n_selector.customTextfield2",
+            "selector":".customTextfield2"
+        },
+        {
+            "title":"__i18n_selector.customTextfield3",
+            "selector":".customTextfield3"
+        },
+        {
+            "title":"__i18n_selector.customTextfield4",
+            "selector":".customTextfield4"
+        },
+        {
+            "title":"__i18n_selector.customTextfield5",
+            "selector":".customTextfield5",
+            "items":[{
+                "title":"__i18n_selector.customTextfield5Link",
+                "selector":".customTextfield5 a"
+            }]
         }
     ]
 }

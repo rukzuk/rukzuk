@@ -29,6 +29,9 @@ CMS.form.FormConfigHelper = Ext.apply({}, {
                     if (cfgKey === 'CMSvar') {
                         formObj.params.push(this._addCMSvarParam(cfgValue));
                     }
+                    if (cfgKey === 'remove') {
+                        formObj.params.push(this._addRemoveParam(cfgValue));
+                    }
 
                     // update values
                     var param = this._getFormElementParam(formObj.params, fc.type, cfgKey);
@@ -100,6 +103,20 @@ CMS.form.FormConfigHelper = Ext.apply({}, {
             emptyText: '__i18n_generatedFormPanel.varNameEmptyText',
             fieldLabel: '__i18n_generatedFormPanel.varNameLabel'
         }, CMS.config.validation.CMSvar);
+    },
+
+    /**
+     * Returns the remove attribute
+     * @private
+     * @see CMS.form.GeneratedFormPanel#getClonedArray
+     * @param value
+     */
+    _addRemoveParam: function (value) {
+        return Ext.apply({}, {
+            "name": "remove",
+            "value": value,
+            "xtype": null
+        });
     },
 
     /**

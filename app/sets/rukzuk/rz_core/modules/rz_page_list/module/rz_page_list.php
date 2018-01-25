@@ -30,6 +30,9 @@ class rz_page_list extends SimpleModule {
 
         $teaserItems = $this->getTeaserItemsRecursive($renderApi, $startPage, $enableRecursive);
 
+        // filter
+        $teaserItems = $this->filterTeaserItems($renderApi, $unit, $teaserItems);
+
         // sorting
         $teaserItems = $this->sortTeaserItems($renderApi, $unit, $teaserItems);
 
@@ -64,6 +67,33 @@ class rz_page_list extends SimpleModule {
             //echo '<div class="RUKZUKmissingInputHint"><button style="cursor: default;">(Teaser ' . ($iTeaserItemPos + 1) . ')</button></div>';
         }
         $currentTeaserPageId = null;
+    }
+
+    private function filterTeaserItems ($renderApi, $unit, &$teaserItems) {
+      if ($renderApi->getFormValue($unit, 'enableFilter')) {
+        $key = $renderApi->getFormValue($unit, 'filterKey');
+        $value = $renderApi->getFormValue($unit, 'filterValue');
+        $filterType = $renderApi->getFormValue($unit, 'filterType');
+        $newarray = array();
+        foreach ($teaserItems as $item) {
+          if ($filterType == 'equal') {
+            if ($item[$key] == $value) {
+              $newarray[] = $item;
+            }
+          } elseif ($filterType == 'contains') {
+            if (preg_match("/".$value."/", $item[$key])) {
+              $newarray[] = $item;
+            }
+          } else {
+            if (preg_match("/^".$value."/", $item[$key])) {
+              $newarray[] = $item;
+            }
+          }
+        }
+        return $newarray;
+      } else {
+        return $teaserItems;
+      }
     }
 
     private function limitTeaserItems ($renderApi, $unit, &$teaserItems) {
@@ -130,7 +160,12 @@ class rz_page_list extends SimpleModule {
                                  'pageNavigationTitle' => $page->getNavigationTitle(),
                                  'pageTitle' => $page->getTitle(),
                                  'pageDate' => $page->getDate(),
-                                 'pageDescription' => $page->getDescription()
+                                 'pageDescription' => $page->getDescription(),
+                                 'customTextfield1' => $pageAttributes['customTextfield1'],
+                                 'customTextfield2' => $pageAttributes['customTextfield2'],
+                                 'customTextfield3' => $pageAttributes['customTextfield3'],
+                                 'customTextfield4' => $pageAttributes['customTextfield4']
+
                 );
 
                 //iterate recursively?

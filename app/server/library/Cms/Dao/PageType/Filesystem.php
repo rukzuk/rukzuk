@@ -20,7 +20,7 @@ use Seitenbau\FileSystem as FS;
 class Filesystem extends BaseFilesystemDao implements PageTypeDaoInterface
 {
   const PREVIEW_IMAGE_EXTENSION = 'svg';
-  const PREVIEW_IMAGE_SUBDIRECTORY = 'assets';
+  const ASSETS_SUBDIRECTORY = 'assets';
 
   /**
    * @return string
@@ -76,15 +76,17 @@ class Filesystem extends BaseFilesystemDao implements PageTypeDaoInterface
   {
     $manifest = $this->loadManifestFile($sourceItem);
     $previewImageUrl = $this->getPreviewImageUrl($sourceItem);
-    return $this->loadDataObject($websiteId, $id, $sourceItem, $manifest, $previewImageUrl);
+    $javascriptUrl = $this->getJavascriptUrl($sourceItem);
+    return $this->loadDataObject($websiteId, $id, $sourceItem, $manifest, $previewImageUrl, $javascriptUrl);
   }
 
   /**
-   * @param string     $websiteId
-   * @param string     $id
+   * @param string $websiteId
+   * @param string $id
    * @param SourceItem $sourceItem
-   * @param \stdClass  $manifest
-   * @param string     $previewImageUrl
+   * @param \stdClass $manifest
+   * @param string $previewImageUrl
+   * @param $javascriptUrl
    *
    * @return DataPageType
    */
@@ -93,7 +95,8 @@ class Filesystem extends BaseFilesystemDao implements PageTypeDaoInterface
       $id,
       SourceItem $sourceItem,
       \stdClass $manifest,
-      $previewImageUrl
+      $previewImageUrl,
+      $javascriptUrl
   ) {
     $pageType = new DataPageType();
 
@@ -123,6 +126,10 @@ class Filesystem extends BaseFilesystemDao implements PageTypeDaoInterface
       $pageType->setPreviewImageUrl($previewImageUrl);
     }
 
+    if (!empty($javascriptUrl)) {
+      $pageType->setJavascriptUrl($javascriptUrl);
+    }
+
     return $pageType;
   }
 
@@ -136,13 +143,31 @@ class Filesystem extends BaseFilesystemDao implements PageTypeDaoInterface
     $imageFileName = 'pageType.' . self::PREVIEW_IMAGE_EXTENSION;
     $imageFilePath = FS::joinPath(
         $sourceItem->getDirectory(),
-        self::PREVIEW_IMAGE_SUBDIRECTORY,
+        self::ASSETS_SUBDIRECTORY,
         $imageFileName
     );
     if (!file_exists($imageFilePath)) {
       return null;
     }
-    return $sourceItem->getUrl() . '/' . self::PREVIEW_IMAGE_SUBDIRECTORY . '/' . $imageFileName;
+    return $sourceItem->getUrl() . '/' . self::ASSETS_SUBDIRECTORY . '/' . $imageFileName;
+  }
+
+  /**
+   * @param SourceItem $sourceItem
+   *
+   * @return null|string
+   */
+  protected function getJavascriptUrl(SourceItem $sourceItem)
+  {
+    $jsFileName = 'pageType.js';
+    $jsFilePath = FS::joinPath(
+      $sourceItem->getDirectory(),
+      self::ASSETS_SUBDIRECTORY,
+      $jsFileName);
+    if (!file_exists($jsFilePath)) {
+      return null;
+    }
+    return $sourceItem->getUrl() . '/' . self::ASSETS_SUBDIRECTORY . '/' . $jsFileName;
   }
 
   /**

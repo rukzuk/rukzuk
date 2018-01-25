@@ -283,8 +283,8 @@ return array(
   'pageType' => array(
     'defaultPageType' => array(
       'id' => 'page',
-      'directory' => APPLICATION_PATH . '/default/pageType',
-      'url' => '/default/pageType',
+      'directory' => APPLICATION_PATH . '/../../../app/default/pageType',
+      'url' => '/app/default/pageType',
     )
   ),
   'media' => array(

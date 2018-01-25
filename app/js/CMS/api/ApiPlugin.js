@@ -240,6 +240,21 @@ CMS.api.PluginInstance = Ext.extend(Ext.util.Observable, {
     },
 
     /**
+     * Gets the configuration of the currently selected unit.
+     *
+     * @return {String} The id of the unit
+     */
+    getSelectedUnitId: function () {
+        var selectedUnit = this.iframeWorkbenchPanel.selectedUnit;
+        console.log(selectedUnit);
+        if (selectedUnit) {
+            return selectedUnit.id;
+        } else {
+            return false;
+        }
+    },
+
+    /**
      * Gets meta-data of a module
      *
      * @param {String} moduleId The id of the module

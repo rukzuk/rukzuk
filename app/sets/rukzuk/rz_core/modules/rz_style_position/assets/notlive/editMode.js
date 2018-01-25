@@ -336,8 +336,8 @@ define([
     return JsModule.extend({
         // initialize afterRenderPage if $unitis selected
         initUnit: function (unitId) {
-            var cfg = CMS.getSelected();
-            if (cfg.id === unitId) {
+            var selectedUnitId = CMS.getSelectedUnitId();
+            if (selectedUnitId === unitId) {
                 if (visualDrag) {
                     visualDrag.destroy();
                 }

@@ -56,6 +56,11 @@ class PageType
   private $previewImageUrl = null;
 
   /**
+   * @var string
+   */
+  private $javascriptUrl = null;
+
+  /**
    * @var boolean $isReadonly
    */
   private $isReadonly = true;
@@ -205,6 +210,7 @@ class PageType
 
   /**
    * @param string $previewImageUrl
+   * @return $this
    */
   public function setPreviewImageUrl($previewImageUrl)
   {
@@ -218,6 +224,24 @@ class PageType
   public function getPreviewImageUrl()
   {
     return $this->previewImageUrl;
+  }
+
+  /**
+   * @param string $javascriptUrl
+   * @return $this
+   */
+  public function setJavascriptUrl($javascriptUrl)
+  {
+    $this->javascriptUrl = $javascriptUrl;
+    return $this;
+  }
+
+  /**
+   * @return string
+   */
+  public function getJavascriptUrl()
+  {
+    return $this->javascriptUrl;
   }
 
   /**
@@ -290,6 +314,7 @@ class PageType
       'form' => $this->getForm(),
       'formValues' => $this->getFormValues(),
       'previewImageUrl' => $this->getPreviewImageUrl(),
+      'javascriptUrl' => $this->getJavascriptUrl(),
       'readonly' => $this->isReadonly(),
       'sourceType' => $this->getSourceType(),
       'source' => $this->getSource(),

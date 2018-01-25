@@ -18,7 +18,7 @@ class rz_page_property extends SimpleModule
   private function isInsideTeaserList($renderApi, $unit)
   {
     $teaserListUnit = $renderApi->getParentUnit($unit);
-    while (isset($teaserListUnit) && ($renderApi->getModuleInfo($teaserListUnit)->getId() !== 'rz_page_list') && ($renderApi->getModuleInfo($teaserListUnit)->getId() !== 'rz_page_link')) {
+    while (isset($teaserListUnit) && $renderApi->getModuleInfo($teaserListUnit)->getId() !== 'rz_page_list') {
       $teaserListUnit = $renderApi->getParentUnit($teaserListUnit);
     }
 
@@ -52,9 +52,14 @@ class rz_page_property extends SimpleModule
       case 'image':
         $htmlOutput = $this->getMedia($renderApi, $unit, $moduleInfo, $page->getMediaId(), $page->getTitle(), $url);
         break;
+      case 'additionalFields':
+        $htmlOutput = $this->getAdditionalFieldTag($renderApi, $unit, $moduleInfo, $page->getPageAttributes());
+        break;
+
     }
+
     if ($htmlOutput) {
-      echo $htmlOutput->toString();
+      echo $htmlOutput;
     }
   }
 
@@ -145,6 +150,24 @@ class rz_page_property extends SimpleModule
   public function getLinkTag($renderApi, $unit, $moduleInfo, $url)
   {
     return new HtmlTagBuilder('a', array('href' => $url, 'class' => 'teaserLink'), array($renderApi->getFormValue($unit, 'linkLabel')));
+  }
+
+  public function getAdditionalFieldTag($renderApi, $unit, $moduleInfo, $pageAttributes)
+  {
+    $charLimit = $renderApi->getFormValue($unit, 'fieldCharLimit');
+    $field = $renderApi->getFormValue($unit, 'field');
+
+    if ($pageAttributes[$field]) {
+      $content = $pageAttributes[$field];
+
+      if (empty($content) && $renderApi->isEditMode()) {
+        $i18n = new Translator($renderApi, $moduleInfo);
+        $content = $i18n->translate('placeholder.additionalFields');
+      }
+      $htmlTag = new HtmlTagBuilder("div", array('class' => $field));
+      $htmlTag->appendHtml($content);
+      return $htmlTag;
+    }
   }
 
   /**

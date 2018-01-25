@@ -210,12 +210,12 @@ abstract class AbstractModuleTestCase extends ModuleTestCase
    * @return CartWithShipping
    */
   protected function createCart($items = array(), $cartId = 'CART_ID', $store = null,
-                                $shippingCosts = 0, $shippingTax = 0)
+                                $shippingCosts = 0, $shippingTax = 0, $shippingScalePriceData = [])
   {
     if (!is_object($store)) {
       $store = $this->createMock('\\Cart\\Storage\\Store', null, null, null);
     }
-    $cart = new CartWithShipping($cartId, $store, $shippingCosts, $shippingTax);
+    $cart = new CartWithShipping($cartId, $store, $shippingCosts, $shippingTax, $shippingScalePriceData);
     if (count($items) > 0) {
       foreach ($items as $item) {
         if (is_array($item)) {
