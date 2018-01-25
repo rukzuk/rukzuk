@@ -80,14 +80,12 @@
                 {
                     "type": "TextField",
                     "CMSvar": "customTextfield4Label",
-                    "fieldLabel": "{\"de\": \"Bezeichnung\", \"en\": \"Label\"}",
-                    "emptyText": "mylogin:mypassword"
+                    "fieldLabel": "{\"de\": \"Bezeichnung\", \"en\": \"Label\"}"
                 },
                 {
                     "type": "TextArea",
                     "CMSvar": "customTextfield4Default",
                     "height": 100,
-                    "emptyText": "mylogin:mypassword",
                     "fieldLabel": "{\"de\": \"Werte (ein Wert pro Zeile)\", \"en\": \"Values (one value per row)\"}"
                 }
             ]
