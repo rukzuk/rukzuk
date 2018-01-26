@@ -18,7 +18,7 @@
     "form": [
         {
             "type": "Comment",
-            "text": "{\"de\": \"Hier können zusätzliche Felder für die Eigenschaften einer Seite aktiviert werden. Diese Felder können über das Modul 'Seiteneigenschaft' ausgegeben werden. Im Modul 'Seitenliste' kann ausserdem nach diesen Felder ein Filter gesetzt werden.\", \"en\": \"Password protected means that you must authenticate with a login and password to access the specified page (and all pages underneath). The password protection is by default enabled on the live server only. Note: Downloads are not automatically protected. If an authorized person passes on a direct link to a file, unauthorized access to the file can be obtained. This function is not suitable for very sensitive information.\"}"
+            "text": "{\"de\": \"Hier können zusätzliche Felder für die Eigenschaften einer Seite aktiviert werden. Diese Felder können über das Modul 'Seiteneigenschaft' ausgegeben werden. Im Modul 'Seitenliste' kann ausserdem nach diesen Felder ein Filter gesetzt werden.\", \"en\": \"Additional fields for the properties of a page can be activated here. These fields can be displayed via the module 'Page Property'. In the module 'Page List' you can also set a filter with these fields.\"}"
         },
         {
             "type": "OnOffFieldSet",
