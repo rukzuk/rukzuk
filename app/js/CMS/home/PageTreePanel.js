@@ -78,6 +78,7 @@ CMS.home.PageTreePanel = Ext.extend(CMS.TreePanel, {
         // collapse page tree after rendering for better overview
         this.on('afterrender', function () {
             this.collapseAll();
+
         });
 
         // prevent collapsing
@@ -732,7 +733,6 @@ CMS.home.PageTreePanel = Ext.extend(CMS.TreePanel, {
         } else {
             this.lastPageId = node.id;
         }
-        node.ensureVisible();
     },
 
     /**
