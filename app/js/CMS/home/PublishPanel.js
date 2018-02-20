@@ -18,13 +18,14 @@ CMS.home.PublishPanel = Ext.extend(CMS.home.ManagementPanel, {
                     xtype: 'label',
                     cls: 'CMSpublishpanelurlinfo',
                     ref: '../topInfo',
-                    flex: 3,
+                    flex: 3
                 }, '->',
                 {
                     tooltip: CMS.i18n('Live-Server-Konfiguration'),
                     iconCls: 'properties',
                     handler: this.publishConfigHandler,
                     hidden: !CMS.app.userInfo.canEditPublishingConfig(),
+                    hideMode: 'visibility',
                     scope: this,
                     flex: 0
                 },
@@ -34,6 +35,7 @@ CMS.home.PublishPanel = Ext.extend(CMS.home.ManagementPanel, {
                     iconCls: 'delete',
                     ref: '../disablePublishingBtn',
                     hidden: !CMS.app.userInfo.canEditPublishingConfig(),
+                    hideMode: 'visibility',
                     handler: this.disablePublishingHandler,
                     scope: this,
                     flex: 0
