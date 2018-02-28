@@ -98,6 +98,7 @@
     "rz_textfield",
     "rz_text_image",
     "rz_thumbnail_gallery",
+    "rz_timed_container",
     "rz_trigger_event",
     "rz_video",
     "rz_include"
