@@ -52,17 +52,17 @@
 }
 
 #rzImageCropMaskControls .apply {
-    background-color: #9b0d54;
+    background-color: #303030;
     background-image: url(apply.png);
     margin: 0 6px;
 }
 
 #rzImageCropMaskControls .apply:hover {
-    background-color: #890b4a;
+    background-color: #000;
 }
 
 #rzImageCropMaskControls .cancel {
-    background-color: #060810;
+    background-color: rgba(0, 0, 0, 0.1);
     background-image: url(cancel.png);
 }
 
@@ -83,7 +83,7 @@
     -webkit-transform: translateZ(10200px);
     -moz-transform: translateZ(10200px);
     transform: translateZ(10200px);
-    background: #9b0d54 url('crop.png') center center no-repeat;
+    background: #303030 url('crop.png') center center no-repeat;
 }
 
 body.RUKZUKenableInputHints .rz_text_image .cropIcon {
@@ -93,7 +93,7 @@ body.RUKZUKenableInputHints .rz_text_image .cropIcon {
 .rz_text_image .cropIcon:hover,
 body.RUKZUKenableInputHints .rz_text_image .cropIcon:hover {
     opacity: 1;
-    background-color: #890b4a;
+    background-color: #000;
 }
 
 .rz_text_image.CMSselected.CMSeditable > .imageContainer > .responsiveImageWrapper > .resizeHeight {
@@ -102,7 +102,7 @@ body.RUKZUKenableInputHints .rz_text_image .cropIcon:hover {
     width: 50%;
     height: 6px;
     left: 25%;
-    background-color: #890b4a;
+    background-color: #303030;
     cursor: s-resize;
     margin-top: -6px;
 }
