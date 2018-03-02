@@ -415,7 +415,7 @@ return array(
   ),
   'builds' => array(
     'directory' => CMS_PATH . '/builds',
-    'threshold' => 5,
+    'threshold' => 3,
     'tmp' => array(
       'directory' => CMS_PATH . '/builds/tmp',
     ),
