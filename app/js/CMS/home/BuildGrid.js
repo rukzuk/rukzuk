@@ -23,7 +23,7 @@ CMS.home.BuildGrid = Ext.extend(Ext.grid.GridPanel, {
         var config = {
             store: CMS.data.StoreManager.get('build', this.websiteId || -1, { disableLoad: !this.websiteId }),
             header: true,
-            title: CMS.i18n('Die letzten 5 Versionen dieser Website'),
+            title: CMS.i18n('Die letzten 3 Versionen dieser Website'),
             disableSelection: true,
             border: false,
             enableHdMenu: false,
