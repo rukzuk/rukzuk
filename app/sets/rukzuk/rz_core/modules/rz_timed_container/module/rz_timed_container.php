@@ -65,7 +65,7 @@ class rz_timed_container extends SimpleModule
       echo '<div class="display">' .$display . '</div>';
     }
 
-    if ($showChildren) {
+    if ($showChildren || $renderApi->isEditMode()) {
       $renderApi->renderChildren($unit);
     }
   }

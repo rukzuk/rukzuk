@@ -21,7 +21,7 @@
                             "name": "text",
                             "xtype": "textarea",
                             "height": 200,
-                            "value": "{\"de\":\"Alle Module unterhalb dieses Containers werden nur im hier definierten Zeitraum angezeigt.\",\"en\":\"All modules below this container are only displayed in the period defined here.\"}",
+                            "value": "{\"de\":\"Alle Module unterhalb dieses Containers werden nur im hier definierten Zeitraum angezeigt (Hinweis: Die Funktion ist nur in der Vorschau und auf der Live-Website aktiviert)\",\"en\":\"All modules below this container are only displayed in the period defined here.\"}",
                             "fieldLabel": "__i18n_formElements.commentLabel"
                         },
                         {
@@ -136,7 +136,7 @@
                                 },
                                 {
                                     "name": "value",
-                                    "value": 1519772400,
+                                    "value": 1520246016,
                                     "xtype": null
                                 }
                             ],
@@ -465,7 +465,7 @@
                                 },
                                 {
                                     "name": "value",
-                                    "value": 1835305200,
+                                    "value": 1520246016,
                                     "xtype": null
                                 }
                             ],
@@ -1224,11 +1224,11 @@
     ],
     "formValues": {
         "enableDateStart": false,
-        "dateStart": 1519772400,
+        "dateStart": 1520246016,
         "hourStart": 0,
         "minuteStart": 0,
         "enableDateEnd": false,
-        "dateEnd": 1835305200,
+        "dateEnd": 1520246016,
         "hourEnd": "23",
         "minuteEnd": "59",
         "enableWeekday": false,
