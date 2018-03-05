@@ -16,7 +16,7 @@ class rz_timed_container extends SimpleModule
     $display = '';
     if ($renderApi->getFormValue($unit, 'enableDateStart')) {
       $start = intval($renderApi->getFormValue($unit, 'dateStart')) + (intval($renderApi->getFormValue($unit, 'hourStart')) * 3600) + (intval($renderApi->getFormValue($unit, 'minuteStart')) * 60);
-      $display .= date("d.m.y", $start)." ";
+      $display .= "ab ".date("d.m.y", $start)." ";
     }
 
     $end = 9999999999;
