@@ -83,7 +83,7 @@ use Nette;
  * @property-read int $height
  * @property-read resource $imageResource
  */
-class Image extends Nette\Object
+class Image extends Nette\LegacyObject
 {
 	/** {@link resize()} only shrinks images */
 	const SHRINK_ONLY = 1;

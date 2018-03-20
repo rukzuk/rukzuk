@@ -27,7 +27,7 @@ return array(
     'Nette\\MemberAccessException' => $vendorDir . '/nette/utils/src/Utils/exceptions.php',
     'Nette\\NotImplementedException' => $vendorDir . '/nette/utils/src/Utils/exceptions.php',
     'Nette\\NotSupportedException' => $vendorDir . '/nette/utils/src/Utils/exceptions.php',
-    'Nette\\Object' => $vendorDir . '/nette/utils/src/Utils/Object.php',
+    'Nette\\LegacyObject' => $vendorDir . '/nette/utils/src/Utils/LegacyObject.php',
     'Nette\\OutOfRangeException' => $vendorDir . '/nette/utils/src/Utils/exceptions.php',
     'Nette\\StaticClassException' => $vendorDir . '/nette/utils/src/Utils/exceptions.php',
     'Nette\\UnexpectedValueException' => $vendorDir . '/nette/utils/src/Utils/exceptions.php',

@@ -28,7 +28,7 @@ use Nette;
  * @property-read int|NULL $countdownOffset
  * @property-read int|NULL $length
  */
-class Paginator extends Nette\Object
+class Paginator extends Nette\LegacyObject
 {
 	/** @var int */
 	private $base = 1;

@@ -21,7 +21,7 @@ use Nette,
  * @property   string $encoding
  * @property   mixed $body
  */
-class MimePart extends Nette\Object
+class MimePart extends Nette\LegacyObject
 {
 	/** encoding */
 	const ENCODING_BASE64 = 'base64',

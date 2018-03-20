@@ -17,7 +17,7 @@ use Nette;
  *
  * @property-read \ArrayIterator $iterator
  */
-class ArrayList extends Nette\Object implements \ArrayAccess, \Countable, \IteratorAggregate
+class ArrayList extends Nette\LegacyObject implements \ArrayAccess, \Countable, \IteratorAggregate
 {
 	private $list = array();
 
