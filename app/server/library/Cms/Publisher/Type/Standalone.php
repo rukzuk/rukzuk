@@ -302,7 +302,9 @@ class Standalone extends PublisherBase
       return;
     }
     @symlink($liveDirectory, FS::joinPath($this->liveHostingDirectory, $publishConfig['cname']));
-    @symlink($liveDirectory, FS::joinPath($this->liveHostingDirectory, 'www.'.$publishConfig['cname']));
+    if (substr($publishConfig['cname'], 0, 4) == 'www.') {
+        @symlink($liveDirectory, FS::joinPath($this->liveHostingDirectory, substr($publishConfig['cname'], 4)));
+    }
   }
 
   /**
