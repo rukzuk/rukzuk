@@ -67,8 +67,11 @@ class StandaloneTest extends TransactionTestCase
   {
     $symlinks = array(
       $cname,
-      'www.'.$cname,
     );
+    // add non-www link if cname starts with www.
+    if (substr($cname, 0, 4) == 'www.') {
+        $symlinks[] = substr($cname, 4);
+    }
     foreach ($symlinks as $link) {
       $actualTarget = readlink(FS::joinPath($outputDirectory, $link));
       $this->assertEquals($targetDirectory, $actualTarget);
