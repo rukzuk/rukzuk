@@ -74,7 +74,11 @@ class StandaloneTest extends TransactionTestCase
     }
     foreach ($symlinks as $link) {
       $actualTarget = readlink(FS::joinPath($outputDirectory, $link));
-      $this->assertEquals($targetDirectory, $actualTarget);
+      // if the link is relative, prepend the output dir and make it absolute
+      if (substr($actualTarget, 0, 1) !== '/') {
+        $actualTarget = FS::joinPath($outputDirectory, $actualTarget);
+      }
+      $this->assertEquals(realpath($targetDirectory), realpath($actualTarget));
     }
   }
 
