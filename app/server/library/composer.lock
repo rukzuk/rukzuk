@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "bf0f19ad6dd25a6e98375f097aaa662e",
+    "content-hash": "35dc27668ce76f1463878bd34b5be9d5",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -72,7 +72,7 @@
                 "docblock",
                 "parser"
             ],
-            "time": "2014-12-23 22:40:37"
+            "time": "2014-12-23T22:40:37+00:00"
         },
         {
             "name": "doctrine/cache",
@@ -142,7 +142,7 @@
                 "cache",
                 "caching"
             ],
-            "time": "2015-04-15 00:11:59"
+            "time": "2015-04-15T00:11:59+00:00"
         },
         {
             "name": "doctrine/collections",
@@ -208,7 +208,7 @@
                 "collections",
                 "iterator"
             ],
-            "time": "2015-04-14 22:21:58"
+            "time": "2015-04-14T22:21:58+00:00"
         },
         {
             "name": "doctrine/common",
@@ -281,7 +281,7 @@
                 "persistence",
                 "spl"
             ],
-            "time": "2015-04-02 19:55:44"
+            "time": "2015-04-02T19:55:44+00:00"
         },
         {
             "name": "doctrine/dbal",
@@ -352,7 +352,7 @@
                 "persistence",
                 "queryobject"
             ],
-            "time": "2015-01-12 21:52:47"
+            "time": "2015-01-12T21:52:47+00:00"
         },
         {
             "name": "doctrine/inflector",
@@ -419,7 +419,7 @@
                 "singularize",
                 "string"
             ],
-            "time": "2014-12-20 21:24:13"
+            "time": "2014-12-20T21:24:13+00:00"
         },
         {
             "name": "doctrine/instantiator",
@@ -473,7 +473,7 @@
                 "constructor",
                 "instantiate"
             ],
-            "time": "2014-10-13 12:58:55"
+            "time": "2014-10-13T12:58:55+00:00"
         },
         {
             "name": "doctrine/lexer",
@@ -527,7 +527,7 @@
                 "lexer",
                 "parser"
             ],
-            "time": "2014-09-09 13:34:57"
+            "time": "2014-09-09T13:34:57+00:00"
         },
         {
             "name": "doctrine/migrations",
@@ -592,7 +592,7 @@
                 "database",
                 "migrations"
             ],
-            "time": "2015-06-01 21:18:20"
+            "time": "2015-06-01T21:18:20+00:00"
         },
         {
             "name": "doctrine/orm",
@@ -669,7 +669,7 @@
                 "database",
                 "orm"
             ],
-            "time": "2015-04-02 20:40:18"
+            "time": "2015-04-02T20:40:18+00:00"
         },
         {
             "name": "leafo/scssphp",
@@ -724,19 +724,19 @@
                 "scss",
                 "stylesheet"
             ],
-            "time": "2015-06-02 14:16:57"
+            "time": "2015-06-02T14:16:57+00:00"
         },
         {
             "name": "sabre/dav",
             "version": "2.1.4",
             "source": {
                 "type": "git",
-                "url": "https://github.com/fruux/sabre-dav.git",
+                "url": "https://github.com/sabre-io/dav.git",
                 "reference": "b70d781e752d71e9df3c64940db4b6238381f14d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fruux/sabre-dav/zipball/b70d781e752d71e9df3c64940db4b6238381f14d",
+                "url": "https://api.github.com/repos/sabre-io/dav/zipball/b70d781e752d71e9df3c64940db4b6238381f14d",
                 "reference": "b70d781e752d71e9df3c64940db4b6238381f14d",
                 "shasum": ""
             },
@@ -798,19 +798,19 @@
                 "framework",
                 "iCalendar"
             ],
-            "time": "2015-05-26 00:53:38"
+            "time": "2015-05-26T00:53:38+00:00"
         },
         {
             "name": "sabre/event",
             "version": "2.0.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/fruux/sabre-event.git",
+                "url": "https://github.com/sabre-io/event.git",
                 "reference": "337b6f5e10ea6e0b21e22c7e5788dd3883ae73ff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fruux/sabre-event/zipball/337b6f5e10ea6e0b21e22c7e5788dd3883ae73ff",
+                "url": "https://api.github.com/repos/sabre-io/event/zipball/337b6f5e10ea6e0b21e22c7e5788dd3883ae73ff",
                 "reference": "337b6f5e10ea6e0b21e22c7e5788dd3883ae73ff",
                 "shasum": ""
             },
@@ -849,19 +849,19 @@
                 "promise",
                 "signal"
             ],
-            "time": "2015-05-19 10:24:22"
+            "time": "2015-05-19T10:24:22+00:00"
         },
         {
             "name": "sabre/http",
             "version": "3.0.5",
             "source": {
                 "type": "git",
-                "url": "https://github.com/fruux/sabre-http.git",
+                "url": "https://github.com/sabre-io/http.git",
                 "reference": "6b06c03376219b3d608e1f878514ec105ed1b577"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fruux/sabre-http/zipball/6b06c03376219b3d608e1f878514ec105ed1b577",
+                "url": "https://api.github.com/repos/sabre-io/http/zipball/6b06c03376219b3d608e1f878514ec105ed1b577",
                 "reference": "6b06c03376219b3d608e1f878514ec105ed1b577",
                 "shasum": ""
             },
@@ -900,19 +900,19 @@
             "keywords": [
                 "http"
             ],
-            "time": "2015-05-11 15:25:57"
+            "time": "2015-05-11T15:25:57+00:00"
         },
         {
             "name": "sabre/vobject",
             "version": "3.4.5",
             "source": {
                 "type": "git",
-                "url": "https://github.com/fruux/sabre-vobject.git",
+                "url": "https://github.com/sabre-io/vobject.git",
                 "reference": "75bd5ee4cea8138125ead50f5a3828b708a611ae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fruux/sabre-vobject/zipball/75bd5ee4cea8138125ead50f5a3828b708a611ae",
+                "url": "https://api.github.com/repos/sabre-io/vobject/zipball/75bd5ee4cea8138125ead50f5a3828b708a611ae",
                 "reference": "75bd5ee4cea8138125ead50f5a3828b708a611ae",
                 "shasum": ""
             },
@@ -966,7 +966,7 @@
                 "jCard",
                 "vCard"
             ],
-            "time": "2015-06-02 15:44:08"
+            "time": "2015-06-02T15:44:08+00:00"
         },
         {
             "name": "segmentio/analytics-php",
@@ -1011,19 +1011,19 @@
                 "analytics.js",
                 "segmentio"
             ],
-            "time": "2015-04-27 20:54:27"
+            "time": "2015-04-27T20:54:27+00:00"
         },
         {
             "name": "symfony/console",
             "version": "v2.7.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/Console.git",
+                "url": "https://github.com/symfony/console.git",
                 "reference": "7f0bec04961c61c961df0cb8c2ae88dbfd83f399"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Console/zipball/7f0bec04961c61c961df0cb8c2ae88dbfd83f399",
+                "url": "https://api.github.com/repos/symfony/console/zipball/7f0bec04961c61c961df0cb8c2ae88dbfd83f399",
                 "reference": "7f0bec04961c61c961df0cb8c2ae88dbfd83f399",
                 "shasum": ""
             },
@@ -1068,7 +1068,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2015-05-29 16:22:24"
+            "time": "2015-05-29T16:22:24+00:00"
         },
         {
             "name": "symfony/yaml",
@@ -1117,7 +1117,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2015-05-02 15:21:08"
+            "time": "2015-05-02T15:21:08+00:00"
         },
         {
             "name": "zf1/zend-acl",
@@ -1155,7 +1155,7 @@
                 "framework",
                 "zend"
             ],
-            "time": "2015-04-30 11:09:59"
+            "time": "2015-04-30T11:09:59+00:00"
         },
         {
             "name": "zf1/zend-application",
@@ -1197,7 +1197,7 @@
                 "framework",
                 "zend"
             ],
-            "time": "2015-04-30 11:12:18"
+            "time": "2015-04-30T11:12:18+00:00"
         },
         {
             "name": "zf1/zend-auth",
@@ -1242,7 +1242,7 @@
                 "framework",
                 "zend"
             ],
-            "time": "2015-04-30 11:09:44"
+            "time": "2015-04-30T11:09:44+00:00"
         },
         {
             "name": "zf1/zend-cache",
@@ -1283,7 +1283,7 @@
                 "framework",
                 "zend"
             ],
-            "time": "2015-04-30 11:07:42"
+            "time": "2015-04-30T11:07:42+00:00"
         },
         {
             "name": "zf1/zend-config",
@@ -1322,7 +1322,7 @@
                 "framework",
                 "zend"
             ],
-            "time": "2015-04-30 11:10:35"
+            "time": "2015-04-30T11:10:35+00:00"
         },
         {
             "name": "zf1/zend-controller",
@@ -1372,7 +1372,7 @@
                 "framework",
                 "zend"
             ],
-            "time": "2015-04-30 11:26:41"
+            "time": "2015-04-30T11:26:41+00:00"
         },
         {
             "name": "zf1/zend-db",
@@ -1415,7 +1415,7 @@
                 "framework",
                 "zend"
             ],
-            "time": "2015-04-30 11:09:54"
+            "time": "2015-04-30T11:09:54+00:00"
         },
         {
             "name": "zf1/zend-exception",
@@ -1452,7 +1452,7 @@
                 "framework",
                 "zend"
             ],
-            "time": "2015-04-30 11:10:20"
+            "time": "2015-04-30T11:10:20+00:00"
         },
         {
             "name": "zf1/zend-file-transfer",
@@ -1494,7 +1494,7 @@
                 "transfer",
                 "zend"
             ],
-            "time": "2015-04-30 11:09:13"
+            "time": "2015-04-30T11:09:13+00:00"
         },
         {
             "name": "zf1/zend-filter",
@@ -1537,28 +1537,22 @@
                 "framework",
                 "zend"
             ],
-            "time": "2015-04-30 11:09:49"
+            "time": "2015-04-30T11:09:49+00:00"
         },
         {
             "name": "zf1/zend-json",
-            "version": "1.12.11",
+            "version": "dev-php7fix-1.12",
             "source": {
                 "type": "git",
-                "url": "https://github.com/zf1/zend-json.git",
-                "reference": "dbf5d4b46bdf6299bf1f7c6b1ef7311e4299602f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/zf1/zend-json/zipball/dbf5d4b46bdf6299bf1f7c6b1ef7311e4299602f",
-                "reference": "dbf5d4b46bdf6299bf1f7c6b1ef7311e4299602f",
-                "shasum": ""
+                "url": "https://github.com/rukzuk/zend-json.git",
+                "reference": "355587127c5d1b1f11a7cd7275da8be8e262cd81"
             },
             "require": {
                 "php": ">=5.2.11",
-                "zf1/zend-exception": "self.version",
-                "zf1/zend-loader": "self.version",
-                "zf1/zend-server": "self.version",
-                "zf1/zend-xml": "self.version"
+                "zf1/zend-exception": "~1.12",
+                "zf1/zend-loader": "~1.12",
+                "zf1/zend-server": "~1.12",
+                "zf1/zend-xml": "~1.12"
             },
             "type": "library",
             "autoload": {
@@ -1566,19 +1560,18 @@
                     "Zend_Json": "library/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
             "description": "Zend Framework 1 Json package",
             "homepage": "http://framework.zend.com/",
             "keywords": [
-                "ZF1",
                 "framework",
                 "json",
-                "zend"
+                "zend",
+                "zf1"
             ],
-            "time": "2015-04-30 11:11:12"
+            "time": "2018-03-29T11:14:14+00:00"
         },
         {
             "name": "zf1/zend-loader",
@@ -1616,7 +1609,7 @@
                 "loader",
                 "zend"
             ],
-            "time": "2015-04-30 11:07:31"
+            "time": "2015-04-30T11:07:31+00:00"
         },
         {
             "name": "zf1/zend-locale",
@@ -1659,7 +1652,7 @@
                 "locale",
                 "zend"
             ],
-            "time": "2015-04-30 11:10:41"
+            "time": "2015-04-30T11:10:41+00:00"
         },
         {
             "name": "zf1/zend-log",
@@ -1700,7 +1693,7 @@
                 "log",
                 "zend"
             ],
-            "time": "2015-04-30 11:11:42"
+            "time": "2015-04-30T11:11:42+00:00"
         },
         {
             "name": "zf1/zend-mail",
@@ -1741,7 +1734,7 @@
                 "mail",
                 "zend"
             ],
-            "time": "2015-04-30 11:12:23"
+            "time": "2015-04-30T11:12:23+00:00"
         },
         {
             "name": "zf1/zend-mime",
@@ -1779,7 +1772,7 @@
                 "mime",
                 "zend"
             ],
-            "time": "2015-04-30 11:08:38"
+            "time": "2015-04-30T11:08:38+00:00"
         },
         {
             "name": "zf1/zend-registry",
@@ -1820,7 +1813,7 @@
                 "registry",
                 "zend"
             ],
-            "time": "2015-04-30 11:14:26"
+            "time": "2015-04-30T11:14:26+00:00"
         },
         {
             "name": "zf1/zend-search",
@@ -1858,7 +1851,7 @@
                 "search",
                 "zend"
             ],
-            "time": "2015-04-30 11:08:53"
+            "time": "2015-04-30T11:08:53+00:00"
         },
         {
             "name": "zf1/zend-search-lucene",
@@ -1899,7 +1892,7 @@
                 "search",
                 "zend"
             ],
-            "time": "2015-04-30 11:08:58"
+            "time": "2015-04-30T11:08:58+00:00"
         },
         {
             "name": "zf1/zend-server",
@@ -1937,7 +1930,7 @@
                 "server",
                 "zend"
             ],
-            "time": "2015-04-30 11:11:32"
+            "time": "2015-04-30T11:11:32+00:00"
         },
         {
             "name": "zf1/zend-session",
@@ -1980,7 +1973,7 @@
                 "session",
                 "zend"
             ],
-            "time": "2015-04-30 11:10:56"
+            "time": "2015-04-30T11:10:56+00:00"
         },
         {
             "name": "zf1/zend-translate",
@@ -2021,7 +2014,7 @@
                 "translate",
                 "zend"
             ],
-            "time": "2015-04-30 11:22:02"
+            "time": "2015-04-30T11:22:02+00:00"
         },
         {
             "name": "zf1/zend-uri",
@@ -2067,7 +2060,7 @@
                 "uri",
                 "zend"
             ],
-            "time": "2015-04-30 11:09:34"
+            "time": "2015-04-30T11:09:34+00:00"
         },
         {
             "name": "zf1/zend-validate",
@@ -2112,7 +2105,7 @@
                 "validate",
                 "zend"
             ],
-            "time": "2015-04-30 11:08:13"
+            "time": "2015-04-30T11:08:13+00:00"
         },
         {
             "name": "zf1/zend-view",
@@ -2158,7 +2151,7 @@
                 "view",
                 "zend"
             ],
-            "time": "2015-04-30 11:22:48"
+            "time": "2015-04-30T11:22:48+00:00"
         },
         {
             "name": "zf1/zend-xml",
@@ -2196,13 +2189,14 @@
                 "xml",
                 "zend"
             ],
-            "time": "2015-04-30 11:12:33"
+            "time": "2015-04-30T11:12:33+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "zf1/zend-json": 20,
         "doctrine/migrations": 20
     },
     "prefer-stable": false,
