@@ -78,6 +78,7 @@ class CreatorStorage extends AbstractCreatorStorage
     $this->createUsedMediaItems();
     $this->createUsedAlbumInfo();
     $this->createWebsiteSettingsInfo();
+    $this->createHtaccessFromWebsiteSettings();
     $this->createColorInfo();
     $this->createResolutionInfo();
     $this->createNavigation();
@@ -603,6 +604,28 @@ class CreatorStorage extends AbstractCreatorStorage
     );
     $comments = array("website settings info array", "site: " . $this->getWebsiteId());
     $this->exportDataToFile($websiteSettingsInfoFilePath, $this->websiteSettings, $comments);
+  }
+
+  protected function createHtaccessFromWebsiteSettings()
+  {
+    if (array_key_exists('htaccess', $this->websiteSettings)) {
+      if(isset($this->websiteSettings['htaccess']['htaccessContent']) 
+         && !empty($this->websiteSettings['htaccess']['htaccessContent'])) {
+        $content = $this->websiteSettings['htaccess']['htaccessContent'];
+      } else {
+        return; // end here
+      }
+    }
+
+    $htaccessFilePath = FS::joinPath(
+        $this->getWebsiteDirectory(),
+        '.htaccess'
+    );
+    FS::writeContentToFile(
+        $htaccessFilePath,
+        $content,
+        "Error at creating file '%s' (%s): %s"
+    );
   }
 
   protected function createColorInfo()
