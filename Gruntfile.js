@@ -45,12 +45,14 @@ module.exports = function (grunt) {
                     src: 'app/lang/*.json'
                 }, {
                     src: 'app/js/sourcemap.json'
+                }, {
+                    src: 'app/default/**/*.json'
                 }]
             }
         },
 
         jshint: {
-            files: testFiles || ['Gruntfile.js', 'app/js/CMS/**/*.js', 'app/js/SB/**/*.js', 'app/js/ext-overrides.js', '!app/js/SB/lib/URI.js'],
+            files: testFiles || ['Gruntfile.js', 'app/js/CMS/**/*.js', 'app/js/SB/**/*.js', 'app/default/pageType/**/*.js', 'app/js/ext-overrides.js', '!app/js/SB/lib/URI.js'],
             options: {
                 jshintrc: '.jshintrc'
             }
@@ -156,6 +158,11 @@ module.exports = function (grunt) {
                 }, {
                     src: ['app/sass/_mixins.scss', 'app/sass/_theme.scss', 'app/sass/cms-theme.scss', 'app/sass/login-theme.scss'],
                     dest: '<%= outputFolder %>/'
+                }, {
+                    src: ['**'],
+                    cwd: 'app/default/pageType/',
+                    dest: '<%= outputFolder %>/app/default/pageType/',
+                    expand: true
                 }]
             },
             packageClient: {
@@ -348,6 +355,13 @@ module.exports = function (grunt) {
                 }, {
                     src: 'app/js/zipjs/deflate.js',
                     dest: '<%= outputFolder %>/app/js/zipjs/deflate.js'
+                }]
+            },
+
+            defaultPageType: {
+                files: [{
+                    src: 'app/default/pageType/assets/pageType.js',
+                    dest: '<%= outputFolder %>/app/default/pageType/assets/pageType.js'
                 }]
             }
         },

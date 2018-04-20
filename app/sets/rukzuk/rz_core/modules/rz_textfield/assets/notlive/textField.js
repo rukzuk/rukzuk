@@ -46,13 +46,6 @@ define(['CMS', 'rz_root/notlive/js/baseJsModule'], function (CMS, JsModule) {
 
     return JsModule.extend({
 
-        initUnit: function (unitId) {
-            var selectedUnit = CMS.getSelected(false);
-            if (selectedUnit && selectedUnit.id === unitId) {
-                setRTEConfig(unitId);
-            }
-        },
-
         onUnitSelect: function (config) {
             setRTEConfig(config.unitId);
         },

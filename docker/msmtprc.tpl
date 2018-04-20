@@ -4,6 +4,7 @@ account default
 
 # The SMTP smarthost.
 host ##HOST##
+auth on
 user ##USER##
 password ##PASSWORD##
 

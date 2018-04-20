@@ -1,0 +1,7 @@
+.rz_iframe {
+    height: 100px;
+}
+.rz_iframe > iframe {
+    width: 100%;
+    height: 100%;
+}

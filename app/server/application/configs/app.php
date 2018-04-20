@@ -128,7 +128,7 @@ return array(
     ),
     'media' => array(
       'maxFileSize' => 52428800,
-      'maxSizePerWebsite' => 3221225472,
+      'maxSizePerWebsite' => 7516192768,
     ),
     'expired' => false,
   ),
@@ -283,8 +283,8 @@ return array(
   'pageType' => array(
     'defaultPageType' => array(
       'id' => 'page',
-      'directory' => APPLICATION_PATH . '/default/pageType',
-      'url' => '/default/pageType',
+      'directory' => APPLICATION_PATH . '/../../../app/default/pageType',
+      'url' => '/app/default/pageType',
     )
   ),
   'media' => array(
@@ -415,7 +415,7 @@ return array(
   ),
   'builds' => array(
     'directory' => CMS_PATH . '/builds',
-    'threshold' => 5,
+    'threshold' => 3,
     'tmp' => array(
       'directory' => CMS_PATH . '/builds/tmp',
     ),
@@ -431,7 +431,7 @@ return array(
     ),
     'dynamic' => array(
       'pageCreator' => array(
-        'timeout' => 120,
+        'timeout' => 30,
         'maxRetryLimit' => 3,
       )
     )

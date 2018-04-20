@@ -238,7 +238,7 @@ class rz_shop_cart extends SimpleModule
    */
   protected function createCart($api, $unit, $settings, $i18n)
   {
-    $cart = new CartWithShipping('CART_' . $unit->getId(), new SessionStore(), $settings->getShippingCosts(), $settings->getShippingTax());
+    $cart = new CartWithShipping('CART_' . $unit->getId(), new SessionStore(), $settings->getShippingCosts(), $settings->getShippingTax(), $settings->getShippingScalePriceData());
 
     // TEMPLATE (Use Fake Data)
     if ($api->isTemplate()) {

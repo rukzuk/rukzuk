@@ -63,6 +63,7 @@
             CMS.app = CMS.app || {};
             CMS.app.initialized = true;
             CMS.app.lang = 'en';
+            CMS.app.clipboard = new Ext.util.MixedCollection();
             CMS.config.debugMode = true;
         </script>
 

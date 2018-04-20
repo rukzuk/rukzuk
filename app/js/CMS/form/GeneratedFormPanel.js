@@ -155,6 +155,11 @@ CMS.form.GeneratedFormPanel = Ext.extend(Ext.Panel, {
             }, this);
             var wrapperCls = innerCfg.xtype ? innerCfg.xtype + '-wrapper' : null;
 
+            // remove the element
+            if (innerCfg.remove || innerCfg.remove === true) {
+                return {};
+            }
+
             // HACK SBCMS-143 SBCMS-139 SBCMS-174
             innerCfg.websiteId = this.websiteId;
             innerCfg.idSuffix = this.idSuffix;

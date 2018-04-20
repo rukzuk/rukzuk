@@ -1110,7 +1110,7 @@
                                                 },
                                                 {
                                                     "name": "value",
-                                                    "value": 85,
+                                                    "value": "85",
                                                     "xtype": null
                                                 }
                                             ],
@@ -1167,6 +1167,227 @@
                                     }
                                 }
                             ]
+                        },
+                        {
+                            "params": [
+                                {
+                                    "name": "xtype",
+                                    "value": "CMStabpage",
+                                    "xtype": null
+                                },
+                                {
+                                    "name": "tabValue",
+                                    "xtype": "textfield",
+                                    "allowBlank": false,
+                                    "emptyText": "__i18n_formElements.groupValueEmptyText",
+                                    "fieldLabel": "__i18n_formElements.groupValueFieldLabel",
+                                    "value": "additionalFields"
+                                },
+                                {
+                                    "name": "title",
+                                    "value": "{\"de\":\"Zusatzfeld\",\"en\":\"Additional page property\"}",
+                                    "xtype": "textfield",
+                                    "allowBlank": false,
+                                    "emptyText": "__i18n_formElements.title",
+                                    "fieldLabel": "__i18n_formElements.title"
+                                },
+                                {
+                                    "name": "value",
+                                    "value": "additionalFields",
+                                    "xtype": null
+                                }
+                            ],
+                            "descr": {
+                                "text": "__i18n_formElements.elementTabPage",
+                                "iconCls": "tabpage",
+                                "hasValue": false,
+                                "allowChildNodes": true
+                            },
+                            "items": [
+                                {
+                                    "params": [
+                                        {
+                                            "name": "CMSvar",
+                                            "value": "field",
+                                            "allowBlank": false,
+                                            "minLength": 3,
+                                            "maskRe": {},
+                                            "stripCharsRe": {},
+                                            "xtype": "textfield",
+                                            "emptyText": "__i18n_generatedFormPanel.varNameEmptyText",
+                                            "fieldLabel": "__i18n_generatedFormPanel.varNameLabel"
+                                        },
+                                        {
+                                            "name": "xtype",
+                                            "value": "ux-comboselect",
+                                            "xtype": null
+                                        },
+                                        {
+                                            "name": "isMeta",
+                                            "value": false,
+                                            "fieldLabel": "__i18n_formElements.isGlobal",
+                                            "xtype": "checkbox"
+                                        },
+                                        {
+                                            "name": "fieldLabel",
+                                            "value": "{\"de\":\"Zusatzfeld\",\"en\":\"Additional property\"}",
+                                            "xtype": "textfield",
+                                            "allowBlank": true,
+                                            "emptyText": "__i18n_formElements.fieldLabelOptionalEmptyText",
+                                            "fieldLabel": "__i18n_formElements.fieldLabel"
+                                        },
+                                        {
+                                            "name": "emptyText",
+                                            "value": "",
+                                            "xtype": "textfield",
+                                            "allowBlank": true,
+                                            "emptyText": "__i18n_formElements.emptyTextEmptyText",
+                                            "fieldLabel": "__i18n_formElements.emptyTextLabel"
+                                        },
+                                        {
+                                            "name": "options",
+                                            "value": [
+                                                [
+                                                    "customTextfield1",
+                                                    "{\"de\":\"Einzeiliges Textfeld 1\",\"en\":\"Textfield 1\"}",
+                                                    0
+                                                ],
+                                                [
+                                                    "customTextfield2",
+                                                    "{\"de\":\"Einzeiliges Textfeld 2\",\"en\":\"Textfield 2\"}",
+                                                    0
+                                                ],
+                                                [
+                                                    "customTextfield3",
+                                                    "{\"de\":\"Mehrzeiliges Textfeld\",\"en\":\"Textarea\"}",
+                                                    0
+                                                ],
+                                                [
+                                                    "customTextfield4",
+                                                    "{\"de\":\"Auswahlmenü\",\"en\":\"Drop Down Menu\"}",
+                                                    0
+                                                ],
+                                                [
+                                                    "customTextfield5",
+                                                    "{\"de\":\"Editor\",\"en\":\"Editor\"}",
+                                                    0
+                                                ]
+                                            ],
+                                            "xtype": "CMSkeyvaluetextarea",
+                                            "allowBlank": false,
+                                            "array": true,
+                                            "emptyText": "__i18n_formElements.listValuesEmptyText",
+                                            "fieldLabel": "__i18n_formElements.listValuesLabel"
+                                        },
+                                        {
+                                            "name": "forceSelection",
+                                            "value": true,
+                                            "xtype": "checkbox",
+                                            "fieldLabel": "__i18n_formElements.comboSelectForceSelection"
+                                        },
+                                        {
+                                            "name": "value",
+                                            "value": "customTextfield1",
+                                            "xtype": null
+                                        }
+                                    ],
+                                    "descr": {
+                                        "text": "__i18n_formElements.elementComboSelect",
+                                        "iconCls": "combo",
+                                        "hasValue": true
+                                    }
+                                },
+                                {
+                                    "params": [
+                                        {
+                                            "name": "xtype",
+                                            "value": "ux-multilinelabel",
+                                            "xtype": null
+                                        },
+                                        {
+                                            "name": "hideLabel",
+                                            "value": true,
+                                            "xtype": null
+                                        },
+                                        {
+                                            "name": "text",
+                                            "xtype": "textarea",
+                                            "height": 200,
+                                            "value": "{\"de\":\"Zusatzfelder für die Seiteneigenschaften können in den Projekteinstellungen aktiviert werden.\",\"en\":\"Additional page properties can be activated in the project settings:\"} ",
+                                            "fieldLabel": "__i18n_formElements.commentLabel"
+                                        },
+                                        {
+                                            "name": "autoLink",
+                                            "value": true,
+                                            "xtype": null
+                                        },
+                                        {
+                                            "name": "cls",
+                                            "value": "modulecomment",
+                                            "xtype": null
+                                        },
+                                        {
+                                            "name": "value",
+                                            "xtype": null
+                                        }
+                                    ],
+                                    "descr": {
+                                        "id": "Comment",
+                                        "text": "__i18n_formElements.elementComment",
+                                        "iconCls": "plaintext"
+                                    }
+                                },
+                                {
+                                    "params": [
+                                        {
+                                            "name": "xtype",
+                                            "value": "CMSopenwebsitesettings",
+                                            "xtype": null
+                                        },
+                                        {
+                                            "name": "fieldLabel",
+                                            "xtype": null,
+                                            "value": "&#160;"
+                                        },
+                                        {
+                                            "name": "labelSeparator",
+                                            "xtype": null,
+                                            "value": ""
+                                        },
+                                        {
+                                            "name": "labelAlign",
+                                            "value": "hide",
+                                            "xtype": null
+                                        },
+                                        {
+                                            "name": "text",
+                                            "value": "{\"de\":\"Projekteinstellungen öffnen\",\"en\":\"Show project settings\"}",
+                                            "xtype": "textfield",
+                                            "allowBlank": false,
+                                            "emptyText": "__i18n_formElements.websiteSettingsButtonTextEmpty",
+                                            "fieldLabel": "__i18n_formElements.websiteSettingsButtonTextFieldLabel"
+                                        },
+                                        {
+                                            "name": "settingsId",
+                                            "value": "custom_page_properties",
+                                            "xtype": "textfield",
+                                            "allowBlank": true,
+                                            "emptyText": "__i18n_formElements.websiteSettingsIdEmpty",
+                                            "fieldLabel": "__i18n_formElements.websiteSettingsIdLabel"
+                                        },
+                                        {
+                                            "name": "value",
+                                            "xtype": null
+                                        }
+                                    ],
+                                    "descr": {
+                                        "id": "WebsiteSettingsBtn",
+                                        "text": "__i18n_formElements.elementWebsiteSettings",
+                                        "iconCls": "button",
+                                        "hasValue": false
+                                    }
+                                }
+                            ]
                         }
                     ]
                 }
@@ -1186,7 +1407,8 @@
         "linkLabel": "more",
         "imgHeight": "0%",
         "enableImageQuality": false,
-        "imageQuality": 85,
-        "enableImageLink": false
+        "imageQuality": "85",
+        "enableImageLink": false,
+        "field": "customTextfield1"
     }
 }

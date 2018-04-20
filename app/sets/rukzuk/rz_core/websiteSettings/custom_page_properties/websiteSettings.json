@@ -1,0 +1,124 @@
+{
+    "name": {
+        "de": "Zusatzfelder Seiteneigenschaften",
+        "en": "Additional page properties"
+    },
+    "description": {
+        "de": "",
+        "en": ""
+    },
+    "version": "dev",
+    "formValues": {
+        "customTextfield1Enabled": false,
+        "customTextfield2Enabled": false,
+        "customTextfield3Enabled": false,
+        "customTextfield4Enabled": false,
+        "customTextfield5Enabled": false
+    },
+    "form": [
+        {
+            "type": "Comment",
+            "text": "{\"de\": \"Hier können zusätzliche Felder für die Eigenschaften einer Seite aktiviert werden. Diese Felder können über das Modul 'Seiteneigenschaft' ausgegeben werden. Im Modul 'Seitenliste' kann ausserdem nach diesen Felder ein Filter gesetzt werden.\", \"en\": \"Additional fields for the properties of a page can be activated here. These fields can be displayed via the module 'Page Property'. In the module 'Page List' you can also set a filter with these fields.\"}"
+        },
+        {
+            "type": "OnOffFieldSet",
+            "CMSvar": "customTextfield1Enabled",
+            "fieldLabel": "{\"de\": \"Einzeiliges Textfeld 1\", \"en\": \"Textfield 1\"}",
+            "_items": [
+                {
+                    "type": "TextField",
+                    "CMSvar": "customTextfield1Label",
+                    "fieldLabel": "{\"de\": \"Bezeichnung\", \"en\": \"Label\"}"
+                },
+                {
+                    "type": "TextField",
+                    "CMSvar": "customTextfield1Default",
+                    "fieldLabel": "{\"de\": \"Standardwert\", \"en\": \"Default\"}"
+                }
+            ]
+        },
+        {
+            "type": "OnOffFieldSet",
+            "CMSvar": "customTextfield2Enabled",
+            "fieldLabel": "{\"de\": \"Einzeiliges Textfeld 2\", \"en\": \"Textfield 2\"}",
+            "_items": [
+                {
+                    "type": "TextField",
+                    "CMSvar": "customTextfield2Label",
+                    "fieldLabel": "{\"de\": \"Bezeichnung\", \"en\": \"Label\"}"
+                },
+                {
+                    "type": "TextField",
+                    "CMSvar": "customTextfield2Default",
+                    "fieldLabel": "{\"de\": \"Standardwert\", \"en\": \"Default\"}"
+                }
+            ]
+        },
+        {
+            "type": "OnOffFieldSet",
+            "CMSvar": "customTextfield3Enabled",
+            "fieldLabel": "{\"de\": \"Mehrzeiliges Textfeld\", \"en\": \"Textarea\"}",
+            "_items": [
+                {
+                    "type": "TextField",
+                    "CMSvar": "customTextfield3Label",
+                    "fieldLabel": "{\"de\": \"Bezeichnung\", \"en\": \"Label\"}"
+                },
+                {
+                    "type": "TextArea",
+                    "CMSvar": "customTextfield3Default",
+                    "height": 100,
+                    "fieldLabel": "{\"de\": \"Standardwert\", \"en\": \"Default\"}"
+                }
+            ]
+        },
+        {
+            "type": "OnOffFieldSet",
+            "CMSvar": "customTextfield4Enabled",
+            "fieldLabel": "{\"de\": \"Auswahlmenü\", \"en\": \"Drop Down Menu\"}",
+            "_items": [
+                {
+                    "type": "TextField",
+                    "CMSvar": "customTextfield4Label",
+                    "fieldLabel": "{\"de\": \"Bezeichnung\", \"en\": \"Label\"}"
+                },
+                {
+                    "type": "TextArea",
+                    "CMSvar": "customTextfield4Default",
+                    "height": 100,
+                    "fieldLabel": "{\"de\": \"Werte (ein Wert pro Zeile)\", \"en\": \"Values (one value per row)\"}"
+                }
+            ]
+        },
+        {
+            "type": "OnOffFieldSet",
+            "CMSvar": "customTextfield5Enabled",
+            "fieldLabel": "{\"de\": \"Editor\", \"en\": \"Editor\"}",
+            "_items": [
+                {
+                    "type": "TextField",
+                    "CMSvar": "customTextfield5Label",
+                    "fieldLabel": "{\"de\": \"Bezeichnung\", \"en\": \"Label\"}"
+                },
+                {
+                    "type": "HtmlRichText",
+                    "CMSvar": "customTextfield5Default",
+                    "fieldLabel": "{\"de\": \"Standardwert\", \"en\": \"Default\"}",
+                    "showText": true,
+                    "richTextEditorConfig": {
+                        "bold": true,
+                        "strikethrough": true,
+                        "italic": true,
+                        "subscript": true,
+                        "underline": true,
+                        "superscript": true,
+                        "bullist": false,
+                        "link": true,
+                        "numlist": false,
+                        "enterKey": "linebreak"
+                    }
+                }
+            ]
+        }
+    ]
+}

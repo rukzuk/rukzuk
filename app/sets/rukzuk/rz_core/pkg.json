@@ -7,7 +7,7 @@
     "de": "",
     "en": ""
   },
-  "websiteSettings": ["password_protection"],
+  "websiteSettings": ["password_protection", "custom_page_properties"],
   "pageTypes": [],
   "templateSnippets": [
     "TPLS-global00-0000-0000-0000-30col0text00-TPLS",
@@ -98,6 +98,7 @@
     "rz_textfield",
     "rz_text_image",
     "rz_thumbnail_gallery",
+    "rz_timed_container",
     "rz_trigger_event",
     "rz_video",
     "rz_include"

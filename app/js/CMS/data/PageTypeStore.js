@@ -17,6 +17,9 @@ CMS.data.pageTypeFields = [{
     type: 'string',
     defaultValue: ''
 }, {
+    name: 'javascriptUrl',
+    type: 'remotejs',
+},{
     name: 'version',
     type: 'string'
 }, {
@@ -39,6 +42,31 @@ CMS.data.isPageTypeRecord = function (record) {
     return record && (record.constructor == CMS.data.PageTypeRecord);
 };
 
+Ext.apply(CMS.data.PageTypeRecord.prototype, {
+    /**
+     * Gets the buildFormPanel callback
+     */
+    getBuildFormPanelCallback: function() {
+        return this.getCallback('buildFormPanel');
+    },
+
+    /**
+     * Returns the callback given by name that is loaded from javascriptUrl.
+     * @param {String} name - callback name
+     * @returns {function}
+     */
+    getCallback: function(name) {
+        var status = this.get('javascriptUrl');
+        if (status && status.loaded === true) {
+            var id = this.get('id');
+            if (CMS.pageType && CMS.pageType.Type && CMS.pageType.Type[id] && CMS.pageType.Type[id][name] && typeof(CMS.pageType.Type[id][name]) === 'function') {
+                return CMS.pageType.Type[id][name];
+            }
+        }
+        return function() {};
+    }
+
+});
 
 /**
  * @class CMS.data.PageTypeStore

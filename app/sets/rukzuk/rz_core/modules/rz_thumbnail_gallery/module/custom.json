@@ -1,5 +1,12 @@
 {
     "assets":{
+        "js":[
+            {
+                "file":"notlive\/editmode.js",
+                "type":"module",
+                "mode":"edit"
+            }
+        ],
         "css":[
             {
                 "file":"style.css"

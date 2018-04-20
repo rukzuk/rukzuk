@@ -469,8 +469,10 @@ CMS.moduleEditor.FormTabEditor = Ext.extend(CMS.form.GeneratedFormPanel, {
         cmp.params = params;
         Ext.each(cmp.params, function (param) {
             if (param.name == 'value') {
-                param.value = cmp.get(0).getValue();
-                return false;
+                if (cmp && cmp.get && cmp.get(0) && cmp.get(0).getValue) {
+                    param.value = cmp.get(0).getValue();
+                    return false;
+		}
             }
         });
         var container = cmp.ownerCt;

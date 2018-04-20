@@ -1,0 +1,12 @@
+{
+    "name": "{\"de\":\"Zeitgesteuerter Container\",\"en\":\"Timed Container\"}",
+    "description": "{\"de\":\"Alle Module unterhalb dieses Containers werden nur im hier definierten Zeitraum angezeigt.\",\"en\":\"All modules below this container are only displayed in the period defined here.\"}",
+    "version": "dev",
+    "icon": "animation.png",
+    "category": "{\"de\":\"Container\",\"en\":\"Container\"}",
+    "moduleType": "default",
+    "allowedChildModuleType": "*",
+    "ghostContainerMode": "force_off",
+    "reRenderRequired": false,
+    "apiType": "APIv1"
+}

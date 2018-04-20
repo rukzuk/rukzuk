@@ -27,6 +27,9 @@ DynCSS.defineModule('rz_anchor_navigation', function (api, v, context) {
         };
     }
 
+    listCss.content = "'" + parseInt(v.offSet) + "'";
+
+
     return {
         '> ul': listCss,
         '> ul > li': listItemCss

@@ -63,6 +63,12 @@ class PageType implements IsResponseData
   public $previewImageUrl = null;
 
   /**
+   * @var string
+   * @SWG\Property(required=true,description="the url of the page type javascript")
+   */
+  public $javascriptUrl = null;
+
+  /**
    * @param PageTypeData $data
    */
   public function __construct($data)
@@ -139,6 +145,14 @@ class PageType implements IsResponseData
     $this->previewImageUrl = $previewImageUrl;
   }
 
+  /**
+   * @param string $javascriptUrl
+   */
+  public function setJavascriptUrl($javascriptUrl)
+  {
+    $this->javascriptUrl = $javascriptUrl;
+  }
+
   protected function setValuesFromData(PageTypeData $data)
   {
     $this->setId($data->getId());
@@ -149,5 +163,6 @@ class PageType implements IsResponseData
     $this->setFrom($data->getForm());
     $this->setFromData($data->getFormValues());
     $this->setPreviewImageUrl($data->getPreviewImageUrl());
+    $this->setJavascriptUrl($data->getJavascriptUrl());
   }
 }

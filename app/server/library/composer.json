@@ -4,7 +4,7 @@
     "require": {
         "zf1/zend-loader": "~1.12",
         "zf1/zend-config": "~1.12",
-        "zf1/zend-json": "~1.12",
+        "zf1/zend-json": "dev-php7fix-1.12",
         "zf1/zend-log": "~1.12",
         "zf1/zend-db": "~1.12",
         "zf1/zend-auth": "~1.12",
@@ -22,6 +22,12 @@
         "leafo/scssphp": "~0.1.5",
         "segmentio/analytics-php": "1.2.0"
     },
+    "repositories": [
+        {
+            "url": "https://github.com/rukzuk/zend-json.git",
+            "type": "git"
+        }
+    ],
     "include-path": [
         "vendor/zf1/zend-loader/library"
     ],
