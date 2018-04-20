@@ -76,7 +76,7 @@ RUN mkdir -p ${CMS_PATH}
 RUN mkdir -p ${INSTANCE_PATH}/htdocs/cms
 RUN chown -R www-data:www-data ${INSTANCE_PATH}/htdocs
 
-# Install the release/cmsrelase.tar.gz (a version from our Jenkins)
+# Install the release/cmsrelase.tar.gz if it exists
 COPY release/ /tmp/rukzuk_release/
 RUN if [ -e /tmp/rukzuk_release/cmsrelease.tar.gz ]; then tar -xf /tmp/rukzuk_release/cmsrelease.tar.gz -C ${CMS_PATH}/.. --strip 1; fi
 RUN if [ -e /tmp/rukzuk_release/ ]; then rm -Rf /tmp/rukzuk_release/; fi
@@ -105,7 +105,9 @@ EXPOSE 80
 #
 
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends php7.0-dev
+    apt-get install -y --no-install-recommends php7.0-dev npm
+
+RUN npm install -g grunt
 
 
 #
