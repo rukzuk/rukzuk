@@ -608,6 +608,7 @@ class CreatorStorage extends AbstractCreatorStorage
 
   protected function createHtaccessFromWebsiteSettings()
   {
+    $content = "";
     if (array_key_exists('htaccess', $this->websiteSettings)) {
       if(isset($this->websiteSettings['htaccess']['htaccessContent']) 
          && !empty($this->websiteSettings['htaccess']['htaccessContent'])) {
