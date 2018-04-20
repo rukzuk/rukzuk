@@ -10,7 +10,7 @@ Vagrant.configure("2") do |config|
   # vm config
   config.vm.provider "docker" do |d|
     docker_dir = current_dir + "/docker/"
-    d.dockerfile = "Dockerfile-DEV"
+    d.dockerfile = "Dockerfile-DEV-PHP7"
     d.build_dir = docker_dir
     d.has_ssh = true
     d.volumes = [docker_dir + "volume/cms/:/srv/rukzuk/htdocs/cms:rw"]
