@@ -194,6 +194,10 @@
       "de": "Ja, ich habe die <a href='%s' target='_blank'>AGB und Widerrufsbelehrung</a> gelesen und akzeptiere diese.",
       "en": "Yes, I have read the <a href='%s' target='_blank'>Terms and Conditions</a> and accept them."
     },
+    "checkoutForm.privacyAccept": {
+      "de": "Ja, ich habe die <a href='%s' target='_blank'>AGB und Widerrufsbelehrung</a> sowie die <a href='%p' target='_blank'>Datenschutzerklärung</a> gelesen und akzeptiere diese.",
+      "en": "Yes, I have read the <a href='%s' target='_blank'>Terms and Conditions</a> as well as the <a href='%p' target='_blank'>Privacy Policy</a> and accept them."
+    },
     "doCheckout.fail": {
       "de": "Fehler: Bestellung konnte nicht verarbeitet werden. Bitte erneut versuchen.",
       "en": "Error: Order failed. Please try again."

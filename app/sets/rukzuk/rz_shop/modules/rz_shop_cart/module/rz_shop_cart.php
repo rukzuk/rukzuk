@@ -266,7 +266,8 @@ class rz_shop_cart extends SimpleModule
       $i18n,
       $settings->getShippingCountries(),
       $settings->getPaymentMethodsAsOptions($i18n),
-      $settings->getTosLink()
+      $settings->getTosLink(),
+      $settings->getPrivacyLink()
     );
     return $checkout;
   }

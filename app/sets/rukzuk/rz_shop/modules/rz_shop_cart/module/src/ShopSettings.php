@@ -158,6 +158,11 @@ class ShopSettings
     return $this->api->getNavigation()->getPage($this->getShopSetting('tosPage'))->getUrl();
   }
 
+  public function getPrivacyLink()
+  {
+    return $this->api->getNavigation()->getPage($this->getShopSetting('privacyPage'))->getUrl();
+  }
+
   public function getThanksMessage()
   {
     return $this->getShopSetting('thanksText', 'Purchase complete.');

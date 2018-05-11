@@ -39,8 +39,17 @@ class CheckoutFrom extends Form
    * @param array      $paymentMethods
    * @param string     $tosUrl
    */
-  public function __construct($id, $store, $i18n, $countries = array(), $paymentMethods = array(), $tosUrl = '')
+  public function __construct($id, $store, $i18n, $countries = array(), $paymentMethods = array(), $tosUrl = '', $privacyUrl = '')
   {
+
+
+    if ($privacyUrl == '') {
+      $tosLabel = str_replace('%s', $tosUrl, $i18n->translate('checkoutForm.tosAccept'));
+    } else {
+      $tosLabel = str_replace('%s', $tosUrl, $i18n->translate('checkoutForm.privacyAccept'));
+      $tosLabel = str_replace('%p', $privacyUrl, $tosLabel);
+    }
+
     $this->id = $id;
     $this->store = $store;
 
@@ -80,7 +89,8 @@ class CheckoutFrom extends Form
         return '<div class="group"><h3>' . $group->label . '</h3>' . $group->childrenToHtml() . '</div>';
       })->label($i18n->translate('checkoutForm.customer.comment')),
 
-      'accept_tos' => Field::checkbox()->required()->label(str_replace('%s', $tosUrl, $i18n->translate('checkoutForm.tosAccept')))->render(function ($field) {
+
+      'accept_tos' => Field::checkbox()->required()->label(str_replace('%s', $tosUrl, $tosLabel))->render(function ($field) {
         return "<label class='checkbox small'>$field->input " . $field->label() . '</label>';
       }),
 
