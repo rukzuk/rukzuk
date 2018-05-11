@@ -33,8 +33,7 @@ class rz_form_commit_checkbox extends SimpleModule{
 
 		$this->formSubmit 	= new \FormSubmit();
 		$fieldId     = 'field' . $unit->getId();
-		$properties  = $unit->getFormValues();
-		$labelText   = $properties["fieldLabel"];
+    $labelText   = $renderApi->getEditableTag($unit, 'fieldLabel', 'span', '');
 
     $choiceField = new \CheckboxField();
     $elementProperties = $choiceField->getElementProperties();
