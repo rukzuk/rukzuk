@@ -1,0 +1,133 @@
+{
+    "form": [
+        {
+            "id": "7e589243-8e05-40d5-a46e-da92fd36ff4d",
+            "name": "{\"de\":\"Eigenschaften\",\"en\":\"Properties\"}",
+            "icon": "",
+            "formGroupData": [
+                {
+                    "params": [
+                        {
+                            "name": "CMSvar",
+                            "value": "fieldLabel",
+                            "allowBlank": false,
+                            "minLength": 3,
+                            "maskRe": {},
+                            "stripCharsRe": {},
+                            "xtype": "textfield",
+                            "emptyText": "__i18n_generatedFormPanel.varNameEmptyText",
+                            "fieldLabel": "__i18n_generatedFormPanel.varNameLabel"
+                        },
+                        {
+                            "name": "xtype",
+                            "value": "CMSrichtexteditorbutton",
+                            "xtype": null
+                        },
+                        {
+                            "name": "isMeta",
+                            "value": false,
+                            "fieldLabel": "__i18n_formElements.isGlobal",
+                            "xtype": "checkbox"
+                        },
+                        {
+                            "name": "showText",
+                            "value": false,
+                            "xtype": null
+                        },
+                        {
+                            "name": "fieldLabel",
+                            "value": "{\"de\":\"Text\",\"en\":\"Text\"}",
+                            "xtype": "textfield",
+                            "allowBlank": false,
+                            "emptyText": "__i18n_formElements.fieldLabelEmptyText",
+                            "fieldLabel": "__i18n_formElements.fieldLabel"
+                        },
+                        {
+                            "name": "text",
+                            "value": "{\"de\":\"Text bearbeiten\",\"en\":\"Edit text\"}",
+                            "xtype": "textfield",
+                            "allowBlank": false,
+                            "emptyText": "__i18n_formElements.buttonEmptyText",
+                            "fieldLabel": "__i18n_formElements.buttonLabel"
+                        },
+                        {
+                            "name": "richTextEditorConfig",
+                            "value": {
+                                "bold": true,
+                                "link": true,
+                                "enterKey": "linebreak",
+                                "linkTargets": [
+                                    [
+                                        "",
+                                        "The same window",
+                                        0
+                                    ],
+                                    [
+                                        "_blank",
+                                        "New window",
+                                        0
+                                    ]
+                                ]
+                            },
+                            "xtype": "CMSrichtexteditorconfiguration"
+                        },
+                        {
+                            "name": "value",
+                            "value": null,
+                            "xtype": null
+                        }
+                    ],
+                    "descr": {
+                        "id": "HtmlRichText",
+                        "text": "__i18n_formElements.elementHtmlRichText",
+                        "iconCls": "richtext",
+                        "hasValue": true
+                    }
+                },
+                {
+                    "params": [
+                        {
+                            "name": "xtype",
+                            "value": "ux-multilinelabel",
+                            "xtype": null
+                        },
+                        {
+                            "name": "hideLabel",
+                            "value": true,
+                            "xtype": null
+                        },
+                        {
+                            "name": "text",
+                            "xtype": "textarea",
+                            "height": 200,
+                            "value": "{\"de\":\"Diese Checkbox muss vor dem Absenden eines Formulars aktiviert werden. Damit kann z.B. die Zustimmung zur Datenschutzerklärung eingeholt werden. Der Inhalt dieses Felds erscheint nicht in der generierten E-Mail oder im Autoresponder.\",\"en\":\"This checkbox must be activated before submitting a form. The content of this field does not appear in the generated e-mail or in the autoresponder.\"}",
+                            "fieldLabel": "__i18n_formElements.commentLabel"
+                        },
+                        {
+                            "name": "autoLink",
+                            "value": true,
+                            "xtype": null
+                        },
+                        {
+                            "name": "cls",
+                            "value": "modulecomment",
+                            "xtype": null
+                        },
+                        {
+                            "name": "value",
+                            "xtype": null
+                        }
+                    ],
+                    "descr": {
+                        "id": "Comment",
+                        "text": "__i18n_formElements.elementComment",
+                        "iconCls": "plaintext"
+                    }
+                }
+            ]
+        }
+    ],
+    "formValues": {
+        "fieldLabel": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat"
+    }
+}

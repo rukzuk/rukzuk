@@ -1,0 +1,12 @@
+{
+    "name": "{\"de\":\"Formular-Checkbox für Zustimmung\",\"en\":\"Checkbox for Commitment\"}",
+    "description": "{\"de\":\"Erzeugt eine Checkbox für die Zustimmung zur Datenschutzerklärung, AGB etc.\",\"en\":\"Creates a checkbox for the commitment to Privay Policy, Terms of Service etc.\"}",
+    "version": "dev",
+    "icon": "form-element.png",
+    "category": "{\"de\":\"Formular\",\"en\":\"Form\"}",
+    "moduleType": "default",
+    "allowedChildModuleType": "extension",
+    "ghostContainerMode": "force_off",
+    "reRenderRequired": false,
+    "apiType": "APIv1"
+}

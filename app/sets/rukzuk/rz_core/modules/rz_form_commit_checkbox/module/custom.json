@@ -1,0 +1,24 @@
+{
+    "assets":{
+    },
+    "i18n":{
+        "error.moduleOnlyWorkingInForm":{
+            "de":"Dieses Modul muss sich innerhalb eines Formular-Moduls befinden.",
+            "en":"This module must be used inside a form module."
+        }
+    },
+    "selectors":[
+        {
+            "title":"Text",
+            "selector":"&.rz_form_commit_checkbox span"
+        },
+        {
+            "title":"Checkbox",
+            "selector":"&.rz_form_commit_checkbox input"
+        },
+        {
+            "title":"Link",
+            "selector":"&.rz_form_commit_checkbox a"
+        }
+    ]
+}

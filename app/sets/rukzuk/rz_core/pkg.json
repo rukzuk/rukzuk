@@ -41,6 +41,7 @@
     "rz_date",
     "rz_flexbox",
     "rz_form",
+    "rz_form_commit_checkbox",
     "rz_form_field_button",
     "rz_form_field_select",
     "rz_form_field_text",
