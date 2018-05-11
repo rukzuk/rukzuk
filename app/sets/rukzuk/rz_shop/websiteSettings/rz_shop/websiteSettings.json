@@ -242,6 +242,11 @@
             "fieldLabel": "{\"de\": \"Seite mit AGB und Widerrufsbelehrung\", \"en\": \"Page with TOS and Cancellation Policy\"}"
         },
         {
+            "type": "InternalLinkChooser",
+            "CMSvar": "privacyPage",
+            "fieldLabel": "{\"de\": \"Seite mit Datenschutzerklärung\", \"en\": \"Page with Privacy Policy\"}"
+        },
+        {
             "type": "OnOffFieldSet",
             "CMSvar": "paymentInvoice",
             "fieldLabel": "{\"de\": \"Auf Rechnung\", \"en\": \"Invoice\"}",
