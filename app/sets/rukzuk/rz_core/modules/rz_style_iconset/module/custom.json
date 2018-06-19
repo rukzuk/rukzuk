@@ -1,3 +1,9 @@
 {
-    
+    "assets":{
+        "css":[
+            {
+                "file":"style.css"
+            }
+        ]
+    }
 }
