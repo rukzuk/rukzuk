@@ -19,6 +19,53 @@ CMS.home.PageTreeLoader = Ext.extend(Ext.tree.TreeLoader, {
     */
     replaceChildNodes: function (node, newChildren, websiteId) {
         this.baseAttrs.websiteId = websiteId;
+
+        function getExpandedNodes(node) {
+            var nodes = [];
+            var selectedNode;
+            node.eachChild(function (child) {
+                //function to store state of tree recursively
+                var storeTreeState = function (node, expandedNodes) {
+                    if (node.isSelected()) {
+                        selectedNode = node.id;
+                    }
+                    if(node.isExpanded() && node.childNodes.length > 0) {
+                        expandedNodes.push(node.id);
+                        node.eachChild(function (child) {
+                            storeTreeState(child, expandedNodes);
+                        });
+                    }
+                };
+                storeTreeState(child, nodes);
+            });
+
+            return {
+                expandedNodes : nodes,
+                selectedNode: selectedNode
+            }
+        }
+
+        function setExpandedNodes(node, expandedNodes, selectedNode) {
+            node.eachChild(function (child) {
+                //function to set state of tree recursively
+                var restoreTreeState = function (node, expandedNodes) {
+                    if (expandedNodes.indexOf(node.id) != -1) {
+                        node.expand();
+                    }
+                    if (node.id == selectedNode) {
+                        node.select();
+                        node.ensureVisible();
+                    }
+                    node.eachChild(function (child) {
+                        restoreTreeState(child, expandedNodes);
+                    });
+                };
+                restoreTreeState(child, expandedNodes);
+            });
+        }
+
+        var expandedNodes = getExpandedNodes(node);
+
         node.beginUpdate();
         node.removeAll();
         Ext.each(newChildren, function (c) {
@@ -28,10 +75,15 @@ CMS.home.PageTreeLoader = Ext.extend(Ext.tree.TreeLoader, {
             }
         }, this);
         node.endUpdate();
+        if (expandedNodes) {
+            console.log(expandedNodes);
+            setExpandedNodes(node, expandedNodes.expandedNodes, expandedNodes.selectedNode);
+        }
+
     },
 
     createNode: function (c) {
-        c.expanded = true;
+        c.expanded = false;
         // console.log('[PageTreeLoader] node config ', c);
         if (c.id == 'root') {
             c.uiProvider = Ext.tree.RootTreeNodeUI;

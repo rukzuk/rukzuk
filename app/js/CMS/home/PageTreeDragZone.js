@@ -15,6 +15,7 @@ CMS.home.PageTreeDragZone = function (tree, config) {
 Ext.extend(CMS.home.PageTreeDragZone, Ext.tree.TreeDragZone, {
     onInitDrag: function (e) {
         var data = this.dragData;
+        data.node.select();
         this.tree.eventModel.disable();
         this.proxy.update('');
         data.node.ui.appendDDGhost(this.proxy.ghost.dom);
