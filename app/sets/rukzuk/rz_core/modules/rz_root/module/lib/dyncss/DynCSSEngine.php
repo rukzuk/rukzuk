@@ -32,6 +32,11 @@ class DynCSSEngine {
       // cache buster
       $version = rand();
 
+      // disable deprecation warning since php-v8js 2.0 (as there is no working alternative to the extension system right now)
+      // \V8Js::registerExtension and the $extensions array are both deprecated
+      $errLevel = error_reporting();
+      error_reporting($errLevel & ~E_DEPRECATED);
+
       // emulate a (very poor) browser
       \V8Js::registerExtension('browserEmulator'.$version, file_get_contents($this->basePath . 'browserEmulator.js'));
       // load absurd.js browser version (shared with client)
@@ -55,6 +60,9 @@ class DynCSSEngine {
       };
 
       $this->vm = $vm;
+
+      // back to the regular error level (whatever it was)
+      error_reporting($errLevel);
 
     }
     return $this->vm;
