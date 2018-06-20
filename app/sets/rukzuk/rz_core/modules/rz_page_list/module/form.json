@@ -862,6 +862,11 @@
                                             "contains",
                                             "{\"de\":\"enthält\",\"en\":\"contains\"}",
                                             0
+                                        ],
+                                        [
+                                            "notequal",
+                                            "{\"de\":\"ist nicht gleich\",\"en\":\"is not equal to\"}",
+                                            0
                                         ]
                                     ],
                                     "xtype": "CMSkeyvaluetextarea",

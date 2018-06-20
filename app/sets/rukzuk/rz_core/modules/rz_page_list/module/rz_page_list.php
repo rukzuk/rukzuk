@@ -84,6 +84,10 @@ class rz_page_list extends SimpleModule {
             if (preg_match("/".$value."/", $item[$key])) {
               $newarray[] = $item;
             }
+          } elseif ($filterType == 'notequal') {
+            if ($item[$key] != $value) {
+              $newarray[] = $item;
+            }
           } else {
             if (preg_match("/^".$value."/", $item[$key])) {
               $newarray[] = $item;
