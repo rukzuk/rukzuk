@@ -42,7 +42,7 @@ CMS.home.PageTreeLoader = Ext.extend(Ext.tree.TreeLoader, {
             return {
                 expandedNodes : nodes,
                 selectedNode: selectedNode
-            }
+            };
         }
 
         function setExpandedNodes(node, expandedNodes, selectedNode) {
@@ -76,7 +76,6 @@ CMS.home.PageTreeLoader = Ext.extend(Ext.tree.TreeLoader, {
         }, this);
         node.endUpdate();
         if (expandedNodes) {
-            console.log(expandedNodes);
             setExpandedNodes(node, expandedNodes.expandedNodes, expandedNodes.selectedNode);
         }
 
