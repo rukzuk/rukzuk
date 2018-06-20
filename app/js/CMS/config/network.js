@@ -22,7 +22,7 @@ Ext.ns('CMS.config');
         ajaxTimeouts: { // in ms
             'default': 20 * sec,
 
-            buildWebsite: 20 * min,
+            buildWebsite: 40 * min,
             cloneWebsite: 5 * min,
             deleteAlbum: 2 * min,
             deleteMedia: 2 * min,
@@ -31,8 +31,8 @@ Ext.ns('CMS.config');
             exportModule: 2 * min,
             exportTemplate: 2 * min,
             exportWebsite: 15 * min,
-            importWebsite: 15 * min,
-            publishBuild: 10 * min
+            importWebsite: 25 * min,
+            publishBuild: 20 * min
         },
         urls: {
             // back-end services

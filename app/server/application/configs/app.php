@@ -431,7 +431,7 @@ return array(
     ),
     'dynamic' => array(
       'pageCreator' => array(
-        'timeout' => 30,
+        'timeout' => 40,
         'maxRetryLimit' => 3,
       )
     )
@@ -472,7 +472,7 @@ return array(
         ),
         'status' => array(
           'url' => '/publisher/status/',
-          'timeout' => 20,
+          'timeout' => 40,
           'maxRedirects' => 2,
         ),
         'delete' => array(
