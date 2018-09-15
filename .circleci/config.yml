@@ -1,0 +1,183 @@
+version: 2
+jobs:
+  rukzuk_deps:
+    docker:
+      - image: rukzuk/circleci-buildimage:latest
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - rukzuk-npm-install-{{ .Branch }}-{{ checksum "package.json" }}
+            - rukzuk-npm-install-{{ .Branch }}-
+            - rukzuk-npm-install-
+      - run: npm install
+      - save_cache:
+          key: rukzuk-npm-install-{{ .Branch }}-{{ checksum "package.json" }}
+          paths:
+            - node_modules
+      - restore_cache:
+          keys:
+            - rukzuk-composer-install-{{ .Branch }}-{{ checksum "./app/server/composer.lock" }}-{{ checksum "./app/server/library/composer.lock" }}
+            - rukzuk-composer-install-{{ .Branch }}-
+            - rukzuk-composer-install-
+      - run: grunt composer:dev:install
+      - run: grunt composer:production:install
+      - save_cache:
+          key: rukzuk-composer-install-{{ .Branch }}-{{ checksum "./app/server/composer.lock" }}-{{ checksum "./app/server/library/composer.lock" }}
+          paths:
+            - ./app/server/vendor
+            - ./app/server/library/vendor
+      - persist_to_workspace:
+          root: .
+          paths:
+            - ./node_modules
+            - ./app/server/vendor
+            - ./app/server/library/vendor
+
+  module_deps:
+    docker:
+      - image: rukzuk/circleci-buildimage:latest
+    steps:
+      - checkout
+      - restore_cache:
+          key: modules-npm-install-{{ checksum "./app/sets/rukzuk/package.json" }}
+      - run:
+          command: npm install
+          working_directory: app/sets/rukzuk
+      - save_cache:
+          key: modules-npm-install-{{ checksum "package.json" }}
+          paths:
+            - app/sets/rukzuk/node_modules
+      - persist_to_workspace:
+          root: .
+          paths:
+            - ./app/sets/rukzuk/node_modules
+
+  test_client:
+    docker:
+      - image: rukzuk/circleci-buildimage:latest
+    steps:
+      - checkout
+      - attach_workspace:
+          at: .
+      - run: grunt test
+
+  test_backend:
+    docker:
+      - image: rukzuk/circleci-buildimage:latest
+    steps:
+      - checkout
+      - attach_workspace:
+          at: .
+      - run: grunt phpunit
+
+  test_modules:
+    docker:
+      - image: rukzuk/circleci-buildimage:latest
+    steps:
+      - checkout
+      - attach_workspace:
+          at: .
+      - run:
+          command: grunt test
+          working_directory: app/sets/rukzuk
+
+  build_snapshot:
+    docker:
+      - image: rukzuk/circleci-buildimage:latest
+    steps:
+      - checkout
+      - attach_workspace:
+          at: .
+      - run:
+          command: grunt build --channel=dev
+          working_directory: app/sets/rukzuk
+      - run: grunt package --channel=dev
+      - store_artifacts:
+          path: artifacts/SNAPSHOT.tgz
+          destination: snapshot.tgz
+
+  build_release:
+    docker:
+      - image: rukzuk/circleci-buildimage:latest
+    steps:
+      - checkout
+      - attach_workspace:
+          at: .
+      - run:
+          command: grunt build --channel=stable --build=${CIRCLE_TAG}
+          working_directory: app/sets/rukzuk
+      - run: grunt package --channel=stable --build=${CIRCLE_TAG}
+      - persist_to_workspace:
+          root: .
+          paths:
+            - ./artifacts/*
+      - store_artifacts:
+          path: artifacts
+          destination: release
+
+  upload_release_to_github:
+    docker:
+      - image: circleci/golang
+    steps:
+      - attach_workspace:
+          at: .
+      - run: go get github.com/aktau/github-release
+      - run: github-release upload --user rukzuk --repo rukzuk --tag ${CIRCLE_TAG} --name ${CIRCLE_TAG}.tgz --file artifacts/${CIRCLE_TAG}.tgz
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - rukzuk_deps:
+          filters:
+            tags:
+              only: /.*/
+      - module_deps:
+          filters:
+            tags:
+              only: /.*/
+      - test_client:
+          requires:
+            - rukzuk_deps
+          filters:
+            tags:
+              only: /.*/
+      - test_backend:
+          requires:
+            - rukzuk_deps
+          filters:
+            tags:
+              only: /.*/
+      - test_modules:
+          requires:
+            - rukzuk_deps
+            - module_deps
+          filters:
+            tags:
+              only: /.*/
+      - build_snapshot:
+          requires:
+            - rukzuk_deps
+            - module_deps
+          filters:
+            tags:
+              ignore: /^0\.20[0-9]{6}\.[0-9]+\.(test|stable)$/
+      - build_release:
+          requires:
+            - test_client
+            - test_modules
+            - test_backend
+          filters:
+            tags:
+              only: /^0\.20[0-9]{6}\.[0-9]+\.(test|stable)$/
+            branches:
+              ignore: /.*/
+      - upload_release_to_github:
+          requires:
+            - build_release
+          filters:
+            tags:
+              only: /^0\.20[0-9]{6}\.[0-9]+\.(test|stable)$/
+            branches:
+              ignore: /.*/

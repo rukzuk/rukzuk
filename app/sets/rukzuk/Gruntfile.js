@@ -139,7 +139,8 @@ module.exports = function (grunt) {
                 '!rz_core/modules/rz_root/assets/js/respimage.js',
             ],
             options: {
-                jshintrc: '.jshintrc'
+                jshintrc: '.jshintrc',
+                reporterOutput: ""
             }
         },
 

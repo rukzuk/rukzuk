@@ -54,7 +54,8 @@ module.exports = function (grunt) {
         jshint: {
             files: testFiles || ['Gruntfile.js', 'app/js/CMS/**/*.js', 'app/js/SB/**/*.js', 'app/default/pageType/**/*.js', 'app/js/ext-overrides.js', '!app/js/SB/lib/URI.js'],
             options: {
-                jshintrc: '.jshintrc'
+                jshintrc: '.jshintrc',
+                reporterOutput: ""
             }
         },
 
