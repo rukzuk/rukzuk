@@ -19,6 +19,6 @@
     "grunt-phpcs": "~0.2.2",
     "grunt-phplint": "~0.0.5",
     "grunt-template-jasmine-requirejs": "~0.1.8",
-    "lodash": "~2.4.1"
+    "lodash": "~4.17.10"
   }
 }
