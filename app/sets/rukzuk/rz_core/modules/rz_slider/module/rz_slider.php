@@ -35,7 +35,8 @@ class rz_slider extends SimpleModule
       'unitId' => $unit->getId(),
       /* disable css animations in edit mode (required to use handles, eg. multi column box - translate3d breaks position:fixed! */
       'useCSS' => $api->isEditMode(),
-      'keyboardEnabled' => ($api->getFormValue($unit, 'enableKeyboard') && !$api->isEditMode()) ? true : false
+      'keyboardEnabled' => ($api->getFormValue($unit, 'enableKeyboard') && !$api->isEditMode()) ? true : false,
+      'touchEnabled' => !$api->isEditMode() ? true : false
     );
 
     $startSlide = $api->getFormValue($unit, 'startSlide');
@@ -91,7 +92,6 @@ class rz_slider extends SimpleModule
     foreach ($nonRenderItems as $item) {
       $renderApi->renderUnit($item);
     }
-
   }
 
   /**
