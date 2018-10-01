@@ -36,7 +36,7 @@ module.exports = function (grunt) {
     if (!packageIds && buildChannel) {
         var channelMap = grunt.file.readJSON('channelmap.json');
         var packageIdsInChannel = _.map(_.filter(channelMap.packages, function (obj) {
-            return _.contains(obj.channels, buildChannel);
+            return _.includes(obj.channels, buildChannel);
         }), 'id');
         packageIds = packageIdsInChannel.join(',');
     }
@@ -139,7 +139,8 @@ module.exports = function (grunt) {
                 '!rz_core/modules/rz_root/assets/js/respimage.js',
             ],
             options: {
-                jshintrc: '.jshintrc'
+                jshintrc: '.jshintrc',
+                reporterOutput: ""
             }
         },
 
