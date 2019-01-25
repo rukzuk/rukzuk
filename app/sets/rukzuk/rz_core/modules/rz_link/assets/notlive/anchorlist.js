@@ -5,9 +5,11 @@ define(['jquery', 'CMS', 'rz_root/notlive/js/cssHelper'], function ($, CMS, cssH
     var updateDropDown = function (cfg) {
         $('.rz_anchor').each(function(){
             var unitData = CMS.get($(this).attr('id'));
-            var option = [];
-            option.push(unitData.formValues.anchorId.value, unitData.formValues.anchorName.value);
-            anchorList.push(option);
+            if (unitData) {
+                var option = [];
+                option.push(unitData.formValues.anchorId.value, unitData.formValues.anchorName.value);
+                anchorList.push(option);
+            }
         });
         CMS.updateFormFieldConfig(cfg.unitId, 'anchorId', {
             options: anchorList
