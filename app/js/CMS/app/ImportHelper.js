@@ -66,7 +66,6 @@ CMS.app.ImportHelper = {
     * @private
     */
     openFileSelection: function (cfg) {
-        var self = this;
         this.win = new Ext.Window({
             title: cfg.title,
             modal: true,
