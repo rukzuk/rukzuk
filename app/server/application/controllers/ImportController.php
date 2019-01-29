@@ -59,14 +59,18 @@ class ImportController extends Controller\Action
   {
     $validatedRequest = $this->getValidatedRequest('Import', 'File');
     $this->setContentTypeValue('text/plain');
-    
+
     // WebsiteId uebergeben?
     $websiteId = $validatedRequest->getWebsiteId();
     if ($websiteId === Cms\Request\Import\File::DEFAULT_EMPTY_WEBSITE_ID) {
       $websiteId = null;
     }
 
-    $uploadFilename = $validatedRequest->getUploadFilename();
+
+    $chunks = $validatedRequest->getParam('chunks');
+    $chunk = $validatedRequest->getParam('chunk');
+
+    $uploadFilename = $validatedRequest->getParam('name');
     $allowedType = $validatedRequest->getAllowedType();
     $logInfo = array(
       'file' => $uploadFilename,
@@ -79,7 +83,9 @@ class ImportController extends Controller\Action
       $importData = $this->getBusiness()->importUploadFile(
           $uploadFilename,
           $websiteId,
-          $allowedType
+          $allowedType,
+          $chunks,
+          $chunk
       );
       $this->responseData->setData(new ImportResponse($importData));
       $this->logImport(ImportBusiness::IMPORT_FROM_FILE, $importData, $logInfo);
@@ -94,6 +100,7 @@ class ImportController extends Controller\Action
       $error->setText($e->getMessage());
       $this->responseData->addError($error);
     }
+
   }
   
   public function urlAction()

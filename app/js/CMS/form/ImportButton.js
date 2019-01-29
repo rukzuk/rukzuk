@@ -1,202 +1,479 @@
 /**
-* @class CMS.form.ImportButton
-* @extends Ext.ux.form.BrowseButton
-* A button for importing files. Upload will start immediately when a file is selected.
-* Upon successful upload, the {@link #success} handler is called, otherwise the {@link #failure} handler
-* NOTE: It is not possible to detect server errors (404, 500, etc.) using JavaScript, so the failure
-* handler is only called when the server returns something.
-* <a href="http://stackoverflow.com/questions/35240">http://stackoverflow.com/questions/35240</a>
-* <a href="http://stackoverflow.com/questions/375710">http://stackoverflow.com/questions/375710</a>
-*/
-Ext.reg('CMSimportbutton', Ext.ns('CMS.form').ImportButton = Ext.extend(Ext.ux.form.FileUploadField, {
-
-    buttonOnly: true,
-
-    name: 'file',
-
+ * @class CMS.form.ImportButton
+ * @extends Ext.grid.GridPanel
+ *
+ * Upload panel with a grid and pluploader instance
+ *
+ */
+CMS.CMSimporter = Ext.extend(Ext.grid.GridPanel, {
+    autoScroll: false,
+    border: false,
+    enableHdMenu: false,
     /**
-    * @cfg {Function} success
-    * Success handler for upload
-    */
-    success: Ext.emptyFn,
-
-    /**
-    * @cfg {Function} failure
-    * Failure handler for upload
-    */
-    failure: Ext.emptyFn,
-
-    /**
-    * @cfg {String} failureTitle
-    * Will be passed to {@link CMS.app.TrafficManager}'s <tt>sendRequest</tt> method
-    */
-    failureTitle: '',
-
-    /**
-    * @property siteId
-    * @type String
-    * The {CMS.data.WebsiteRecord}'s id that will be sent with the upload
-    */
-    siteId: '',
-
-    /**
-     * @cfg {String} allowedType
-     * The allowed import type (see CMS.config.importTypes)
+     * Only allow a single file to be uploaded
+     * @property
+     * @type {Boolean}
      */
-    allowedType: undefined,
+    singleFile: true,
+    autoExpandColumn: 'name',
+    cls: 'mediaDBUploader',
 
     /**
-    * @cfg {Boolean} logFailure
-    * Passed to TrafficManager to determine wether upload failures should be logged automatically. Defaults to <tt>true</tt>.
-    * If set to <tt>false</tt>, the failure should be logged in <tt>failure</tt> callback.
-    */
-    logFailure: true,
-
-    /**
-    * @cfg {String} wrapperCls
-    * (optional) An additional CSS class to be added to the wrapper div that Ext.ux.form.FileUploadField generates
-    */
-    wrapperCls: '',
-
-    /**
-    * @cfg {String} windowTitle
-    * The title of the progress window.
-    */
-    windowTitle: '',
+     * @cfg (String) url
+     * The url to upload the files to
+     */
+    url: '',
 
     initComponent: function () {
-        this.buttonCfg = this.buttonCfg ||  { iconCls: 'x-btn-icon import' };
-        if (this.iconCls) {
-            this.buttonCfg.iconCls = (this.buttonCfg.iconCls || '') + ' ' + this.iconCls;
-        }
-        CMS.form.ImportButton.superclass.initComponent.apply(this, arguments);
-        this.enableBubble();
-        this.on('fileselected', function (self) {
-            var clonedButton = new Ext.ux.form.FileUploadField();
-            clonedButton.suspendEvents();
+        this.success = [];
+        this.failed = [];
 
-            // create dummy form, which is needed for AJAX-like submit
-            var panel = new Ext.form.FormPanel({
-                hidden: true,
-                fileUpload: true,
-                standardSubmit: false,
-                clientValidation: false,
-                items: clonedButton
-            });
-            panel.render(Ext.getBody());
+        this.viewConfig = this.viewConfig || {};
+        this.viewConfig.deferEmptyText = false;
+        this.viewConfig.emptyText = [
+            '<span class="empty-msg">',
+            CMS.i18n('Dateien auswählen…'),
+            '</span>'
+        ].join('');
 
-            // move file input field over to form
-            clonedButton.fileInput.remove();
-            clonedButton.fileInput = clonedButton.wrap.appendChild(self.fileInput);
-
-            var failureHandler;
-            var successHandler = function () {
-                self.frame = null;
-                self.throbberWin.destroy();
-                if (!self.cancelling) {
-                    self.success.apply(self, arguments);
-                }
-                panel.destroy();
-                panel = failureHandler = successHandler = null;
-            };
-
-            self.showThrobberWindow();
-
-            failureHandler = function () {
-                self.frame = null;
-                self.throbberWin.destroy();
-                if (!self.cancelling) {
-                    self.failure.apply(self, arguments);
-                }
-                panel.destroy();
-                panel = successHandler = failureHandler = null;
-            };
-
-            CMS.app.trafficManager.sendRequest({
-                action: 'importFile',
-                form: panel.getForm().getEl().dom,
-                success: successHandler,
-                failure: failureHandler,
-                logFailure: this.logFailure,
-                failureTitle: self.failureTitle,
-                data: {
-                    websiteId: self.siteId,
-                    allowedType: self.allowedType
-                }
-            });
-            // Ext.Ajax.doFormUpload() creates a hidden iframe, which is not reachable via API.
-            var iframes = Ext.query('iframe.x-hidden');
-            // It must be this one:
-            self.frame = iframes[iframes.length - 1];
-
-            // re-create file input field
-            self.reset();
-        });
-    },
-
-    showThrobberWindow: function () {
-        var self = this;
-        this.throbberWin = new Ext.Window({
-            title: this.windowTitle || CMS.i18n('Importvorgang'),
-            modal: true,
-            closable: false,
-            cls: 'CMSprogress CMSuploadprogress',
-            width: 200,
-            plain: true,
-            border: false,
-            items: {
-                plain: true,
-                border: false,
-                html: '<span class="spinner">' + CMS.i18n('Datei wird hochgeladen') + '</span>'
-            },
-            buttons: [{
-                text: CMS.i18n('Abbrechen'),
-                iconCls: 'cancel',
-                handler: this.cancelUpload,
+        this.store = new Ext.data.JsonStore({
+            fields: ['id', 'loaded', 'name', 'size', 'percent', 'status', 'msg'],
+            listeners: {
+                load: this.onStoreLoad,
+                remove: this.onStoreRemove,
+                update: this.onStoreUpdate,
                 scope: this
-            }],
-            destroy: function () {
-                Ext.Window.prototype.destroy.apply(this, arguments);
-                self = null;
             }
         });
-        this.throbberWin.show();
-    },
 
-    /**
-    * Cancel the currently running upload, if any.
-    */
-    cancelUpload: function () {
-        if (this.cancelling) {
-            return;
-        }
-        this.cancelling = true;
-        if (this.frame) {
-            this.frame.src = 'blank.html'; // this should cancel the upload, see http://stackoverflow.com/a/3654202/27862
-        }
-        if (this.throbberWin) {
-            this.throbberWin.destroy();
-        }
-        /**
-        * @event cancel
-        * Fired when the currently running upload is cancelled
-        * @param {Object} this
-        */
-        this.fireEvent('cancel', this);
-    },
+        this.columns = [{
+            id: 'name',
+            dataIndex: 'name',
+            sortable: true,
+            header: CMS.i18n('Dateiname')
+        }, {
+            id: 'size',
+            dataIndex: 'size',
+            width: 65,
+            sortable: true,
+            header: CMS.i18n('Größe'),
+            renderer: 'fileSize'
+        }, {
+            id: 'status',
+            dataIndex: 'status',
+            width: 230,
+            sortable: true,
+            header: CMS.i18n('Status'),
+            renderer: {
+                fn: function (value, metaData, record) {
+                    var msg;
+                    switch (value) {
+                        case plupload.QUEUED:
+                            msg = '';
+                            break;
+                        case plupload.UPLOADING:
+                            msg = String.format(CMS.i18n('wird hochgeladen… ({0}%)'), record.get('percent'));
+                            break;
+                        case plupload.FAILED:
+                            msg = record.get('msg') || CMS.i18n('Fehler');
+                            msg = '<span class="error">' + msg + '</span>';
+                            break;
+                        case plupload.DONE:
+                            msg = '<span class="success">' + CMS.i18n('Übertragung abgeschlossen') + '</span>';
+                            break;
+                    }
 
-    onRender: function () {
-        CMS.form.ImportButton.superclass.onRender.apply(this, arguments);
-        if (this.wrapperCls) {
-            this.wrap.addClass(this.wrapperCls);
-        }
+                    return msg;
+                },
+                scope: this
+            }
+        }];
+
+        this.bbar = {
+            items: [{
+                /**
+                 * @name progressBar
+                 * @type Ext.ProgressBar
+                 * @memberOf CMS.form.ImportButton
+                 * @property
+                 */
+                xtype: 'progress',
+                ref: '../progressBar',
+                animate: true,
+                height: 40,
+                width: 250
+            }, '->', {
+                /**
+                 * @name cancelButton
+                 * @type Ext.Button
+                 * @memberOf CMS.form.ImportButton
+                 * @property
+                 */
+                text: CMS.i18n('Abbrechen'),
+                handler: this.onCancel,
+                scope: this,
+                disabled: true,
+                ref: '../cancelButton',
+                iconCls: 'cancel'
+            }, {
+                /**
+                 * @name startButton
+                 * @type Ext.Button
+                 * @memberOf CMS.form.ImportButton
+                 * @property
+                 */
+                text: CMS.i18n('Hochladen'),
+                handler: this.onUpload,
+                scope: this,
+                disabled: true,
+                ref: '../startButton',
+                cls: 'primary',
+                iconCls: 'upload'
+            }]
+        };
+
+        this.tbar = {
+            items: [{
+                /**
+                 * @name addButton
+                 * @type Ext.Button
+                 * @memberOf CCMS.form.ImportButton
+                 * @property
+                 */
+                text: this.singleFile ? CMS.i18n('Datei auswählen', 'mediadb.selectFile') : CMS.i18n('Dateien auswählen', 'mediadb.selectFiles'),
+                ref: '../addButton',
+                iconCls: 'addfile',
+                disabled: true
+            }, '->', {
+                /**
+                 * @name deleteButton
+                 * @type Ext.Button
+                 * @memberOf CMS.form.ImportButtona
+                 * @property
+                 */
+                text: CMS.i18n('Entfernen'),
+                tooltip: {
+                    text: CMS.i18n('Aus Liste entfernen')
+                },
+                handler: this.onDelete,
+                scope: this,
+                disabled: true,
+                ref: '../deleteButton',
+                iconCls: 'delete'
+            }]
+        };
+
+        this.on('afterRender', this.initUploader, this);
+
+        CMS.CMSimporter.superclass.initComponent.apply(this, arguments);
     },
 
     destroy: function () {
-        if (this.throbberWin) {
-            this.throbberWin.destroy();
-        }
-        CMS.form.ImportButton.superclass.destroy.apply(this, arguments);
-    }
+        this.uploader.destroy(); //this also removes the events set in this.initUploader()
+        this.store.destroy();
 
-}));
+        CMS.CMSimporter.superclass.destroy.apply(this, arguments);
+    },
+
+    /**
+     * @private
+     */
+    initUploader: function () {
+        this.uploader = new plupload.Uploader({
+            url: this.url,
+            runtimes: 'html5',
+            required_features: 'multipart',
+            browse_button: this.addButton.getEl().dom.id,
+            browse_button_hover: 'x-btn-focus x-btn-over',
+            browse_button_active: 'x-btn-focus x-btn-over x-btn-click',
+            container: this.getTopToolbar().getEl().dom.id,
+            flash_swf_url: CMS.config.urls.pluploadFlash,
+            multi_selection: false,
+            chunk_size: '2048kb',
+            urlstream_upload: true, //forces URLStream method, otherwise cookie won't be send (see http://www.plupload.com/punbb/viewtopic.php?id=249)
+            multipart: true,
+            drop_element: this.body.dom.id
+        });
+
+        //listen to plupload events
+        Ext.each(['Init', 'FilesAdded', 'FilesRemoved', 'FileUploaded', 'Refresh', 'StateChanged', 'UploadFile', 'UploadProgress', 'UploadComplete', 'Error'], function (method) {
+            this.uploader.bind(method, this.uploaderListeners[method], this);
+        }, this);
+
+        this.uploader.init();
+    },
+
+    /**
+     * Returns true or false, whether the uploader is currently running
+     */
+    isUploading: function () {
+        return this.uploader.state == plupload.UPLOADING;
+    },
+
+    /**
+     * @private
+     */
+    onDelete: function () {
+        Ext.each(this.getSelectionModel().getSelections(), function (record) {
+            var id = record.get('id');
+            var fileObj = this.uploader.getFile(id);
+
+            if (fileObj) {
+                this.uploader.removeFile(fileObj);
+            } else {
+                this.store.remove(this.store.getById(id));
+            }
+        }, this);
+    },
+
+    /**
+     * @private
+     */
+    onUpload: function () {
+        this.uploader.start();
+    },
+
+    /**
+     * @private
+     */
+    onCancel: function () {
+        this.uploader.stop();
+    },
+
+    /**
+     * @private
+     */
+    updateProgressBar: function () {
+        var t = this.uploader.total;
+        var speed = Ext.util.Format.fileSize(t.bytesPerSec);
+        var total = this.store.getCount();
+        var failed = this.failed.length;
+        var success = this.success.length;
+        var sent = failed + success;
+        var queued = total - success - failed;
+
+        if (total) {
+            var progressText = String.format(CMS.i18n('{0} von {1} ({5}/s)'), sent, total, success, failed, queued, speed);
+            var percent = t.percent / 100;
+
+            this.progressBar.updateProgress(percent, progressText);
+        } else {
+            this.progressBar.updateProgress(0, ' ');
+        }
+    },
+
+    /**
+     * @private
+     */
+    updateStore: function (file) {
+        if (!file.msg) {
+            file.msg = '';
+        }
+        var record = this.store.getById(file.id);
+        if (record) {
+            record.data = file;
+            record.commit();
+        } else {
+            this.store.loadData([file], true);
+        }
+    },
+
+    /**
+     * @private
+     */
+    onStoreLoad: function (store, record, operation) {
+        this.updateProgressBar();
+    },
+
+    /**
+     * @private
+     */
+    onStoreRemove: function (store, record, operation) {
+        if (!store.getCount()) {
+            this.deleteButton.setDisabled(true);
+            this.startButton.setDisabled(true);
+            this.uploader.total.reset();
+        }
+        var id = record.get('id');
+
+        Ext.each(this.success, function (file) {
+            if (file && file.id == id) {
+                this.success.remove(file);
+            }
+        }, this);
+
+        Ext.each(this.failed, function (file) {
+            if (file && file.id == id) {
+                this.failed.remove(file);
+            }
+        }, this);
+
+        this.updateProgressBar();
+    },
+
+    /**
+     * @private
+     */
+    onStoreUpdate: function (store, record, operation) {
+        this.updateProgressBar();
+    },
+
+
+
+    /*
+     * methods which are bind to plupload events
+     * list of available events: http://www.plupload.com/plupload/docs/api/index.html#class_plupload.Uploader.html
+     */
+    uploaderListeners: {
+        Init: function (uploader, data) {
+            console.log('[Uploader] initialized uploader with runtime: ', data.runtime);
+
+            //HACK SBCMS-708 Disabled the file filter in the select dialog for HTML5 runtime; https://github.com/moxiecode/plupload/issues/352#issuecomment-2453096
+            if (data.runtime == plupload.runtimes.Html5.name) {
+                (function () {
+                    Ext.get(uploader.id + '_html5').set({accept: '*'});
+                }).defer(1);
+            }
+
+            if (this.uploader.features.dragdrop) {
+                var view = this.getView();
+                view.emptyText = [
+                    '<span class="empty-msg">',
+                    this.singleFile ? CMS.i18n('Datei hier hineinziehen oder oben auswählen…', 'mediadb.emptyTextDropSingle') :
+                        CMS.i18n('Dateien hier hineinziehen oder oben auswählen…', 'mediadb.emptyTextDrop'),
+                    '</span>'
+                ].join('');
+
+                if (view.rendered) {
+                    view.refresh();
+                }
+            }
+            this.addButton.setDisabled(false);
+        },
+
+        FilesAdded: function (uploader, files) {
+            if (this.singleFile) {
+                if (uploader.files.length > 0) {
+                    // there is already one file
+                    return false;
+                } else if (files.length > 1) {
+                    // allow only a single file to be added
+                    return false;
+                }
+                // hide add button
+                this.addButton.hide();
+            }
+
+            this.deleteButton.setDisabled(false);
+            this.startButton.setDisabled(false);
+
+            Ext.each(files, function (file) {
+                this.updateStore(file);
+            }, this);
+            //this.uploader.start();
+        },
+
+        FilesRemoved: function (uploader, files) {
+
+            if (this.singleFile) {
+                this.addButton.show();
+            }
+
+            Ext.each(files, function (file) {
+                this.store.remove(this.store.getById(file.id));
+            }, this);
+        },
+
+        FileUploaded: function (uploader, file, status) {
+            var response = Ext.decode(status.response);
+            if (response.success === true) {
+                file.server_error = 0;
+                this.success.push(file);
+            } else {
+                if (response.error) {
+                    var error = '';
+                    Ext.each(response.error, function (oneError) {
+                        error += oneError.text + '<br>';
+                    });
+                    file.msg = '<span class="error">' + error + '</span>';
+                }
+                file.server_error = 1;
+                this.failed.push(file);
+            }
+            this.updateStore(file);
+
+        },
+
+        Refresh: function (uploader) {
+            Ext.each(uploader.files, function (file) {
+                this.updateStore(file);
+            }, this);
+        },
+
+        StateChanged: function (uploader) {
+            if (uploader.state == plupload.STARTED) {
+                //this.fireEvent('uploadstarted', this);
+                this.cancelButton.setDisabled(false);
+                this.startButton.setDisabled(true);
+            } else {
+                this.fireEvent('uploadcomplete', this, this.success, this.failed);
+                this.cancelButton.setDisabled(true);
+                this.startButton.setDisabled(false);
+            }
+        },
+
+        UploadFile: function (uploader, file) {
+            this.updateStore(file);
+        },
+
+        UploadProgress: function (uploader, file) {
+            if (file.server_error) {
+                file.status = plupload.FAILED;
+            }
+            this.updateStore(file);
+        },
+                /**
+         * Fires 'allfilesuploaded' event if upload is complete or shows an error message
+         */
+        UploadComplete: function (uploader, files) {
+            var success = true;
+            Ext.each(this.store.getRange(), function (file) {
+                if (file.get('status') == plupload.FAILED) {
+                    success = false;
+                    return false;
+                }
+            });
+
+            if (success) {
+                this.fireEvent('CMSallfilesuploaded');
+                console.log('uploadcomplete');
+            } else {
+                Ext.MessageBox.show({
+                    title: CMS.i18n('Fehler beim Hochladen'),
+                    msg: CMS.i18n('Es konnten nicht alle Dateien erfolgreich hochgeladen werden. Fehlerhafte Dateien wurden in der Liste gekennzeichnet.'),
+                    buttons: Ext.MessageBox.OK,
+                    icon: Ext.MessageBox.ERROR
+                });
+            }
+        },
+
+        Error: function (uploader, data) {
+            data.file.status = plupload.FAILED;
+
+            switch (data.code) {
+                case plupload.FILE_SIZE_ERROR:
+                    data.file.msg = '<span class="error">' + CMS.i18n('Fehler: Datei ist zu groß (max. {maxsize})').replace('{maxsize}', CMS.config.media.maxFileSize.toUpperCase()) + '</span>';
+                    break;
+                case plupload.FILE_EXTENSION_ERROR:
+                    data.file.msg = '<span class="error">' + CMS.i18n('Fehler: Ungültiger Dateityp') + '</span>';
+                    break;
+                default:
+                    data.file.msg = String.format('<span class="error">{2} ({0}: {1})</span>', data.code, data.details, data.message);
+            }
+
+            this.updateStore(data.file);
+        }
+    }
+});
+
+Ext.reg('CMSimporter', CMS.CMSimporter);

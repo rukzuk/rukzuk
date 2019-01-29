@@ -30,6 +30,9 @@ class File extends Base
    * @var string
    */
   private $allowedType;
+
+  private $chunks;
+
   /**
    * @param string $id
    */
@@ -52,6 +55,16 @@ class File extends Base
   {
     $this->uploadFilename = $name;
   }
+
+  /**
+   * @return string
+   */
+  public function getParam($param)
+  {
+    return $_REQUEST[$param];
+  }
+
+
   /**
    * @return string
    */
@@ -59,7 +72,8 @@ class File extends Base
   {
     return $this->uploadFilename;
   }
-  
+
+
   /**
    * @param string $name
    */
@@ -98,9 +112,9 @@ class File extends Base
     } else {
       $this->setWebsiteId($this->getRequestParam('websiteid'));
     }
-    
-    if ($this->getRequestParam('fileinputname') !== null) {
-      $this->setFileInputname($this->getRequestParam('fileinputname'));
+
+    if ($this->getRequestParam('name') !== null) {
+      $this->setFileInputname($this->getRequestParam('name'));
     } else {
       $this->setFileInputname(self::DEFAULT_FILE_INPUT_NAME);
     }
@@ -111,5 +125,7 @@ class File extends Base
     if ($this->getRequestParam('allowedtype') !== null) {
       $this->setAllowedType($this->getRequestParam('allowedtype'));
     }
+
+
   }
 }

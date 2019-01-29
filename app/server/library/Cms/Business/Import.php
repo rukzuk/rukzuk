@@ -82,7 +82,7 @@ class Import extends Base\Service
    * @return array
    * @throws \Cms\Exception
    */
-  public function importUploadFile($uploadFilename, $websiteId, $allowedType)
+  public function importUploadFile($uploadFilename, $websiteId, $allowedType, $chunks, $chunk)
   {
     $config = Registry::getConfig();
     $importDirectory = $config->import->directory;
@@ -90,6 +90,8 @@ class Import extends Base\Service
 
     $import = TransferFactory::getAdapter();
     $imports = $import->getFileInfo();
+
+    $combinedFile = $importDirectory . DIRECTORY_SEPARATOR . $uploadFilename. '.zip';
 
     if (isset($config->import->uploadFile) && isset($config->import->uploadFile->doNotRename)) {
       $renameUploadFile = new Boolean($config->import->uploadFile->doNotRename);
@@ -108,7 +110,31 @@ class Import extends Base\Service
 
     $importFile = $importDirectory . DIRECTORY_SEPARATOR . $uploadFilename;
 
-    return $this->importFile($importFile, $websiteId, $allowedType);
+      // Open temp file
+    $out = @fopen("{$combinedFile}.part", $chunk == 0 ? "wb" : "ab");
+    if ($out) {
+      // Read binary input stream and append it to temp file
+      $in = @fopen($importFile, "rb");
+
+      if ($in) {
+        while ($buff = fread($in, 4096))
+          fwrite($out, $buff);
+      }
+      @fclose($in);
+      @fclose($out);
+
+      @unlink($importFile);
+    }
+
+    // Check if file has been completely uploaded
+    if (!$chunks || $chunk == $chunks - 1) {
+      // Strip the temp .part suffix off
+      rename("{$combinedFile}.part", $combinedFile);
+      return $this->importFile($combinedFile, $websiteId, $allowedType);
+    }
+
+    return array();
+
   }
 
   /**

@@ -71,7 +71,7 @@ CMS.app.ImportHelper = {
             title: cfg.title,
             modal: true,
             cls: 'CMSimportwindow',
-            width: 250,
+            width: 600,
             border: false,
             layout: 'card',
             activeItem: 0,
@@ -85,7 +85,9 @@ CMS.app.ImportHelper = {
                     xtype: 'label',
                     html: cfg.text
                 }, {
-                    xtype: 'CMSimportbutton',
+                    xtype: 'CMSimporter',
+                    url: CMS.config.urls.importFile + '?runId=' + CMS.app.runId + '&websiteId=' + this.websiteId,
+                    singleFile: true,
                     buttonText: CMS.i18n('Datei auswählen'),
                     ref: '../importButton',
                     iconCls: 'importwebsite',
@@ -93,14 +95,10 @@ CMS.app.ImportHelper = {
                     siteId: this.website ? this.website.id : null,
                     allowedType: cfg.allowedType,
                     logFailure: false,
-                    getBubbleTarget: function () {
-                        return this;
-                    },
+                    height: 375,
                     listeners: {
-                        'fileselected': function () {
-                            self.win.hide();
-                            self = null;
-                        }
+                        scope: this,
+                        CMSallfilesuploaded: this.uploadHandler.createDelegate(this)
                     },
                     success: this.uploadHandler.createDelegate(this),
                     failure: this.uploadFailureHandler.createDelegate(this)

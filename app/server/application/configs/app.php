@@ -323,7 +323,7 @@ return array(
       ),
     ),
     'allowed' => array(
-      'types' => 'zip,rukzuk',
+      'types' => 'zip,rukzuk,blob',
     ),
     'url' => array(
       'enabled' => 1,
