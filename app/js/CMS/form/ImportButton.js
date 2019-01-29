@@ -1,3 +1,4 @@
+/*global plupload:true*/
 /**
  * @class CMS.form.ImportButton
  * @extends Ext.grid.GridPanel
@@ -137,7 +138,7 @@ CMS.CMSimporter = Ext.extend(Ext.grid.GridPanel, {
                 /**
                  * @name addButton
                  * @type Ext.Button
-                 * @memberOf CCMS.form.ImportButton
+                 * @memberOf CMS.form.ImportButton
                  * @property
                  */
                 text: this.singleFile ? CMS.i18n('Datei auswählen', 'mediadb.selectFile') : CMS.i18n('Dateien auswählen', 'mediadb.selectFiles'),
@@ -148,7 +149,7 @@ CMS.CMSimporter = Ext.extend(Ext.grid.GridPanel, {
                 /**
                  * @name deleteButton
                  * @type Ext.Button
-                 * @memberOf CMS.form.ImportButtona
+                 * @memberOf CMS.form.ImportButton
                  * @property
                  */
                 text: CMS.i18n('Entfernen'),
