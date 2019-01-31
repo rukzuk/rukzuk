@@ -257,7 +257,6 @@
         "HTTP-Fehler „{code} {statustext}“": "HTTP error “{code} {status}”",
         "{i} Fehler": "{i} Error",
         "Importieren": "Import",
-        "Importvorgang": "Import",
         "Im Snippet befinden sich Module welche in dieser Website nicht vorhanden sind. Das Snippet kann daher nicht eingefügt werden.": "In this snippet are modules which aren’t available in this project. The snippet can’t be inserted.",
         "In Bearbeitung": "In progress",
         "In Gruppe aufnehmen": "Add to user group",
