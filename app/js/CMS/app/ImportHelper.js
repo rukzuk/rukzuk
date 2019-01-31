@@ -85,7 +85,7 @@ CMS.app.ImportHelper = {
                     html: cfg.text
                 }, {
                     xtype: 'CMSimporter',
-                    url: CMS.config.urls.importFile + '?runId=' + CMS.app.runId + '&websiteId=' + this.websiteId,
+                    url: CMS.config.urls.importFile + '?runId=' + CMS.app.runId + '&websiteid=' + (this.website ? this.website.id : null),
                     singleFile: true,
                     buttonText: CMS.i18n('Datei auswählen'),
                     ref: '../importButton',

@@ -106,15 +106,15 @@ class File extends Base
 
   protected function setValues()
   {
-    if ($this->getRequestParam('websiteid') === null ||
-        $this->getRequestParam('websiteid') === '') {
+    if ($this->getParam('websiteid') === null ||
+        $this->getParam('websiteid') === '') {
       $this->setWebsiteId(self::DEFAULT_EMPTY_WEBSITE_ID);
     } else {
-      $this->setWebsiteId($this->getRequestParam('websiteid'));
+      $this->setWebsiteId($this->getParam('websiteid'));
     }
 
-    if ($this->getRequestParam('name') !== null) {
-      $this->setFileInputname($this->getRequestParam('name'));
+    if ($this->getParam('name') !== null) {
+      $this->setFileInputname($this->getParam('name'));
     } else {
       $this->setFileInputname(self::DEFAULT_FILE_INPUT_NAME);
     }
