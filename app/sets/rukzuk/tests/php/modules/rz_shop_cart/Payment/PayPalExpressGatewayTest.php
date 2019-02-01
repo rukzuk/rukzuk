@@ -156,36 +156,7 @@ class PayPalExpressGatewayTest extends AbstractModuleTestCase
     $paymentMock->completePurchase(array());
   }
 
-  public function test_getOmnipayGateway()
-  {
-    // ARRANGE
-    $uniqueString = __CLASS__ . '::' . __METHOD__ . '::' . __LINE__;
-    $expectedUsername = 'username' . $uniqueString;
-    $expectedPassword = 'password' . $uniqueString;
-    $expectedSignature = 'signature' . $uniqueString;
 
-    $translatorMock = $this->getTranslatorMock();
-    $cart = $this->getCartMock();
-    $checkoutMock = $this->getCheckoutMock();
-    $settingsMock = $this->getShopSettingsMock(null, null, array(
-      'getPayPalExpressUsername' => array($this->once(), $expectedUsername),
-      'getPayPalExpressPassword' => array($this->once(), $expectedPassword),
-      'getPayPalExpressSignature' => array($this->once(), $expectedSignature),
-    ));
-    $paymentMock = $this->getPayPalExpressGatewayMock(array(),
-      array($settingsMock, $checkoutMock, $cart, $translatorMock));
-
-    // ACT
-    /** @var \Omnipay\PayPal\ExpressGateway $actualOmnipayGateway */
-    $actualOmnipayGateway = $this->callMethod($paymentMock, 'getOmnipayGateway');
-
-    // ASSERT
-    $this->assertInstanceOf('\Omnipay\PayPal\ExpressGateway', $actualOmnipayGateway);
-    $this->assertSame($expectedUsername, $actualOmnipayGateway->getUsername());
-    $this->assertSame($expectedPassword, $actualOmnipayGateway->getPassword());
-    $this->assertSame($expectedSignature, $actualOmnipayGateway->getSignature());
-    $this->assertFalse($actualOmnipayGateway->getTestMode());
-  }
 
   public function test_createCardForShippingAddress()
   {
