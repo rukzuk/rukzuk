@@ -113,8 +113,8 @@ class File extends Base
       $this->setWebsiteId($this->getParam('websiteid'));
     }
 
-    if ($this->getParam('name') !== null) {
-      $this->setFileInputname($this->getParam('name'));
+    if ($this->getRequestParam('name') !== null) {
+      $this->setFileInputname($this->getRequestParam('name'));
     } else {
       $this->setFileInputname(self::DEFAULT_FILE_INPUT_NAME);
     }
