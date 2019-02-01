@@ -61,7 +61,12 @@ class File extends Base
    */
   public function getParam($param)
   {
-    return $_REQUEST[$param];
+    if ($_REQUEST[$param]) {
+      return $_REQUEST[$param];
+    } else {
+      return null;
+    }
+
   }
 
 
@@ -107,11 +112,13 @@ class File extends Base
   protected function setValues()
   {
     if ($this->getParam('websiteid') === null ||
-        $this->getParam('websiteid') === '') {
+        $this->getParam('websiteid') === '' ||
+        $this->getParam('websiteid') === 'null') {
       $this->setWebsiteId(self::DEFAULT_EMPTY_WEBSITE_ID);
     } else {
       $this->setWebsiteId($this->getParam('websiteid'));
     }
+
 
     if ($this->getRequestParam('name') !== null) {
       $this->setFileInputname($this->getRequestParam('name'));
