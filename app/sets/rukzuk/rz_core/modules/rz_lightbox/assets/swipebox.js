@@ -24,21 +24,23 @@ define(['jquery'], function ($) {
             }
 		},
 		open: function (e) {
-			var that    = this;
-			var gallery = [];
-			var element = $(e.target);
-			var parent  = element.parents('.rz_lightbox');
-			that.options.parentElement = parent;
+            if (! $.swipebox.isOpen ) {
+                var that    = this;
+                var gallery = [];
+                var element = $(e.target);
+                var parent  = element.parents('.rz_lightbox');
+                that.options.parentElement = parent;
 
-			parent.find('img.responsiveImage').each(function (i) {
-				var image = $(this);
-				if (e.target === this) {
-					that.options.initialIndexOnArray = i;
-				}
-				gallery.push({href: image.data('cms-origsrc'), title: image.prop('title')});
-			});
-			this.options.appendToElement = parent;
-			$.swipebox(gallery, this.options);
+                parent.find('img.responsiveImage').each(function (i) {
+                    var image = $(this);
+                    if (e.target === this) {
+                        that.options.initialIndexOnArray = i;
+                    }
+                    gallery.push({href: image.data('cms-origsrc'), title: image.prop('title')});
+                });
+                this.options.appendToElement = parent;
+                $.swipebox(gallery, this.options);
+            }
 		}
 	};
 
