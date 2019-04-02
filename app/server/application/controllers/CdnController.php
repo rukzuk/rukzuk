@@ -166,6 +166,7 @@ class CdnController extends Action
     $response->setHeader('Content-Type', Mimetype::getMimetype($buildfilePath));
     $response->setHeader('Cache-Control', 'max-age=0, must-revalidate, private');
     $response->setHeader('Content-Disposition', 'inline; filename="' . $buildfileName . '"');
+    $response->setHeader('Accept-Ranges', 'bytes');
     $response->setOutputBodyCallback(
         function ($response, $chunkSize) use ($buildfilePath) {
           if (is_file($buildfilePath) && is_readable($buildfilePath)) {

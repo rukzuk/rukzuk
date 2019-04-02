@@ -189,6 +189,10 @@ class StreamResponse implements ResponseInterface
         'Content-Disposition',
         'inline; filename="' . $this->getFileNameForHeader() . '"'
     );
+    $this->addHeader(
+      'Accept-Ranges',
+      'bytes'
+    );
   }
 
   /**
