@@ -8,7 +8,7 @@
     DocumentRoot /srv/rukzuk/htdocs
     <Directory /srv/rukzuk >
         # no MultiViews as this causes problems
-        Options -Indexes FollowSymLinks
+        Options -Indexes +FollowSymLinks
         AllowOverride None
         # allow all (2.x + 2.4)
         <ifModule mod_authz_core.c>

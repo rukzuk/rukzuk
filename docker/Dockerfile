@@ -1,4 +1,4 @@
-FROM phusion/baseimage:0.9.15
+FROM phusion/baseimage:0.10.2
 
 VOLUME /srv/rukzuk/htdocs/cms
 
@@ -9,42 +9,49 @@ RUN rm -rf /etc/apt/sources.list.d/proposed.list
 RUN apt-get update  && \
     apt-get dist-upgrade -y --no-install-recommends
 
-
 # Set Timezone
 RUN echo "Europe/Berlin" > /etc/timezone
+
+# Install Depencies
+RUN apt-get install -y --no-install-recommends \
+        tzdata \
+        sudo
+
 RUN dpkg-reconfigure --frontend noninteractive tzdata
 
-# Make Debian/Ubunut and Docker friends
+# Make Debian/Ubuntu and Docker friends
 ENV DEBIAN_FRONTEND noninteractive
 
-# install phantomjs 2.0
+# install phantomjs
+RUN apt-get install -y --no-install-recommends phantomjs
+
+# install php 5 source list
 RUN apt-get install -y --no-install-recommends software-properties-common && \
-    add-apt-repository ppa:tanguy-patte/phantomjs && \
-    apt-get update && \
-    apt-get install -y --no-install-recommends phantomjs
+    add-apt-repository ppa:ondrej/php && \
+    apt-get update
 
 # Install Apache httpd
 RUN apt-get install -y --no-install-recommends \
         sqlite3 \
         apache2 \
-        libapache2-mod-php5 \
+        libapache2-mod-php5.6 \
         libv8-3.14.5 \
         msmtp \
         msmtp-mta \
-        php5 \
-        php5-sqlite \
-        php5-cli \
-        php5-curl \
-        php5-gd \
-        php5-intl \
-        php5-mcrypt
+        php5.6 \
+        php5.6-sqlite \
+        php5.6-cli \
+        php5.6-curl \
+        php5.6-gd \
+        php5.6-intl \
+        php5.6-mcrypt
 
 # Activate Apache mods
 RUN a2enmod ssl && \
     a2enmod rewrite
 
 # Activate PHP mods
-RUN php5enmod mcrypt
+RUN phpenmod mcrypt
 
 # Install php5-v8js
 COPY php5-v8js_0.1.3-1_amd64.deb /tmp/php5-v8js.deb
