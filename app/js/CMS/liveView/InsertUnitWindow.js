@@ -230,8 +230,8 @@ CMS.liveView.InsertUnitWindow = Ext.extend(CMS.MainWindow, {
      * @private
      */
     compareUnitNames: function (u1, u2) {
-        var name1 = this.getUnitUIName(u1.data).toLowerCase();
-        var name2 = this.getUnitUIName(u2.data).toLowerCase();
+        var name1 = String(this.getUnitUIName(u1.data)).toLowerCase();
+        var name2 = String(this.getUnitUIName(u2.data)).toLowerCase();
 
         if (name1 < name2) {
             return -1;
