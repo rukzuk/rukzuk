@@ -165,11 +165,10 @@ class rz_page_list extends SimpleModule {
                                  'pageTitle' => $page->getTitle(),
                                  'pageDate' => $page->getDate(),
                                  'pageDescription' => $page->getDescription(),
-                                 'customTextfield1' => $pageAttributes['customTextfield1'],
-                                 'customTextfield2' => $pageAttributes['customTextfield2'],
-                                 'customTextfield3' => $pageAttributes['customTextfield3'],
-                                 'customTextfield4' => $pageAttributes['customTextfield4']
-
+                                 'customTextfield1' => isset($pageAttributes['customTextfield1']) ? $pageAttributes['customTextfield1'] : '',
+                                 'customTextfield2' => isset($pageAttributes['customTextfield2']) ? $pageAttributes['customTextfield2'] : '',
+                                 'customTextfield3' => isset($pageAttributes['customTextfield3']) ? $pageAttributes['customTextfield3'] : '',
+                                 'customTextfield4' => isset($pageAttributes['customTextfield4']) ? $pageAttributes['customTextfield4'] : '',
                 );
 
                 //iterate recursively?
