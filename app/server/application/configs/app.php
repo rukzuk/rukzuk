@@ -460,6 +460,10 @@ return array(
       'liveHostingDirectory' =>  CMS_PATH . '/data/live',
       'liveHostingWebPath' => CMS_WEBPATH . '/data/live',
       'tempDirectory' => VARDIR . '/publish',
+      'webhook' => array(
+        'enabled' => false,
+        'url' => 'http://localhost:3210/?action=%action%&config=%config_json%',
+      )
     ),
     'externalrukzukservice' => array(
       'hosts' => array(), // see app.APPLICATION_ENV.php

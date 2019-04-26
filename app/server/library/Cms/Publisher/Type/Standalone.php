@@ -125,6 +125,9 @@ class Standalone extends PublisherBase
     }
     FS::rmdir($liveDirectory);
     $this->removeAllSymlinksToLiveDirectory($liveDirectory);
+
+    // webhook (if enabled in config)
+    $this->callWebHook('delete', $publishConfig);
   }
 
 
@@ -175,6 +178,9 @@ class Standalone extends PublisherBase
     // remove temp directory
     FS::rmdir($tempDirectory);
 
+    // webhook (if enabled in config)
+    $this->callWebHook('publish', $publishConfig);
+
     // return status
     return $this->getStatusImplementations(
         $websiteId,
@@ -182,6 +188,25 @@ class Standalone extends PublisherBase
         $publishConfig,
         $serviceUrls
     );
+  }
+
+  /**
+   * Simple webhook caller
+   * @param $action
+   * @param $publishConfig
+   */
+  protected function callWebHook($action, $publishConfig) {
+    if (isset($this->config[self::CONFIG_SELECTION]['webhook']['enabled']) &&
+      $this->config[self::CONFIG_SELECTION]['webhook']['enabled'] === true) {
+      $url = $this->config[self::CONFIG_SELECTION]['webhook']['url'];
+      $url = str_replace('%action%', urlencode($action), $url);
+      $url = str_replace('%config_json%', urlencode(json_encode($publishConfig)), $url);
+
+      Registry::getLogger()->log(__CLASS__, __METHOD__,
+        sprintf('Call Webhook "%s"', $url), \Zend_Log::INFO);
+
+      file_get_contents($url); // we use file_get_contents as it does not require any lib
+    }
   }
 
   /**
