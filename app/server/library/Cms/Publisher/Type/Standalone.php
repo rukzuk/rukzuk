@@ -14,6 +14,8 @@ class Standalone extends PublisherBase
 {
   const CONFIG_SELECTION = 'standalone';
 
+  const STANDALONE_PUBLISHER_WARNING_ACTION = 'STANDALONE_PUBLISHER_WARNING_ACTION';
+
   const VERSION = 1;
 
   /**
@@ -301,9 +303,11 @@ class Standalone extends PublisherBase
     if (!isset($publishConfig['cname']) || empty($publishConfig['cname'])) {
       return;
     }
-    @symlink(basename($liveDirectory), FS::joinPath($this->liveHostingDirectory, $publishConfig['cname']));
+    $linkTarget = basename($liveDirectory);
+    @symlink($linkTarget, FS::joinPath($this->liveHostingDirectory, $publishConfig['cname']));
+    // if the domain starts with www. we remove the www and also provide a vhost without www
     if (substr($publishConfig['cname'], 0, 4) == 'www.') {
-        @symlink(basename($liveDirectory), FS::joinPath($this->liveHostingDirectory, substr($publishConfig['cname'], 4)));
+        @symlink($linkTarget, FS::joinPath($this->liveHostingDirectory, substr($publishConfig['cname'], 4)));
     }
   }
 
@@ -312,6 +316,8 @@ class Standalone extends PublisherBase
    */
   protected function removeAllSymlinksToLiveDirectory($liveDirectory)
   {
+    $shortId = basename($liveDirectory);
+
     $dirInfo = $this->getDirectoryAsArray($this->liveHostingDirectory);
     if (is_null($dirInfo)) {
       return;
@@ -319,8 +325,15 @@ class Standalone extends PublisherBase
 
     foreach ($dirInfo['symlinks'] as $symlinkName => $symlinkPathName) {
       $target = @readlink($symlinkPathName);
-      $target = realpath($target);
-      if (empty($target) || strpos($target, $liveDirectory) !== 0) {
+
+      // could not read link - this should not happen
+      if ($target === false) {
+        Registry::getActionLogger()->logAction(Standalone::STANDALONE_PUBLISHER_WARNING_ACTION, array('Could not read link', $symlinkPathName, $liveDirectory));
+        continue;
+      }
+
+      // link does not point to our website
+      if ($target !== $shortId) {
         continue;
       }
       @unlink($symlinkPathName);
