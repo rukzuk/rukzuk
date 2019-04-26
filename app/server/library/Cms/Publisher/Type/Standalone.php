@@ -14,8 +14,6 @@ class Standalone extends PublisherBase
 {
   const CONFIG_SELECTION = 'standalone';
 
-  const STANDALONE_PUBLISHER_WARNING_ACTION = 'STANDALONE_PUBLISHER_WARNING_ACTION';
-
   const VERSION = 1;
 
   /**
@@ -328,7 +326,8 @@ class Standalone extends PublisherBase
 
       // could not read link - this should not happen
       if ($target === false) {
-        Registry::getActionLogger()->logAction(Standalone::STANDALONE_PUBLISHER_WARNING_ACTION, array('Could not read link', $symlinkPathName, $liveDirectory));
+        Registry::getLogger()->log(__CLASS__, __METHOD__,
+          sprintf('Could not read "%s" symlink in "%s"', $symlinkPathName, $liveDirectory), \Zend_Log::WARN);
         continue;
       }
 
