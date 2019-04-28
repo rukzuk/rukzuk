@@ -8,9 +8,9 @@ cat /etc/msmtprc.tpl | \
     > /etc/msmtprc
 
 # remove php sessions
-find /var/lib/php5/ -name "sess_*" -print -delete
+find /var/lib/php/ -name "sess_*" -print -delete
 
-# create csm data directory
+# create cms data directory
 if [ ! -e  "${INSTANCE_PATH}/htdocs/cms" ]; then
   mkdir -p "${INSTANCE_PATH}/htdocs/cms"
 fi
