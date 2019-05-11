@@ -58,7 +58,7 @@ RUN phpenmod mcrypt
 COPY v8js_0.1.3-1_amd64.deb /tmp/php5-v8js.deb
 RUN dpkg -i /tmp/php5-v8js.deb
 RUN echo "extension=v8js.so" >> /etc/php/5.6/apache2/conf.d/v8js.ini
-RUN echo "extension=v8js.so" >> /usr/lib/php/20131226/v8js.so
+RUN echo "extension=v8js.so" >> /etc/php/5.6/cli/conf.d/v8js.ini
 
 # Activate apache2 in runit
 RUN mkdir -p /etc/service/apache2
