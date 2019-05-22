@@ -47,7 +47,8 @@ RUN apt-get install -y --no-install-recommends \
         php5.6-intl \
         php5.6-mcrypt \
         php5.6-xml \
-        php5.6-zip
+        php5.6-zip \
+        php5.6-mbstring
 
 # Activate Apache mods
 RUN a2enmod ssl && \
