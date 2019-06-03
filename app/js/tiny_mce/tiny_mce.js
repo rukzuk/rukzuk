@@ -11259,8 +11259,9 @@ tinymce.create('tinymce.ui.Toolbar:tinymce.ui.Container', {
 					d.domain = tinymce.relaxedDomain;
 
 				// Wait for iframe onload event on Gecko
-				if (isGecko && !s.readonly)
-					return;
+                // SB: disabled because of firefox 67
+				//if (isGecko && !s.readonly)
+					//return;
 			}
 
 			// It will not steal focus while setting contentEditable
