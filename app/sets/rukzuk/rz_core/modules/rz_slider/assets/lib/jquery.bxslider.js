@@ -1182,8 +1182,11 @@
                 yMovement = Math.abs(touchPoints[0].pageY - slider.touch.start.y),
                 value = 0,
                 change = 0;
+
             // this is swipe
-            slider.hasMove = true;
+            if((xMovement > yMovement && xMovement > 3) || (yMovement > xMovement && yMovement > 3)) {
+                slider.hasMove = true;
+            }
 
             // x axis swipe
             if ((xMovement * 3) > yMovement && slider.settings.preventDefaultSwipeX) {
@@ -1192,6 +1195,7 @@
             } else if ((yMovement * 3) > xMovement && slider.settings.preventDefaultSwipeY) {
                 e.preventDefault();
             }
+
             if (e.type !== 'touchmove') {
                 e.preventDefault();
             }
