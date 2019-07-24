@@ -4,7 +4,7 @@
   "devDependencies": {
     "JSONPath": "~0.10.0",
     "grunt": "~0.4.1",
-    "grunt-available-tasks": "~0.5.0",
+    "grunt-available-tasks": "^0.6.3",
     "grunt-contrib-clean": "~0.5.0",
     "grunt-contrib-copy": "~0.5.0",
     "grunt-contrib-cssmin": "~0.9.0",
@@ -15,9 +15,9 @@
     "grunt-contrib-watch": "~0.6.1",
     "grunt-json-replace": "~0.1.2",
     "grunt-jsonlint": "^1.0.4",
-    "grunt-phpunit": "~0.3.3",
     "grunt-phpcs": "~0.2.2",
-    "grunt-phplint": "~0.0.5",
+    "grunt-phplint": "^0.1.0",
+    "grunt-phpunit": "~0.3.3",
     "grunt-template-jasmine-requirejs": "~0.1.8",
     "lodash": "~4.17.10"
   }
