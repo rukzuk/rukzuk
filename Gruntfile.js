@@ -69,7 +69,7 @@ module.exports = function (grunt) {
 
         // ////////////////////////////////////////////////////////////////////
         // configure Sass
-        sass: {
+        'dart-sass': {
             production: { // options of the production version
                 cwd: 'app/',
                 options: {
@@ -86,6 +86,7 @@ module.exports = function (grunt) {
                 options: {
                     outputStyle: 'expanded',
                     sourceMap: true,
+                    sourceMapEmbed: true,
                 },
                 files: {
                     'app/css/cms-all.css': 'app/sass/cms-all.scss',
@@ -634,7 +635,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-available-tasks');
     grunt.loadNpmTasks('grunt-jsonlint');
     grunt.loadNpmTasks('grunt-contrib-jshint');
-    grunt.loadNpmTasks('grunt-sass');
+    grunt.loadNpmTasks('grunt-dart-sass');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-uglify');
@@ -651,6 +652,7 @@ module.exports = function (grunt) {
 
     // list tasks
     grunt.registerTask('default', ['availabletasks']);
+    grunt.registerTask('sass', ['dart-sass']); // alias sass for dart-sass
 
     grunt.registerMultiTask('compileHtml', 'Compile HTML files from Lo-Dash templates with i18n support', function () {
         var options = this.options();
