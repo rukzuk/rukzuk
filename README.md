@@ -42,7 +42,7 @@ For a quick demo simply use [`docker pull rukzuk/rukzuk`](https://hub.docker.com
 
 # Requirements
 
-rukzuk is tested under `Debian 10`.
+rukzuk is tested under `Debian 10` and `Ubuntu 18.04`.
 
 The following packages are required:
 
