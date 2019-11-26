@@ -26,7 +26,11 @@ ENV DEBIAN_FRONTEND noninteractive
 # install phantomjs
 RUN apt-get install -y --no-install-recommends phantomjs
 
-# install php source list (php and apache)
+# PhantomJS Offscreen wrapper
+COPY phantomjs-offscreen /usr/local/bin/phantomjs
+RUN chmod +x /usr/local/bin/phantomjs
+
+# add php source list
 RUN apt-get install -y --no-install-recommends software-properties-common && \
     add-apt-repository ppa:ondrej/php && \
     apt-get update

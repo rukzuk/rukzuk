@@ -26,7 +26,11 @@ ENV DEBIAN_FRONTEND noninteractive
 # install phantomjs
 RUN apt-get install -y --no-install-recommends phantomjs
 
-# install php 5 source list
+# PhantomJS Offscreen wrapper
+COPY phantomjs-offscreen /usr/local/bin/phantomjs
+RUN chmod +x /usr/local/bin/phantomjs
+
+# add php source list
 RUN apt-get install -y --no-install-recommends software-properties-common && \
     add-apt-repository ppa:ondrej/php && \
     apt-get update
@@ -52,6 +56,7 @@ RUN apt-get install -y --no-install-recommends \
 RUN apt-get install -y --no-install-recommends \
         build-essential \
         libmcrypt-dev \
+        libmcrypt4 \
         php7.3-dev \
         php-pear
 
@@ -104,6 +109,11 @@ RUN mkdir -p /etc/my_init.d
 COPY init.sh /etc/my_init.d/rukzuk_init.sh
 RUN chmod +x /etc/my_init.d/rukzuk_init.sh
 COPY msmtprc.tpl /etc/msmtprc.tpl
+
+# Remove unused packages (only used to build)  & Cleanup 
+RUN apt-get purge php7.3-dev libmcrypt-dev php-pear build-essential
+RUN apt-get clean
+RUN rm -rf /var/lib/apt/lists/*
 
 EXPOSE 80
 
