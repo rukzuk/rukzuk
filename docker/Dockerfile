@@ -60,9 +60,10 @@ RUN apt-get install -y --no-install-recommends \
         php7.3-dev \
         php-pear
 
-# install mcrypt (now pecl)
-RUN sudo CFLAGS=-w CPPFLAGS=-w pecl install mcrypt
-RUN echo "extension = mcrypt.so" | sudo tee -a /etc/php/7.3/mods-available/mcrypt.ini
+# install mcrypt (now pecl) DISABLED because it is deprecated
+#RUN sudo CFLAGS=-w CPPFLAGS=-w pecl install mcrypt
+#RUN echo "extension = mcrypt.so" | sudo tee -a /etc/php/7.3/mods-available/mcrypt.ini
+#RUN phpenmod mcrypt
 
 # lib v8
 RUN add-apt-repository ppa:stesie/libv8 && apt-get update
@@ -75,7 +76,7 @@ RUN printf "\/opt/libv8-7.5\n" | sudo CFLAGS=-w CPPFLAGS=-w pecl install v8js-2.
 RUN echo "extension = v8js.so" | sudo tee -a /etc/php/7.3/mods-available/v8js.ini 
 
 # Activate PHP mods
-RUN phpenmod mcrypt v8js
+RUN phpenmod v8js
 
 # Activate Apache mods
 RUN a2enmod ssl && \
