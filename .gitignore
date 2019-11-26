@@ -2,6 +2,7 @@
 ## Bitte diese .gitignore Datei immer mit ins GIT einchecken
 ##
 
+/_bak
 Thumbs.db
 /.metadata/
 /.tmp_*
