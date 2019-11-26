@@ -7,12 +7,13 @@ use \Render\APIs\APIv1\Navigation;
 use \Render\InfoStorage\NavigationInfoStorage\ArrayBasedNavigationInfoStorage;
 use \Test\Rukzuk\MediaItemMock;
 use \Render\APIs\APIv1\MediaItemNotFoundException;
+use PHPUnit\Framework\TestCase;
 
 class RenderApiMock extends CssApiMock
 {
   protected $allUnitData;
 
-  public function __construct ($conf = null, \PHPUnit_Framework_TestCase $testCase = null)
+  public function __construct ($conf = null, TestCase $testCase = null)
   {
     parent::__construct($conf, $testCase);
     $this->allUnitData = $this->getValue('allUnitData', $conf, null);

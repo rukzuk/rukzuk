@@ -46,7 +46,7 @@ class rz_page_propertyTest extends \Test\Rukzuk\ModuleTestCase
    */
   private $moduleInfo = null;
 
-  public function setup()
+  public function setup() : void
   {
     $this->obj = new \Rukzuk\Modules\rz_page_property();
     $this->renderApi = new rz_page_propertyTest_ApiMock(array(

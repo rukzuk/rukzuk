@@ -1,20 +1,20 @@
 <?php
 require_once(MODULE_PATH.'/rz_form/module/lib/validation/FormValidation.php');
 
+use PHPUnit\Framework\TestCase;
 
-
-class FormValidationTest extends PHPUnit_Framework_TestCase {
+class FormValidationTest extends TestCase {
 
 	/**
 	 * @var IFormValidation
 	 */
 	private $object = null;
 
-	public function setUp(){
+	public function setUp() : void {
 		$this->object = new FormValidation();
 	}
 
-	public function tearDown(){}
+	public function tearDown() : void {}
 
 	/**
 	 * @covers FormValidation::isValidEmailAddress

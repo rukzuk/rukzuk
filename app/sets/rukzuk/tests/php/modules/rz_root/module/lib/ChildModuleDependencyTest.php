@@ -10,11 +10,11 @@ class ChildModuleDependencyTest extends ModuleTestCase {
 	 */
 	private $object = null;
 
-	public function setUp(){
+	public function setUp() : void {
 		$this->object = new \Rukzuk\Modules\ChildModuleDependency();
 	}
 
-	public function tearDown(){}
+	public function tearDown() : void {}
 
 	public function testIsInsideModule(){
 		$result = $this->object->isInsideModule( $this->getRenderApiMock("rz_form"), $this->getUnitMock('test_2_test'), "rz_form" );

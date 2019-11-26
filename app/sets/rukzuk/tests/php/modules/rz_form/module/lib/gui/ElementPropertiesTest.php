@@ -2,20 +2,20 @@
 
 require_once(MODULE_PATH.'/rz_form/module/lib/gui/ElementProperties.php');
 
+use PHPUnit\Framework\TestCase;
 
-
-class ElementPropertiesTest extends PHPUnit_Framework_TestCase {
+class ElementPropertiesTest extends TestCase {
 
 	/**
 	 * @var IElementProperties
 	 */
 	private $object = null;
 
-	public function setUp(){
+	public function setUp() : void {
 		$this->object = new ElementProperties();
 	}
 
-	public function tearDown(){}
+	public function tearDown() : void {}
 
 	/**
 	 * @covers ElementProperties::addClass

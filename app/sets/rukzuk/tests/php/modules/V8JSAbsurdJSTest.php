@@ -1,11 +1,12 @@
 <?php
 namespace Test\Rukzuk;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Class V8JSAbsurdJSTest
  * @package Test\Rukzuk
  */
-class V8JSAbsurdJSTest extends  \PHPUnit_Framework_TestCase
+class V8JSAbsurdJSTest extends  TestCase
 {
 
   public function testV8EngineAvailable() {

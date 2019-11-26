@@ -2,20 +2,20 @@
 
 require_once(MODULE_PATH.'/rz_form/module/lib/option_provider/OptionProvider.php');
 
+use PHPUnit\Framework\TestCase;
 
-
-class OptionProviderTest extends PHPUnit_Framework_TestCase {
+class OptionProviderTest extends TestCase {
 
 	/**
 	 * @var IOptionProvider
 	 */
 	private $object = null;
 
-	public function setUp(){
+	public function setUp() : void {
 		$this->object = new OptionProvider();
 	}
 
-	public function tearDown(){}
+	public function tearDown() : void {}
 
 	/**
 	 * @covers OptionProvider::hasOptions

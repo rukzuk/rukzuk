@@ -1,9 +1,11 @@
 <?php
 namespace Test\Rukzuk;
 
+use PHPUnit\Framework\TestCase;
+
 require_once(MODULE_PATH.'/rz_root/module/rz_root.php');
 
-class ModuleTestCase extends \PHPUnit_Framework_TestCase
+class ModuleTestCase extends TestCase
 {
   // default module settings
   protected $moduleNS = '\Rukzuk\Modules';
@@ -21,17 +23,16 @@ class ModuleTestCase extends \PHPUnit_Framework_TestCase
   /**
    * Backup the _SERVER variables
    */
-  public function setUp()
+  public function setUp() : void
   {
     parent::setUp();
-
     $this->backupServerVars = $_SERVER;
   }
 
   /**
    * Restore the changed _SERVER variables
    */
-  public function tearDown()
+  public function tearDown() : void
   {
     foreach ($this->changesServerVars as $varName)
     {
@@ -41,7 +42,6 @@ class ModuleTestCase extends \PHPUnit_Framework_TestCase
         unset($_SERVER[$varName]);
       }
     }
-
     parent::tearDown();
   }
 
