@@ -112,8 +112,9 @@ RUN chmod +x /etc/my_init.d/rukzuk_init.sh
 COPY msmtprc.tpl /etc/msmtprc.tpl
 
 # Remove unused packages (only used to build)  & Cleanup 
-RUN apt-get purge php7.3-dev libmcrypt-dev php-pear build-essential
-RUN apt-get clean
+RUN apt-get purge -y php7.3-dev libmcrypt-dev php-pear build-essential
+RUN apt-get clean -y
+RUN apt autoremove -y
 RUN rm -rf /var/lib/apt/lists/*
 
 EXPOSE 80
