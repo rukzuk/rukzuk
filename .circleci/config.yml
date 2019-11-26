@@ -2,7 +2,7 @@ version: 2
 jobs:
   rukzuk_deps:
     docker:
-      - image: rukzuk/circleci-buildimage:latest
+      - image: docker.pkg.github.com/rukzuk/circleci/rzcircleci:1.0-php73
     steps:
       - checkout
       - restore_cache:
