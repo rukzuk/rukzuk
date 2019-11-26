@@ -1,4 +1,5 @@
-FROM phusion/baseimage:0.10.2
+# based on ubuntu 18.04 (bionic)
+FROM phusion/baseimage:0.11
 
 VOLUME /srv/rukzuk/htdocs/cms
 
@@ -34,34 +35,46 @@ RUN apt-get install -y --no-install-recommends software-properties-common && \
 RUN apt-get install -y --no-install-recommends \
         sqlite3 \
         apache2 \
-        libapache2-mod-php5.6 \
-        libv8-3.14.5 \
+        libapache2-mod-php7.3 \
         msmtp \
         msmtp-mta \
-        libv8-3.14.5 \
-        php5.6 \
-        php5.6-sqlite \
-        php5.6-cli \
-        php5.6-curl \
-        php5.6-gd \
-        php5.6-intl \
-        php5.6-mcrypt \
-        php5.6-xml \
-        php5.6-zip \
-        php5.6-mbstring
+        php7.3 \
+        php7.3-sqlite \
+        php7.3-cli \
+        php7.3-curl \
+        php7.3-gd \
+        php7.3-intl \
+        php7.3-xml \
+        php7.3-zip \
+        php7.3-mbstring
+
+# dev/build stuff (pecl for mcrypt and v8js)
+RUN apt-get install -y --no-install-recommends \
+        build-essential \
+        libmcrypt-dev \
+        php7.3-dev \
+        php-pear
+
+# install mcrypt (now pecl)
+RUN sudo CFLAGS=-w CPPFLAGS=-w pecl install mcrypt
+RUN echo "extension = mcrypt.so" | sudo tee -a /etc/php/7.3/mods-available/mcrypt.ini
+
+# lib v8
+RUN add-apt-repository ppa:stesie/libv8 && apt-get update
+RUN apt-get install -y libv8-7.5-dev
+
+RUN echo "/opt/libv8-7.5/lib" | sudo tee -a /etc/ld.so.conf.d/libv8.conf
+RUN ldconfig
+
+RUN printf "\/opt/libv8-7.5\n" | sudo CFLAGS=-w CPPFLAGS=-w pecl install v8js-2.1.1
+RUN echo "extension = v8js.so" | sudo tee -a /etc/php/7.3/mods-available/v8js.ini 
+
+# Activate PHP mods
+RUN phpenmod mcrypt v8js
 
 # Activate Apache mods
 RUN a2enmod ssl && \
     a2enmod rewrite
-
-# Activate PHP mods
-RUN phpenmod mcrypt
-
-# Install php5-v8js
-COPY v8js_0.1.3-1_amd64.deb /tmp/php5-v8js.deb
-RUN dpkg -i /tmp/php5-v8js.deb
-RUN echo "extension=v8js.so" >> /etc/php/5.6/apache2/conf.d/v8js.ini
-RUN echo "extension=v8js.so" >> /etc/php/5.6/cli/conf.d/v8js.ini
 
 # Activate apache2 in runit
 RUN mkdir -p /etc/service/apache2
