@@ -162,7 +162,7 @@ workflows:
             - module_deps
           filters:
             tags:
-              ignore: /^0\.20[0-9]{6}\.[0-9]+\.(test|stable)$/
+              ignore: /^[0-9]\.20[0-9]{6}\.[0-9]+\.(test|stable)$/
       - build_release:
           requires:
             - test_client
@@ -170,7 +170,7 @@ workflows:
 #            - test_backend # disabled for php 7.3 (requires many fixes)
           filters:
             tags:
-              only: /^0\.20[0-9]{6}\.[0-9]+\.(test|stable)$/
+              only: /^[0-9]\.20[0-9]{6}\.[0-9]+\.(test|stable)$/
             branches:
               ignore: /.*/
       - upload_release_to_github:
@@ -178,6 +178,6 @@ workflows:
             - build_release
           filters:
             tags:
-              only: /^0\.20[0-9]{6}\.[0-9]+\.(test|stable)$/
+              only: /^[0-9]\.20[0-9]{6}\.[0-9]+\.(test|stable)$/
             branches:
               ignore: /.*/
