@@ -61,6 +61,14 @@ RUN apt-get install -y --no-install-recommends \
         php7.3-dev \
         php-pear
 
+# more dev stuff (might be outdated due to distro packages)
+RUN apt-get install -y --no-install-recommends \
+        nodejs \
+        npm \
+        grunt \
+        composer \
+
+
 # install mcrypt (now pecl) DISABLED because it is deprecated
 #RUN sudo CFLAGS=-w CPPFLAGS=-w pecl install mcrypt
 #RUN echo "extension = mcrypt.so" | sudo tee -a /etc/php/7.3/mods-available/mcrypt.ini
