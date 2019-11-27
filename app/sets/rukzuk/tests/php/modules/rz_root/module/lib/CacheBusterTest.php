@@ -1,19 +1,19 @@
 <?php
 require_once(MODULE_PATH.'/rz_root/module/lib/CacheBuster.php');
+use PHPUnit\Framework\TestCase;
 
-
-class CacheBusterTest extends PHPUnit_Framework_TestCase {
+class CacheBusterTest extends TestCase {
 
 	/**
 	 * @var \Rukzuk\Modules\ICacheBuster
 	 */
 	private $object = null;
 
-	public function setUp() {
+	public function setUp() : void {
 		$this->object = new \Rukzuk\Modules\CacheBuster();
 	}
 
-	public function tearDown() {
+	public function tearDown() : void {
 	}
 
 //	public function testSuffix() {

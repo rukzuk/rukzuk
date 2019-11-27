@@ -56,7 +56,16 @@ class MD5PasswordHasher implements IPasswordHasher
    */
   protected function generateSalt()
   {
-    return base64_encode(mcrypt_create_iv(self::SALT_BYTES, MCRYPT_DEV_URANDOM));
+    if (function_exists("random_bytes")) {
+      return base64_encode(random_bytes(self::SALT_BYTES));
+    }
+    if (function_exists("mcrypt_create_iv")) {
+      return base64_encode(mcrypt_create_iv(self::SALT_BYTES, MCRYPT_DEV_URANDOM));
+    }
+    if (function_exists("openssl_random_pseudo_bytes")) {
+      return base64_encode(openssl_random_pseudo_bytes(self::SALT_BYTES));
+    }
+    throw \Exception("generateSalt() was not able to generate random bytes");
   }
 
   /**

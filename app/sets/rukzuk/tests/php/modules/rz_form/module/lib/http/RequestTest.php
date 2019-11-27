@@ -2,21 +2,21 @@
 
 require_once(MODULE_PATH.'/rz_form/module/lib/http/Request.php');
 
+use PHPUnit\Framework\TestCase;
 
-
-class RequestTest extends PHPUnit_Framework_TestCase {
+class RequestTest extends TestCase {
 
 	/**
 	 * @var IFormRequest
 	 */
 	private $object = null;
 
-	public function setUp(){
+	public function setUp() : void {
 		$this->object = new Request();
 		$this->object->setPostValues($this->getPreparedPostValues());
 	}
 
-	public function tearDown(){}
+	public function tearDown() : void {}
 
 	/**
 	 * @covers Request::isPostRequest

@@ -17,7 +17,7 @@ class ChoiceBoxTest extends ModuleTestCase {
 
 	private $postValues = null;
 
-	public function setUp(){
+	public function setUp() : void {
 		$this->object = new ChoiceBox();
 
 		$this->renderAPI = $this->createRenderApi(
@@ -29,7 +29,7 @@ class ChoiceBoxTest extends ModuleTestCase {
 		$this->postValues['fieldMUNIT-2222222-22222-22222222-MUNITfield'] = array('abc2_1','abc2_2*');
 	}
 
-	public function tearDown(){}
+	public function tearDown() : void {}
 
 	/**
 	 * @covers ChoiceBox::getRadioCheckbox

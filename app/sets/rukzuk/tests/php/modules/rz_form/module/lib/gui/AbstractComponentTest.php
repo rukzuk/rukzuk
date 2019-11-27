@@ -2,13 +2,13 @@
 
 require_once(MODULE_PATH.'/rz_form/module/lib/gui/AbstractComponent.php');
 
+use PHPUnit\Framework\TestCase;
 
+class AbstractComponentTest extends TestCase {
 
-class AbstractComponentTest extends PHPUnit_Framework_TestCase {
+	public function setUp() : void {}
 
-	public function setUp(){}
-
-	public function tearDown(){}
+	public function tearDown() : void {}
 
 	/**
 	 * @covers AbstractComponent::renderElement

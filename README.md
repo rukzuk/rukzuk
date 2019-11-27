@@ -42,36 +42,39 @@ For a quick demo simply use [`docker pull rukzuk/rukzuk`](https://hub.docker.com
 
 # Requirements
 
-rukzuk is tested and developed under Ubuntu 14.04.1.
+rukzuk is tested under `Debian 10` and `Ubuntu 18.04`.
 
-The following Ubuntu packages are required:
+The following packages are required:
 
 * apache2 - Version 2.4
   * mod-ssl
   * mod-rewrite
 
-* php5 - Version 5.5
-  * php5-mcrypt
-  * php5-curl
-  * php5-gd
-  * php5-intl
+* php - Version 7.1+
+  * php-curl
+  * php-gd
+  * php-intl
+  * php-mbstring
+  * php-zip
 
-You can use mod-php5, fcgi or php-fpm to connect Apache with PHP.
+* pecl packages
+  * [v8js](https://pecl.php.net/package/v8js)
+  * [mcrypt](https://pecl.php.net/package/mcrypt)
 
-Needed third party packages:
+You can use mod-php (`libapache2-mod-php`), fcgi or php-fpm to connect Apache with PHP.
 
-* phantomjs - Version 1.9
-* php5-v8js - Version 0.1.3 (deb file is in the repository)
+* Other packages
+  * phantomjs - Version 2.x
 
 ## For SQLite
 
-* sqlite3 - Version 3.8
-* php5-sqlite - Version 5.5
+* sqlite3 - Version >= 3.8
+* php-sqlite
 
 ## For MySQL
 
-* mysql5 - Version 5.5
-* php5-mysql - Version 5.5
+* mysql5 - Version >= 5.5
+* php-mysql - Version >= 5.5
 
 # Installations notes
 

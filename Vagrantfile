@@ -1,7 +1,7 @@
 # Parse options
 options = {}
 options[:host_url] = ENV['RUKZUK_URL'] || "http://127.0.0.1"
-options[:host_port] = ENV['RUKZUK_PORT'] || "8080"
+options[:host_port] = ENV['RUKZUK_PORT'] || "8088"
 
 current_dir = File.dirname(File.expand_path(__FILE__))
 

@@ -8,6 +8,7 @@ use \Render\InfoStorage\NavigationInfoStorage\ArrayBasedNavigationInfoStorage;
 use \Test\Rukzuk\MediaItemMock;
 use \Render\APIs\APIv1\MediaItemNotFoundException;
 use \Render\APIs\APIv1\WebsiteSettingsNotFound;
+use PHPUnit\Framework\TestCase;
 
 class CssApiMock
 {
@@ -27,7 +28,7 @@ class CssApiMock
   protected $interfaceLocale;
   protected $locale;
 
-  public function __construct ($conf = null, \PHPUnit_Framework_TestCase $testCase = null)
+  public function __construct ($conf = null, TestCase $testCase = null)
   {
     $this->module = $this->getValue('module', $conf);
     $this->moduleInfo = $this->getValue('moduleInfo', $conf);
