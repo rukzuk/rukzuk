@@ -361,7 +361,7 @@ module.exports = function (grunt) {
     // TASKS
     grunt.registerTask('min', ['uglify', 'cssmin']);
     grunt.registerTask('exportLanguageFile', ['exportLanguageFileToTarget']);
-    grunt.registerTask('test', ['jsonlint', 'checkFormatModuleData', 'jshint', 'phplint', 'phpunit']);
+    grunt.registerTask('test', ['jsonlint', 'checkFormatModuleData', 'jshint', 'phplint']); // disabled: phpunit
 
     // build
     grunt.registerTask('build', 'Create minified version of all modules in "' + buildDir + '", add version to manifest.json', ['copy', 'min', 'json-replace:manifest']);

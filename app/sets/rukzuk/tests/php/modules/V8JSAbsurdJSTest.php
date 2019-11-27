@@ -28,14 +28,16 @@ class V8JSAbsurdJSTest extends  TestCase
 
 
   public function testDynCSS() {
-    $vm = new \V8Js('PHP', array(), array());
 
-    \V8Js::registerExtension('browser_test', file_get_contents(MODULE_PATH.'/rz_root/module/lib/dyncss/js/browserEmulator.js'));
-    \V8Js::registerExtension('absurdhat_test', file_get_contents(MODULE_PATH.'/rz_root/assets/notlive/dyncss/absurdhat.js'));
-    \V8Js::registerExtension('absurd_test', file_get_contents(MODULE_PATH.'/rz_root/assets/notlive/dyncss/absurd.js'));
+    @\V8Js::registerExtension('browser_test', file_get_contents(MODULE_PATH.'/rz_root/module/lib/dyncss/js/browserEmulator.js'));
+    @\V8Js::registerExtension('absurdhat_test', file_get_contents(MODULE_PATH.'/rz_root/assets/notlive/dyncss/absurdhat.js'));
+    @\V8Js::registerExtension('absurd_test', file_get_contents(MODULE_PATH.'/rz_root/assets/notlive/dyncss/absurd.js'));
 
-
+    $errorlevel=error_reporting();
+    error_reporting($errorlevel & ~E_DEPRECATED);
     $vm = new \V8Js('PHP', array(), array('browser_test', 'absurdhat_test', 'absurd_test'));
+    error_reporting($errorlevel);
+
     $code = file_get_contents(MODULE_PATH.'/rz_root/assets/notlive/dyncss/dyncss.js');
 
     $vm->executeString($code, 'dyncss_TEST');
