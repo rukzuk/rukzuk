@@ -94,7 +94,7 @@ RUN mkdir -p ${CMS_PATH}
 RUN mkdir -p ${INSTANCE_PATH}/htdocs/cms
 RUN chown -R www-data:www-data ${INSTANCE_PATH}/htdocs
 
-# Install the release/cmsrelase.tar.gz (a version from our Jenkins)
+# Install latest github release
 RUN curl -L $(curl -s https://api.github.com/repos/rukzuk/rukzuk/releases/latest | grep browser_download_url | grep 'tgz\|tar.gz' | cut -d '"' -f 4) | tar -xz --strip 1 -C ${CMS_PATH}/..
 
 
