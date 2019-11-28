@@ -773,6 +773,9 @@ module.exports = function (grunt) {
             category.websites.forEach(function(website) {
                 grunt.log.ok('copy website: ' + website.id);
                 grunt.file.expandMapping('app/exports/' + website.id + '/**', outputFolder, {filter: 'isFile'}).forEach(function (obj) {
+                    if (!!obj.src.forEach) {
+                        obj.src = obj.src[0];
+                    }
                     grunt.file.copy(obj.src, obj.dest);
                 });
             });
