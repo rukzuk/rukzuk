@@ -58,8 +58,7 @@ The following packages are required:
   * php-zip
 
 * pecl packages
-  * [v8js](https://pecl.php.net/package/v8js)
-  * [mcrypt](https://pecl.php.net/package/mcrypt)
+  * [v8js](https://pecl.php.net/package/v8js) (2.1.1 also requires libv8 > 6.9)
 
 You can use mod-php (`libapache2-mod-php`), fcgi or php-fpm to connect Apache with PHP.
 
