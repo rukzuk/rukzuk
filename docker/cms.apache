@@ -9,7 +9,7 @@
     <Directory /srv/rukzuk >
         # no MultiViews as this causes problems
         Options -Indexes +FollowSymLinks
-        AllowOverride None
+        AllowOverride All
         # allow all (2.x + 2.4)
         <ifModule mod_authz_core.c>
             Require all granted
