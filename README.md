@@ -75,23 +75,7 @@ You can use mod-php (`libapache2-mod-php`), fcgi or php-fpm to connect Apache wi
 * mysql5 - Version >= 5.5
 * php-mysql - Version >= 5.5
 
-# Installations notes
+# Developer Setup Notes
 
-## Install grunt (systemwide)
-
-	npm install -g grunt-cli
-
-## Install local dependencies
-
-	npm install
-
-## Grunt Tasks
-
-	grunt # shows an overview of available tasks
-	grunt dev # install dev dependencies
-	grunt test # test the client code (mostly linters and hinters + some phpunit tests)
-	grunt phpunit:all # test the php code
-	grunt build # builds all modules
-	grunt package --channel=stable --build=`git describe --tags` # build a release package
-
+More in [Development.md](./Development.md)
 
