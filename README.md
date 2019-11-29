@@ -70,10 +70,12 @@ You can use mod-php (`libapache2-mod-php`), fcgi or php-fpm to connect Apache wi
 * sqlite3 - Version >= 3.8
 * php-sqlite
 
+**WARNING: We do not reccomend the usage of sqlite in produciton environments**
+
 ## For MySQL
 
-* mysql5 - Version >= 5.5
-* php-mysql - Version >= 5.5
+* mysql5 - Version >= 5.6
+* php-mysql
 
 # Developer Setup Notes
 
