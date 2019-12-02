@@ -43,7 +43,8 @@ RUN apt-get install -y --no-install-recommends \
         msmtp \
         msmtp-mta \
         php7.3 \
-        php7.3-sqlite \
+#        php7.3-sqlite \
+        php7.3-mysql \
         php7.3-cli \
         php7.3-curl \
         php7.3-gd \
@@ -82,6 +83,49 @@ RUN phpenmod v8js
 RUN a2enmod ssl && \
     a2enmod rewrite
 
+# Install mysql
+RUN apt-get install -y --no-install-recommends mariadb-server
+
+# major version update if 
+ENV MARIADB_MAJOR 10.1
+
+## based on https://github.com/docker-library/mariadb/blob/master/10.1/Dockerfile#L90
+# the "/var/lib/mysql" stuff here is because the mysql-server postinst doesn't have an explicit way to disable the mysql_install_db codepath besides having a database already "configured" (ie, stuff in /var/lib/mysql/mysql)
+# also, we set debconf keys to make APT a little quieter
+RUN set -ex; \
+	{ \
+		echo "mariadb-server-$MARIADB_MAJOR" mysql-server/root_password password 'unused'; \
+		echo "mariadb-server-$MARIADB_MAJOR" mysql-server/root_password_again password 'unused'; \
+	} | debconf-set-selections; \
+	apt-get update; \
+	apt-get install -y \
+		"mariadb-server" \
+		socat \
+	; \
+#	rm -rf /var/lib/apt/lists/*; \
+# comment out any "user" entires in the MySQL config ("docker-entrypoint.sh" or "--user" will handle user switching)
+	sed -ri 's/^user\s/#&/' /etc/mysql/my.cnf /etc/mysql/conf.d/*; \
+# purge and re-create /var/lib/mysql with appropriate ownership
+	rm -rf /var/lib/mysql; \
+	mkdir -p /var/lib/mysql /var/run/mysqld; \
+	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; \
+# ensure that /var/run/mysqld (used for socket and lock files) is writable regardless of the UID our mysqld instance ends up having at runtime
+	chmod 777 /var/run/mysqld; \
+# comment out a few problematic configuration values
+	find /etc/mysql/ -name '*.cnf' -print0 \
+		| xargs -0 grep -lZE '^(bind-address|log)' \
+		| xargs -rt -0 sed -Ei 's/^(bind-address|log)/#&/'; \
+# don't reverse lookup hostnames, they are usually another container
+	echo '[mysqld]\nskip-host-cache\nskip-name-resolve' > /etc/mysql/conf.d/docker.cnf
+
+VOLUME /var/lib/mysql
+
+# Activate mysql in runit
+RUN mkdir -p /etc/service/mysqld
+COPY mysqld.runit /etc/service/mysqld/run
+RUN chmod +x /etc/service/mysqld/run
+
+
 # Activate apache2 in runit
 RUN mkdir -p /etc/service/apache2
 COPY apache2.runit /etc/service/apache2/run
@@ -97,25 +141,41 @@ RUN chown -R www-data:www-data ${INSTANCE_PATH}/htdocs
 # Install latest github release
 RUN curl -L $(curl -s https://api.github.com/repos/rukzuk/rukzuk/releases/latest | grep browser_download_url | grep 'tgz\|tar.gz' | cut -d '"' -f 4) | tar -xz --strip 1 -C ${CMS_PATH}/..
 
-
 RUN ln -s ${CMS_PATH}/app/server/environment ${INSTANCE_PATH}/environment
 RUN ln -s ${CMS_PATH} ${INSTANCE_PATH}/application
 
-# Initial
+# rukzuk env config (for init script)
 ENV APPLICATION_ENV standalone
-ENV CMS_SQLITE_DB ${INSTANCE_PATH}/htdocs/cms/db.sqlite3
-COPY config.php ${INSTANCE_PATH}/config.php
+
+## sqlite (disabled)
+#  ENV CMS_DB_TYPE=sqlite
+#  ENV CMS_SQLITE_DB ${INSTANCE_PATH}/htdocs/cms/db.sqlite3
+#  COPY config_sqlite.php ${INSTANCE_PATH}/config.php
+
+## mysql
+ENV CMS_DB_TYPE=mysql
+ENV CMS_MYSQL_USER=rukzuk
+ENV CMS_MYSQL_PASSWORD=rukzuk
+ENV CMS_MYSQL_DB=rukzuk
+COPY config_mysql.php ${INSTANCE_PATH}/config.php
+
 COPY cms.apache /etc/apache2/sites-available/000-default.conf
-RUN mkdir -p /etc/my_init.d
-COPY init.sh /etc/my_init.d/rukzuk_init.sh
-RUN chmod +x /etc/my_init.d/rukzuk_init.sh
 COPY msmtprc.tpl /etc/msmtprc.tpl
 
+# my init scripts (run before any runit services)
+RUN mkdir -p /etc/my_init.d
+COPY init_mysql.sh      /etc/my_init.d/20-mysql_init.sh
+RUN chmod +x            /etc/my_init.d/20-mysql_init.sh
+COPY init.sh            /etc/my_init.d/30-rukzuk_init.sh
+RUN chmod +x            /etc/my_init.d/30-rukzuk_init.sh
+COPY init_mysql_end.sh  /etc/my_init.d/40-mysql_init_end.sh
+RUN chmod +x            /etc/my_init.d/40-mysql_init_end.sh
+
 # Remove unused packages (only used to build)  & Cleanup 
-RUN apt-get purge -y php7.3-dev libmcrypt-dev php-pear build-essential
-RUN apt-get clean -y
-RUN apt autoremove -y
-RUN rm -rf /var/lib/apt/lists/*
+#RUN apt-get purge -y php7.3-dev libmcrypt-dev php-pear build-essential
+#RUN apt-get clean -y
+#RUN apt-get autoremove -y
+#RUN rm -rf /var/lib/apt/lists/*
 
 EXPOSE 80
 

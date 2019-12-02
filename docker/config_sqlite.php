@@ -14,3 +14,4 @@ return array(
   'webhost' => getenv('CMS_URL') ? : 'http://localhost:8080',
   'internalWebhost' => getenv('CMS_URL_INTERNAL') ? : 'http://localhost',
 );
+
