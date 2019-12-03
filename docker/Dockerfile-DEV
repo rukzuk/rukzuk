@@ -113,12 +113,13 @@ RUN ln -s ${CMS_PATH} ${INSTANCE_PATH}/application
 
 # Initial
 ENV APPLICATION_ENV standalone
+ENV CMS_DB_TYPE=sqlite
 ENV CMS_SQLITE_DB ${INSTANCE_PATH}/htdocs/cms/db.sqlite3
 COPY config_sqlite.php ${INSTANCE_PATH}/config.php
 COPY cms.apache /etc/apache2/sites-available/000-default.conf
 RUN mkdir -p /etc/my_init.d
-COPY init.sh /etc/my_init.d/rukzuk_init.sh
-RUN chmod +x /etc/my_init.d/rukzuk_init.sh
+COPY init.sh /etc/my_init.d/30-rukzuk_init.sh
+RUN chmod +x /etc/my_init.d/30-rukzuk_init.sh
 COPY msmtprc.tpl /etc/msmtprc.tpl
 
 EXPOSE 80
