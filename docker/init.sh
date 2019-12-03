@@ -30,6 +30,12 @@ chown -R www-data:www-data "${INSTANCE_PATH}/htdocs/cms"
 
 CMS_DO_INIT="no"
 if [ "a$CMS_DB_TYPE"  == "amysql" ]; then
+    echo "rukzuk_init: wait for mysql"
+    while ! mysqladmin ping -h localhost --silent; do
+        printf "."
+        sleep 1
+    done
+    echo "rukzuk_init: mysql is up"
     CMS_SET_USER_PW_CMD="sudo -E -u www-data mysql -h localhost -u ${CMS_MYSQL_USER} -p${CMS_MYSQL_PASSWORD} -D ${CMS_MYSQL_DB} -e "
     # check if db exists and has content
     if ! ${CMS_SET_USER_PW_CMD} "SHOW TABLES;" | grep "website" >/dev/null 2>&1; then 
@@ -44,7 +50,7 @@ fi
 
 
 if [  "x${CMS_DO_INIT}" == "xyes" ]; then
-    echo "call initSystem"
+    echo "rukzuk_init: call cli:initSystem"
     # init system with a admin user
     sudo -E -u www-data ${INSTANCE_PATH}/environment/cli --action initSystem --docroot=${INSTANCE_PATH}/htdocs --templatepath=${CMS_PATH} --params='{"email": "rukzuk@example.com", "lastname": "Super", "firstname": "User", "gender": "", "language": "en"}'
     # default password: admin123
@@ -52,6 +58,7 @@ if [  "x${CMS_DO_INIT}" == "xyes" ]; then
 fi
 
 
-
+echo "rukzuk_init: call cli:updateSystem"
 sudo -E -u www-data ${INSTANCE_PATH}/environment/cli --action="updateSystem" --templatepath "${CMS_PATH}" --docroot "${INSTANCE_PATH}/htdocs"
+echo "rukzuk_init: call cli:updateData"
 sudo -E -u www-data ${INSTANCE_PATH}/environment/cli --action="updateData" --templatepath "${CMS_PATH}" --docroot "${INSTANCE_PATH}/htdocs"

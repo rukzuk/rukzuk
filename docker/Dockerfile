@@ -164,18 +164,21 @@ COPY msmtprc.tpl /etc/msmtprc.tpl
 
 # my init scripts (run before any runit services)
 RUN mkdir -p /etc/my_init.d
-COPY init_mysql.sh      /etc/my_init.d/20-mysql_init.sh
-RUN chmod +x            /etc/my_init.d/20-mysql_init.sh
+COPY mysql_start.sh     /etc/my_init.d/20-mysql_start.sh
+RUN chmod +x            /etc/my_init.d/20-mysql_start.sh
+COPY mysql_conf_user.sh /etc/my_init.d/21-mysql_conf_user.sh
+RUN chmod +x            /etc/my_init.d/21-mysql_conf_user.sh
 COPY init.sh            /etc/my_init.d/30-rukzuk_init.sh
 RUN chmod +x            /etc/my_init.d/30-rukzuk_init.sh
-COPY init_mysql_end.sh  /etc/my_init.d/40-mysql_init_end.sh
-RUN chmod +x            /etc/my_init.d/40-mysql_init_end.sh
+COPY mysql_end.sh       /etc/my_init.d/40-mysql_end.sh
+RUN chmod +x            /etc/my_init.d/40-mysql_end.sh
+
 
 # Remove unused packages (only used to build)  & Cleanup 
-#RUN apt-get purge -y php7.3-dev libmcrypt-dev php-pear build-essential
-#RUN apt-get clean -y
-#RUN apt-get autoremove -y
-#RUN rm -rf /var/lib/apt/lists/*
+RUN apt-get purge -y php7.3-dev libmcrypt-dev php-pear build-essential
+RUN apt-get clean -y
+RUN apt-get autoremove -y
+RUN rm -rf /var/lib/apt/lists/*
 
 EXPOSE 80
 

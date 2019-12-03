@@ -12,14 +12,6 @@ if [ -f /var/lib/mysql/rz-mysql-root.pw ]; then
 	exit 0 # end here
 fi
 
-# init mysql data and root user (no pw) (debian/ubuntu does this for us at installation, but we remove it)
-# percona: #mysqld --initialize-insecure --user=mysql
-mysql_install_db
-
-# start mysql server
-mysqld_safe --console --user=mysql &
-MYSQL_PID=$!
-
 # wait for mysql to be up
 echo "wait for mysql."
 while ! mysqladmin ping -h localhost --silent; do
@@ -43,9 +35,5 @@ echo "mysql: create ${CMS_MYSQL_USER} user and ${CMS_MYSQL_DB} db"
 MYSQL_CREATE_DB="CREATE DATABASE ${CMS_MYSQL_DB}; CREATE USER '${CMS_MYSQL_USER}' IDENTIFIED BY '${CMS_MYSQL_PASSWORD}'; GRANT ALL ON ${CMS_MYSQL_DB}.* TO '${CMS_MYSQL_USER}'@localhost IDENTIFIED BY '${CMS_MYSQL_PASSWORD}'; FLUSH PRIVILEGES;"
 mysql -h localhost -uroot -p${MYSQL_ROOT_PW} -e"${MYSQL_CREATE_DB}"
 
-# end mysqld (disabled cause we need it in rukzuk init)
-#kill $MYSQL_PID
-
 # update root pw file
 echo ${MYSQL_ROOT_PW} > /var/lib/mysql/rz-mysql-root.pw
-echo ${MYSQL_PID} > /var/lib/mysql/rz-mysql-init.pid
