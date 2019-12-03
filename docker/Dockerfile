@@ -173,6 +173,11 @@ RUN chmod +x            /etc/my_init.d/30-rukzuk_init.sh
 COPY mysql_end.sh       /etc/my_init.d/40-mysql_end.sh
 RUN chmod +x            /etc/my_init.d/40-mysql_end.sh
 
+# tool scripts
+RUN mkdir -p /opt/rukzuk-tools/
+COPY import-data.sh     /opt/rukzuk-tools/import-data.sh
+RUN chmod +x            /opt/rukzuk-tools/import-data.sh
+
 
 # Remove unused packages (only used to build)  & Cleanup 
 RUN apt-get purge -y php7.3-dev libmcrypt-dev php-pear build-essential
