@@ -30,21 +30,19 @@ else
 fi
 
 # check for files
-if [ "$(find "${INSTANCE_PATH}/htdocs" -mindepth 1 -print -quit 2>/dev/null)" == "" ]; then
-    echo "No CMS files found. OK"
-else
-    echo "WARN: Please remove rukzuk files in '${INSTANCE_PATH}'"
-    echo "rm -rf ${INSTANCE_PATH}/htdocs/*"
-    echo "OR"
-    echo "mkdir ~/cms-files-bak && mv ${INSTANCE_PATH}/htdocs/* ~/cms-files-bak"
-    exit 2
-fi
+#if [ "$(find "${INSTANCE_PATH}/htdocs/cms" -mindepth 1 -print -quit 2>/dev/null)" == "" ]; then
+#    echo "No CMS files found. OK"
+#else
+#    echo "WARN: Please remove rukzuk files in '${INSTANCE_PATH}/htdocs/cms'"
+#    echo "rm -rf ${INSTANCE_PATH}/htdocs/cms/*"
+#    exit 2
+#fi
 
 # do import
 TMPDIR="$(mktemp -d ${IMPORT_TMP_DIR}/rzimport.XXXXXXXXXX)"
 
 # extract tar from stdin to temp folder
-${CMD_TAR} -C ${TMPDIR} -xf -
+tar -C ${TMPDIR} -xf -
 
 if [ "a$CMS_DB_TYPE"  == "amysql" ]; then
     # load sql dump into db
@@ -52,7 +50,7 @@ if [ "a$CMS_DB_TYPE"  == "amysql" ]; then
 fi
 
 # extrat data.tar to correct path
-${CMD_TAR} -C ${INSTANCE_PATH} -xf $TMPDIR/data.tar
+tar -C "${INSTANCE_PATH}/htdocs/cms" -xf $TMPDIR/data.tar ./htdocs/cms
 
 # remove temp folder
 rm -rf ${TMPDIR}

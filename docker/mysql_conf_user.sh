@@ -37,3 +37,8 @@ mysql -h localhost -uroot -p${MYSQL_ROOT_PW} -e"${MYSQL_CREATE_DB}"
 
 # update root pw file
 echo ${MYSQL_ROOT_PW} > /var/lib/mysql/rz-mysql-root.pw
+
+# set my.cnf for root user with proper password
+cat /etc/root-my-cnf.tpl | \
+    sed "s/##MYSQL_ROOT_PW##/${MYSQL_ROOT_PW}/" \
+    > /root/.my.cnf

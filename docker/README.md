@@ -23,22 +23,28 @@ docker volume create rz-db
 ```
 
 ## Run
+
 To start the build docker image execute:
 
 ```sh
 docker run -v rz-db:/var/lib/mysql -v rz-data:/srv/rukzuk/htdocs/cms -e "CMS_URL=http://$(hostname)" -e "SMTP_HOST=smtp.google.com" -e "SMTP_USER=you@gmail.com" -e "SMTP_PASSWORD=password" -d -p 80:80 rukzuk_image
-
 ```
 
 Note: Replace the email configuration with your own settings.
 
 ## Import Data
 
-Find the id of your running contianer via `docker ps`.
+To import data please put a file `import.tar` in the folder `/srv/rukzuk/htdocs/cms` which is the `rz-data` volume. You might use `sudo` as the volume paths are owned by root.
 
-```sh
-bzcat backup.tar.bz2 | docker exec <DOCKER-ID> /opt/rukzuk-tools/import-data.sh
+Example:
+
 ```
+sudo cp import.tar $(docker volume inspect -f '{{ .Mountpoint }}' rz-data)
+```
+
+then create a new instance (via run). After the import the tar file will be deleted! 
+
+NOTE: The import can take a long time. Look what happens via `docker logs -f <Container-ID>` (`docker ps` shows the id).
 
 
 ### Configuration environment variables

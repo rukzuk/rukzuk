@@ -28,6 +28,7 @@ if [ ! -e  "${INSTANCE_PATH}/htdocs/cms" ]; then
 fi
 chown -R www-data:www-data "${INSTANCE_PATH}/htdocs/cms"
 
+# check if init system is required
 CMS_DO_INIT="no"
 if [ "a$CMS_DB_TYPE"  == "amysql" ]; then
     echo "rukzuk_init: wait for mysql"
@@ -49,12 +50,19 @@ else
 fi
 
 
+# init cms system (fill tables etc.)
 if [  "x${CMS_DO_INIT}" == "xyes" ]; then
-    echo "rukzuk_init: call cli:initSystem"
-    # init system with a admin user
-    sudo -E -u www-data ${INSTANCE_PATH}/environment/cli --action initSystem --docroot=${INSTANCE_PATH}/htdocs --templatepath=${CMS_PATH} --params='{"email": "rukzuk@example.com", "lastname": "Super", "firstname": "User", "gender": "", "language": "en"}'
-    # default password: admin123
-    ${CMS_SET_USER_PW_CMD} "UPDATE user SET password='pbkdf2_sha256\$12000\$0GdFwXIujjGUk3PrJ1rZ1gd5WATYf/JG\$1Rclyh5R7st7vqKthqQT462S65pj8mn9';"
+    # import data from archive if available
+    if [  -s  "${INSTANCE_PATH}/htdocs/cms/import.tar" ]; then
+        echo "rukzuk_init: found import file (and CMS_DO_INIT=yes) call import-data.sh"
+        /opt/rukzuk-tools/import-data.sh < ${INSTANCE_PATH}/htdocs/cms/import.tar && rm -f ${INSTANCE_PATH}/htdocs/cms/import.tar
+    else
+        echo "rukzuk_init: call cli:initSystem"
+        # init system with a admin user
+        sudo -E -u www-data ${INSTANCE_PATH}/environment/cli --action initSystem --docroot=${INSTANCE_PATH}/htdocs --templatepath=${CMS_PATH} --params='{"email": "rukzuk@example.com", "lastname": "Super", "firstname": "User", "gender": "", "language": "en"}'
+        # default password: admin123
+        ${CMS_SET_USER_PW_CMD} "UPDATE user SET password='pbkdf2_sha256\$12000\$0GdFwXIujjGUk3PrJ1rZ1gd5WATYf/JG\$1Rclyh5R7st7vqKthqQT462S65pj8mn9';"
+    fi
 fi
 
 

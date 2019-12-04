@@ -161,6 +161,7 @@ COPY config_mysql.php ${INSTANCE_PATH}/config.php
 
 COPY cms.apache /etc/apache2/sites-available/000-default.conf
 COPY msmtprc.tpl /etc/msmtprc.tpl
+COPY root-my-cnf.tpl /etc/root-my-cnf.tpl
 
 # my init scripts (run before any runit services)
 RUN mkdir -p /etc/my_init.d
