@@ -1,0 +1,26 @@
+{
+    "name": {
+        "de": ".htaccess (Apache)",
+        "en": ".htaccess (Apache)"
+    },
+    "description": {
+        "de": "Servereinstellungen anpassen. Funktioniert nur wenn Website auf Apache läuft. Je nach Server sind gar keine oder weniger funktionen verfügbar.",
+        "en": "Change Server settings. Only works with Apache webservers and if enabled."
+    },
+    "version": "dev",
+    "formValues": {
+        "htaccessContent": ""
+    },
+    "form": [
+        {
+            "type": "Comment",
+            "text": "{\"de\": \"Hier können .htaccess Regeln eingegeben werden. Hilfe: http://www.htaccess-guide.com\", \"en\": \"Enter .htaccess directives. Help: http://www.htaccess-guide.com\"}"
+        },
+        {
+            "type": "TextArea",
+            "CMSvar": "htaccessContent",
+            "height": 400,
+            "fieldLabel": "{\"de\": \".htaccess Inhalt\", \"en\": \".htaccess Content\"}"
+        }
+    ]
+}
