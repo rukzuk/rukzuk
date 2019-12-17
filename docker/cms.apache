@@ -40,7 +40,7 @@
     # disabled open basedir due to performance increase (should not be required inside of a container)
     #php_value open_basedir /srv/rukzuk:/opt/rukzuk:/tmp:/usr/local/bin/phantomjs
     php_value max_execution_time 1800
-    php_value memory_limit 512M
+    php_value memory_limit 1024M
     php_value post_max_size 4096M
     php_value upload_max_filesize 4096M
     php_value error_reporting -1
