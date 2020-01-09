@@ -112,7 +112,7 @@ class Doctrine extends DoctrineBase implements Dao
       $newWebsite->setNewGeneratedId();
       $newWebsite->setShortId($this->createShortId());
       $newWebsite->setPublishingEnabled(false);
-      $newWebsite->setPublish(null);
+      $newWebsite->setPublish(json_encode((object)[]));
       $newWebsite->setCreationMode(\Cms\Version::getMode());
       $newWebsite->setMarkedForDeletion(false);
       $this->getEntityManager()->persist($newWebsite);

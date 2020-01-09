@@ -137,6 +137,16 @@ class Website extends DaoServiceBase
       }
     }
 
+    // php > 7.1 does not like empty values for json_decode
+    if (!array_key_exists('colorscheme', $attributes) || empty($attributes['colorscheme'])) {
+      $attributes['colorscheme'] = json_encode([]);
+    }
+
+    // php > 7.1 does not like empty values for json_decode
+    if (!array_key_exists('navigation', $attributes) || empty($attributes['navigation'])) {
+      $attributes['navigation'] = json_encode([]);
+    }
+
     /** @var $website \Cms\Data\Website */
     $website = $this->execute('create', array($attributes, $useIdFromAttributes));
     $this->createWebsiteDirectories($website->getId());
