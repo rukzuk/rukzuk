@@ -1,0 +1,25 @@
+{
+    "name": {
+        "de": "Datenschutz",
+        "en": "Privacy / Data Protection"
+    },
+    "description": {
+        "de": "",
+        "en": ""
+    },
+    "version": "dev",
+    "formValues": {
+        "allowLoadOfGoogleFonts": true
+    },
+    "form": [
+        {
+            "type": "Comment",
+            "text": "{\"de\": \"Wenn das laden von Google Fonts nicht erlaubt ist wird dies in keinem Schrfitformat modul dieser Seite funktionieren.\", \"en\": \"If google fonts are disabled no font style will ever load them on this page.\"}"
+        },
+        {
+            "type": "OnOffToggle",
+            "CMSvar": "allowLoadOfGoogleFonts",
+            "fieldLabel": "{\"de\": \"Laden von Google Fonts erlauben\", \"en\": \"Allow google fonts\"}"
+        }
+    ]
+}

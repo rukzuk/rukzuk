@@ -16,6 +16,12 @@ class rz_style_font extends SimpleModule
    */
   public function htmlHeadUnit($api, $unit, $moduleInfo)
   {
+    $ws = $api->getWebsiteSettings('privacy');
+
+    if ($ws['allowLoadOfGoogleFonts'] == true) {
+      return ""; // end here
+    }
+
     $fonts = array();
     $googleFontFormValue = $api->getFormValue($unit, 'cssFontFamilyGoogle');
 
@@ -31,5 +37,4 @@ class rz_style_font extends SimpleModule
 
     return implode("\n", $fonts);
   }
-
 }

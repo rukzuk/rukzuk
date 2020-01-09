@@ -351,7 +351,7 @@
                                     "name": "text",
                                     "xtype": "textarea",
                                     "height": 200,
-                                    "value": "{\"de\":\"Übersicht aller Google Fonts: http://www.google.com/fonts/ Der Schriftname kann oben eingefügt werden.\",\"en\":\"All Google Fonts: http://www.google.com/fonts/ Font name can be typed in above.\"}",
+                                    "value": "{\"de\":\"Übersicht aller Google Fonts: http://www.google.com/fonts/ Der Schriftname kann oben eingefügt werden. ACHTUNG: Projekteinstellungen zum Datenschutz können das laden verhindern.\",\"en\":\"All Google Fonts: http://www.google.com/fonts/ Font name can be typed in above. NOTE: Projectsettings privacy can prevent the load of google fonts.\"}",
                                     "fieldLabel": "__i18n_formElements.commentLabel"
                                 },
                                 {
