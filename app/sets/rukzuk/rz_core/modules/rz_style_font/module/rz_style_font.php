@@ -18,7 +18,7 @@ class rz_style_font extends SimpleModule
   {
     $ws = $api->getWebsiteSettings('privacy');
 
-    if ($ws['allowLoadOfGoogleFonts'] == true) {
+    if ($ws['allowLoadOfGoogleFonts'] == false) {
       return ""; // end here
     }
 
