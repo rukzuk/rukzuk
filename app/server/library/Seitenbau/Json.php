@@ -12,26 +12,37 @@ class Json
   const TYPE_OBJECT = 0;
   const TYPE_ARRAY  = 1;
   const JSON_INDENT = '    ';
-  
+
+  /**
+   * Just a wrapper for \Zend_Json::encode()
+   * @param mixed $value
+   * @return string
+   */
   public static function encode($value)
   {
-    try {
-      return \Zend_Json::encode($value);
-    } catch (\Exception $e) {
-      throw new JsonException('error while encoding json', 1, $e);
-    }
+    return \Zend_Json::encode($value);
   }
-  
+
+  /**
+   * Same as \Zend_Json::decode but with support for empty json converted to empty array or empty object
+   * This seems to be the default for php < 7.1 in json_decode (which is used by Zend_Json usually)
+   * @param $json
+   * @param int $type
+   * @return array|\stdClass
+   * @throws \Zend_Json_Exception
+   */
   public static function decode($json, $type = self::TYPE_OBJECT)
   {
-    try {
-      if ($type == self::TYPE_ARRAY) {
-        return \Zend_Json::decode($json, \Zend_Json::TYPE_ARRAY);
-      } else {
-        return \Zend_Json::decode($json, \Zend_Json::TYPE_OBJECT);
+    if ($type == self::TYPE_ARRAY) {
+      if (empty((string)$json)) {
+        return array();
       }
-    } catch (\Exception $e) {
-      throw new JsonException('error while decoding json', 2, $e);
+      return \Zend_Json::decode($json, \Zend_Json::TYPE_ARRAY);
+    } else {
+      if (empty((string)$json)) {
+        return new \stdClass();
+      }
+      return \Zend_Json::decode($json, \Zend_Json::TYPE_OBJECT);
     }
   }
 
