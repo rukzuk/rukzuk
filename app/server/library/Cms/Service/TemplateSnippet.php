@@ -191,7 +191,7 @@ class TemplateSnippet extends DaoServiceBase
     }
     if (isset($attributes['content'])) {
       $contentString = (is_array($attributes['content']))
-        ? \Zend_Json::encode($attributes['content'])
+        ? \Seitenbau\Json::encode($attributes['content'])
         : $attributes['content'];
       $snippet->setContent($contentString);
     }

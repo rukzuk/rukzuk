@@ -63,7 +63,7 @@ class UpdateTest extends ServiceTestCase
     $this->assertInstanceOf('Cms\Data\Template', $getByIdTemplate);
 
     $this->assertSame($update['name'], $getByIdTemplate->getName());
-    $this->assertSame(\Zend_Json::encode($update['content']), $getByIdTemplate->getContent());
+    $this->assertSame(\Seitenbau\Json::encode($update['content']), $getByIdTemplate->getContent());
 
     $uuidValidator = new UniqueIdValidator(
       \Orm\Data\Template::ID_PREFIX,

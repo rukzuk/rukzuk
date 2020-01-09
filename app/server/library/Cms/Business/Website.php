@@ -290,7 +290,7 @@ class Website extends Base\Service
     if ($newNavigation == false) {
       throw new \Cms\Exception(752, __METHOD__, __LINE__);
     }
-    $newNavigation = \Zend_Json::encode($newNavigation);
+    $newNavigation = \Seitenbau\Json::encode($newNavigation);
 
     $attributes = array('navigation' => $newNavigation);
     $this->getService()->update($websiteId, $attributes);
@@ -317,7 +317,7 @@ class Website extends Base\Service
 
     $data = new \Seitenbau\ArrayData();
     $newNavigation = $data->insertAfter($navigation, $dataPage, $pageId);
-    $newNavigation = \Zend_Json::encode($newNavigation);
+    $newNavigation = \Seitenbau\Json::encode($newNavigation);
 
     $attributes = array('navigation' => $newNavigation);
     $this->getService()->update($insertPage->getWebsiteid(), $attributes);
@@ -340,7 +340,7 @@ class Website extends Base\Service
       $data = new \Seitenbau\ArrayData();
       $data->remove($navigation, $pageid);
 
-      $result = \Zend_Json::encode($navigation);
+      $result = \Seitenbau\Json::encode($navigation);
 
       $attributes = array('navigation' => $result);
       $this->getService()->update($websiteId, $attributes);

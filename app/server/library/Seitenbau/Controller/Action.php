@@ -59,14 +59,14 @@ abstract class Action extends \Zend_Controller_Action
           $responseString = sprintf(
               "var %s = %s;",
               (isset($this->responseTypeParams['name']) ? $this->responseTypeParams['name'] : 'CMSDATA'),
-              \Zend_Json::encode($this->responseData)
+              \Seitenbau\Json::encode($this->responseData)
           );
           $this->buildResponse($responseString, 'application/javascript; charset=utf-8');
             break;
       // return as json
       case self::RESPONSE_TYPE_JSON:
       default:
-          $json = \Zend_Json::encode($this->responseData);
+          $json = \Seitenbau\Json::encode($this->responseData);
           $this->buildResponse($json, $this->contentTypeValue);
             break;
     }

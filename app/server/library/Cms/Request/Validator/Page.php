@@ -314,7 +314,7 @@ class Page extends Base
 
     if (!$contentValidator->isValid($content)) {
       $messages = array_values($contentValidator->getMessages());
-      $this->addError(new Error('content', \Zend_Json::encode($content), $messages));
+      $this->addError(new Error('content', \Seitenbau\Json::encode($content), $messages));
       return false;
     }
     return true;

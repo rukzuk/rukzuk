@@ -159,7 +159,7 @@ class UnlockTest extends LockControllerTestCase
 
     $request = sprintf(
       '/lock/unlock/params/%s',
-      urlencode(\Zend_JSON::encode($params))
+      urlencode(\Seitenbau\Json::encode($params))
     );
     $this->dispatch($request);
     $response = $this->getResponseBody();

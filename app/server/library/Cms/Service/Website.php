@@ -226,7 +226,7 @@ class Website extends DaoServiceBase
     if ($result == false) {
       throw new CmsException(752, __METHOD__, __LINE__, 'could not generate new navigation');
     }
-    $result = \Zend_Json::encode($result);
+    $result = \Seitenbau\Json::encode($result);
 
     $attributes = array('navigation' => $result);
     $this->update($websiteId, $attributes);
@@ -253,7 +253,7 @@ class Website extends DaoServiceBase
     if ($result == false) {
       throw new CmsException(752, __METHOD__, __LINE__);
     }
-    $result = \Zend_Json::encode($result);
+    $result = \Seitenbau\Json::encode($result);
 
     $attributes = array('navigation' => $result);
     $this->update($websiteId, $attributes);

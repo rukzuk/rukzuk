@@ -25,7 +25,7 @@ class CreateTest extends ControllerTestCase
   {
     $request = sprintf(
       '/templatesnippet/create/params/%s',
-      \Zend_Json::encode(array(
+      \Seitenbau\Json::encode(array(
         'name'        => $name,
         'description' => $description,
         'category'    => $category,
@@ -202,7 +202,7 @@ class CreateTest extends ControllerTestCase
     $name = 'createTemplateSnippetAccessTest_'.__METHOD__;
     $request = sprintf(
       '/templatesnippet/create/params/%s',
-      \Zend_Json::encode(array(
+      \Seitenbau\Json::encode(array(
         'runid'     => $runId,
         'websiteid' => $websiteId,
         'name'      => $name,
@@ -236,7 +236,7 @@ class CreateTest extends ControllerTestCase
     $name = 'createTemplateSnippetAccessTest_'.__METHOD__;
     $request = sprintf(
       '/templatesnippet/create/params/%s',
-      \Zend_Json::encode(array(
+      \Seitenbau\Json::encode(array(
         'runid'     => $runId,
         'websiteid' => $websiteId,
         'name'      => $name,
@@ -271,7 +271,7 @@ class CreateTest extends ControllerTestCase
     $name = 'createTemplateSnippetAccessTest_'.__METHOD__;
     $request = sprintf(
       '/templatesnippet/create/params/%s',
-      \Zend_Json::encode(array(
+      \Seitenbau\Json::encode(array(
         'runid'     => $runId,
         'websiteid' => $websiteId,
         'name'      => $name,

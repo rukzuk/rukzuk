@@ -107,7 +107,7 @@ class Action
     
     
     if (count($additionalinfo) > 0) {
-      $additionalinfoAsJson = \Zend_Json::encode($additionalinfo);
+      $additionalinfoAsJson = \Seitenbau\Json::encode($additionalinfo);
     } else {
       $additionalinfoAsJson = null;
     }

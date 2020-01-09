@@ -409,7 +409,7 @@ class Doctrine extends DoctrineBase implements Dao
     }
     if (array_key_exists('content', $attributes)) {
       $contentString = (is_array($attributes['content']))
-        ? \Zend_Json::encode($attributes['content'])
+        ? \Seitenbau\Json::encode($attributes['content'])
         : $attributes['content'];
       $templateOrm->setContent($contentString);
     }

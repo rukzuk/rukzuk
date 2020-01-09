@@ -53,7 +53,7 @@ class Ticket extends DaoServiceBase
     // evtl. Schutz umformen
     if (isset($credentials)) {
       if (is_array($credentials)) {
-        $credentials = \Zend_Json::encode($credentials);
+        $credentials = \Seitenbau\Json::encode($credentials);
       } elseif (!is_scalar($credentials)) {
         throw new CmsException(1307, __METHOD__, __LINE__);
       }
@@ -66,7 +66,7 @@ class Ticket extends DaoServiceBase
     // evtl. Ticket-Parameter umformen
     if (isset($additionalTicketParams)) {
       if (is_array($additionalTicketParams)) {
-        $additionalTicketParams = \Zend_Json::encode($additionalTicketParams);
+        $additionalTicketParams = \Seitenbau\Json::encode($additionalTicketParams);
       } elseif (!is_scalar($additionalTicketParams)) {
         throw new CmsException(1301, __METHOD__, __LINE__);
       }

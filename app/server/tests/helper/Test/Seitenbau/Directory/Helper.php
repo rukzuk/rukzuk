@@ -75,7 +75,7 @@ class Helper {
    * @param boolean $prettyPrint
    */
   public static function getRecursiveAsJson($directory, $prettyPrint=false) {
-    $json = \Zend_Json::encode(self::getRecursive($directory));
+    $json = \Seitenbau\Json::encode(self::getRecursive($directory));
     if ($prettyPrint) {
       return \Zend_Json::prettyPrint($json, array("indent" => "  "));
     }

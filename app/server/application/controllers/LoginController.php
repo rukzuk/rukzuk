@@ -47,7 +47,7 @@ class LoginController extends Controller\Action
       
       // Ticket-Login mit den Zugangsdaten auf den Ticket-Service weiterleiten
       if ($this->getRequest()->getPost('ticket')) {
-        $credentials = \Zend_Json::encode(array(
+        $credentials = \Seitenbau\Json::encode(array(
           'username' => $username,
           'password' => $userpassword,
         ));

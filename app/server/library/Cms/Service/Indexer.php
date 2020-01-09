@@ -207,7 +207,7 @@ class Indexer extends PlainServiceBase
     $config = Registry::getConfig();
 
     // Params als JSON-String
-    $paramsAsJson = \Zend_Json::encode($params);
+    $paramsAsJson = \Seitenbau\Json::encode($params);
     $params = array(
         $config->request->parameter => $paramsAsJson,
     );

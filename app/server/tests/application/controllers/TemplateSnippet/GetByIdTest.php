@@ -126,7 +126,7 @@ class GetByIdTest extends ControllerTestCase
     $this->assertInternalType('array', $actualTemplateSnippet->pageTypes);
     $this->assertCount(0, $actualTemplateSnippet->pageTypes);
     $this->assertObjectHasAttribute('content', $actualTemplateSnippet);
-    $this->assertSame('[]', \Zend_Json::encode($actualTemplateSnippet->content));
+    $this->assertSame('[]', \Seitenbau\Json::encode($actualTemplateSnippet->content));
     $this->assertEquals('local', $actualTemplateSnippet->sourceType);
     $this->assertFalse($actualTemplateSnippet->readonly);
 

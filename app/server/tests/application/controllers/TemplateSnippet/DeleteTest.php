@@ -31,7 +31,7 @@ class DeleteTest extends ControllerTestCase
     $websiteId = 'SITE-template-snip-pet0-test-000000000002-SITE';
     $request = sprintf(
       '/templatesnippet/delete/params/%s',
-      \Zend_Json::encode(array(
+      \Seitenbau\Json::encode(array(
         'runid'     => $runId,
         'ids'       => array($id),
         'websiteid' => $websiteId
@@ -88,7 +88,7 @@ class DeleteTest extends ControllerTestCase
     $templateSnippetIdForDelete = 'TPLS-template-snip-pet0-test-deleteaction-TPLS';
     $request = sprintf(
       '/templatesnippet/delete/params/%s',
-      \Zend_Json::encode(array(
+      \Seitenbau\Json::encode(array(
         'runid'     => $runId,
         'ids'       => array($templateSnippetIdForDelete),
         'websiteid' => $websiteId
@@ -151,7 +151,7 @@ class DeleteTest extends ControllerTestCase
     $templateSnippetId = 'TPLS-template-snip-pet0-test-000000000022-TPLS';
     $request = sprintf(
       '/templatesnippet/delete/params/%s',
-      \Zend_Json::encode(array(
+      \Seitenbau\Json::encode(array(
         'runid'     => $runId,
         'ids'       => array($templateSnippetId),
         'websiteid' => $websiteId
@@ -185,7 +185,7 @@ class DeleteTest extends ControllerTestCase
     $templateSnippetId = 'TPLS-template-snip-pet0-test-000000000022-TPLS';
     $request = sprintf(
       '/templatesnippet/delete/params/%s',
-      \Zend_Json::encode(array(
+      \Seitenbau\Json::encode(array(
         'runid'     => $runId,
         'ids'       => array($templateSnippetId),
         'websiteid' => $websiteId
@@ -216,7 +216,7 @@ class DeleteTest extends ControllerTestCase
     $templateSnippetId = 'TPLS-template-snip-pet0-test-000000000022-TPLS';
     $request = sprintf(
       '/templatesnippet/delete/params/%s',
-      \Zend_Json::encode(array(
+      \Seitenbau\Json::encode(array(
         'runid'     => $runId,
         'ids'       => array($templateSnippetId),
         'websiteid' => $websiteId

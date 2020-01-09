@@ -33,7 +33,7 @@ class TemplateSnippetsTest extends ControllerTestCase
     );
     $requestUri = sprintf(
       'export/templatesnippets/params/%s',
-      \Zend_Json::encode(array(
+      \Seitenbau\Json::encode(array(
         'websiteid' => $websiteId,
         'ids'       => $templateSnippetIds,
         'name'      => $name,
@@ -94,7 +94,7 @@ class TemplateSnippetsTest extends ControllerTestCase
     );
     $requestUri = sprintf(
       'export/templatesnippets/params/%s',
-      \Zend_Json::encode(array(
+      \Seitenbau\Json::encode(array(
         'websiteid' => $websiteId,
         'ids'     => $templateSnippetIds,
       ))            
@@ -161,7 +161,7 @@ class TemplateSnippetsTest extends ControllerTestCase
     );
     $requestUri = sprintf(
       'export/templatesnippets/params/%s',
-      \Zend_Json::encode(array(
+      \Seitenbau\Json::encode(array(
         'websiteid' => $websiteId,
         'ids'       => $templateSnippetIds,
         'name'      => $exportDirectoryName,

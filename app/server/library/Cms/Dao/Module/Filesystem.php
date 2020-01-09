@@ -570,7 +570,6 @@ class Filesystem extends BaseFilesystemDao implements ModuleDaoInterface
    * @param string $filename
    * @param mixed  $data
    *
-   * @throws SbJson\JsonException
    * @throws \Exception
    */
   protected function storeJsonFile($moduleDataDirectory, $filename, $data)

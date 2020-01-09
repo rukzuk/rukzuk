@@ -91,7 +91,7 @@ abstract class Dao extends Plain implements ServiceMarker, DaoService, PlainServ
   {
     foreach ($keys as $key) {
       if (isset($attributes[$key])) {
-        $attributes[$key] = \Zend_Json::encode($attributes[$key]);
+        $attributes[$key] = \Seitenbau\Json::encode($attributes[$key]);
       }
     }
 

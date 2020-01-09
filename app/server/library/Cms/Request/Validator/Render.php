@@ -70,9 +70,9 @@ class Render extends Base
   {
     $notEmptyValidator = new \Zend_Validate_NotEmpty();
 
-    if (!$notEmptyValidator->isValid(\Zend_Json::encode($data))) {
+    if (!$notEmptyValidator->isValid(\Seitenbau\Json::encode($data))) {
       $messages = array_values($notEmptyValidator->getMessages());
-      $this->addError(new Error('data', \Zend_Json::encode($data), $messages));
+      $this->addError(new Error('data', \Seitenbau\Json::encode($data), $messages));
       return false;
     }
     return true;

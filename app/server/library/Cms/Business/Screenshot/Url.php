@@ -112,7 +112,7 @@ class Url
             return;
         break;
     }
-    $paramsAsJson = \Zend_Json::encode($params);
+    $paramsAsJson = \Seitenbau\Json::encode($params);
     return array(
       'controller' => 'render',
       'action' => $this->type,

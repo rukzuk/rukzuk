@@ -54,7 +54,7 @@ class GetByIdTest extends ServiceTestCase
     $this->assertInstanceOf('Cms\Data\Template', $getByIdTemplate);
 
     $this->assertSame($create['name'], $getByIdTemplate->getName());
-    $this->assertSame(\Zend_Json::encode($create['content']), $getByIdTemplate->getContent());
+    $this->assertSame(\Seitenbau\Json::encode($create['content']), $getByIdTemplate->getContent());
     $this->assertSame($create['pageType'], $getByIdTemplate->getPageType());
 
     $uuidValidator = new UniqueIdValidator(

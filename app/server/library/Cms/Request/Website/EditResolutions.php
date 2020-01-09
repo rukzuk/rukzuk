@@ -38,7 +38,7 @@ class EditResolutions extends Base
   public function setResolutions($resolutions)
   {
     if ($resolutions !== null) {
-      $this->resolutions = \Zend_Json::encode($resolutions);
+      $this->resolutions = \Seitenbau\Json::encode($resolutions);
     }
   }
 }

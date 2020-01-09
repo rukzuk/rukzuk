@@ -77,7 +77,7 @@ class GetAllTest extends ServiceTestCase
     {
       $this->assertInstanceOf('Cms\Data\Template', $template);
       $this->assertSame($creates[$index]['name'], $template->getName());
-      $this->assertSame(\Zend_Json::encode($creates[$index]['content']), $template->getContent());
+      $this->assertSame(\Seitenbau\Json::encode($creates[$index]['content']), $template->getContent());
       if (array_key_exists('pageType', $creates[$index])) {
         $this->assertEquals($creates[$index]['pageType'], $template->getPageType());
       } else {

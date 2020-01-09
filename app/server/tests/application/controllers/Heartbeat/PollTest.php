@@ -241,7 +241,7 @@ class PollTest extends ControllerTestCase
 
     $request = sprintf(
       '/heartbeat/poll/params/%s',
-      urlencode(\Zend_JSON::encode($params))
+      urlencode(\Seitenbau\Json::encode($params))
     );
     $this->dispatch($request);
     $response = $this->getResponseBody();

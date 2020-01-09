@@ -62,7 +62,7 @@ class Doctrine extends DoctrineBase implements Dao
       $ticket->setWebsiteid($websiteId);
       $ticket->setIsredirect($isRedirect);
       $ticket->setIsget($isGet);
-      $ticket->setRequestconfig(\Zend_Json::encode($requestConfig));
+      $ticket->setRequestconfig(\Seitenbau\Json::encode($requestConfig));
       $ticket->setTicketLifetime($ticketLifetime);
       $ticket->setRemainingCalls($remainingCalls);
       $ticket->setSessionLifetime($sessionLifetime);

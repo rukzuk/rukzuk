@@ -191,7 +191,7 @@ class Template
   public function setContentChecksumOnUpdate()
   {
     $contentString = (is_array($this->content))
-                   ? \Zend_Json::encode($this->content)
+                   ? \Seitenbau\Json::encode($this->content)
                    : $this->content;
     
     $this->contentchecksum = $contentString;

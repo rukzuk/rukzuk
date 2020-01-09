@@ -45,8 +45,8 @@ class CreateTest extends ServiceTestCase
     );
     $this->testEntry = $this->service->create($this->websiteId, $attributes);
 
-    $attributes['content'] = \Zend_Json::encode($attributes['content']);
-    $attributes['globalcontent'] = \Zend_Json::encode($attributes['globalcontent']);
+    $attributes['content'] = \Seitenbau\Json::encode($attributes['content']);
+    $attributes['globalcontent'] = \Seitenbau\Json::encode($attributes['globalcontent']);
     
     $this->assertResultSuccess($this->testEntry, $attributes);
   }

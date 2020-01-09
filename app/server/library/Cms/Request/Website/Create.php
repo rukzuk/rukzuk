@@ -59,7 +59,7 @@ class Create extends Base
     if (is_null($publish)) {
       return;
     }
-    $this->publish = \Zend_Json::encode($publish);
+    $this->publish = \Seitenbau\Json::encode($publish);
   }
 
   public function getPublish()
@@ -72,7 +72,7 @@ class Create extends Base
     if (is_null($colorscheme)) {
       return;
     }
-    $this->colorscheme = \Zend_Json::encode($colorscheme);
+    $this->colorscheme = \Seitenbau\Json::encode($colorscheme);
   }
 
   public function getColorscheme()
@@ -85,7 +85,7 @@ class Create extends Base
     if (is_null($resolutions)) {
       return;
     }
-    $this->resolutions = \Zend_Json::encode($resolutions);
+    $this->resolutions = \Seitenbau\Json::encode($resolutions);
   }
 
   public function getResolutions()

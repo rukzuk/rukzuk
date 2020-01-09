@@ -343,8 +343,8 @@ class CopyTest extends ControllerTestCase
         );
         // Navigation (Pages) pruefen
         $this->assertSame(
-          \Zend_Json::encode($copyWebsite->navigation),
-          \Zend_Json::encode($newWebsite->navigation)
+          \Seitenbau\Json::encode($copyWebsite->navigation),
+          \Seitenbau\Json::encode($newWebsite->navigation)
         );
 
         break;

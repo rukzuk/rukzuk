@@ -81,7 +81,7 @@ class Shortener extends Base\Service
         'controller' => 'render',
         'action' => 'template',
         'params' => array(
-          Registry::getConfig()->request->parameter => \Zend_Json::encode(array(
+          Registry::getConfig()->request->parameter => \Seitenbau\Json::encode(array(
             'websiteid' => $websiteId,
             'templateid' => $id,
             'mode' => 'preview',
@@ -94,7 +94,7 @@ class Shortener extends Base\Service
         'controller' => 'render',
         'action' => 'page',
         'params' => array(
-          Registry::getConfig()->request->parameter => \Zend_Json::encode(array(
+          Registry::getConfig()->request->parameter => \Seitenbau\Json::encode(array(
             'websiteid' => $websiteId,
             'pageid' => $id,
             'mode' => 'preview',

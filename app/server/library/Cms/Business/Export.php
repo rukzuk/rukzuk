@@ -180,7 +180,7 @@ class Export extends Base\Service
         '%s/cdn/export/%s/%s',
         $serverUrl,
         BaseRequest::REQUEST_PARAMETER,
-        \Zend_Json::encode(array(
+        \Seitenbau\Json::encode(array(
         'name' => $exportName,
         ))
     );

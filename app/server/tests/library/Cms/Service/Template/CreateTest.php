@@ -52,7 +52,7 @@ class CreateTest extends ServiceTestCase
     $this->assertInstanceOf('Cms\Data\Template', $createdTemplate);
     $this->assertSame($create['name'], $createdTemplate->getName());
     $this->assertSame($create['pageType'], $createdTemplate->getPageType());
-    $this->assertSame(\Zend_Json::encode($create['content']), $createdTemplate->getContent());
+    $this->assertSame(\Seitenbau\Json::encode($create['content']), $createdTemplate->getContent());
 
     $uuidValidator = new UniqueIdValidator(
       \Orm\Data\Template::ID_PREFIX,

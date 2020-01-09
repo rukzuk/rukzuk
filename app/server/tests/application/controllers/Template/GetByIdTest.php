@@ -110,7 +110,7 @@ class GetByIdTest extends ControllerTestCase
     $this->assertObjectHasAttribute('name', $actualTemplate);
     $this->assertSame('Template_Name_Int_GetById', $actualTemplate->name);
     $this->assertObjectHasAttribute('content', $actualTemplate);
-    $this->assertSame('[{"some":"value"}]', \Zend_Json::encode($actualTemplate->content));
+    $this->assertSame('[{"some":"value"}]', \Seitenbau\Json::encode($actualTemplate->content));
   }
 
   /**

@@ -40,7 +40,7 @@ class EditColorscheme extends Base
   public function setColorscheme($colorscheme)
   {
     if ($colorscheme !== null) {
-      $this->colorscheme = \Zend_Json::encode($colorscheme);
+      $this->colorscheme = \Seitenbau\Json::encode($colorscheme);
     }
   }
 }

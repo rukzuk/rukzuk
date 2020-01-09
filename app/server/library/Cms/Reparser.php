@@ -45,7 +45,7 @@ class Reparser
     );
 
     // Page mit den neuen Werten updaten
-    $page->setContent(\Zend_Json::encode($newPageContent));
+    $page->setContent(\Seitenbau\Json::encode($newPageContent));
     $page->setTemplatecontent($template->getContent());
     $page->setTemplatecontentchecksum($template->getContentchecksum());
 
@@ -54,7 +54,7 @@ class Reparser
     $pageBusiness->update(
         $page->getId(),
         $page->getWebsiteId(),
-        array('content' => \Zend_Json::encode($newPageContent),
+        array('content' => \Seitenbau\Json::encode($newPageContent),
         'templatecontent' => $template->getContent(),
         'templatecontentchecksum' => $template->getContentchecksum())
     );

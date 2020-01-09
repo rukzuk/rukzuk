@@ -222,7 +222,7 @@ class Template
   public function setContentChecksumOnUpdate()
   {
     $contentString = (is_array($this->content))
-                   ? \Zend_Json::encode($this->content)
+                   ? \Seitenbau\Json::encode($this->content)
                    : $this->content;
 
     $this->contentchecksum = md5($contentString);
@@ -298,7 +298,7 @@ class Template
         $this->convertContentStringToArray($this->getContent()),
         $usedModuleIds
     );
-    $this->usedmoduleids = \Zend_Json::encode(array_keys($usedModuleIds));
+    $this->usedmoduleids = \Seitenbau\Json::encode(array_keys($usedModuleIds));
   }
   
   protected function convertContentStringToArray($contentString)

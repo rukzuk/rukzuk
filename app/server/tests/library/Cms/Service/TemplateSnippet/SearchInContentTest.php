@@ -33,13 +33,13 @@ class SearchInContentTest extends ServiceTestCase
     $websiteId = 'SITE-template-snip-pet0-test-000000000001-SITE';
     $numberOfTemplateSnippets = 2;
     
-    $contentWithTextpart = \Zend_Json::encode(array(
+    $contentWithTextpart = \Seitenbau\Json::encode(array(
         (object) array(
           'id' => 'MUNIT-00000000-0000-0000-0000-000000000001-MUNIT',
           'name' => 'TEST_FINDTHISTEXT_TEST',
           'moduleId' => 'MODUL-00000000-0000-0000-0000-000000000001-MODUL',
     )));
-    $contentWithoutTextpart = \Zend_Json::encode(array(
+    $contentWithoutTextpart = \Seitenbau\Json::encode(array(
         (object) array(
           'id' => 'MUNIT-00000000-0000-0000-0000-000000000001-MUNIT',
           'name' => 'TEST_NOTFOUND_TEST',
