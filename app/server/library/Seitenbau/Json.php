@@ -14,7 +14,7 @@ class Json
   const JSON_INDENT = '    ';
 
   /**
-   * Just a wrapper for \Seitenbau\Json::encode()
+   * Just a wrapper for \Zend_Json::encode()
    * @param mixed $value
    * @return string
    */
