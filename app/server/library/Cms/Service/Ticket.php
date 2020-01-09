@@ -198,7 +198,7 @@ class Ticket extends DaoServiceBase
     // Zugangsdaten pruefen
     $ticketCredentials = $ticket->getCredentials();
     if (!empty($ticketCredentials)) {
-      $ticketCredentials = \Zend_Json::decode($ticketCredentials, \Zend_Json::TYPE_ARRAY);
+      $ticketCredentials = \Seitenbau\Json::decode($ticketCredentials, \Zend_Json::TYPE_ARRAY);
       if (is_array($ticketCredentials)) {
         // Benutzername pruefen
         if (isset($ticketCredentials['username'])) {

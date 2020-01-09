@@ -68,7 +68,7 @@ class Render extends Base\Service
     } else {
       // Daten ermitteln
       $renderContent = (is_string($renderContent))
-                    ? \Zend_Json::decode($renderContent)
+                    ? \Seitenbau\Json::decode($renderContent)
                     : $renderContent;
 
       // Globale Variablen aus dem Content ermitteln
@@ -77,7 +77,7 @@ class Render extends Base\Service
     
     // ggf. Globale Variablen in Array umwandeln
     $globalContent = (is_string($globalContent))
-                      ? \Zend_Json::decode($globalContent)
+                      ? \Seitenbau\Json::decode($globalContent)
                       : $globalContent;
 
     // Page rendern

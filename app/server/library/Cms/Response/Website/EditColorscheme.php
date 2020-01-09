@@ -45,6 +45,6 @@ class EditColorscheme implements IsResponseData
   protected function setValuesFromData(WebsiteData $data)
   {
     $this->setId($data->getId());
-    $this->setColorscheme(\Zend_Json::decode($data->getColorscheme()));
+    $this->setColorscheme(\Seitenbau\Json::decode($data->getColorscheme()));
   }
 }

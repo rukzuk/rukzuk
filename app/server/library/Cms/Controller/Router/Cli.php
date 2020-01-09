@@ -87,11 +87,11 @@ class Cli extends \Zend_Controller_Router_Abstract
   protected function isJsonString($jsonString)
   {
     try {
-      \Zend_Json::decode($jsonString, \Zend_Json::TYPE_OBJECT);
+      \Seitenbau\Json::decode($jsonString, \Zend_Json::TYPE_OBJECT);
       return true;
     } catch (\Exception $doNothing) {
       try {
-        \Zend_Json::decode(utf8_encode($jsonString), \Zend_Json::TYPE_OBJECT);
+        \Seitenbau\Json::decode(utf8_encode($jsonString), \Zend_Json::TYPE_OBJECT);
         return true;
       } catch (\Exception $doNothing) {
       }

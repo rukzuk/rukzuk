@@ -219,7 +219,7 @@ class Website extends DaoServiceBase
   public function movePageInNavigation($websiteId, $pageId, $parentId, $beforeId)
   {
     $website = $this->getById($websiteId);
-    $navigation = \Zend_Json::decode($website->getNavigation());
+    $navigation = \Seitenbau\Json::decode($website->getNavigation());
 
     $data = new \Seitenbau\ArrayData();
     $result = $data->move($navigation, $pageId, $parentId, $beforeId);
@@ -246,7 +246,7 @@ class Website extends DaoServiceBase
     );
 
     $website = $this->getById($websiteId);
-    $navigation = \Zend_Json::decode($website->getNavigation());
+    $navigation = \Seitenbau\Json::decode($website->getNavigation());
 
     $data = new \Seitenbau\ArrayData();
     $result = $data->insert($navigation, $dataPage, $parentId, $insertBeforeId);
@@ -276,7 +276,7 @@ class Website extends DaoServiceBase
     $pages = array();
 
     $website = $this->getById($websiteId);
-    $navigation = \Zend_Json::decode($website->getNavigation());
+    $navigation = \Seitenbau\Json::decode($website->getNavigation());
 
     if (!is_array($navigation)) {
       return $pages;

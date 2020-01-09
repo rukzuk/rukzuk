@@ -672,7 +672,7 @@ class Modul
     if (!empty($value)) {
       try {
         // Wert Normal decodieren
-        return \Zend_Json::decode($value);
+        return \Seitenbau\Json::decode($value);
       } catch (Exception $e) {
         // Fehler -> Keine Daten zurueckgeben
       }

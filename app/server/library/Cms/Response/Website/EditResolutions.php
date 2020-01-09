@@ -44,6 +44,6 @@ class EditResolutions implements IsResponseData
   protected function setValuesFromData(WebsiteData $data)
   {
     $this->setId($data->getId());
-    $this->setResolutions(\Zend_Json::decode($data->getResolutions(), \Zend_Json::TYPE_OBJECT));
+    $this->setResolutions(\Seitenbau\Json::decode($data->getResolutions(), \Zend_Json::TYPE_OBJECT));
   }
 }

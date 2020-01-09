@@ -342,7 +342,7 @@ class Ticket
     if (!empty($value)) {
       try {
         // Wert Normal decodieren
-        return \Zend_Json::decode($value, \Zend_Json::TYPE_ARRAY);
+        return \Seitenbau\Json::decode($value, \Zend_Json::TYPE_ARRAY);
       } catch (Exception $e) {
       // Fehler -> Keine Daten zurueckgeben
       }

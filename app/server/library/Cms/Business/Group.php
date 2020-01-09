@@ -316,7 +316,7 @@ class Group extends Base\Service
                               ->getNavigationWithDataFromWebsite($websiteId);
 
     $groupRights = $this->getByIdAndWebsiteId($id, $websiteId)->getRights();
-    $groupRights = \Zend_Json::decode($groupRights);
+    $groupRights = \Seitenbau\Json::decode($groupRights);
 
     $this->addRightsToNavigation($websiteNavigation, $groupRights);
 
@@ -332,7 +332,7 @@ class Group extends Base\Service
   public function getAllRightsValue($id, $websiteId)
   {
     $groupRights = $this->getByIdAndWebsiteId($id, $websiteId)->getRights();
-    $groupRights = \Zend_Json::decode($groupRights);
+    $groupRights = \Seitenbau\Json::decode($groupRights);
 
     if (count($groupRights) > 0) {
       foreach ($groupRights as $groupRight) {

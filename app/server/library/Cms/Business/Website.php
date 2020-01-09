@@ -258,7 +258,7 @@ class Website extends Base\Service
 
     $pageInfos = $this->getService('Page')->getInfosByWebsiteId($website->getId());
 
-    $navigation = \Zend_Json::decode($website->getNavigation());
+    $navigation = \Seitenbau\Json::decode($website->getNavigation());
     if (!is_array($navigation)) {
       $navigation = array();
     }
@@ -283,7 +283,7 @@ class Website extends Base\Service
   public function movePageInNavigation($websiteId, $pageId, $parentId, $beforeId)
   {
     $website = $this->getService()->getById($websiteId);
-    $navigation = \Zend_Json::decode($website->getNavigation());
+    $navigation = \Seitenbau\Json::decode($website->getNavigation());
 
     $data = new \Seitenbau\ArrayData();
     $newNavigation = $data->move($navigation, $pageId, $parentId, $beforeId);
@@ -313,7 +313,7 @@ class Website extends Base\Service
     );
 
     $website = $this->getService()->getById($insertPage->getWebsiteid());
-    $navigation = \Zend_Json::decode($website->getNavigation());
+    $navigation = \Seitenbau\Json::decode($website->getNavigation());
 
     $data = new \Seitenbau\ArrayData();
     $newNavigation = $data->insertAfter($navigation, $dataPage, $pageId);
@@ -334,7 +334,7 @@ class Website extends Base\Service
   public function removePageFromNavigation($websiteId, $pageid)
   {
     $website = $this->getService()->getById($websiteId);
-    $navigation = \Zend_Json::decode($website->getNavigation());
+    $navigation = \Seitenbau\Json::decode($website->getNavigation());
 
     if (is_array($navigation)) {
       $data = new \Seitenbau\ArrayData();
@@ -405,7 +405,7 @@ class Website extends Base\Service
   protected function isPublishDataPasswordNewSet($publishData)
   {
     if (!is_array($publishData)) {
-      $data = \Zend_Json::decode($publishData);
+      $data = \Seitenbau\Json::decode($publishData);
     } else {
       $data = $publishData;
     }
@@ -426,7 +426,7 @@ class Website extends Base\Service
   protected function getPasswordFromOrm(\Cms\Data\Website $website)
   {
     $publishData = $website->getPublish();
-    $publishArr = \Zend_Json::decode($publishData);
+    $publishArr = \Seitenbau\Json::decode($publishData);
     if (isset($publishArr['password'])) {
       return $publishArr['password'];
     } else {

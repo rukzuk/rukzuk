@@ -229,7 +229,7 @@ class Modul implements IsResponseData
   public function setForm($form)
   {
     if (is_string($form)) {
-      $form = \Zend_Json::decode($form);
+      $form = \Seitenbau\Json::decode($form);
     }
     $this->form = $form;
   }
@@ -248,7 +248,7 @@ class Modul implements IsResponseData
   public function setFormValues($values)
   {
     if (is_string($values)) {
-      $values = \Zend_Json::decode($values, \Zend_Json::TYPE_OBJECT);
+      $values = \Seitenbau\Json::decode($values, \Zend_Json::TYPE_OBJECT);
     }
     $this->formValues = $values;
   }

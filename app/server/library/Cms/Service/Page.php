@@ -229,7 +229,7 @@ class Page extends DaoServiceBase
   ) {
     // ggf. Globale Variablen in Array umwandeln
     if (is_string($globalContent)) {
-      $globalContent = \Zend_Json::decode($globalContent);
+      $globalContent = \Seitenbau\Json::decode($globalContent);
     }
     
     if (is_array($globalContent) && count($globalContent) > 0) {
@@ -245,7 +245,7 @@ class Page extends DaoServiceBase
                 $module = $moduleService->getById($unitData['moduleId'], $websiteId);
                 $formValues = $module->getFormvalues();
                 if (is_string($formValues)) {
-                  $formValues = \Zend_Json::decode($formValues);
+                  $formValues = \Seitenbau\Json::decode($formValues);
                 }
                 $this->moduleFormValues[$websiteId][$unitData['moduleId']] = $formValues;
               } catch (\Exception $e) {

@@ -183,9 +183,9 @@ class Website implements IsResponseData
     $this->setDescription($data->getDescription());
     $this->setNavigation($data->getNavigation());
     $this->setPublishingEnabled($data->getPublishingEnabled());
-    $this->setPublish(\Zend_Json::decode($data->getPublish()));
-    $this->setColorscheme(\Zend_Json::decode($data->getColorscheme()));
-    $this->setResolutions(\Zend_Json::decode($data->getResolutions(), \Zend_Json::TYPE_OBJECT));
+    $this->setPublish(\Seitenbau\Json::decode($data->getPublish()));
+    $this->setColorscheme(\Seitenbau\Json::decode($data->getColorscheme()));
+    $this->setResolutions(\Seitenbau\Json::decode($data->getResolutions(), \Zend_Json::TYPE_OBJECT));
     $this->setVersion($data->getVersion());
     $this->setScreenshot();
     $this->setHome($data->getHome());

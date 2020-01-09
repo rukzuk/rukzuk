@@ -19,7 +19,7 @@ class UnitExtractor
    */
   public static function getUnitsFromPageContent($pageContent)
   {
-    $pageContentArr = \Zend_Json::decode($pageContent);
+    $pageContentArr = \Seitenbau\Json::decode($pageContent);
 
     $units = array();
 
@@ -41,7 +41,7 @@ class UnitExtractor
    */
   public static function getUnitsFromTemplateContent($templateContent)
   {
-    $templateContentArr = \Zend_Json::decode($templateContent);
+    $templateContentArr = \Seitenbau\Json::decode($templateContent);
     
     $units = array();
 

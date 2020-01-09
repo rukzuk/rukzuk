@@ -188,7 +188,7 @@ class Website extends Base
       return false;
     }
 
-    $publishArr = \Zend_Json::decode($publish);
+    $publishArr = \Seitenbau\Json::decode($publish);
     $publishEntries = array('type', 'url', 'protocol', 'host', 'username', 'password', 'basedir', 'cname');
 
 
@@ -241,7 +241,7 @@ class Website extends Base
     }
 
     $colorschemeEntries = array('id', 'value', 'name');
-    $colorschemeArr = \Zend_Json::decode($colorscheme);
+    $colorschemeArr = \Seitenbau\Json::decode($colorscheme);
 
     if (!is_array($colorschemeArr)) {
       $this->addError(new Error('colorscheme', $colorscheme, array('wrong format')));

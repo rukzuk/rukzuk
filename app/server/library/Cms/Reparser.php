@@ -121,7 +121,7 @@ class Reparser
     }
 
     // Die Struktur reparsen
-    $templateContent = \Zend_Json::decode($templateContentAsJson);
+    $templateContent = \Seitenbau\Json::decode($templateContentAsJson);
     $newPageContent = array();
     $state = self::reparseStructure($websiteId, $newPageContent, $templateContent, $pageUnits, $newPageUnits, $pageTemplateUnits, $reparseType);
 

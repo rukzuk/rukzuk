@@ -449,7 +449,7 @@ class Page extends Base\Service
 
     if (isset($content) && !is_array($content)) {
       $content = (is_string($content))
-                  ? \Zend_Json::decode($content)
+                  ? \Seitenbau\Json::decode($content)
                   : $content;
     }
 

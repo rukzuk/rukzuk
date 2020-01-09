@@ -75,7 +75,7 @@ class HttpCompressed extends \Zend_Controller_Request_Http
     {
       $body = $this->getRawBody();
       $this->decompressGz($body, $charMarker);
-      $requestParams = \Zend_Json::decode($body, \Zend_Json::TYPE_ARRAY);
+      $requestParams = \Seitenbau\Json::decode($body, \Zend_Json::TYPE_ARRAY);
       if (is_array($requestParams)) {
         foreach (array_keys($requestParams) as $nextParamName) {
           $_POST[$nextParamName] = $requestParams[$nextParamName];

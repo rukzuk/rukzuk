@@ -132,7 +132,7 @@ class TemplateSnippet implements IsResponseData
   public function setContent($content)
   {
     if (is_string($content)) {
-      $content = \Zend_Json::decode($content, \Zend_Json::TYPE_OBJECT);
+      $content = \Seitenbau\Json::decode($content, \Zend_Json::TYPE_OBJECT);
     }
     $this->content = $content;
   }

@@ -43,11 +43,11 @@ class Base extends \Zend_Controller_Plugin_Abstract
     $paramString = $request->getParam(\Cms\Request\Base::REQUEST_PARAMETER);
 
     try {
-      $paramArray = \Zend_Json::decode($paramString);
+      $paramArray = \Seitenbau\Json::decode($paramString);
     } catch (\Exception $e) {
       try {
         // Try to decode to UTF8
-        $paramArray = \Zend_Json::decode(utf8_encode($paramString));
+        $paramArray = \Seitenbau\Json::decode(utf8_encode($paramString));
       } catch (\Exception $e) {
         \Seitenbau\Registry::getLogger()->logException(
             __METHOD__,

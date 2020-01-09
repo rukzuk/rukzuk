@@ -37,7 +37,7 @@ class GeneratePageContentTest extends ServiceTestCase
     $websiteId = 'SITE-5sz2bve3-1cfg-4836-b847-1ab0571b1e6d-SITE';
     
     $template = $this->templateBusiness->getById($templateId, $websiteId);
-    $templateContent = \Zend_Json::decode($template->getContent());
+    $templateContent = \Seitenbau\Json::decode($template->getContent());
     
     \Cms\ExceptionStack::reset();
     $pageContent = $this->reparseBusiness->generateNewPageContent($template);

@@ -38,7 +38,7 @@ class UpdateGlobalVarsTest extends ServiceTestCase
     $page = $this->business->updateGlobalVars($this->pageId, $this->websiteId);
     $globalContent = $page->getGlobalContent();
     $globalContent = (is_string($globalContent))
-                      ? \Zend_Json::decode($globalContent)
+                      ? \Seitenbau\Json::decode($globalContent)
                       : $globalContent;
 
     // Nur muss exakt ein globaler Wert in diesem Test vorhanden sein

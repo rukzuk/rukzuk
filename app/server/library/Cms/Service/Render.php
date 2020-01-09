@@ -400,7 +400,7 @@ class Render extends PlainServiceBase
     }
 
     if (is_string($content)) {
-      $content = \Zend_Json::decode($content, \Zend_Json::TYPE_ARRAY);
+      $content = \Seitenbau\Json::decode($content, \Zend_Json::TYPE_ARRAY);
     } elseif (is_array($content)) {
       $content = json_decode(json_encode($content), true);
     }
@@ -428,7 +428,7 @@ class Render extends PlainServiceBase
   protected function getResolutions($websiteService, $websiteId)
   {
     $resolutions_json = $websiteService->getById($websiteId)->getResolutions();
-    $resolutions = \Zend_Json::decode($resolutions_json);
+    $resolutions = \Seitenbau\Json::decode($resolutions_json);
     if (!is_array($resolutions)) {
       return array();
     }

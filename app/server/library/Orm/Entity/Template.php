@@ -258,7 +258,7 @@ class Template
     if (empty($this->usedmoduleids)) {
       return array();
     }
-    return \Zend_Json::decode($this->usedmoduleids, \Zend_Json::TYPE_ARRAY);
+    return \Seitenbau\Json::decode($this->usedmoduleids, \Zend_Json::TYPE_ARRAY);
   }
 
   /**
@@ -306,7 +306,7 @@ class Template
     if (empty($contentString)) {
       return array();
     }
-    return \Zend_Json::decode($contentString, \Zend_Json::TYPE_ARRAY);
+    return \Seitenbau\Json::decode($contentString, \Zend_Json::TYPE_ARRAY);
   }
   
   protected function getUsedModuleIdsFromContent($content, &$usedModuleIds)

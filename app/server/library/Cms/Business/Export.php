@@ -1152,7 +1152,7 @@ class Export extends Base\Service
     if (is_string($colorscheme)) {
       try {
         // JSON decodieren und Array aufbereiten
-        $colorscheme = \Zend_Json::decode($colorscheme);
+        $colorscheme = \Seitenbau\Json::decode($colorscheme);
       } catch (\Exception $e) {
       // Fehler
         Registry::getLogger()->log(__CLASS__, __METHOD__, 'Farbeschema konnte nicht erstellt werden: '.$e->errorMessage, SbLog::WARN);

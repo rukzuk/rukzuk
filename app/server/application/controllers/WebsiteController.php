@@ -347,7 +347,7 @@ class WebsiteController extends Controller\Action
   {
     $pageInfos = $this->getBusiness('Page')->getInfosByWebsiteId($website->getId());
 
-    $navigation = \Zend_Json::decode($website->getNavigation());
+    $navigation = \Seitenbau\Json::decode($website->getNavigation());
     $arrayVerwalter = new Seitenbau\ArrayData();
 
     if (is_array($pageInfos) && count($pageInfos) > 0 && is_array($navigation)) {

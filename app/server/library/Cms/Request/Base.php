@@ -120,10 +120,10 @@ abstract class Base
     }
 
     try {
-      $incomingRequestParams = \Zend_Json::decode($paramString, \Zend_Json::TYPE_OBJECT);
+      $incomingRequestParams = \Seitenbau\Json::decode($paramString, \Zend_Json::TYPE_OBJECT);
     } catch (\Exception $e) {
       try {
-        $incomingRequestParams = \Zend_Json::decode(utf8_encode($paramString), \Zend_Json::TYPE_OBJECT);
+        $incomingRequestParams = \Seitenbau\Json::decode(utf8_encode($paramString), \Zend_Json::TYPE_OBJECT);
       } catch (\Exception $e) {
         Registry::getLogger()->logException(__METHOD__, __LINE__, $e, SbLog::DEBUG);
         return null;
