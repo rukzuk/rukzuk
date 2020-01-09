@@ -60,8 +60,8 @@ class CreateTest extends ServiceTestCase
     $create->setIcon('TEST_ICON_CREATE_1');
     $create->setForm(SbJson::decode(SbJson::encode(
       array(array('name' => 'Titel und Beschreibung', 'formGroupData' => array('params' => array('name' => 'Cmsvar', 'value' => 'title'))))
-    )));
-    $create->setFormvalues(SbJson::decode(SbJson::encode(array(array('key' => 'value')))));
+    )), SbJson::TYPE_OBJECT);
+    $create->setFormvalues(SbJson::decode(SbJson::encode(array(array('key' => 'value'))), SbJson::TYPE_OBJECT));
     $create->setCategory('TEST_CATEGORY_CREATE_1');
     $create->setModuletype('root');
     $create->setAllowedchildmoduletype('extension');

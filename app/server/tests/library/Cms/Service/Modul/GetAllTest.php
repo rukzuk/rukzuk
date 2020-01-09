@@ -85,7 +85,7 @@ class GetAllTest extends ServiceTestCase
     $newModule->setVersion('TEST_VERSION_GET_ALL_3');
     $newModule->setIcon('TEST_ICON_GET_ALL_3');
     $newModule->setForm(array());
-    $newModule->setFormvalues(SbJson::decode(SbJson::encode(array('foo' => 'bar'))));
+    $newModule->setFormvalues(SbJson::decode(SbJson::encode(array('foo' => 'bar')), SbJson::TYPE_OBJECT));
     $newModule->setCategory('TEST_CATEGORY_GET_ALL_3');
     $newModule->setModuletype('default');
     $newModule->setAllowedchildmoduletype('extension');
@@ -98,7 +98,7 @@ class GetAllTest extends ServiceTestCase
     $newModule->setIcon('TEST_ICON_GET_ALL_1');
     $newModule->setForm(SbJson::decode(SbJson::encode(
       array(array('id' => 'abcdefg', 'name' => 'Titel und Beschreibung'))
-    )));
+    ), SbJson::TYPE_OBJECT));
     $newModule->setFormvalues(new \stdClass());
     $newModule->setCategory('TEST_CATEGORY_GET_ALL_1');
     $newModule->setModuletype('root');
@@ -111,7 +111,7 @@ class GetAllTest extends ServiceTestCase
     $newModule->setVersion('TEST_VERSION_GET_ALL_2');
     $newModule->setIcon('TEST_ICON_GET_ALL_2');
     $newModule->setForm(array());
-    $newModule->setFormvalues(SbJson::decode(SbJson::encode(array('asdf' => 0))));
+    $newModule->setFormvalues(SbJson::decode(SbJson::encode(array('asdf' => 0)), SbJson::TYPE_OBJECT));
     $newModule->setCategory('TEST_CATEGORY_GET_ALL_2');
     $newModule->setModuletype('default');
     $newModule->setAllowedchildmoduletype('extension');

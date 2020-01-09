@@ -26,12 +26,13 @@ class Json
   /**
    * Same as \Zend_Json::decode but with support for empty json converted to empty array or empty object
    * This seems to be the default for php < 7.1 in json_decode (which is used by Zend_Json usually)
+   * 
    * @param $json
    * @param int $type
    * @return array|\stdClass
    * @throws \Zend_Json_Exception
    */
-  public static function decode($json, $type = self::TYPE_OBJECT)
+  public static function decode($json, $type = self::TYPE_ARRAY)
   {
     if ($type == self::TYPE_ARRAY) {
       if (empty((string)$json)) {
