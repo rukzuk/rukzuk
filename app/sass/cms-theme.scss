@@ -374,3 +374,12 @@ div.x-tree-selected, .x-tree-selected {
   }
 }
 
+
+// _MultiSelect.scss
+.ux-mselect .x-list-selected {
+  background: $primary;
+}
+
+.ux-mselect .x-list-selected.x-list-over {
+  background: $primary;
+}
