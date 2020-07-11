@@ -6,6 +6,8 @@ as a standalone version of the python/django based ftp/sftp publisher for exerna
 
 The files `Dockerfile-DEV` and `Dockerfile-sqlite` do not include mysql and publisher.
 
+NOTE: Only the `Dockerfile-DEV` will use the current tree you checked out. The other docker files will always download the latest stable release from github (this includes the lastest publisher release). See end of file for howto use dev builds.
+
 ## Requirements
 
 You need docker to run this docker image. For more information see:
@@ -67,4 +69,17 @@ NOTE: The import can take a long time. Look what happens via `docker logs -f <Co
 ### Login credentials
 
 Open your browser and login using `rukzuk@example.com` and `admin123` as password. After choosing a website template adjust the credentials in the user management. You should change the password after the first login.
+
+
+
+### Build DEV (own build) container
+
+To use you own build with `Dockerfile-DEV` do the following:
+
+```
+mkdir release
+../build-snapshot.sh
+cp ../artifacts/0.20190605.63.stable-30-g3ac4a63-dirty.tgz release/cmsrelase.tar.gz # change to your build version
+docker build --tag=rukzuk_dev -f Dockerfile-DEV .
+```
 
