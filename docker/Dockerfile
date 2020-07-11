@@ -180,6 +180,48 @@ COPY import-metajson.php /opt/rukzuk-tools/import-metajson.php
 COPY import-data.sh      /opt/rukzuk-tools/import-data.sh
 RUN chmod +x             /opt/rukzuk-tools/import-data.sh
 
+## Publisher
+
+# install phyton and pip
+RUN apt-get install -y --no-install-recommends \
+        build-essential \
+        python3 \
+        python3-dev \
+        python3-pip \
+        python3-setuptools \
+        redis
+
+# Add users and folders
+RUN useradd -s /bin/bash -d /opt/publisher publisher
+RUN mkdir -p /var/log/publisher
+RUN chown publisher /var/log/publisher
+RUN mkdir -p /var/tmp/publisher
+RUN chown publisher /var/tmp/publisher
+
+# copy code
+RUN mkdir -p /opt/publisher
+# get latest publisher release form github and extract it
+RUN curl -L $(curl -s https://api.github.com/repos/rukzuk/publisher/releases/latest | grep tarball_url | cut -d '"' -f 4) | tar -xz --strip 1 -C /opt/publisher
+# remove dev config file
+RUN rm /opt/publisher/settings-dev.ini 2>/dev/null
+# fix rights
+RUN chown -R publisher /opt/publisher
+
+# install requirements
+RUN pip3 install -r /opt/publisher/requirements.txt
+
+# Activate services in runit
+RUN mkdir -p /etc/service/supervisord
+RUN cp /opt/publisher/conf/supervisord.runit /etc/service/supervisord/run
+RUN chmod +x /etc/service/supervisord/run
+
+RUN mkdir -p /etc/service/redis
+RUN cp /opt/publisher/conf/redis.runit /etc/service/redis/run
+RUN chmod +x /etc/service/redis/run
+
+### End Publisher
+
+
 # Remove unused packages (only used to build)  & Cleanup 
 RUN apt-get purge -y php7.3-dev libmcrypt-dev php-pear build-essential
 RUN apt-get clean -y

@@ -17,6 +17,16 @@ return array(
       'command' => '/usr/local/bin/phantomjs',
     ),
   ),
+  'publisher' => array(
+    'type' => 'externalrukzukservice',
+    'externalrukzukservice' => array(
+      'hosts'     => array('http://localhost:8000'),
+      'tokens'    => array(
+        'internal' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoiaW50ZXJuYWwiLCJpbnN0YW5jZSI6Ii4qIiwiZG9tYWluIjoiLioifQ.xVa3b9NRFr2SV2x-nbA1oBwggakP2HWIgVmOcI9idSg',
+        'external' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoiZXh0ZXJuYWwiLCJpbnN0YW5jZSI6Ii4qIn0.noiBbuBTKS1DxtKbfw4cYJrMdJ7TzCnqCyTxh-sxwBc'
+      )
+    ),
+  ),
   'webhost'         => getenv('CMS_URL')          ? : 'http://localhost:8080',
   'internalWebhost' => getenv('CMS_URL_INTERNAL') ? : 'http://localhost',
 );

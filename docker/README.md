@@ -1,5 +1,10 @@
 # rukzuk-docker
-Docker image for rukzuk
+Docker image for rukzuk.
+
+The default `Dockerimage` file contains mysql daemon (parts based on official `mysql` docker image) and config as well 
+as a standalone version of the python/django based ftp/sftp publisher for exernal hosting.
+
+The files `Dockerfile-DEV` and `Dockerfile-sqlite` do not include mysql and publisher.
 
 ## Requirements
 
