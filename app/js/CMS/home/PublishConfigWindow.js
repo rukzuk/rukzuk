@@ -110,6 +110,7 @@ CMS.home.PublishConfigWindow = Ext.extend(Ext.Window, {
                                         triggerAction: 'all',
                                         store: [
                                             ['ftp', CMS.i18n('FTP', 'publish.config.protocol.ftp')],
+                                            ['ftps', CMS.i18n('FTPS', 'publish.config.protocol.ftps')],
                                             ['sftp', CMS.i18n('SFTP', 'publish.config.protocol.sftp')]
                                         ],
                                         allowBlank: false
