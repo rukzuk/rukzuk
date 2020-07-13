@@ -25,28 +25,28 @@ CMS.home.PublishChooseTypePanel = Ext.extend(CMS.home.ManagementPanel, {
                 },
                 {
                     xtype: 'button',
+                    text: CMS.i18n(null, 'publish.chooseType.external'),
+                    handler: this.enableExternalHosting,
+                    style: 'margin-bottom: 55px',
+                    cls: 'primary',
+                    width: 230,
+                    scope: this
+                },
+                {
+                    html: CMS.i18n(null, 'publish.chooseType.introText.external'),
+                    style: 'padding-left: 30px; line-height: 145%',
+                },
+                {
+                    xtype: 'button',
                     text: CMS.i18n(null, 'publish.chooseType.internal'),
                     handler: this.enableInternalHosting,
                     style: 'margin-bottom: 55px',
-                    cls: 'primary',
                     width: 230,
                     scope: this
 
                 },
                 {
                     html: CMS.i18n(null, 'publish.chooseType.introText.internal'),
-                    style: 'padding-left: 30px; line-height: 145%',
-                },
-                {
-                    xtype: 'button',
-                    text: CMS.i18n(null, 'publish.chooseType.external'),
-                    handler: this.enableExternalHosting,
-                    style: 'margin-bottom: 55px',
-                    width: 230,
-                    scope: this
-                },
-                {
-                    html: CMS.i18n(null, 'publish.chooseType.introText.external'),
                     style: 'padding-left: 30px; line-height: 145%',
                 }
             ]
