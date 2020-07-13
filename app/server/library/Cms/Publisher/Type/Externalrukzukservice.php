@@ -115,7 +115,7 @@ class Externalrukzukservice extends PublisherBase
       // add default ports for ftp/sftp
       if (isset($publishData['protocol']) &&
         (!isset($publishData['port']) || !$publishData['port'])) {
-        if ($publishData['protocol'] === 'ftp') {
+        if ($publishData['protocol'] === 'ftp' || $publishData['protocol'] === 'ftps') {
           $publishData['port'] = 21;
         } elseif ($publishData['protocol'] === 'sftp') {
           $publishData['port'] = 22;
