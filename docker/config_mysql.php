@@ -29,4 +29,35 @@ return array(
   ),
   'webhost'         => getenv('CMS_URL')          ? : 'http://localhost:8080',
   'internalWebhost' => getenv('CMS_URL_INTERNAL') ? : 'http://localhost',
+
+  // external links
+  'services' => array(
+    'linkResolver' => 'https://github.com/rukzuk/rukzuk/wiki',
+    'dashboardUrl' => 'https://github.com/rukzuk/rukzuk/wiki',
+  ),
+
+  // email settings
+  'user' => array(
+    'mail' => array(
+      'activ' => 1,
+      'optin' => array(
+        'from' => array(
+          'address' => getenv('SMTP_USER') ? : 'noreply@example.com',
+          'name' => 'Web Design Platform',
+        ),
+        'uri' => '/',
+      ),
+      'renew' => array(
+        'password' => array(
+          'from' => array(
+            'address' => getenv('SMTP_USER') ? : 'noreply@example.com',
+            'name' => 'Web Design Platform',
+          ),
+          'uri' => '/',
+        ),
+      ),
+    ),
+  ),
+
+
 );
