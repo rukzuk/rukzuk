@@ -18,7 +18,7 @@ return array(
     ),
   ),
   'publisher' => array(
-    'type' => 'externalrukzukservice',
+    'type' => 'hybrid', // externalrukzukservice
     'externalrukzukservice' => array(
       'hosts'     => array('http://localhost:8000'),
       'tokens'    => array(

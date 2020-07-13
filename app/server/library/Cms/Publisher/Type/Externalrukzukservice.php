@@ -101,7 +101,7 @@ class Externalrukzukservice extends PublisherBase
    */
   public function getPublishData($website)
   {
-    $publishData = json_decode($website->getPublish(), true);
+    $publishData = SbJson::decode($website->getPublish());
 
     // use default publish data
     if (!is_array($publishData) || count($publishData) <= 0) {
