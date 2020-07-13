@@ -28,10 +28,11 @@ The idea was born at [SEITENBAU GmbH](https://seitenbau.github.io/), an IT-servi
 
 Further information about rukzuk under [https://rukzuk.com](https://rukzuk.com)
 
-# Demo
+# Demo / Docker
 
-For a quick demo simply use [`docker pull rukzuk/rukzuk`](https://hub.docker.com/r/rukzuk/rukzuk/), check out the free trial at [https://rukzuk.com](https://rukzuk.com) or watch a video: [Getting Started](https://www.youtube.com/watch?v=CeBHMoWo_TE&list=PLybfRIhLjxOn7jP2C8VxPN1cdcu_7Prck), [Timelapse of creating a website visually in rukzuk](https://www.youtube.com/watch?v=2i38NKPDsM0). 
+For a quick demo simply use [`docker pull rukzuk/rukzuk`](https://hub.docker.com/r/rukzuk/rukzuk/) or watch a video: [Getting Started](https://www.youtube.com/watch?v=CeBHMoWo_TE&list=PLybfRIhLjxOn7jP2C8VxPN1cdcu_7Prck), [Timelapse of creating a website visually in rukzuk](https://www.youtube.com/watch?v=2i38NKPDsM0). 
 
+The latest docker image is ready for production usage. It contains everytring ("fat container") you need including mysql and a publisher component to push your results on FTP(S)/SFTP remote hosts.
 
 # Components
 
