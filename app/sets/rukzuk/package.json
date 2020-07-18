@@ -19,6 +19,6 @@
     "grunt-phplint": "git://github.com/rukzuk/grunt-phplint.git",
     "grunt-phpunit": "~0.3.3",
     "grunt-template-jasmine-requirejs": "~0.1.8",
-    "lodash": "~4.17.10"
+    "lodash": "~4.17.19"
   }
 }
