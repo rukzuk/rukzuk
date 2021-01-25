@@ -51,6 +51,7 @@
     php_value session.cookie_httponly 1
     php_value session.cookie_secure 0
     php_value session.use_strict_mode 1
+    php_value max_input_vars 3000
 
 
     # load cms config
