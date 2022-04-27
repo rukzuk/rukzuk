@@ -5,7 +5,7 @@
   "devDependencies": {
     "JSONSelect": "~0.4.0",
     "esprima": "~1.2.1",
-    "grunt": "^1.0.4",
+    "grunt": "^1.5.2",
     "grunt-available-tasks": "^0.6.3",
     "grunt-composer": "^0.4.4",
     "grunt-contrib-compress": "^1.4.3",
