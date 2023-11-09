@@ -1,0 +1,36 @@
+{
+    "name": {
+        "de": "Sitemap (XML)",
+        "en": "Sitemap (XML)"
+    },
+    "description": {
+        "de": "Erlaubt das erstellen einer sitemap.xml für Suchmaschinen.",
+        "en": "Create sitemap xml files for search engines."
+    },
+    "version": "dev",
+    "formValues": {
+        "enableSitemapXml": false,
+        "robotsTxt": "",
+        "domain": ""
+    },
+    "form": [
+        {
+            "type": "OnOffFieldSet",
+            "CMSvar": "enableSitemapXml",
+            "fieldLabel": "{\"de\": \"Eine sitemap.xml generieren.\", \"en\": \"Generate sitemap.xml.\"}",
+            "_items": [
+                {
+                    "type": "TextField",
+                    "CMSvar": "domain",
+                    "fieldLabel": "{\"de\": \"Domain und Pfad zur Seite z. b. https://meine.seite\", \"en\": \"Domain and path to page e.g. https://my.page\"}"
+                },
+                {
+                    "type": "TextArea",
+                    "CMSvar": "robotsTxt",
+                    "height": 100,
+                    "fieldLabel": "{\"de\": \"Weitere robots.txt angaben\", \"en\": \"More robots.txt definitions\"}"
+                }
+            ]
+        }
+    ]
+}
