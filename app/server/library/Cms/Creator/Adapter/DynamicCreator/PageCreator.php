@@ -73,8 +73,13 @@ class PageCreator
   protected function addPageToStorage(PreparePageResult $preparePageResult)
   {
     $storage = $this->getCreatorStorage();
+    // attributes might be needed in the creator
+    $storage->addPageAttributes($preparePageResult->getPageId(), $preparePageResult->getPageAttributes());
     if (!$preparePageResult->getFilesCreated()) {
       $this->createPageFiles($storage, $preparePageResult);
+    } else {
+        // clean up page attributes after we saved them
+        $preparePageResult->resetPageAttributes();
     }
     if ($preparePageResult->getLegacySupport()) {
       $storage->addLegacyPage($preparePageResult->getPageId());

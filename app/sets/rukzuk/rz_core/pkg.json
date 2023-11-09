@@ -7,7 +7,7 @@
     "de": "",
     "en": ""
   },
-  "websiteSettings": ["password_protection", "custom_page_properties", "htaccess", "privacy"],
+  "websiteSettings": ["password_protection", "custom_page_properties", "htaccess", "privacy", "sitemap_xml"],
   "pageTypes": [],
   "templateSnippets": [
     "TPLS-global00-0000-0000-0000-30col0text00-TPLS",

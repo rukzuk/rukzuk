@@ -158,6 +158,11 @@
             "type": "OnOffToggle",
             "CMSvar": "notInPageList",
             "fieldLabel": "{\"de\": \"Diese Seite nicht in Seitenlisten anzeigen\", \"en\": \"Hide this page on page lists\"}"
+        },
+        {
+            "type": "OnOffToggle",
+            "CMSvar": "notInSitemapXml",
+            "fieldLabel": "{\"de\": \"Diese Seite nicht in sitemap.xml aufnehmen\", \"en\": \"Exclude this page in sitemap.xml\"}"
         }
     ],
     "formValues": {
@@ -168,6 +173,8 @@
         "_description": "",
         "_mediaId": null,
         "enableRedirect": false,
-        "redirectType": "firstChild"
+        "redirectType": "firstChild",
+        "notInPageList": false,
+        "notInSitemapXml": false
     }
 }

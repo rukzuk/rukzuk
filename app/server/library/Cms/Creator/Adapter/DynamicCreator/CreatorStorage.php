@@ -12,6 +12,7 @@ use Render\MediaCDNHelper\MediaRequest;
 use Render\MediaUrlHelper\CDNMediaUrlHelper;
 use Render\MediaUrlHelper\ValidationHelper\NoneValidationHelper;
 use Seitenbau\FileSystem as FS;
+use Seitenbau\FileSystem\FileSystemException;
 
 class CreatorStorage extends AbstractCreatorStorage
 {
@@ -62,6 +63,11 @@ class CreatorStorage extends AbstractCreatorStorage
   private $mediaUrlCalls = array();
 
   /**
+   * @var array
+   */
+  private $pageAttributes = array();
+
+  /**
    * @return string
    */
   protected function getStorageName()
@@ -79,6 +85,7 @@ class CreatorStorage extends AbstractCreatorStorage
     $this->createUsedAlbumInfo();
     $this->createWebsiteSettingsInfo();
     $this->createHtaccessFromWebsiteSettings();
+    $this->createSitemapXML();
     $this->createColorInfo();
     $this->createResolutionInfo();
     $this->createNavigation();
@@ -197,6 +204,10 @@ class CreatorStorage extends AbstractCreatorStorage
   public function addLegacyPage($pageId) {
     $this->activateLegacySupport();
     $this->addPageUrl($pageId);
+  }
+
+  public function addPageAttributes($pageId, $pageAttributes) {
+    $this->pageAttributes[$pageId] = $pageAttributes;
   }
 
   /**
@@ -605,6 +616,93 @@ class CreatorStorage extends AbstractCreatorStorage
     $comments = array("website settings info array", "site: " . $this->getWebsiteId());
     $this->exportDataToFile($websiteSettingsInfoFilePath, $this->websiteSettings, $comments);
   }
+
+  protected function flattenNavigation($array) {
+        $results = [];
+
+        foreach ($array as $key => $value) {
+            if (is_array($value) && array_key_exists("children", $value)) {
+                $results = array_merge($results, $this->flattenNavigation($value['children']));
+                unset($value['children']);
+            }
+            $results[$key] = $value;
+        }
+
+        return $results;
+    }
+
+    protected function createSitemapXML()
+    {
+        if (!array_key_exists('sitemap_xml', $this->websiteSettings)) {
+            return;
+        }
+
+        if (!$this->websiteSettings['sitemap_xml']['enableSitemapXml'])  {
+            return;
+        }
+
+        if (isset($this->websiteSettings['sitemap_xml']['domain']) && !empty($this->websiteSettings['sitemap_xml']['domain'])) {
+            $domain = rtrim(trim($this->websiteSettings['sitemap_xml']['domain']), '/');
+        } else {
+            return;
+        }
+
+        $additionalRobotsTxtContent = "";
+        if (isset($this->websiteSettings['sitemap_xml']['robotsTxt']) && !empty($this->websiteSettings['sitemap_xml']['robotsTxt'])) {
+            $additionalRobotsTxtContent = $this->websiteSettings['sitemap_xml']['robotsTxt'];
+        }
+
+        $xml = new \DOMDocument('1.0', 'UTF-8');
+        $xml->formatOutput=true;
+        $root = $xml->createElement('urlset');
+        $root->setAttribute('xmlns', 'http://www.sitemaps.org/schemas/sitemap/0.9');
+        $xml->appendChild($root);
+
+        // flatten navigation
+        $flatNav = $this->flattenNavigation($this->navigation);
+        foreach($flatNav as $navEntry) {
+            // skip if set
+            $pageAttribute = $this->pageAttributes[$navEntry['id']];
+            if (isset($pageAttribute['notInSitemapXml']) && $pageAttribute['notInSitemapXml']) {
+                continue;
+            }
+            $url = $xml->createElement('url');
+
+            $pageLoc = $this->pageUrls[$navEntry['id']];
+            $url->appendChild($xml->createElement('loc', htmlspecialchars($domain.'/'.$pageLoc, ENT_XML1|ENT_QUOTES|ENT_SUBSTITUTE)));
+            $url->appendChild($xml->createElement('priority', '0.5'));
+            //$url->appendChild($xml->createElement('changefreq', 'daily'));
+            $url->appendChild($xml->createElement('lastmod', date('Y-m-d')));
+            $root->appendChild($url);
+        }
+
+        $sitemapXmlContent = $xml->saveXML();
+
+        $sitemapXmlFilePath = FS::joinPath(
+            $this->getWebsiteDirectory(),
+            'sitemap.xml'
+        );
+
+        FS::writeContentToFile(
+            $sitemapXmlFilePath,
+            $sitemapXmlContent,
+            "Error at creating file '%s' (%s): %s"
+        );
+
+        // robots txt
+        $robotsTxtContent = $additionalRobotsTxtContent."\n".'Sitemap: '.$domain.'/sitemap.xml';
+
+        $robotsTxt = FS::joinPath(
+            $this->getWebsiteDirectory(),
+            'robots.txt'
+        );
+
+        FS::writeContentToFile(
+            $robotsTxt,
+            $robotsTxtContent,
+            "Error at creating file '%s' (%s): %s"
+        );
+    }
 
   protected function createHtaccessFromWebsiteSettings()
   {

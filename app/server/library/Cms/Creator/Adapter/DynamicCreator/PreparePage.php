@@ -515,7 +515,7 @@ class PreparePage
     // remove data from result
     $this->result->resetPageMeta();
     $this->result->resetPageGlobal();
-    $this->result->resetPageAttributes();
+    //we need them later $this->result->resetPageAttributes();
     $this->result->resetPageContent();
     $this->result->resetCssCacheValue();
     $this->result->resetHtmlCacheValue();
